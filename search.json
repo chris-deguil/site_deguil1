@@ -379,693 +379,27 @@
     ]
   },
   {
-    "objectID": "premiere-maths/suite1/test.html",
-    "href": "premiere-maths/suite1/test.html",
-    "title": "Exercice Pyodide – Intégration style Pyodide-MkDocs",
+    "objectID": "premiere-maths/suite1/liste_therme_python.html",
+    "href": "premiere-maths/suite1/liste_therme_python.html",
+    "title": "Liste des termes d’une suite numérique",
     "section": "",
-    "text": "###\n    …\n        \n            \n                Évaluations restantes : 5/5",
+    "text": "On introduit dans cette partie la notion de liste en Python.\n\nExemple :\nDéterminer la suite des \\(n\\) premiers termes de la suite \\((u_n)\\) définie par :\n\\[u_n = 3n^2 - 5n + 1\\]\ndef terme_u(n):\n    L = []\n    for i in range(n):\n        u = 3 * i**2 - 5 * i + 1\n        L.append(u)\n    return L\n\nterme_u(10)\n\n\n\n\nExemple :\nDéterminer la suite des \\(n\\) premiers termes de la suite \\((u_n)\\) définie par :\n\\(u_0 = 3\\) et pour tout \\(n \\geqslant 2\\),\n\\[u_{n+1} = \\frac{u_n^2}{n-1}\\]\ndef terme_u(n):\n    u = 3\n    L = [u]\n    for i in range(2, n + 2):\n        u = u**2 / (i - 1)\n        L.append(u)\n    return L\n\ndef terme_u_v2(n):\n    L = [3]\n    for i in range(2, n + 2):\n        L.append(L[-1]**2 / (i - 1))\n    return L\n\nterme_u(5), terme_u_v2(5)",
     "crumbs": [
       "Spé maths première",
       "Suites numériques : Généralités",
-      "Exercice Pyodide – Intégration style Pyodide-MkDocs"
+      "Liste des termes d'une suite numérique"
     ]
   },
   {
-    "objectID": "premiere-maths/suite1/exercices.html",
-    "href": "premiere-maths/suite1/exercices.html",
-    "title": "Feuilles d’exercices — Second degré",
+    "objectID": "premiere-maths/suite1/liste_therme_python.html#liste-des-termes-dune-suite-numérique",
+    "href": "premiere-maths/suite1/liste_therme_python.html#liste-des-termes-dune-suite-numérique",
+    "title": "Liste des termes d’une suite numérique",
     "section": "",
-    "text": "Exercice 1 : \n\nSoit \\((u_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(u_n=n^2-3\\). Calculer \\(u_{11}\\).\nSoit \\((v_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(v_n=\\frac{n^2-3n}{n-5}\\). Calculer le premier terme de la suite.\nSoit \\((w_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\[w_n=\\sum_{k=0}^n 2^k=1+2+2^2+\\dots +2^n\\] Calculer \\(u_4\\).\n\n\n\n\n\n\nExercice 2 : \nOn considère le programme python suivant :\ndef f(x):\n    return x**2-3\n\ndef terme_suite(k): \n    L=[]\n    for i in range(k):\n        u=f(i)\n        L.append(u)\n    return u\n\nQue renvoie l’appel terme_suite(10) ? À quelle suite de l’exercice cela correspond ?\nModifier le script précédent afin de calculer les 10 premiers termes de la suite \\((v_n)\\) précédente.\nModifier le script précédent afin de calculer les 10 premiers termes de la suite \\((w_n)\\) précédente.\n\n\n\n\n\n\n\n\nExercice 3 : \nPour chacune des suites suivantes définies pour tout entier naturel \\(n\\), calculer les cinq premiers termes.\n\n\\(u_n = 7n + 1\\)\n\\(v_n = n^2 - 3n + 1\\)\n\\(w_n = \\dfrac{1}{2n - 1}\\)\n\\(t_n = \\sqrt{5n + 1}\\)\n\n\n\n\n\n\nExercice 4 : \nPour chacune des suites suivantes définies par récurrence pour tout entier naturel \\(n\\), calculer les quatre termes suivant le premier.\n\n\\(\\left\\{\\begin{array}{l} u_0 = 2 \\\\ u_{n+1} = 2u_n + 1 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_{n+1} = u_n^2 + 1 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_1 = 1 \\\\ u_{n+1} = \\dfrac{1}{u_n + 2} \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_{n+1} = \\sqrt{u_n^2 + 1} \\end{array}\\right.\\)\n\n\n\n\n\n\nExercice 5 : \n\nPour chacune des suites suivantes, calculer les trois termes suivant le premier :\n\n\n\\(\\left\\{\\begin{array}{l} u_0 = 2 \\\\ u_{n+1} = 3u_n - 4n \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 0 \\\\ u_{n+1} = u_n^2 + \\dfrac{1}{2n+1} \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 3 \\\\ u_{n+1} = 5u_{n-1} - 2 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_1 = 2 \\\\ u_{n+2} = 2u_{n+1} + u_n \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_1 = 2 \\\\ u_{n+2} = (n+1)u_{n+1} + n \\end{array}\\right.\\)\n\n\nUtiliser la calculatrice afin d’afficher de la quatrième à la dixième valeur des deux suites précédentes.",
+    "text": "On introduit dans cette partie la notion de liste en Python.\n\nExemple :\nDéterminer la suite des \\(n\\) premiers termes de la suite \\((u_n)\\) définie par :\n\\[u_n = 3n^2 - 5n + 1\\]\ndef terme_u(n):\n    L = []\n    for i in range(n):\n        u = 3 * i**2 - 5 * i + 1\n        L.append(u)\n    return L\n\nterme_u(10)\n\n\n\n\nExemple :\nDéterminer la suite des \\(n\\) premiers termes de la suite \\((u_n)\\) définie par :\n\\(u_0 = 3\\) et pour tout \\(n \\geqslant 2\\),\n\\[u_{n+1} = \\frac{u_n^2}{n-1}\\]\ndef terme_u(n):\n    u = 3\n    L = [u]\n    for i in range(2, n + 2):\n        u = u**2 / (i - 1)\n        L.append(u)\n    return L\n\ndef terme_u_v2(n):\n    L = [3]\n    for i in range(2, n + 2):\n        L.append(L[-1]**2 / (i - 1))\n    return L\n\nterme_u(5), terme_u_v2(5)",
     "crumbs": [
       "Spé maths première",
       "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice",
-    "href": "premiere-maths/suite1/exercices.html#exercice",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "",
-    "text": "Exercice 1 : \n\nSoit \\((u_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(u_n=n^2-3\\). Calculer \\(u_{11}\\).\nSoit \\((v_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(v_n=\\frac{n^2-3n}{n-5}\\). Calculer le premier terme de la suite.\nSoit \\((w_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\[w_n=\\sum_{k=0}^n 2^k=1+2+2^2+\\dots +2^n\\] Calculer \\(u_4\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-1",
-    "href": "premiere-maths/suite1/exercices.html#exercice-1",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "",
-    "text": "Exercice 2 : \nOn considère le programme python suivant :\ndef f(x):\n    return x**2-3\n\ndef terme_suite(k): \n    L=[]\n    for i in range(k):\n        u=f(i)\n        L.append(u)\n    return u\n\nQue renvoie l’appel terme_suite(10) ? À quelle suite de l’exercice cela correspond ?\nModifier le script précédent afin de calculer les 10 premiers termes de la suite \\((v_n)\\) précédente.\nModifier le script précédent afin de calculer les 10 premiers termes de la suite \\((w_n)\\) précédente.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-2",
-    "href": "premiere-maths/suite1/exercices.html#exercice-2",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "",
-    "text": "Exercice 3 : \nPour chacune des suites suivantes définies pour tout entier naturel \\(n\\), calculer les cinq premiers termes.\n\n\\(u_n = 7n + 1\\)\n\\(v_n = n^2 - 3n + 1\\)\n\\(w_n = \\dfrac{1}{2n - 1}\\)\n\\(t_n = \\sqrt{5n + 1}\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-3",
-    "href": "premiere-maths/suite1/exercices.html#exercice-3",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "",
-    "text": "Exercice 4 : \nPour chacune des suites suivantes définies par récurrence pour tout entier naturel \\(n\\), calculer les quatre termes suivant le premier.\n\n\\(\\left\\{\\begin{array}{l} u_0 = 2 \\\\ u_{n+1} = 2u_n + 1 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_{n+1} = u_n^2 + 1 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_1 = 1 \\\\ u_{n+1} = \\dfrac{1}{u_n + 2} \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_{n+1} = \\sqrt{u_n^2 + 1} \\end{array}\\right.\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-4",
-    "href": "premiere-maths/suite1/exercices.html#exercice-4",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "",
-    "text": "Exercice 5 : \n\nPour chacune des suites suivantes, calculer les trois termes suivant le premier :\n\n\n\\(\\left\\{\\begin{array}{l} u_0 = 2 \\\\ u_{n+1} = 3u_n - 4n \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 0 \\\\ u_{n+1} = u_n^2 + \\dfrac{1}{2n+1} \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 3 \\\\ u_{n+1} = 5u_{n-1} - 2 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_1 = 2 \\\\ u_{n+2} = 2u_{n+1} + u_n \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_1 = 2 \\\\ u_{n+2} = (n+1)u_{n+1} + n \\end{array}\\right.\\)\n\n\nUtiliser la calculatrice afin d’afficher de la quatrième à la dixième valeur des deux suites précédentes.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-5",
-    "href": "premiere-maths/suite1/exercices.html#exercice-5",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 6",
-    "text": "Exercice 6\n\nExercice 6 : \n\n\nSoit \\((u_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(u_0= 3\\) et \\(u_{n+1}=u_n^2-3\\). Calculer les trois premiers termes.\n\nSoit \\((v_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(v_0=3\\) et \\(v_{n+1}=\\frac{v_n}{2n+1}\\). Calculer les trois premiers termes.\n\nModifier le script de l’exercice précédent afin que le programme renvoie la liste des \\(n\\) premiers termes de la suite \\((u_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-6",
-    "href": "premiere-maths/suite1/exercices.html#exercice-6",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 7",
-    "text": "Exercice 7\n\nExercice 7 : \nPour chacune des suites suivantes définies sur \\(\\mathbb{N}\\), exprimer \\(u_{n-1}\\) et \\(u_{n+1}\\) en fonction de \\(n\\) :\n\n\\(u_n = 6n + 8\\)\n\\(u_n = n^2 - 2n + 8\\)\n\\(u_n = \\dfrac{n(n+1)}{n+2}\\)\n\\(u_n = \\dfrac{3^{n+1}}{2^n}\\)\n\\(u_n = \\dfrac{9n - 5}{4n + 6}\\)\n\\(u_n = \\left( \\dfrac{n^2}{n+1} \\right)^{n+1}\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-7",
-    "href": "premiere-maths/suite1/exercices.html#exercice-7",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 8",
-    "text": "Exercice 8\n\nExercice 8 : \n\nSoit \\(u_n=2n^2-6n+4\\).\nExprimer \\(u_{n+1}\\), \\(u_{n+2}\\), \\(u_{2n+1}\\), et \\(u_{n^2}\\) en fonction de \\(n\\).\nSoit \\(u_{n+2} = 3 u_{n+1} -2n\\)\nExprimer \\(u_{n+1}\\) en fonction de \\(u_n\\) et \\(n\\), puis \\(u_{n+2}\\) en fonction de \\(u_n\\) et \\(n\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-8",
-    "href": "premiere-maths/suite1/exercices.html#exercice-8",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 9",
-    "text": "Exercice 9\n\nExercice 9 : \nSoit \\((u_n)\\) une suite définie pour tout entier \\(n\\) par \\(u_n=1+(-1)^n \\frac{5}{2^{n-1}}\\).\nMontrer que la suite \\(v_n = \\frac{u_{n+1}-1}{u_{n}-1}\\) est constante.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-9",
-    "href": "premiere-maths/suite1/exercices.html#exercice-9",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 10",
-    "text": "Exercice 10\n\nExercice 10 : \nSoit la suite \\((un_)\\) définie sur \\(\\N\\) par \\(u_0=1\\) et \\(u_{n+1} = \\frac{u_n}{1+u_n(1+2n)}\\)\n\n\n\n\nCalculer les 5 premiers de la suite \\((u_n)\\).\n\nConjecturer une forme explicite de la suite \\((u_n)\\).\n\n\nDémontrer votre conjecture.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-10",
-    "href": "premiere-maths/suite1/exercices.html#exercice-10",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 11",
-    "text": "Exercice 11\n\nExercice 11 : \n\nOn considère la suite définie par \\(u_n=\\frac{2n-5}{n^2-4}\\)\n\nÀ partir de quel rang la suite est-elle parfaitement définie ? Justifier brièvement.\n\nExprimer, en fonction de \\(n\\), \\(u_{n+1}\\) et \\(u_{2n}\\).\n\nExprimer \\(u_n - 1\\) en fonction de \\(n\\), et en déduire que tout \\(u_n &lt;1\\).\n\nOn considère la suite définie par la fonction python ci-dessous :\n\ndef suite(n):\n    u = 1\n    for i in range(n):\n        u = i / (2*u + 1)\n    return u\n\n\nDonner le terme initial de la suite ainsi que la relation de récurrence.\nQuel terme de la suite est renvoyé par l’instruction ?\nCompléter le script précédent pour qu’il calcule la somme des \\(n\\) premiers termes.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-11",
-    "href": "premiere-maths/suite1/exercices.html#exercice-11",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 12",
-    "text": "Exercice 12\n\nExercice 12 : \nSoit \\(n \\leqslant 1\\). On considère la suite \\((u_n)\\) définie par \\[u_n=\\sum_{k=1}^n k^2\\]\n\n\nCalculer les 3 premiers termes de la suite \\((u_n)\\).\n\n\n\n\nÉtablir une relation de récurrence entre \\(u_{n+1}\\) et \\(u_n\\).\n\n\nOn considère la suite \\((v_n)\\) définie pour tout \\(n \\leqslant 1\\) par \\[v_n=\\frac{n(n+1)(2n+1)}{6}\\]\n\nMontrer que \\(u_1=v_1\\).\n\nMontrer que \\(v_n\\) vérifie la relation de récurrence de la question 1.b\n\nConclure.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-12",
-    "href": "premiere-maths/suite1/exercices.html#exercice-12",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 13",
-    "text": "Exercice 13\n\nExercice 13 : \nÉcrire un script python qui permet de retourner la liste des \\(k\\) premiers de la suite \\((u_n)\\).\n\n\\(u_n=\\frac{2n}{n^2+1}\\)\n\n\\(u_0=3\\) et \\(u_{n+1}=\\frac{u_n-1}{u_n+1}\\)\n\n\\[\n\\left\\{\n\\begin{array}{l}\nw_0=4\\\\\nw_{n+1}=5w_n-2n\n\\end{array}\n\\right.\n\\]",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-13",
-    "href": "premiere-maths/suite1/exercices.html#exercice-13",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 14",
-    "text": "Exercice 14\n\nExercice 14 : \nSur un cercle, on place \\(n\\) points distincts et on s’intéresse au nombre \\(p_n\\) de cordes que l’on peut tracer.\n\n\nDéterminer \\(p_3\\), \\(p_4\\) et \\(p_5\\).\n\n\\(n\\) points sont placés et les \\(p_n\\) cordes sont tracées. On ajoute un nouveau point distinct des précédents.\nCombien de nouvelles cordes peut-on tracer ?\nEn déduire une relation de récurrence entre \\(p_{n+1}\\) et \\(p_n\\).\nEn écrivant les lignes comme ci-dessous et en additionnant terme à terme par colonne\n\n\\[\n\\begin{array}{l}\np_2=1\\\\\np_3=p_2+ \\dots \\\\\np_4=p_3+ \\dots \\\\\n\\dots  \\\\\np_n=p_{n-1}+\\dots\\\\\n\\end{array}\n\\]\nDéterminer \\(p_n\\) en fonction de \\(n\\).\n\nOn voudrait connaître le nombre de points nécessaires pour tracer \\(1\\,035\\) cordes.\nProposer un algorithme utilisant la formule de récurrence de la suite \\((p_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-14",
-    "href": "premiere-maths/suite1/exercices.html#exercice-14",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 15",
-    "text": "Exercice 15\n\nExercice 15 : \nSoit \\((u_n)_{n \\geq 0}\\) définie par \\(u_n= \\frac{2n - 1}{n + 1}\\)\n\nCalculer les 3 premiers termes de la suite.\nÉtudier les variations de la suite.\nMontrer que pour tout entier \\(n &gt; 0\\), \\(u_n \\in [0 \\,;\\,2]\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-15",
-    "href": "premiere-maths/suite1/exercices.html#exercice-15",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 16",
-    "text": "Exercice 16\n\nExercice 16 : \nDémontrer que si deux suites sont croissantes, alors la somme des deux est croissante.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-16",
-    "href": "premiere-maths/suite1/exercices.html#exercice-16",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 17",
-    "text": "Exercice 17\n\nExercice 17 :  Étude par la différence \nDans chacun des cas suivants, étudier les variations de la suite \\((u_n)\\) puis calculer les 3 premiers termes.\n\n\\(u_n=n - 2^n\\)\n\\(\\left\\{\\begin{array}{l}u_0 = 0\\\\ u_{n+1} = u_n + 2n \\end{array} \\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0=1\\\\ u_{n+1} = (u_n + 0,5)^2 \\end{array} \\right.\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-17",
-    "href": "premiere-maths/suite1/exercices.html#exercice-17",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 18",
-    "text": "Exercice 18\n\nExercice 18 :  Étude par le quotient \nEn étudiant le signe de \\(u_n\\) et le quotient \\(\\frac{u_{n+1}}{u_n}\\) (on admettra que pour tout \\(n\\), \\(u_n\\neq 0\\))\n\n\\(u_n = \\frac{10}{7^n}\\)\n\\(v_n = \\frac{2^{n+1}}{3^{1-n}}\\)\n\\(w_n = n \\times 3^{-n}\\)\n\\(\\left\\{\\begin{array}{l}t_0 = -1\\\\ t_{n+1} = t_n^3 +2t_n \\end{array} \\right.\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-18",
-    "href": "premiere-maths/suite1/exercices.html#exercice-18",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 19",
-    "text": "Exercice 19\n\nExercice 19 :  Étude par la fonction associée \n\nEn étudiant les variations de la fonction \\(f\\) associée que l’on précisera, étudier les variations des suites suivantes :\n\n\\(u_n = -n^3 + 3n\\)\n\\(w_n = n^2 -2n +1\\)\n\\(s_n=\\sqrt{2n-4}\\)\n\\(t_n=\\frac{4-n}{n+1}\\)\n\nPeut-on appliquer cette méthode à la suite \\((r_n)\\) définie par \\(r_0=4\\) et pour tout \\(n \\in \\N\\), \\[r_{n+1}=r_n^2-2n+3\\]",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-19",
-    "href": "premiere-maths/suite1/exercices.html#exercice-19",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 20",
-    "text": "Exercice 20\n\nExercice 20 : \nOn considère les propositions suivantes :\n\n\\((P_1)\\) : Si la suite \\((u_n)\\) est strictement croissante sur \\(\\N\\) alors \\(u_3 &lt; u_4\\).\n\\((P_2)\\) : Si la suite \\((u_n)\\) est strictement décroissante sur \\(\\N\\) alors \\(u_3 &lt; u_4\\).\n\\((P_3)\\) : Si la suite \\((u_n)\\) est strictement décroissante sur \\(\\N\\) alors \\(\\forall n \\in \\, \\, u_{n+1} \\leqslant u_n\\)\n\\((P_4)\\) : Si la suite \\((u_n)\\) est strictement sur \\(\\N\\) alors \\(\\forall n \\in \\, \\, u_{n+1} &gt; u_n\\)\n\n\nEn justifiant, indiquer pour chacune des propositions précédentes, si elle est vraie ou fausse.\nIndiquer la réciproque de chacune de ces propositions et dire si elle est vraie ou fausse.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-20",
-    "href": "premiere-maths/suite1/exercices.html#exercice-20",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 21",
-    "text": "Exercice 21\n\nExercice 21 : Méthode au choix \nÉtudier les variations des suites suivantes en utilisant la méthode de votre choix.\n\n\\(u_n = n + \\frac{1}{n+1}\\)\n\\(v_n = \\frac{n+1}{2^n}\\)\n\\(\\left\\{\\begin{array}{l}w_0=1\\\\ w_n = w_{n+1} + \\frac{1}{n} \\end{array} \\right.\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-21",
-    "href": "premiere-maths/suite1/exercices.html#exercice-21",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 22",
-    "text": "Exercice 22\n\nExercice 22 : Vrai/faux \n\nSi une suite \\(u\\) est décroissante alors \\(u_1\\geqslant u_5\\).\nSi une suite \\(v\\) est décroissante alors pour tout \\(n \\in \\N\\), \\(v_n \\leqslant v_0\\).\nSoit une suite \\(w\\) définie pour tout \\(n \\in \\N\\) par \\(w_n=f(n)\\) où \\(f\\) est définie sur \\([0\\,;\\, +\\infty[\\). Si \\(w\\) est croissante alors la fonction \\(f\\) est croissante.\nSoit \\(v\\) la suite définie sur \\(\\N\\) par\n\\[\\left\\{\\begin{array}{l}v_0=2\\\\ v_{n+1}=g(v_n) \\end{array}\\right.\\]\noù \\(g:x \\longmapsto x-4\\). La suite \\((v_n)\\) est croissante.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-22",
-    "href": "premiere-maths/suite1/exercices.html#exercice-22",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 23",
-    "text": "Exercice 23\n\nExercice 23 : \nSoit \\((u_n)\\) une suite à termes strictement positifs.\n\nDémontrer que si \\((u_n)\\) est strictement croissante alors \\(\\left(\\frac{1}{u_n} \\right)\\) est strictement décroissante.\nQue peut-on dire de la réciproque ?",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-23",
-    "href": "premiere-maths/suite1/exercices.html#exercice-23",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 24",
-    "text": "Exercice 24\n\nExercice 24 : \n(Extrait Devoir)\n\nOn considère les suites \\((u_n)\\), \\((v_n)\\) définies pour tout \\(n \\in \\N\\) par\n\\[u_n = 2n^2+4n-2 \\quad ; \\quad v_n = -\\frac{3^n}{2} \\quad ; \\quad w_n= n- \\frac{1}n\\]\n\nCalculer le 3 terme de la suite \\((u_n)\\).\nÉtudier les variations des suites \\((u_n)\\), \\((v_n)\\) et \\((w_n)\\) par étude de la différence.\n\nOn considère la suite \\((t_n)\\) définie par\n\\[t_n=\\frac{-2^n}{n-4}\\]\n\nÀ partir de quel rang la suite est-elle définie ?\nEn utilisant la méthode du quotient, déterminer les variations de la suite \\((t_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-24",
-    "href": "premiere-maths/suite1/exercices.html#exercice-24",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 25",
-    "text": "Exercice 25\n\nExercice 25 : \nOn considère la suite \\((u_n)\\) définie pour tout \\(n \\geqslant 1\\) par\n\\[u_n=\\sum_{k=1}^n \\frac{(-1)^k}{k}\\]\nÉtudier les variations de la suite \\((v_n)\\) où pour tout \\(n \\in \\N^*\\), \\(v_n=u_{2n}\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-25",
-    "href": "premiere-maths/suite1/exercices.html#exercice-25",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 26",
-    "text": "Exercice 26\n\nExercice 26 : \nOn considère la suite \\((u_n)\\) définie par \\[u_0=0,9 \\et u_{n+1} =u_n^2\\] On considère la fonction \\(f\\) tel que \\(u_{n+1} =f(u_n)\\) définie sur \\([0;1]\\).\n\nConstruire les premiers de cette suite.\n\nÉtudier les variations de la fonction \\(g\\) définie par \\(g(x) =x -x^2\\).\n\nJustifier que si \\(x \\in [0;0,5]\\) alors \\(f(x) \\in [0;0,5]\\)\n\nDémontrer que \\(u_1 \\in [0;0,5]\\) et en déduire que pour tout \\(n \\geqslant 1\\), \\(u_n \\in [0;0,5]\\)\n\nEn déduire les variations de la suite \\((u_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-26",
-    "href": "premiere-maths/suite1/exercices.html#exercice-26",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 27",
-    "text": "Exercice 27\n\nExercice 27 : \nOn considère la suite \\((u_n)\\) définie sur \\(\\N\\) par \\[u_n=\\frac{-3^n}{(n^2+2)2^n}\\]\n\nJustifier que pour tout \\(n &gt;0\\), \\(u_n &lt;0\\)\n\nMontrer que pour tout \\(n \\in \\N\\), \\[\\frac{u_{n+1}}{u_n}&gt;1 \\Longleftrightarrow n(n-4) &gt;0\\]\n\nRésoudre \\(n(n-4) &gt;0\\)\n\nEn déduire la monotonie de la suite \\((u_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-27",
-    "href": "premiere-maths/suite1/exercices.html#exercice-27",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 28",
-    "text": "Exercice 28\n\nExercice 28 : \nOn considère la suite \\((u_n)\\) définie par \\(u_0=2\\) et pour tout \\(n \\in \\N\\),\n\\[u_{n+1}=1- \\frac{1}{u_n}\\]\nMontrer que la suite \\((u_{3n})\\) est constante.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-28",
-    "href": "premiere-maths/suite1/exercices.html#exercice-28",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 29",
-    "text": "Exercice 29\n\nExercice 29 : \n\nÉtudier le signe \\(x^2-4x-12\\)\n\nOn considère la fonction \\(f\\) définie sur \\([-3_,;\\, + \\infty[\\) par \\[f(x)= \\sqrt{4x+12}\\]\nSoit la suite \\((u_n)\\) définie par \\(u_0 =-1\\) et pour tout \\(n \\in \\N\\), \\[u_{n+1}= f(u_n)\\]\n\n\n\nConstruire, sur le graphique fourni, les cinq premiers termes de la suite \\((u_n)\\)\n\nConjecturer le sens de variation de la suite \\((u_n)\\)\n\n\nOn admet que pour tout entier \\(n\\),\n\\[-1 \\leqslant u_n \\leqslant 6\\]\nEn utilisant la question 1., démontrer que la suite \\((u_n)\\) est croissante.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-29",
-    "href": "premiere-maths/suite1/exercices.html#exercice-29",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 30",
-    "text": "Exercice 30\n\nExercice 30 : \nSoit \\((v_n)\\) la suite définie par \\(v_0=6\\) et pour tout \\(n \\in \\N\\),\n\\(v_{n+1}= f(v_n)\\), où \\(f\\) est une fonction représentée graphiquement.\n\nConstruire graphiquement les cinq premiers termes de la suite\n\n\n\nConjecturer les variations de la suite \\((v_n)\\) ainsi que sa limite éventuelle\n\nExiste-t-il des valeurs de \\(v_0\\) pour lesquels la suite ne semble pas converger ? Préciser.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-30",
-    "href": "premiere-maths/suite1/exercices.html#exercice-30",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 31",
-    "text": "Exercice 31\n\nExercice 31 : \nOn considère la suite \\((u_n)\\) définie par \\(u_0= \\frac12\\) et pour tout \\(n \\in \\N\\),\n\\[u_{n+1} = \\frac{3u_n}{1+2u_n}\\]\n\nDéterminer les trois premiers termes de la suite\n\n\nA l’aide de la calculatrice, conjecturer les variations de la suite\n\n\n\n\nOn admet que la suite \\((u_n)\\) est majorée par \\(1\\). Montrer que la suite \\((u_n)\\) est croissante\n\n\n\nOn considère la suite \\((v_n)\\) définie sur \\(\\N\\) par\n\\[v_{n+1} = \\frac{u_n}{1-u_n}\\]\n\nCalculer \\(v_0\\) et \\(v_1\\)\n\nDémontrer que la suite \\((w_n)\\) définie par \\(w_n= 3^n\\) vérifie la relation de récurrence de la suite \\((v_n)\\)\n\nEn déduire l’expression de la suite \\((v_n)\\) en fonction de \\(n\\)\n\nEn déduire l’expression de la suite \\((u_n)\\) en fonction de \\(n\\)\n\nDéterminer les variations de la suite \\((u_n)\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-31",
-    "href": "premiere-maths/suite1/exercices.html#exercice-31",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 32",
-    "text": "Exercice 32\n\nExercice 32 : \nOn considère la suite définie sur \\(\\N^*\\) par \\(u_n=2-\\frac{1}{n^2}\\)\n\nMontrer que la suite \\((u_n)\\) est croissante.\nDémontrer que pour tout \\(n \\geqslant 1\\), \\(u_n &lt;2\\)\nA l’aide d’un script python, déterminer le plus petit entier \\(n_0\\), tel que pour tout \\(n &gt;n_0\\), \\(u_n&gt;1,999999\\)\nRetrouver algébriquement le résultat de la question précédente.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-32",
-    "href": "premiere-maths/suite1/exercices.html#exercice-32",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 33",
-    "text": "Exercice 33\n\nExercice 33 : \nÀ l’aide de la calculatrice, déterminer la limite des suites suivantes :\n\n\\(u_n=\\frac{5 \\times (-1)^n}{n+1}\\)\n\\(v_n=\\frac{1}{4} n^2-2n-1\\)\n\\(\\left\\{\\begin{array}{l}w_0=5\\\\ w_{n+1}=0,8 \\times 0,8 w_n\\end{array} \\right.\\)\n\\(\\left\\{\\begin{array}{l}t_0=1\\\\ t_{n+1}=-\\frac{2}{3} t_n +4\\end{array} \\right.\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-33",
-    "href": "premiere-maths/suite1/exercices.html#exercice-33",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 34",
-    "text": "Exercice 34\n\nExercice 34 : \nDéterminer les limites des suites suivantes :\n\n\\(u_n=-5n+2\\)\n\\(v_n=4n^2+n+7\\)\n\\(w_n=\\frac{2n+3}{n}\\)\n\\(wx_n=(-1)^n\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-34",
-    "href": "premiere-maths/suite1/exercices.html#exercice-34",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 35",
-    "text": "Exercice 35\n\nExercice 35 : \nOn considère la suite \\((u_n)\\) définie par \\(u_0=3\\) et pour tout \\(n \\in \\N\\), \\(u_{n+1} = \\frac{1}{2} u_n +1\\).\n\nOn admet que pour tout \\(n \\in \\N\\), \\(u_n \\leqslant 2\\)\n\nDéterminer, à l’aide de la calculatrice, la limite de la suite.\nCompléter le programme Python suivant :\n\n\ndef seuil_suite():\n    u = 3\n    n = 0\n    while ................. :\n        n = n + 1\n        u = ...................\n    return n\n\n\n\nÉtude algébrique :\n\nMontrer que pour tout \\(n\\), \\(u_n= \\left(\\frac{1}{2}\\right)^n + 2\\)\nDémontrer que la suite \\((u_n)\\) est croissante et déterminer sa limite.\nDéterminer, à l’aide des variations de la suite, le plus petit entier \\(n\\) tel que \\(2 \\leqslant u_n &lt; 2,00001\\)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-35",
-    "href": "premiere-maths/suite1/exercices.html#exercice-35",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 36",
-    "text": "Exercice 36\n\nExercice 36 : \nOn considère la suite \\((u_n)\\) définie par \\(u_n=n^2-n\\).\n\nÉtudier les variations de la suite \\((u_n)\\).\nConjecturer la limite de la suite \\((u_n)\\). &gt; Défi : démontrer que quelque soit le réel \\(A\\), on peut toujours trouver un entier \\(n_0\\), tel que \\(u_{n_0} &gt; A\\)\nÉcrire une fonction suite_u en Python qui retourne le plus petit entier \\(n\\) tel que \\(u_n &gt; 10^p\\) où \\(p\\) est un paramètre de la fonction.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-36",
-    "href": "premiere-maths/suite1/exercices.html#exercice-36",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 37",
-    "text": "Exercice 37\n\nExercice 37 : \nOn considère la suite \\((v_n)\\) définie sur \\(\\N\\) par \\(v_n=\\frac{10n+1}{5n+6}\\).\n\nConjecturer le comportement de la suite au voisinage de \\(+\\infty\\).\n\nDémontrer que pour tout \\(n\\), \\(v_n-2= \\frac{-11}{5n+6}\\)\n\nValider par un argument votre conjecture.\n\nÉcrire une fonction seuil_suite qui retourne le rang \\(p\\) à partir duquel \\(\\left|u_n-2\\right| &lt; 10^{-7}\\).\n(Bonus) En utilisant la question 2.a, déterminer les variations de la suite \\((u_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-37",
-    "href": "premiere-maths/suite1/exercices.html#exercice-37",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 38",
-    "text": "Exercice 38\n\nExercice 38 : \nOn pose pour tout entier \\(n \\neq 0\\), \\[S_n= \\sum_{k=0}^n \\frac{1}{k(k+1)}\\]\n\nDémontrer que la suite \\((S_n)\\) est croissante.\n\nDémontrer que pour tout entier \\(k \\neq 0\\),\n\\[\n\\frac{1}{k(k+1)} = \\frac{1}{k} - \\frac{1}{k+1}\n\\]\nEn déduire une expression simple de la \\(S_n\\).\n\nDéterminer la limite de \\((S_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-38",
-    "href": "premiere-maths/suite1/exercices.html#exercice-38",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 39",
-    "text": "Exercice 39\n\nExercice 39 : \nSoit un polygone à \\(n\\) côtés inscrit dans le cercle trigonométrique comme dans la figure ci-dessous (\\(n=8\\), il s’agit d’un octogone).\nOn note \\(\\mathcal{A}_n\\) l’aire de ce polygone.\n\n\nDans le cas de l’octogone, quelle est la mesure de l’angle \\(\\alpha=\\widehat{IOM}\\) ?\n\nDans le cas général d’un polygone régulier à \\(n\\geq3\\) côtés on pose \\(\\alpha_n=\\dfrac{2\\pi}{n}\\). Vérifier que pour \\(n=8\\) on retrouve bien le résultat de la question précédente. Expliquer pourquoi.\n\nQuelles sont les figures obtenues lorsque \\(n=3\\) et \\(n=4\\) ?\n\nMontrer que la suite \\((\\alpha_n)\\) est bornée et décroissante. Déterminer sa limite.\n\nMontrer que \\(\\mathcal{A}_n=\\pi\\dfrac{\\sin(\\alpha_n)}{\\alpha_n}\\).\n\nOn pose sur \\([0\\,;\\, \\pi]\\) la fonction \\(f\\) définie par \\(f(x)=\\pi\\dfrac{\\sin(x)}{x}\\). Quel est le lien entre \\(\\mathcal{A}_n\\) et \\(f\\) ?\n\n\n\nÀ l’aide de la courbe de \\(f\\) ci-dessus, dresser le tableau de variation de \\(f\\) sur \\([0\\,;\\, \\pi]\\).\n\nDonner un encadrement de \\(f\\) sur \\([0\\,;\\, \\pi]\\).\n\n(*) En déduire que \\((\\mathcal{A}_n)\\) est bornée.\n\n(**) Montrer que \\((\\mathcal{A}_n)\\) est croissante.\nIndication : on pourra utiliser la définition d’une suite décroissante avec \\((\\alpha_n)\\) puis la définition d’une fonction décroissante avec \\(f\\).\n\n(**) Quelle est la limite de \\((\\mathcal{A}_n)\\) ?\nEn déduire une conjecture géométrique sur l’aire du polygone inscrit.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-39",
-    "href": "premiere-maths/suite1/exercices.html#exercice-39",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 40",
-    "text": "Exercice 40\n\nExercice 40 : \n\nSoit \\(x\\) et \\(y\\) deux réels positifs ou nuls.\n\nDévelopper \\((\\sqrt{x} - \\sqrt{y})^2\\).\n\nEn déduire que \\(\\sqrt{xy} \\leq \\frac{x + y}{2}\\).\n\nOn considère les deux suites \\((u_n)\\) et \\((v_n)\\) définies par \\(u_0 = 1\\), \\(v_0 = 4\\) et, pour tout entier naturel \\(n\\),\n\\[\nu_{n+1} = \\frac{u_n + v_n}{2} \\quad \\text{et} \\quad v_{n+1} = \\sqrt{u_n v_n}\n\\]\n\nCalculer les valeurs exactes de \\(u_1\\), \\(u_2\\), \\(v_1\\) et \\(v_2\\).\n\nDémontrer que, pour tout entier \\(n \\geq 1\\), \\(v_n \\leq u_n\\).\nIndication. Pour \\(n \\geq 1\\), on peut écrire \\(u_n\\) et \\(v_n\\) en fonction de \\(u_{n-1}\\) et de \\(v_{n-1}\\).\n\nMontrer que \\((u_n)\\) et \\((v_n)\\) sont monotones à partir du rang 1.\n\nCompléter les variations.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-40",
-    "href": "premiere-maths/suite1/exercices.html#exercice-40",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 41",
-    "text": "Exercice 41\n\nExercice 41 : \nOn considère la suite \\((u_n)\\) définie sur \\(\\N^*\\) par \\[\nu_n= \\sqrt{n+1} -\\sqrt{n}\n\\]\n\nDéterminer les variations de la suite \\((u_n)\\).\n\nDémontrer que pour tout \\(n \\in \\N^*\\),\n\\[\n\\frac{1}{2\\sqrt{n+1}} \\leqslant u_n \\leqslant \\frac{1}{2\\sqrt{n}}\n\\]\nEn déduire (ou conjecturer) la limite de la suite \\((u_n)\\).\n\nOn définit la suite \\((v_n)\\) par \\[\nv_n =\\frac{u_1+u_2+ \\dots + u_3}{\\sqrt{n}}\n\\]\nQuelle est la limite de la suite \\((v_n)\\) ?",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#bilan-les-scripts-à-savoir-faire",
-    "href": "premiere-maths/suite1/exercices.html#bilan-les-scripts-à-savoir-faire",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Bilan (Les scripts à savoir faire)",
-    "text": "Bilan (Les scripts à savoir faire)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-41",
-    "href": "premiere-maths/suite1/exercices.html#exercice-41",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 42",
-    "text": "Exercice 42\n\nExercice 42 : \nOn considère la suite \\((u_n)\\) définie, pour tout entier naturel \\(n\\), par \\(u_n=n^3-n+4\\).\n\nDéterminer les trois premiers termes de la suite.\nExprimer \\(u_{n+1}\\) en fonction de \\(n\\).\nExprimer \\(u_{n+1}-u_n\\) en fonction et \\(n\\) et en déduire les variations de la suite \\((u_n)\\).\nL’algorithme ci-dessous contient une fonction suite qui doit permettre de déterminer un rang \\(n\\) à partir duquel tous les termes de la suite sont supérieurs à un nombre réel \\(A\\).\n\ndef u(n):\n    return n**3-n+4\n    \ndef seuil(A):\n    n = 0\n    while u &lt;= A:\n        u = 3 * u + 4\n        n = n + 1\n    return n, u\n\n\nQue est le rôle de la fonction ?\nProgrammer cet algorithme et exécuter la fonction en prenant \\(A = 100\\), puis \\(A=100\\,000\\) et enfin \\(A=10^{20}\\).\nConjecturer la limite éventuelle de la suite \\((u_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-42",
-    "href": "premiere-maths/suite1/exercices.html#exercice-42",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 43",
-    "text": "Exercice 43\n\nExercice 43 : \nSoit \\((u_n)\\) la suite définie par : \\[\\left\\{\n\\begin{array}{l}\nu_0 = 10 \\\\\nu_{n+1} = 2u_n - 5 + n\n\\end{array}\n\\right.\n\\]\n\nÉcrire une fonction python u(n) de paramètre n un entier et qui renvoie le terme \\(u_n\\) de cette suite (avec une boucle while et une boucle for).\nÉcrire une fonction python termes_u(n) de paramètre n un entier et qui renvoie les termes \\(u_0\\) à \\(u_n\\) de cette suite dans une liste (avec une boucle while et une boucle for).\nOn admet que la suite \\(u\\) est croissante.\nÉcrire une fonction seuil(M) de paramètre M et qui renvoie le rang du premier terme de la suite tel que \\(u_n \\geq M\\).\nÉcrire un script qui permet de savoir si une suite est croissante sur les \\(n\\) premiers termes.",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/exercices.html#exercice-43",
-    "href": "premiere-maths/suite1/exercices.html#exercice-43",
-    "title": "Feuilles d’exercices — Second degré",
-    "section": "Exercice 44",
-    "text": "Exercice 44\n\nExercice 44 : \nOn considère la suite \\((u_n)\\) définie, pour tout \\(n \\in \\mathbb{N}\\), par : \\[\nu_0 = 1 \\\\\nu_{n+1} = \\frac{u_n}{1+u_n}\n\\]\n\nOn considère la fonction \\(g\\) définie sur \\([0\\,;\\,+ \\infty[\\) telle que \\(u_{n+1}= g(u_n)\\).\n\nDéterminer l’expression de la fonction \\(g\\).\n\nConstruire les 5 premiers termes de la suite \\((u_n)\\).\n\nConjecturer les variations et la limite de la suite \\((u_n)\\).\n\n\n\n\n\n\n\nCalculer les cinq premiers termes de la suite.\n\nConjecturer la forme générale de \\(u_n\\).\n\nComment peut-on vérifier la cohérence la cohérence de la conjecture à l’aide de la calculatrice ?\n\nVérifier la conjecture algébriquement.\n\n\nSoit \\(f\\) la fonction définie sur \\([0\\,;\\,+ \\infty[\\) telle que pour tout \\(n \\in \\N\\), \\(u_{n}=f(n)\\)\n\nDonner l’expression de la fonction \\(f\\).\n\nÉtudier les variations de la fonction \\(f\\) et en déduire celle de la suite \\((u_n)\\)\n\nDéterminer la limite éventuelle de la suite \\((u_n)\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Feuilles d'exercices — Second degré"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/algorithme.html",
-    "href": "premiere-maths/suite1/algorithme.html",
-    "title": "Algorithme et programmation – Exercices interactifs",
-    "section": "",
-    "text": "Soit \\(u_n\\) la suite définie par :\n\\[\n\\begin{cases}\nu_0 = 3, \\\\\\\\\nu_{n+1} = u_n - n + 2 \\quad \\text{pour tout } n \\in \\N.\n\\end{cases}\n\\]\nSi nous exécutions cet algorithme à la main, pour la somme des 7 premiers termes, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n3\n4\n5\n6\n\n\n\n\n\\(u\\)\n3\n5\n6\n6\n5\n3\n0\n\n\n\\(S\\)\n3\n8\n14\n20\n25\n28\n28\n\n\n\nLe programme en Python donne :\n\n\n  \n    Exercice 1\n    def somme(n_max):\n    n = 0\n    u = 3\n    S = u\n    for i in range(1, n_max + 1):\n        u = u - (i-1) + 2\n        S = S + u\n    return S\n\nprint(somme(6))\n    \n  \n    \n      \n      \n      \n      \n      \n      \n    \n  \n\n\n\n\n\nOn considère une suite \\(u_n\\).\nUn problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de \\(u_n\\).\n\nNous considérons la suite \\(u_n\\) définie dans la partie précédente.\nLes termes de \\(u_n\\) semblent décroître de plus en plus rapidement à partir de \\(n = 3\\).\nOn se demande si la suite \\(u_n\\) peut atteindre une valeur aussi basse que souhaitée.\nÉtant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.\nDans le cas présent, nous recherchons le plus petit entier \\(n \\in \\N\\) tel que \\(u_n \\leq -750\\).\nSi nous exécutions cet algorithme à la main, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n…\n40\n41\n42\n\n\n\n\n\\(u\\)\n3\n5\n6\n…\n-697\n-735\n-774\n\n\n\nLa valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :\n\ndef somme(n_max):\n    n = 0\n    u = 3\n    S = u\n    for i in range(1, n_max + 1):\n        u = u - i + 2\n        S = S + u\n    return S\n\n\n\n\n\n\nOn considère une suite \\(u_n\\).\nUn problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de \\(u_n\\).\n\nNous considérons la suite \\(u_n\\) définie dans la partie précédente.\nLes termes de \\(u_n\\) semblent décroître de plus en plus rapidement à partir de \\(n = 3\\).\nOn se demande si la suite \\(u_n\\) peut atteindre une valeur aussi basse que souhaitée.\nÉtant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.\nDans le cas présent, nous recherchons le plus petit entier \\(n \\in \\N\\) tel que \\(u_n \\leq -750\\).\nSi nous exécutions cet algorithme à la main, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n…\n40\n41\n42\n\n\n\n\n\\(u\\)\n3\n5\n6\n…\n-697\n-735\n-774\n\n\n\nLa valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :\n\ndef seuil_u(seuil):\n    n = 0\n    u = 3\n    while u &gt; seuil:\n        u = u - n + 2\n        n = n + 1\n    print(u, n)\n\n  \n    Exercice 2\n    def seuil_u(seuil):\n    n = 0\n    u = 3\n    while u &gt; seuil:\n        u = u - n + 2\n        n = n + 1\n    print(u, n)\n\nseuil_u(-750)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Algorithme et programmation – Exercices interactifs"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/algorithme.html#algorithme-et-programmation",
-    "href": "premiere-maths/suite1/algorithme.html#algorithme-et-programmation",
-    "title": "Algorithme et programmation – Exercices interactifs",
-    "section": "",
-    "text": "Soit \\(u_n\\) la suite définie par :\n\\[\n\\begin{cases}\nu_0 = 3, \\\\\\\\\nu_{n+1} = u_n - n + 2 \\quad \\text{pour tout } n \\in \\N.\n\\end{cases}\n\\]\nSi nous exécutions cet algorithme à la main, pour la somme des 7 premiers termes, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n3\n4\n5\n6\n\n\n\n\n\\(u\\)\n3\n5\n6\n6\n5\n3\n0\n\n\n\\(S\\)\n3\n8\n14\n20\n25\n28\n28\n\n\n\nLe programme en Python donne :\n\n\n  \n    Exercice 1\n    def somme(n_max):\n    n = 0\n    u = 3\n    S = u\n    for i in range(1, n_max + 1):\n        u = u - (i-1) + 2\n        S = S + u\n    return S\n\nprint(somme(6))\n    \n  \n    \n      \n      \n      \n      \n      \n      \n    \n  \n\n\n\n\n\nOn considère une suite \\(u_n\\).\nUn problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de \\(u_n\\).\n\nNous considérons la suite \\(u_n\\) définie dans la partie précédente.\nLes termes de \\(u_n\\) semblent décroître de plus en plus rapidement à partir de \\(n = 3\\).\nOn se demande si la suite \\(u_n\\) peut atteindre une valeur aussi basse que souhaitée.\nÉtant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.\nDans le cas présent, nous recherchons le plus petit entier \\(n \\in \\N\\) tel que \\(u_n \\leq -750\\).\nSi nous exécutions cet algorithme à la main, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n…\n40\n41\n42\n\n\n\n\n\\(u\\)\n3\n5\n6\n…\n-697\n-735\n-774\n\n\n\nLa valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :\n\ndef somme(n_max):\n    n = 0\n    u = 3\n    S = u\n    for i in range(1, n_max + 1):\n        u = u - i + 2\n        S = S + u\n    return S\n\n\n\n\n\n\nOn considère une suite \\(u_n\\).\nUn problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de \\(u_n\\).\n\nNous considérons la suite \\(u_n\\) définie dans la partie précédente.\nLes termes de \\(u_n\\) semblent décroître de plus en plus rapidement à partir de \\(n = 3\\).\nOn se demande si la suite \\(u_n\\) peut atteindre une valeur aussi basse que souhaitée.\nÉtant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.\nDans le cas présent, nous recherchons le plus petit entier \\(n \\in \\N\\) tel que \\(u_n \\leq -750\\).\nSi nous exécutions cet algorithme à la main, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n…\n40\n41\n42\n\n\n\n\n\\(u\\)\n3\n5\n6\n…\n-697\n-735\n-774\n\n\n\nLa valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :\n\ndef seuil_u(seuil):\n    n = 0\n    u = 3\n    while u &gt; seuil:\n        u = u - n + 2\n        n = n + 1\n    print(u, n)\n\n  \n    Exercice 2\n    def seuil_u(seuil):\n    n = 0\n    u = 3\n    while u &gt; seuil:\n        u = u - n + 2\n        n = n + 1\n    print(u, n)\n\nseuil_u(-750)",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Algorithme et programmation – Exercices interactifs"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/NomDerive/tangente.html",
-    "href": "premiere-maths/NomDerive/tangente.html",
-    "title": "Tangente à une courbe",
-    "section": "",
-    "text": "On considère une fonction \\(f\\) définie sur \\(I\\) non vide, et dérivable en \\(a \\in I\\).\nFaisons alors tendre \\(h\\) vers \\(0\\) (comme pour la définition du nombre dérivé).\nLe point \\(M\\) se rapproche infiniment proche du point \\(A\\) (sans pour autant être confondu avec le point \\(A\\) !!).\n\n\n\n\nL’ensemble de ces droites \\((AM)\\) forme un faisceau de droites.\nOn peut donc voir le nombre \\(f'(a)\\) comme le coefficient directeur de la « position limite » de ce faisceau de droites des sécantes \\((AM)\\) lorsque le point \\(M\\) se rapproche de \\(A\\).\nCette droite « limite » a un seul point de contact (dans un voisinage proche de \\(A\\)) avec \\(\\mathcal{C}_f\\), et tend donc à être la tangente en \\(A\\) à \\(\\mathscr{C}_f\\).\n\nThéorème :\nSoit \\(f\\) une fonction dérivable en \\(a\\).\n\\(f'(a)\\) est le coefficient directeur de la tangente au point d’abscisse \\(a\\).\n\n\n\nDéterminer graphiquement un nombre dérivé\nSur le graphique ci-dessous, on a tracé la courbe représentative \\(\\mathcal{C}_f\\) d’une fonction \\(f\\) définie et dérivable en tout point de l’intervalle \\([-2  \\,,\\, 5]\\).\nOn sait que :\n\nla tangente au point \\(A(-1, 5)\\) à la courbe \\(\\mathcal{C}_f\\) est parallèle à l’axe des abscisses ;\nla tangente au point \\(B(2, 1)\\) à la courbe \\(\\mathcal{C}_f\\) coupe l’axe des abscisses au point de coordonnées \\((3, 0)\\). \n\nDéterminons \\(f'(-1)\\) et \\(f'(2)\\).\n\n\nAfficher la correction\n\nLe nombre dérivé en \\(a\\) est le coefficient directeur de la tangente au point d’abscisse \\(a\\).\n\nLa tangente en \\(-1\\) étant parallèle à l’axe des abscisses, son coefficient directeur est nul.\nAinsi \\(f'(-1) = 0\\).\nLa tangente en \\(B\\) passe par les points \\(B(2, 1)\\) et \\((3, 0)\\) :\nLe coefficient directeur est \\(\\dfrac{1 - 0}{2 - 3} = -1\\), donc \\(f'(2) = -1\\).\n\n\n\n\nThéorème :\nSoit \\(f\\) une fonction dérivable en \\(a\\), alors \\(\\mathcal{C}_f\\) admet une tangente au point d’abscisse \\(a\\) d’équation :\n\\[y = f'(a)(x - a) + f(a)\\]\n\n\n\nDémonstration :\n\n\\(f\\) est dérivable en \\(a\\), donc \\(f'(a)\\) est le coefficient directeur de la tangente de \\(f\\) en \\(a\\).\nElle admet donc une équation réduite de la forme : \\[y = f'(a)x + p\\]\nLe point \\(A(a\\,;\\,f(a))\\) appartient à \\(\\mathcal{C}_f\\) donc vérifie cette équation : \\[f(a) = f'(a)a + p \\Rightarrow p = f(a) - f'(a)a\\]\nAinsi l’équation est : \\[y = f'(a)x + f(a) - f'(a)a = f'(a)(x - a) + f(a)\\]\n\n\nSoit \\(f\\) définie sur \\(D_f = ]0\\,;\\,+\\infty[\\) par \\(f(x) = \\dfrac{1}{x^2}\\).\n\nMontrer que \\(f\\) est dérivable en \\(3\\).\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) non nul, \\[\n\\dfrac{f(3+h)-f(3)}{h} = \\dfrac{\\dfrac{1}{(h+3)^2} - \\dfrac{1}{3^2}}{h} = \\dfrac{\\dfrac{9 - (h+3)^2 }{9(h+3)^2}}{h} = \\dfrac{9 - (h^2 +6h + 9)}{9h(h+3)^2} = -\\dfrac{h +6}{9(h+3)^2}\n\\]\nOr,\n\\[\\lim_{h \\to 0} -\\dfrac{h +6}{9(h+3)^2} = - \\frac{6}{81} = -\\frac{2}{27}\\]\nDonc \\(f\\) est dérivable en \\(3\\), et \\(f'(3) = -\\frac{2}{27}\\), \\(f(3) = \\frac{1}{9}\\).\n\n\nEn déduire l’équation de la tangente au point d’abscisse \\(3\\).\n\n\n\nAfficher la correction\n\nSoit \\(T_3\\) l’équation de la tangente au point d’abscisse \\(3\\) : \\[y = f'(3)(x - 3) + f(3) = - \\frac{2}{27}(x - 3) + \\frac{1}{9} = -\\frac{2}{27}x + \\frac{1}{3}\\]\nDonc l’équation cherchée est :\n\\[y = - \\frac{2}{27}x + \\frac{1}{3}\\]\n\n\n\nRemarque : Interprétation de la limite\nLa représentation graphique et sa tangente sont localement confondues en \\(a\\).\nOn peut donc écrire, pour \\(h\\) proche de \\(0\\) : \\[f(a + h) \\approx  f(a) + h \\cdot f'(a)\\]",
-    "crumbs": [
-      "Spé maths première",
-      "Nombre dérivé",
-      "Tangente à une courbe"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/NomDerive/tangente.html#tangente-en-un-point-de-la-courbe",
-    "href": "premiere-maths/NomDerive/tangente.html#tangente-en-un-point-de-la-courbe",
-    "title": "Tangente à une courbe",
-    "section": "",
-    "text": "On considère une fonction \\(f\\) définie sur \\(I\\) non vide, et dérivable en \\(a \\in I\\).\nFaisons alors tendre \\(h\\) vers \\(0\\) (comme pour la définition du nombre dérivé).\nLe point \\(M\\) se rapproche infiniment proche du point \\(A\\) (sans pour autant être confondu avec le point \\(A\\) !!).\n\n\n\n\nL’ensemble de ces droites \\((AM)\\) forme un faisceau de droites.\nOn peut donc voir le nombre \\(f'(a)\\) comme le coefficient directeur de la « position limite » de ce faisceau de droites des sécantes \\((AM)\\) lorsque le point \\(M\\) se rapproche de \\(A\\).\nCette droite « limite » a un seul point de contact (dans un voisinage proche de \\(A\\)) avec \\(\\mathcal{C}_f\\), et tend donc à être la tangente en \\(A\\) à \\(\\mathscr{C}_f\\).\n\nThéorème :\nSoit \\(f\\) une fonction dérivable en \\(a\\).\n\\(f'(a)\\) est le coefficient directeur de la tangente au point d’abscisse \\(a\\).\n\n\n\nDéterminer graphiquement un nombre dérivé\nSur le graphique ci-dessous, on a tracé la courbe représentative \\(\\mathcal{C}_f\\) d’une fonction \\(f\\) définie et dérivable en tout point de l’intervalle \\([-2  \\,,\\, 5]\\).\nOn sait que :\n\nla tangente au point \\(A(-1, 5)\\) à la courbe \\(\\mathcal{C}_f\\) est parallèle à l’axe des abscisses ;\nla tangente au point \\(B(2, 1)\\) à la courbe \\(\\mathcal{C}_f\\) coupe l’axe des abscisses au point de coordonnées \\((3, 0)\\). \n\nDéterminons \\(f'(-1)\\) et \\(f'(2)\\).\n\n\nAfficher la correction\n\nLe nombre dérivé en \\(a\\) est le coefficient directeur de la tangente au point d’abscisse \\(a\\).\n\nLa tangente en \\(-1\\) étant parallèle à l’axe des abscisses, son coefficient directeur est nul.\nAinsi \\(f'(-1) = 0\\).\nLa tangente en \\(B\\) passe par les points \\(B(2, 1)\\) et \\((3, 0)\\) :\nLe coefficient directeur est \\(\\dfrac{1 - 0}{2 - 3} = -1\\), donc \\(f'(2) = -1\\).\n\n\n\n\nThéorème :\nSoit \\(f\\) une fonction dérivable en \\(a\\), alors \\(\\mathcal{C}_f\\) admet une tangente au point d’abscisse \\(a\\) d’équation :\n\\[y = f'(a)(x - a) + f(a)\\]\n\n\n\nDémonstration :\n\n\\(f\\) est dérivable en \\(a\\), donc \\(f'(a)\\) est le coefficient directeur de la tangente de \\(f\\) en \\(a\\).\nElle admet donc une équation réduite de la forme : \\[y = f'(a)x + p\\]\nLe point \\(A(a\\,;\\,f(a))\\) appartient à \\(\\mathcal{C}_f\\) donc vérifie cette équation : \\[f(a) = f'(a)a + p \\Rightarrow p = f(a) - f'(a)a\\]\nAinsi l’équation est : \\[y = f'(a)x + f(a) - f'(a)a = f'(a)(x - a) + f(a)\\]\n\n\nSoit \\(f\\) définie sur \\(D_f = ]0\\,;\\,+\\infty[\\) par \\(f(x) = \\dfrac{1}{x^2}\\).\n\nMontrer que \\(f\\) est dérivable en \\(3\\).\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) non nul, \\[\n\\dfrac{f(3+h)-f(3)}{h} = \\dfrac{\\dfrac{1}{(h+3)^2} - \\dfrac{1}{3^2}}{h} = \\dfrac{\\dfrac{9 - (h+3)^2 }{9(h+3)^2}}{h} = \\dfrac{9 - (h^2 +6h + 9)}{9h(h+3)^2} = -\\dfrac{h +6}{9(h+3)^2}\n\\]\nOr,\n\\[\\lim_{h \\to 0} -\\dfrac{h +6}{9(h+3)^2} = - \\frac{6}{81} = -\\frac{2}{27}\\]\nDonc \\(f\\) est dérivable en \\(3\\), et \\(f'(3) = -\\frac{2}{27}\\), \\(f(3) = \\frac{1}{9}\\).\n\n\nEn déduire l’équation de la tangente au point d’abscisse \\(3\\).\n\n\n\nAfficher la correction\n\nSoit \\(T_3\\) l’équation de la tangente au point d’abscisse \\(3\\) : \\[y = f'(3)(x - 3) + f(3) = - \\frac{2}{27}(x - 3) + \\frac{1}{9} = -\\frac{2}{27}x + \\frac{1}{3}\\]\nDonc l’équation cherchée est :\n\\[y = - \\frac{2}{27}x + \\frac{1}{3}\\]\n\n\n\nRemarque : Interprétation de la limite\nLa représentation graphique et sa tangente sont localement confondues en \\(a\\).\nOn peut donc écrire, pour \\(h\\) proche de \\(0\\) : \\[f(a + h) \\approx  f(a) + h \\cdot f'(a)\\]",
-    "crumbs": [
-      "Spé maths première",
-      "Nombre dérivé",
-      "Tangente à une courbe"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Accueil",
-    "section": "",
-    "text": "Bienvenue sur le site pédagogique\nUtilisez la barre de navigation ci-dessus pour accéder aux sections :\n\nSNT\nSpécialité Maths Première"
-  },
-  {
-    "objectID": "premiere-maths/index.html",
-    "href": "premiere-maths/index.html",
-    "title": "Cours de Première Spécialité maths",
-    "section": "",
-    "text": "Chapitre 1 : Le second degré\n\n\nForme canonique, racines, signe, parabole.\n\n\n\n\n\n\n\n\n\n\nChapitre 2 : Suites numériques : Généralités\n\n\nSuite numérique - Suite Recursive - variation - limite - Algorithme\n\n\n\n\n\n\n\n\n\n\nChapitre 3 : Le nombre dérivéé\n\n\nnombre dérivé - tangente - dérivée usuelles.\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Spé maths première",
-      "Cours de Première Spécialité maths"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/NomDerive/DerivUsuelles.html",
-    "href": "premiere-maths/NomDerive/DerivUsuelles.html",
-    "title": "Fonction dérivée- Dérivées usuelles",
-    "section": "",
-    "text": "Définition :\nOn dit que \\(f\\) est dérivable sur \\(I\\) lorsque \\(f\\) est dérivable en tout point \\(a\\) de \\(I\\).\nOn appelle alors fonction dérivée de la fonction \\(f\\), la fonction notée \\(f'\\), définie sur \\(I\\) par :\n\\[f' : x \\longmapsto f'(x)\\]\n\n\nOn considère la fonction \\(f\\), définie par \\(f(x)=2x^2-3x+5\\). Déterminons la fonction dérivée associée.\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) non nul, et tout réel \\(a\\) :\n\\[\\frac{f(a+h) - f(a)}{h} = \\frac{2a^2+2h^2+4ah-3a-3h -2a^2+6a-5}{h} = \\frac{2h^2+4ah+3a-3h}{h} = 2h+4a-3\\]\nOr :\n\\[\\lim_{h \\to 0} 2h+4a-3 =  4a-3\\]\nDonc \\(f\\) est dérivable en \\(a\\) et \\(f'(a) = 4a-3\\).\nOn en déduit que la fonction dérivée de \\(f\\) est \\(f'(x) = 4x - 3\\) définie sur \\(\\R\\).\n\n\n\nThéorème :\nOn considère une fonction \\(f\\) définie sur son ensemble de définition \\(D_f\\).\n\n\n\n\n\n\n\n\n\nFonction \\(f\\)\nEnsemble de définition\nFonction dérivée \\(f'\\)\nEnsemble de dérivabilité\n\n\n\n\n\\(k\\)\n\\(\\mathbb{R}\\)\n\\(0\\)\n\\(\\mathbb{R}\\)\n\n\n\\(ax\\)\n\\(\\mathbb{R}\\)\n\\(a\\)\n\\(\\mathbb{R}\\)\n\n\n\\(x^2\\)\n\\(\\mathbb{R}\\)\n\\(2x\\)\n\\(\\mathbb{R}\\)\n\n\n\\(\\sqrt{x}\\)\n\\(\\mathbb{R}_+\\)\n\\(\\dfrac{1}{2\\sqrt{x}}\\)\n\\(\\mathbb{R}_+^*\\)\n\n\n\\(\\dfrac{1}{x}\\)\n\\(]-\\infty\\,; 0[ \\cup ]0\\,; +\\infty[\\)\n\\(-\\dfrac{1}{x^2}\\)\n\\(]-\\infty\\,; 0[ \\cup ]0\\,; +\\infty[\\)\n\n\n\\(ax^2 + bx + c\\)\n\\(\\mathbb{R}\\)\n\\(2ax + b\\)\n\\(\\mathbb{R}\\)\n\n\n\n\n\n\nDémonstration :\n\nOn démontre pour quelque cas\n\nadmis pour les deux premiers cas (facile à faire !)\nSoit \\(f\\) définie sur \\(\\R\\) par \\(f(x) = x^2\\). \\Pour tout \\(a,h \\in \\R\\)\\ \\[(a+h)^2 - a^2 = 2ah+h^2\\] Donc \\[\\frac{f(a+h) - f(a)}{h} = 2a+h\\] Donc en faisant tendre \\(h\\) vers \\(0\\) on obtient Ainsi \\(f'(a)= 2a\\)\nSoit \\(f\\) définie sur \\(\\R_+\\) par \\(f(x) = \\sqrt{x}\\).  Pour tout \\(a \\in \\R^+\\) et\\(\\in \\R^*\\) tel que \\(a+h &gt; 0\\) \\[\\sqrt{a+h} - \\sqrt{a} = \\frac{a + h - a}{\\sqrt{a+h} + \\sqrt{a}} = \\frac{h}{\\sqrt{a+h} + \\sqrt{a}}\\] Ainsi \\[\\frac{f(a+h) - f(a)}{h} = \\frac{h}{h(\\sqrt{a+h} + \\sqrt{a})} = \\frac{1}{\\sqrt{a+h} + \\sqrt{a}}\\] Donc en faisant tendre \\(h\\) vers \\(0\\) on obtient \\(f'(a)= \\frac{1}{2 \\sqrt{a}}\\)UU\n\n\n\nRemarque :\nOn peut retenir que pour tout \\(n \\in \\N^*\\), avec \\(f:x \\longmapsto x^n\\) définie sur \\(\\R\\) et \\(g:x \\longmapsto \\frac{1}{x^n}\\) définie sur \\(]-\\infty\\,;\\, 0[\\) ou sur \\(]0\\,;\\, + \\infty[\\). On démontre par récurrence (programme de terminale) que \\[f':x \\longmapsto n x^{n-1} \\quad \\et \\quad g':x \\longmapsto - \\frac{n}{x^{n+1}}\\] Par exemple si \\[f:x \\longmapsto x^3 \\qquad \\et \\qquad  g:x \\longmapsto \\frac{-1}{x^5}\\] alors \\[f':x \\longmapsto 3x^2 \\qquad \\et \\qquad g':x \\longmapsto \\frac{5}{x^6}\\]\n\n\n\nDémontrer que la fonction inverse est dérivable en tout réel \\(a \\ne 0\\).\n\n\n\nAfficher la correction\n\nPour tout réel \\(a \\neq 0\\), \\(\\forall h \\neq 0\\) tel que \\(a+h \\neq 0\\), \\[\\tau_a(h) = \\dfrac{\\dfrac{1}{a+h} - \\dfrac{1}{a}}{h} = \\dfrac{a-(a+h)}{h a(a+h)} = - \\frac{1}{a(a+h)}\\] Or \\(\\lim_{h \\to 0} \\tau_a(h) = - \\frac{1}{a^2}\\). Ainsi la fonction inverse est dérivable en tout réel \\(a\\) non nul, et pour tout \\(a \\neq 0\\), \\(f'(a) =-\\frac{1}{a^2}\\)}\n\nÉquation de la tangente \\(T_a\\) :\n\n\n\nAfficher la correction\n\n\\(M(x\\,;\\,y) \\in T_a \\Longleftrightarrow y=f'(a)(x-a)+f(a).\n\\Longleftrightarrow y=-\\frac{1}{a^2} x + \\frac{1}{a} + \\frac{1}{a}\\)\\ Donc\n\\[T_a: y=- \\frac{1}{a^2}x + \\frac{2}{a}\\]\n\nCoordonnées des points \\(A\\) et \\(B\\) (intersections avec les axes) :\n\n\n\nAfficher la correction\n\nOn a\n\n\\(A(x_A\\, ; \\, y_A)\\) le point d’intersection de \\(T_A\\) avec l’axe des abscisses, alors \\(y_A=0\\) .\\ Donc \\[0=-\\frac{1}{a^2}x_A+ \\frac{2}{a}\\] d’où \\(x_A=2a\\).\nSoit \\(B(x_B \\, ; \\, y_B)\\) le point d’intersection de \\(T_a\\) avec l’axe des ordonnées, alors \\(x_B=0\\), donc \\[y_B=-\\frac{1}{a^2} \\times 0 + \\frac{2}{a}=\\frac{2}{a}\\] Ainsi \\(A\\left(2a \\, ; \\, 0\\right)\\) et \\(B \\left(0 \\, ;\\, \\frac{2}{a} \\right)\\)\n\n\nMontrer que le milieu de \\([AB]\\) est le point de tangence :\n\n\n\nAfficher la correction\n\n\\(M \\in \\mathscr{C}\\) si et seulement si \\(M\\left(x \\, ; \\, \\frac{1}{x} \\right)\\). Soit \\(M\\) le milieu de \\([AB]\\), alors \\(M\\left(\\frac{2a+0}{2} \\, ; \\dfrac{0+\\frac{2}{a}}{2} \\right)\\) donc \\(M \\left(a \\, ; \\, \\frac{1}{a} \\right)\\). \\ Ainsi \\(M\\) appartient à la représentation graphique de la fonction inverse. De plus appartenant à la tangente, puisque point de \\((AB)\\), alors il est le point de tangence.",
-    "crumbs": [
-      "Spé maths première",
-      "Nombre dérivé",
-      "Fonction dérivée- Dérivées usuelles"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/NomDerive/definition.html",
-    "href": "premiere-maths/NomDerive/definition.html",
-    "title": "Nombre dérivé",
-    "section": "",
-    "text": "Définition : Fonctions du second degré\nSoit \\(f\\) une fonction définie sur un intervalle \\(I\\), non réduit à un point, contenant le réel \\(a\\) et \\(h \\in \\R\\) tel que \\(a+h \\in I\\).\nOn considère les points \\(A(a\\,;\\,f(a))\\) et \\(M(a+h\\,;\\,f(a+h))\\).\nSoit \\(t(h)\\) le taux d’accroissement de \\(f\\) entre \\(a\\) et \\(a+h\\), avec \\(h \\neq 0\\), alors\n\\[t(h)= \\frac{f(a+h) - f(a)}{h}\\]\nLe taux d’accroissement ou taux de variation entre \\(A\\) et \\(M\\) est le coefficient directeur de la droite \\((AM)\\).\nL’objet du chapitre est l’étude du comportement de la fonction \\(t\\) lorsque \\(h \\rightarrow 0\\), c’est-à-dire lorsque \\(M \\rightarrow A\\).\n\n\n\n\nEn physique :\nEn physique, le taux d’accroissement correspond à la vitesse moyenne d’un mobile se déplacent entre les points \\(A\\) et \\(B\\).\n\\[v_{moy} =\\frac{d_A-d_B}{t_A-t_B}\\]\nAinsi le problème physique correspondant est l’étude de la vitesse lorsque \\(t_A \\approx t_B\\), c’est-à-dire l’étude de la vitesse instantanée.\nEn Économie :\nLe coût marginal d’une unité est le taux d’accroissement de la fonction coût \\(\\mathscr{C}\\) entre cette unité et la précédente\n\\[ C_m (n)= C (n)-C (n-1)\\]\nAinsi, le passage au cas continu, cela revient à étudier le taux d’accroissement\n\\[\\frac{C(n+h)-C (n)}{h}\\]\nlorsque \\(h\\) devient aussi petit que l’on veut.\n\n\n\n Définition : Fonctions du second degré\nOn dit que \\(f\\) est dérivable en \\(a \\in I\\) lorsque le taux d’accroissement \\(t(h)\\) devient aussi proche que l’on veut d’un réel \\(L\\) fini lorsque \\(h\\) tend vers \\(0\\). C’est-à-dire\n\\[\\lim_{h \\to 0} \\frac{f(a+h)-f(a)}{h} = L\\]\nLe réel \\(L\\), s’il existe, s’appelle nombre dérivé de la fonction \\(f\\) en \\(a\\) et est noté \\(f'(a)\\).\n\n\nExemple : \n\nDémontrons que \\(f\\) définie sur \\(\\R\\) par \\(f(x) = 3x^2 - 2\\) est dérivable en \\(5\\).\n\n\n\nAfficher la correction\n\nPour tout réel \\(h\\),\n\\[f(5+h) - f(5)=\n3(5+h)^2 - 2 - 3 \\times 5^2 + 2 = 3(5^2 + h^2 + 10h) - 3\\times 5^2=3h^2 + 30h\\]\nDonc pour tout \\(h\\) réel non nul,\n\\[\\frac{f(5+h)-f(5)}{h} = \\frac{3h^2+30h}{h} = 3h+30\\]\nAinsi\n\\[\\lim_{h \\to 0} \\frac{f(5+h) - f(5)}{h} =30\\]\nDonc \\(f\\) est dérivable en \\(5\\), et \\(f'(5) = 30\\).\n\n\nDémontrons que \\(g\\) définie sur \\(\\R/\\{3\\}\\) par \\(g(x)= \\frac{1}{x-3}\\) est dérivable en \\(4\\).\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) réel non nul,\n\\[\\frac{g(4+h) - g(4)}{h} =\n\\dfrac{\\dfrac{1}{(4 + h) - 3} - \\dfrac{1}{4 - 3}}{h}=\\dfrac{1 - (1+h)}{(1+h)h}=-\\dfrac{1}{1+h}\\]\nAinsi\n\\[\\lim_{h \\to 0} \\frac{g(5+h) - g(5)}{h} = \\lim_{h \\to 0 } -\\dfrac{1}{1+h}=- 1\\]\nDonc \\(g\\) est dérivable en \\(4\\), et \\(g'(4) = -1\\).\n\n\n\nExemple : \nAvec la calculatrice\nOn cherche à connaître une valeur approchée de \\(f'(2)\\) où \\(f(x) = \\frac{1-x^2}{\\sqrt{x^3-2} -1}\\).\nLe calcul en est trop compliqué, et inintéressant, pour passer par le taux d’accroissement …\n\n\n\n\n\n\n\nAvec une TI\nAvec une Casio\n\n\n\n\nmaths + 8 → nbreDérivée\noptn + F4 + F2\n\n\n\nOn trouve comme résultat \\(\\approx 0.47596\\) (à \\(10^{-5}\\) près).\n\n\n\n\n\nOn peut alors être amené à calculer les limites suivantes :\n\\[\n\\lim_{\\substack{h \\to 0\\\\h &gt; 0}} \\frac{f(a+h)-f(a)}{h} \\quad \\text{et} \\quad \\lim_{\\substack{h \\to 0\\\\h &lt; 0}} \\frac{f(a+h)-f(a)}{h}\n\\]\nOn parle alors de limite à droite et de limite à gauche.\nSi ces deux limites sont les mêmes alors la fonction est dérivable en \\(a\\), sinon elle ne l’est pas.\n\nThéorème : \nLa fonction racine carrée et la fonction valeur absolue ne sont pas dérivables en \\(0\\).\n\n\n\nDémonstration :\n\n\nPreuve pour la racine carrée :\n\\[\n\\lim_{h \\to 0^+} \\frac{\\sqrt{0+h} - \\sqrt{0}}{h} = \\lim_{h \\to 0^+}  \\frac{\\sqrt{h}}{h} = \\lim_{h \\to 0^+}  \\frac{1}{\\sqrt{h}} = +\\infty\n\\]\nCe nombre n’admet pas de limite finie lorsque \\(h\\) tend vers \\(0\\) (la limite est infinie).\nPreuve pour la valeur absolue :\n\\[\n\\lim_{h \\to 0^+} \\frac{ \\abs{h} - \\abs{0}}{h} = \\frac{h}{h} = 1  \n\\quad \\text{et} \\quad  \n\\lim_{h \\to 0^-} \\frac{ \\abs{h} - \\abs{0}}{h} = \\frac{-h}{h} = -1\n\\]\nLes limites à droite et à gauche étant différentes, le taux d’accroissement n’admet pas de limite, donc la fonction valeur absolue n’est pas dérivable en \\(0\\).\n\n\n\nRemarque : Interprétation de la limite\n\nPour la racine carrée, la limite que l’on trouve signifie que le quotient devient aussi grand que l’on veut lorsque les points se rapprochent.\nOn a donc une tangente dont le coefficient directeur est infini, donc en \\(0\\), une tangente verticale.\nEn \\(0\\), on observe une tangente dont le coefficient directeur est \\(1\\) à droite et \\(-1\\) à gauche.\nCes nombres ne sont pas égaux, donc on voit graphiquement que la fonction valeur absolue n’est pas dérivable en \\(0\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Nombre dérivé",
-      "Nombre dérivé"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/NomDerive/definition.html#fonctions-dérivable-en-a-et-non-dérivable-en-a",
-    "href": "premiere-maths/NomDerive/definition.html#fonctions-dérivable-en-a-et-non-dérivable-en-a",
-    "title": "Nombre dérivé",
-    "section": "",
-    "text": "Définition : Fonctions du second degré\nSoit \\(f\\) une fonction définie sur un intervalle \\(I\\), non réduit à un point, contenant le réel \\(a\\) et \\(h \\in \\R\\) tel que \\(a+h \\in I\\).\nOn considère les points \\(A(a\\,;\\,f(a))\\) et \\(M(a+h\\,;\\,f(a+h))\\).\nSoit \\(t(h)\\) le taux d’accroissement de \\(f\\) entre \\(a\\) et \\(a+h\\), avec \\(h \\neq 0\\), alors\n\\[t(h)= \\frac{f(a+h) - f(a)}{h}\\]\nLe taux d’accroissement ou taux de variation entre \\(A\\) et \\(M\\) est le coefficient directeur de la droite \\((AM)\\).\nL’objet du chapitre est l’étude du comportement de la fonction \\(t\\) lorsque \\(h \\rightarrow 0\\), c’est-à-dire lorsque \\(M \\rightarrow A\\).\n\n\n\n\nEn physique :\nEn physique, le taux d’accroissement correspond à la vitesse moyenne d’un mobile se déplacent entre les points \\(A\\) et \\(B\\).\n\\[v_{moy} =\\frac{d_A-d_B}{t_A-t_B}\\]\nAinsi le problème physique correspondant est l’étude de la vitesse lorsque \\(t_A \\approx t_B\\), c’est-à-dire l’étude de la vitesse instantanée.\nEn Économie :\nLe coût marginal d’une unité est le taux d’accroissement de la fonction coût \\(\\mathscr{C}\\) entre cette unité et la précédente\n\\[ C_m (n)= C (n)-C (n-1)\\]\nAinsi, le passage au cas continu, cela revient à étudier le taux d’accroissement\n\\[\\frac{C(n+h)-C (n)}{h}\\]\nlorsque \\(h\\) devient aussi petit que l’on veut.\n\n\n\n Définition : Fonctions du second degré\nOn dit que \\(f\\) est dérivable en \\(a \\in I\\) lorsque le taux d’accroissement \\(t(h)\\) devient aussi proche que l’on veut d’un réel \\(L\\) fini lorsque \\(h\\) tend vers \\(0\\). C’est-à-dire\n\\[\\lim_{h \\to 0} \\frac{f(a+h)-f(a)}{h} = L\\]\nLe réel \\(L\\), s’il existe, s’appelle nombre dérivé de la fonction \\(f\\) en \\(a\\) et est noté \\(f'(a)\\).\n\n\nExemple : \n\nDémontrons que \\(f\\) définie sur \\(\\R\\) par \\(f(x) = 3x^2 - 2\\) est dérivable en \\(5\\).\n\n\n\nAfficher la correction\n\nPour tout réel \\(h\\),\n\\[f(5+h) - f(5)=\n3(5+h)^2 - 2 - 3 \\times 5^2 + 2 = 3(5^2 + h^2 + 10h) - 3\\times 5^2=3h^2 + 30h\\]\nDonc pour tout \\(h\\) réel non nul,\n\\[\\frac{f(5+h)-f(5)}{h} = \\frac{3h^2+30h}{h} = 3h+30\\]\nAinsi\n\\[\\lim_{h \\to 0} \\frac{f(5+h) - f(5)}{h} =30\\]\nDonc \\(f\\) est dérivable en \\(5\\), et \\(f'(5) = 30\\).\n\n\nDémontrons que \\(g\\) définie sur \\(\\R/\\{3\\}\\) par \\(g(x)= \\frac{1}{x-3}\\) est dérivable en \\(4\\).\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) réel non nul,\n\\[\\frac{g(4+h) - g(4)}{h} =\n\\dfrac{\\dfrac{1}{(4 + h) - 3} - \\dfrac{1}{4 - 3}}{h}=\\dfrac{1 - (1+h)}{(1+h)h}=-\\dfrac{1}{1+h}\\]\nAinsi\n\\[\\lim_{h \\to 0} \\frac{g(5+h) - g(5)}{h} = \\lim_{h \\to 0 } -\\dfrac{1}{1+h}=- 1\\]\nDonc \\(g\\) est dérivable en \\(4\\), et \\(g'(4) = -1\\).\n\n\n\nExemple : \nAvec la calculatrice\nOn cherche à connaître une valeur approchée de \\(f'(2)\\) où \\(f(x) = \\frac{1-x^2}{\\sqrt{x^3-2} -1}\\).\nLe calcul en est trop compliqué, et inintéressant, pour passer par le taux d’accroissement …\n\n\n\n\n\n\n\nAvec une TI\nAvec une Casio\n\n\n\n\nmaths + 8 → nbreDérivée\noptn + F4 + F2\n\n\n\nOn trouve comme résultat \\(\\approx 0.47596\\) (à \\(10^{-5}\\) près).\n\n\n\n\n\nOn peut alors être amené à calculer les limites suivantes :\n\\[\n\\lim_{\\substack{h \\to 0\\\\h &gt; 0}} \\frac{f(a+h)-f(a)}{h} \\quad \\text{et} \\quad \\lim_{\\substack{h \\to 0\\\\h &lt; 0}} \\frac{f(a+h)-f(a)}{h}\n\\]\nOn parle alors de limite à droite et de limite à gauche.\nSi ces deux limites sont les mêmes alors la fonction est dérivable en \\(a\\), sinon elle ne l’est pas.\n\nThéorème : \nLa fonction racine carrée et la fonction valeur absolue ne sont pas dérivables en \\(0\\).\n\n\n\nDémonstration :\n\n\nPreuve pour la racine carrée :\n\\[\n\\lim_{h \\to 0^+} \\frac{\\sqrt{0+h} - \\sqrt{0}}{h} = \\lim_{h \\to 0^+}  \\frac{\\sqrt{h}}{h} = \\lim_{h \\to 0^+}  \\frac{1}{\\sqrt{h}} = +\\infty\n\\]\nCe nombre n’admet pas de limite finie lorsque \\(h\\) tend vers \\(0\\) (la limite est infinie).\nPreuve pour la valeur absolue :\n\\[\n\\lim_{h \\to 0^+} \\frac{ \\abs{h} - \\abs{0}}{h} = \\frac{h}{h} = 1  \n\\quad \\text{et} \\quad  \n\\lim_{h \\to 0^-} \\frac{ \\abs{h} - \\abs{0}}{h} = \\frac{-h}{h} = -1\n\\]\nLes limites à droite et à gauche étant différentes, le taux d’accroissement n’admet pas de limite, donc la fonction valeur absolue n’est pas dérivable en \\(0\\).\n\n\n\nRemarque : Interprétation de la limite\n\nPour la racine carrée, la limite que l’on trouve signifie que le quotient devient aussi grand que l’on veut lorsque les points se rapprochent.\nOn a donc une tangente dont le coefficient directeur est infini, donc en \\(0\\), une tangente verticale.\nEn \\(0\\), on observe une tangente dont le coefficient directeur est \\(1\\) à droite et \\(-1\\) à gauche.\nCes nombres ne sont pas égaux, donc on voit graphiquement que la fonction valeur absolue n’est pas dérivable en \\(0\\).",
-    "crumbs": [
-      "Spé maths première",
-      "Nombre dérivé",
-      "Nombre dérivé"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/variations.html",
-    "href": "premiere-maths/suite1/variations.html",
-    "title": "Variations d’une suite",
-    "section": "",
-    "text": "Définition :\n\nOn dit qu’une suite \\((u_n)\\) est croissante à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n \\leq u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est décroissante à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n \\geq u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est stationnaire à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n = u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est monotone si elle est croissante ou si elle est décroissante.\n\n\n\nRemarque :\n\nLorsque les inégalités sont strictes, comme dans le cas des fonctions, on parle de suite strictement croissante ou strictement décroissante.\n\nOn dit à « partir d’un certain rang », car c’est le comportement global de la suite qui nous intéresse et pas ce qui se passe sur les premiers termes.\n\n\n\n\n\n\n\n\nExemple :\nÉtudier les variations de la suite \\((u_n)_{n\\in \\mathbb{N}}\\) définie par\n\\[u_n = n^2 - n\\]\n\n\nAfficher la correction\n\nPour tout \\(n \\in \\N\\), \\[u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n\\] Or \\(n \\geqslant 0\\), donc \\(2n \\geqslant 0\\). Ainsi pour tout \\(n \\in \\N\\), \\(u_{n+1} - u_n \\geqslant 0\\). Ainsi la suite \\((u_n)_{n \\in \\N}\\) est croissante.\n\n\n\nExemple :\nSoit \\((u_n)\\) définie par \\(u_0 = 3\\) et \\(u_{n+1} = - u_n^2 - u_n - 1\\).\nÉtudier les variations.\n\n\nAfficher la correction\n\nPour tout \\(n \\in \\N\\), on a : Alors pour tout \\(n \\in \\N\\), \\[u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = u_{n+1} = - u_n^2 - 2u_n - 1 = - (u_n +1)^2 \\] Ce qui est toujours négatif. \\ Ainsi pour tout \\(n \\in \\N\\), \\(u_{n+1} - u_n \\leqslant 0\\), donc \\((u_n)_{n \\in \\N}\\) est une suite décroissante Donc la suite est décroissante.\n\n\n\n\n\n\nThéorème :\nSoient \\(a \\in \\mathbb{R}^+\\) et \\(I = [a ; +\\infty[\\).\nSi \\((u_n)\\) est définie par \\(u_n = f(n)\\) et \\(f\\) est monotone sur \\(I\\),\nalors \\((u_n)\\) est monotone et a même variation que \\(f\\) à partir de \\(n \\geq a\\).\n\n\n\nDémonstration :\n\nOn suppose \\(f\\) croissante sur \\(I\\). Alors pour tout entier naturel \\(n \\geq a\\), \\[u_{n+1} - u_n = f(n+1) - f(n) \\geq 0 \\] Donc la suite \\((u_n)\\) est croissante pour tout entier naturel \\(n \\geq a\\).\\ On raisonne de même pour une fonction décroissante.\n\n\nExemple :\nSoit \\(u_n = x^2 - 3x + 1\\)\nÉtudier les variations.\n\n\nAfficher la correction\n\nSoit \\(f\\) la fonction définie sur \\([0\\,;\\,+\\infty[\\) par \\(f(x) = 2x^2-3x+1\\). \\(f\\) est une fonction polynôme de degré \\(2\\), dont le coefficient dominant \\(2 &gt;0\\), ainsi la représentation graphique de la fonction \\(f\\) est tournée vers le haut. L’axe de symétrie de la parabole ayant pour équation \\(x = \\frac{-(-3)}{2 \\times 1} = \\frac{3}{2}\\), on déduit :\n\nLa fonction \\(f\\) est décroissante sur \\([0\\,;\\,3/2]\\)\nLa fonction \\(f\\) est croissante sur \\([3/2\\,;\\,+\\infty[\\)\n\\(f(1)=f(2)\\)\n\nOn déduit que la suite \\((u_n)\\) est croissante à partir du rang \\(1\\) et strictement croissante à partir du rang \\(2\\).\n\n\n\nRemarque :\nLa réciproque est fausse.\nPar exemple, \\(u_n = n + \\cos(2\\pi n)\\) est croissante mais \\(f(x) = x + \\cos(2\\pi x)\\) ne l’est pas.\n\n\n\n\n\n\n\n\nThéorème :\n\nSi \\(u_n &gt; 0\\), alors : \\[\\frac{u_{n+1}}{u_n} \\geq 1 \\iff \\text{croissante} \\quad ; \\quad \\frac{u_{n+1}}{u_n} \\leq 1 \\iff \\text{décroissante}\\]\nSi \\(u_n &lt; 0\\), alors : \\[\\frac{u_{n+1}}{u_n} \\leq 1 \\iff \\text{croissante} \\quad ; \\quad \\frac{u_{n+1}}{u_n} \\geq 1 \\iff \\text{décroissante}\\]\n\n\n\n\nDémonstration :\n\nOn traite le cas \\(u_n &lt;0\\) , le cas \\(u_n&gt;0\\) se traite de façon analogue.\\ Soit \\((u_n)\\) une suite numérique à terme strictement négatif.\\ Alors pour tout \\(n \\geqslant p\\), \\[u_{n+1}-u_n \\geqslant 0 \\Longleftrightarrow u_{n+1} \\geqslant u_n \\underset{u_n &lt;0}{\\Longleftrightarrow} \\frac{u_{n+1}}{u_n} \\leqslant 1\\] D’où la suite est croissante à partir du rang \\(p\\) si et seulement si \\(\\frac{u_{n+1}}{u_n} &lt;1\\)\n\n\nExemple :\nOn considère la suite \\((t_n)\\) définie pour tout \\(n &gt;4\\) par \\[t_n=\\frac{-2^n}{n-4}\\]\n\nA partir de quel rang la suite est-elle définie ?\n\n\n\nAfficher la correction\n\nLa suite est définie à partir du rang \\(5\\), puisqu’elle n’est pas définie au rang \\(4\\).\n\n\nEn utilisant la méthode du quotient, déterminer les variations de la suite \\((t_n)\\).\n\n\n\nAfficher la correction\n\nPour tout \\(n &gt; 4\\), \\[\\frac{t_{n+1}}{t_n} = \\dfrac{\\dfrac{-2^{n+1}}{n+1-4}}{\\dfrac{-2^n}{n-4}} = \\dfrac{-2^{n+1}}{n-3} \\times \\dfrac{n-4}{-2^n} = \\frac{2n-8}{n-3}\\] Or pour tout \\(n \\geqslant 5\\), \\[\\frac{2n-8}{n-3}  \\geqslant 1 \\underset{n-3 &gt;0}{\\Longleftrightarrow} 2n-8 \\geqslant n-3 \\Longleftrightarrow n \\geqslant 5\\] On déduit alors que pour tout \\(n \\geqslant 5\\), \\[\\frac{t_{n+1}}{t_n} &gt; 1\\] La suite étant à terme strictement négatif puisque, pour tout \\(n &gt;4\\), \\(-2^n &lt;0\\) et \\(n-3&gt;0\\), on déduit que \\[\\frac{t_{n+1}}{t_n}  \\geqslant 1 \\underset{t_n &lt;0}{\\Longleftrightarrow} t_{n+1} \\leqslant t_n \\] Donc la suite \\((t_n)\\) est négative",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Variations d'une suite"
-    ]
-  },
-  {
-    "objectID": "premiere-maths/suite1/variations.html#variations-dune-suite",
-    "href": "premiere-maths/suite1/variations.html#variations-dune-suite",
-    "title": "Variations d’une suite",
-    "section": "",
-    "text": "Définition :\n\nOn dit qu’une suite \\((u_n)\\) est croissante à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n \\leq u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est décroissante à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n \\geq u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est stationnaire à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n = u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est monotone si elle est croissante ou si elle est décroissante.\n\n\n\nRemarque :\n\nLorsque les inégalités sont strictes, comme dans le cas des fonctions, on parle de suite strictement croissante ou strictement décroissante.\n\nOn dit à « partir d’un certain rang », car c’est le comportement global de la suite qui nous intéresse et pas ce qui se passe sur les premiers termes.\n\n\n\n\n\n\n\n\nExemple :\nÉtudier les variations de la suite \\((u_n)_{n\\in \\mathbb{N}}\\) définie par\n\\[u_n = n^2 - n\\]\n\n\nAfficher la correction\n\nPour tout \\(n \\in \\N\\), \\[u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n\\] Or \\(n \\geqslant 0\\), donc \\(2n \\geqslant 0\\). Ainsi pour tout \\(n \\in \\N\\), \\(u_{n+1} - u_n \\geqslant 0\\). Ainsi la suite \\((u_n)_{n \\in \\N}\\) est croissante.\n\n\n\nExemple :\nSoit \\((u_n)\\) définie par \\(u_0 = 3\\) et \\(u_{n+1} = - u_n^2 - u_n - 1\\).\nÉtudier les variations.\n\n\nAfficher la correction\n\nPour tout \\(n \\in \\N\\), on a : Alors pour tout \\(n \\in \\N\\), \\[u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = u_{n+1} = - u_n^2 - 2u_n - 1 = - (u_n +1)^2 \\] Ce qui est toujours négatif. \\ Ainsi pour tout \\(n \\in \\N\\), \\(u_{n+1} - u_n \\leqslant 0\\), donc \\((u_n)_{n \\in \\N}\\) est une suite décroissante Donc la suite est décroissante.\n\n\n\n\n\n\nThéorème :\nSoient \\(a \\in \\mathbb{R}^+\\) et \\(I = [a ; +\\infty[\\).\nSi \\((u_n)\\) est définie par \\(u_n = f(n)\\) et \\(f\\) est monotone sur \\(I\\),\nalors \\((u_n)\\) est monotone et a même variation que \\(f\\) à partir de \\(n \\geq a\\).\n\n\n\nDémonstration :\n\nOn suppose \\(f\\) croissante sur \\(I\\). Alors pour tout entier naturel \\(n \\geq a\\), \\[u_{n+1} - u_n = f(n+1) - f(n) \\geq 0 \\] Donc la suite \\((u_n)\\) est croissante pour tout entier naturel \\(n \\geq a\\).\\ On raisonne de même pour une fonction décroissante.\n\n\nExemple :\nSoit \\(u_n = x^2 - 3x + 1\\)\nÉtudier les variations.\n\n\nAfficher la correction\n\nSoit \\(f\\) la fonction définie sur \\([0\\,;\\,+\\infty[\\) par \\(f(x) = 2x^2-3x+1\\). \\(f\\) est une fonction polynôme de degré \\(2\\), dont le coefficient dominant \\(2 &gt;0\\), ainsi la représentation graphique de la fonction \\(f\\) est tournée vers le haut. L’axe de symétrie de la parabole ayant pour équation \\(x = \\frac{-(-3)}{2 \\times 1} = \\frac{3}{2}\\), on déduit :\n\nLa fonction \\(f\\) est décroissante sur \\([0\\,;\\,3/2]\\)\nLa fonction \\(f\\) est croissante sur \\([3/2\\,;\\,+\\infty[\\)\n\\(f(1)=f(2)\\)\n\nOn déduit que la suite \\((u_n)\\) est croissante à partir du rang \\(1\\) et strictement croissante à partir du rang \\(2\\).\n\n\n\nRemarque :\nLa réciproque est fausse.\nPar exemple, \\(u_n = n + \\cos(2\\pi n)\\) est croissante mais \\(f(x) = x + \\cos(2\\pi x)\\) ne l’est pas.\n\n\n\n\n\n\n\n\nThéorème :\n\nSi \\(u_n &gt; 0\\), alors : \\[\\frac{u_{n+1}}{u_n} \\geq 1 \\iff \\text{croissante} \\quad ; \\quad \\frac{u_{n+1}}{u_n} \\leq 1 \\iff \\text{décroissante}\\]\nSi \\(u_n &lt; 0\\), alors : \\[\\frac{u_{n+1}}{u_n} \\leq 1 \\iff \\text{croissante} \\quad ; \\quad \\frac{u_{n+1}}{u_n} \\geq 1 \\iff \\text{décroissante}\\]\n\n\n\n\nDémonstration :\n\nOn traite le cas \\(u_n &lt;0\\) , le cas \\(u_n&gt;0\\) se traite de façon analogue.\\ Soit \\((u_n)\\) une suite numérique à terme strictement négatif.\\ Alors pour tout \\(n \\geqslant p\\), \\[u_{n+1}-u_n \\geqslant 0 \\Longleftrightarrow u_{n+1} \\geqslant u_n \\underset{u_n &lt;0}{\\Longleftrightarrow} \\frac{u_{n+1}}{u_n} \\leqslant 1\\] D’où la suite est croissante à partir du rang \\(p\\) si et seulement si \\(\\frac{u_{n+1}}{u_n} &lt;1\\)\n\n\nExemple :\nOn considère la suite \\((t_n)\\) définie pour tout \\(n &gt;4\\) par \\[t_n=\\frac{-2^n}{n-4}\\]\n\nA partir de quel rang la suite est-elle définie ?\n\n\n\nAfficher la correction\n\nLa suite est définie à partir du rang \\(5\\), puisqu’elle n’est pas définie au rang \\(4\\).\n\n\nEn utilisant la méthode du quotient, déterminer les variations de la suite \\((t_n)\\).\n\n\n\nAfficher la correction\n\nPour tout \\(n &gt; 4\\), \\[\\frac{t_{n+1}}{t_n} = \\dfrac{\\dfrac{-2^{n+1}}{n+1-4}}{\\dfrac{-2^n}{n-4}} = \\dfrac{-2^{n+1}}{n-3} \\times \\dfrac{n-4}{-2^n} = \\frac{2n-8}{n-3}\\] Or pour tout \\(n \\geqslant 5\\), \\[\\frac{2n-8}{n-3}  \\geqslant 1 \\underset{n-3 &gt;0}{\\Longleftrightarrow} 2n-8 \\geqslant n-3 \\Longleftrightarrow n \\geqslant 5\\] On déduit alors que pour tout \\(n \\geqslant 5\\), \\[\\frac{t_{n+1}}{t_n} &gt; 1\\] La suite étant à terme strictement négatif puisque, pour tout \\(n &gt;4\\), \\(-2^n &lt;0\\) et \\(n-3&gt;0\\), on déduit que \\[\\frac{t_{n+1}}{t_n}  \\geqslant 1 \\underset{t_n &lt;0}{\\Longleftrightarrow} t_{n+1} \\leqslant t_n \\] Donc la suite \\((t_n)\\) est négative",
-    "crumbs": [
-      "Spé maths première",
-      "Suites numériques : Généralités",
-      "Variations d'une suite"
+      "Liste des termes d'une suite numérique"
     ]
   },
   {
@@ -1093,27 +427,681 @@
     ]
   },
   {
-    "objectID": "premiere-maths/suite1/liste_therme_python.html",
-    "href": "premiere-maths/suite1/liste_therme_python.html",
-    "title": "Liste des termes d’une suite numérique",
+    "objectID": "premiere-maths/suite1/variations.html",
+    "href": "premiere-maths/suite1/variations.html",
+    "title": "Variations d’une suite",
     "section": "",
-    "text": "On introduit dans cette partie la notion de liste en Python.\n\nExemple :\nDéterminer la suite des \\(n\\) premiers termes de la suite \\((u_n)\\) définie par :\n\\[u_n = 3n^2 - 5n + 1\\]\ndef terme_u(n):\n    L = []\n    for i in range(n):\n        u = 3 * i**2 - 5 * i + 1\n        L.append(u)\n    return L\n\nterme_u(10)\n\n\n\n\nExemple :\nDéterminer la suite des \\(n\\) premiers termes de la suite \\((u_n)\\) définie par :\n\\(u_0 = 3\\) et pour tout \\(n \\geqslant 2\\),\n\\[u_{n+1} = \\frac{u_n^2}{n-1}\\]\ndef terme_u(n):\n    u = 3\n    L = [u]\n    for i in range(2, n + 2):\n        u = u**2 / (i - 1)\n        L.append(u)\n    return L\n\ndef terme_u_v2(n):\n    L = [3]\n    for i in range(2, n + 2):\n        L.append(L[-1]**2 / (i - 1))\n    return L\n\nterme_u(5), terme_u_v2(5)",
+    "text": "Définition :\n\nOn dit qu’une suite \\((u_n)\\) est croissante à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n \\leq u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est décroissante à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n \\geq u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est stationnaire à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n = u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est monotone si elle est croissante ou si elle est décroissante.\n\n\n\nRemarque :\n\nLorsque les inégalités sont strictes, comme dans le cas des fonctions, on parle de suite strictement croissante ou strictement décroissante.\n\nOn dit à « partir d’un certain rang », car c’est le comportement global de la suite qui nous intéresse et pas ce qui se passe sur les premiers termes.\n\n\n\n\n\n\n\n\nExemple :\nÉtudier les variations de la suite \\((u_n)_{n\\in \\mathbb{N}}\\) définie par\n\\[u_n = n^2 - n\\]\n\n\nAfficher la correction\n\nPour tout \\(n \\in \\N\\), \\[u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n\\] Or \\(n \\geqslant 0\\), donc \\(2n \\geqslant 0\\). Ainsi pour tout \\(n \\in \\N\\), \\(u_{n+1} - u_n \\geqslant 0\\). Ainsi la suite \\((u_n)_{n \\in \\N}\\) est croissante.\n\n\n\nExemple :\nSoit \\((u_n)\\) définie par \\(u_0 = 3\\) et \\(u_{n+1} = - u_n^2 - u_n - 1\\).\nÉtudier les variations.\n\n\nAfficher la correction\n\nPour tout \\(n \\in \\N\\), on a : Alors pour tout \\(n \\in \\N\\), \\[u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = u_{n+1} = - u_n^2 - 2u_n - 1 = - (u_n +1)^2 \\] Ce qui est toujours négatif. \\ Ainsi pour tout \\(n \\in \\N\\), \\(u_{n+1} - u_n \\leqslant 0\\), donc \\((u_n)_{n \\in \\N}\\) est une suite décroissante Donc la suite est décroissante.\n\n\n\n\n\n\nThéorème :\nSoient \\(a \\in \\mathbb{R}^+\\) et \\(I = [a ; +\\infty[\\).\nSi \\((u_n)\\) est définie par \\(u_n = f(n)\\) et \\(f\\) est monotone sur \\(I\\),\nalors \\((u_n)\\) est monotone et a même variation que \\(f\\) à partir de \\(n \\geq a\\).\n\n\n\nDémonstration :\n\nOn suppose \\(f\\) croissante sur \\(I\\). Alors pour tout entier naturel \\(n \\geq a\\), \\[u_{n+1} - u_n = f(n+1) - f(n) \\geq 0 \\] Donc la suite \\((u_n)\\) est croissante pour tout entier naturel \\(n \\geq a\\).\\ On raisonne de même pour une fonction décroissante.\n\n\nExemple :\nSoit \\(u_n = x^2 - 3x + 1\\)\nÉtudier les variations.\n\n\nAfficher la correction\n\nSoit \\(f\\) la fonction définie sur \\([0\\,;\\,+\\infty[\\) par \\(f(x) = 2x^2-3x+1\\). \\(f\\) est une fonction polynôme de degré \\(2\\), dont le coefficient dominant \\(2 &gt;0\\), ainsi la représentation graphique de la fonction \\(f\\) est tournée vers le haut. L’axe de symétrie de la parabole ayant pour équation \\(x = \\frac{-(-3)}{2 \\times 1} = \\frac{3}{2}\\), on déduit :\n\nLa fonction \\(f\\) est décroissante sur \\([0\\,;\\,3/2]\\)\nLa fonction \\(f\\) est croissante sur \\([3/2\\,;\\,+\\infty[\\)\n\\(f(1)=f(2)\\)\n\nOn déduit que la suite \\((u_n)\\) est croissante à partir du rang \\(1\\) et strictement croissante à partir du rang \\(2\\).\n\n\n\nRemarque :\nLa réciproque est fausse.\nPar exemple, \\(u_n = n + \\cos(2\\pi n)\\) est croissante mais \\(f(x) = x + \\cos(2\\pi x)\\) ne l’est pas.\n\n\n\n\n\n\n\n\nThéorème :\n\nSi \\(u_n &gt; 0\\), alors : \\[\\frac{u_{n+1}}{u_n} \\geq 1 \\iff \\text{croissante} \\quad ; \\quad \\frac{u_{n+1}}{u_n} \\leq 1 \\iff \\text{décroissante}\\]\nSi \\(u_n &lt; 0\\), alors : \\[\\frac{u_{n+1}}{u_n} \\leq 1 \\iff \\text{croissante} \\quad ; \\quad \\frac{u_{n+1}}{u_n} \\geq 1 \\iff \\text{décroissante}\\]\n\n\n\n\nDémonstration :\n\nOn traite le cas \\(u_n &lt;0\\) , le cas \\(u_n&gt;0\\) se traite de façon analogue.\\ Soit \\((u_n)\\) une suite numérique à terme strictement négatif.\\ Alors pour tout \\(n \\geqslant p\\), \\[u_{n+1}-u_n \\geqslant 0 \\Longleftrightarrow u_{n+1} \\geqslant u_n \\underset{u_n &lt;0}{\\Longleftrightarrow} \\frac{u_{n+1}}{u_n} \\leqslant 1\\] D’où la suite est croissante à partir du rang \\(p\\) si et seulement si \\(\\frac{u_{n+1}}{u_n} &lt;1\\)\n\n\nExemple :\nOn considère la suite \\((t_n)\\) définie pour tout \\(n &gt;4\\) par \\[t_n=\\frac{-2^n}{n-4}\\]\n\nA partir de quel rang la suite est-elle définie ?\n\n\n\nAfficher la correction\n\nLa suite est définie à partir du rang \\(5\\), puisqu’elle n’est pas définie au rang \\(4\\).\n\n\nEn utilisant la méthode du quotient, déterminer les variations de la suite \\((t_n)\\).\n\n\n\nAfficher la correction\n\nPour tout \\(n &gt; 4\\), \\[\\frac{t_{n+1}}{t_n} = \\dfrac{\\dfrac{-2^{n+1}}{n+1-4}}{\\dfrac{-2^n}{n-4}} = \\dfrac{-2^{n+1}}{n-3} \\times \\dfrac{n-4}{-2^n} = \\frac{2n-8}{n-3}\\] Or pour tout \\(n \\geqslant 5\\), \\[\\frac{2n-8}{n-3}  \\geqslant 1 \\underset{n-3 &gt;0}{\\Longleftrightarrow} 2n-8 \\geqslant n-3 \\Longleftrightarrow n \\geqslant 5\\] On déduit alors que pour tout \\(n \\geqslant 5\\), \\[\\frac{t_{n+1}}{t_n} &gt; 1\\] La suite étant à terme strictement négatif puisque, pour tout \\(n &gt;4\\), \\(-2^n &lt;0\\) et \\(n-3&gt;0\\), on déduit que \\[\\frac{t_{n+1}}{t_n}  \\geqslant 1 \\underset{t_n &lt;0}{\\Longleftrightarrow} t_{n+1} \\leqslant t_n \\] Donc la suite \\((t_n)\\) est négative",
     "crumbs": [
       "Spé maths première",
       "Suites numériques : Généralités",
-      "Liste des termes d'une suite numérique"
+      "Variations d'une suite"
     ]
   },
   {
-    "objectID": "premiere-maths/suite1/liste_therme_python.html#liste-des-termes-dune-suite-numérique",
-    "href": "premiere-maths/suite1/liste_therme_python.html#liste-des-termes-dune-suite-numérique",
-    "title": "Liste des termes d’une suite numérique",
+    "objectID": "premiere-maths/suite1/variations.html#variations-dune-suite",
+    "href": "premiere-maths/suite1/variations.html#variations-dune-suite",
+    "title": "Variations d’une suite",
     "section": "",
-    "text": "On introduit dans cette partie la notion de liste en Python.\n\nExemple :\nDéterminer la suite des \\(n\\) premiers termes de la suite \\((u_n)\\) définie par :\n\\[u_n = 3n^2 - 5n + 1\\]\ndef terme_u(n):\n    L = []\n    for i in range(n):\n        u = 3 * i**2 - 5 * i + 1\n        L.append(u)\n    return L\n\nterme_u(10)\n\n\n\n\nExemple :\nDéterminer la suite des \\(n\\) premiers termes de la suite \\((u_n)\\) définie par :\n\\(u_0 = 3\\) et pour tout \\(n \\geqslant 2\\),\n\\[u_{n+1} = \\frac{u_n^2}{n-1}\\]\ndef terme_u(n):\n    u = 3\n    L = [u]\n    for i in range(2, n + 2):\n        u = u**2 / (i - 1)\n        L.append(u)\n    return L\n\ndef terme_u_v2(n):\n    L = [3]\n    for i in range(2, n + 2):\n        L.append(L[-1]**2 / (i - 1))\n    return L\n\nterme_u(5), terme_u_v2(5)",
+    "text": "Définition :\n\nOn dit qu’une suite \\((u_n)\\) est croissante à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n \\leq u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est décroissante à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n \\geq u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est stationnaire à partir d’un certain rang \\(p\\) si :\n\n\nPour tout entier naturel \\(p \\leq n\\) on a \\(u_n = u_{n+1}\\)\n\n\nOn dit qu’une suite \\((u_n)\\) est monotone si elle est croissante ou si elle est décroissante.\n\n\n\nRemarque :\n\nLorsque les inégalités sont strictes, comme dans le cas des fonctions, on parle de suite strictement croissante ou strictement décroissante.\n\nOn dit à « partir d’un certain rang », car c’est le comportement global de la suite qui nous intéresse et pas ce qui se passe sur les premiers termes.\n\n\n\n\n\n\n\n\nExemple :\nÉtudier les variations de la suite \\((u_n)_{n\\in \\mathbb{N}}\\) définie par\n\\[u_n = n^2 - n\\]\n\n\nAfficher la correction\n\nPour tout \\(n \\in \\N\\), \\[u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n\\] Or \\(n \\geqslant 0\\), donc \\(2n \\geqslant 0\\). Ainsi pour tout \\(n \\in \\N\\), \\(u_{n+1} - u_n \\geqslant 0\\). Ainsi la suite \\((u_n)_{n \\in \\N}\\) est croissante.\n\n\n\nExemple :\nSoit \\((u_n)\\) définie par \\(u_0 = 3\\) et \\(u_{n+1} = - u_n^2 - u_n - 1\\).\nÉtudier les variations.\n\n\nAfficher la correction\n\nPour tout \\(n \\in \\N\\), on a : Alors pour tout \\(n \\in \\N\\), \\[u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = u_{n+1} = - u_n^2 - 2u_n - 1 = - (u_n +1)^2 \\] Ce qui est toujours négatif. \\ Ainsi pour tout \\(n \\in \\N\\), \\(u_{n+1} - u_n \\leqslant 0\\), donc \\((u_n)_{n \\in \\N}\\) est une suite décroissante Donc la suite est décroissante.\n\n\n\n\n\n\nThéorème :\nSoient \\(a \\in \\mathbb{R}^+\\) et \\(I = [a ; +\\infty[\\).\nSi \\((u_n)\\) est définie par \\(u_n = f(n)\\) et \\(f\\) est monotone sur \\(I\\),\nalors \\((u_n)\\) est monotone et a même variation que \\(f\\) à partir de \\(n \\geq a\\).\n\n\n\nDémonstration :\n\nOn suppose \\(f\\) croissante sur \\(I\\). Alors pour tout entier naturel \\(n \\geq a\\), \\[u_{n+1} - u_n = f(n+1) - f(n) \\geq 0 \\] Donc la suite \\((u_n)\\) est croissante pour tout entier naturel \\(n \\geq a\\).\\ On raisonne de même pour une fonction décroissante.\n\n\nExemple :\nSoit \\(u_n = x^2 - 3x + 1\\)\nÉtudier les variations.\n\n\nAfficher la correction\n\nSoit \\(f\\) la fonction définie sur \\([0\\,;\\,+\\infty[\\) par \\(f(x) = 2x^2-3x+1\\). \\(f\\) est une fonction polynôme de degré \\(2\\), dont le coefficient dominant \\(2 &gt;0\\), ainsi la représentation graphique de la fonction \\(f\\) est tournée vers le haut. L’axe de symétrie de la parabole ayant pour équation \\(x = \\frac{-(-3)}{2 \\times 1} = \\frac{3}{2}\\), on déduit :\n\nLa fonction \\(f\\) est décroissante sur \\([0\\,;\\,3/2]\\)\nLa fonction \\(f\\) est croissante sur \\([3/2\\,;\\,+\\infty[\\)\n\\(f(1)=f(2)\\)\n\nOn déduit que la suite \\((u_n)\\) est croissante à partir du rang \\(1\\) et strictement croissante à partir du rang \\(2\\).\n\n\n\nRemarque :\nLa réciproque est fausse.\nPar exemple, \\(u_n = n + \\cos(2\\pi n)\\) est croissante mais \\(f(x) = x + \\cos(2\\pi x)\\) ne l’est pas.\n\n\n\n\n\n\n\n\nThéorème :\n\nSi \\(u_n &gt; 0\\), alors : \\[\\frac{u_{n+1}}{u_n} \\geq 1 \\iff \\text{croissante} \\quad ; \\quad \\frac{u_{n+1}}{u_n} \\leq 1 \\iff \\text{décroissante}\\]\nSi \\(u_n &lt; 0\\), alors : \\[\\frac{u_{n+1}}{u_n} \\leq 1 \\iff \\text{croissante} \\quad ; \\quad \\frac{u_{n+1}}{u_n} \\geq 1 \\iff \\text{décroissante}\\]\n\n\n\n\nDémonstration :\n\nOn traite le cas \\(u_n &lt;0\\) , le cas \\(u_n&gt;0\\) se traite de façon analogue.\\ Soit \\((u_n)\\) une suite numérique à terme strictement négatif.\\ Alors pour tout \\(n \\geqslant p\\), \\[u_{n+1}-u_n \\geqslant 0 \\Longleftrightarrow u_{n+1} \\geqslant u_n \\underset{u_n &lt;0}{\\Longleftrightarrow} \\frac{u_{n+1}}{u_n} \\leqslant 1\\] D’où la suite est croissante à partir du rang \\(p\\) si et seulement si \\(\\frac{u_{n+1}}{u_n} &lt;1\\)\n\n\nExemple :\nOn considère la suite \\((t_n)\\) définie pour tout \\(n &gt;4\\) par \\[t_n=\\frac{-2^n}{n-4}\\]\n\nA partir de quel rang la suite est-elle définie ?\n\n\n\nAfficher la correction\n\nLa suite est définie à partir du rang \\(5\\), puisqu’elle n’est pas définie au rang \\(4\\).\n\n\nEn utilisant la méthode du quotient, déterminer les variations de la suite \\((t_n)\\).\n\n\n\nAfficher la correction\n\nPour tout \\(n &gt; 4\\), \\[\\frac{t_{n+1}}{t_n} = \\dfrac{\\dfrac{-2^{n+1}}{n+1-4}}{\\dfrac{-2^n}{n-4}} = \\dfrac{-2^{n+1}}{n-3} \\times \\dfrac{n-4}{-2^n} = \\frac{2n-8}{n-3}\\] Or pour tout \\(n \\geqslant 5\\), \\[\\frac{2n-8}{n-3}  \\geqslant 1 \\underset{n-3 &gt;0}{\\Longleftrightarrow} 2n-8 \\geqslant n-3 \\Longleftrightarrow n \\geqslant 5\\] On déduit alors que pour tout \\(n \\geqslant 5\\), \\[\\frac{t_{n+1}}{t_n} &gt; 1\\] La suite étant à terme strictement négatif puisque, pour tout \\(n &gt;4\\), \\(-2^n &lt;0\\) et \\(n-3&gt;0\\), on déduit que \\[\\frac{t_{n+1}}{t_n}  \\geqslant 1 \\underset{t_n &lt;0}{\\Longleftrightarrow} t_{n+1} \\leqslant t_n \\] Donc la suite \\((t_n)\\) est négative",
     "crumbs": [
       "Spé maths première",
       "Suites numériques : Généralités",
-      "Liste des termes d'une suite numérique"
+      "Variations d'une suite"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/NomDerive/definition.html",
+    "href": "premiere-maths/NomDerive/definition.html",
+    "title": "Nombre dérivé",
+    "section": "",
+    "text": "Définition : Fonctions du second degré\nSoit \\(f\\) une fonction définie sur un intervalle \\(I\\), non réduit à un point, contenant le réel \\(a\\) et \\(h \\in \\R\\) tel que \\(a+h \\in I\\).\nOn considère les points \\(A(a\\,;\\,f(a))\\) et \\(M(a+h\\,;\\,f(a+h))\\).\nSoit \\(t(h)\\) le taux d’accroissement de \\(f\\) entre \\(a\\) et \\(a+h\\), avec \\(h \\neq 0\\), alors\n\\[t(h)= \\frac{f(a+h) - f(a)}{h}\\]\nLe taux d’accroissement ou taux de variation entre \\(A\\) et \\(M\\) est le coefficient directeur de la droite \\((AM)\\).\nL’objet du chapitre est l’étude du comportement de la fonction \\(t\\) lorsque \\(h \\rightarrow 0\\), c’est-à-dire lorsque \\(M \\rightarrow A\\).\n\n\n\n\nEn physique :\nEn physique, le taux d’accroissement correspond à la vitesse moyenne d’un mobile se déplacent entre les points \\(A\\) et \\(B\\).\n\\[v_{moy} =\\frac{d_A-d_B}{t_A-t_B}\\]\nAinsi le problème physique correspondant est l’étude de la vitesse lorsque \\(t_A \\approx t_B\\), c’est-à-dire l’étude de la vitesse instantanée.\nEn Économie :\nLe coût marginal d’une unité est le taux d’accroissement de la fonction coût \\(\\mathscr{C}\\) entre cette unité et la précédente\n\\[ C_m (n)= C (n)-C (n-1)\\]\nAinsi, le passage au cas continu, cela revient à étudier le taux d’accroissement\n\\[\\frac{C(n+h)-C (n)}{h}\\]\nlorsque \\(h\\) devient aussi petit que l’on veut.\n\n\n\n Définition : Fonctions du second degré\nOn dit que \\(f\\) est dérivable en \\(a \\in I\\) lorsque le taux d’accroissement \\(t(h)\\) devient aussi proche que l’on veut d’un réel \\(L\\) fini lorsque \\(h\\) tend vers \\(0\\). C’est-à-dire\n\\[\\lim_{h \\to 0} \\frac{f(a+h)-f(a)}{h} = L\\]\nLe réel \\(L\\), s’il existe, s’appelle nombre dérivé de la fonction \\(f\\) en \\(a\\) et est noté \\(f'(a)\\).\n\n\nExemple : \n\nDémontrons que \\(f\\) définie sur \\(\\R\\) par \\(f(x) = 3x^2 - 2\\) est dérivable en \\(5\\).\n\n\n\nAfficher la correction\n\nPour tout réel \\(h\\),\n\\[f(5+h) - f(5)=\n3(5+h)^2 - 2 - 3 \\times 5^2 + 2 = 3(5^2 + h^2 + 10h) - 3\\times 5^2=3h^2 + 30h\\]\nDonc pour tout \\(h\\) réel non nul,\n\\[\\frac{f(5+h)-f(5)}{h} = \\frac{3h^2+30h}{h} = 3h+30\\]\nAinsi\n\\[\\lim_{h \\to 0} \\frac{f(5+h) - f(5)}{h} =30\\]\nDonc \\(f\\) est dérivable en \\(5\\), et \\(f'(5) = 30\\).\n\n\nDémontrons que \\(g\\) définie sur \\(\\R/\\{3\\}\\) par \\(g(x)= \\frac{1}{x-3}\\) est dérivable en \\(4\\).\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) réel non nul,\n\\[\\frac{g(4+h) - g(4)}{h} =\n\\dfrac{\\dfrac{1}{(4 + h) - 3} - \\dfrac{1}{4 - 3}}{h}=\\dfrac{1 - (1+h)}{(1+h)h}=-\\dfrac{1}{1+h}\\]\nAinsi\n\\[\\lim_{h \\to 0} \\frac{g(5+h) - g(5)}{h} = \\lim_{h \\to 0 } -\\dfrac{1}{1+h}=- 1\\]\nDonc \\(g\\) est dérivable en \\(4\\), et \\(g'(4) = -1\\).\n\n\n\nExemple : \nAvec la calculatrice\nOn cherche à connaître une valeur approchée de \\(f'(2)\\) où \\(f(x) = \\frac{1-x^2}{\\sqrt{x^3-2} -1}\\).\nLe calcul en est trop compliqué, et inintéressant, pour passer par le taux d’accroissement …\n\n\n\n\n\n\n\nAvec une TI\nAvec une Casio\n\n\n\n\nmaths + 8 → nbreDérivée\noptn + F4 + F2\n\n\n\nOn trouve comme résultat \\(\\approx 0.47596\\) (à \\(10^{-5}\\) près).\n\n\n\n\n\nOn peut alors être amené à calculer les limites suivantes :\n\\[\n\\lim_{\\substack{h \\to 0\\\\h &gt; 0}} \\frac{f(a+h)-f(a)}{h} \\quad \\text{et} \\quad \\lim_{\\substack{h \\to 0\\\\h &lt; 0}} \\frac{f(a+h)-f(a)}{h}\n\\]\nOn parle alors de limite à droite et de limite à gauche.\nSi ces deux limites sont les mêmes alors la fonction est dérivable en \\(a\\), sinon elle ne l’est pas.\n\nThéorème : \nLa fonction racine carrée et la fonction valeur absolue ne sont pas dérivables en \\(0\\).\n\n\n\nDémonstration :\n\n\nPreuve pour la racine carrée :\n\\[\n\\lim_{h \\to 0^+} \\frac{\\sqrt{0+h} - \\sqrt{0}}{h} = \\lim_{h \\to 0^+}  \\frac{\\sqrt{h}}{h} = \\lim_{h \\to 0^+}  \\frac{1}{\\sqrt{h}} = +\\infty\n\\]\nCe nombre n’admet pas de limite finie lorsque \\(h\\) tend vers \\(0\\) (la limite est infinie).\nPreuve pour la valeur absolue :\n\\[\n\\lim_{h \\to 0^+} \\frac{ \\abs{h} - \\abs{0}}{h} = \\frac{h}{h} = 1  \n\\quad \\text{et} \\quad  \n\\lim_{h \\to 0^-} \\frac{ \\abs{h} - \\abs{0}}{h} = \\frac{-h}{h} = -1\n\\]\nLes limites à droite et à gauche étant différentes, le taux d’accroissement n’admet pas de limite, donc la fonction valeur absolue n’est pas dérivable en \\(0\\).\n\n\n\nRemarque : Interprétation de la limite\n\nPour la racine carrée, la limite que l’on trouve signifie que le quotient devient aussi grand que l’on veut lorsque les points se rapprochent.\nOn a donc une tangente dont le coefficient directeur est infini, donc en \\(0\\), une tangente verticale.\nEn \\(0\\), on observe une tangente dont le coefficient directeur est \\(1\\) à droite et \\(-1\\) à gauche.\nCes nombres ne sont pas égaux, donc on voit graphiquement que la fonction valeur absolue n’est pas dérivable en \\(0\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Nombre dérivé",
+      "Nombre dérivé"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/NomDerive/definition.html#fonctions-dérivable-en-a-et-non-dérivable-en-a",
+    "href": "premiere-maths/NomDerive/definition.html#fonctions-dérivable-en-a-et-non-dérivable-en-a",
+    "title": "Nombre dérivé",
+    "section": "",
+    "text": "Définition : Fonctions du second degré\nSoit \\(f\\) une fonction définie sur un intervalle \\(I\\), non réduit à un point, contenant le réel \\(a\\) et \\(h \\in \\R\\) tel que \\(a+h \\in I\\).\nOn considère les points \\(A(a\\,;\\,f(a))\\) et \\(M(a+h\\,;\\,f(a+h))\\).\nSoit \\(t(h)\\) le taux d’accroissement de \\(f\\) entre \\(a\\) et \\(a+h\\), avec \\(h \\neq 0\\), alors\n\\[t(h)= \\frac{f(a+h) - f(a)}{h}\\]\nLe taux d’accroissement ou taux de variation entre \\(A\\) et \\(M\\) est le coefficient directeur de la droite \\((AM)\\).\nL’objet du chapitre est l’étude du comportement de la fonction \\(t\\) lorsque \\(h \\rightarrow 0\\), c’est-à-dire lorsque \\(M \\rightarrow A\\).\n\n\n\n\nEn physique :\nEn physique, le taux d’accroissement correspond à la vitesse moyenne d’un mobile se déplacent entre les points \\(A\\) et \\(B\\).\n\\[v_{moy} =\\frac{d_A-d_B}{t_A-t_B}\\]\nAinsi le problème physique correspondant est l’étude de la vitesse lorsque \\(t_A \\approx t_B\\), c’est-à-dire l’étude de la vitesse instantanée.\nEn Économie :\nLe coût marginal d’une unité est le taux d’accroissement de la fonction coût \\(\\mathscr{C}\\) entre cette unité et la précédente\n\\[ C_m (n)= C (n)-C (n-1)\\]\nAinsi, le passage au cas continu, cela revient à étudier le taux d’accroissement\n\\[\\frac{C(n+h)-C (n)}{h}\\]\nlorsque \\(h\\) devient aussi petit que l’on veut.\n\n\n\n Définition : Fonctions du second degré\nOn dit que \\(f\\) est dérivable en \\(a \\in I\\) lorsque le taux d’accroissement \\(t(h)\\) devient aussi proche que l’on veut d’un réel \\(L\\) fini lorsque \\(h\\) tend vers \\(0\\). C’est-à-dire\n\\[\\lim_{h \\to 0} \\frac{f(a+h)-f(a)}{h} = L\\]\nLe réel \\(L\\), s’il existe, s’appelle nombre dérivé de la fonction \\(f\\) en \\(a\\) et est noté \\(f'(a)\\).\n\n\nExemple : \n\nDémontrons que \\(f\\) définie sur \\(\\R\\) par \\(f(x) = 3x^2 - 2\\) est dérivable en \\(5\\).\n\n\n\nAfficher la correction\n\nPour tout réel \\(h\\),\n\\[f(5+h) - f(5)=\n3(5+h)^2 - 2 - 3 \\times 5^2 + 2 = 3(5^2 + h^2 + 10h) - 3\\times 5^2=3h^2 + 30h\\]\nDonc pour tout \\(h\\) réel non nul,\n\\[\\frac{f(5+h)-f(5)}{h} = \\frac{3h^2+30h}{h} = 3h+30\\]\nAinsi\n\\[\\lim_{h \\to 0} \\frac{f(5+h) - f(5)}{h} =30\\]\nDonc \\(f\\) est dérivable en \\(5\\), et \\(f'(5) = 30\\).\n\n\nDémontrons que \\(g\\) définie sur \\(\\R/\\{3\\}\\) par \\(g(x)= \\frac{1}{x-3}\\) est dérivable en \\(4\\).\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) réel non nul,\n\\[\\frac{g(4+h) - g(4)}{h} =\n\\dfrac{\\dfrac{1}{(4 + h) - 3} - \\dfrac{1}{4 - 3}}{h}=\\dfrac{1 - (1+h)}{(1+h)h}=-\\dfrac{1}{1+h}\\]\nAinsi\n\\[\\lim_{h \\to 0} \\frac{g(5+h) - g(5)}{h} = \\lim_{h \\to 0 } -\\dfrac{1}{1+h}=- 1\\]\nDonc \\(g\\) est dérivable en \\(4\\), et \\(g'(4) = -1\\).\n\n\n\nExemple : \nAvec la calculatrice\nOn cherche à connaître une valeur approchée de \\(f'(2)\\) où \\(f(x) = \\frac{1-x^2}{\\sqrt{x^3-2} -1}\\).\nLe calcul en est trop compliqué, et inintéressant, pour passer par le taux d’accroissement …\n\n\n\n\n\n\n\nAvec une TI\nAvec une Casio\n\n\n\n\nmaths + 8 → nbreDérivée\noptn + F4 + F2\n\n\n\nOn trouve comme résultat \\(\\approx 0.47596\\) (à \\(10^{-5}\\) près).\n\n\n\n\n\nOn peut alors être amené à calculer les limites suivantes :\n\\[\n\\lim_{\\substack{h \\to 0\\\\h &gt; 0}} \\frac{f(a+h)-f(a)}{h} \\quad \\text{et} \\quad \\lim_{\\substack{h \\to 0\\\\h &lt; 0}} \\frac{f(a+h)-f(a)}{h}\n\\]\nOn parle alors de limite à droite et de limite à gauche.\nSi ces deux limites sont les mêmes alors la fonction est dérivable en \\(a\\), sinon elle ne l’est pas.\n\nThéorème : \nLa fonction racine carrée et la fonction valeur absolue ne sont pas dérivables en \\(0\\).\n\n\n\nDémonstration :\n\n\nPreuve pour la racine carrée :\n\\[\n\\lim_{h \\to 0^+} \\frac{\\sqrt{0+h} - \\sqrt{0}}{h} = \\lim_{h \\to 0^+}  \\frac{\\sqrt{h}}{h} = \\lim_{h \\to 0^+}  \\frac{1}{\\sqrt{h}} = +\\infty\n\\]\nCe nombre n’admet pas de limite finie lorsque \\(h\\) tend vers \\(0\\) (la limite est infinie).\nPreuve pour la valeur absolue :\n\\[\n\\lim_{h \\to 0^+} \\frac{ \\abs{h} - \\abs{0}}{h} = \\frac{h}{h} = 1  \n\\quad \\text{et} \\quad  \n\\lim_{h \\to 0^-} \\frac{ \\abs{h} - \\abs{0}}{h} = \\frac{-h}{h} = -1\n\\]\nLes limites à droite et à gauche étant différentes, le taux d’accroissement n’admet pas de limite, donc la fonction valeur absolue n’est pas dérivable en \\(0\\).\n\n\n\nRemarque : Interprétation de la limite\n\nPour la racine carrée, la limite que l’on trouve signifie que le quotient devient aussi grand que l’on veut lorsque les points se rapprochent.\nOn a donc une tangente dont le coefficient directeur est infini, donc en \\(0\\), une tangente verticale.\nEn \\(0\\), on observe une tangente dont le coefficient directeur est \\(1\\) à droite et \\(-1\\) à gauche.\nCes nombres ne sont pas égaux, donc on voit graphiquement que la fonction valeur absolue n’est pas dérivable en \\(0\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Nombre dérivé",
+      "Nombre dérivé"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/NomDerive/DerivUsuelles.html",
+    "href": "premiere-maths/NomDerive/DerivUsuelles.html",
+    "title": "Fonction dérivée- Dérivées usuelles",
+    "section": "",
+    "text": "Définition :\nOn dit que \\(f\\) est dérivable sur \\(I\\) lorsque \\(f\\) est dérivable en tout point \\(a\\) de \\(I\\).\nOn appelle alors fonction dérivée de la fonction \\(f\\), la fonction notée \\(f'\\), définie sur \\(I\\) par :\n\\[f' : x \\longmapsto f'(x)\\]\n\n\nOn considère la fonction \\(f\\), définie par \\(f(x)=2x^2-3x+5\\). Déterminons la fonction dérivée associée.\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) non nul, et tout réel \\(a\\) :\n\\[\\frac{f(a+h) - f(a)}{h} = \\frac{2a^2+2h^2+4ah-3a-3h -2a^2+6a-5}{h} = \\frac{2h^2+4ah+3a-3h}{h} = 2h+4a-3\\]\nOr :\n\\[\\lim_{h \\to 0} 2h+4a-3 =  4a-3\\]\nDonc \\(f\\) est dérivable en \\(a\\) et \\(f'(a) = 4a-3\\).\nOn en déduit que la fonction dérivée de \\(f\\) est \\(f'(x) = 4x - 3\\) définie sur \\(\\R\\).\n\n\n\nThéorème :\nOn considère une fonction \\(f\\) définie sur son ensemble de définition \\(D_f\\).\n\n\n\n\n\n\n\n\n\nFonction \\(f\\)\nEnsemble de définition\nFonction dérivée \\(f'\\)\nEnsemble de dérivabilité\n\n\n\n\n\\(k\\)\n\\(\\mathbb{R}\\)\n\\(0\\)\n\\(\\mathbb{R}\\)\n\n\n\\(ax\\)\n\\(\\mathbb{R}\\)\n\\(a\\)\n\\(\\mathbb{R}\\)\n\n\n\\(x^2\\)\n\\(\\mathbb{R}\\)\n\\(2x\\)\n\\(\\mathbb{R}\\)\n\n\n\\(\\sqrt{x}\\)\n\\(\\mathbb{R}_+\\)\n\\(\\dfrac{1}{2\\sqrt{x}}\\)\n\\(\\mathbb{R}_+^*\\)\n\n\n\\(\\dfrac{1}{x}\\)\n\\(]-\\infty\\,; 0[ \\cup ]0\\,; +\\infty[\\)\n\\(-\\dfrac{1}{x^2}\\)\n\\(]-\\infty\\,; 0[ \\cup ]0\\,; +\\infty[\\)\n\n\n\\(ax^2 + bx + c\\)\n\\(\\mathbb{R}\\)\n\\(2ax + b\\)\n\\(\\mathbb{R}\\)\n\n\n\n\n\n\nDémonstration :\n\nOn démontre pour quelque cas\n\nadmis pour les deux premiers cas (facile à faire !)\nSoit \\(f\\) définie sur \\(\\R\\) par \\(f(x) = x^2\\). \\Pour tout \\(a,h \\in \\R\\)\\ \\[(a+h)^2 - a^2 = 2ah+h^2\\] Donc \\[\\frac{f(a+h) - f(a)}{h} = 2a+h\\] Donc en faisant tendre \\(h\\) vers \\(0\\) on obtient Ainsi \\(f'(a)= 2a\\)\nSoit \\(f\\) définie sur \\(\\R_+\\) par \\(f(x) = \\sqrt{x}\\).  Pour tout \\(a \\in \\R^+\\) et\\(\\in \\R^*\\) tel que \\(a+h &gt; 0\\) \\[\\sqrt{a+h} - \\sqrt{a} = \\frac{a + h - a}{\\sqrt{a+h} + \\sqrt{a}} = \\frac{h}{\\sqrt{a+h} + \\sqrt{a}}\\] Ainsi \\[\\frac{f(a+h) - f(a)}{h} = \\frac{h}{h(\\sqrt{a+h} + \\sqrt{a})} = \\frac{1}{\\sqrt{a+h} + \\sqrt{a}}\\] Donc en faisant tendre \\(h\\) vers \\(0\\) on obtient \\(f'(a)= \\frac{1}{2 \\sqrt{a}}\\)UU\n\n\n\nRemarque :\nOn peut retenir que pour tout \\(n \\in \\N^*\\), avec \\(f:x \\longmapsto x^n\\) définie sur \\(\\R\\) et \\(g:x \\longmapsto \\frac{1}{x^n}\\) définie sur \\(]-\\infty\\,;\\, 0[\\) ou sur \\(]0\\,;\\, + \\infty[\\). On démontre par récurrence (programme de terminale) que \\[f':x \\longmapsto n x^{n-1} \\quad \\et \\quad g':x \\longmapsto - \\frac{n}{x^{n+1}}\\] Par exemple si \\[f:x \\longmapsto x^3 \\qquad \\et \\qquad  g:x \\longmapsto \\frac{-1}{x^5}\\] alors \\[f':x \\longmapsto 3x^2 \\qquad \\et \\qquad g':x \\longmapsto \\frac{5}{x^6}\\]\n\n\n\nDémontrer que la fonction inverse est dérivable en tout réel \\(a \\ne 0\\).\n\n\n\nAfficher la correction\n\nPour tout réel \\(a \\neq 0\\), \\(\\forall h \\neq 0\\) tel que \\(a+h \\neq 0\\), \\[\\tau_a(h) = \\dfrac{\\dfrac{1}{a+h} - \\dfrac{1}{a}}{h} = \\dfrac{a-(a+h)}{h a(a+h)} = - \\frac{1}{a(a+h)}\\] Or \\(\\lim_{h \\to 0} \\tau_a(h) = - \\frac{1}{a^2}\\). Ainsi la fonction inverse est dérivable en tout réel \\(a\\) non nul, et pour tout \\(a \\neq 0\\), \\(f'(a) =-\\frac{1}{a^2}\\)}\n\nÉquation de la tangente \\(T_a\\) :\n\n\n\nAfficher la correction\n\n\\(M(x\\,;\\,y) \\in T_a \\Longleftrightarrow y=f'(a)(x-a)+f(a).\n\\Longleftrightarrow y=-\\frac{1}{a^2} x + \\frac{1}{a} + \\frac{1}{a}\\)\\ Donc\n\\[T_a: y=- \\frac{1}{a^2}x + \\frac{2}{a}\\]\n\nCoordonnées des points \\(A\\) et \\(B\\) (intersections avec les axes) :\n\n\n\nAfficher la correction\n\nOn a\n\n\\(A(x_A\\, ; \\, y_A)\\) le point d’intersection de \\(T_A\\) avec l’axe des abscisses, alors \\(y_A=0\\) .\\ Donc \\[0=-\\frac{1}{a^2}x_A+ \\frac{2}{a}\\] d’où \\(x_A=2a\\).\nSoit \\(B(x_B \\, ; \\, y_B)\\) le point d’intersection de \\(T_a\\) avec l’axe des ordonnées, alors \\(x_B=0\\), donc \\[y_B=-\\frac{1}{a^2} \\times 0 + \\frac{2}{a}=\\frac{2}{a}\\] Ainsi \\(A\\left(2a \\, ; \\, 0\\right)\\) et \\(B \\left(0 \\, ;\\, \\frac{2}{a} \\right)\\)\n\n\nMontrer que le milieu de \\([AB]\\) est le point de tangence :\n\n\n\nAfficher la correction\n\n\\(M \\in \\mathscr{C}\\) si et seulement si \\(M\\left(x \\, ; \\, \\frac{1}{x} \\right)\\). Soit \\(M\\) le milieu de \\([AB]\\), alors \\(M\\left(\\frac{2a+0}{2} \\, ; \\dfrac{0+\\frac{2}{a}}{2} \\right)\\) donc \\(M \\left(a \\, ; \\, \\frac{1}{a} \\right)\\). \\ Ainsi \\(M\\) appartient à la représentation graphique de la fonction inverse. De plus appartenant à la tangente, puisque point de \\((AB)\\), alors il est le point de tangence.",
+    "crumbs": [
+      "Spé maths première",
+      "Nombre dérivé",
+      "Fonction dérivée- Dérivées usuelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/index.html",
+    "href": "premiere-maths/index.html",
+    "title": "Cours de Première Spécialité maths",
+    "section": "",
+    "text": "Chapitre 1 : Le second degré\n\n\nForme canonique, racines, signe, parabole.\n\n\n\n\n\n\n\n\n\n\nChapitre 2 : Suites numériques : Généralités\n\n\nSuite numérique - Suite Recursive - variation - limite - Algorithme\n\n\n\n\n\n\n\n\n\n\nChapitre 3 : Le nombre dérivéé\n\n\nnombre dérivé - tangente - dérivée usuelles.\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Spé maths première",
+      "Cours de Première Spécialité maths"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Accueil",
+    "section": "",
+    "text": "Bienvenue sur le site pédagogique\nUtilisez la barre de navigation ci-dessus pour accéder aux sections :\n\nSNT\nSpécialité Maths Première"
+  },
+  {
+    "objectID": "premiere-maths/NomDerive/tangente.html",
+    "href": "premiere-maths/NomDerive/tangente.html",
+    "title": "Tangente à une courbe",
+    "section": "",
+    "text": "On considère une fonction \\(f\\) définie sur \\(I\\) non vide, et dérivable en \\(a \\in I\\).\nFaisons alors tendre \\(h\\) vers \\(0\\) (comme pour la définition du nombre dérivé).\nLe point \\(M\\) se rapproche infiniment proche du point \\(A\\) (sans pour autant être confondu avec le point \\(A\\) !!).\n\n\n\n\nL’ensemble de ces droites \\((AM)\\) forme un faisceau de droites.\nOn peut donc voir le nombre \\(f'(a)\\) comme le coefficient directeur de la « position limite » de ce faisceau de droites des sécantes \\((AM)\\) lorsque le point \\(M\\) se rapproche de \\(A\\).\nCette droite « limite » a un seul point de contact (dans un voisinage proche de \\(A\\)) avec \\(\\mathcal{C}_f\\), et tend donc à être la tangente en \\(A\\) à \\(\\mathscr{C}_f\\).\n\nThéorème :\nSoit \\(f\\) une fonction dérivable en \\(a\\).\n\\(f'(a)\\) est le coefficient directeur de la tangente au point d’abscisse \\(a\\).\n\n\n\nDéterminer graphiquement un nombre dérivé\nSur le graphique ci-dessous, on a tracé la courbe représentative \\(\\mathcal{C}_f\\) d’une fonction \\(f\\) définie et dérivable en tout point de l’intervalle \\([-2  \\,,\\, 5]\\).\nOn sait que :\n\nla tangente au point \\(A(-1, 5)\\) à la courbe \\(\\mathcal{C}_f\\) est parallèle à l’axe des abscisses ;\nla tangente au point \\(B(2, 1)\\) à la courbe \\(\\mathcal{C}_f\\) coupe l’axe des abscisses au point de coordonnées \\((3, 0)\\). \n\nDéterminons \\(f'(-1)\\) et \\(f'(2)\\).\n\n\nAfficher la correction\n\nLe nombre dérivé en \\(a\\) est le coefficient directeur de la tangente au point d’abscisse \\(a\\).\n\nLa tangente en \\(-1\\) étant parallèle à l’axe des abscisses, son coefficient directeur est nul.\nAinsi \\(f'(-1) = 0\\).\nLa tangente en \\(B\\) passe par les points \\(B(2, 1)\\) et \\((3, 0)\\) :\nLe coefficient directeur est \\(\\dfrac{1 - 0}{2 - 3} = -1\\), donc \\(f'(2) = -1\\).\n\n\n\n\nThéorème :\nSoit \\(f\\) une fonction dérivable en \\(a\\), alors \\(\\mathcal{C}_f\\) admet une tangente au point d’abscisse \\(a\\) d’équation :\n\\[y = f'(a)(x - a) + f(a)\\]\n\n\n\nDémonstration :\n\n\\(f\\) est dérivable en \\(a\\), donc \\(f'(a)\\) est le coefficient directeur de la tangente de \\(f\\) en \\(a\\).\nElle admet donc une équation réduite de la forme : \\[y = f'(a)x + p\\]\nLe point \\(A(a\\,;\\,f(a))\\) appartient à \\(\\mathcal{C}_f\\) donc vérifie cette équation : \\[f(a) = f'(a)a + p \\Rightarrow p = f(a) - f'(a)a\\]\nAinsi l’équation est : \\[y = f'(a)x + f(a) - f'(a)a = f'(a)(x - a) + f(a)\\]\n\n\nSoit \\(f\\) définie sur \\(D_f = ]0\\,;\\,+\\infty[\\) par \\(f(x) = \\dfrac{1}{x^2}\\).\n\nMontrer que \\(f\\) est dérivable en \\(3\\).\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) non nul, \\[\n\\dfrac{f(3+h)-f(3)}{h} = \\dfrac{\\dfrac{1}{(h+3)^2} - \\dfrac{1}{3^2}}{h} = \\dfrac{\\dfrac{9 - (h+3)^2 }{9(h+3)^2}}{h} = \\dfrac{9 - (h^2 +6h + 9)}{9h(h+3)^2} = -\\dfrac{h +6}{9(h+3)^2}\n\\]\nOr,\n\\[\\lim_{h \\to 0} -\\dfrac{h +6}{9(h+3)^2} = - \\frac{6}{81} = -\\frac{2}{27}\\]\nDonc \\(f\\) est dérivable en \\(3\\), et \\(f'(3) = -\\frac{2}{27}\\), \\(f(3) = \\frac{1}{9}\\).\n\n\nEn déduire l’équation de la tangente au point d’abscisse \\(3\\).\n\n\n\nAfficher la correction\n\nSoit \\(T_3\\) l’équation de la tangente au point d’abscisse \\(3\\) : \\[y = f'(3)(x - 3) + f(3) = - \\frac{2}{27}(x - 3) + \\frac{1}{9} = -\\frac{2}{27}x + \\frac{1}{3}\\]\nDonc l’équation cherchée est :\n\\[y = - \\frac{2}{27}x + \\frac{1}{3}\\]\n\n\n\nRemarque : Interprétation de la limite\nLa représentation graphique et sa tangente sont localement confondues en \\(a\\).\nOn peut donc écrire, pour \\(h\\) proche de \\(0\\) : \\[f(a + h) \\approx  f(a) + h \\cdot f'(a)\\]",
+    "crumbs": [
+      "Spé maths première",
+      "Nombre dérivé",
+      "Tangente à une courbe"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/NomDerive/tangente.html#tangente-en-un-point-de-la-courbe",
+    "href": "premiere-maths/NomDerive/tangente.html#tangente-en-un-point-de-la-courbe",
+    "title": "Tangente à une courbe",
+    "section": "",
+    "text": "On considère une fonction \\(f\\) définie sur \\(I\\) non vide, et dérivable en \\(a \\in I\\).\nFaisons alors tendre \\(h\\) vers \\(0\\) (comme pour la définition du nombre dérivé).\nLe point \\(M\\) se rapproche infiniment proche du point \\(A\\) (sans pour autant être confondu avec le point \\(A\\) !!).\n\n\n\n\nL’ensemble de ces droites \\((AM)\\) forme un faisceau de droites.\nOn peut donc voir le nombre \\(f'(a)\\) comme le coefficient directeur de la « position limite » de ce faisceau de droites des sécantes \\((AM)\\) lorsque le point \\(M\\) se rapproche de \\(A\\).\nCette droite « limite » a un seul point de contact (dans un voisinage proche de \\(A\\)) avec \\(\\mathcal{C}_f\\), et tend donc à être la tangente en \\(A\\) à \\(\\mathscr{C}_f\\).\n\nThéorème :\nSoit \\(f\\) une fonction dérivable en \\(a\\).\n\\(f'(a)\\) est le coefficient directeur de la tangente au point d’abscisse \\(a\\).\n\n\n\nDéterminer graphiquement un nombre dérivé\nSur le graphique ci-dessous, on a tracé la courbe représentative \\(\\mathcal{C}_f\\) d’une fonction \\(f\\) définie et dérivable en tout point de l’intervalle \\([-2  \\,,\\, 5]\\).\nOn sait que :\n\nla tangente au point \\(A(-1, 5)\\) à la courbe \\(\\mathcal{C}_f\\) est parallèle à l’axe des abscisses ;\nla tangente au point \\(B(2, 1)\\) à la courbe \\(\\mathcal{C}_f\\) coupe l’axe des abscisses au point de coordonnées \\((3, 0)\\). \n\nDéterminons \\(f'(-1)\\) et \\(f'(2)\\).\n\n\nAfficher la correction\n\nLe nombre dérivé en \\(a\\) est le coefficient directeur de la tangente au point d’abscisse \\(a\\).\n\nLa tangente en \\(-1\\) étant parallèle à l’axe des abscisses, son coefficient directeur est nul.\nAinsi \\(f'(-1) = 0\\).\nLa tangente en \\(B\\) passe par les points \\(B(2, 1)\\) et \\((3, 0)\\) :\nLe coefficient directeur est \\(\\dfrac{1 - 0}{2 - 3} = -1\\), donc \\(f'(2) = -1\\).\n\n\n\n\nThéorème :\nSoit \\(f\\) une fonction dérivable en \\(a\\), alors \\(\\mathcal{C}_f\\) admet une tangente au point d’abscisse \\(a\\) d’équation :\n\\[y = f'(a)(x - a) + f(a)\\]\n\n\n\nDémonstration :\n\n\\(f\\) est dérivable en \\(a\\), donc \\(f'(a)\\) est le coefficient directeur de la tangente de \\(f\\) en \\(a\\).\nElle admet donc une équation réduite de la forme : \\[y = f'(a)x + p\\]\nLe point \\(A(a\\,;\\,f(a))\\) appartient à \\(\\mathcal{C}_f\\) donc vérifie cette équation : \\[f(a) = f'(a)a + p \\Rightarrow p = f(a) - f'(a)a\\]\nAinsi l’équation est : \\[y = f'(a)x + f(a) - f'(a)a = f'(a)(x - a) + f(a)\\]\n\n\nSoit \\(f\\) définie sur \\(D_f = ]0\\,;\\,+\\infty[\\) par \\(f(x) = \\dfrac{1}{x^2}\\).\n\nMontrer que \\(f\\) est dérivable en \\(3\\).\n\n\n\nAfficher la correction\n\nPour tout \\(h\\) non nul, \\[\n\\dfrac{f(3+h)-f(3)}{h} = \\dfrac{\\dfrac{1}{(h+3)^2} - \\dfrac{1}{3^2}}{h} = \\dfrac{\\dfrac{9 - (h+3)^2 }{9(h+3)^2}}{h} = \\dfrac{9 - (h^2 +6h + 9)}{9h(h+3)^2} = -\\dfrac{h +6}{9(h+3)^2}\n\\]\nOr,\n\\[\\lim_{h \\to 0} -\\dfrac{h +6}{9(h+3)^2} = - \\frac{6}{81} = -\\frac{2}{27}\\]\nDonc \\(f\\) est dérivable en \\(3\\), et \\(f'(3) = -\\frac{2}{27}\\), \\(f(3) = \\frac{1}{9}\\).\n\n\nEn déduire l’équation de la tangente au point d’abscisse \\(3\\).\n\n\n\nAfficher la correction\n\nSoit \\(T_3\\) l’équation de la tangente au point d’abscisse \\(3\\) : \\[y = f'(3)(x - 3) + f(3) = - \\frac{2}{27}(x - 3) + \\frac{1}{9} = -\\frac{2}{27}x + \\frac{1}{3}\\]\nDonc l’équation cherchée est :\n\\[y = - \\frac{2}{27}x + \\frac{1}{3}\\]\n\n\n\nRemarque : Interprétation de la limite\nLa représentation graphique et sa tangente sont localement confondues en \\(a\\).\nOn peut donc écrire, pour \\(h\\) proche de \\(0\\) : \\[f(a + h) \\approx  f(a) + h \\cdot f'(a)\\]",
+    "crumbs": [
+      "Spé maths première",
+      "Nombre dérivé",
+      "Tangente à une courbe"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/algorithme.html",
+    "href": "premiere-maths/suite1/algorithme.html",
+    "title": "Algorithme et programmation – Exercices interactifs",
+    "section": "",
+    "text": "Soit \\(u_n\\) la suite définie par :\n\\[\n\\begin{cases}\nu_0 = 3, \\\\\\\\\nu_{n+1} = u_n - n + 2 \\quad \\text{pour tout } n \\in \\N.\n\\end{cases}\n\\]\nSi nous exécutions cet algorithme à la main, pour la somme des 7 premiers termes, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n3\n4\n5\n6\n\n\n\n\n\\(u\\)\n3\n5\n6\n6\n5\n3\n0\n\n\n\\(S\\)\n3\n8\n14\n20\n25\n28\n28\n\n\n\nLe programme en Python donne :\n\n\n  \n    Exercice 1\n    def somme(n_max):\n    n = 0\n    u = 3\n    S = u\n    for i in range(1, n_max + 1):\n        u = u - (i-1) + 2\n        S = S + u\n    return S\n\nprint(somme(6))\n    \n  \n    \n      \n      \n      \n      \n      \n      \n    \n  \n\n\n\n\n\nOn considère une suite \\(u_n\\).\nUn problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de \\(u_n\\).\n\nNous considérons la suite \\(u_n\\) définie dans la partie précédente.\nLes termes de \\(u_n\\) semblent décroître de plus en plus rapidement à partir de \\(n = 3\\).\nOn se demande si la suite \\(u_n\\) peut atteindre une valeur aussi basse que souhaitée.\nÉtant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.\nDans le cas présent, nous recherchons le plus petit entier \\(n \\in \\N\\) tel que \\(u_n \\leq -750\\).\nSi nous exécutions cet algorithme à la main, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n…\n40\n41\n42\n\n\n\n\n\\(u\\)\n3\n5\n6\n…\n-697\n-735\n-774\n\n\n\nLa valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :\n\ndef somme(n_max):\n    n = 0\n    u = 3\n    S = u\n    for i in range(1, n_max + 1):\n        u = u - i + 2\n        S = S + u\n    return S\n\n\n\n\n\n\nOn considère une suite \\(u_n\\).\nUn problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de \\(u_n\\).\n\nNous considérons la suite \\(u_n\\) définie dans la partie précédente.\nLes termes de \\(u_n\\) semblent décroître de plus en plus rapidement à partir de \\(n = 3\\).\nOn se demande si la suite \\(u_n\\) peut atteindre une valeur aussi basse que souhaitée.\nÉtant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.\nDans le cas présent, nous recherchons le plus petit entier \\(n \\in \\N\\) tel que \\(u_n \\leq -750\\).\nSi nous exécutions cet algorithme à la main, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n…\n40\n41\n42\n\n\n\n\n\\(u\\)\n3\n5\n6\n…\n-697\n-735\n-774\n\n\n\nLa valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :\n\ndef seuil_u(seuil):\n    n = 0\n    u = 3\n    while u &gt; seuil:\n        u = u - n + 2\n        n = n + 1\n    print(u, n)\n\n  \n    Exercice 2\n    def seuil_u(seuil):\n    n = 0\n    u = 3\n    while u &gt; seuil:\n        u = u - n + 2\n        n = n + 1\n    print(u, n)\n\nseuil_u(-750)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Algorithme et programmation – Exercices interactifs"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/algorithme.html#algorithme-et-programmation",
+    "href": "premiere-maths/suite1/algorithme.html#algorithme-et-programmation",
+    "title": "Algorithme et programmation – Exercices interactifs",
+    "section": "",
+    "text": "Soit \\(u_n\\) la suite définie par :\n\\[\n\\begin{cases}\nu_0 = 3, \\\\\\\\\nu_{n+1} = u_n - n + 2 \\quad \\text{pour tout } n \\in \\N.\n\\end{cases}\n\\]\nSi nous exécutions cet algorithme à la main, pour la somme des 7 premiers termes, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n3\n4\n5\n6\n\n\n\n\n\\(u\\)\n3\n5\n6\n6\n5\n3\n0\n\n\n\\(S\\)\n3\n8\n14\n20\n25\n28\n28\n\n\n\nLe programme en Python donne :\n\n\n  \n    Exercice 1\n    def somme(n_max):\n    n = 0\n    u = 3\n    S = u\n    for i in range(1, n_max + 1):\n        u = u - (i-1) + 2\n        S = S + u\n    return S\n\nprint(somme(6))\n    \n  \n    \n      \n      \n      \n      \n      \n      \n    \n  \n\n\n\n\n\nOn considère une suite \\(u_n\\).\nUn problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de \\(u_n\\).\n\nNous considérons la suite \\(u_n\\) définie dans la partie précédente.\nLes termes de \\(u_n\\) semblent décroître de plus en plus rapidement à partir de \\(n = 3\\).\nOn se demande si la suite \\(u_n\\) peut atteindre une valeur aussi basse que souhaitée.\nÉtant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.\nDans le cas présent, nous recherchons le plus petit entier \\(n \\in \\N\\) tel que \\(u_n \\leq -750\\).\nSi nous exécutions cet algorithme à la main, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n…\n40\n41\n42\n\n\n\n\n\\(u\\)\n3\n5\n6\n…\n-697\n-735\n-774\n\n\n\nLa valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :\n\ndef somme(n_max):\n    n = 0\n    u = 3\n    S = u\n    for i in range(1, n_max + 1):\n        u = u - i + 2\n        S = S + u\n    return S\n\n\n\n\n\n\nOn considère une suite \\(u_n\\).\nUn problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de \\(u_n\\).\n\nNous considérons la suite \\(u_n\\) définie dans la partie précédente.\nLes termes de \\(u_n\\) semblent décroître de plus en plus rapidement à partir de \\(n = 3\\).\nOn se demande si la suite \\(u_n\\) peut atteindre une valeur aussi basse que souhaitée.\nÉtant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.\nDans le cas présent, nous recherchons le plus petit entier \\(n \\in \\N\\) tel que \\(u_n \\leq -750\\).\nSi nous exécutions cet algorithme à la main, nous écririons :\n\n\n\n\\(n\\)\n0\n1\n2\n…\n40\n41\n42\n\n\n\n\n\\(u\\)\n3\n5\n6\n…\n-697\n-735\n-774\n\n\n\nLa valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :\n\ndef seuil_u(seuil):\n    n = 0\n    u = 3\n    while u &gt; seuil:\n        u = u - n + 2\n        n = n + 1\n    print(u, n)\n\n  \n    Exercice 2\n    def seuil_u(seuil):\n    n = 0\n    u = 3\n    while u &gt; seuil:\n        u = u - n + 2\n        n = n + 1\n    print(u, n)\n\nseuil_u(-750)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Algorithme et programmation – Exercices interactifs"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html",
+    "href": "premiere-maths/suite1/exercices.html",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "",
+    "text": "Exercice 1 : \n\nSoit \\((u_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(u_n=n^2-3\\). Calculer \\(u_{11}\\).\nSoit \\((v_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(v_n=\\frac{n^2-3n}{n-5}\\). Calculer le premier terme de la suite.\nSoit \\((w_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\[w_n=\\sum_{k=0}^n 2^k=1+2+2^2+\\dots +2^n\\] Calculer \\(u_4\\).\n\n\n\n\n\n\nExercice 2 : \nOn considère le programme python suivant :\ndef f(x):\n    return x**2-3\n\ndef terme_suite(k): \n    L=[]\n    for i in range(k):\n        u=f(i)\n        L.append(u)\n    return u\n\nQue renvoie l’appel terme_suite(10) ? À quelle suite de l’exercice cela correspond ?\nModifier le script précédent afin de calculer les 10 premiers termes de la suite \\((v_n)\\) précédente.\nModifier le script précédent afin de calculer les 10 premiers termes de la suite \\((w_n)\\) précédente.\n\n\n\n\n\n\n\n\nExercice 3 : \nPour chacune des suites suivantes définies pour tout entier naturel \\(n\\), calculer les cinq premiers termes.\n\n\\(u_n = 7n + 1\\)\n\\(v_n = n^2 - 3n + 1\\)\n\\(w_n = \\dfrac{1}{2n - 1}\\)\n\\(t_n = \\sqrt{5n + 1}\\)\n\n\n\n\n\n\nExercice 4 : \nPour chacune des suites suivantes définies par récurrence pour tout entier naturel \\(n\\), calculer les quatre termes suivant le premier.\n\n\\(\\left\\{\\begin{array}{l} u_0 = 2 \\\\ u_{n+1} = 2u_n + 1 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_{n+1} = u_n^2 + 1 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_1 = 1 \\\\ u_{n+1} = \\dfrac{1}{u_n + 2} \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_{n+1} = \\sqrt{u_n^2 + 1} \\end{array}\\right.\\)\n\n\n\n\n\n\nExercice 5 : \n\nPour chacune des suites suivantes, calculer les trois termes suivant le premier :\n\n\n\\(\\left\\{\\begin{array}{l} u_0 = 2 \\\\ u_{n+1} = 3u_n - 4n \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 0 \\\\ u_{n+1} = u_n^2 + \\dfrac{1}{2n+1} \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 3 \\\\ u_{n+1} = 5u_{n-1} - 2 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_1 = 2 \\\\ u_{n+2} = 2u_{n+1} + u_n \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_1 = 2 \\\\ u_{n+2} = (n+1)u_{n+1} + n \\end{array}\\right.\\)\n\n\nUtiliser la calculatrice afin d’afficher de la quatrième à la dixième valeur des deux suites précédentes.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice",
+    "href": "premiere-maths/suite1/exercices.html#exercice",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "",
+    "text": "Exercice 1 : \n\nSoit \\((u_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(u_n=n^2-3\\). Calculer \\(u_{11}\\).\nSoit \\((v_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(v_n=\\frac{n^2-3n}{n-5}\\). Calculer le premier terme de la suite.\nSoit \\((w_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\[w_n=\\sum_{k=0}^n 2^k=1+2+2^2+\\dots +2^n\\] Calculer \\(u_4\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-1",
+    "href": "premiere-maths/suite1/exercices.html#exercice-1",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "",
+    "text": "Exercice 2 : \nOn considère le programme python suivant :\ndef f(x):\n    return x**2-3\n\ndef terme_suite(k): \n    L=[]\n    for i in range(k):\n        u=f(i)\n        L.append(u)\n    return u\n\nQue renvoie l’appel terme_suite(10) ? À quelle suite de l’exercice cela correspond ?\nModifier le script précédent afin de calculer les 10 premiers termes de la suite \\((v_n)\\) précédente.\nModifier le script précédent afin de calculer les 10 premiers termes de la suite \\((w_n)\\) précédente.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-2",
+    "href": "premiere-maths/suite1/exercices.html#exercice-2",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "",
+    "text": "Exercice 3 : \nPour chacune des suites suivantes définies pour tout entier naturel \\(n\\), calculer les cinq premiers termes.\n\n\\(u_n = 7n + 1\\)\n\\(v_n = n^2 - 3n + 1\\)\n\\(w_n = \\dfrac{1}{2n - 1}\\)\n\\(t_n = \\sqrt{5n + 1}\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-3",
+    "href": "premiere-maths/suite1/exercices.html#exercice-3",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "",
+    "text": "Exercice 4 : \nPour chacune des suites suivantes définies par récurrence pour tout entier naturel \\(n\\), calculer les quatre termes suivant le premier.\n\n\\(\\left\\{\\begin{array}{l} u_0 = 2 \\\\ u_{n+1} = 2u_n + 1 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_{n+1} = u_n^2 + 1 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_1 = 1 \\\\ u_{n+1} = \\dfrac{1}{u_n + 2} \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_{n+1} = \\sqrt{u_n^2 + 1} \\end{array}\\right.\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-4",
+    "href": "premiere-maths/suite1/exercices.html#exercice-4",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "",
+    "text": "Exercice 5 : \n\nPour chacune des suites suivantes, calculer les trois termes suivant le premier :\n\n\n\\(\\left\\{\\begin{array}{l} u_0 = 2 \\\\ u_{n+1} = 3u_n - 4n \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 0 \\\\ u_{n+1} = u_n^2 + \\dfrac{1}{2n+1} \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 3 \\\\ u_{n+1} = 5u_{n-1} - 2 \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_1 = 2 \\\\ u_{n+2} = 2u_{n+1} + u_n \\end{array}\\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0 = 1 \\\\ u_1 = 2 \\\\ u_{n+2} = (n+1)u_{n+1} + n \\end{array}\\right.\\)\n\n\nUtiliser la calculatrice afin d’afficher de la quatrième à la dixième valeur des deux suites précédentes.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-5",
+    "href": "premiere-maths/suite1/exercices.html#exercice-5",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 6",
+    "text": "Exercice 6\n\nExercice 6 : \n\n\nSoit \\((u_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(u_0= 3\\) et \\(u_{n+1}=u_n^2-3\\). Calculer les trois premiers termes.\n\nSoit \\((v_n)\\) une suite définie pour tout entier \\(n \\in \\N\\), par \\(v_0=3\\) et \\(v_{n+1}=\\frac{v_n}{2n+1}\\). Calculer les trois premiers termes.\n\nModifier le script de l’exercice précédent afin que le programme renvoie la liste des \\(n\\) premiers termes de la suite \\((u_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-6",
+    "href": "premiere-maths/suite1/exercices.html#exercice-6",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 7",
+    "text": "Exercice 7\n\nExercice 7 : \nPour chacune des suites suivantes définies sur \\(\\mathbb{N}\\), exprimer \\(u_{n-1}\\) et \\(u_{n+1}\\) en fonction de \\(n\\) :\n\n\\(u_n = 6n + 8\\)\n\\(u_n = n^2 - 2n + 8\\)\n\\(u_n = \\dfrac{n(n+1)}{n+2}\\)\n\\(u_n = \\dfrac{3^{n+1}}{2^n}\\)\n\\(u_n = \\dfrac{9n - 5}{4n + 6}\\)\n\\(u_n = \\left( \\dfrac{n^2}{n+1} \\right)^{n+1}\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-7",
+    "href": "premiere-maths/suite1/exercices.html#exercice-7",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 8",
+    "text": "Exercice 8\n\nExercice 8 : \n\nSoit \\(u_n=2n^2-6n+4\\).\nExprimer \\(u_{n+1}\\), \\(u_{n+2}\\), \\(u_{2n+1}\\), et \\(u_{n^2}\\) en fonction de \\(n\\).\nSoit \\(u_{n+2} = 3 u_{n+1} -2n\\)\nExprimer \\(u_{n+1}\\) en fonction de \\(u_n\\) et \\(n\\), puis \\(u_{n+2}\\) en fonction de \\(u_n\\) et \\(n\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-8",
+    "href": "premiere-maths/suite1/exercices.html#exercice-8",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 9",
+    "text": "Exercice 9\n\nExercice 9 : \nSoit \\((u_n)\\) une suite définie pour tout entier \\(n\\) par \\(u_n=1+(-1)^n \\frac{5}{2^{n-1}}\\).\nMontrer que la suite \\(v_n = \\frac{u_{n+1}-1}{u_{n}-1}\\) est constante.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-9",
+    "href": "premiere-maths/suite1/exercices.html#exercice-9",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 10",
+    "text": "Exercice 10\n\nExercice 10 : \nSoit la suite \\((un_)\\) définie sur \\(\\N\\) par \\(u_0=1\\) et \\(u_{n+1} = \\frac{u_n}{1+u_n(1+2n)}\\)\n\n\n\n\nCalculer les 5 premiers de la suite \\((u_n)\\).\n\nConjecturer une forme explicite de la suite \\((u_n)\\).\n\n\nDémontrer votre conjecture.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-10",
+    "href": "premiere-maths/suite1/exercices.html#exercice-10",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 11",
+    "text": "Exercice 11\n\nExercice 11 : \n\nOn considère la suite définie par \\(u_n=\\frac{2n-5}{n^2-4}\\)\n\nÀ partir de quel rang la suite est-elle parfaitement définie ? Justifier brièvement.\n\nExprimer, en fonction de \\(n\\), \\(u_{n+1}\\) et \\(u_{2n}\\).\n\nExprimer \\(u_n - 1\\) en fonction de \\(n\\), et en déduire que tout \\(u_n &lt;1\\).\n\nOn considère la suite définie par la fonction python ci-dessous :\n\ndef suite(n):\n    u = 1\n    for i in range(n):\n        u = i / (2*u + 1)\n    return u\n\n\nDonner le terme initial de la suite ainsi que la relation de récurrence.\nQuel terme de la suite est renvoyé par l’instruction ?\nCompléter le script précédent pour qu’il calcule la somme des \\(n\\) premiers termes.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-11",
+    "href": "premiere-maths/suite1/exercices.html#exercice-11",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 12",
+    "text": "Exercice 12\n\nExercice 12 : \nSoit \\(n \\leqslant 1\\). On considère la suite \\((u_n)\\) définie par \\[u_n=\\sum_{k=1}^n k^2\\]\n\n\nCalculer les 3 premiers termes de la suite \\((u_n)\\).\n\n\n\n\nÉtablir une relation de récurrence entre \\(u_{n+1}\\) et \\(u_n\\).\n\n\nOn considère la suite \\((v_n)\\) définie pour tout \\(n \\leqslant 1\\) par \\[v_n=\\frac{n(n+1)(2n+1)}{6}\\]\n\nMontrer que \\(u_1=v_1\\).\n\nMontrer que \\(v_n\\) vérifie la relation de récurrence de la question 1.b\n\nConclure.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-12",
+    "href": "premiere-maths/suite1/exercices.html#exercice-12",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 13",
+    "text": "Exercice 13\n\nExercice 13 : \nÉcrire un script python qui permet de retourner la liste des \\(k\\) premiers de la suite \\((u_n)\\).\n\n\\(u_n=\\frac{2n}{n^2+1}\\)\n\n\\(u_0=3\\) et \\(u_{n+1}=\\frac{u_n-1}{u_n+1}\\)\n\n\\[\n\\left\\{\n\\begin{array}{l}\nw_0=4\\\\\nw_{n+1}=5w_n-2n\n\\end{array}\n\\right.\n\\]",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-13",
+    "href": "premiere-maths/suite1/exercices.html#exercice-13",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 14",
+    "text": "Exercice 14\n\nExercice 14 : \nSur un cercle, on place \\(n\\) points distincts et on s’intéresse au nombre \\(p_n\\) de cordes que l’on peut tracer.\n\n\nDéterminer \\(p_3\\), \\(p_4\\) et \\(p_5\\).\n\n\\(n\\) points sont placés et les \\(p_n\\) cordes sont tracées. On ajoute un nouveau point distinct des précédents.\nCombien de nouvelles cordes peut-on tracer ?\nEn déduire une relation de récurrence entre \\(p_{n+1}\\) et \\(p_n\\).\nEn écrivant les lignes comme ci-dessous et en additionnant terme à terme par colonne\n\n\\[\n\\begin{array}{l}\np_2=1\\\\\np_3=p_2+ \\dots \\\\\np_4=p_3+ \\dots \\\\\n\\dots  \\\\\np_n=p_{n-1}+\\dots\\\\\n\\end{array}\n\\]\nDéterminer \\(p_n\\) en fonction de \\(n\\).\n\nOn voudrait connaître le nombre de points nécessaires pour tracer \\(1\\,035\\) cordes.\nProposer un algorithme utilisant la formule de récurrence de la suite \\((p_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-14",
+    "href": "premiere-maths/suite1/exercices.html#exercice-14",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 15",
+    "text": "Exercice 15\n\nExercice 15 : \nSoit \\((u_n)_{n \\geq 0}\\) définie par \\(u_n= \\frac{2n - 1}{n + 1}\\)\n\nCalculer les 3 premiers termes de la suite.\nÉtudier les variations de la suite.\nMontrer que pour tout entier \\(n &gt; 0\\), \\(u_n \\in [0 \\,;\\,2]\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-15",
+    "href": "premiere-maths/suite1/exercices.html#exercice-15",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 16",
+    "text": "Exercice 16\n\nExercice 16 : \nDémontrer que si deux suites sont croissantes, alors la somme des deux est croissante.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-16",
+    "href": "premiere-maths/suite1/exercices.html#exercice-16",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 17",
+    "text": "Exercice 17\n\nExercice 17 :  Étude par la différence \nDans chacun des cas suivants, étudier les variations de la suite \\((u_n)\\) puis calculer les 3 premiers termes.\n\n\\(u_n=n - 2^n\\)\n\\(\\left\\{\\begin{array}{l}u_0 = 0\\\\ u_{n+1} = u_n + 2n \\end{array} \\right.\\)\n\\(\\left\\{\\begin{array}{l} u_0=1\\\\ u_{n+1} = (u_n + 0,5)^2 \\end{array} \\right.\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-17",
+    "href": "premiere-maths/suite1/exercices.html#exercice-17",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 18",
+    "text": "Exercice 18\n\nExercice 18 :  Étude par le quotient \nEn étudiant le signe de \\(u_n\\) et le quotient \\(\\frac{u_{n+1}}{u_n}\\) (on admettra que pour tout \\(n\\), \\(u_n\\neq 0\\))\n\n\\(u_n = \\frac{10}{7^n}\\)\n\\(v_n = \\frac{2^{n+1}}{3^{1-n}}\\)\n\\(w_n = n \\times 3^{-n}\\)\n\\(\\left\\{\\begin{array}{l}t_0 = -1\\\\ t_{n+1} = t_n^3 +2t_n \\end{array} \\right.\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-18",
+    "href": "premiere-maths/suite1/exercices.html#exercice-18",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 19",
+    "text": "Exercice 19\n\nExercice 19 :  Étude par la fonction associée \n\nEn étudiant les variations de la fonction \\(f\\) associée que l’on précisera, étudier les variations des suites suivantes :\n\n\\(u_n = -n^3 + 3n\\)\n\\(w_n = n^2 -2n +1\\)\n\\(s_n=\\sqrt{2n-4}\\)\n\\(t_n=\\frac{4-n}{n+1}\\)\n\nPeut-on appliquer cette méthode à la suite \\((r_n)\\) définie par \\(r_0=4\\) et pour tout \\(n \\in \\N\\), \\[r_{n+1}=r_n^2-2n+3\\]",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-19",
+    "href": "premiere-maths/suite1/exercices.html#exercice-19",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 20",
+    "text": "Exercice 20\n\nExercice 20 : \nOn considère les propositions suivantes :\n\n\\((P_1)\\) : Si la suite \\((u_n)\\) est strictement croissante sur \\(\\N\\) alors \\(u_3 &lt; u_4\\).\n\\((P_2)\\) : Si la suite \\((u_n)\\) est strictement décroissante sur \\(\\N\\) alors \\(u_3 &lt; u_4\\).\n\\((P_3)\\) : Si la suite \\((u_n)\\) est strictement décroissante sur \\(\\N\\) alors \\(\\forall n \\in \\, \\, u_{n+1} \\leqslant u_n\\)\n\\((P_4)\\) : Si la suite \\((u_n)\\) est strictement sur \\(\\N\\) alors \\(\\forall n \\in \\, \\, u_{n+1} &gt; u_n\\)\n\n\nEn justifiant, indiquer pour chacune des propositions précédentes, si elle est vraie ou fausse.\nIndiquer la réciproque de chacune de ces propositions et dire si elle est vraie ou fausse.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-20",
+    "href": "premiere-maths/suite1/exercices.html#exercice-20",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 21",
+    "text": "Exercice 21\n\nExercice 21 : Méthode au choix \nÉtudier les variations des suites suivantes en utilisant la méthode de votre choix.\n\n\\(u_n = n + \\frac{1}{n+1}\\)\n\\(v_n = \\frac{n+1}{2^n}\\)\n\\(\\left\\{\\begin{array}{l}w_0=1\\\\ w_n = w_{n+1} + \\frac{1}{n} \\end{array} \\right.\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-21",
+    "href": "premiere-maths/suite1/exercices.html#exercice-21",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 22",
+    "text": "Exercice 22\n\nExercice 22 : Vrai/faux \n\nSi une suite \\(u\\) est décroissante alors \\(u_1\\geqslant u_5\\).\nSi une suite \\(v\\) est décroissante alors pour tout \\(n \\in \\N\\), \\(v_n \\leqslant v_0\\).\nSoit une suite \\(w\\) définie pour tout \\(n \\in \\N\\) par \\(w_n=f(n)\\) où \\(f\\) est définie sur \\([0\\,;\\, +\\infty[\\). Si \\(w\\) est croissante alors la fonction \\(f\\) est croissante.\nSoit \\(v\\) la suite définie sur \\(\\N\\) par\n\\[\\left\\{\\begin{array}{l}v_0=2\\\\ v_{n+1}=g(v_n) \\end{array}\\right.\\]\noù \\(g:x \\longmapsto x-4\\). La suite \\((v_n)\\) est croissante.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-22",
+    "href": "premiere-maths/suite1/exercices.html#exercice-22",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 23",
+    "text": "Exercice 23\n\nExercice 23 : \nSoit \\((u_n)\\) une suite à termes strictement positifs.\n\nDémontrer que si \\((u_n)\\) est strictement croissante alors \\(\\left(\\frac{1}{u_n} \\right)\\) est strictement décroissante.\nQue peut-on dire de la réciproque ?",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-23",
+    "href": "premiere-maths/suite1/exercices.html#exercice-23",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 24",
+    "text": "Exercice 24\n\nExercice 24 : \n(Extrait Devoir)\n\nOn considère les suites \\((u_n)\\), \\((v_n)\\) définies pour tout \\(n \\in \\N\\) par\n\\[u_n = 2n^2+4n-2 \\quad ; \\quad v_n = -\\frac{3^n}{2} \\quad ; \\quad w_n= n- \\frac{1}n\\]\n\nCalculer le 3 terme de la suite \\((u_n)\\).\nÉtudier les variations des suites \\((u_n)\\), \\((v_n)\\) et \\((w_n)\\) par étude de la différence.\n\nOn considère la suite \\((t_n)\\) définie par\n\\[t_n=\\frac{-2^n}{n-4}\\]\n\nÀ partir de quel rang la suite est-elle définie ?\nEn utilisant la méthode du quotient, déterminer les variations de la suite \\((t_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-24",
+    "href": "premiere-maths/suite1/exercices.html#exercice-24",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 25",
+    "text": "Exercice 25\n\nExercice 25 : \nOn considère la suite \\((u_n)\\) définie pour tout \\(n \\geqslant 1\\) par\n\\[u_n=\\sum_{k=1}^n \\frac{(-1)^k}{k}\\]\nÉtudier les variations de la suite \\((v_n)\\) où pour tout \\(n \\in \\N^*\\), \\(v_n=u_{2n}\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-25",
+    "href": "premiere-maths/suite1/exercices.html#exercice-25",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 26",
+    "text": "Exercice 26\n\nExercice 26 : \nOn considère la suite \\((u_n)\\) définie par \\[u_0=0,9 \\et u_{n+1} =u_n^2\\] On considère la fonction \\(f\\) tel que \\(u_{n+1} =f(u_n)\\) définie sur \\([0;1]\\).\n\nConstruire les premiers de cette suite.\n\nÉtudier les variations de la fonction \\(g\\) définie par \\(g(x) =x -x^2\\).\n\nJustifier que si \\(x \\in [0;0,5]\\) alors \\(f(x) \\in [0;0,5]\\)\n\nDémontrer que \\(u_1 \\in [0;0,5]\\) et en déduire que pour tout \\(n \\geqslant 1\\), \\(u_n \\in [0;0,5]\\)\n\nEn déduire les variations de la suite \\((u_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-26",
+    "href": "premiere-maths/suite1/exercices.html#exercice-26",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 27",
+    "text": "Exercice 27\n\nExercice 27 : \nOn considère la suite \\((u_n)\\) définie sur \\(\\N\\) par \\[u_n=\\frac{-3^n}{(n^2+2)2^n}\\]\n\nJustifier que pour tout \\(n &gt;0\\), \\(u_n &lt;0\\)\n\nMontrer que pour tout \\(n \\in \\N\\), \\[\\frac{u_{n+1}}{u_n}&gt;1 \\Longleftrightarrow n(n-4) &gt;0\\]\n\nRésoudre \\(n(n-4) &gt;0\\)\n\nEn déduire la monotonie de la suite \\((u_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-27",
+    "href": "premiere-maths/suite1/exercices.html#exercice-27",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 28",
+    "text": "Exercice 28\n\nExercice 28 : \nOn considère la suite \\((u_n)\\) définie par \\(u_0=2\\) et pour tout \\(n \\in \\N\\),\n\\[u_{n+1}=1- \\frac{1}{u_n}\\]\nMontrer que la suite \\((u_{3n})\\) est constante.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-28",
+    "href": "premiere-maths/suite1/exercices.html#exercice-28",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 29",
+    "text": "Exercice 29\n\nExercice 29 : \n\nÉtudier le signe \\(x^2-4x-12\\)\n\nOn considère la fonction \\(f\\) définie sur \\([-3_,;\\, + \\infty[\\) par \\[f(x)= \\sqrt{4x+12}\\]\nSoit la suite \\((u_n)\\) définie par \\(u_0 =-1\\) et pour tout \\(n \\in \\N\\), \\[u_{n+1}= f(u_n)\\]\n\n\n\nConstruire, sur le graphique fourni, les cinq premiers termes de la suite \\((u_n)\\)\n\nConjecturer le sens de variation de la suite \\((u_n)\\)\n\n\nOn admet que pour tout entier \\(n\\),\n\\[-1 \\leqslant u_n \\leqslant 6\\]\nEn utilisant la question 1., démontrer que la suite \\((u_n)\\) est croissante.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-29",
+    "href": "premiere-maths/suite1/exercices.html#exercice-29",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 30",
+    "text": "Exercice 30\n\nExercice 30 : \nSoit \\((v_n)\\) la suite définie par \\(v_0=6\\) et pour tout \\(n \\in \\N\\),\n\\(v_{n+1}= f(v_n)\\), où \\(f\\) est une fonction représentée graphiquement.\n\nConstruire graphiquement les cinq premiers termes de la suite\n\n\n\nConjecturer les variations de la suite \\((v_n)\\) ainsi que sa limite éventuelle\n\nExiste-t-il des valeurs de \\(v_0\\) pour lesquels la suite ne semble pas converger ? Préciser.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-30",
+    "href": "premiere-maths/suite1/exercices.html#exercice-30",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 31",
+    "text": "Exercice 31\n\nExercice 31 : \nOn considère la suite \\((u_n)\\) définie par \\(u_0= \\frac12\\) et pour tout \\(n \\in \\N\\),\n\\[u_{n+1} = \\frac{3u_n}{1+2u_n}\\]\n\nDéterminer les trois premiers termes de la suite\n\n\nA l’aide de la calculatrice, conjecturer les variations de la suite\n\n\n\n\nOn admet que la suite \\((u_n)\\) est majorée par \\(1\\). Montrer que la suite \\((u_n)\\) est croissante\n\n\n\nOn considère la suite \\((v_n)\\) définie sur \\(\\N\\) par\n\\[v_{n+1} = \\frac{u_n}{1-u_n}\\]\n\nCalculer \\(v_0\\) et \\(v_1\\)\n\nDémontrer que la suite \\((w_n)\\) définie par \\(w_n= 3^n\\) vérifie la relation de récurrence de la suite \\((v_n)\\)\n\nEn déduire l’expression de la suite \\((v_n)\\) en fonction de \\(n\\)\n\nEn déduire l’expression de la suite \\((u_n)\\) en fonction de \\(n\\)\n\nDéterminer les variations de la suite \\((u_n)\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-31",
+    "href": "premiere-maths/suite1/exercices.html#exercice-31",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 32",
+    "text": "Exercice 32\n\nExercice 32 : \nOn considère la suite définie sur \\(\\N^*\\) par \\(u_n=2-\\frac{1}{n^2}\\)\n\nMontrer que la suite \\((u_n)\\) est croissante.\nDémontrer que pour tout \\(n \\geqslant 1\\), \\(u_n &lt;2\\)\nA l’aide d’un script python, déterminer le plus petit entier \\(n_0\\), tel que pour tout \\(n &gt;n_0\\), \\(u_n&gt;1,999999\\)\nRetrouver algébriquement le résultat de la question précédente.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-32",
+    "href": "premiere-maths/suite1/exercices.html#exercice-32",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 33",
+    "text": "Exercice 33\n\nExercice 33 : \nÀ l’aide de la calculatrice, déterminer la limite des suites suivantes :\n\n\\(u_n=\\frac{5 \\times (-1)^n}{n+1}\\)\n\\(v_n=\\frac{1}{4} n^2-2n-1\\)\n\\(\\left\\{\\begin{array}{l}w_0=5\\\\ w_{n+1}=0,8 \\times 0,8 w_n\\end{array} \\right.\\)\n\\(\\left\\{\\begin{array}{l}t_0=1\\\\ t_{n+1}=-\\frac{2}{3} t_n +4\\end{array} \\right.\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-33",
+    "href": "premiere-maths/suite1/exercices.html#exercice-33",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 34",
+    "text": "Exercice 34\n\nExercice 34 : \nDéterminer les limites des suites suivantes :\n\n\\(u_n=-5n+2\\)\n\\(v_n=4n^2+n+7\\)\n\\(w_n=\\frac{2n+3}{n}\\)\n\\(wx_n=(-1)^n\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-34",
+    "href": "premiere-maths/suite1/exercices.html#exercice-34",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 35",
+    "text": "Exercice 35\n\nExercice 35 : \nOn considère la suite \\((u_n)\\) définie par \\(u_0=3\\) et pour tout \\(n \\in \\N\\), \\(u_{n+1} = \\frac{1}{2} u_n +1\\).\n\nOn admet que pour tout \\(n \\in \\N\\), \\(u_n \\leqslant 2\\)\n\nDéterminer, à l’aide de la calculatrice, la limite de la suite.\nCompléter le programme Python suivant :\n\n\ndef seuil_suite():\n    u = 3\n    n = 0\n    while ................. :\n        n = n + 1\n        u = ...................\n    return n\n\n\n\nÉtude algébrique :\n\nMontrer que pour tout \\(n\\), \\(u_n= \\left(\\frac{1}{2}\\right)^n + 2\\)\nDémontrer que la suite \\((u_n)\\) est croissante et déterminer sa limite.\nDéterminer, à l’aide des variations de la suite, le plus petit entier \\(n\\) tel que \\(2 \\leqslant u_n &lt; 2,00001\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-35",
+    "href": "premiere-maths/suite1/exercices.html#exercice-35",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 36",
+    "text": "Exercice 36\n\nExercice 36 : \nOn considère la suite \\((u_n)\\) définie par \\(u_n=n^2-n\\).\n\nÉtudier les variations de la suite \\((u_n)\\).\nConjecturer la limite de la suite \\((u_n)\\). &gt; Défi : démontrer que quelque soit le réel \\(A\\), on peut toujours trouver un entier \\(n_0\\), tel que \\(u_{n_0} &gt; A\\)\nÉcrire une fonction suite_u en Python qui retourne le plus petit entier \\(n\\) tel que \\(u_n &gt; 10^p\\) où \\(p\\) est un paramètre de la fonction.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-36",
+    "href": "premiere-maths/suite1/exercices.html#exercice-36",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 37",
+    "text": "Exercice 37\n\nExercice 37 : \nOn considère la suite \\((v_n)\\) définie sur \\(\\N\\) par \\(v_n=\\frac{10n+1}{5n+6}\\).\n\nConjecturer le comportement de la suite au voisinage de \\(+\\infty\\).\n\nDémontrer que pour tout \\(n\\), \\(v_n-2= \\frac{-11}{5n+6}\\)\n\nValider par un argument votre conjecture.\n\nÉcrire une fonction seuil_suite qui retourne le rang \\(p\\) à partir duquel \\(\\left|u_n-2\\right| &lt; 10^{-7}\\).\n(Bonus) En utilisant la question 2.a, déterminer les variations de la suite \\((u_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-37",
+    "href": "premiere-maths/suite1/exercices.html#exercice-37",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 38",
+    "text": "Exercice 38\n\nExercice 38 : \nOn pose pour tout entier \\(n \\neq 0\\), \\[S_n= \\sum_{k=0}^n \\frac{1}{k(k+1)}\\]\n\nDémontrer que la suite \\((S_n)\\) est croissante.\n\nDémontrer que pour tout entier \\(k \\neq 0\\),\n\\[\n\\frac{1}{k(k+1)} = \\frac{1}{k} - \\frac{1}{k+1}\n\\]\nEn déduire une expression simple de la \\(S_n\\).\n\nDéterminer la limite de \\((S_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-38",
+    "href": "premiere-maths/suite1/exercices.html#exercice-38",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 39",
+    "text": "Exercice 39\n\nExercice 39 : \nSoit un polygone à \\(n\\) côtés inscrit dans le cercle trigonométrique comme dans la figure ci-dessous (\\(n=8\\), il s’agit d’un octogone).\nOn note \\(\\mathcal{A}_n\\) l’aire de ce polygone.\n\n\nDans le cas de l’octogone, quelle est la mesure de l’angle \\(\\alpha=\\widehat{IOM}\\) ?\n\nDans le cas général d’un polygone régulier à \\(n\\geq3\\) côtés on pose \\(\\alpha_n=\\dfrac{2\\pi}{n}\\). Vérifier que pour \\(n=8\\) on retrouve bien le résultat de la question précédente. Expliquer pourquoi.\n\nQuelles sont les figures obtenues lorsque \\(n=3\\) et \\(n=4\\) ?\n\nMontrer que la suite \\((\\alpha_n)\\) est bornée et décroissante. Déterminer sa limite.\n\nMontrer que \\(\\mathcal{A}_n=\\pi\\dfrac{\\sin(\\alpha_n)}{\\alpha_n}\\).\n\nOn pose sur \\([0\\,;\\, \\pi]\\) la fonction \\(f\\) définie par \\(f(x)=\\pi\\dfrac{\\sin(x)}{x}\\). Quel est le lien entre \\(\\mathcal{A}_n\\) et \\(f\\) ?\n\n\n\nÀ l’aide de la courbe de \\(f\\) ci-dessus, dresser le tableau de variation de \\(f\\) sur \\([0\\,;\\, \\pi]\\).\n\nDonner un encadrement de \\(f\\) sur \\([0\\,;\\, \\pi]\\).\n\n(*) En déduire que \\((\\mathcal{A}_n)\\) est bornée.\n\n(**) Montrer que \\((\\mathcal{A}_n)\\) est croissante.\nIndication : on pourra utiliser la définition d’une suite décroissante avec \\((\\alpha_n)\\) puis la définition d’une fonction décroissante avec \\(f\\).\n\n(**) Quelle est la limite de \\((\\mathcal{A}_n)\\) ?\nEn déduire une conjecture géométrique sur l’aire du polygone inscrit.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-39",
+    "href": "premiere-maths/suite1/exercices.html#exercice-39",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 40",
+    "text": "Exercice 40\n\nExercice 40 : \n\nSoit \\(x\\) et \\(y\\) deux réels positifs ou nuls.\n\nDévelopper \\((\\sqrt{x} - \\sqrt{y})^2\\).\n\nEn déduire que \\(\\sqrt{xy} \\leq \\frac{x + y}{2}\\).\n\nOn considère les deux suites \\((u_n)\\) et \\((v_n)\\) définies par \\(u_0 = 1\\), \\(v_0 = 4\\) et, pour tout entier naturel \\(n\\),\n\\[\nu_{n+1} = \\frac{u_n + v_n}{2} \\quad \\text{et} \\quad v_{n+1} = \\sqrt{u_n v_n}\n\\]\n\nCalculer les valeurs exactes de \\(u_1\\), \\(u_2\\), \\(v_1\\) et \\(v_2\\).\n\nDémontrer que, pour tout entier \\(n \\geq 1\\), \\(v_n \\leq u_n\\).\nIndication. Pour \\(n \\geq 1\\), on peut écrire \\(u_n\\) et \\(v_n\\) en fonction de \\(u_{n-1}\\) et de \\(v_{n-1}\\).\n\nMontrer que \\((u_n)\\) et \\((v_n)\\) sont monotones à partir du rang 1.\n\nCompléter les variations.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-40",
+    "href": "premiere-maths/suite1/exercices.html#exercice-40",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 41",
+    "text": "Exercice 41\n\nExercice 41 : \nOn considère la suite \\((u_n)\\) définie sur \\(\\N^*\\) par \\[\nu_n= \\sqrt{n+1} -\\sqrt{n}\n\\]\n\nDéterminer les variations de la suite \\((u_n)\\).\n\nDémontrer que pour tout \\(n \\in \\N^*\\),\n\\[\n\\frac{1}{2\\sqrt{n+1}} \\leqslant u_n \\leqslant \\frac{1}{2\\sqrt{n}}\n\\]\nEn déduire (ou conjecturer) la limite de la suite \\((u_n)\\).\n\nOn définit la suite \\((v_n)\\) par \\[\nv_n =\\frac{u_1+u_2+ \\dots + u_3}{\\sqrt{n}}\n\\]\nQuelle est la limite de la suite \\((v_n)\\) ?",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#bilan-les-scripts-à-savoir-faire",
+    "href": "premiere-maths/suite1/exercices.html#bilan-les-scripts-à-savoir-faire",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Bilan (Les scripts à savoir faire)",
+    "text": "Bilan (Les scripts à savoir faire)",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-41",
+    "href": "premiere-maths/suite1/exercices.html#exercice-41",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 42",
+    "text": "Exercice 42\n\nExercice 42 : \nOn considère la suite \\((u_n)\\) définie, pour tout entier naturel \\(n\\), par \\(u_n=n^3-n+4\\).\n\nDéterminer les trois premiers termes de la suite.\nExprimer \\(u_{n+1}\\) en fonction de \\(n\\).\nExprimer \\(u_{n+1}-u_n\\) en fonction et \\(n\\) et en déduire les variations de la suite \\((u_n)\\).\nL’algorithme ci-dessous contient une fonction suite qui doit permettre de déterminer un rang \\(n\\) à partir duquel tous les termes de la suite sont supérieurs à un nombre réel \\(A\\).\n\ndef u(n):\n    return n**3-n+4\n    \ndef seuil(A):\n    n = 0\n    while u &lt;= A:\n        u = 3 * u + 4\n        n = n + 1\n    return n, u\n\n\nQue est le rôle de la fonction ?\nProgrammer cet algorithme et exécuter la fonction en prenant \\(A = 100\\), puis \\(A=100\\,000\\) et enfin \\(A=10^{20}\\).\nConjecturer la limite éventuelle de la suite \\((u_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-42",
+    "href": "premiere-maths/suite1/exercices.html#exercice-42",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 43",
+    "text": "Exercice 43\n\nExercice 43 : \nSoit \\((u_n)\\) la suite définie par : \\[\\left\\{\n\\begin{array}{l}\nu_0 = 10 \\\\\nu_{n+1} = 2u_n - 5 + n\n\\end{array}\n\\right.\n\\]\n\nÉcrire une fonction python u(n) de paramètre n un entier et qui renvoie le terme \\(u_n\\) de cette suite (avec une boucle while et une boucle for).\nÉcrire une fonction python termes_u(n) de paramètre n un entier et qui renvoie les termes \\(u_0\\) à \\(u_n\\) de cette suite dans une liste (avec une boucle while et une boucle for).\nOn admet que la suite \\(u\\) est croissante.\nÉcrire une fonction seuil(M) de paramètre M et qui renvoie le rang du premier terme de la suite tel que \\(u_n \\geq M\\).\nÉcrire un script qui permet de savoir si une suite est croissante sur les \\(n\\) premiers termes.",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/suite1/exercices.html#exercice-43",
+    "href": "premiere-maths/suite1/exercices.html#exercice-43",
+    "title": "Feuilles d’exercices — Suites Numériques",
+    "section": "Exercice 44",
+    "text": "Exercice 44\n\nExercice 44 : \nOn considère la suite \\((u_n)\\) définie, pour tout \\(n \\in \\mathbb{N}\\), par : \\[\nu_0 = 1 \\\\\nu_{n+1} = \\frac{u_n}{1+u_n}\n\\]\n\nOn considère la fonction \\(g\\) définie sur \\([0\\,;\\,+ \\infty[\\) telle que \\(u_{n+1}= g(u_n)\\).\n\nDéterminer l’expression de la fonction \\(g\\).\n\nConstruire les 5 premiers termes de la suite \\((u_n)\\).\n\nConjecturer les variations et la limite de la suite \\((u_n)\\).\n\n\n\n\n\n\n\nCalculer les cinq premiers termes de la suite.\n\nConjecturer la forme générale de \\(u_n\\).\n\nComment peut-on vérifier la cohérence la cohérence de la conjecture à l’aide de la calculatrice ?\n\nVérifier la conjecture algébriquement.\n\n\nSoit \\(f\\) la fonction définie sur \\([0\\,;\\,+ \\infty[\\) telle que pour tout \\(n \\in \\N\\), \\(u_{n}=f(n)\\)\n\nDonner l’expression de la fonction \\(f\\).\n\nÉtudier les variations de la fonction \\(f\\) et en déduire celle de la suite \\((u_n)\\)\n\nDéterminer la limite éventuelle de la suite \\((u_n)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Suites numériques : Généralités",
+      "Feuilles d'exercices — Suites Numériques"
     ]
   },
   {
