@@ -1,5 +1,300 @@
 [
   {
+    "objectID": "snt/theme1/Seance_6.html#analyse-des-méthodes",
+    "href": "snt/theme1/Seance_6.html#analyse-des-méthodes",
+    "title": "Get, Post, comment sont transmis les informations ?",
+    "section": "Analyse des méthodes",
+    "text": "Analyse des méthodes\n\nAvec la méthode GET\n\nDémarrer la capture dans Wireshark.\n\n\nAccéder à l’adresse suivante : http://glassus1.free.fr/ex\\_get.html\nSaisir un mot de passe (fictif) et cliquer sur Valider .\nArrêter la capture après l’envoi du formulaire.\nCompléter le tableau ci-après.\n\nAvec la méthode POST\n\nDémarrer la capture dans Wireshark.\nAccéder à l’adresse suivante : http://glassus1.free.fr/ex\\_post.html\nSaisir un mot de passe (fictif) et cliquer sur Valider .\nArrêter la capture après l’envoi du formulaire.\nCompléter le tableau ci-après.\n\n\n\n\n\nQuestion\n\n\nAvec GET\n\n\nAvec POST\n\n\n\n\nQuelle est la méthode HTTP utilisée dans cette requête ?\n\n\n\n\n\n\n\n\nLes informations saisies apparaissent-elles dans l’URL ?\n\n\n\n\n\n\n\n\n📊 À l’aide de Wireshark, pouvez-vous retrouver le mot de passe envoyé ?\n\n\n\n\n\n\n\n\nSi oui, où exactement ?",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Get, Post, comment sont transmis les informations ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_6.html#comparaison-des-méthodes",
+    "href": "snt/theme1/Seance_6.html#comparaison-des-méthodes",
+    "title": "Get, Post, comment sont transmis les informations ?",
+    "section": "Comparaison des méthodes",
+    "text": "Comparaison des méthodes\n\nQuelle différence majeure observez-vous entre les méthodes GET et POST en termes de visibilité des données ?\nSelon vous, laquelle des deux méthodes semble être la plus adaptée pour envoyer des données confidentielles ? Justifiez.\nMalgré tout, le mot de passe est-il chiffré dans les deux cas ? Quelle implication cela a-t-il pour la sécurité ?\n🔎 Quelles sont les autres méthodes HTTP que GET et POST ? Pour chacune, indiquez son rôle dans la communication client-serveur.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Get, Post, comment sont transmis les informations ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_10.html",
+    "href": "snt/theme1/Seance_10.html",
+    "title": "Qui gouverne internet ?",
+    "section": "",
+    "text": "🔑 Objectifs et compétences :\nObjectifs de séance :\n\n\nComprendre le principe de la neutralité du Net et son rôle dans l’écosystème d’Internet.\nIdentifier les acteurs impliqués (opérateurs, États, autorités de régulation, usagers) et leurs enjeux.\nAnalyser des arguments favorables et défavorables à la neutralité du Net.\nDévelopper une réflexion critique sur l’indépendance et la liberté d’Internet.\nRédiger un paragraphe argumenté sur la nécessité de protéger ou non la neutralité du Net.\n\n\nCompétences développées:\n\n\nAnalyser et synthétiser des documents variés (vidéos, extraits d’articles).\nDévelopper un esprit critique sur la gouvernance du numérique.\nArgumenter à l’écrit sur une question sociétale en lien avec Internet.\n\n\n\n\nRetour sur la Neutralité - Indépendance\n📘 Document : la neutralité du net (le monde.fr)\n\n\n\n📘 Document : 📘 Source Wikipédia\n\n\nLa neutralité du Net ou la neutralité du réseau est un principe devant garantir l’égalité de traitement de tous les flux de données sur Internet. Ce principe exclut par exemple toute discrimination positive ou négative à l’égard de la source, de la destination ou du contenu de l’information transmise sur le réseau.\nCette notion est désormais inscrites dans le droit français (Loi n 2016-1321) après son adoption au niveau européen le 25 novembre 2015) En France, l’organisme chargé de veiller au respect de la neutralité du réseau est l’Autorité de régulation des communications électroniques et des postes (Arcep).\n\n\n\n\n📘 Document : 📘 Neutralité du Nef, L.Adam 22 nov 2017, zdnet.fr\n\n\n[…] Le principe de neutralité du net prévoit que les opérateurs télécom doivent traiter tous les types de trafic de manière équitable et donc s’interdisent de proposer des accès rapides à certain type de contenus. Mais la nouvelle proposition de régulation de la FCC, le gendarme américain des télécoms, revient sur ce principe.\nLe nouveau cadre réglementaire proposé par Ajit Pai (Président de la FCC) ne surprend personne, on en connaît le cadre depuis avril dernier. Le président nommé par Donald Trump est un opposant de longue date à la neutralité du net. Dans une tribune publiée sur le Wall Street Journal, il détaille sa vision : selon lui, les règles imposant la neutralité du net ont découragé les investissements des opérateurs télécom en bloquant toute possibilité d’innover sur leurs offres. Ajit Pai aimerait empêcher le gouvernement de micro-manager Internet et lever les obligations instaurées par l’administration Obama sur les opérateurs télécom. En contrepartie, les opérateurs devront s’astreindre à plus de transparence sur leurs offres et dans leurs communications aux consommateurs.\n\n\nSous la forme d’un paragraphe argumenté, répondre à la question posée.\n\n\n\nCritère\n\n\nIndicateurs observables\n\n\nPoints\n\n\n\n\nCompréhension du sujet\n\n\nDéfinit ou explique clairement ce qu’est la neutralité du Net (principe général)\n\n\n/2\n\n\n\n\nArguments PRO\n\n\nCite au moins un argument en faveur de la neutralité (égalité, liberté, bien commun)\n\n\n/2\n\n\n\n\nArguments ANTI\n\n\nCite au moins un argument contre la neutralité (innovation, investissements des opérateurs)\n\n\n/2\n\n\n\n\nOrganisation et structure\n\n\nParagraphe structuré avec connecteurs logiques (d’abord, ensuite, cependant…)\n\n\n/2\n\n\n\n\nClarté et langue\n\n\nOrthographe, syntaxe, lisibilité, phrases complètes\n\n\n/2\n\n\n\n\nTotal : /10\n\nBonus (+1 point) :\n\nRéférence à un acteur (Ajit Pai, Arcep, FCC, Europe, etc.)\nExemple concret (priorisation d’accès rapides, sanctions, etc.)",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Qui gouverne internet ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_2b.html#fonctionnement-du-dns",
+    "href": "snt/theme1/Seance_2b.html#fonctionnement-du-dns",
+    "title": "Serveur DNS, quelle utilité ?",
+    "section": "Fonctionnement du DNS",
+    "text": "Fonctionnement du DNS\n\n\n📘 Document : Comprendre\n\n\nÀ chaque site web, on associe une adresse symbolique : un texte compréhensible.\nLa correspondance entre cette adresse symbolique et l’adresse IP est assurée par un annuaire appelé Domain Name Service (DNS).\nCet annuaire est organisé en domaines et sous-domaines, chacun correspondant à des ensembles et des sous‑ensembles d’adresses gérées en commun.\n \n\n\n\nQuelle différence entre adresse physique et adresse symbolique ?\n\nDécomposer chaque élément du nom de domaine de\nhttps://www.service-public.fr/particuliers/actualites\n\nCompléter la signification des domaines ci‑dessous :\n\ncom : ……\n\ngouv : ……\n\norg : ……\n\nfr : ……\n\n\n📘 Docuent :\n\n\n\nRechercher ce qu’est l’AFNIC et préciser son rôle.\n\nIndiquer sur le schéma la lettre correspondante au numéro.\n\n\n\n\n\n\n\n\n\nLettre\nDescription\n\n\n\n\nA\nTu connais les gouv.fr ?\n\n\nB\nOui, demandes au serveur TLD\n\n\nC\nC’est bon, mes recherches donnent 185.75.143.24\n\n\nD\nJe cherche à accéder au site education.gouv.fr mais je ne connais pas l’IP.\n\n\nE\nOui, c’est à l’adresse 185.75.143.24\n\n\nF\nTu connais education.gouv.fr ?\n\n\nG\nOui, demande au serveur qui gère le domaine.\n\n\nH\nÉchange avec 185.75.143.24 qui héberge la ressource\n\n\nI\nDis, tu connais les .fr ?\n\n\n\n \n\nPourquoi la résolution d’une adresse IP nécessite‑t‑elle une collaboration entre plusieurs serveurs DNS ?",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Serveur DNS, quelle utilité ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_1.html",
+    "href": "snt/theme1/Seance_1.html",
+    "title": "Ma vie numérique aujourd’hui",
+    "section": "",
+    "text": "Objectifs et compétences :\nRépondre aux questions suivantes :\n\nCombien de temps passes-tu par jour sur :\n\nton téléphone ?\nun ordinateur ?\nInternet en général ?\n\nQuels sont tes trois usages principaux du numérique (classe, loisirs, communication, démarches...) ?\nÀ quelles plateformes numériques es-tu inscrit (ENT, réseaux sociaux, jeux en ligne, messageries...) ?\nA quelle fréquence utilises-tu les réseaux sociaux ?\n\nAs-tu déjà publié du contenu (photo, commentaire, vidéo) en ligne ?\nPour quelles raisons ? Qu’est ce que cela t’apporte ?\n\nAs-tu déjà reçu un message inapproprié (moquerie, insulte, harcèlement) ?\nSais-tu ce que signifient les termes suivants, si oui explique brièvement :\n\nCookies\nRGPD\nCyberviolence\n\nAs-tu déjà modifié les paramètres de ton téléphone ? (confidentialité, localisation, notifications, Wi-Fi)\nQuels objets connectés possèdes-tu ou utilises-tu ? (enceintes, montres, consoles, domotique...)\nSelon toi, le numérique est-il plutôt un outil, un besoin ou une dépendance ? Justifie ta réponse.\n\n\n\n\nCarte mentale\nEn groupe de trois ou quatre, construire une carte mentale intitulée :\n\nMa vie avec le numérique\n\n\nBranches à faire apparâitre :\n\nUsages scolaires / usages personnels\nÀ la maison / au lycée / en mobilité\nMatériel utilisé\nActivités faites en ligne\nÉmotions / dangers / avantages\n\nUtilise un code couleur pour relier tes idées aux sept grands thèmes de SNT :\n\nInternet\nLe Web\nLes réseaux sociaux\nLes données et leur traitement\nLocalisation et mobilité\nObjets connectés\nPhotographie numérique\n\n\n\n\nDébat et mise en commun\n\nQu’est-ce qui vous a surpris dans vos réponses ?\nQuels usages sont les plus courants ?\nQuels outils sont indispensables ?\nQuels avantages et quels dangers avez-vous identifiés ?\nLe numérique : outil, besoin, dépendance ?",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Ma vie numérique aujourd'hui"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_8.html#les-données-personnelles",
+    "href": "snt/theme1/Seance_8.html#les-données-personnelles",
+    "title": "Trace et vie privée",
+    "section": "Les données personnelles",
+    "text": "Les données personnelles\n\n\n📘 Document : 🧠 📘 Données personnelles\n\n\nConstitue une donnée à caractère personnel toute information relative à une personne physique identifiée ou qui peut être identifiée, directement ou indirectement, par référence à un numéro d’identification ou à un ou plusieurs éléments qui lui sont propres. Pour déterminer si une personne est identifiable, il convient de considérer l’ensemble des moyens en vue de permettre son identification dont dispose ou auxquels peut avoir accès le responsable du traitement ou toute autre personne.\n\n\n\nParmi les données suivantes celles qui sont des données personnelles : L’âge - Le poids - Le nom et le prénom - L’adresse e-mail - Le signe astrologique - Le numéro de téléphone - a taille - La voix - La date de naissance - Une photo du visage\n🤔 Pourquoi dit-on que les données personnelles sont l’or noir du XXI siècle ?",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Trace et vie privée"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_8.html#cnil-et-consentement",
+    "href": "snt/theme1/Seance_8.html#cnil-et-consentement",
+    "title": "Trace et vie privée",
+    "section": "CNIL et consentement",
+    "text": "CNIL et consentement\n\n🔎 🧠 Que signifie RGPD et préciser son rôle\n\n\n\n📘 Document : 📘 L.Adam, Google : La CNIL inflige une amende record, zdnet.fr, 21 janv 2019\n\n\nLa CNIL donne ainsi raison aux plaintes des associations et explique que le consentement recueilli par Google n’est pas valide pour deux raisons principales : d’une part l’absence ou la difficulté d’accès aux finalités des traitements de données empêche de qualifier le consentement d’éclairé . D’autre part, le consentement recueilli n’est ni univoque ni spécifique . Derrière ces deux termes, la CNIL s’attaque à une autre pratique mise en place par Google qui active par défaut les publicités sponsorisées lors de la création d’un nouveau compte. Une pratique déloyale aux yeux de la Commission.\n\n\n\n📊 Analyse du document\n\nQuelles sont les mauvaises pratiques de Google pointées ?\nPourquoi la personnalisation de la publicité pose-t-elle problème ici ?\n🤔 Pourquoi un consentement doit-il être “éclairé”, “univoque” et “spécifique” ?\n👥 Imaginez une affiche ou un slogan pour sensibiliser à l’importance du consentement sur Internet.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Trace et vie privée"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_8.html#quest-ce-quun-cookie",
+    "href": "snt/theme1/Seance_8.html#quest-ce-quun-cookie",
+    "title": "Trace et vie privée",
+    "section": "Qu’est ce qu’un cookie ?",
+    "text": "Qu’est ce qu’un cookie ?\n📘 Document : J’ai attrapé un cookie\n\n\n`A  partir de la vidéo :\n\nExpliquer ce qu’est un cookie. Où est-il enregistré ?\nQuels types de cookies existent ? Donnez un exemple pour chacun.\nQue se passe-t-il si l’on efface un cookie d’un site et qu’on le revisite ?\n\n\n\n\n📘 Document : 📘\n\n\nDans un communiqué du 19 janvier, la CNIL informe qu’elle a sanctionné Yahoo!, au nom de l’article 82 de la loi Informatique et Libertés, d’une amende de 10 millions d’euros, notifiée fin décembre. La CNIL reproche au groupe américain d’avoir suivi ses usagers sur son portail Yahoo.com au moyen d’une vingtaine de cookies quand ceux-ci avaient demandé à ne pas être traqués.\nSuite au dépôt de vingt-sept plaintes, cette enquête a permis selon la CNIL de constater un autre manquement touchant alors la messagerie Yahoo Mail : lorsqu’un internaute souhaitait retirer son consentement au suivi publicitaire, la société l’informait, selon les constatations de la CNIL, que son action lui ferait perdre l’accès à sa boîte. L’organisme considère qu’une adresse de messagerie électronique constituait un élément de la vie privée de son utilisateur (échanger avec d’autres personnes, de développer son réseau etc.)\n\n\n\n📊 `A partir du document précédent :\n\nQuels sont les deux principaux reproches faits à Yahoo concernant les cookies ?\nPourquoi la CNIL considère-t-elle que ces pratiques portent atteinte à la liberté du consentement de l’internaute ?\nLa société Yahoo permettait-elle de retirer son consentement facilement ? Expliquer.\n\n\n📘 L’outil CookieVidz",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Trace et vie privée"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_8.html#se-protéger",
+    "href": "snt/theme1/Seance_8.html#se-protéger",
+    "title": "Trace et vie privée",
+    "section": "Se protéger",
+    "text": "Se protéger\n\n\n🧠 📘 Document : RGPD\n\n\nLa réglementation général sur la protection des données impose à tout site Web qui collecte des données personnelles d’obtenir l’accord de l’utilisateur. Les options de gestion des cookies varient selon le sites. La CNIL met à la dispositions des internaute une rubrique : Maitriser mes données . https://www.cnil.fr/fr/maitriser-mes-donnees\n\n\n\nExpliquer comment contrôler les traces que nous laissons sur le Web.\nLa navigation privée rend-elle anonyme ? Expliquer.\nAllez sur les deux sites : &lt;www.education.gouv.fr&gt; et &lt;www.voici.fr&gt;, et chercher comment modifier les cookies.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Trace et vie privée"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_7.html",
+    "href": "snt/theme1/Seance_7.html",
+    "title": "Se protéger, communication sécurisée.",
+    "section": "",
+    "text": "🔑 Objectifs et compétences :\nObjectifs de séance\n\n\nComprendre la différence entre HTTP et HTTPS et leur impact sur la confidentialité des données.\nObserver avec Wireshark les différences d’analyse de trafic entre les deux protocoles.\nDécouvrir le rôle du chiffrement TLS (Transport Layer Security) et des certificats numériques dans la sécurité des échanges.\nIdentifier les menaces comme l’hameçonnage et l’attaque de l’homme du milieu et savoir comment s’en prémunir.\nApprendre à reconnaître un site sécurisé (certificat, autorité de certification).\n\n\nCompétences développées:\n\n\nAnalyser une communication sécurisée à l’aide de Wireshark.\nCommuniquer clairement sur le rôle du chiffrement, des certificats, des autorités de certification.\nComprendre les enjeux de confiance sur Internet.\nSavoir représenter visuellement (schéma) le processus de connexion sécurisée.\n\n\n\n\n\n👥 Observation de wireshark\n\n\nLancer Wireshark, filtrer avec ,\n'A partir du navigateur, se rendre sur https://www.wikipedia.org\narrêter l’enregistrement.\nChercher une ligne comme \n\nQuelle différence voyez-vous dans l’URL par rapport à une page en HTTP ?\nQuel port est utilisé pour HTTPS ? (Comparer avec HTTP)\nLes données échangées sont-elles visibles dans Wireshark ? Justifier.\nEn observant les premières lignes de la capture, trouver la mention d’un échange de certificat ou d’une négociation TLS. Que remarquez-vous ?\n\n\n\n\n👥 Sécurisation des échanges\n\n\n📘 Document : HTTPS\n\n\nL’hyperText Transfer Protocol Secure (HTTPS) est la version sécurisée de la connexion HTTP. Elle protège les données échangées en le les rendant compréhensible que par le destinataire grâce au protocole TLS (Transport Layer Security) qui chiffre les données. Pour s’assurer que le serveur destinataire est bien celui qu’il prétend, HTTPS authentifie la cible grâce aux certificats appelés Certificats Secure Socket Layer (SSL).\nCe certificat est daté, et possède une durée de validation et est attribué à un unique site.\n\n\n\n📘 Document :\n \n\n\n📘 Document : Hameçonnage\n\n\nL’hameçonnage est une technique utilisée par des fraudeurs pour obtenir des renseignements personnels dans le but de perpétrer une usurpation d’identité. La technique consiste à faire croire à la victime qu’elle s’adresse à un tiers de confiance — banque, administration, etc. — afin de lui soutirer des renseignements personnels : mot de passe, numéro de carte de crédit, numéro ou photocopie de la carte d’identité, date de naissance, etc.\nSource : fr.wikipedia.org\n\n\n\n📘 Document : Attaque de l’homme du milieu\n \n\n🔎 Que signifie HTTPS et quel est son intérêt ?\nQu’est ce qu’un certificat ? A quoi sert-il ?\n📊 Expliquer ” l’attaque de l’homme du milieu ”\n🤔 Comment s’en prémunir ?\nExpliquer pourquoi, à l’aide des certificats, les méthodes d’hameçonnage ne peut pas fonctionner.\nCompléter le schéma suivant avec : Envoi du certificat SSl - Communication en https - Déchiffrage et validation du certificat SSl - Requêtes https - Autorité de certification\n\n \nRemarque : On peut observer le certificat pour les sites sécurisés, en cliquant sur le cadenas à côté de l’url. Seriez vous capable de retrouver les informations d’un certificat ?\n\n\n\nBilan\nReplacer les mots suivants :\nHTTPS, HTTP, chiffrées, TLS, certificat, identité, Wireshark\n\n\n🧠 🧠 Bilan\n\n\nLe protocole ________ permet de sécuriser les échanges entre un navigateur (client) et un serveur.\nContrairement à ________, les données envoyées (comme un mot de passe) sont ________ grâce au protocole ________.\nUn ________ numérique permet au client de vérifier l’________ du site web contacté.\nAvec HTTPS, les données échangées ne sont pas visibles dans un outil comme ________.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Se protéger, communication sécurisée."
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_15.html#etude-de-départ",
+    "href": "snt/theme2/Seance_15.html#etude-de-départ",
+    "title": "Pourquoi je reçois ça ?",
+    "section": "Etude de départ",
+    "text": "Etude de départ\nLe principe du petit Monde de Milgram est basé sur les travaux de sociologue et psychologue de la première moitié du XXsiècle.\n\n\n\n\n📘 Document : Émile Durkheim, Pragmatisme et sociologie, Cours dispensé à La Sorbonne en 1913-1914\n\n\n« Les hommes sont enserrés dans de vastes réseaux de relations sociales. Ainsi, supposons que A connaît B, que B connaît C, que C connaît D : nous pouvons alors faire passer un message de A à D. Mais ici aussi nous sommes arrêtés court, quand nous choisissons mal l’un de nos intermédiaires : si par hasard B ne connaît pas C, le message n’arrive pas à destination. »\n\n\n\n\n\n\n\n\n\n\n📘 Document : Milgram, psychologue social américain. The Small-World Problem dans Psychology Today, 1967\n\n\nL’idée générale était d’obtenir un échantillon d’hommes et de femmes de tous horizons. On donnerait, à chacune de ces personnes, le nom et l’adresse d’un même individu cible, (…)\nOn demanderait, à chaque personne, de transmettre le message à l’ami ou la connaissance qu’elle penserait la mieux à même de connaître l’individu cible.\n\n\n\n\n\n\nEn fonction du nombre d’intermédiaires que cela a nécessité, les graphiques ci-dessous indiquent :\n\nnombre de messages ayant atteint leur cible (à gauche)\nLe nombre de messages n’ayant pas atteint leur cible (au centre)\nLe petit monde de Facebook\n\n\n\n\n\n\n\n\n\n\n\n\nCombien de messages ont été envoyés et quel pourcentage a atteint la cible? ……\nQuelle est la longueur de la chaîne la plus longue ayant atteint son but ? ……\n\n\nCalculer le nombre moyen d’intermédiaires des chaînes ayant atteint la cible : ……\nSur le graphique de Facebook, calculer la moyenne : ……",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Pourquoi je reçois ça ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_15.html#un-monde-de-plus-en-plus-petit",
+    "href": "snt/theme2/Seance_15.html#un-monde-de-plus-en-plus-petit",
+    "title": "Pourquoi je reçois ça ?",
+    "section": "Un monde de plus en plus petit",
+    "text": "Un monde de plus en plus petit\n10 % de la population mondiale de plus de treize ans, la distance moyenne entre utilisateurs valait 4,7. En se restreignant à ceux qui habitaient les États-Unis, elle n’était plus que de 4,37\n\nQue peut-on en conclure sur le réseautage via les réseaux sociaux numérique",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Pourquoi je reçois ça ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_16.html",
+    "href": "snt/theme2/Seance_16.html",
+    "title": "harcèlement et réseaux",
+    "section": "",
+    "text": "Objectifs de séance :\n\n\nDéfinir la cyberviolence et le cyberharcèlement et en identifier les différentes formes.\nAnalyser des situations réelles ou mises en scène (vidéos, articles de presse) pour comprendre les mécanismes du harcèlement.\nReconnaître les spécificités du cyberharcèlement;\nAnalyser des vidéos et des témoignages pour comprendre le rôle des victimes, des auteurs et des témoins.\nDécouvrir le cadre légal et connaître les peines encourues.\nSavoir comment réagir en tant que victime ou témoin de cyberviolences :\nDévelopper l’esprit citoyen et prendre conscience du rôle des témoins.\n\n\nCompétences développées :\n\n\nAnalyser et interpréter des documents variés (vidéos, témoignages, textes législatifs).\nTravailler en groupe pour analyser des situations et construire des solutions.\nDévelopper l’esprit critique et argumenter à l’oral sur des enjeux sociétaux.\nSavoir alerter et solliciter de l’aide dans des situations de cyberharcèlement(CNIL, 3018, lois))",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "harcèlement et réseaux"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_16.html#analyse-de-vidéos",
+    "href": "snt/theme2/Seance_16.html#analyse-de-vidéos",
+    "title": "harcèlement et réseaux",
+    "section": "Analyse de vidéos",
+    "text": "Analyse de vidéos\n📘 Document :\n\nVidéo : Prix « Non au harcèlement » 2020 - Prix spécial cyberharcèlement.\n\n\n\n\nVidéo Prix « Non au harcèlement » 2018 - Mention Coup de cœur des professionnels de la communication.\n\n\n\n\n\nA l’aide des deux films, répondre aux questions suivantes :\n\nQuels sont les personnages ou groupes de personnages présents dans les films ?\nPourquoi peut-on parler de harcèlement pour ces élèves ?\nQu’est-ce qui peut empêcher la victime de se défendre ?\nPourquoi est-il difficile, en tant que témoin, d’agir ?\n\nComparaison des films.\n\nQuelle(s) différence(s) entre les deux films observez vous ?\nEn quoi la réaction d’un témoin change-t-elle la situation (film 1) ?\nQu’est ce qui a pu conduire à la diffusion des photos dans (film 2) ?\n\n\nUne proposition de réponse, avec une autre fin :",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "harcèlement et réseaux"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_16.html#définir-le-cyberharcèlement",
+    "href": "snt/theme2/Seance_16.html#définir-le-cyberharcèlement",
+    "title": "harcèlement et réseaux",
+    "section": "Définir le cyberharcèlement …",
+    "text": "Définir le cyberharcèlement …\n📘 Document\n\nhttps://e-enfance.org/informer/cyber-harcelement/\nhttps://www.education.gouv.fr/non-au-harcelement/outils-de-sensibilisation-323028\n\n\nDonner une définition du cyberharcélement\nCiter d’autres formes de harcèlement.\nQuelles sont les spécificités de la cyberviolence ? Du cyberharcèlement ?\nPourquoi peut-on dire que l’utilisation des multimédias facilite et accentue le phénomène de harcèlement ?\nQuels liens voyez-vous entre bulle de filtre (algorithmes) et cyberharcèlement ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "harcèlement et réseaux"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_16.html#apporter-des-solutions",
+    "href": "snt/theme2/Seance_16.html#apporter-des-solutions",
+    "title": "harcèlement et réseaux",
+    "section": "Apporter des solutions",
+    "text": "Apporter des solutions\n\nQue faire pour limiter le harcèlement ?\nQue faire quand on est victime de cyberviolences ?\nQuels leviers permettraient de stopper de tels situations\nEn tant que témoin, qu’est-ce qu’il ne faut pas faire ?\nPourquoi est-il important de garder des traces ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "harcèlement et réseaux"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_12.html#temps-de-connexion",
+    "href": "snt/theme2/Seance_12.html#temps-de-connexion",
+    "title": "Comment sont-ils financés ? Suis-je addict ?",
+    "section": "Temps de connexion",
+    "text": "Temps de connexion\n📘 Document :\n \n\nExpliquer la valeur \\(3:47\\).\nComment évolue le temps moyen de connexion aux réseaux sociaux entre 2023 et 2024 ?\nInterpréter la courbe. : tendance - cause - conséquence\nPourquoi ce temps de connexion est-il stratégique pour les réseaux sociaux ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Comment sont-ils financés ? Suis-je addict ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_12.html#des-revenus",
+    "href": "snt/theme2/Seance_12.html#des-revenus",
+    "title": "Comment sont-ils financés ? Suis-je addict ?",
+    "section": "Des revenus …",
+    "text": "Des revenus …\n\n🔎 Quels sont les différents modèles économiques des réseaux sociaux ? Donner des exemples pour chacun des modèles.\nPourquoi les publicitaires s’intéressent-ils autant aux réseaux sociaux ?\nPour les réseaux sociaux gratuit expliquer le fonctionnement de leur modèle économique.\n\n📘 Document : ARPU (dans le monde)   📘 Document : Part de la publicité en 2024\n\n\n\n\n\n\n\nPlateforme\n\n\nPart de la publicité dans le CA\n\n\n\n\nMeta (Facebook, Instagram…)\n\n\n≈ 97–99 %\n\n\n\n\nX (ex-Twitter)\n\n\n≈ 68 % (≈ 75 % en 2023)\n\n\n\n\nSnapchat\n\n\n≈ 99–100 %\n\n\n\n\nPinterest\n\n\n≈ 99–100 %\n\n\n\n\nWhatsApp*\n\n\n≈ 0–95 % (via services publicitaires Business API)\n\n\n\n\n*Part estimée de la publicité dans le chiffre d’affaires des plateformes (sources : rapports annuels et Business of Apps)\n\n\n👥 📊 Répondre aux questions suivantes sous la forme d’un court paragraphe\nQuelle est la tendance globale ?\nQuelle plateforme gagne le plus par utilisateur ? Pourquoi ?\nQuelle place ont les abonnements par rapport à la publicité ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Comment sont-ils financés ? Suis-je addict ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_19.html",
+    "href": "snt/theme2/Seance_19.html",
+    "title": "Oublier moi, c’est possible ?",
+    "section": "",
+    "text": "Objectifs de séance :\nCompétences développées :",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Oublier moi, c'est possible ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_19.html#le-droit-à-loubli",
+    "href": "snt/theme2/Seance_19.html#le-droit-à-loubli",
+    "title": "Oublier moi, c’est possible ?",
+    "section": "Le droit à l’oubli",
+    "text": "Le droit à l’oubli\n📘 Document :\n\nÉcouter l’interview de Claude Castellucia puis répondre aux questions suivantes\n\n\n\n\n\nQu’est ce que le droit à l’oubli ? Donner un exemple concret.\nParmi les illustrations ci-dessus, lesquels sont concernées ?\nPourquoi est-il parfois difficile à appliquer sur Internet ? Cite 2 difficultés.\nA-t-on le droit de prendre en photo/vidéo autrui ? de publier une photo/vidéo sans son accord ?e. 🧠 Que peut-on faire si une image de soi est publiée contre son gré ?\n\n\nQuelles règles juridiques encadrent le fait de filmer ou photographier une personne et de publier l’image en ligne ?\n🧠 Que peut-on faire si une image de soi est publiée contre son gré ? Quels organismes peuvent aider ?\nEn quoi le droit à l’oubli protège-t-il notre identité numérique et notre e-réputation ?\n\n\n📘 Vidéo à regarder :",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Oublier moi, c'est possible ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_19.html#étude-de-cas-travail-en-groupe",
+    "href": "snt/theme2/Seance_19.html#étude-de-cas-travail-en-groupe",
+    "title": "Oublier moi, c’est possible ?",
+    "section": "Étude de cas – Travail en groupe",
+    "text": "Étude de cas – Travail en groupe\n📘 Chaque groupe choisit un cas et répond aux questions.\n\nCas 1 : Une ancienne photo embarrassante postée par un camarade reste en ligne malgré tes demandes de suppression.\n\nQuels risques pour ta réputation ?\nLe droit à l’oubli peut-il s’appliquer ?\nQuelles démarches précises pourrais-tu entreprendre ?\n\nCas 2 : Un article de presse ancien sur une affaire judiciaire mineure où tu étais impliqué apparaît toujours sur Google 10 ans après.\n\nPeux-tu demander le déréférencement ?\nÀ qui s’adresser ?\nEst-ce que l’article sera supprimé ? Pourquoi ?\n\nCas 3 : Des commentaires diffamatoires sont laissés sous ton nom sur un réseau social.\n\nQuels problèmes cela pose pour ton e-réputation ?\nQui est responsable ?\nQuelles actions possibles (immédiates et juridiques) ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Oublier moi, c'est possible ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/projet.html",
+    "href": "snt/theme2/projet.html",
+    "title": "Projets — Thème 2 : Réseaux sociaux et données",
+    "section": "",
+    "text": "Les élèves choisissent (ou se voient attribuer) un projet parmi ceux proposés.\nUn projet est individuel, l’autre est en groupe.\n\n\n\n\n\nChoisissez une information virale (photo, tweet, vidéo, article) et menez une enquête pour savoir si elle est fiable ou trompeuse.\n\n\n\n\nPrésentez l’information choisie (capture d’écran ou lien).\n\nCherchez ses sources (qui publie, quand, où ?).\n\nUtilisez des outils simples (recherche d’image inversée, recoupement avec des sites fiables).\n\nExpliquez pourquoi c’est une information fiable ou au contraire une intox.\n\n\n\n\n\nMini-dossier de 1–2 pages ou une capsule vidéo courte (2 min max).\n\nLe travail doit montrer les étapes de la vérification.\n\n\n\n\n\n✔️ L’information est bien présentée et contextualisée.\n\n✔️ La démarche de vérification est claire et justifiée.\n\n✔️ La conclusion est argumentée et compréhensible.\n\n\n\n\n\n\n\n\nImaginez une journée de lycée sans Internet ni smartphone et créez un petit court-métrage qui raconte cette journée.\n\n\n\n\nÉcrivez un scénario simple (les personnages, les situations).\n\nRépartissez les rôles (caméra, acteurs, montage).\n\nTournez les scènes (smartphone ou caméra simple).\n\nFaites un montage basique (enchaînement des scènes + titre + musique libre).\n\n\n\n\n\nUne vidéo courte de 2 à 3 minutes.\n\nFormat : fichier vidéo lisible sur ordinateur.\n\n\n\n\n\n✔️ Le court-métrage illustre de façon claire la dépendance au numérique.\n\n✔️ Le scénario est original et cohérent.\n\n✔️ La réalisation est compréhensible et soignée.",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Projets — Thème 2 : Réseaux sociaux et données"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/projet.html#projet-2-info-ou-intox-individuel",
+    "href": "snt/theme2/projet.html#projet-2-info-ou-intox-individuel",
+    "title": "Projets — Thème 2 : Réseaux sociaux et données",
+    "section": "",
+    "text": "Choisissez une information virale (photo, tweet, vidéo, article) et menez une enquête pour savoir si elle est fiable ou trompeuse.\n\n\n\n\nPrésentez l’information choisie (capture d’écran ou lien).\n\nCherchez ses sources (qui publie, quand, où ?).\n\nUtilisez des outils simples (recherche d’image inversée, recoupement avec des sites fiables).\n\nExpliquez pourquoi c’est une information fiable ou au contraire une intox.\n\n\n\n\n\nMini-dossier de 1–2 pages ou une capsule vidéo courte (2 min max).\n\nLe travail doit montrer les étapes de la vérification.\n\n\n\n\n\n✔️ L’information est bien présentée et contextualisée.\n\n✔️ La démarche de vérification est claire et justifiée.\n\n✔️ La conclusion est argumentée et compréhensible.",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Projets — Thème 2 : Réseaux sociaux et données"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/projet.html#projet-6-court-métrage-une-journée-sans-internet-en-groupe",
+    "href": "snt/theme2/projet.html#projet-6-court-métrage-une-journée-sans-internet-en-groupe",
+    "title": "Projets — Thème 2 : Réseaux sociaux et données",
+    "section": "",
+    "text": "Imaginez une journée de lycée sans Internet ni smartphone et créez un petit court-métrage qui raconte cette journée.\n\n\n\n\nÉcrivez un scénario simple (les personnages, les situations).\n\nRépartissez les rôles (caméra, acteurs, montage).\n\nTournez les scènes (smartphone ou caméra simple).\n\nFaites un montage basique (enchaînement des scènes + titre + musique libre).\n\n\n\n\n\nUne vidéo courte de 2 à 3 minutes.\n\nFormat : fichier vidéo lisible sur ordinateur.\n\n\n\n\n\n✔️ Le court-métrage illustre de façon claire la dépendance au numérique.\n\n✔️ Le scénario est original et cohérent.\n\n✔️ La réalisation est compréhensible et soignée.",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Projets — Thème 2 : Réseaux sociaux et données"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/index.html",
+    "href": "snt/theme2/index.html",
+    "title": "Thème 2 — Moi et les réseaux",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nQuels réseaux ? Pour qui ?\n\n\nDécouvrir les réseaux soicaux et leur fonctionnolité, leur économie\n\n\n\n\nComment sont-ils financés ? Suis-je addict ?\n\n\nLes différemnts modes de financement, évolution du temps de connexion\n\n\n\n\nComment ils nous retiennent ? Suis-je addict ?\n\n\nCaptation de l’attention\n\n\n\n\nComment ça se connecte ?\n\n\n \n\n\n\n\nPourquoi je reçois ça ?\n\n\nAspect sociologique des réseaux sociaux, bulles informationnelles\n\n\n\n\nharcèlement et réseaux\n\n\nharcèlement : le repérer et apprendreà réagire\n\n\n\n\nMon image et celle des autres\n\n\nDes fakes et nexws et des deep fake\n\n\n\n\nMon identité numérique et moi\n\n\nE-réputation et identité numérique\n\n\n\n\nOublier moi, c’est possible ?\n\n\nDroit à l’oubli, e-réputation et démarches pour faire supprimer des résultats.\n\n\n\n\nProjets — Thème 2 : Réseaux sociaux et données\n\n\nTravaux de fin de thème\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "premiere-maths/fonction2nD/definition.html#fonction-polynôme-du-second-degré",
     "href": "premiere-maths/fonction2nD/definition.html#fonction-polynôme-du-second-degré",
     "title": "Fonction polynôme du second degré",
@@ -700,7 +995,7 @@
     "href": "index.html",
     "title": "Accueil",
     "section": "",
-    "text": "Bienvenue sur le site pédagogique\nUtilisez la barre de navigation ci-dessus pour accéder aux sections : - Spécialité Maths Première"
+    "text": "Bienvenue sur le site pédagogique\nUtilisez la barre de navigation ci-dessus pour accéder aux sections :\n\nSNT\nSpécialité Maths Première"
   },
   {
     "objectID": "premiere-maths/index.html",
@@ -1779,6 +2074,285 @@
       "Spé maths première",
       "Fonctions du second degré",
       "Feuilles d'exercices — Second degré"
+    ]
+  },
+  {
+    "objectID": "snt/index.html",
+    "href": "snt/index.html",
+    "title": "SNT",
+    "section": "",
+    "text": "Bienvenue dans la section SNT.\nUtilise la barre latérale pour naviguer par thèmes et activités.",
+    "crumbs": [
+      "SNT"
+    ]
+  },
+  {
+    "objectID": "snt/index.html#thèmes",
+    "href": "snt/index.html#thèmes",
+    "title": "SNT",
+    "section": "Thèmes",
+    "text": "Thèmes\n\n\n\n\n\n\n\nThème 1 — De l’usage au réseau\n\n\n\n\n\n\n\n\n\n\nThème 2 — Moi et les réseaux\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nLogo\nSignification\n\n\n\n\n\nAutonomie\n\n\n\nTravail en binôme\n\n\n\nTravail de groupe\n\n\n\nInformation\n\n\n📘\nDocument\n\n\n\nRecherche les informations\n\n\n\nComprendre le document\n\n\n\nAnalyser le document\n\n\n\nRéinvestir une notion antérieure\n\n\n\nFaire valider avant de poursuivre\n\n\n\nA mémoriser",
+    "crumbs": [
+      "SNT"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_18.html",
+    "href": "snt/theme2/Seance_18.html",
+    "title": "Mon identité numérique et moi",
+    "section": "",
+    "text": "🔑 Objectifs et compétences :\nObjectifs de séance :\n\n\nComprendre ce qu’est l’identité numérique et comment elle se construit.\nIdentifier le lien entre identité numérique et e-réputation.\nDistinguer les traces intentionnelles et non intentionnelles laissées en ligne.\nConnaître les risques liés à une mauvaise gestion de son identité numérique.\nDécouvrir les bonnes pratiques pour protéger et sécuriser son identité numérique.\n\n\nCompétences développées :\n\n\nAnalyser des documents variés (vidéos, dessins, cas pratiques).\nDévelopper l’esprit critique face aux traces laissées en ligne.\nArgumenter à l’oral et à l’écrit sur des situations liées à l’identité numérique.\n\n\n\n\n\nIdentité numérique et e-réputation\n📘 Document :\n\n📘 Document :\n\nVidéo 1 : Ton identité numérique, c’est quoi ça ?\n\n\nVidéo 2 : Ma meilleure amie est fachée\n\n\n\n\nQu’est ce que l’identité numérique ?\nQuelles peuvent-être les conséquences d’une mauvaise identité numérique ?\nQuel lien faîtes-vous entre la e-réputation et l’identité numérique ?\n\n\n\n\nComprendre les traces …\n📘 Document :\n    \nDessinateur dans l’ordre : Martin Vidberg, Coco, Decressac, Inconnue , Decressac (gauche à droite)\n\nPour chacun des dessins suivants préciser si il s’agit d’une trace intentionnelle ou non intentionnelle.\nAssocier chacun des termes suivants au(x) dessin(s) qui convient.\n\n\n\n\n\n\nLettre\n\n\nDescription\n\n\n\n\n\n\nTermes\n\n\nDessins — Termes — Dessins\n\n\n\n\nHymnésie du Web\n\n\nVie privée\n\n\n\n\nIdentité numérique\n\n\nResponsabilité pénale\n\n\n\n\nInfos sensibles\n\n\nPseudonyme\n\n\n\n\n\n\nPourquoi est-il important de réfléchir avant de publier ou partager un contenu ?\n\n\n\n\nRéflexion citoyenne\n\nPeut-on filmer ou prendre en photo une personne sans son autorisation ?\nQuelles conséquences une mauvaise identité numérique peut-elle avoir (personnelle, professionnelle) ?\nPourquoi une image ou vidéo sortie de son contexte peut-elle nuire gravement à une personne ?\nDonner cinq conseils à appliquer dans votre vie quotidienne pour protéger et sécuriser votre identité numérique sur les réseaux sociaux.",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Mon identité numérique et moi"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_14.html#notion-de-graphe",
+    "href": "snt/theme2/Seance_14.html#notion-de-graphe",
+    "title": "Comment ça se connecte ?",
+    "section": "Notion de Graphe",
+    "text": "Notion de Graphe\n\n\n📘 Document : 📘 J. A. Barnes, Class and committes in a Norvwegian Island , Parish 1953\n\n\neach person has a number of friends, and these friends have their own friends; some of any one person’s friends know each other, others do not. I find it convenient to talk of a social field of this kind as a network. The image I have is of a set of points some of which are joined by lines. The points of the image are people, or sometimes groups, and the lines indicate which people interact with each other. […] one of the principal formal differences between simple, primitive, rural or smallscale societies as against modem, civilized, urban or mass societies is that in the former the mesh of the social network is small, in the latter it is large. \n\n\nOn considère alors Lucie, Noa, 'Eve, Léna, Jason, Pierre, Côme, Marie et David sont inscrits sur MonSuperLycéebook.\n\n\n\nCôme est ami avec Jason et Pierre.\nMarie est amie avec Jason, Lucie et Noa.\nÈve est amie avec Noa, David, Lucie et Léna.\nLéna est amie avec Ève, Noa et Jason.\nLucie est amie avec Noa, Ève, Jason, Pierre, Marie et David.\n\n\n\nDavid est ami avec Pierre, Lucie, Ève et Noa.\nNoa est ami avec David, Marie, Lucie et Ève.\nJason est ami avec Léna, Lucie, Marie, Pierre et Côme.\nPierre est ami avec Jason, Côme, David et Lucie.\n\n\n\nA l’aide des informations précédentes, répondre aux questions suivantes :\n\nQui a le plus d’amis et qui en a le moins dans le réseau donné ?\nModéliser le réseau suivant les propos de Barnes.\n\n\n\n📘 Document :\n\n\nEn mathématiques, et plus précisément en théorie des graphes, un graphe est une structure composée d’objets dans laquelle certaines paires d’objets sont en relation. Les objets correspondent à des abstractions mathématiques et sont appelés sommets (ou nœuds ou points), et les relations entre sommets sont des arêtes (ou liens ou lignes). On distingue les graphes non orientés, où les arêtes relient deux sommets de manière symétrique, et les graphes orientés, où les arêtes, alors appelées flèches, relient deux sommets de manière asymétrique.\n\n\n\nTous les participants peuvent-ils être reliés directement ou indirectement ? Expliquer votre réponse.\n\nEn mathématiques, on dit alors que le graphe est connexe (il est en un seul tenant).\n\n\n📘 Document : 🧠 📘 Quelques définitions …\n\n\n\nLa distance entre deux sommets est le nombre minimum arêtes qu’il faut parcourir pour aller d’un sommet à un autre.\nOn appelle excentricité d’un sommet la distance maximale existant entre ce sommet et les autres sommets du graphe\nOn appelle centre d’un graphe, l’ensemble des sommets d’excentricité minimale.\nOn appelle rayon d’un graphe G, l’excentricité d’un centre de G.\nOn appelle diamètre d’un graphe la distance maximale entre deux sommets de ce graphe.\n\n\n\nOn donne (pour gagner du temps) le tableau des distances : En vous répartissant les lignes, compléter le tableau donnant la distance entre deux sommets.\n\n\nJustifier la ligne de Jason\nQuel est le diamètre et le rayon du graphe ? Qui est (ou sont) le(s) centre(s) du graphe ?\nExpliquer dans ce réseau, pourquoi le tableau est symétrique par rapport à la diagonale NO-SE ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Comment ça se connecte ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_14.html#partage-dans-un-réseau-social",
+    "href": "snt/theme2/Seance_14.html#partage-dans-un-réseau-social",
+    "title": "Comment ça se connecte ?",
+    "section": "Partage dans un réseau social",
+    "text": "Partage dans un réseau social\nOn suppose que dans ce réseau, un utilisateur peut partager une photo avec certains de ses amis. Les amis avec qui la photo est partagée peuvent voir et commenter la photo. Si un ami commente une photo, tous ses propres amis peuvent à leur tour voir le commentaire de la photo. Par contre, ils ne peuvent pas commenter la photo (sauf si le propriétaire l’avait partagée initialement avec eux).\n\nSi Lucie publie une photo à tous ses amis directs, Côme pourra-t-il visualiser la photo ? Justifier\nQuel point de vigilance faut-il avoir lors de la publication d’une photo sur un réseau social ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Comment ça se connecte ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_14.html#algorithme-de-recommandation",
+    "href": "snt/theme2/Seance_14.html#algorithme-de-recommandation",
+    "title": "Comment ça se connecte ?",
+    "section": "Algorithme de recommandation",
+    "text": "Algorithme de recommandation\nOn représente les relations d’amitiés d’un réseau en Python à l’aide d’un dictionnaire.\ngraphe_relations = {\n\"Abdel\": [\"Elia\", \"Sacha\"], \"Béa\": [\"Elia\", \"Coline\", \"Noé\"],  ...}\n\nDans le dictionnaire Python, que signifie l’entrée \"Abdel\": [\"Elia\", \"Sacha\"]\nDans le fichier, à ouvrir avec un éditeur python exécuter l’instruction\n\n\n\nrecommandation(graphe_relations_reseau1)  Quel est l’objectif principal de cet algorithme de recommandation pour la plateforme et quel est son mode de fonctionnement ? 1. Dans le fichier Python fourni, exécuter la fonction recommandation(graphe_relations)  Vérifier alors le tableau des distances.",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Comment ça se connecte ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_14.html#lien-avec-instagram-et-les-réseaux-sociaux-réels",
+    "href": "snt/theme2/Seance_14.html#lien-avec-instagram-et-les-réseaux-sociaux-réels",
+    "title": "Comment ça se connecte ?",
+    "section": "Lien avec Instagram et les réseaux sociaux réels",
+    "text": "Lien avec Instagram et les réseaux sociaux réels\n\n\n📘 Document : CGU des réseaux sociaux\n\n\n« Lorsque vous utilisez notre service, nous collectons des informations telles que votre localisation, vos interactions (likes, commentaires), vos contacts et les contenus que vous consultez. Ces données nous permettent de personnaliser votre expérience et de proposer des publicités ciblées. »\n\n\n\nQuels parallèles peut-on faire entre l’algorithme Python, le réseau et le fonctionnement d’Instagram ?\nPourquoi Instagram recommande-t-il certains comptes à suivre plutôt que d’autres ?\nQuels sont les enjeux en termes de vie privée et d’éthique ? (ie privée, données personnelles, publicité ciblée.)",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Comment ça se connecte ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_13.html",
+    "href": "snt/theme2/Seance_13.html",
+    "title": "Comment ils nous retiennent ? Suis-je addict ?",
+    "section": "",
+    "text": "🔑 Objectifs et compétences :\nObjectifs de séance\n\n\nComprendre les mécanismes des réseaux sociaux pour retenir l’attention des utilisateurs.\nDécouvrir le concept d’« économie de l’attention » et ses enjeux.\nIdentifier les données collectées par les plateformes et l’objectif.\nAnalyser les liens entre dopamine, addiction et utilisation des réseaux sociaux.\nRéfléchir aux impacts personnels et sociétaux de la surexposition aux réseaux sociaux.\nArgumenter sur la nécessité ou non d’une régulation des réseaux sociaux.\n\n\nCompétences développées:\n\n\nAnalyser des vidéos et supports multimédias pour en extraire des informations clés.\nDévelopper l’esprit critique sur les impacts des réseaux sociaux.\nRédiger un texte argumenté sur une question citoyenne.\n\n\n\n\n👥 📊 Captation de l’attention\n📘 Document :\nVidéo : https://www.yout-ube.com/watch?v=yWONYnuPfKY\n📘 📘 Document :\nVidéo : https://www.yout-ube.com/watch?v=4cOKvph38_0\n\nComment les réseaux sociaux retiennent-ils l’attention des utilisateurs (ex. likes, scroll infini, algorithme, …) ?\nQue signifie l’expression économie de l’attention ?\nQuels types de données sont collectées par les réseaux sociaux ?\nQuel rôle joue la dopamine dans l’utilisation des réseaux sociaux ?\nEn quoi les réseaux sociaux peuvent-ils créer une forme de dépendance comparable à d’autres addictions ?\nComment les plateformes monétisent-elles l’attention des utilisateurs ?\nQuels sont les risques d’une surexposition aux réseaux sociaux sur le plan personnel et sociétal ?\n\n\n\n\n🤔 Réflexion citoyenne\n\nLes réseaux sociaux peuvent-ils avoir des aspects positifs malgré leurs dérives ? Donne des exemples\n🤔 Rédige un texte d’une dizaine de lignes répondant à la question suivante : « Les réseaux sociaux doivent-ils être davantage régulés ? Pourquoi ? »\nOn attend la présence des mots suivants : données personnelles, addiction, publicité, liberté d’expression…",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Comment ils nous retiennent ? Suis-je addict ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_11.html",
+    "href": "snt/theme2/Seance_11.html",
+    "title": "Quels réseaux ? Pour qui ?",
+    "section": "",
+    "text": "🔑 Objectifs et compétences :\nObjectifs de séance :\n\n\nDéfinir ce qu’est un réseau social à partir de définitions d’experts et d’exemples.\nIdentifier les principales fonctions et outils des réseaux sociaux.\nDistinguer les différents types de réseaux sociaux.\nAnalyser les aspects sociologiques et culturels liés aux réseaux sociaux.\nAmorcer une réflexion critique sur l’impact des réseaux sociaux sur l’identité, les relations sociales et la vie quotidienne.\nPréparer et présenter un exposé structuré sur un réseau social choisi.\n\n\nCompétences développées:\n\n\nRechercher et sélectionner des informations à partir de définitions et de documents.\nLire, comprendre et analyser des documents variés.\nDévelopper un esprit critique sur les pratiques numériques (impact social, culturel et psychologique).\nOrganiser et présenter des informations sous la forme d’un diaporama.\nArgumenter à l’oral sur les avantages, limites et enjeux des réseaux sociaux.\n\n\n\n\nRéseau Social\n\nLister en 5 minutes ce qu’évoque pour vous les réseaux sociaux.\n\n\n\n📘 Document : 📘 Alexandre Coutant et Thomas Spenger, Ces réseaux numériques dits sociaux 2011\n\n\nun service Web qui permet aux individus de construire un profil, public ou non, de gérer une liste d’utilisateurs avec lesquels ils partagent un lien, de voir et naviguer sur leur liste de liens et sur ceux établis par les autres au saein du système. Les réseaux sociaux fondent leur attractivité sur ces points et non sur une activité particulière.\n\n\n\n\n📘 Document : 📘 Alexandre Coutant et Thomas Spenger\n\n\nSur un plan très général, un réseau peut se définir comme une structure de liens et d’interactions entre individus ; en ce sens, il peut se situer dans une très grande variété de contextes sociaux, qui n’ont pas nécessairement trait à l’Internet. Des exemples possibles sont les réseaux d’amitié entre élèves d’une école ; les réseaux de conseil entre employés d’une entreprise ; les réseaux de coopération ou coécriture entre scientifiques ; les réseaux de parenté ; et ainsi de suite.\n\n\n\nQuelles sont les fonctions fondamentales d’un réseau social ?\nDonner différents types de réseaux sociaux, et pour chacun de ces types des exemples\nCiter des outils utilisés par les réseaux sociaux :\n\n\n\nRéseaux sociaux et Sociologie\n\n\n📘 Document : Stromae, Extrait Carmen, 2015\n\n\nD’abord on s’affilie, ensuite on se follow On en devient fêlé, et on finit solo Prends garde à toi Et à tous ceux qui vous like\n\n\n\n\n📘 Document : Soprano, Extrait Mon Précieux, 2017\n\n\nJe te partage ma vie, au lieu de la vivre Tu me partages la vie des autres pour me divertir Je ne regarde plus le ciel depuis que tu m’as pris mes yeux dans tes applis, baby Je ne sais plus vivre sans toi à mes cotés\n\n\n\nStromae \n\nSopranaux \n\nQuel(s) aspect(s) des réseaux sociaux sont mis en avant ?\n\nÉcouter le cours de Dominique Cardon.\n\n\n\n\n\n\nQuel est selon lui l’aspect important des réseaux sociaux ? Dans quel but ?\n\n\n\n\nExposé\nPar groupe de trois ou quatre, vous allez réaliser une présentation orale avec support de présentation sur un réseau social.\n📘 Document : Chaîne Youtube Dopamine\n\nhttps://www.youtube.com/playlist?list=PL8Ax_z5vzflwdvoTnARE5FiYl42Sg-fYb\nhttps://www.youtube.com/playlist?list=PL8Ax_z5vzflz8JveM9VetLiZ3LPtFsttW\n\nCe travail est à faire à la maison sur une durée de 2 semaines\nContenu :\n\nPrésentation :\n\nContenu\nNom du réseau social, logo\nDate de création, nom(s) du ou des créateur(s)\nHistorique rapide de la création de ce réseau\nParticularité par rapport aux autres réseaux, concurrence\nPublic cible : nombre d’utilisateurs et utilisatrices dans le monde et en France, catégorie d’âge, évolution dans le temps\nTypologie du réseau, principe de fonctionnement, usages, plateformes etc\nAlgorithme utilisé pour proposer des contenus personnalisés\nSources de revenus du réseau social, les utilisateurs et utilisatrices peuvent-ils gagner de l’argent ?\n\nOpinion du groupe :\n\nAvis et réflexions du groupe sur les critiques, dangers et limites de ce réseau social (un ou deux points minimum)\nAvis et réflexions du groupe sur les avantages et aspects bénéfiques des réseaux sociaux social (un ou deux points minimum)\n\nActualités (optionnel)\n\nRestitution :\n\nExposé collectif de 10 à 15 minutes, appuyé sur le diaporama.\nRéponses aux questions de l’enseignant.e et des élèves pendant 5 minutes\n\nCritères d’évaluation :\n\n10 points pour le diaporama (clarté, esthétique, …) et la présence des informations demandées. Même note pour la totalité du groupe. Les élèves doivent se répartir la parole pendant la présentation.\n10 points pour la prestation orale. Note éventuellement différenciée dans le groupe.\n\nConseils :\n\nN’abusez pas de chiffres\nPensez à faire des graphiques et des schémas\nUne idée = une diapo, ne pas surcharger\nPrivilégiez les solutions collaboratives (Google Slides, Canva, Powerpoint, Impress, …)\nFaire apparaître les sources (Recherche Internet, ouvrages, …)",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Quels réseaux ? Pour qui ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_17.html#guerre-en-irak",
+    "href": "snt/theme2/Seance_17.html#guerre-en-irak",
+    "title": "Mon image et celle des autres",
+    "section": "Guerre en irak",
+    "text": "Guerre en irak\nCertaines photomontage, volontairement mal légendé ou commenté peuvent être la cause de situation terrible.\nEn 2003, les États-Unis justifient leur intervention militaire en Irak par la présence d’armes de destruction massive dans ce pays. Devant l’ONU, Colin Powell, secrétaire d’État américain, prétend en apporter la preuve, recueillie par les services de renseignement en s’appuyant sur des photographies aériennes et satellites.\n\n\n\n\n\n\n\n\n\n📘 Document : Arielle Thedrel, « Guerre d’Irak : comment tout a commencé il y a dix ans », Le Figaro, 20 mars 2013.\n\n\nAucune arme de destruction massive n’a été retrouvée en Irak. Alors, qui a menti ? La CIA a plaidé coupable. Les informations collectées n’étaient pas solides, les analyses bâclées et les conclusions fondées sur des hypothèses erronées. Le résultat, affirme un rapport officiel d’enquête publié en 2005, a été « l’une des faillites du renseignement les plus préjudiciables de l’histoire américaine ».\nMais la communauté du renseignement n’est pas seule en cause. « Affirmer que tout le processus a été imperméable au climat politique n’est tout simplement pas crédible », affirme Paul Pillar, un ancien de la CIA, spécialiste du Moyen-Orient, aujourd’hui professeur à l’université Georgetown. […] \n\n\n\n\n\n📘 Document : Vincent Jauvert, « Colin Powell : comment la CIA m’a trompé », entretien accordé à L’Obs, 1er mars 2013\n\n\nDix ans plus tard, la défense de Colin Powell\nCe n’était pas un mensonge délibéré de ma part. Je croyais à ce que je disais. Tout le monde, le Président, les membres du gouvernement et le Congrès y croyaient. Le Président m’a choisi parce que j’étais le plus crédible vis-à-vis de la communauté internationale, mais, encore une fois, je ne faisais que transmettre ce que les seize agences de renseignement disaient. Et je pense que si vous aviez été à ma place et que vous aviez vu les documents que l’on m’a présentés vous auriez cru à tout cela, vous aussi.\n\n\n\n\nPourquoi les photos satellites ont-elles été utilisées pour justifier la guerre d’Irak ?\nQuelle a été la conséquence de cette information erronée ?\nColin Powell dit “je croyais à ce que je disais” : comment cela illustre-t-il le pouvoir des images ?\nQuelle différence entre un mensonge volontaire et une erreur due à des informations fausses ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Mon image et celle des autres"
+    ]
+  },
+  {
+    "objectID": "snt/theme2/Seance_17.html#section",
+    "href": "snt/theme2/Seance_17.html#section",
+    "title": "Mon image et celle des autres",
+    "section": "",
+    "text": "Autre fake newsz cdrole ?",
+    "crumbs": [
+      "SNT",
+      "Thème 2 · Moi et les réseaux",
+      "Mon image et celle des autres"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/index.html",
+    "href": "snt/theme1/index.html",
+    "title": "Thème 1 — De l’usage au réseau",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nMa vie numérique aujourd’hui\n\n\nReflechir sur l’usage du numérique que l’on à au qotidien.\n\n\n\n\nQu’est ce qu’une adresse web ?\n\n\nDéterminer les différents composants d’un url, comprendre une adresse IP\n\n\n\n\nServeur DNS, quelle utilité ?\n\n\nComprendre le rôle d’un serveur DNS, comprendre une reqête\n\n\n\n\nComment choisir sa route ?\n\n\nRoutage en informatique, requête ping\n\n\n\n\nComment circule un message ?\n\n\nProtocole de communication, suite de protocoles TCP:IP\n\n\n\n\nHTTP, suite TCP/IP\n\n\nSuite de protocole TCP/IP, système de requêtes”\n\n\n\n\nGet, Post, comment sont transmis les informations ?\n\n\nProtocole de communication, suite de protocoles TCP:IP\n\n\n\n\nSe protéger, communication sécurisée.\n\n\nProtocole https, système de chiffrement\n\n\n\n\nTrace et vie privée\n\n\nComprendre les données personnelles, cookies\n\n\n\n\nQui gouverne internet ?\n\n\nNeutralit du net et gouvernance\n\n\n\n\nProjets — Thème 1 : De l’usage au réseau\n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "snt/theme1/projet.html#projet-1-journaliste-numérique-individuel",
+    "href": "snt/theme1/projet.html#projet-1-journaliste-numérique-individuel",
+    "title": "Projets — Thème 1 : De l’usage au réseau",
+    "section": "Projet 1 — Journaliste numérique (individuel)",
+    "text": "Projet 1 — Journaliste numérique (individuel)\n\nConsigne\nRédigez un article de vulgarisation destiné à un magazine scolaire sur le thème :\n\n\n« Pourquoi Internet a besoin de règles (ICANN, gouvernance, protocoles) »\n\n.\n\n\nÉtapes de travail\n\nRappelez brièvement ce qu’est Internet (réseau de réseaux).\n\nPrésentez un ou deux organismes clés (ex. ICANN, IETF).\n\nExpliquez à quoi servent les protocoles (ex. TCP/IP, HTTP).\n\nDonnez un exemple concret montrant que des règles sont nécessaires.\n\n\n\nProduction attendue\n\nUn texte d’environ 1 page (300–400 mots).\n\nStyle clair, structuré, adapté à des lycéens.\n\nPossibilité d’ajouter des illustrations (schéma, logo, dessin).\n\n\n\nCritères de réussite\n\n✔️ Article clair et compréhensible par tous.\n\n✔️ Notions techniques correctement expliquées.\n\n✔️ Présentation soignée et adaptée à un magazine scolaire.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Projets — Thème 1 : De l’usage au réseau"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/projet.html#projet-2-bd-numérique-le-voyage-dun-message-en-groupe",
+    "href": "snt/theme1/projet.html#projet-2-bd-numérique-le-voyage-dun-message-en-groupe",
+    "title": "Projets — Thème 1 : De l’usage au réseau",
+    "section": "Projet 2 — BD numérique « Le voyage d’un message » (en groupe)",
+    "text": "Projet 2 — BD numérique « Le voyage d’un message » (en groupe)\n\nConsigne\nRéalisez une bande dessinée qui raconte l’itinéraire d’un message sur Internet (ex. un mail, une recherche Google, un message WhatsApp…).\n\n\nÉtapes de travail\n\nChoisissez le type de message à suivre.\n\nDécoupez le trajet en étapes (DNS, routeurs, serveur, destinataire … ).\n\nImaginez une histoire/mettez en scène le message comme un personnage.\n\nRéalisez la BD en 6 à 10 cases (dessin scanné ou outil numérique).\n\n\n\nProduction attendue\n\nUne BD complète et lisible.\n\nChaque étape du trajet du message doit être représentée.\n\nFormat : fichier image ou PDF.\n\n\n\nCritères de réussite\n\n✔️ Parcours du message bien représenté (DNS, routeurs, serveur, navigateur).\n\n✔️ Histoire créative et compréhensible.\n\n✔️ Présentation claire, lisible et soignée.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Projets — Thème 1 : De l’usage au réseau"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_3.html#peut-on-communiquer",
+    "href": "snt/theme1/Seance_3.html#peut-on-communiquer",
+    "title": "Comment choisir sa route ?",
+    "section": "Peut-on communiquer ?",
+    "text": "Peut-on communiquer ?\n\n\n📘 Document : Ping …, oui je suis là\n\n\nPing est le nom d’une commande informatique permettant de tester l’accessibilité d’une autre machine à travers un réseau IP.\nLa commande mesure également le temps mis pour recevoir une réponse, appelé round-trip time (temps aller-retour).\nPing utilise une requête ICMP Request et attend une réponse Reply.\nL’envoi est répété pour des fins statistiques : déterminer le taux de paquets perdus et le délai moyen de réponse.\n\n\nCette commande permet d’envoyer plusieurs paquets à un hôte distant ; cela permet de simuler l’envoi d’une donnée en plusieurs morceaux.\n \n\nComprendre un ping\n\n🤔 Expliquer la différence de temps entre les deux premiers envois du document 3.\n\n📊 Comment interpréter un résultat qui afficherait 100 % de perte ?\n\n\nRécupérer l’adresse IPv4 de votre machine et celle de vos voisins. Vos ordinateurs peuvent-ils communiquer ? Expliquer.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Comment choisir sa route ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_3.html#le-routage",
+    "href": "snt/theme1/Seance_3.html#le-routage",
+    "title": "Comment choisir sa route ?",
+    "section": "Le routage",
+    "text": "Le routage\n📘 Document :\n\n\nQu’est-ce que le routage dans un réseau informatique ? Expliquez brièvement son rôle et son importance.\n\nQuelles sont les informations clés utilisées par les routeurs pour prendre des décisions de routage ?\nExpliquez le concept de table de routage et décrivez quelques-unes des informations qu’elle contient.\n\n🧠 Qu’est-ce qu’une adresse IP et quel rôle joue-t-elle dans le routage des données ?\nExpliquez comment les routeurs utilisent les adresses IP pour acheminer les paquets vers leur destination.\n\nCiter au moins trois technologies ou équipements couramment utilisés pour le routage dans les réseaux informatiques.\nExpliquer brièvement leur fonctionnement.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Comment choisir sa route ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_4.html#envoyer-une-image",
+    "href": "snt/theme1/Seance_4.html#envoyer-une-image",
+    "title": "Comment circule un message ?",
+    "section": "Envoyer une image",
+    "text": "Envoyer une image\nOn considère deux ordinateurs : la source S et la destination D ; et on ne s’intéresse pas à tous les problèmes de routage qui peuvent exister entre eux. S veut envoyer à D une image.\n\nPourquoi n’envoie-t-on pas un fichier en un seul bloc ?\n\n\n\n\n\n\n\nComment S peut-il être certain que D a bien reçu le message ? Que D a tout reçu ?\n\nQue faire si le message se perd ? Et s’il arrive en double ?",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Comment circule un message ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_4.html#tcpip-et-encapsulation",
+    "href": "snt/theme1/Seance_4.html#tcpip-et-encapsulation",
+    "title": "Comment circule un message ?",
+    "section": "TCP/IP et encapsulation",
+    "text": "TCP/IP et encapsulation\n\n\n📘 Document : Suite de protocoles TCP/IP\n\n\nLorsque l’on parle du protocole TCP/IP, on parle en fait d’une suite de protocoles qui permet à deux machines de communiquer sur Internet.\nLes protocoles TCP et IP sont les principaux protocoles de cette suite.\n\n\n\n\n\n🔍 Que signifie TCP : …\n🔍 Que signifie IP : …\n\n📊 Qu’est-ce que l’encapsulation des données ? Expliquez à partir du schéma.\n\n🧠 IP ? TCP ? Autre ?\n\nQuel protocole a en charge l’acheminement des données ? …\n\nQuel protocole a en charge la fragmentation des données ? …\n\nQuel protocole a en charge de s’assurer de la bonne réception des données ? …\n\n\n📊 Que contient l’en-tête ajouté à chaque paquet ? Citez deux informations utiles pour le réseau.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Comment circule un message ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_5.html#principe-de-base",
+    "href": "snt/theme1/Seance_5.html#principe-de-base",
+    "title": "HTTP, suite TCP/IP",
+    "section": "Principe de base",
+    "text": "Principe de base\n\n\n📘 Document : 🧠 📘 HTTP\n\n\nHTTP pour HyperText Transfer Protocol est un protocole de communication client-serveur développé pour le web. Ce protocole contrôle la façon dont le client formule ses demandes et la façon dont le serveur y répond. Parmi les différentes méthodes on distingue GET et POST.\n\n\n📘\n \n\n📊 Compléter le schéma avec les bon numéros.\n\n\n① Requête HTTP.\n② Le serveur transmet la page qu’il a stockée ou qu’il crée dynamiquement en fonction de la requête formulée.\n③ On saisit une adresse URL dans son navigateur (client).\n④ Le navigateur affiche la page web.\n⑤ Réponse HTTP.\n⑥ Le navigateur web extrait de l’URL des informations qui lui permettent de se connecter à l’ordinateur (serveur) hébergeant le site web.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "HTTP, suite TCP/IP"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_5.html#les-requêtes-protocole-http",
+    "href": "snt/theme1/Seance_5.html#les-requêtes-protocole-http",
+    "title": "HTTP, suite TCP/IP",
+    "section": "Les requêtes : protocole HTTP",
+    "text": "Les requêtes : protocole HTTP\n\nOù sont stockées les pages Web ? ……\nQuelle est l’action d’un navigateur ? ……\n🤔 Expliquer le rôle du serveur lors d’une requête HTTP.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "HTTP, suite TCP/IP"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_5.html#etude-de-la-communication-avec-les-serveur",
+    "href": "snt/theme1/Seance_5.html#etude-de-la-communication-avec-les-serveur",
+    "title": "HTTP, suite TCP/IP",
+    "section": "Etude de la communication avec les serveur",
+    "text": "Etude de la communication avec les serveur\n\nOuvrir le navigateur et appuyer sur F12 (Outil de développement), saisir onglet Réseau \nAller sur http://httpbin.org/  On s’intéresse aux En-tête de réponses et En-tête de requête (mettre en text brut)\n📊 En analysant les requêtes, répondre aux questions suivantes :\nD’où provient le visiteur (adresse IP/source) et quel navigateur utilise-t-il ? ……\nQuel est le type de contenu retourné par le serveur (Content-Type) ?\nQuelle est la taille du fichier retourné ?\nCompréhension des codes\nQuel est le code renvoyé par le serveur ? A quoi correspond-il ?\n🔎 A quoi correspondent les codes suivants :\n\n\nHTTP 302 :\nHTTP 405 :",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "HTTP, suite TCP/IP"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_5.html#on-observe-la-réponse",
+    "href": "snt/theme1/Seance_5.html#on-observe-la-réponse",
+    "title": "HTTP, suite TCP/IP",
+    "section": "On observe la réponse :",
+    "text": "On observe la réponse :\n\n📊 Combien de requêtes pour afficher la page ? Pourquoi autant ?",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "HTTP, suite TCP/IP"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_2a.html#dun-url",
+    "href": "snt/theme1/Seance_2a.html#dun-url",
+    "title": "Qu’est ce qu’une adresse web ?",
+    "section": "🔎 d’un URL",
+    "text": "🔎 d’un URL\n\n\n📘 Document 1 : Comprendre un URL\n\n\nLes documents du Web sont repérés par des adresses URL qui ont la forme suivante :\n\n\n\n\n\n\nLe protocole indique le type de connexion ;\n\nLe nom du serveur est son adresse dans le système DNS ;\n\nLe chemin indique l’adresse du document dans le serveur ;\n\nLes paramètres d’affecter certaines valeurs ;\n\nL’ancre montre une position dans le document (un élément dont l’id est Architecture ici).\n\n\n\n\n🔍 Identifier les composants des URL suivants :\n\nhttps://www.larousse.fr/dictionnaires/anglais-francais/request\n\nhttps://developer.mozilla.org/fr/docs/Web/HTML/Element/Form#Exemples\n\nFaire une recherche d’une musique sur Youtube, et décomposer la réponse.",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Qu'est ce qu'une adresse web ?"
+    ]
+  },
+  {
+    "objectID": "snt/theme1/Seance_2a.html#une-adresse-numérique",
+    "href": "snt/theme1/Seance_2a.html#une-adresse-numérique",
+    "title": "Qu’est ce qu’une adresse web ?",
+    "section": "📺 Une adresse numérique",
+    "text": "📺 Une adresse numérique\n📘 Vidéo : Internet, IP un protocole universel ?\n\n\n\nRéponds aux questions suivantes :\n\n\nComment sont localisées les machines (ou hôtes) sur Internet ?\n\nQuels équipements permettent d’acheminer les données de l’émetteur au destinataire sur Internet ?\n\nComment nomme-t-on les règles qui normalisent les échanges de données sur Internet et permettent aux différents hôtes du réseau de communiquer ?",
+    "crumbs": [
+      "SNT",
+      "Thème 1 · De l'usage au réseau",
+      "Qu'est ce qu'une adresse web ?"
     ]
   }
 ]
