@@ -1,0 +1,17 @@
+---
+title: "Thème 2 — Moi et les réseaux"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - Seance*.qmd
+    - projet.qmd
+  exclude:
+    - path: index.qmd
+---
+
+
+
+

@@ -1,0 +1,97 @@
+---
+title: "Qui gouverne internet ?"
+description: "Neutralit du net et gouvernance"
+order: 10
+---
+
+---
+
+# 🔑  Objectifs  et compétences :
+
+**Objectifs de séance :**
+
+::: {.competence}
+1. Comprendre le principe de la neutralité du Net et son rôle dans l’écosystème d’Internet.
+2. Identifier les acteurs impliqués (opérateurs, États, autorités de régulation, usagers) et leurs enjeux.
+3. Analyser des arguments favorables et défavorables à la neutralité du Net.
+4. Développer une réflexion critique sur l’indépendance et la liberté d’Internet.
+5. Rédiger un paragraphe argumenté sur la nécessité de protéger ou non la neutralité du Net.
+:::
+
+**Compétences développées:**
+
+::: {.competence}
+1. Analyser et synthétiser des documents variés (vidéos, extraits d’articles).
+2. Développer un esprit critique sur la gouvernance du numérique.
+3. Argumenter à l’écrit sur une question sociétale en lien avec Internet.
+:::
+
+# Retour sur la Neutralité - Indépendance
+
+📘 **Document : la neutralité du net (le monde.fr)**
+
+  <iframe src="https://www.yout-ube.com/embed/watch?v=A3dElmSY8q4" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : 📘 Source Wikipédia</div>
+<div class="contenu">
+La neutralité du Net ou la neutralité du réseau est un principe devant garantir l'égalité de traitement de tous les flux de données sur Internet. Ce principe exclut par exemple toute discrimination positive ou négative à l'égard de la source, de la destination ou du contenu de l'information transmise sur le réseau.
+
+Cette notion est désormais inscrites dans le droit français (Loi  n 2016-1321) après son adoption au niveau européen le 25 novembre 2015)
+En France, l'organisme chargé de veiller au respect de la neutralité du réseau est l'Autorité de régulation des communications électroniques et des postes (Arcep).
+</div>
+:::
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : 📘 Neutralité du Nef, L.Adam 22 nov 2017, zdnet.fr</div>
+<div class="contenu">
+[...]
+Le principe de neutralité du net prévoit que les opérateurs télécom doivent traiter tous les types de trafic de manière équitable et donc s'interdisent de proposer des \og  accès rapides \fg  à certain type de contenus. Mais la nouvelle proposition de régulation de la FCC, le gendarme américain des télécoms, revient sur ce principe.
+
+Le nouveau cadre réglementaire proposé par Ajit Pai (Président de la FCC) ne surprend personne, on en connaît le cadre depuis avril dernier. Le président nommé par Donald Trump est un opposant de longue date à la neutralité du net. Dans une tribune publiée sur le Wall Street Journal, il détaille sa vision : selon lui, les règles imposant la neutralité du net ont découragé les investissements des opérateurs télécom en bloquant toute possibilité d'innover sur leurs offres. Ajit Pai aimerait \og empêcher le gouvernement de micro-manager Internet \fg et lever les obligations instaurées par l'administration Obama sur les opérateurs télécom. En contrepartie, les opérateurs devront s'astreindre à plus de transparence sur leurs offres et dans leurs communications aux consommateurs.
+</div>
+:::
+
+**Sous la forme d'un paragraphe argumenté, répondre à la question posée.**
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <tr>
+    <th style="border: 1px solid black; width: 7cm;">Critère</th>
+    <th style="border: 1px solid black; width: 20cm;">Indicateurs observables</th>
+    <th style="border: 1px solid black;">Points</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;"><b>Compréhension du sujet</b></td>
+    <td style="border: 1px solid black;">Définit ou explique clairement ce qu’est la neutralité du Net (principe général)</td>
+    <td style="border: 1px solid black;">/2</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;"><b>Arguments PRO</b></td>
+    <td style="border: 1px solid black;">Cite au moins un argument en faveur de la neutralité (égalité, liberté, bien commun)</td>
+    <td style="border: 1px solid black;">/2</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;"><b>Arguments ANTI</b></td>
+    <td style="border: 1px solid black;">Cite au moins un argument contre la neutralité (innovation, investissements des opérateurs)</td>
+    <td style="border: 1px solid black;">/2</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;"><b>Organisation et structure</b></td>
+    <td style="border: 1px solid black;">Paragraphe structuré avec connecteurs logiques (d’abord, ensuite, cependant…)</td>
+    <td style="border: 1px solid black;">/2</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;"><b>Clarté et langue</b></td>
+    <td style="border: 1px solid black;">Orthographe, syntaxe, lisibilité, phrases complètes</td>
+    <td style="border: 1px solid black;">/2</td>
+  </tr>
+</table>
+
+<p><b>Total : /10</b></p>
+
+**Bonus (+1 point) :**
+
+1. Référence à un acteur (Ajit Pai, Arcep, FCC, Europe, etc.)
+2. Exemple concret (priorisation d’accès rapides, sanctions, etc.)

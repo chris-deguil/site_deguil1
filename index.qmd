@@ -1,7 +1,19 @@
 ---
-title: "site_test"
+title: "Accueil"
+page-layout: article
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+
+
+
+# Bienvenue sur le site pédagogique
+
+Utilisez la barre de navigation ci-dessus pour accéder aux sections :
+
+- [SNT](snt/index.qmd)
+- [Spécialité Maths Première](premiere-maths/index.qmd)
+
+
+

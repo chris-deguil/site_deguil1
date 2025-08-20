@@ -1,0 +1,141 @@
+---
+title: "Oublier moi, c'est possible ?"
+description: "Droit à l’oubli, e-réputation et démarches pour faire supprimer des résultats."
+order: 19
+---
+
+---
+
+**Objectifs de séance :**
+
+
+::: {.competence}
+1. Comprendre le principe du droit à l’oubli et ses enjeux sur Internet.
+2. Connaître les difficultés d’application du droit à l’oubli sur le web.
+3. Découvrir les démarches à effectuer et les organismes qui peuvent aider (CNIL, plateformes, moteurs de recherche).
+4. Réfléchir à l’équilibre entre liberté d’expression et protection de la vie privée.
+:::
+
+**Compétences développées  :**
+
+::: {.competence}
+1. Débattre et argumenter sur des enjeux citoyens (vie privée vs liberté d’expression).
+2. Travailler en groupe pour analyser des études de cas.
+3. Développer un esprit critique sur la conservation et l’usage des données personnelles en ligne.
+:::
+
+---
+
+
+# Mise en contexte
+📘 **Document :**
+- Vidéo 1 : Un faux voyant lit vos secrets grâce aux réseaux sociaux
+
+  <iframe src="https://www.youtube-nocookie.com/embed/heReIQVLya4" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+1. Est-il normal qu’il soit aussi facile de retrouver des informations personnelles ? Justifier brièvement.
+
+
+---
+
+# Comprendre le droit à l'oubli
+## Le droit à l'oubli
+
+📘  **Document :**
+
+2. Écouter l'interview de Claude Castellucia puis répondre aux questions suivantes
+
+
+<audio controls preload="none" src="../../assets/audio/oubli_internet_droit.mp3" style="width:100%;display:block;margin:.5rem 0;"></audio>
+
+
+
+2. a.  Qu'est ce que le droit à l'oubli ? Donner un exemple concret.
+    b. Parmi les illustrations ci-dessus, lesquels sont concernées ?
+    c. Pourquoi est-il parfois difficile à appliquer sur Internet ? Cite 2 difficultés.
+    d. A-t-on le droit de prendre en photo/vidéo autrui ?  de publier une photo/vidéo sans son accord  ?e. 🧠 Que peut-on faire si une image de soi est publiée contre son gré ?
+3. a.  Quelles règles juridiques encadrent le fait de filmer ou photographier une personne et de publier l’image en ligne ?
+   b. 🧠  Que peut-on faire si une image de soi est publiée contre son gré ? Quels organismes peuvent aider ?
+   c. En quoi le droit à l’oubli protège-t-il notre identité numérique et notre e-réputation ?
+
+
+📘 **Vidéo à regarder :**  
+
+<iframe
+  src="https://www.youtube-nocookie.com/embed/Evahh1PXJIg"
+  title="YouTube"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  style="width:70%; aspect-ratio:16/9; border:0; display:block; margin:0 auto;">
+</iframe>
+
+
+---
+
+
+
+## Étude de cas – Travail en groupe
+📘 Chaque groupe choisit un cas et répond aux questions.
+
+1. **Cas 1** : Une ancienne photo embarrassante postée par un camarade reste en ligne malgré tes demandes de suppression.
+   a. Quels risques pour ta réputation ?
+   b. Le droit à l’oubli peut-il s’appliquer ?
+   c. Quelles démarches précises pourrais-tu entreprendre ?
+
+2. **Cas 2** : Un article de presse ancien sur une affaire judiciaire mineure où tu étais impliqué apparaît toujours sur Google 10 ans après.
+   a. Peux-tu demander le déréférencement ?
+   b. À qui s’adresser ?
+   c. Est-ce que l’article sera supprimé ? Pourquoi ?
+
+3. **Cas 3** : Des commentaires diffamatoires sont laissés sous ton nom sur un réseau social.
+   a. Quels problèmes cela pose pour ton e-réputation ?
+   b. Qui est responsable ?
+   c. Quelles actions possibles (immédiates et juridiques) ?
+
+# Débat express – Liberté d’expression vs droit à l’oubli
+Diviser la classe en 2 groupes :
+
+- Groupe A : Défend la **liberté d’expression**.
+- Groupe B : Défend le **droit à l’oubli**.
+
+
+1. Quels sont les avantages de votre position pour les citoyens ?
+2. Quels sont les risques si l’autre position l’emporte ?
+
+
+
+# Bilan
+📘 **Document :**
+
+- [Mieux maîtriser sa réputation](https://www.cnil.fr/fr/nos-conseils-pour-mieux-maitriser-votre-reputation-en-ligne)
+- [Des réflexes pour son identité en ligne](https://www.cnil.fr/fr/4-reflexes-pour-mieux-proteger-votre-identite-en-ligne)
+
+
+**Replacer les mots suivants :**
+
+*web, Internet, volontaire, identité numérique, trace, involontaire, e-réputation, hypermnésie du web, base de données, données personnelles, collectées, stockées, métadonnées, algorithme, réseaux sociaux, like, réseaux, CNIL, déréférencement, droit à l’oubli.*
+
+::: {.boitebilan}
+<div class="titre">🧠 🧠 Bilan</div>
+<div class="contenu">
+Toute activité sur le ________ entraîne la création de ________.
+
+Certaines sont ________, d’autres ________ ou indépendantes de nos actions (ex. ________).
+
+L’ensemble constitue notre ________ et influence notre ________.
+
+Ces informations sont ________ et ________ dans des ________.
+
+Elles comprennent aussi des ________ et nourrissent des ________ qui orientent les contenus visibles sur les ________ (ex. nombre de ________).
+
+Sur Internet, l’________ rend difficile la suppression définitive des données : rien n’est jamais totalement effacé.
+
+Le ________ permet cependant de demander la suppression ou le ________ d’informations ; la ________ peut accompagner ces démarches.
+</div>
+:::
+
+
+
+![](../../image/schema_bilan1.png){style="display:block;margin:0 auto;width:60%;"}
+
+

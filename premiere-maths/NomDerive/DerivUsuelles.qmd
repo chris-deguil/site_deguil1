@@ -1,0 +1,100 @@
+---
+title: "Fonction dérivée- Dérivées usuelles"
+description : "Fonctions dérivées, edérivées des foctions usuelles"
+format:
+  html:
+    toc: true
+    number-sections: false
+---
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition :</span>  
+On dit que $f$ est dérivable sur $I$ lorsque $f$ est dérivable en tout point $a$ de $I$.  
+On appelle alors **fonction dérivée** de la fonction $f$, la fonction notée $f'$, définie sur $I$ par :  
+$$f' : x \longmapsto f'(x)$$
+:::
+
+::: {.bloc .ex}
+On considère la fonction $f$, définie par $f(x)=2x^2-3x+5$. Déterminons la fonction dérivée associée.  
+<details class="bloc cor"><summary>Afficher la correction</summary>
+Pour tout $h$ non nul, et tout réel $a$ :  
+$$\frac{f(a+h) - f(a)}{h} = \frac{2a^2+2h^2+4ah-3a-3h -2a^2+6a-5}{h} = \frac{2h^2+4ah+3a-3h}{h} = 2h+4a-3$$  
+Or :  
+$$\lim_{h \to 0} 2h+4a-3 =  4a-3$$  
+Donc $f$ est dérivable en $a$ et $f'(a) = 4a-3$.  
+On en déduit que la fonction dérivée de $f$ est $f'(x) = 4x - 3$ définie sur $\R$.
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème :</span>  
+On considère une fonction $f$ définie sur son ensemble de définition $D_f$.
+
+| Fonction $f$             | Ensemble de définition                  | Fonction dérivée $f'$             | Ensemble de dérivabilité                  |
+|--------------------------|------------------------------------------|-----------------------------------|-------------------------------------------|
+| $k$                      | $\mathbb{R}$                             | $0$                               | $\mathbb{R}$                              |
+| $ax$                     | $\mathbb{R}$                             | $a$                               | $\mathbb{R}$                              |
+| $x^2$                    | $\mathbb{R}$                             | $2x$                              | $\mathbb{R}$                              |
+| $\sqrt{x}$               | $\mathbb{R}_+$                           | $\dfrac{1}{2\sqrt{x}}$            | $\mathbb{R}_+^*$                          |
+| $\dfrac{1}{x}$           | $]-\infty\,; 0[ \cup ]0\,; +\infty[$     | $-\dfrac{1}{x^2}$                 | $]-\infty\,; 0[ \cup ]0\,; +\infty[$      |
+| $ax^2 + bx + c$          | $\mathbb{R}$                             | $2ax + b$                         | $\mathbb{R}$                              |
+:::
+
+<details class="bloc demo"><summary>Démonstration :</summary>
+On démontre pour quelque cas
+
+- admis pour les deux premiers cas (facile à faire !)
+- Soit $f$ définie sur $\R$ par $f(x) = x^2$. \\Pour tout $a,h \in \R$\\
+$$(a+h)^2 - a^2 = 2ah+h^2$$
+Donc 
+$$\frac{f(a+h) - f(a)}{h} = 2a+h$$
+Donc en faisant tendre $h$ vers $0$ on obtient 
+Ainsi $f'(a)= 2a$
+- Soit $f$ définie sur $\R_+$ par $f(x) = \sqrt{x}$. <br>
+  Pour tout $a \in \R^+$ et$\in \R^*$ tel que $a+h > 0$
+$$\sqrt{a+h} - \sqrt{a} = \frac{a + h - a}{\sqrt{a+h} + \sqrt{a}} = \frac{h}{\sqrt{a+h} + \sqrt{a}}$$
+ Ainsi $$\frac{f(a+h) - f(a)}{h} = \frac{h}{h(\sqrt{a+h} + \sqrt{a})} = \frac{1}{\sqrt{a+h} + \sqrt{a}}$$
+Donc en faisant tendre $h$ vers $0$ on obtient $f'(a)= \frac{1}{2 \sqrt{a}}$UU
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque :</span>  
+On peut retenir que pour tout $n \in \N^*$, avec $f:x \longmapsto x^n$ définie sur $\R$ et $g:x \longmapsto \frac{1}{x^n}$ définie sur $]-\infty\,;\, 0[$ ou sur $]0\,;\, + \infty[$. On démontre par récurrence (programme de terminale) que
+$$f':x \longmapsto n x^{n-1} \quad \et \quad g':x \longmapsto - \frac{n}{x^{n+1}}$$
+Par exemple si $$f:x \longmapsto x^3 \qquad \et \qquad  g:x \longmapsto \frac{-1}{x^5}$$ alors $$f':x \longmapsto 3x^2 \qquad \et \qquad g':x \longmapsto \frac{5}{x^6}$$
+:::
+
+::: {.bloc .ex}
+1. Démontrer que la fonction inverse est dérivable en tout réel $a \ne 0$.  
+<details class="bloc cor"><summary>Afficher la correction</summary>
+Pour tout réel $a \neq 0$, $\forall h \neq 0$ tel que $a+h \neq 0$, 
+ $$\tau_a(h) = \dfrac{\dfrac{1}{a+h} - \dfrac{1}{a}}{h} = \dfrac{a-(a+h)}{h a(a+h)} = - \frac{1}{a(a+h)}$$
+ Or $\lim_{h \to 0} \tau_a(h) = - \frac{1}{a^2}$.<br>
+ Ainsi la fonction inverse est dérivable en tout réel $a$ non nul, et pour tout $a \neq 0$, $f'(a) =-\frac{1}{a^2}$}
+</details>
+
+1. Équation de la tangente $T_a$ :  
+<details class="bloc cor"><summary>Afficher la correction</summary>
+$M(x\,;\,y) \in T_a \Longleftrightarrow y=f'(a)(x-a)+f(a).
+\Longleftrightarrow y=-\frac{1}{a^2} x + \frac{1}{a} + \frac{1}{a}$\\
+Donc  
+ $$T_a: y=- \frac{1}{a^2}x + \frac{2}{a}$$ </details>
+
+1. Coordonnées des points $A$ et $B$ (intersections avec les axes) :  
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+    On a 
+
+   -  $A(x_A\, ; \, y_A)$ le point d'intersection de $T_A$ avec l'axe des abscisses, alors $y_A=0$ .\\
+   Donc $$0=-\frac{1}{a^2}x_A+ \frac{2}{a}$$ d'où $x_A=2a$. 
+   - Soit $B(x_B \, ; \, y_B)$ le point d'intersection de $T_a$ avec l'axe des ordonnées, alors $x_B=0$, donc $$y_B=-\frac{1}{a^2} \times 0 + \frac{2}{a}=\frac{2}{a}$$ 
+   Ainsi $A\left(2a \, ; \, 0\right)$ et $B \left(0 \, ;\, \frac{2}{a} \right)$
+   </details>
+
+2. Montrer que le milieu de $[AB]$ est le point de tangence :  
+<details class="bloc cor"><summary>Afficher la correction</summary>
+$M \in \mathscr{C}$ si et seulement si $M\left(x \, ; \, \frac{1}{x} \right)$.
+Soit $M$ le milieu de $[AB]$, alors $M\left(\frac{2a+0}{2} \, ; \dfrac{0+\frac{2}{a}}{2} \right)$ donc $M \left(a \, ; \, \frac{1}{a} \right)$. \\ Ainsi $M$ appartient à la représentation graphique de la fonction inverse.<br>
+De plus appartenant à la tangente, puisque point de $(AB)$, alors il est le point de tangence.
+</details>
+:::

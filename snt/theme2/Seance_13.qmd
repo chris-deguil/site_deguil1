@@ -1,0 +1,59 @@
+---
+title: "Comment ils nous retiennent ? Suis-je addict ?"
+description: "Captation de l'attention"
+order: 13
+---
+
+---
+
+# 🔑  Objectifs  et compétences :
+**Objectifs de séance**
+
+::: {.competence}
+
+1. Comprendre les mécanismes des réseaux sociaux pour retenir l’attention des utilisateurs.
+2. Découvrir le concept d’« économie de l’attention » et ses enjeux.
+3. Identifier les données collectées par les plateformes et l'objectif.
+4. Analyser les liens entre dopamine, addiction et utilisation des réseaux sociaux.
+5. Réfléchir aux impacts personnels et sociétaux de la surexposition aux réseaux sociaux.
+6. Argumenter sur la nécessité ou non d’une régulation des réseaux sociaux.
+:::
+
+**Compétences développées:**
+
+::: {.competence}
+1. Analyser des vidéos et supports multimédias pour en extraire des informations clés.
+2. Développer l’esprit critique sur les impacts des réseaux sociaux.
+3. Rédiger un texte argumenté sur une question citoyenne.
+:::
+
+# 👥 📊 Captation de l'attention
+
+ 📘 **Document :** 
+
+Vidéo : <https://www.yout-ube.com/watch?v=yWONYnuPfKY>
+
+📘  📘 **Document :** 
+
+
+Vidéo : <https://www.yout-ube.com/watch?v=4cOKvph38_0>
+
+1. Comment les réseaux sociaux retiennent-ils l'attention des utilisateurs (ex. likes, scroll infini, algorithme, ...) ?
+1. Que signifie l'expression \og économie de l'attention \fg{} ?
+1. Quels types de données sont collectées par les réseaux sociaux ?
+1. Quel rôle joue la dopamine dans l'utilisation des réseaux sociaux ?
+1. En quoi les réseaux sociaux peuvent-ils créer une forme de dépendance comparable à d'autres addictions ?
+1. Comment les plateformes monétisent-elles l'attention des utilisateurs ?
+1. Quels sont les risques d'une surexposition aux réseaux sociaux sur le plan personnel et sociétal ?
+
+---
+
+
+# \logoAutonomie 🤔 Réflexion citoyenne
+
+8. Les réseaux sociaux peuvent-ils avoir des aspects positifs malgré leurs dérives ? Donne des exemples
+1. 🤔 Rédige un texte d'une dizaine de lignes répondant à la question suivante :
+      *« Les réseaux sociaux doivent-ils être davantage régulés ? Pourquoi ? »*
+
+      On attend la présence des mots suivants :
+*données personnelles, addiction, publicité, liberté d’expression…*

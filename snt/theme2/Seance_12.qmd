@@ -1,0 +1,104 @@
+---
+title: "Comment sont-ils financés ? Suis-je addict ?"
+description: "Les différemnts modes de financement, évolution du temps de connexion"
+order: 12
+---
+
+---
+
+# 🔑  Objectifs  et compétences :
+
+**Objectifs de séance**
+
+::: {.competence}
+1. Identifier les différents modèles économiques : publicité, abonnements, freemium, vente de données, rachat de plateformes.
+2. Analyser les sources de revenus des principales plateformes (publicité vs abonnements).
+3. Comprendre pourquoi l’attention des utilisateurs est monétisée et comment les réseaux sociaux la retiennent.
+4. Réfléchir aux enjeux éthiques et sociétaux : addiction, collecte de données, rachat de concurrents, régulation.
+:::
+**Compétences développées:**
+
+::: {.competence}
+1. Analyser des documents statistiques et financiers pour interpréter des tendances.
+2. Travailler en groupe pour produire une synthèse ou un texte argumentatif.
+3. Développer l’esprit critique face aux stratégies des plateformes pour capter l’attention.
+4. Relier les données économiques à des comportements sociaux (addiction, surconsommation d’écrans).
+5. Argumenter à l’écrit et à l’oral sur la régulation des réseaux sociaux.
+:::
+
+# Modèle économique des réseaux sociaux
+
+## Temps de connexion
+📘 **Document :**
+
+![](../../image/moyenne_evolution_connexion_heure.png){style="display:block;margin:0 auto;width:25%;"}
+<!-- description:  ; catégorie:  -->
+
+1. Expliquer la valeur $3:47$.
+1. Comment évolue le temps moyen de connexion aux réseaux sociaux entre 2023 et 2024 ?
+1. Interpréter la courbe. : tendance - cause - conséquence
+1. Pourquoi ce temps de connexion est-il stratégique pour les réseaux sociaux ?
+
+## Des revenus ...
+
+5. 🔎 Quels sont les différents modèles économiques des réseaux sociaux ? Donner des exemples pour chacun des modèles.
+1. Pourquoi les publicitaires s'intéressent-ils autant aux réseaux sociaux ?
+1. Pour les réseaux sociaux \og gratuit \fg expliquer le fonctionnement de leur modèle économique.
+
+📘 **Document : ARPU (dans le monde)**
+ ![](../../image/ARPU.png){style="display:block;margin:0 auto;width:70%;"}
+<!-- description:  ; catégorie:  -->
+📘 **Document : Part de la publicité en 2024**
+
+<table style="border-collapse: collapse; width: 50%;">
+  <colgroup>
+    <col style="width: 30%;">
+    <col style="width: 40%;">
+  </colgroup>
+  <tr>
+    <th style="border: 1px solid #000; text-align: left;">Plateforme</th>
+    <th style="border: 1px solid #000; text-align: leftt;">Part de la publicité dans le CA</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000;"><strong>Meta (Facebook, Instagram...)</strong></td>
+    <td style="border: 1px solid #000; text-align: right;"><strong>≈ 97–99&nbsp;%</strong></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000;"><strong>X (ex-Twitter)</strong></td>
+    <td style="border: 1px solid #000; text-align: right;"><strong>≈ 68&nbsp;%</strong> (≈ 75&nbsp;% en 2023)</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000;"><strong>Snapchat</strong></td>
+    <td style="border: 1px solid #000; text-align: right;"><strong>≈ 99–100&nbsp;%</strong></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000;"><strong>Pinterest</strong></td>
+    <td style="border: 1px solid #000; text-align: right;"><strong>≈ 99–100&nbsp;%</strong></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000;"><strong>WhatsApp*</strong></td>
+    <td style="border: 1px solid #000; text-align: right;"><strong>≈ 0–95&nbsp;%</strong> (via services publicitaires Business API)</td>
+  </tr>
+</table>
+
+<p style="margin-top: .4rem; font-style: italic;">
+  *Part estimée de la publicité dans le chiffre d’affaires des plateformes (sources&nbsp;: rapports annuels et Business of Apps)
+</p>
+
+
+
+8. 👥 📊 Répondre aux questions suivantes sous la forme d'un court paragraphe
+2. Quelle est la tendance globale ?
+3. Quelle plateforme gagne le plus par utilisateur ? Pourquoi ?
+4. Quelle place ont les abonnements par rapport à la publicité ?
+
+# Rachat d'Instagram
+📘 **Document :**
+
+- <https://blog-fr.orson.io/reseaux-sociaux/facebook-rachete-instagram>
+- <https://www.phonandroid.com/instagram-100-milliards-dollars.html>
+
+12. Sur quel support (mobile, ordinateur) étaient majoritairement utilisés les services Facebook et Instagram (en 2019) ? En quoi cela peut-il expliquer le rachat d'Instagram par Facebook ?
+13. Que craignait Facebook de son principal concurrent ?
+13. Le rachat d'Instagram est-il une bonne affaire financière pour Facebook ? Justifier
+1. Connaissez vous d'autre rachat du même type ? lesquels ?

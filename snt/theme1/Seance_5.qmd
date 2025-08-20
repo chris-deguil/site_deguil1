@@ -1,0 +1,95 @@
+---
+title: "HTTP, suite TCP/IP"
+description: Suite de protocole TCP/IP, système de requêtes"
+order: 6
+---
+
+---
+
+# 🔑  Objectifs  et compétences :
+**Objectifs de séance**
+
+::: {.competence}
+1. Comprendre le principe du protocole HTTP et sa place dans le modèle TCP/IP.
+2. Identifier les rôles du client (navigateur) et du serveur lors d’une requête web.
+3. Savoir décomposer les étapes d’une requête HTTP : envoi, réponse, codes de statut.
+4. Apprendre à analyser les en-têtes des requêtes et réponses HTTP
+5. Développer un esprit critique sur la structure d’une page web et les requêtes nécessaires.
+
+:::
+
+**Compétences développées:**
+
+::: {.competence}
+
+1. Analyser un schéma de communication et le compléter pour en comprendre les étapes.
+2. Observer et interpréter des traces numériques (en-têtes de requêtes et réponses).
+3. Communiquer avec précision sur les concepts : client, serveur, protocole, code de statut.
+4. Développer l’esprit critique sur la sécurité des données transmises via HTTP.
+:::
+
+
+---
+
+# \logoAutonomie Requêtes
+## Principe de base
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : 🧠 📘 HTTP</div>
+<div class="contenu">
+HTTP pour HyperText Transfer Protocol est un protocole de communication client-serveur développé pour le web.
+Ce protocole contrôle la façon dont le client formule ses demandes et la façon dont le serveur y répond. Parmi les différentes méthodes on distingue GET et POST.
+</div>
+:::
+
+📘
+
+![](../../image/RequeteBase.png "tema : Comment circule un message ?")
+<!-- description:  ; catégorie:  -->
+
+1. 📊 Compléter le schéma avec les bon numéros.
+
+- ① Requête HTTP.
+- ② Le serveur transmet la page qu’il a stockée ou qu’il crée dynamiquement en fonction de la requête formulée.
+- ③ On saisit une adresse URL dans son navigateur (client).
+- ④ Le navigateur affiche la page web.
+- ⑤ Réponse HTTP.
+- ⑥ Le navigateur web extrait de l’URL des informations qui lui permettent de se connecter à l’ordinateur (serveur) hébergeant le site web.
+
+
+## Les requêtes : protocole HTTP
+
+2. Où sont stockées les pages Web ? ……
+1. Quelle est l'action d'un navigateur ? ……
+1. 🤔 Expliquer le rôle du serveur lors d'une requête HTTP.
+
+---
+
+
+# \logoBinome Observation de requêtes
+## Etude de la communication avec les serveur
+
+5. Ouvrir le navigateur et appuyer sur F12 (Outil de développement), saisir onglet \og Réseau \fg
+2. Aller sur <http://httpbin.org/> <br>
+On s'intéresse aux En-tête de réponses et En-tête de requête (mettre en text brut)
+7. 📊 En analysant les requêtes, répondre aux questions suivantes :
+1. D’où provient le visiteur (adresse IP/source) et quel navigateur utilise-t-il ? ……
+2. Quel est le type de contenu retourné par le serveur (Content-Type) ?
+3. Quelle est la taille du fichier retourné ?
+4. Compréhension des codes
+5. Quel est le code renvoyé par le serveur ? A quoi correspond-il ?
+6. 🔎 A quoi correspondent les codes suivants :
+   
+- HTTP 302 :
+- HTTP 405 :
+
+## On observe la réponse :
+
+14. 📊 Combien de requêtes pour afficher la page ? Pourquoi autant ?
+
+# 👥 Bilan
+Faire un résumé de ce qu'est une requête HTTP et de la structure d'une requête.
+
+**On utilisera les mots suivants :**
+
+*client, serveur, HTTP, requête, réponse, GET, POST, code, navigateur, HTML*

@@ -1,0 +1,118 @@
+---
+title: "Se protéger, communication sécurisée."
+description: "Protocole https, système de chiffrement"
+order: 8
+---
+
+---
+
+# 🔑  Objectifs  et compétences :
+
+**Objectifs de séance**
+
+::: {.competence}
+1. Comprendre la différence entre HTTP et HTTPS et leur impact sur la confidentialité des données.
+2. Observer avec Wireshark les différences d’analyse de trafic entre les deux protocoles.
+3. Découvrir le rôle du chiffrement TLS (Transport Layer Security) et des certificats numériques dans la sécurité des échanges.
+4. Identifier les menaces comme l’hameçonnage et l’attaque de l’homme du milieu et savoir comment s’en prémunir.
+5. Apprendre à reconnaître un site sécurisé (certificat, autorité de certification).
+:::
+
+**Compétences développées:**
+
+::: {.competence}
+1. Analyser une communication sécurisée à l’aide de Wireshark.
+2. Communiquer clairement sur le rôle du chiffrement, des certificats, des autorités de certification.
+3. Comprendre les enjeux de confiance sur Internet.
+4. Savoir représenter visuellement (schéma) le processus de connexion sécurisée.
+:::
+
+---
+
+# 👥 Observation de wireshark
+
+1. a. Lancer Wireshark,
+ filtrer avec \htmlinline{tcp.port == 443},
+    b.  \'A partir du navigateur, se rendre sur <https://www.wikipedia.org>
+   c. arrêter l'enregistrement.
+   d. Chercher une ligne comme
+![](../../image/wireshar_wipedia_https.png)
+
+1. Quelle différence voyez-vous dans l’URL par rapport à une page en HTTP ?
+2. Quel port est utilisé pour HTTPS ? (Comparer avec HTTP)
+3. Les données échangées sont-elles visibles dans Wireshark ? Justifier.
+4. En observant les premières lignes de la capture, trouver la mention d’un échange de **certificat** ou d’une négociation TLS. Que remarquez-vous ?
+
+---
+
+#  👥 Sécurisation des échanges
+
+:::{.boitedoc}
+<div class="titre">📘 Document  :  HTTPS</div>
+<div class="contenu">
+L'hyperText Transfer Protocol Secure (HTTPS) est la version sécurisée de la connexion HTTP. Elle protège les données échangées en le les rendant compréhensible que par le destinataire grâce au protocole TLS (**Transport Layer Security**) qui chiffre les données. Pour s'assurer que le serveur destinataire est bien celui qu'il prétend, HTTPS authentifie la cible grâce aux certificats appelés **Certificats Secure Socket Layer (SSL)**.
+
+Ce certificat est daté, et possède une durée de validation et est attribué à un unique site.
+</div>
+:::
+
+<br>
+
+📘 **Document :**
+
+![](../../image/ssl1.png){style="display:block;margin:0 auto;width:40%;"}
+<!-- description:  ; catégorie:  -->
+
+::: {.boitedoc}
+<div class="titre">📘 Document  :  Hameçonnage</div>
+<div class="contenu">
+L’hameçonnage  est une technique utilisée par des fraudeurs pour obtenir des renseignements personnels dans le but de perpétrer une usurpation d'identité. La technique consiste à faire croire à la victime qu'elle s'adresse à un tiers de confiance — banque, administration, etc. — afin de lui soutirer des renseignements personnels : mot de passe, numéro de carte de crédit, numéro ou photocopie de la carte d'identité, date de naissance, etc.
+
+*Source : fr.wikipedia.org*
+</div>
+:::
+
+<br>
+
+
+📘 **Document : Attaque de l'homme du milieu**
+
+![](../../image/requeteHTTPs.png){style="display:block;margin:0 auto"}
+<!-- description:  ; catégorie:  -->
+
+6. 🔎 Que signifie HTTPS  et quel est son intérêt ?
+2. Qu'est ce qu'un certificat ? A quoi sert-il ?
+3. 📊 Expliquer " l'attaque de l'homme du milieu "
+4. 🤔 Comment s'en prémunir ?
+5. Expliquer pourquoi, à l'aide des certificats, les méthodes d'hameçonnage ne peut pas fonctionner.
+6. \logoBinome Compléter le schéma suivant avec :
+*Envoi du certificat SSl - Communication en https - Déchiffrage et validation du certificat SSl - Requêtes https - Autorité de certification*
+
+![](../../image/https_connexion_Acomplete.png){style="display:block;margin:0 auto;"}
+<!-- description:  ; catégorie:  -->
+
+*Remarque :*<br>
+*On peut observer le certificat pour les sites sécurisés, en cliquant sur le cadenas à côté de l'url.*<br>
+*Seriez vous capable de retrouver les informations d'un certificat ?*
+
+
+---
+
+
+# \logoAutonomie Bilan
+**Replacer les mots suivants :**
+
+*HTTPS, HTTP, chiffrées, TLS, certificat, identité, Wireshark*
+
+::: {.boitebilan}
+<div class="titre">🧠 🧠 Bilan</div>
+<div class="contenu">
+Le protocole ________ permet de sécuriser les échanges entre un navigateur (client) et un serveur.
+
+Contrairement à ________, les données envoyées (comme un mot de passe) sont ________ grâce au protocole ________.
+
+Un ________ numérique permet au client de vérifier l’________ du site web contacté.
+
+Avec HTTPS, les données échangées ne sont pas visibles dans un outil comme ________.
+</div>
+:::

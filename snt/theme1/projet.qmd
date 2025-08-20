@@ -1,0 +1,56 @@
+---
+title: "Projets — Thème 1 : De l’usage au réseau"
+description: " "
+order: 11
+---
+
+
+
+---
+
+## Projet 1 — Journaliste numérique (individuel)
+
+### Consigne
+Rédigez un **article de vulgarisation** destiné à un magazine scolaire sur le thème :  
+<p style="text-align: center;">**« Pourquoi Internet a besoin de règles (ICANN, gouvernance, protocoles) »**</p>
+
+.
+
+### Étapes de travail
+1. Rappelez brièvement ce qu’est Internet (réseau de réseaux).  
+2. Présentez un ou deux organismes clés (ex. ICANN, IETF).  
+3. Expliquez à quoi servent les protocoles (ex. TCP/IP, HTTP).  
+4. Donnez un exemple concret montrant que des règles sont nécessaires.  
+
+### Production attendue
+- Un **texte d’environ 1 page** (300–400 mots).  
+- Style clair, structuré, adapté à des lycéens.  
+- Possibilité d’ajouter des illustrations (schéma, logo, dessin).  
+
+### Critères de réussite
+- ✔️ Article clair et compréhensible par tous.  
+- ✔️ Notions techniques correctement expliquées.  
+- ✔️ Présentation soignée et adaptée à **un magazine** scolaire.  
+
+---
+
+## Projet 2 — BD numérique « Le voyage d’un message » (en groupe)
+
+### Consigne
+Réalisez une **bande dessinée** qui raconte l’itinéraire d’un message sur Internet (ex. un mail, une recherche Google, un message WhatsApp…).
+
+### Étapes de travail
+1. Choisissez le type de message à suivre.  
+2. Découpez le trajet en étapes (DNS, routeurs, serveur, destinataire ... ).  
+3. Imaginez une histoire/mettez en scène le message comme un personnage.  
+4. Réalisez la BD en 6 à 10 cases (dessin scanné ou outil numérique).  
+
+### Production attendue
+- Une BD complète et lisible.  
+- Chaque étape du trajet du message doit être représentée.  
+- Format : fichier image ou PDF.  
+
+### Critères de réussite
+- ✔️ Parcours du message bien représenté (DNS, routeurs, serveur, navigateur).  
+- ✔️ Histoire créative et compréhensible.  
+- ✔️ Présentation claire, lisible et soignée.  

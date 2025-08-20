@@ -1,0 +1,100 @@
+---
+title: "Mon image et celle des autres"
+description: "Des fakes et nexws et des deep fake"
+order: 17
+---
+
+---
+
+# 🔑 Objectifs et compétences :
+**Objectifs de séance :**
+
+::: {.competence}
+1. Définir la cyberviolence et le cyberharcèlement et en identifier les différentes formes.
+2. Analyser des situations réelles ou mises en scène (vidéos, articles de presse) pour comprendre les mécanismes du harcèlement.
+3. Reconnaître les spécificités du cyberharcèlement;
+4. Découvrir le cadre légal et connaître les peines encourues.
+5.  Savoir comment réagir en tant que victime ou témoin de cyberviolences :
+6.  Développer l’esprit citoyen et prendre conscience du rôle des témoins.
+:::
+
+**Compétences développées  :**
+
+::: {.competence}
+1. Analyser et interpréter des documents variés (vidéos, témoignages, textes législatifs).
+2. Travailler en groupe pour discuter et formuler des solutions (Affiche/film).
+3.  Développer l’esprit critique sur les comportements en ligne et l’effet spectateur.
+4. Argumenter et débattre pour proposer des mesures de prévention.
+5.  Savoir alerter et solliciter de l’aide dans des situations de cyberharcèlement.
+:::
+
+# Creation de fake news
+
+📘 **Document :**
+
+<https://www.cqemi.org/fr/articles-details/dans-quels-buts-sont-creees-les-fausses-nouvelles>
+
+1. Après avoir lu l'article répoondre à la question suivante : <br>
+   Dans quels buts sont créées les fausses nouvelles ?, donner les trois motivations pour créer des fausses nouvelle.
+
+## Guerre en irak
+Certaines photomontage, volontairement mal légendé ou commenté peuvent être la cause de situation terrible.
+
+En 2003, les États-Unis justifient leur intervention militaire en Irak par la présence d'armes de destruction massive dans ce pays. Devant l'ONU, Colin Powell, secrétaire d'État américain, prétend en apporter la preuve, recueillie par les services de renseignement en s'appuyant sur des photographies aériennes et satellites.
+
+:::: {.columns}
+::: {.column}
+![](../../image/irak1.png){style="display:block;margin:0 auto;max-width:13cm;width:100%"}
+:::
+::: {.column}
+![](../../image/irak2.png){style="display:block;margin:0 auto;max-width:15cm;width:100%"}
+:::
+::::
+::: {.boitedoc}
+<div class="titre">📘 Document  : Arielle Thedrel, « Guerre d'Irak : comment tout a commencé il y a dix ans », Le Figaro, 20 mars 2013.</div>
+<div class="contenu">
+Aucune arme de destruction massive n'a été retrouvée en Irak. Alors, qui a menti ? La CIA a plaidé coupable. Les informations collectées n'étaient pas solides, les analyses bâclées et les conclusions fondées sur des hypothèses erronées. Le résultat, affirme un rapport officiel d'enquête publié en 2005, a été « l'une des faillites du renseignement les plus préjudiciables de l'histoire américaine ».
+
+Mais la communauté du renseignement n'est pas seule en cause. « Affirmer que tout le processus a été imperméable au climat politique n'est tout simplement pas crédible », affirme Paul Pillar, un ancien de la CIA, spécialiste du Moyen-Orient, aujourd'hui professeur à l'université Georgetown. [...]
+\hfill
+</div>
+:::
+
+<br>
+
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : Vincent Jauvert, « Colin Powell : comment la CIA m’a trompé », entretien accordé à L’Obs, 1er mars 2013</div>
+<div class="contenu">
+Dix ans plus tard, la défense de Colin Powell
+
+Ce n'était pas un mensonge délibéré de ma part. Je croyais à ce que je disais. Tout le monde, le Président, les membres du gouvernement et le Congrès y croyaient. Le Président m'a choisi parce que j'étais le plus crédible vis-à-vis de la communauté internationale, mais, encore une fois, je ne faisais que transmettre ce que les seize agences de renseignement disaient. Et je pense que si vous aviez été à ma place et que vous aviez vu les documents que l'on m'a présentés vous auriez cru à tout cela, vous aussi.
+</div>
+:::
+<br>
+
+
+1. Pourquoi les photos satellites ont-elles été utilisées pour justifier la guerre d’Irak ?
+2. Quelle a été la conséquence de cette information erronée ?
+3. Colin Powell dit "je croyais à ce que je disais" : comment cela illustre-t-il le pouvoir des images ?
+4. Quelle différence entre un mensonge volontaire et une erreur due à des informations fausses ?
+
+##
+Autre fake newsz cdrole ?
+
+# Deepfake
+
+<iframe src="https://youtube.com/embed/cQ54GDm1eL0" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+6. Qu’est-ce qu’un deepfake et pourquoi utilise-t-on le terme "hypertrucage" ?
+2. Pourquoi la vidéo deepfake d’Obama a-t-elle eu un impact fort ?
+3. Quels risques les deepfakes posent-ils pour la société (politique, justice, vie privée…) ?
+4. Comment peut-on se protéger de ces manipulations ou apprendre à les reconnaître ?
+
+# Fakes News
+
+#
+
+10. Faut-il interdire les logiciels permettant de faire des deepfakes, même s’ils peuvent aussi servir pour l’art ou l’humour ?
+1. Quel est le rôle des réseaux sociaux dans la propagation de fake news et de deepfakes ?
+1. Peut-on imaginer des solutions techniques pour certifier l’authenticité des vidéos et images en ligne ?

@@ -1,0 +1,125 @@
+---
+title: "Comment circule un message ?"
+description : "Protocole de communication, suite de protocoles TCP:IP"
+order: 5
+---
+
+---
+
+# Objectifs et compétences
+
+**Objectifs de séance**
+
+::: {.competence}
+
+- Comprendre le rôle des protocoles dans la communication entre ordinateurs.  
+- Savoir que les données sont découpées en paquets et transmises sur le réseau via TCP/IP.  
+- Observer le fonctionnement des échanges réseau avec un analyseur de paquets (Wireshark).  
+- Comprendre les concepts de fragmentation, en-tête, encapsulation et accusé de réception.  
+- Différencier les rôles des protocoles IP (adressage et routage) et TCP (fiabilité et réassemblage).  
+:::
+
+**Compétences développées**
+
+::: {.competence}
+
+- Analyser des captures réseau pour comprendre la séquence des échanges.  
+- Travailler par analogie pour expliquer le rôle des protocoles.  
+- Savoir utiliser un vocabulaire technique : protocole, paquets, en-tête, accusé de réception.  
+- Développer l’esprit critique sur la fiabilité et la sécurité des transmissions numériques.  
+:::
+
+---
+
+# La communication entre deux machines
+
+💬 Les premières expériences de communication entre deux ordinateurs ont montré que ce n’est pas si simple de programmer deux machines pour les faire communiquer.  
+En effet, le 29 octobre 1969, fut envoyé le premier message d’Arpanet entre un ordinateur de l’équipe du Professeur Leonard Kleinrock à UCLA (University of California at Los Angeles) et un ordinateur de l’université de Stanford, à environ 500 km. Le message était *Hello*, mais les deux dernières lettres ne sont jamais arrivées.  
+Pour communiquer, comme pour les êtres humains, il faut établir des règles de communication.
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : Protocole</div>
+<div class="contenu">
+Un protocole informatique (ou parfois tout simplement un protocole quand le contexte de l’informatique est clair) est un ensemble de règles qui régissent les échanges de données ou le comportement collectif de processus ou d’ordinateurs en réseaux ou d’objets connectés.  
+Un protocole a pour but de réaliser une ou plusieurs tâches concourant à un fonctionnement harmonieux d’une entité générale.  
+</div>
+:::
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : Wireshark</div>
+<div class="contenu">
+Wireshark est un analyseur de paquets libre et gratuit. Il est utilisé dans le dépannage et l’analyse de réseaux informatiques, le développement de protocoles, l’éducation et la rétro-ingénierie.  
+</div>
+:::
+
+1. a. Ouvrir un navigateur  
+   b. Lancer Wireshark, et démarrer l’enregistrement en appuyant sur 🦈  
+   c. Dans la barre de l’URL, taper : <http://glassus1.free.fr>, puis fermer la page.  
+   d. Arrêter l’enregistrement en appuyant sur le carré rouge.  
+      ![](../../image/capture_wireshark_initiale.png)
+2. Quand commence la communication (Wireshark) ?  
+3. Combien de paquets pour établir la communication ?  
+4. 🧠 Quelle information trouve-t-on dans la couche Réseau ? À quoi sert-elle ?  
+
+---
+
+# Rôle de TCP/IP
+
+## Envoyer une image
+
+On considère deux ordinateurs : la source S et la destination D ; et on ne s’intéresse pas à tous les problèmes de routage qui peuvent exister entre eux. S veut envoyer à D une image.
+
+5. Pourquoi n’envoie-t-on pas un fichier en un seul bloc ?  
+
+![](../../image/image_vague.png){fig-align="center" width=25%}
+
+6. Comment S peut-il être certain que D a bien reçu le message ? Que D a tout reçu ?  
+1. Que faire si le message se perd ? Et s’il arrive en double ?  
+
+---
+
+## TCP/IP et encapsulation
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : Suite de protocoles TCP/IP</div>
+<div class="contenu">
+Lorsque l’on parle du protocole TCP/IP, on parle en fait d’une suite de protocoles qui permet à deux machines de communiquer sur Internet.  
+Les protocoles TCP et IP sont les principaux protocoles de cette suite.  
+</div>
+:::
+
+![](../../image/encapsulation3.png){style="display:block;margin:0 auto;width:40%;"}
+
+![](../../image/tcp_ip3.png){style="display:block;margin:0 auto;width:40%;"}
+
+1. 🔍 Que signifie TCP : ...  
+   🔍 Que signifie IP : ...  
+2. 📊 Qu’est-ce que l’**encapsulation des données** ? Expliquez à partir du schéma.  
+3.  🧠 IP ? TCP ? Autre ?  
+    - Quel protocole a en charge l’acheminement des données ? ...  
+    - Quel protocole a en charge la fragmentation des données ? ...  
+    - Quel protocole a en charge de s’assurer de la bonne réception des données ? ...  
+4.  📊 Que contient l’**en-tête** ajouté à chaque paquet ? Citez deux informations utiles pour le réseau.  
+
+---
+
+# Bilan
+
+**Replacer les mots suivants :**  
+*protocole, TCP, IP, paquets, fragmentation, en-tête, routage, accusé de réception, encapsulation*
+
+::: {.boitebilan}
+<div class="titre">🧠 Bilan</div>
+<div class="contenu">
+Pour que deux ordinateurs puissent communiquer, ils doivent utiliser un <u>                        
+</u>.  
+Sur Internet, les données ne sont pas envoyées en un seul bloc, mais en plusieurs <u>                        </u> : c’est la <u>                        </u>.  
+Chaque paquet contient une partie des données et un <u>                        </u> qui aide au <u>                        </u>.  
+
+Le protocole <u>                        </u> gère l’adressage et la circulation des paquets.  
+Le protocole <u>                        </u> vérifie que toutes les données ont bien été reçues et permet leur réorganisation.  
+Il utilise pour cela des mécanismes comme l’<u>                        </u> et la retransmission si nécessaire.  
+
+Enfin, les données sont organisées sous forme de couches successives : c’est ce qu’on appelle l’<u>                        </u>.  
+</div>
+:::

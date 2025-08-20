@@ -1,0 +1,83 @@
+---
+title: "Ma vie numérique aujourd'hui "
+description: "Reflechir sur l'usage du numérique que l'on à au qotidien."
+order: 1
+
+---
+
+
+---
+
+# Objectifs et compétences : {#objectifs-et-compétences .unnumbered}
+
+
+
+
+
+Répondre aux questions suivantes :
+
+1.  Combien de temps passes-tu par jour sur :
+
+    -   ton téléphone ?
+    -   un ordinateur ?
+    -   Internet en général ?
+
+2.  Quels sont tes trois usages principaux du numérique (classe,
+    loisirs, communication, démarches\...) ?
+3.  À quelles plateformes numériques es-tu inscrit (ENT, réseaux
+    sociaux, jeux en ligne, messageries\...) ?
+4.  A quelle fréquence utilises-tu les réseaux sociaux ?
+5.  1.  As-tu déjà publié du contenu (photo, commentaire, vidéo) en
+        ligne ?
+    1.  Pour quelles raisons ? Qu'est ce que cela t'apporte ?
+6.  As-tu déjà reçu un message inapproprié (moquerie, insulte,
+    harcèlement) ?
+7.  Sais-tu ce que signifient les termes suivants, si oui explique
+    brièvement :
+
+    -   Cookies
+    -   RGPD
+    -   Cyberviolence
+
+8.  As-tu déjà modifié les paramètres de ton téléphone ?
+    (confidentialité, localisation, notifications, Wi-Fi)
+9.  Quels objets connectés possèdes-tu ou utilises-tu ? (enceintes,
+    montres, consoles, domotique\...)
+10. Selon toi, le numérique est-il plutôt un outil, un besoin ou une
+    dépendance ? Justifie ta réponse.
+
+---
+# Carte mentale
+
+En groupe de trois ou quatre, construire une carte mentale intitulée :
+
+::: center
+Ma vie avec le numérique
+:::
+
+1.  Branches à faire apparâitre :
+
+    -   Usages scolaires / usages personnels
+    -   À la maison / au lycée / en mobilité
+    -   Matériel utilisé
+    -   Activités faites en ligne
+    -   Émotions / dangers / avantages
+
+2.  Utilise un code couleur pour relier tes idées aux sept grands thèmes
+    de SNT :
+
+    -   Internet
+    -   Le Web
+    -   Les réseaux sociaux
+    -   Les données et leur traitement
+    -   Localisation et mobilité
+    -   Objets connectés
+    -   Photographie numérique
+
+# Débat et mise en commun
+
+-   Qu'est-ce qui vous a surpris dans vos réponses ?
+-   Quels usages sont les plus courants ?
+-   Quels outils sont indispensables ?
+-   Quels avantages et quels dangers avez-vous identifiés ?
+-   Le numérique : outil, besoin, dépendance ?

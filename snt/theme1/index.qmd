@@ -1,0 +1,17 @@
+---
+title: "Thème 1 — De l'usage au réseau"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - Seance*.qmd
+    - projet.qmd
+  exclude:
+    - path: index.qmd
+---
+
+
+
+

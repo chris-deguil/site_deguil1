@@ -1,0 +1,54 @@
+---
+title: "Projets — Thème 2 : Réseaux sociaux et données"
+description: "Travaux de fin de thème"
+order: 20
+---
+
+# Projets — Thème 2
+
+Les élèves choisissent (ou se voient attribuer) un projet parmi ceux proposés.  
+Un projet est individuel, l’autre est en groupe.  
+
+---
+
+## Projet 2 — Info ou intox ? (individuel)
+
+### Consigne
+Choisissez une **information virale** (photo, tweet, vidéo, article) et menez une enquête pour savoir si elle est fiable ou trompeuse.  
+
+### Étapes de travail
+1. Présentez l’information choisie (capture d’écran ou lien).  
+2. Cherchez ses sources (qui publie, quand, où ?).  
+3. Utilisez des outils simples (recherche d’image inversée, recoupement avec des sites fiables).  
+4. Expliquez pourquoi c’est une information fiable ou au contraire une intox.  
+
+### Production attendue
+- Mini-dossier de 1–2 pages **ou** une **capsule vidéo courte (2 min max)**.  
+- Le travail doit montrer les **étapes de la vérification**.  
+
+### Critères de réussite
+- ✔️ L’information est bien présentée et contextualisée.  
+- ✔️ La démarche de vérification est claire et justifiée.  
+- ✔️ La conclusion est argumentée et compréhensible.  
+
+---
+
+## Projet 6 — Court-métrage : une journée sans Internet (en groupe)
+
+### Consigne
+Imaginez une **journée de lycée sans Internet ni smartphone** et créez un petit court-métrage qui raconte cette journée.  
+
+### Étapes de travail
+1. Écrivez un scénario simple (les personnages, les situations).  
+2. Répartissez les rôles (caméra, acteurs, montage).  
+3. Tournez les scènes (smartphone ou caméra simple).  
+4. Faites un montage basique (enchaînement des scènes + titre + musique libre).  
+
+### Production attendue
+- Une **vidéo courte de 2 à 3 minutes**.  
+- Format : fichier vidéo lisible sur ordinateur.  
+
+### Critères de réussite
+- ✔️ Le court-métrage illustre de façon claire la dépendance au numérique.  
+- ✔️ Le scénario est original et cohérent.  
+- ✔️ La réalisation est compréhensible et soignée. 

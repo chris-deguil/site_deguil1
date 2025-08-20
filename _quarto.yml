@@ -1,21 +1,106 @@
 project:
   type: website
+  resources:
+    - assets/**
 
 website:
-  title: "site_test"
+  title: "Site pédagogique"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "Accueil"
+        href: index.qmd
+      - text: "SNT"
+        href: snt/index.qmd
+      - text: "Spé maths première"
+        href: premiere-maths/index.qmd
+
+  # Une sidebar spécifique à la SNT avec tes 2 thèmes
+  sidebar:
+    - title: "SNT"
+      logo: image/logoSNT.png   # ← chemin vers ton logo
+      style: docked
+      collapse-level: 1
+      contents:
+        - snt/index.qmd
+        - section: "Thème 1 · De l'usage au réseau"
+          contents:
+            - snt/theme1/Seance_1.qmd
+            - snt/theme1/Seance_2a.qmd
+            - snt/theme1/Seance_2b.qmd
+            - snt/theme1/Seance_3.qmd
+            - snt/theme1/Seance_4.qmd
+            - snt/theme1/Seance_5.qmd
+            - snt/theme1/Seance_6.qmd
+            - snt/theme1/Seance_7.qmd
+            - snt/theme1/Seance_8.qmd
+            - snt/theme1/Seance_10.qmd
+            - snt/theme1/projet.qmd
+                    
+        - section: "Thème 2 · Moi et les réseaux"
+          contents:
+            - snt/theme2/Seance_11.qmd
+            - snt/theme2/Seance_12.qmd
+            - snt/theme2/Seance_13.qmd
+            - snt/theme2/Seance_14.qmd
+            - snt/theme2/Seance_15.qmd
+            - snt/theme2/Seance_16.qmd
+            - snt/theme2/Seance_17.qmd
+            - snt/theme2/Seance_18.qmd
+            - snt/theme2/Seance_19.qmd
+            - snt/theme2/projet.qmd
+
+
+    - title: "Première Spécialité Maths"
+      logo: image/logo_maths2.png   # ← chemin vers ton logo
+      style: docked
+      collapse-level: 1
+      contents:
+        - premiere-maths/index.qmd
+        - section: "Fonctions du second degré"
+          contents:
+            - premiere-maths/fonction2nD/definition.qmd
+            - premiere-maths/fonction2nD/racine.qmd
+            - premiere-maths/fonction2nD/signe.qmd
+            - premiere-maths/fonction2nD/coefficient.qmd
+            - premiere-maths/fonction2nD/parabole.qmd
+            - premiere-maths/fonction2nD/bilan.qmd
+            - premiere-maths/fonction2nD/exercices.qmd
+
+
+        - section: "Suites numériques : Généralités"
+          contents:
+            - premiere-maths/suite1/definition.qmd
+            - premiere-maths/suite1/generation.qmd
+            - premiere-maths/suite1/liste_therme_python.qmd
+            - premiere-maths/suite1/variations.qmd
+            - premiere-maths/suite1/limites.qmd
+            - premiere-maths/suite1/algorithme.qmd
+            - premiere-maths/suite1/exercices.qmd
+            - premiere-maths/suite1/test.qmd
+
+        - section: "Nombre dérivé"
+          contents:
+            - premiere-maths/NomDerive/definition.qmd
+            - premiere-maths/NomDerive/tangente.qmd
+            - premiere-maths/NomDerive/DerivUsuelles.qmd
+
 
 format:
   html:
+    include-in-header:
+      - assets/set-html-class.html
+      - assets/mathjax-macros.html
     theme:
-      - cosmo
-      - brand
-    css: styles.css
+      light: [cosmo, assets/css/general.scss]
+      dark:  [darkly, assets/css/general.scss]
+
+    grid:
+      body-width: 1400px
+      margin-width: 18rem
+      sidebar-width: 16rem
+      gutter-width: 1.5rem
     toc: true
-
-
+    smooth-scroll: true
+    mermaid:
+      theme: forest 
 

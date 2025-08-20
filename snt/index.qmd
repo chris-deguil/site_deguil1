@@ -1,0 +1,69 @@
+---
+title: "SNT"
+listing:
+  - id: themes
+    type: grid
+    fields: [title]
+    sort: "title"
+    contents:
+      - theme1/index.qmd
+      - theme2/index.qmd
+---
+
+
+
+Bienvenue dans la section **SNT**.  
+Utilise la barre latérale pour naviguer par thèmes et activités.
+
+
+
+## Thèmes
+::: {#themes}
+:::
+
+
+| Logo             | Signification                      |
+|:----------------:|------------------------------------|
+| \logoAutonomie   | Autonomie                          |
+| \logoBinome      | Travail en binôme                  |
+| \logoGroupe      | Travail de groupe                  |
+| \logoInformation | Information                        |
+| 📘               | Document                           |
+| \logoDecouverte  | Recherche les informations         |
+| \logoComprehension | Comprendre le document           |
+| \logoAnalyser    | Analyser le document               |
+| \logoReinvestissement | Réinvestir une notion antérieure|
+| \logoValidation  | Faire valider avant de poursuivre  |
+| \logoCerveau     | A mémoriser               |
+
+
+
+
+<!--
+| \logoCle         | Notion essentielle / clé           |
+| \logoDecouverte  | Découverte                         |
+
+
+
+| \logoIdee        | Idée / créativité                  |
+| \logoHistoire    | Point Histoire               |
+
+
+| Logo | Signification             |
+|:----:|---------------------------|
+| 👤   |  Individue:                 |
+| 👥   |  Groupe de deux    |
+| 🧭   |  Prendre un bon départ    |
+| 🤔   |  Réflexion / questionnement |
+| 📘   |  Ressource / support      |
+| 🔑   |  Idée clé / notion essentielle |
+| 📊   |  Données / statistiques   |
+| 🖥️   |  Ordinateur / numérique   |
+| 🧠   |  Compréhension / mémoire  |
+| 🔍   |  Observation / recherche  |
+|💬| Information |
+
+
+
+![](../../image/exercice_fct2D_courbe1.png){style="display:block;margin:0 auto;width:60%;"}
+<iframe src="https://www.youtube.com/embed/YYoPSUiPT90" title="Prix 2020 — Prix spécial cyberharcèlement" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>-->

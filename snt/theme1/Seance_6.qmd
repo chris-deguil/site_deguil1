@@ -1,0 +1,122 @@
+---
+title: "Get, Post, comment sont transmis les informations ?"
+description : "Protocole de communication, suite de protocoles TCP:IP"
+order: 7
+---
+
+---
+
+
+# 🔑  Objectifs  et compétences :
+
+**Objectifs de séance**
+
+::: {.competence}
+
+1. Comprendre la différence entre les méthodes GET et POST utilisées par le protocole HTTP.
+2. Identifier où et comment les données sont transmises (URL vs corps de la requête).
+3. Utiliser Wireshark pour analyser des requêtes HTTP et retrouver les données envoyées.
+4. Évaluer les implications de sécurité de chaque méthode (visibilité des informations, chiffrement).
+5. Comprendre les implications de sécurité (données visibles/non chiffrées sur HTTP).
+:::
+
+**Compétences développées:**
+
+::: {.competence}
+1. Analyser des captures réseau pour identifier où transitent les informations.
+2. Développer l’esprit critique sur la sécurité des formulaires en ligne.
+3. Savoir argumenter sur la méthode la plus adaptée pour envoyer des données confidentielles.
+4. Travailler en autonomie sur un outil de diagnostic (Wireshark) pour observer et comparer GET et POST.
+:::
+
+---
+
+# Méthode GET, Méthode POST
+
+:::{.boitedoc}
+<div class="titre">📘 Document  :  GET et POST</div>
+<div class="contenu">
+
+1. GET : C'est la méthode la plus courante pour demander une ressource. Une requête GET est sans effet sur la ressource, il doit être possible de répéter la requête sans effet.
+
+Avec la méthode GET, les données à envoyer au serveur sont écrites directement dans l'URL.
+2. POST : Cette méthode doit être utilisée lorsqu'une requête modifie la ressource. Par exemple, lorsque vous remplissez un formulaire sur internet ou faites une recherche sur Google, les requêtes utilisent la méthode POST pour récupérer ce que vous tapez au clavier
+
+</div>
+:::
+
+## Analyse des méthodes
+
+3. Avec la méthode GET
+   a. Démarrer la capture dans Wireshark.
+   4. Accéder à l'adresse suivante : <http://glassus1.free.fr/ex\_get.html>
+   5. Saisir un mot de passe (fictif) et cliquer sur \og Valider \fg.
+   6. Arrêter la capture après l'envoi du formulaire.
+   7. Compléter le tableau ci-après.
+
+4. Avec la méthode POST
+   a. Démarrer la capture dans Wireshark.
+   b. Accéder à l'adresse suivante : <http://glassus1.free.fr/ex\_post.html>
+   c. Saisir un mot de passe (fictif) et cliquer sur \og Valider \fg.
+   d. Arrêter la capture après l'envoi du formulaire.
+   e.  Compléter le tableau ci-après.
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <tr>
+    <th style="border: 1px solid #000; width: 7cm;">Question</th>
+    <th style="border: 1px solid #000; width: 5cm;">Avec GET</th>
+    <th style="border: 1px solid #000; width: 5cm;">Avec POST</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; text-align: left;">Quelle est la méthode HTTP utilisée dans cette requête ?</td>
+    <td style="border: 1px solid #000;"></td>
+    <td style="border: 1px solid #000;"></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; text-align: left;">Les informations saisies apparaissent-elles dans l’URL ?</td>
+    <td style="border: 1px solid #000;"></td>
+    <td style="border: 1px solid #000;"></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; text-align: left;">📊 À l’aide de Wireshark, pouvez-vous retrouver le mot de passe envoyé ?</td>
+    <td style="border: 1px solid #000;"></td>
+    <td style="border: 1px solid #000;"></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; text-align: left;">Si oui, où exactement ?</td>
+    <td style="border: 1px solid #000;"></td>
+    <td style="border: 1px solid #000;"></td>
+  </tr>
+</table>
+
+
+
+## Comparaison des méthodes
+
+5. Quelle différence majeure observez-vous entre les méthodes GET et POST en termes de visibilité des données ?
+1. Selon vous, laquelle des deux méthodes semble être la plus adaptée pour envoyer des données confidentielles ? Justifiez.
+1. Malgré tout, le mot de passe est-il chiffré dans les deux cas ? Quelle implication cela a-t-il pour la sécurité ?
+1. 🔎 Quelles sont les autres méthodes HTTP que GET et POST ? Pour chacune, indiquez son rôle dans la communication client-serveur.
+
+---
+# Bilan :
+**Mots à replacer :**
+*envoyer, réponse, récupérer, URL, transmettre, corps, chiffrées*
+
+::: {.boitebilan}
+<div class="titre">🧠  HTTP, GET, POST</div>
+<div class="contenu">
+Le protocole HTTP permet à un client (souvent un navigateur) d'________ une requête à un serveur, qui lui répond avec une ________.
+
+Il existe plusieurs méthodes HTTP. Les deux plus courantes sont :
+
+1. **GET** : elle est utilisée pour ________ des informations. Les données sont visibles dans l'________.
+
+1. **POST** : elle sert à ________ des informations (formulaire, mot de passe, etc.). Les données sont envoyées dans le ________ du message HTTP, donc non visibles dans l'URL.
+
+**Remarque :** \
+Dans les deux cas, si l'adresse commence par \texttt{http} (et non \texttt{https}), les données ne sont pas ________. Un attaquant peut donc les intercepter avec un outil comme Wireshark.
+</div>
+:::
+
+

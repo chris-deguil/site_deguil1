@@ -1,0 +1,107 @@
+---
+title: "Comment choisir sa route ?"
+description : "Routage en informatique, requête ping"
+order: 4
+---
+
+
+---
+
+# Objectifs et compétences
+
+**Objectifs de séance**
+
+::: {.competence}
+- Comprendre le principe du routage dans un réseau informatique à travers une analogie (acheminement d’une lettre).  
+- Identifier les informations nécessaires au routage (adresses IP, tables de routage, réseaux locaux).  
+- Savoir utiliser des outils de diagnostic réseau comme la commande ping pour tester la communication entre machines.  
+- Découvrir le rôle des routeurs et des switches dans l’acheminement des paquets.  
+- Savoir expliquer les concepts de redondance et de fiabilité dans un réseau.  
+:::
+
+**Compétences travaillées**
+
+::: {.competence}
+- Analyser un problème complexe en le simplifiant par analogie (lettres / paquets réseau).  
+- Travailler en groupe pour expérimenter et confronter les résultats.  
+- Communiquer de façon claire sur le fonctionnement d’un réseau informatique.  
+- Développer l’esprit critique sur la fiabilité des communications et l’importance des redondances.  
+- Réaliser une analogie pour comprendre un concept abstrait (réseau postal / réseau informatique).  
+:::
+
+---
+
+# Une analogie
+
+Charles Oyster écrit une lettre à son amie Carla Lobster. À l’aide des quatre documents proposés ci-dessous, répondez aux questions suivantes :
+
+![](../../image/lettres.png){fig-align="center" width=50%}
+<!-- description:  ; catégorie:  -->
+
+![](../../image/centre_tri.png){fig-align="center" width=50%}
+<!-- description:  ; catégorie:  -->
+
+![](../../image/transport.png){fig-align="center" width=50%}
+<!-- description:  ; catégorie:  -->
+
+![](../../image/deviation.png){fig-align="center" width=50%}
+<!-- description:  ; catégorie:  -->
+
+1. Quels sont les éléments qui sont précisés sur l'enveloppe de la lettre ?  
+2. Lister les différents moyens d'acheminements de la lettre.  
+3. Combien y a-t-il de centres de tri ?  
+4. informations et tri 
+    a. De quelle(s) information(s) a besoin le centre de tri de Washington pour acheminer la lettre ?  
+    b. De quelle(s) information(s) a besoin le centre de tri de Paris pour acheminer la lettre ?  
+    c. De quelle(s) information(s) a besoin le postier pour acheminer la lettre ?  
+5. Quel problème a rencontré le postier sur la route ? Comment a-t-il résolu ce problème ?  
+
+---
+
+# Principe général
+
+## Peut-on communiquer ?
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : Ping ..., oui je suis  là</div>
+<div class="contenu">
+Ping est le nom d’une commande informatique permettant de tester l’accessibilité d’une autre machine à travers un réseau IP.  
+La commande mesure également le temps mis pour recevoir une réponse, appelé *round-trip time* (temps aller-retour).  
+Ping utilise une requête ICMP Request et attend une réponse Reply.  
+L’envoi est répété pour des fins statistiques : déterminer le taux de paquets perdus et le délai moyen de réponse.
+</div>
+:::
+
+Cette commande permet d’envoyer plusieurs paquets à un hôte distant ; cela permet de simuler l’envoi d’une donnée en plusieurs morceaux.
+
+![](../../image/ping1.png){fig-align="center" width=80%}
+<!-- description:  ; catégorie:  -->
+
+1.  Comprendre un ping
+    a. 🤔 Expliquer la différence de temps entre les deux premiers envois du document 3.  
+    b. 📊 Comment interpréter un résultat qui afficherait 100 % de perte ?  
+2. Récupérer l’adresse IPv4 de votre machine et celle de vos voisins. Vos ordinateurs peuvent-ils communiquer ? Expliquer.  
+
+---
+
+## Le routage
+
+📘  **Document :**
+
+  <iframe src="https://www.youtube-nocookie.com/embed/88JeRflty4s" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+
+1. Qu’est-ce que le routage dans un réseau informatique ? Expliquez brièvement son rôle et son importance.  
+2. Quelles sont les informations clés utilisées par les routeurs pour prendre des décisions de routage ?  
+   Expliquez le concept de table de routage et décrivez quelques-unes des informations qu’elle contient.  
+3. 🧠 Qu’est-ce qu’une adresse IP et quel rôle joue-t-elle dans le routage des données ?  
+   Expliquez comment les routeurs utilisent les adresses IP pour acheminer les paquets vers leur destination.  
+4. Citer au moins trois technologies ou équipements couramment utilisés pour le routage dans les réseaux informatiques.  
+   Expliquer brièvement leur fonctionnement.  
+
+---
+
+# Bilan
+
+🧠 **Synthèse :**  
+On utilisera les mots : *adresse IP, routeur, table de routage, réseau, switch, ping, paquets, redondance*

@@ -1,0 +1,146 @@
+---
+title: "Trace et vie privée"
+description: "Comprendre les données personnelles, cookies"
+order: 9
+---
+
+---
+
+# 🔑  Objectifs  et compétences :
+**Objectifs de séance**
+
+::: {.competence}
+1. Comprendre ce que sont les données personnelles et pourquoi elles sont considérées comme l’« or noir du XXI siècle ».
+2. Découvrir le rôle du RGPD et de la CNIL dans la protection des données personnelles.
+3. Identifier les cookies et leur rôle dans le suivi de la navigation en ligne.
+4. Savoir ce qu’est un consentement éclairé, univoque et spécifique, et comprendre pourquoi il est nécessaire.
+5. Apprendre à paramétrer les cookies et à contrôler les traces laissées en ligne.
+6. Découvrir les bonnes pratiques pour se protéger sur le web (navigation privée, paramétrage des navigateurs, refus de cookies).
+:::
+
+**Compétences développées:**
+
+::: {.competence}
+1. Analyser des documents (articles, vidéos, cas pratiques de la CNIL).
+2. Développer l’esprit critique sur les pratiques de collecte de données et de suivi publicitaire.
+3. Collaborer en groupe pour produire un slogan ou une affiche de sensibilisation.
+4. Argumenter sur les enjeux liés à la vie privée et aux libertés numériques.
+:::
+
+---
+
+
+# Découvrir les enjeux de la vie privée en ligne
+## \logoAutonomie Les données personnelles
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : 🧠 📘 Données personnelles</div>
+<div class="contenu">
+Constitue une donnée à caractère personnel toute information relative à une personne physique identifiée ou qui peut être identifiée, directement ou indirectement, par référence à un numéro d'identification ou à un ou plusieurs éléments qui lui sont propres. Pour déterminer si une personne est identifiable, il convient de considérer l'ensemble des moyens en vue de permettre son identification dont dispose ou auxquels peut avoir accès le responsable du traitement ou toute autre personne.
+</div>
+:::
+
+1. Parmi les données suivantes celles qui sont des données personnelles :
+L'âge - Le poids - Le nom et le prénom - L'adresse e-mail -
+Le signe astrologique -
+Le numéro de téléphone -
+a taille -
+La voix -
+La date de naissance -
+Une photo du visage 
+2. 🤔 Pourquoi dit-on que les données personnelles sont \og l'or noir du XXI\textsuperscript{e} siècle \fg ?
+
+## CNIL et consentement
+
+3. 🔎 🧠 Que signifie RGPD  et préciser son rôle
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : 📘 L.Adam, Google : La CNIL inflige une amende record, zdnet.fr, 21 janv 2019</div>
+<div class="contenu">
+La CNIL donne ainsi raison aux plaintes des associations et explique que le consentement recueilli par Google n'est pas valide pour deux raisons principales : d'une part l'absence ou la difficulté d'accès aux finalités des traitements de données empêche de qualifier le consentement \og d'éclairé \fg. D'autre part, le consentement recueilli n'est ni \og univoque \fg ni \og spécifique \fg. Derrière ces deux termes, la CNIL s'attaque à une autre pratique mise en place par Google qui active par défaut les publicités sponsorisées lors de la création d'un nouveau compte. Une pratique déloyale aux yeux de la Commission.
+</div>
+:::
+
+1. 📊  **Analyse du document**
+    a. Quelles sont les mauvaises pratiques de Google pointées ?
+    b. Pourquoi la personnalisation de la publicité pose-t-elle problème ici ?
+    c. 🤔 Pourquoi un consentement doit-il être "éclairé", "univoque" et "spécifique" ?
+    d. 👥 Imaginez une affiche ou un slogan pour sensibiliser à l'importance du consentement sur Internet.
+
+---
+
+
+# Les cookies et le suivi en ligne
+##  Qu'est ce qu'un cookie ?
+📘 **Document : J'ai attrapé un cookie**
+
+  <iframe src="https://www.yout-ube.com/embed/watch?v=eGTxXqm8cr8" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+
+
+1. \logoAutonomie \`A  partir de la vidéo :
+    a. Expliquer ce qu'est un cookie. Où est-il enregistré ?
+    b. Quels types de cookies existent ? Donnez un exemple pour chacun.
+    c. Que se passe-t-il si l’on efface un cookie d’un site et qu’on le revisite ?
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : 📘</div>
+<div class="contenu">
+Dans un communiqué du 19 janvier, la CNIL informe qu'elle a sanctionné Yahoo!, au nom de l'article 82 de la loi Informatique et Libertés, d'une amende de 10 millions d'euros, notifiée fin décembre. La CNIL reproche au groupe américain d'avoir suivi ses usagers sur son portail Yahoo.com au moyen d'une vingtaine de cookies quand ceux-ci avaient demandé à ne pas être traqués.
+
+Suite au dépôt de vingt-sept plaintes, cette enquête a permis selon la CNIL de constater un autre manquement touchant alors la messagerie Yahoo Mail : lorsqu'un internaute souhaitait retirer son consentement au suivi publicitaire, la société l'informait, selon les constatations de la CNIL, que son action lui ferait perdre l'accès à sa boîte. L'organisme considère qu'une adresse de messagerie électronique constituait  un élément de la vie privée de son utilisateur (échanger avec d'autres personnes, de développer son réseau etc.)
+</div>
+:::
+
+1. 📊 \`A partir du document précédent :
+   a. Quels sont les deux principaux reproches faits à Yahoo concernant les cookies ?
+   b. Pourquoi la CNIL considère-t-elle que ces pratiques portent atteinte à la liberté du consentement de l'internaute ?
+   c. La société Yahoo permettait-elle de retirer son consentement facilement ? Expliquer.
+
+📘 L'outil CookieVidz
+
+  <iframe src="https://www.yout-ube.com/embed/watch?v=mq5EhJ8_cvg" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+
+## Se protéger
+
+::: {.boitedoc}
+<div class="titre">🧠 📘 Document  :   RGPD</div>
+<div class="contenu">
+La réglementation général sur la protection des données impose à tout site Web qui collecte des données personnelles d'obtenir l'accord de l'utilisateur.<br>
+Les options de gestion des cookies varient selon le sites. La CNIL met à la dispositions des internaute une rubrique : \og Maitriser mes données \fg.
+<https://www.cnil.fr/fr/maitriser-mes-donnees>
+</div>
+:::
+
+1. Expliquer comment contrôler les traces que nous laissons sur  le Web.
+2. La navigation privée rend-elle anonyme ? Expliquer.
+3. Allez sur les deux sites : <www.education.gouv.fr> et <www.voici.fr>, et chercher comment modifier les cookies.
+
+
+---
+
+# 🧠 Bilan :
+**Replacer les mots suivants : **
+
+*consentement, entreprise, terminal, navigation, CNIL, données personnelles, ciblés, traces, choix, refuser, paramétrer, navigateur, cookies techniques, cookies tiers, réseaux sociaux, cookies publicitaires, RGPD, identifier, éclairé, spécifique, univoque.
+*
+
+::: {.boitebilan}
+<div class="titre">🧠 🧠 Bilan</div>
+<div class="contenu">
+Une ________ ________ est une information qui permet d’________ une personne, de manière directe ou indirecte. Cela inclut par exemple le nom, une adresse e-mail, une photo, ou encore une voix.
+<br>
+Pour cela, le ________ (Règlement Général sur la Protection des Données), en vigueur depuis 2018, fixe les règles à respecter dans toute l’Union européenne. En France, c’est la ________ qui veille à leur application et peut sanctionner les ________ en cas de non-respect.
+<br>
+Lorsque des sites collectent des données, ils doivent obtenir un ________. Ce dernier doit être donné ________, ________ et ________. L’utilisateur doit avoir le ________ de choisir librement.
+<br>
+Les ________ sont de petits fichiers stockés sur le ________ de l’utilisateur lors de sa navigation. Il en existe plusieurs types :
+
+- Les ________ sont indispensables au bon fonctionnement du site (ex : mémorisation des identifiants de connexion).
+- Les ________ sont déposés par des services externes comme les ________.
+- Les ________ permettent de suivre la ________ de l’utilisateur pour lui proposer des contenus ________.
+
+L’utilisateur peut ________ ou ________ les cookies. Il peut aussi modifier les réglages de son ________ pour mieux contrôler les ________ qu’il laisse en ligne.
+</div>
+:::

@@ -1,0 +1,150 @@
+---
+title: "Quels réseaux ? Pour qui ?"
+description: "Découvrir les réseaux soicaux et leur fonctionnolité, leur économie"
+order: 11
+---
+
+---
+
+# 🔑  Objectifs  et compétences :
+**Objectifs de séance :**
+
+::: {.competence}
+1. Définir ce qu’est un réseau social à partir de définitions d’experts et d’exemples.
+2. Identifier les principales fonctions et outils des réseaux sociaux.
+3. Distinguer les différents types de réseaux sociaux.
+4. Analyser les aspects sociologiques et culturels liés aux réseaux sociaux.
+5. Amorcer une réflexion critique sur l’impact des réseaux sociaux sur l’identité, les relations sociales et la vie quotidienne.
+6. Préparer et présenter un exposé structuré sur un réseau social choisi.
+:::
+
+**Compétences développées:**
+
+::: {.competence}
+1. Rechercher et sélectionner des informations à partir de définitions et de documents.
+2. Lire, comprendre et analyser des documents variés.
+3. Développer un esprit critique sur les pratiques numériques (impact social, culturel et psychologique).
+4. Organiser et présenter des informations sous la forme d’un diaporama.
+5. Argumenter à l’oral sur les avantages, limites et enjeux des réseaux sociaux.
+:::
+
+# Réseau Social
+
+1. Lister en 5 minutes ce qu'évoque pour vous les réseaux sociaux.
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : 📘 Alexandre Coutant et Thomas Spenger, Ces réseaux numériques dits sociaux 2011</div>
+<div class="contenu">
+\dots un service Web qui permet aux individus de construire un profil, public ou non, de gérer une liste d'utilisateurs avec lesquels ils partagent un lien, de voir et naviguer sur leur liste de liens et sur ceux établis par les autres au saein du système. Les réseaux sociaux fondent leur attractivité sur ces points et non sur une activité particulière.
+</div>
+:::
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : 📘 Alexandre Coutant et Thomas Spenger</div>
+<div class="contenu">
+Sur un plan très général, un réseau peut se définir comme une structure de liens et d’interactions entre individus ; en ce sens, il peut se situer dans une très grande variété de contextes sociaux, qui n’ont pas nécessairement trait à l’Internet. Des exemples possibles sont les réseaux d’amitié entre élèves d’une école ; les réseaux de conseil entre employés d’une entreprise ; les réseaux de coopération ou coécriture entre scientifiques ; les réseaux de parenté ; et ainsi de suite.
+</div>
+:::
+
+2. Quelles sont les fonctions fondamentales d’un réseau social ?
+
+1. Donner différents types de réseaux sociaux, et pour chacun de ces types des exemples
+
+1. Citer des outils utilisés par les réseaux sociaux :
+
+# Réseaux sociaux et Sociologie
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : Stromae, Extrait Carmen, 2015</div>
+<div class="contenu">
+D’abord on s’affilie,<br>
+ensuite on se follow<br>
+On en devient fêlé,<br>
+et on finit solo<br>
+Prends garde à toi<br>
+Et à tous ceux qui vous like
+</div>
+:::
+
+\hfill
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : Soprano, Extrait Mon Précieux, 2017</div>
+<div class="contenu">
+Je te partage ma vie, au lieu de la vivre<br>
+Tu me partages la vie des autres pour me divertir<br>
+Je ne regarde plus le ciel depuis que tu m’as pris mes yeux
+ dans tes applis, baby<br>
+Je ne sais plus vivre sans toi à mes cotés
+</div>
+:::
+
+- Stromae
+<iframe src="https://www.yout-ube.com/embed/watch?v=UKftOH54iNU" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+Sopranaux
+<iframe src="https://www.yout-ube.com/embed/watch?v=OVmfGb8XKSg" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+
+
+1. Quel(s) aspect(s) des réseaux sociaux sont mis en avant ?
+2. 
+   a. Écouter le cours de Dominique Cardon.
+
+   <iframe src="https://www.yout-ube.com/embed/watch?v=OHg0NSNKGLE" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+<!---<https://moocdigital.paris/cours/reseaux-sociaux-linternet/fabrique-lidentite>-->
+   b. Quel est selon lui l'aspect important des réseaux sociaux ? Dans quel but ?
+
+---
+# Exposé
+Par groupe de trois ou quatre, vous allez réaliser une présentation orale avec support de présentation sur un réseau social.
+
+📘 **Document : Chaîne Youtube Dopamine**
+
+- <https://www.youtube.com/playlist?list=PL8Ax_z5vzflwdvoTnARE5FiYl42Sg-fYb>
+- <https://www.youtube.com/playlist?list=PL8Ax_z5vzflz8JveM9VetLiZ3LPtFsttW>
+
+Ce travail est à faire à la maison sur une durée de 2 semaines
+
+**Contenu :**
+
+1. Présentation :
+   1. Contenu
+   2. Nom du réseau social, logo
+   3. Date de création, nom(s) du ou des créateur(s)
+   4. Historique rapide de la création de ce réseau
+   5. Particularité par rapport aux autres réseaux, concurrence
+   6. Public cible : nombre d’utilisateurs et utilisatrices dans le monde et en France, catégorie d’âge,
+   évolution dans le temps
+   7. Typologie du réseau, principe de fonctionnement, usages, plateformes etc
+   8. Algorithme utilisé pour proposer des contenus personnalisés
+   9. Sources de revenus du réseau social, les utilisateurs et utilisatrices peuvent-ils gagner de l’argent ?
+2. Opinion du groupe :
+   1. Avis et réflexions du groupe sur les critiques, dangers et limites de ce réseau social (un ou deux
+points minimum)
+   1. Avis et réflexions du groupe sur les avantages et aspects bénéfiques des réseaux sociaux social (un ou deux points minimum)
+
+1. Actualités (optionnel)
+
+
+**Restitution :**
+
+1. Exposé collectif de 10 à 15 minutes, appuyé sur le diaporama.
+4. Réponses aux questions de l’enseignant.e et des élèves pendant 5 minutes
+
+
+**Critères d’évaluation :**
+
+1. 10 points pour le diaporama (clarté, esthétique, ...) et la présence des informations demandées. Même
+note pour la totalité du groupe. Les élèves doivent se répartir la parole pendant la présentation.
+1. 10 points pour la prestation orale. Note éventuellement différenciée dans le groupe.
+
+
+**Conseils :**
+
+1. N'abusez pas de chiffres
+2. Pensez à faire des graphiques et des schémas
+3. Une idée = une diapo, ne pas surcharger
+4. Privilégiez les solutions collaboratives (Google Slides, Canva, Powerpoint, Impress, ...)
+5. Faire apparaître les sources (Recherche Internet, ouvrages, ...)

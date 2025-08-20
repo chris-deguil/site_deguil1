@@ -1,0 +1,8 @@
+---
+title: "Chapitre 3 : Le nombre dérivéé"
+description: "nombre dérivé - tangente - dérivée usuelles."
+
+---
+![](../../image/nomDerive_courbe2.png){style="display:block;margin:0 auto;width:60%;"}
+
+

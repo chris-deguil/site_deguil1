@@ -1,0 +1,119 @@
+---
+title: "Mon identité numérique et moi"
+description: "E-réputation et identité numérique"
+order: 18
+---
+
+
+___
+
+# 🔑 Objectifs et compétences :
+**Objectifs de séance :**
+
+::: {.competence}
+1. Comprendre ce qu’est l’identité numérique et comment elle se construit.
+2. Identifier le lien entre identité numérique et e-réputation.
+3. Distinguer les traces intentionnelles et non intentionnelles laissées en ligne.
+4. Connaître les risques liés à une mauvaise gestion de son identité numérique.
+5. Découvrir les bonnes pratiques pour protéger et sécuriser son identité numérique.
+:::
+
+**Compétences développées  :**
+
+::: {.competence}
+1. Analyser des documents variés (vidéos, dessins, cas pratiques).
+2. Développer l’esprit critique face aux traces laissées en ligne.
+3. Argumenter à l’oral et à l’écrit sur des situations liées à l’identité numérique.
+:::
+
+---
+
+# Identité numérique et e-réputation
+
+📘 **Document :**
+
+![](../../image/IdentiteNumerique_chien.png)
+
+
+📘  **Document :**
+
+- Vidéo 1 : Ton identité numérique, c'est quoi ça ?
+  
+  <iframe src="https://www.youtube-nocookie.com/embed/_gicHAyGrNc" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+
+
+- Vidéo 2 : Ma meilleure amie est fachée
+
+<iframe
+  src="https://video.cnil.fr/videos/embed/ro4ztWmPfxrGb5XbNpD1gz?autoplay=0&peertubeLink=0"
+  title="CNIL — Ma meilleure amie est super fâchée"
+  style="width:70%;aspect-ratio:16/9;border:0;display:block;margin:0 auto;"
+  sandbox="allow-same-origin allow-scripts allow-popups"
+  allowfullscreen>
+</iframe>
+
+
+1. Qu'est ce que l'identité numérique ?
+2. Quelles peuvent-être les conséquences d'une mauvaise identité numérique ?
+3. Quel lien faîtes-vous entre la e-réputation et l'identité numérique ?
+
+
+
+---
+
+# Comprendre les traces ...
+
+📘 **Document :**
+
+![](../../image/BD_Videberg.png){style="width:30%;"}
+![](../../image/BD_coco.png ){style="width:40%;"}
+![](../../image/BD_Decressac.png){style="width:25%;"}
+![](../../image/BD_Inconnue.png){style="width:30%;"}
+![](../../image/BD_Decressac2.png){style="width:30%;"}
+
+Dessinateur dans l'ordre : Martin Vidberg, Coco,  Decressac, Inconnue , Decressac (gauche à droite)
+
+4. Pour chacun des dessins suivants  préciser si il s'agit d'une trace intentionnelle ou non intentionnelle.
+5. Associer chacun des termes suivants au(x) dessin(s) qui convient.
+
+<div style="text-align: center;">
+  <table style="border-collapse: collapse; border: 2px solid black; width: 14cm; margin: auto;">
+    <thead>
+      <tr>
+        <th style="border: 1px solid black; padding: 6px; width: 7cm;">Lettre</th>
+        <th style="border: 1px solid black; padding: 6px; width: 7cm;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid black; padding: 6px;">Termes</td>
+        <td style="border: 1px solid black; padding: 6px;">Dessins — Termes — Dessins</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 6px;">Hymnésie du Web</td>
+        <td style="border: 1px solid black; padding: 6px;">Vie privée</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 6px;">Identité numérique</td>
+        <td style="border: 1px solid black; padding: 6px;">Responsabilité pénale</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 6px;">Infos sensibles</td>
+        <td style="border: 1px solid black; padding: 6px;">Pseudonyme</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+4. Pourquoi est-il important de réfléchir avant de publier ou partager un contenu ?
+
+---
+
+# \logoBinome Réflexion citoyenne
+
+5. Peut-on filmer ou prendre en photo une personne sans son autorisation ?
+1. Quelles conséquences une mauvaise identité numérique peut-elle avoir (personnelle, professionnelle) ?
+1. Pourquoi une image ou vidéo sortie de son contexte peut-elle nuire gravement à une personne ?
+2. Donner cinq conseils à appliquer dans votre vie quotidienne pour protéger et sécuriser votre identité numérique sur les réseaux sociaux.

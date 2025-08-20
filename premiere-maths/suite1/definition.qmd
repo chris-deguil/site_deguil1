@@ -1,0 +1,43 @@
+---
+title: "Définitions"
+format:
+  html:
+    toc: true
+    number-sections: false
+---
+
+
+## Notion de suites numériques
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition :</span>  
+
+On appelle **suite numérique** toute application $u$ définie sur $\mathbb{N}$ à valeurs dans $\mathbb{R}$.  
+$$u : n \longmapsto u(n) \quad \text{ou} \quad u_n$$  
+On note alors $u$, $(u_n)$ ou $(u_n)_{n \in \mathbb{N}}$ cette suite.  
+
+$n$ s'appelle le **rang** ou **l’indice** du terme $u_n$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque :</span>  
+
+- Il faut différencier $u_n$ et $(u_n)$ : $u_n$ est le **terme de rang** $n$ de la suite $(u_n)$ (comme $f(x)$ est une valeur, et $f$ la fonction).  
+- Le plus souvent, le premier élément est $u_0$ ou $u_1$.  
+- Le terme qui précède $u_n$ est $u_{n-1}$ et celui qui le suit est $u_{n+1}$.  
+- Contrairement aux fonctions, une suite peut **ne pas être définie par une formule explicite**.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples :</span>  
+
+1. La suite $u = \{2\,;\,3\,;\,5\,;\,7\,;\,11\,;\dots\}$ : les nombres premiers.  
+2. La suite définie par $u(n) = 2n + 1$ pour tout $n \ge 0$ :  
+   $$(u_n) = \{1\,;\,3\,;\,5\,;\,7\,;\dots\}$$  
+3. La suite $v = \{1\,;\,4\,;\,13\,;\,40\,;\dots\}$, avec $u_0 = 1$ et pour tout $n \in \mathbb{N}$ :  
+   $$u_{n+1} = 3u_n + 1$$  
+4. La suite $(u_n) = \{3\,;\,1\,;\,4\,;\,1\,;\,5\,;\,9\,;\,2\,;\dots\}$ : les décimales de $\pi$.  
+5. Soit $u : \mathbb{N} \to \mathbb{R}$ définie par $u(n) = \sqrt{3 - n}$.  
+   Cet exemple **ne définit pas une suite** au sens classique car seuls les termes $u_0$, $u_1$, $u_2$, $u_3$ existent.  
+   ($u_4$, $u_5$, … ne sont pas définis car la racine carrée serait d’un nombre négatif).
+:::

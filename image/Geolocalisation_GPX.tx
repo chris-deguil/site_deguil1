@@ -1,0 +1,184 @@
+\include{preambule}
+\lstset{numbers=left, tabsize=2, frame=single, breaklines=true, basicstyle=\ttfamily,
+   numberstyle=\tiny\ttfamily, framexleftmargin=13mm, backgroundcolor=\color{lightgray}, xleftmargin=12mm}
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\fancyhf{}
+\setlength{\headwidth}{17cm}
+\fancyhead[R]{
+\textbf{\Large{Seconde}}\\}
+\fancyhead[L]{\Large{Thème  :\\
+Géolocalisation}}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[R]{\textbf{page \thepage}} 
+\fancyfoot[L]{Mr Deguil}
+\fancyfoot[C]{\includegraphics[scale=2]{image/licence.eps}}
+\renewcommand{\headrulewidth}{1pt}	
+
+\pagestyle{fancy}
+
+\begin{document}
+
+
+\setlength{\fboxrule}{2pt}
+\noindent \fbox{
+\begin{minipage}{2.5cm}
+\includegraphics[scale=0.33]{image/logoSNT.eps}
+\end{minipage}\hfill
+\begin{minipage}{14cm}
+\begin{center}
+\textbf{\Large{Activité : }}
+
+\medskip
+\Large{Applications de tracking}
+\end{center}
+\end{minipage}
+}
+
+
+\begin{center}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+Contenu&Capacités attendues\\\hline
+Protocole NMEA0183&Décoder une trame NMEA pour trouver des coordonnées géographiques\\\hline
+Confidentialité&Régler les paramètres de confidentialité d’un téléphone pour partager ou non sa position.\\\hline
+\end{tabular}\end{center}
+
+\bigskip
+\section{Introduction}
+\noindent Un élève décide de s’entraîner régulièrement à la course à pied. Il aime aussi faire du vélo, de l’équitation. Il nage assez régulièrement. 
+Ses amis lui conseillent d’installer une application de suivi d’activités (« tracking ») sur son téléphone portable. Il hésite... il y en a tant ! 
+
+ \begin{center}
+ \includegraphics[scale=2]{../../image/gpx\_strava.png}
+ \end{center}
+
+\noindent Après réflexion, l'élève décide de choisir Strava.
+
+
+
+\section{Etude d'un fichier GPX}
+\noindent \begin{minipage}{11.5cm} L'élève a récupéré le fichier gpx correspondant à une de ses sorties.\\
+Vous pouvez évidemment utiliser une sortie que vous auriez faite ....
+\medskip
+
+\begin{enumerate}
+
+\item Chercher ce qu'est un fichier GPX.
+\begin{itemize}[label=\ding{46}]
+\item \dotfill
+\item[] \dotfill
+\item[] \dotfill
+\end{itemize}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{5cm}
+\includegraphics[scale=2.5]{exportStrava.eps}
+\end{minipage}
+
+\begin{itemize}
+\item[] \dotfill
+\item[] \dotfill
+\end{itemize}
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item \begin{enumerate}
+\item Ouvrir le fichier  tourMystere.gpx avec un éditeur de texte (notepad++, bloc-Note, ...)
+\item Comment est-il structuré (type de langage)? 
+\begin{itemize}[label=\ding{46}]
+\item \dotfill
+\item[] \dotfill
+\end{itemize}
+\item Quelles sont les différentes informations que l'on y trouve ?
+\begin{itemize}[label=\ding{46}]
+\item \dotfill
+\item[] \dotfill
+\item[] \dotfill
+\end{itemize}
+\end{enumerate}
+\item \begin{enumerate}
+\item A quelle heure a commencé la randonnée ? \\
+\ding{46} \dotfill
+\item Où se situe-t-on après 1h20 de randonnée ? Longitude, latitude et altitude.
+\begin{itemize}[label=\ding{46}]
+\item \dotfill
+\item[] \dotfill
+\end{itemize}
+\item Déterminer le lieu de la randonnée ainsi que la durée.
+\begin{itemize}[label=\ding{46}]
+\item \dotfill
+\item[] \dotfill
+\item[] \dotfill
+\end{itemize}
+\item Le fichier permet de connaître les coordonnées géographiques et l'altitude des points enregistrés. Relever ces informations pour le point de fin du parcours.
+\begin{itemize}[label=\ding{46}]
+\item \dotfill
+\item[] \dotfill
+\item[] \dotfill
+\end{itemize}
+\item Modifier le fichier (en le nommant tourMystere2.gpx) pour que le point d'arrivée soit le même que celui du départ et contrôler le résultat par exemple avec \href{http://www.mygpsfiles.com/app}{http://www.mygpsfiles.com/app/}
+\end{enumerate}
+\item \textit{Facultatif} A votre créativité : \\
+En modifiant les données, créer un parcours à vol d'oiseau autour de chez vous à l'aide de coordonnées GPS de plusieurs points.\\
+\textit{Il faudra bien étudier la façon dont est constitué le fichier pour qu'il puisse être utilisable (ne pas modifier les lignes avant la balise <trk>.} 
+\end{enumerate}
+
+\bigskip
+
+
+%\section{Rédaction d'un paragraphe argumenté}   
+
+
+\section{Utilisation de Python}
+On souhaite afficher le parcours comme les sites dédiés sur internet à l'aide du programme suivant (fichier : gpx\_eleves.py) : 
+
+\begin{center}
+\includegraphics[scale=1.5]{PythonStrava.eps} % image à agrandir
+\end{center}
+
+\noindent Pour qu'il fonctionne, il faut qu'il se trouve dans le même dossier que le fichier gpx.py et le fichier TourMystere.gpx sur lequel vous choisissez de travailler.
+
+\medskip
+
+\begin{enumerate}
+\item	La variable lat contient la liste de toutes les latitudes enregistrées.\\ L'instruction len() donne la longueur (autrement dit le nombre d’éléments) d’une liste.\\
+Déterminer le nombre de points qui ont été enregistrés.
+\begin{itemize}[label=\ding{43}]
+\item \dotfill 
+\end{itemize}  
+\item	Compléter le fichier proposé pour faire apparaître une balise rouge marquant la fin du parcours.
+\item Compléter le fichier proposé pour qu'en cliquant sur les balises on voit l'altitude des points de départ et d'arrivée. 
+\item Ajouter une balise marquant le point le plus bas du parcours (et/ou le point le plus haut). On pourra faire afficher l’altitude de ces points.  
+\item Un peu plus délicat :
+%L'instruction renvoie VRAI si a est multiple de n et FAUX sinon .  
+
+\begin{enumerate}
+\item	Expliquer ce que fait le programme ci-contre : 
+\begin{center}
+\includegraphics[scale=2]{EstMultiple.eps}
+\end{center}
+\item Recopier ce programme puis représenter le parcours correspondant aux points contenus dans ces nouvelles listes. 
+\item	Que se passe-t-il si on remplace 2 par 5 ? par 10 ? par 50 ?
+\end{enumerate}
+\end{enumerate}
+
+
+\end{document}

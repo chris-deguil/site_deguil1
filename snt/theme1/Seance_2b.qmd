@@ -1,0 +1,89 @@
+---
+title: "Serveur DNS, quelle utilité ?"
+description : "Comprendre le rôle d'un serveur DNS, comprendre une reqête"
+order: 3
+
+---
+
+___
+
+# Objectifs et compétences
+
+**Objectifs de séance**
+
+::: {.competence}
+- Comprendre le fonctionnement du DNS comme service de traduction.
+- Observer le cheminement d’une requête Web.
+:::
+
+**Compétences travaillées**
+
+::: {.competence}
+- Comprendre les étapes techniques entre l’utilisateur et un site web.
+- Manipuler des outils de base (ping, navigateur, terminal).
+:::
+
+# Serveur DNS
+
+## Fonctionnement du DNS
+
+::: {.boitedoc}
+<div class="titre">📘 Document  : Comprendre</div>
+<div class="contenu">
+À chaque site web, on associe une adresse **symbolique** : un texte compréhensible.  
+La correspondance entre cette adresse symbolique et l’adresse IP est assurée par un annuaire appelé *Domain Name Service (DNS)*.  
+Cet annuaire est organisé en domaines et sous-domaines, chacun correspondant à des ensembles et des sous‑ensembles d’adresses gérées en commun.
+
+![](../../image/AnnuaireDNS1.png)
+<!-- description:  ; catégorie:  -->
+</div>
+:::
+
+1. Quelle différence entre adresse physique et adresse symbolique ?  
+2. Décomposer chaque élément du nom de domaine de  
+   <https://www.service-public.fr/particuliers/actualites>  
+3. Compléter la signification des domaines ci‑dessous :  
+   - com : ……  
+   - gouv : ……  
+   - org : ……  
+   - fr : ……  
+
+
+**📘 Docuent :**
+
+  <iframe src="https://www.youtube-nocookie.com/embed/dcIrB8qRCbA" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+4. a. Rechercher ce qu’est l’AFNIC et préciser son rôle.  
+   b. Indiquer sur le schéma la lettre correspondante au numéro.
+
+| Lettre | Description                                                   |
+|-------:|---------------------------------------------------------------|
+| A      | Tu connais les gouv.fr ?                                      |
+| B      | Oui, demandes au serveur TLD                                   |
+| C      | C’est bon, mes recherches donnent 185.75.143.24               |
+| D      | Je cherche à accéder au site education.gouv.fr mais je ne connais pas l’IP. |
+| E      | Oui, c’est à l’adresse 185.75.143.24                          |
+| F      | Tu connais education.gouv.fr ?                                |
+| G      | Oui, demande au serveur qui gère le domaine.                  |
+| H      | Échange avec 185.75.143.24 qui héberge la ressource           |
+| I      | Dis, tu connais les .fr ?                                     |
+
+![](../../image/CommunicationDNS2_1.png){style="display:block;margin:0 auto;width:60%;"}
+<!-- description:  ; catégorie:  -->
+
+5. Pourquoi la résolution d’une adresse IP nécessite‑t‑elle une collaboration entre plusieurs serveurs DNS ?  
+
+---
+
+# Bilan
+
+**Replacer les mots suivants :** *adresse IP, URL, DNS, protocole, nom de domaine, serveur, Web*
+
+::: {.boitebilan}
+<div class="titre">🧠 Bilan</div>
+<div class="contenu">
+Le ________ est un système qui associe un ________ compréhensible à une ________ utilisée par les machines.  
+Une ________ est une adresse complète utilisée pour accéder à une ressource sur le ________.  
+Elle contient un ________ qui définit la façon de communiquer, un ________ qui héberge le site, et parfois un chemin ou des paramètres.
+</div>
+:::
