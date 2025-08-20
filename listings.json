@@ -1,21 +1,5 @@
 [
   {
-    "listing": "/snt/theme1/index.html",
-    "items": [
-      "/snt/theme1/Seance_1.html",
-      "/snt/theme1/Seance_2a.html",
-      "/snt/theme1/Seance_2b.html",
-      "/snt/theme1/Seance_3.html",
-      "/snt/theme1/Seance_4.html",
-      "/snt/theme1/Seance_5.html",
-      "/snt/theme1/Seance_6.html",
-      "/snt/theme1/Seance_7.html",
-      "/snt/theme1/Seance_8.html",
-      "/snt/theme1/Seance_10.html",
-      "/snt/theme1/projet.html"
-    ]
-  },
-  {
     "listing": "/snt/theme2/index.html",
     "items": [
       "/snt/theme2/Seance_11.html",
@@ -31,6 +15,14 @@
     ]
   },
   {
+    "listing": "/premiere-maths/index.html",
+    "items": [
+      "/premiere-maths/fonction2nD/index.html",
+      "/premiere-maths/suite1/index.html",
+      "/premiere-maths/NomDerive/index.html"
+    ]
+  },
+  {
     "listing": "/snt/index.html",
     "items": [
       "/snt/theme1/index.html",
@@ -38,11 +30,19 @@
     ]
   },
   {
-    "listing": "/premiere-maths/index.html",
+    "listing": "/snt/theme1/index.html",
     "items": [
-      "/premiere-maths/fonction2nD/index.html",
-      "/premiere-maths/suite1/index.html",
-      "/premiere-maths/NomDerive/index.html"
+      "/snt/theme1/Seance_1.html",
+      "/snt/theme1/Seance_2a.html",
+      "/snt/theme1/Seance_2b.html",
+      "/snt/theme1/Seance_3.html",
+      "/snt/theme1/Seance_4.html",
+      "/snt/theme1/Seance_5.html",
+      "/snt/theme1/Seance_6.html",
+      "/snt/theme1/Seance_7.html",
+      "/snt/theme1/Seance_8.html",
+      "/snt/theme1/Seance_10.html",
+      "/snt/theme1/projet.html"
     ]
   }
 ]
