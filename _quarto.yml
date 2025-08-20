@@ -5,6 +5,9 @@ project:
 
 website:
   title: "Site pédagogique"
+  site-url: https://chris-deguil.github.io/site_deguil1/
+  repo-url: https://github.com/chris-deguil/site_deguil1/
+  
   navbar:
     left:
       - text: "Accueil"
