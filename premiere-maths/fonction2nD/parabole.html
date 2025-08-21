@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Représentation graphique fonction du second degré - Axe de symétrie - Variations">
 
 <title>Parabole – Site pédagogique</title>
 <style>
@@ -236,7 +237,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe et inéquation</span></a>
+ <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,7 +255,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Equation et représentation graphique</span></a>
+ <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -283,12 +284,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de générations</span></a>
+ <span class="menu-text">Différents modes de génération</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_therme_python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Liste des termes d’une suite numérique</span></a>
   </div>
 </li>
@@ -307,7 +308,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme et programmation – Exercices interactifs</span></a>
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -342,7 +343,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée- Dérivées usuelles</span></a>
+ <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
   </div>
 </li>
       </ul>
@@ -374,6 +381,11 @@ window.Quarto = {
 <h1 class="title">Parabole</h1>
 </div>
 
+<div>
+  <div class="description">
+    Représentation graphique fonction du second degré - Axe de symétrie - Variations
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -392,6 +404,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="la-parabole">La parabole</h2>
 <section id="représentation-graphique-des-fonctions-polynômes-du-second-degré" class="level3">
 <h3 class="anchored" data-anchor-id="représentation-graphique-des-fonctions-polynômes-du-second-degré">Représentation graphique des fonctions polynômes du second degré</h3>
+<div class="bloc rem">
 <p>On considère, sur <span class="math inline">\(\mathbb{R}\)</span>, les fonctions <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> et <span class="math inline">\(h\)</span> définie par <span class="math inline">\(h(x) = ax^2\)</span>, où <span class="math inline">\(a\)</span> est un réel non nul.<br>
 Soit le vecteur <span class="math inline">\(\vec{u}(\alpha \, ; \, \beta)\)</span>, où <span class="math inline">\(\alpha = -\frac{b}{2a}\)</span> et <span class="math inline">\(\beta = f(\alpha)\)</span>.<br>
 Montrons que <span class="math inline">\(\mathscr{C}_f = t_{\vec{u}}(\mathscr{C}_h)\)</span>.</p>
@@ -403,7 +416,8 @@ Puisque <span class="math inline">\(y = ax^2\)</span>, on a : <span class="math 
 \begin{pmatrix}
 x'\\
 y'
-\end{pmatrix} =  \begin{pmatrix}
+\end{pmatrix} =  
+\begin{pmatrix}
 \alpha\\
 \beta
 \end{pmatrix} +
@@ -421,7 +435,7 @@ a(x + \alpha - \alpha)^2 + \beta
 x'\\
 a(x' - \alpha)^2 + \beta
 \end{pmatrix}
-\]</span> Donc <span class="math inline">\(y' = a(x' - \alpha)^2 + \beta\)</span> et <span class="math inline">\(M' \in \mathscr{C}_f\)</span><br>
+\]</span> Donc <span class="math inline">\(y' = a(x' - \alpha)^2 + \beta\)</span> et <span class="math inline">\(M' \in \mathscr{C}_f\)</span>.<br>
 Ainsi :<br>
 <span class="math display">\[t_{\vec{u}}(\mathscr{C}_h) \subset \mathscr{C}_f\]</span></p></li>
 <li><p>Réciproquement, soit <span class="math inline">\(N'(x'\, ;\,y') \in \mathscr{C}_f\)</span>.<br>
@@ -429,36 +443,38 @@ On pose <span class="math inline">\(N(x'-\alpha\,;\, y'-\beta)\)</span>.<br>
 Alors <span class="math inline">\(\vec{NN'} = \vec{u}\)</span>, donc <span class="math inline">\(t_{\vec{u}}(N) = N'\)</span>.<br>
 Il reste à montrer que <span class="math inline">\(N \in \mathscr{C}_h\)</span>.<br>
 Puisque <span class="math inline">\(y' = a(x' - \alpha)^2 + \beta\)</span>, on a : <span class="math display">\[y = y' - \beta = a(x' - \alpha)^2\]</span><br>
-donc <span class="math inline">\(N \in \mathscr{C}_h\)</span> et<br>
+Donc <span class="math inline">\(N \in \mathscr{C}_h\)</span> et<br>
 <span class="math display">\[\mathscr{C}_f \subset t_{\vec{u}}(\mathscr{C}_h)\]</span></p></li>
 </ul>
 <p>Ainsi <span class="math inline">\(\mathscr{C}_f = t_{\vec{u}}(\mathscr{C}_h)\)</span>.</p>
+</div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
 <p>Dans un repère orthonormé, la représentation graphique de <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> (avec <span class="math inline">\(a \ne 0\)</span>) est une parabole de sommet<br>
-<span class="math display">\[S(\alpha \, ; \, \beta) \text{ avec } \alpha = -\frac{b}{2a} \text{ et } \beta = f(\alpha) = -\frac{\Delta}{4a}\]</span></p>
+<span class="math inline">\(S(\alpha \, ; \, \beta)\)</span> <br> avec <span class="math display">\[\alpha = -\tfrac{b}{2a} \text{ et } \beta = f(\alpha) = -\tfrac{\Delta}{4a}\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
-Démonstration :
+Démonstration
 </summary>
 La démonstration correspond à ce qui précède.
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
-Soit <span class="math inline">\(f(x) = 3x^2 - 18x + 29\)</span>.<br>
+<p>Soit <span class="math inline">\(f(x) = 3x^2 - 18x + 29\)</span>.<br>
 On a :<br>
 <span class="math display">\[f(x) = 3(x - 3)^2 + 2\]</span><br>
-Donc la parabole a pour sommet <span class="math inline">\(S(3\, ;\, 2)\)</span><br>
-Dans le repère <span class="math inline">\((S \, ; \, \vec{i}, \vec{j})\)</span>, l’équation devient <span class="math inline">\(y = 3x^2\)</span><br>
-
+Donc la parabole a pour sommet <span class="math inline">\(S(3\, ;\, 2)\)</span>.<br>
+Dans le repère <span class="math inline">\((S \, ; \, \vec{i}, \vec{j})\)</span>, l’équation devient <span class="math inline">\(y = 3x^2\)</span>.</p>
 <div style="text-align: center;">
 <p><img src="../../image/courbeSecondDegre.png" class="img-fluid" style="width:50.0%"></p>
 </div>
 </div>
-<p><strong>Remarque :</strong></p>
-<p>En appliquant une transformation appelée <strong>affinité</strong>, on peut passer au repère<br>
-<span class="math inline">\((S \, ; \, \vec{i}, \, \frac{1}{3} \vec{j})\)</span>, où l’équation devient <span class="math inline">\(y = x^2\)</span>. Il s’agit d’un changement d’échelle dans une seule direction. :::</p>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque :</span> En appliquant une transformation appelée <strong>affinité</strong>, on peut passer au repère<br>
+<span class="math inline">\((S \, ; \, \vec{i}, \, \tfrac{1}{3} \vec{j})\)</span>, où l’équation devient <span class="math inline">\(y = x^2\)</span>.<br>
+Il s’agit d’un changement d’échelle dans une seule direction.</p>
+</div>
 </section>
 <section id="axe-de-symétrie" class="level3">
 <h3 class="anchored" data-anchor-id="axe-de-symétrie">Axe de symétrie</h3>
@@ -469,29 +485,31 @@ Alors la droite <span class="math inline">\(d\)</span> d’équation <span class
 </div>
 <details class="bloc demo">
 <summary>
-Démonstration :
+Démonstration
 </summary>
-La droite <span class="math inline">\(x = \alpha\)</span> est un axe de symétrie si pour tout <span class="math inline">\(x\)</span>,<br>
-<span class="math display">\[f(\alpha - x) = f(\alpha + x)\]</span><br>
-Or : <span class="math display">\[f(\alpha - x) = a(\alpha - x - \alpha)^2 + \beta = ax^2 + \beta\]</span><br>
-et<br>
-<span class="math display">\[f(\alpha + x) = a(\alpha + x - \alpha)^2 + \beta = ax^2 + \beta\]</span><br>
-Donc les points sont symétriques par rapport à <span class="math inline">\(x = \alpha\)</span>.
+Soit <span class="math inline">\(d:x =\alpha\)</span> et <span class="math inline">\(\mathscr{C}\)</span> la représentation graphique d’une fonction <span class="math inline">\(f\)</span> du second degré.<br> Or, lLa droite <span class="math inline">\(d\)</span> est un axe de symétrie de <span class="math inline">\(\mathscr{C}\)</span> si et seulement si pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math inline">\(M( \alpha - x, f(\alpha - x ))\)</span> et <span class="math inline">\(M'(x + \alpha, f(x + \alpha))\)</span> sont symétriques par rapport à la droite <span class="math inline">\(d\)</span> si et seulement si <span class="math inline">\(\forall x \in \R,\;f(\alpha-x) = f(\alpha +x')\)</span><br> De plus, pour tout réel <span class="math inline">\(x\)</span> <span class="math display">\[f( \alpha - x) = a(\alpha - x - \alpha)^2 + \beta = ax^2 + \beta~~~~\text{et}~~~~f( \alpha + x) = a(\alpha + x - \alpha)^2 + \beta = ax^2 + \beta\]</span> On déduit donc que les points <span class="math inline">\(M\)</span> et <span class="math inline">\(M'\)</span> sont symétriques par rapport à <span class="math inline">\(d\)</span>. }
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
-<p>Soit <span class="math inline">\(f(x) = 2x^2 - 5x + 3\)</span></p>
+<p>Soit <span class="math inline">\(f(x) = 2x^2 - 5x + 3\)</span>.</p>
 <ol type="1">
-<li>L’axe de symétrie a pour équation :<br>
-<span class="math display">\[x = \frac{-(-5)}{2 \times 2} = \frac{5}{4}\]</span></li>
+<li>Déterminer l’équation de l’axe de symétrie</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<span class="math inline">\(x = \frac{5}{4} = 1,25\)</span><br>
-Or <span class="math inline">\(1\)</span> et <span class="math inline">\(1,5\)</span> sont symétriques par rapport à <span class="math inline">\(1,25\)</span><br>
-Donc <span class="math inline">\(f(1) = f(1,5)\)</span>
+L’axe de symétrie a pour équation : <span class="math display">\[x = \frac{-(-5)}{2 \times 2} = \tfrac{5}{4}\]</span>
+</details>
+<ol start="2" type="1">
+<li>Vérifier que 1 est racine et en déduire l’autre solution.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+L’axe de symétrie a pour équation : $<span class="math inline">\(x = \tfrac{5}{4} = 1,25\)</span> $ Or <span class="math inline">\(1\)</span> et <span class="math inline">\(1,5\)</span> sont symétriques par rapport à <span class="math inline">\(1,25\)</span>.<br>
+Donc <span class="math inline">\(f(1) = f(1,5)\)</span><br> Ainsi l’autre racine est <span class="math inline">\(1,5\)</span>
 </details>
 </div>
 </section>
@@ -502,28 +520,31 @@ Donc <span class="math inline">\(f(1) = f(1,5)\)</span>
 <p>Soit <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> :</p>
 <ol type="1">
 <li><p>Si <span class="math inline">\(a &gt; 0\)</span> :<br>
-<span class="math inline">\(f\)</span> est décroissante sur <span class="math inline">\(\left]-\infty \, ; \, -\frac{b}{2a} \right]\)</span> et croissante sur <span class="math inline">\(\left[-\frac{b}{2a} \, ; \, +\infty \right[\)</span></p></li>
+<span class="math inline">\(f\)</span> est décroissante sur <span class="math inline">\(\left]-\infty \, ; \, -\tfrac{b}{2a} \right]\)</span> et croissante sur <span class="math inline">\(\left[-\tfrac{b}{2a} \, ; \, +\infty \right[\)</span></p></li>
 <li><p>Si <span class="math inline">\(a &lt; 0\)</span> :<br>
-<span class="math inline">\(f\)</span> est croissante sur <span class="math inline">\(\left]-\infty \, ; \, -\frac{b}{2a} \right]\)</span> et décroissante sur <span class="math inline">\(\left[-\frac{b}{2a} \, ; \, +\infty \right[\)</span></p></li>
+<span class="math inline">\(f\)</span> est croissante sur <span class="math inline">\(\left]-\infty \, ; \, -\tfrac{b}{2a} \right]\)</span> et décroissante sur <span class="math inline">\(\left[-\tfrac{b}{2a} \, ; \, +\infty \right[\)</span></p></li>
 </ol>
 </div>
 <details class="bloc demo">
 <summary>
-Démonstration :
+Démonstration
 </summary>
-Soit <span class="math inline">\(u &lt; v \le \alpha\)</span> et <span class="math inline">\(a &gt; 0\)</span> :<br>
-<span class="math display">\[f(u) - f(v) = a\left(u + \frac{b}{2a}\right)^2 - a\left(v + \frac{b}{2a}\right)^2 = a(u - v)(u + v + \frac{b}{a})\]</span><br>
-Comme <span class="math inline">\(u - v &lt; 0\)</span> et <span class="math inline">\(u + v + \frac{b}{a} &lt; 0\)</span>, on a <span class="math inline">\(f(u) - f(v) &gt; 0\)</span><br>
-Donc <span class="math inline">\(f\)</span> est décroissante sur <span class="math inline">\(\left]-\infty \, ; \, -\frac{b}{2a}\right]\)</span><br>
-Par symétrie, elle est croissante sur <span class="math inline">\(\left[-\frac{b}{2a} \, ; \, +\infty\right[\)</span>.
+<p>Soit <span class="math inline">\(u &lt; v \le \alpha\)</span> et <span class="math inline">\(a &gt; 0\)</span> :<br>
+<span class="math display">\[f(u) - f(v) = a\left(u + \tfrac{b}{2a}\right)^2 - a\left(v + \tfrac{b}{2a}\right)^2 = a(u - v)(u + v + \tfrac{b}{a})\]</span></p>
+Comme <span class="math inline">\(u - v &lt; 0\)</span> et <span class="math inline">\(u + v + \tfrac{b}{a} &lt; 0\)</span>, on a <span class="math inline">\(f(u) - f(v) &gt; 0\)</span>.<br>
+Donc <span class="math inline">\(f\)</span> est décroissante sur <span class="math inline">\(\left]-\infty \, ; \, -\tfrac{b}{2a}\right]\)</span>.<br>
+Par symétrie, elle est croissante sur <span class="math inline">\(\left[-\tfrac{b}{2a} \, ; \, +\infty\right[\)</span>.
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
 <p><span class="math inline">\(f(x) = 2x^2 - 7x + 1\)</span><br>
-Axe de symétrie : <span class="math inline">\(x = \frac{7}{4}\)</span><br>
-Comme <span class="math inline">\(a &gt; 0\)</span>, <span class="math inline">\(f\)</span> est décroissante sur <span class="math inline">\(\left]-\infty \, ; \, \frac{7}{4}\right]\)</span><br>
-et croissante sur <span class="math inline">\(\left[\frac{7}{4} \, ; \, +\infty\right[\)</span><br>
-<span class="math inline">\(f\)</span> admet un minimum en <span class="math inline">\(\frac{7}{4}\)</span></p>
+L’axe de symétrie a pour équation : <span class="math inline">\(x = \tfrac{7}{4}\)</span>.<br>
+Comme <span class="math inline">\(a &gt; 0\)</span>, <span class="math inline">\(f\)</span> est décroissante sur <span class="math inline">\(\left]-\infty \, ; \, \tfrac{7}{4}\right]\)</span><br>
+et croissante sur <span class="math inline">\(\left[\tfrac{7}{4} \, ; \, +\infty\right[\)</span>.<br>
+<span class="math inline">\(f\)</span> admet un minimum en <span class="math inline">\(\tfrac{7}{4}\)</span>.</p>
+</div>
+<div class="nav-pages">
+<p><a class="prev" href="coefficient.html">⬅️</a> <a class="next" href="bilan.html">➡️</a></p>
 </div>
 
 

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="convgergence, divergence,: etude graphique">
+<meta name="description" content="Conjecturer graphiquement la limite d’une suite - Déterminer la limite dans des cas simples">
 
 <title>Notion de limite – Site pédagogique</title>
 <style>
@@ -237,7 +237,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe et inéquation</span></a>
+ <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -255,7 +255,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Equation et représentation graphique</span></a>
+ <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -284,12 +284,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de générations</span></a>
+ <span class="menu-text">Différents modes de génération</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_therme_python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Liste des termes d’une suite numérique</span></a>
   </div>
 </li>
@@ -308,7 +308,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme et programmation – Exercices interactifs</span></a>
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -343,7 +343,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée- Dérivées usuelles</span></a>
+ <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
   </div>
 </li>
       </ul>
@@ -358,10 +364,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#notion-de-limite" id="toc-notion-de-limite" class="nav-link active" data-scroll-target="#notion-de-limite">Notion de limite</a>
-  <ul class="collapse">
-  <li><a href="#interprétation-graphique" id="toc-interprétation-graphique" class="nav-link" data-scroll-target="#interprétation-graphique">Interprétation graphique</a></li>
-  </ul></li>
+  <li><a href="#interprétation-graphique" id="toc-interprétation-graphique" class="nav-link active" data-scroll-target="#interprétation-graphique">Interprétation graphique</a></li>
   </ul>
 </nav>
     </div>
@@ -375,7 +378,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    convgergence, divergence,: etude graphique
+    Conjecturer graphiquement la limite d’une suite - Déterminer la limite dans des cas simples
   </div>
 </div>
 
@@ -392,8 +395,6 @@ window.Quarto = {
 </header>
 
 
-<section id="notion-de-limite" class="level1">
-<h1>Notion de limite</h1>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition :</span><br>
 On dit qu’une suite numérique <span class="math inline">\((u_n)\)</span> admet une limite réelle <span class="math inline">\(l\)</span> si tous les termes de la suite <span class="math inline">\((u_n)\)</span> sont aussi proches que l’on veut de <span class="math inline">\(l\)</span> à partir d’un certain rang.<br>
@@ -406,11 +407,11 @@ On dit alors que la suite <span class="math inline">\((u_n)\)</span> converge ve
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
-<p>Soit <span class="math inline">\(u_n\)</span> la suite définie par <span class="math inline">\(u_n = \dfrac{4n+1}{n+2}\)</span> pour tout <span class="math inline">\(n \in \N\)</span>.<br>
+<p>Soit <span class="math inline">\(u_n\)</span> la suite définie par <span class="math inline">\(u_n = \dfrac{4n+1}{n+2}\)</span> pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>.<br>
 On détermine quelques valeurs de <span class="math inline">\(u_n\)</span> :</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
+<col style="width: 13%">
 <col style="width: 7%">
 <col style="width: 10%">
 <col style="width: 10%">
@@ -419,7 +420,7 @@ On détermine quelques valeurs de <span class="math inline">\(u_n\)</span> :</p>
 <col style="width: 12%">
 <col style="width: 7%">
 <col style="width: 7%">
-<col style="width: 16%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -450,68 +451,77 @@ On détermine quelques valeurs de <span class="math inline">\(u_n\)</span> :</p>
 </tr>
 </tbody>
 </table>
-<p>La suite <span class="math inline">\(u_n\)</span> semble converger vers 4 (résultat admis).</p>
+<p>La suite <span class="math inline">\((u_n)\)</span> semble converger vers 4 (résultat admis).</p>
 <ul>
-<li><p>L’intervalle ouvert <span class="math inline">\(]3{,}5 \,; \,4{,}5 [\)</span> contient 4.<br>
-De plus, il (semble) contenir tous les termes de la suite <span class="math inline">\((u_n)\)</span> à partir d’un rang donné.<br>
+<li><p>L’intervalle ouvert <span class="math inline">\(]3{,}5 \,; \,4{,}5[\)</span> contient 4.<br>
+De plus, il semble contenir tous les termes de la suite <span class="math inline">\((u_n)\)</span> à partir d’un rang donné.<br>
 Ici, pour tout entier <span class="math inline">\(n \geqslant 13\)</span>, on a : <span class="math inline">\(3{,}5 &lt; u_n &lt; 4{,}5\)</span>.</p></li>
 <li><p>De même, l’intervalle ouvert <span class="math inline">\(]3{,}9 \,; \,4{,}1[\)</span> contient 4, et il contient tous les termes de la suite à partir d’un certain rang.<br>
-<span class="math display">\[u_n \in \:\; ] 3{,}9 \,; \,4{,}1 [.\]</span></p></li>
+<span class="math display">\[u_n \in ] 3{,}9 \,; \,4{,}1 [.\]</span></p></li>
 </ul>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
-Déterminer le rang, à partir duquel, tous les termes de la suite sont dans <span class="math inline">\(]3{,}9\,;\,4[\)</span> pour la suite ci-dessus.
+<p>Déterminer le rang à partir duquel tous les termes de la suite sont dans <span class="math inline">\(]3{,}9\,;\,4{,}1[\)</span> pour la suite ci-dessus.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
 <p>Déterminons <span class="math inline">\(p\)</span> tel que pour tout <span class="math inline">\(n \geqslant p\)</span>, <span class="math inline">\(3{,}9 &lt; u_n &lt; 4{,}1\)</span>.<br>
-Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[
+Pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
+<p><span class="math display">\[
 \begin{aligned}
-3{,}9 \leqslant u_n \leqslant 4{,}1 &amp;\Longleftrightarrow 3{,}9 \leqslant \frac{4n+1}{n+2} \leqslant 4{,}1 \\
+3{,}9 \leqslant u_n \leqslant 4{,}1
+&amp;\Longleftrightarrow 3{,}9 \leqslant \frac{4n+1}{n+2} \leqslant 4{,}1 \\
 &amp;\underset{n+2 &gt;0}{\Longleftrightarrow } 3{,}9(n+2)  \leqslant 4n+1 \leqslant 4{,}1(n+2)  \\
-&amp;\Longleftrightarrow -0{,}1n \leqslant -6{,}8 \et -0{,}1n \leqslant 7{,}2 \\
-&amp;\underset{-0{,}1&lt;0}{\Longleftrightarrow} n\geqslant 68 \et n \geqslant -72
+&amp;\Longleftrightarrow -0{,}1n \leqslant -6{,}8 \;\; \text{et} \;\; -0{,}1n \leqslant 7{,}2 \\
+&amp;\underset{-0{,}1&lt;0}{\Longleftrightarrow} n\geqslant 68 \;\; \text{et} \;\; n \geqslant -72
 \end{aligned}
 \]</span></p>
-<p>On déduit que l’affirmation est donc vraie à partir du rang <span class="math inline">\(68\)</span>.<br>
+<p>On déduit que l’affirmation est vraie à partir du rang <span class="math inline">\(68\)</span>.<br>
 On peut montrer que pour tout <span class="math inline">\(\epsilon\)</span> suffisamment petit, on trouve un rang <span class="math inline">\(p\)</span>, tel que pour tout <span class="math inline">\(n \geqslant p\)</span>,<br>
-<span class="math inline">\(u_n \in ]4-\epsilon \,;\, 4+ \epsilon[\)</span></p>
+<span class="math display">\[u_n \in ]4-\epsilon \,;\, 4+ \epsilon[.\]</span></p>
 </details>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
-On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n= 1 -\frac{1}{3n^2}\)</span>.<br>
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n= 1 -\tfrac{1}{3n^2}\)</span>.<br>
 L’utilisation de la calculatrice permet de conjecturer que la suite converge vers 1.<br>
-Montrons alors que pour tout <span class="math inline">\(k \in \N\)</span>, il existe un <span class="math inline">\(n\)</span> vérifiant <span class="math inline">\(1-u_n &lt; 10^{-k}\)</span>.
+Montrons alors que pour tout <span class="math inline">\(k \in \mathbb{N}\)</span>, il existe un <span class="math inline">\(n\)</span> vérifiant <span class="math inline">\(1-u_n &lt; 10^{-k}\)</span>.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<p>Pour tout entier <span class="math inline">\(n\)</span>, <span class="math inline">\(1-u_n = \frac{1}{3n^2}\)</span>.<br>
-Pour tout entier <span class="math inline">\(k\)</span>, <span class="math display">\[
-\frac{1}{3n^2} &lt;10^{-k} \Longleftrightarrow 3n^2 &gt; \frac{1}{10^{-k}} \Longleftrightarrow n^2&gt; \frac{10^k}{3} \Longleftrightarrow n&gt;\sqrt{\frac{10^k}{3}}
+<p>Pour tout entier <span class="math inline">\(n\)</span>,<br>
+<span class="math display">\[1-u_n = \frac{1}{3n^2}.\]</span></p>
+<p>Pour tout entier <span class="math inline">\(k\)</span>,</p>
+<p><span class="math display">\[
+\frac{1}{3n^2} &lt;10^{-k}
+\Longleftrightarrow 3n^2 &gt; \frac{1}{10^{-k}}
+\Longleftrightarrow n^2&gt; \frac{10^k}{3}
+\Longleftrightarrow n&gt;\sqrt{\frac{10^k}{3}}.
 \]</span></p>
-<p>Il suffit de prendre le premier entier directement supérieur à <span class="math inline">\(\sqrt{\frac{10^k}{3}}\)</span>.<br>
+<p>Il suffit de prendre le premier entier directement supérieur à <span class="math inline">\(\sqrt{\tfrac{10^k}{3}}\)</span>.<br>
 Donc on a montré ce qui était demandé, et on peut conclure que la suite <span class="math inline">\((u_n)\)</span> converge vers <span class="math inline">\(1\)</span>.</p>
 </details>
 </div>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition :</span><br>
-On dit qu’une suite numérique est divergente lorsqu’elle ne converge pas.</p>
+On dit qu’une suite numérique est <strong>divergente</strong> lorsqu’elle ne converge pas.</p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
 <p>Montrons que la suite <span class="math inline">\(u_n = n^2\)</span> diverge.<br>
-Pour cela il suffit de montrer que pour tout <span class="math inline">\(A \in \R^+\)</span>, il existe un <span class="math inline">\(n\)</span> (c’est-à-dire au moins un) vérifiant <span class="math inline">\(u_n&gt; A\)</span>.<br>
-<span class="math display">\[n^2 &gt; A \Longleftrightarrow n &gt;  \sqrt{A}\]</span><br>
-Il suffit de prendre le premier entier directement supérieur à <span class="math inline">\(\sqrt{A}\)</span>.<br>
-On déduit alors que la suite <span class="math inline">\((u_n)\)</span> ne converge pas, elle diverge vers <span class="math inline">\(+\infty\)</span>.</p>
+Pour cela, il suffit de montrer que pour tout <span class="math inline">\(A \in \mathbb{R}^+\)</span>, il existe un <span class="math inline">\(n\)</span> vérifiant <span class="math inline">\(u_n&gt; A\)</span>.</p>
+<p><span class="math display">\[n^2 &gt; A \Longleftrightarrow n &gt;  \sqrt{A}\]</span></p>
+<p>Il suffit de prendre le premier entier directement supérieur à <span class="math inline">\(\sqrt{A}\)</span>.<br>
+On déduit alors que la suite <span class="math inline">\((u_n)\)</span> ne converge pas : elle diverge vers <span class="math inline">\(+\infty\)</span>.</p>
+</div>
+<div class="nav-pages">
+<p><a class="prev" href="variations.html">⬅️</a> <a class="next" href="algorithme.html">➡️</a></p>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

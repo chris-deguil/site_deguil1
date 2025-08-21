@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="méthode d’études des varitioans d’une suite">
+<meta name="description" content="Méthode d’étude des variations d’une suite">
 
 <title>Variations d’une suite – Site pédagogique</title>
 <style>
@@ -237,7 +237,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe et inéquation</span></a>
+ <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -255,7 +255,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Equation et représentation graphique</span></a>
+ <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -284,12 +284,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de générations</span></a>
+ <span class="menu-text">Différents modes de génération</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_therme_python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Liste des termes d’une suite numérique</span></a>
   </div>
 </li>
@@ -308,7 +308,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme et programmation – Exercices interactifs</span></a>
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -343,7 +343,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée- Dérivées usuelles</span></a>
+ <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
   </div>
 </li>
       </ul>
@@ -358,10 +364,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#variations-dune-suite" id="toc-variations-dune-suite" class="nav-link active" data-scroll-target="#variations-dune-suite">Variations d’une suite</a>
+  <li><a href="#définition" id="toc-définition" class="nav-link active" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#étude-des-variations" id="toc-étude-des-variations" class="nav-link" data-scroll-target="#étude-des-variations">Étude des variations</a>
   <ul class="collapse">
-  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
-  <li><a href="#étude-des-variations" id="toc-étude-des-variations" class="nav-link" data-scroll-target="#étude-des-variations">Étude des variations</a></li>
+  <li><a href="#application-de-la-définition-différence-u_n1---u_n" id="toc-application-de-la-définition-différence-u_n1---u_n" class="nav-link" data-scroll-target="#application-de-la-définition-différence-u_n1---u_n">Application de la définition : Différence <span class="math inline">\(u_{n+1} - u_n\)</span></a></li>
+  <li><a href="#variation-de-la-fonction-associée" id="toc-variation-de-la-fonction-associée" class="nav-link" data-scroll-target="#variation-de-la-fonction-associée">Variation de la fonction associée</a></li>
+  <li><a href="#étude-du-quotient" id="toc-étude-du-quotient" class="nav-link" data-scroll-target="#étude-du-quotient">Étude du quotient</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -376,7 +384,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    méthode d’études des varitioans d’une suite
+    Méthode d’étude des variations d’une suite
   </div>
 </div>
 
@@ -393,10 +401,8 @@ window.Quarto = {
 </header>
 
 
-<section id="variations-dune-suite" class="level2">
-<h2 class="anchored" data-anchor-id="variations-dune-suite">Variations d’une suite</h2>
-<section id="définition" class="level3">
-<h3 class="anchored" data-anchor-id="définition">Définition</h3>
+<section id="définition" class="level2">
+<h2 class="anchored" data-anchor-id="définition">Définition</h2>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition :</span></p>
 <ol type="1">
@@ -426,14 +432,14 @@ Pour tout entier naturel <span class="math inline">\(p \leq n\)</span> on a <spa
 <ul>
 <li>Lorsque les inégalités sont strictes, comme dans le cas des fonctions, on parle de suite strictement croissante ou strictement décroissante.<br>
 </li>
-<li>On dit à « partir d’un certain rang », car c’est le comportement global de la suite qui nous intéresse et pas ce qui se passe sur les premiers termes.</li>
+<li>On dit « à partir d’un certain rang », car c’est le comportement global de la suite qui nous intéresse et pas ce qui se passe sur les premiers termes.</li>
 </ul>
 </div>
 </section>
-<section id="étude-des-variations" class="level3">
-<h3 class="anchored" data-anchor-id="étude-des-variations">Étude des variations</h3>
-<section id="application-définition-différence-u_n1---u_n" class="level4">
-<h4 class="anchored" data-anchor-id="application-définition-différence-u_n1---u_n">Application définition : Différence <span class="math inline">\(u_{n+1} - u_n\)</span></h4>
+<section id="étude-des-variations" class="level2">
+<h2 class="anchored" data-anchor-id="étude-des-variations">Étude des variations</h2>
+<section id="application-de-la-définition-différence-u_n1---u_n" class="level3">
+<h3 class="anchored" data-anchor-id="application-de-la-définition-différence-u_n1---u_n">Application de la définition : Différence <span class="math inline">\(u_{n+1} - u_n\)</span></h3>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
 Étudier les variations de la suite <span class="math inline">\((u_n)_{n\in \mathbb{N}}\)</span> définie par<br>
@@ -442,7 +448,11 @@ Pour tout entier naturel <span class="math inline">\(p \leq n\)</span> on a <spa
 <summary>
 Afficher la correction
 </summary>
-<p>Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n\]</span> Or <span class="math inline">\(n \geqslant 0\)</span>, donc <span class="math inline">\(2n \geqslant 0\)</span>.<br> Ainsi pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_{n+1} - u_n \geqslant 0\)</span>.<br> Ainsi la suite <span class="math inline">\((u_n)_{n \in \N}\)</span> est croissante.</p>
+<p>Pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>,<br>
+<span class="math display">\[u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n\]</span><br>
+Or <span class="math inline">\(n \geqslant 0\)</span>, donc <span class="math inline">\(2n \geqslant 0\)</span>.<br>
+Ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(u_{n+1} - u_n \geqslant 0\)</span>.<br>
+Donc la suite <span class="math inline">\((u_n)_{n \in \mathbb{N}}\)</span> est croissante.</p>
 </details>
 </div>
 <div class="bloc ex">
@@ -453,39 +463,49 @@ Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math i
 <summary>
 Afficher la correction
 </summary>
-<p>Pour tout <span class="math inline">\(n \in \N\)</span>, on a : Alors pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = u_{n+1} = - u_n^2 - 2u_n - 1 = - (u_n +1)^2 \]</span> Ce qui est toujours négatif. \ Ainsi pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_{n+1} - u_n \leqslant 0\)</span>, donc <span class="math inline">\((u_n)_{n \in \N}\)</span> est une suite décroissante Donc la suite est décroissante.</p>
+<p>Pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>,<br>
+<span class="math display">\[u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = - u_n^2 - 2u_n - 1 = - (u_n + 1)^2\]</span></p>
+<p>Ce qui est toujours négatif.<br>
+Ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(u_{n+1} - u_n \leqslant 0\)</span>, donc <span class="math inline">\((u_n)_{n \in \mathbb{N}}\)</span> est une suite décroissante.</p>
 </details>
 </div>
 </section>
-<section id="variation-de-la-fonction-associée" class="level4">
-<h4 class="anchored" data-anchor-id="variation-de-la-fonction-associée">Variation de la fonction associée</h4>
+<section id="variation-de-la-fonction-associée" class="level3">
+<h3 class="anchored" data-anchor-id="variation-de-la-fonction-associée">Variation de la fonction associée</h3>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
 Soient <span class="math inline">\(a \in \mathbb{R}^+\)</span> et <span class="math inline">\(I = [a ; +\infty[\)</span>.<br>
 Si <span class="math inline">\((u_n)\)</span> est définie par <span class="math inline">\(u_n = f(n)\)</span> et <span class="math inline">\(f\)</span> est monotone sur <span class="math inline">\(I\)</span>,<br>
-alors <span class="math inline">\((u_n)\)</span> est monotone et a même variation que <span class="math inline">\(f\)</span> à partir de <span class="math inline">\(n \geq a\)</span>.</p>
+alors <span class="math inline">\((u_n)\)</span> est monotone et a la même variation que <span class="math inline">\(f\)</span> à partir de <span class="math inline">\(n \geq a\)</span>.</p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>On suppose <span class="math inline">\(f\)</span> croissante sur <span class="math inline">\(I\)</span>. Alors pour tout entier naturel <span class="math inline">\(n \geq a\)</span>, <span class="math display">\[u_{n+1} - u_n = f(n+1) - f(n) \geq 0 \]</span> Donc la suite <span class="math inline">\((u_n)\)</span> est croissante pour tout entier naturel <span class="math inline">\(n \geq a\)</span>.\ On raisonne de même pour une fonction décroissante.</p>
+<p>On suppose <span class="math inline">\(f\)</span> croissante sur <span class="math inline">\(I\)</span>. Alors pour tout entier naturel <span class="math inline">\(n \geq a\)</span>,<br>
+<span class="math display">\[u_{n+1} - u_n = f(n+1) - f(n) \geq 0\]</span></p>
+<p>Donc la suite <span class="math inline">\((u_n)\)</span> est croissante pour tout entier naturel <span class="math inline">\(n \geq a\)</span>.<br>
+On raisonne de même pour une fonction décroissante.</p>
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
-Soit <span class="math inline">\(u_n = x^2 - 3x + 1\)</span><br>
+Soit <span class="math inline">\(u_n = n^2 - 3n + 1\)</span>.<br>
 Étudier les variations.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<p>Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\([0\,;\,+\infty[\)</span> par <span class="math inline">\(f(x) = 2x^2-3x+1\)</span>.<br> <span class="math inline">\(f\)</span> est une fonction polynôme de degré <span class="math inline">\(2\)</span>, dont le coefficient dominant <span class="math inline">\(2 &gt;0\)</span>, ainsi la représentation graphique de la fonction <span class="math inline">\(f\)</span> est tournée vers le haut.<br> L’axe de symétrie de la parabole ayant pour équation <span class="math inline">\(x = \frac{-(-3)}{2 \times 1} = \frac{3}{2}\)</span>, on déduit :</p>
+<p>Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\([0\,;\,+\infty[\)</span> par <span class="math inline">\(f(x) = x^2 - 3x + 1\)</span>.<br>
+<span class="math inline">\(f\)</span> est une fonction polynôme de degré <span class="math inline">\(2\)</span>, dont le coefficient dominant est positif, donc sa parabole est tournée vers le haut.</p>
+<p>L’axe de symétrie est <span class="math inline">\(x = \\tfrac{3}{2}\)</span>. On en déduit :</p>
 <ul>
-<li>La fonction <span class="math inline">\(f\)</span> est décroissante sur <span class="math inline">\([0\,;\,3/2]\)</span></li>
-<li>La fonction <span class="math inline">\(f\)</span> est croissante sur <span class="math inline">\([3/2\,;\,+\infty[\)</span></li>
-<li><span class="math inline">\(f(1)=f(2)\)</span></li>
+<li>La fonction <span class="math inline">\(f\)</span> est décroissante sur <span class="math inline">\([0\,;\,3/2]\)</span><br>
+</li>
+<li>La fonction <span class="math inline">\(f\)</span> est croissante sur <span class="math inline">\([3/2\,;\,+\infty[\)</span><br>
+</li>
+<li><span class="math inline">\(f(1) = f(2)\)</span></li>
 </ul>
-<p>On déduit que la suite <span class="math inline">\((u_n)\)</span> est croissante à partir du rang <span class="math inline">\(1\)</span> et strictement croissante à partir du rang <span class="math inline">\(2\)</span>.</p>
+<p>On en conclut que la suite <span class="math inline">\((u_n)\)</span> est croissante à partir du rang <span class="math inline">\(1\)</span> et strictement croissante à partir du rang <span class="math inline">\(2\)</span>.</p>
 </details>
 </div>
 <div class="bloc rem">
@@ -497,26 +517,33 @@ Par exemple, <span class="math inline">\(u_n = n + \cos(2\pi n)\)</span> est cro
 </div>
 </div>
 </section>
-<section id="étude-du-quotient" class="level4">
-<h4 class="anchored" data-anchor-id="étude-du-quotient">Étude du quotient</h4>
+<section id="étude-du-quotient" class="level3">
+<h3 class="anchored" data-anchor-id="étude-du-quotient">Étude du quotient</h3>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
 <ol type="1">
-<li><p>Si <span class="math inline">\(u_n &gt; 0\)</span>, alors : <span class="math display">\[\frac{u_{n+1}}{u_n} \geq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \leq 1 \iff \text{décroissante}\]</span></p></li>
-<li><p>Si <span class="math inline">\(u_n &lt; 0\)</span>, alors : <span class="math display">\[\frac{u_{n+1}}{u_n} \leq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \geq 1 \iff \text{décroissante}\]</span></p></li>
+<li><p>Si <span class="math inline">\(u_n &gt; 0\)</span>, alors :<br>
+<span class="math display">\[\frac{u_{n+1}}{u_n} \geq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \leq 1 \iff \text{décroissante}\]</span></p></li>
+<li><p>Si <span class="math inline">\(u_n &lt; 0\)</span>, alors :<br>
+<span class="math display">\[\frac{u_{n+1}}{u_n} \leq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \geq 1 \iff \text{décroissante}\]</span></p></li>
 </ol>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>On traite le cas <span class="math inline">\(u_n &lt;0\)</span> , le cas <span class="math inline">\(u_n&gt;0\)</span> se traite de façon analogue.\ Soit <span class="math inline">\((u_n)\)</span> une suite numérique à terme strictement négatif.\ Alors pour tout <span class="math inline">\(n \geqslant p\)</span>, <span class="math display">\[u_{n+1}-u_n \geqslant 0 \Longleftrightarrow u_{n+1} \geqslant u_n \underset{u_n &lt;0}{\Longleftrightarrow} \frac{u_{n+1}}{u_n} \leqslant 1\]</span> D’où la suite est croissante à partir du rang <span class="math inline">\(p\)</span> si et seulement si <span class="math inline">\(\frac{u_{n+1}}{u_n} &lt;1\)</span></p>
+<p>On traite le cas <span class="math inline">\(u_n &lt; 0\)</span>, le cas <span class="math inline">\(u_n &gt; 0\)</span> se traite de façon analogue.</p>
+<p>Soit <span class="math inline">\((u_n)\)</span> une suite numérique à termes strictement négatifs.</p>
+<p>Alors pour tout <span class="math inline">\(n \geqslant p\)</span>,<br>
+<span class="math display">\[u_{n+1}-u_n \geqslant 0 \Longleftrightarrow u_{n+1} \geqslant u_n \underset{u_n &lt;0}{\Longleftrightarrow} \frac{u_{n+1}}{u_n} \leqslant 1\]</span></p>
+<p>D’où la suite est croissante à partir du rang <span class="math inline">\(p\)</span> si et seulement si <span class="math inline">\(\frac{u_{n+1}}{u_n} \leq 1\)</span>.</p>
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
-<p>On considère la suite <span class="math inline">\((t_n)\)</span> définie pour tout <span class="math inline">\(n &gt;4\)</span> par <span class="math display">\[t_n=\frac{-2^n}{n-4}\]</span></p>
+<p>On considère la suite <span class="math inline">\((t_n)\)</span> définie pour tout <span class="math inline">\(n &gt; 4\)</span> par<br>
+<span class="math display">\[t_n = \frac{-2^n}{n-4}\]</span></p>
 <ol type="1">
-<li>A partir de quel rang la suite est-elle définie ?</li>
+<li>À partir de quel rang la suite est-elle définie ?</li>
 </ol>
 <details class="bloc cor">
 <summary>
@@ -531,12 +558,22 @@ La suite est définie à partir du rang <span class="math inline">\(5\)</span>, 
 <summary>
 Afficher la correction
 </summary>
-Pour tout <span class="math inline">\(n &gt; 4\)</span>, <span class="math display">\[\frac{t_{n+1}}{t_n} = \dfrac{\dfrac{-2^{n+1}}{n+1-4}}{\dfrac{-2^n}{n-4}} = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n} = \frac{2n-8}{n-3}\]</span> Or pour tout <span class="math inline">\(n \geqslant 5\)</span>, <span class="math display">\[\frac{2n-8}{n-3}  \geqslant 1 \underset{n-3 &gt;0}{\Longleftrightarrow} 2n-8 \geqslant n-3 \Longleftrightarrow n \geqslant 5\]</span> On déduit alors que pour tout <span class="math inline">\(n \geqslant 5\)</span>, <span class="math display">\[\frac{t_{n+1}}{t_n} &gt; 1\]</span> La suite étant à terme strictement négatif puisque, pour tout <span class="math inline">\(n &gt;4\)</span>, <span class="math inline">\(-2^n &lt;0\)</span> et <span class="math inline">\(n-3&gt;0\)</span>, on déduit que <span class="math display">\[\frac{t_{n+1}}{t_n}  \geqslant 1 \underset{t_n &lt;0}{\Longleftrightarrow} t_{n+1} \leqslant t_n \]</span> Donc la suite <span class="math inline">\((t_n)\)</span> est négative
+<p>Pour tout <span class="math inline">\(n &gt; 4\)</span>,<br>
+<span class="math display">\[\frac{t_{n+1}}{t_n} = \dfrac{\dfrac{-2^{n+1}}{n+1-4}}{\dfrac{-2^n}{n-4}} = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n} = \frac{2n-8}{n-3}\]</span></p>
+<p>Or, pour tout <span class="math inline">\(n \geqslant 5\)</span>,<br>
+<span class="math display">\[\frac{2n-8}{n-3}  \geqslant 1 \Longleftrightarrow 2n-8 \geqslant n-3 \Longleftrightarrow n \geqslant 5\]</span></p>
+<p>On déduit alors que pour tout <span class="math inline">\(n \geqslant 5\)</span>,<br>
+<span class="math display">\[\frac{t_{n+1}}{t_n} &gt; 1\]</span></p>
+<p>La suite étant à termes strictement négatifs puisque, pour tout <span class="math inline">\(n &gt; 4\)</span>, <span class="math display">\[-2^n &lt; 0 \quad \et \quad n-3 &gt; 0\]</span> On déduit que :<br>
+<span class="math display">\[\frac{t_{n+1}}{t_n}  \geqslant 1 \underset{t_n &lt;0}{\Longleftrightarrow} t_{n+1} \leqslant t_n \]</span></p>
+<p>Donc la suite <span class="math inline">\((t_n)\)</span> est décroissante à partir du rang <span class="math inline">\(5\)</span>.</p>
 </details>
+</div>
+<div class="nav-pages">
+<p><a class="prev" href="liste_terme_python.html">⬅️</a> <a class="next" href="limites.html">➡️</a></p>
 </div>
 
 
-</section>
 </section>
 </section>
 

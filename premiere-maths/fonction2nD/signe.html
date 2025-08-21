@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Factoriser et Signe d’une expression du second degré - Inéquations">
 
-<title>Signe et inéquation – Site pédagogique</title>
+<title>Factorisation et signe d’une fonction du second degré – Site pédagogique</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -189,7 +190,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/definition.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/signe.html">Signe et inéquation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/definition.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/signe.html">Factorisation et signe d’une fonction du second degré</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -236,7 +237,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Signe et inéquation</span></a>
+ <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,7 +255,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Equation et représentation graphique</span></a>
+ <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -283,12 +284,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de générations</span></a>
+ <span class="menu-text">Différents modes de génération</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_therme_python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Liste des termes d’une suite numérique</span></a>
   </div>
 </li>
@@ -307,7 +308,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme et programmation – Exercices interactifs</span></a>
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -342,7 +343,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée- Dérivées usuelles</span></a>
+ <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
   </div>
 </li>
       </ul>
@@ -357,18 +364,24 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#signe-dun-polynôme-de-degré-2" id="toc-signe-dun-polynôme-de-degré-2" class="nav-link active" data-scroll-target="#signe-dun-polynôme-de-degré-2">Signe d’un polynôme de degré 2</a></li>
+  <li><a href="#factorisation-du-trinôme" id="toc-factorisation-du-trinôme" class="nav-link active" data-scroll-target="#factorisation-du-trinôme">Factorisation du trinôme</a></li>
+  <li><a href="#signe-dun-polynôme-de-degré-2" id="toc-signe-dun-polynôme-de-degré-2" class="nav-link" data-scroll-target="#signe-dun-polynôme-de-degré-2">Signe d’un polynôme de degré 2</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/definition.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/signe.html">Signe et inéquation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/definition.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/signe.html">Factorisation et signe d’une fonction du second degré</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Signe et inéquation</h1>
+<h1 class="title">Factorisation et signe d’une fonction du second degré</h1>
 </div>
 
+<div>
+  <div class="description">
+    Factoriser et Signe d’une expression du second degré - Inéquations
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -383,17 +396,117 @@ window.Quarto = {
 </header>
 
 
-<hr>
+<section id="factorisation-du-trinôme" class="level2">
+<h2 class="anchored" data-anchor-id="factorisation-du-trinôme">Factorisation du trinôme</h2>
+<div class="bloc thm">
+<p><span class="bloc-titre">Théorème :</span><br>
+Soit <span class="math inline">\(f\)</span> une fonction polynôme de degré 2 définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x) = ax^2 + bx + c\)</span>.</p>
+<ol type="1">
+<li>Si <span class="math inline">\(\Delta &gt; 0\)</span>, alors <span class="math inline">\(f(x) = a(x - x_1)(x - x_2)\)</span>, où <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span> sont les racines de <span class="math inline">\(f(x)=0\)</span>.<br>
+</li>
+<li>Si <span class="math inline">\(\Delta = 0\)</span>, alors <span class="math inline">\(f(x)= a (x - x_0)^2\)</span>, où <span class="math inline">\(x_0\)</span> est la racine double de <span class="math inline">\(f(x)=0\)</span>.<br>
+</li>
+<li>Si <span class="math inline">\(\Delta &lt; 0\)</span>, alors <span class="math inline">\(f(x)\)</span> ne se factorise pas (en fonction polynôme du premier degré, c’est-à-dire en produit de deux fonctions affines).</li>
+</ol>
+<p>Un polynôme que l’on ne peut pas factoriser est dit <strong>irréductible</strong>.</p>
+</div>
+<details class="bloc demo">
+<summary>
+Démonstration :
+</summary>
+<p>On considère la forme canonique :<br>
+<span class="math display">\[f(x)=a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a}\]</span></p>
+<ol type="1">
+<li><p>Si <span class="math inline">\(\Delta &gt; 0\)</span>,<br>
+<span class="math display">\[f(x)= a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a} = a\left(\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a^2}\right) = a(x-x_1)(x-x_2)\]</span><br>
+Donc <span class="math display">\[f(x)=a(x-x_1)(x-x_2)\]</span></p></li>
+<li><p>Pour <span class="math inline">\(\Delta=0\)</span>, <span class="math inline">\(\beta=0\)</span> donc pour tout réel <span class="math inline">\(x\)</span>,<br>
+<span class="math display">\[f(x)=a\left(x- \frac{-b}{2a}\right)^2\]</span></p></li>
+<li><p>Si <span class="math inline">\(\Delta &lt;0\)</span>, alors <span class="math inline">\(\frac{\Delta}{4a^2}&lt;0\)</span>.<br>
+Ainsi <span class="math inline">\(f(x)\)</span> étant somme de deux quantités positives, il n’est pas factorisable.<br>
+Donc <span class="math inline">\(f(x)\)</span> n’admet pas de forme factorisée.</p></li>
+</ol>
+</details>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple :</span></p>
+<ol type="1">
+<li>Factoriser <span class="math inline">\(-3x^2+5x+4\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<p><span class="math inline">\(\Delta=5^2-4 \times (-3) \times 4 = 73 &gt;0\)</span>.</p>
+<p>Ainsi le polynôme admet deux racines réelles distinctes :<br>
+<span class="math display">\[x_1=\frac{-5-\sqrt{73}}{-6}, \quad x_2=\frac{-5+\sqrt{73}}{-6}\]</span></p>
+On déduit que pour tout réel <span class="math inline">\(x\)</span>,<br>
+<span class="math display">\[-3x^2+5x+4=-3(x-x_1)(x-x_2)\]</span>
+</details>
+<ol start="2" type="1">
+<li>Factoriser <span class="math inline">\(x^2+(\sqrt{3}-2\sqrt{2})x+2\sqrt{6}\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<p><span class="math inline">\(\Delta=(\sqrt{3}-2\sqrt{2})^2-4 \times 1 \times 2\sqrt{6} = 3 -4\sqrt{6}+8 -8\sqrt{6} = -12\sqrt{6}+11 &lt;0\)</span>.</p>
+Le discriminant étant négatif, le polynôme n’est pas factorisable.
+</details>
+<ol start="3" type="1">
+<li>Soit <span class="math inline">\(P(x) = a^2(b-x) + b^2(x-a)+x^2(a-b)\)</span>. Factoriser <span class="math inline">\(P(x)\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<p>On remarque que <span class="math inline">\(P(a)=a^2(b-a)+b^2(a-a)+a^2(a-b)=0\)</span> et de même <span class="math inline">\(P(b)=0\)</span>.</p>
+<p>On a trouvé deux racines de <span class="math inline">\(P\)</span> distinctes, ce sont donc les deux racines de <span class="math inline">\(P\)</span>.</p>
+<p>En développant et réorganisant l’expression de <span class="math inline">\(P\)</span>, on obtient :<br>
+<span class="math display">\[P(x) = (a-b)x^2 + (b^2-a^2)x + ab(a-b)\]</span></p>
+Ainsi, le coefficient dominant étant <span class="math inline">\(a-b\)</span>, on peut factoriser :<br>
+<span class="math display">\[P(x)=(a-b)(x-a)(x-b)\]</span>
+</details>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque :</span><br>
+Dans <span class="math inline">\(\R\)</span>, tout polynôme se factorise en produit de polynômes du second degré et du premier degré.</p>
+</div>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple :</span></p>
+<p>Soit <span class="math inline">\(P(x)=2x^3-x-1\)</span>. Donner une forme factorisée de <span class="math inline">\(P(x)\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<p><span class="math inline">\(1\)</span> est une racine évidente de <span class="math inline">\(P\)</span>. En effet <span class="math inline">\(P(1) = 2-1-1=0\)</span>.</p>
+<p>Donc pour tout réel <span class="math inline">\(x\)</span>,<br>
+<span class="math display">\[P(x)=(x-1)(ax^2+bx+c)\]</span></p>
+<p>Or pour tout réel <span class="math inline">\(x\)</span>,<br>
+<span class="math display">\[(x-1)(ax^2+bx+c) = ax^3+(b-a)x^2 + (c-b)x - c\]</span></p>
+<p>Donc<br>
+<span class="math display">\[2x^3-x-1= ax^3 + (b-a)x^2 + (c-b)x - c\]</span></p>
+<p>Ces polynômes étant égaux, alors les coefficients des mêmes monômes sont deux à deux égaux :<br>
+<span class="math display">\[\left\{\begin{array}{l} a=2\\ b-a=0\\ c-b = -1\\ -c=-1 \end{array}\right.\]</span></p>
+<p>Ainsi <span class="math inline">\(a=2, b=2\)</span> et <span class="math inline">\(c=-1\)</span>.</p>
+<p>Donc<br>
+<span class="math display">\[P(x)=(x-1)(2x^2+2x+1)\]</span></p>
+<p>Or <span class="math inline">\(2x^2+2x+1\)</span> admet comme discriminant <span class="math inline">\(\Delta = 2^2-4 \times 2 \times 1 = -4 &lt;0\)</span>.</p>
+<p>Donc ce trinôme du second degré n’est pas factorisable.</p>
+On déduit qu’une forme factorisée de <span class="math inline">\(P\)</span> est :<br>
+<span class="math display">\[P(x)=(x-1)(2x^2+2x+1)\]</span>
+</details>
+</div>
+</section>
 <section id="signe-dun-polynôme-de-degré-2" class="level2">
 <h2 class="anchored" data-anchor-id="signe-dun-polynôme-de-degré-2">Signe d’un polynôme de degré 2</h2>
 <p>Soit <span class="math inline">\(P\)</span> une fonction polynôme de degré 2, tel que <span class="math inline">\(P(x) = ax^2 + bx + c\)</span> et on suppose qu’il admet deux racines <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span> distinctes.<br>
 On a alors, pour tout réel <span class="math inline">\(x\)</span>,<br>
 <span class="math display">\[P(x) = a (x - x_1)(x - x_2)\]</span></p>
-<p>En considérant <span class="math inline">\(a&gt;0\)</span> et <span class="math inline">\(x_1 &lt; x_2\)</span>, on a donc le tableau de signe suivant :</p>
+<p>En considérant <span class="math inline">\(a&gt;0\)</span> et <span class="math inline">\(x_1 &lt; x_2\)</span>, on a donc le tableau de signes suivant :</p>
 <div style="text-align: center;">
 <p><img src="../../image/tabsigne1.png" class="img-fluid" style="width:50.0%"></p>
 </div>
-On obtient le tableau de signe de <span class="math inline">\(P(x)\)</span> suivant le signe de <span class="math inline">\(a\)</span>.<br>
+On obtient le tableau de signes de <span class="math inline">\(P(x)\)</span> suivant le signe de <span class="math inline">\(a\)</span>.<br>
 
 <div style="text-align: center;">
 <p><img src="../../image/tabsigne2.png" class="img-fluid" style="width:70.0%"></p>
@@ -431,7 +544,7 @@ Cette dernière inégalité est vraie pour tout <span class="math inline">\(x \i
 <li><p>Le cas <span class="math inline">\(a&lt;0\)</span> se traite de façon identique en considérant <span class="math inline">\(P(x)&lt;0\)</span>.</p></li>
 </ul></li>
 <li><p>Si <span class="math inline">\(\Delta = 0\)</span>, alors <span class="math inline">\(P(x) = a(x-x_0)^2\)</span>. Comme <span class="math inline">\((x-x_0)^2 \ge 0\)</span> pour tout <span class="math inline">\(x \in \mathbb{R}\)</span>, on en déduit que <span class="math inline">\(P(x)\)</span> est du signe de <span class="math inline">\(a\)</span> pour tout <span class="math inline">\(x \in \mathbb{R} \setminus \{x_0\}\)</span> et s’annule en <span class="math inline">\(x_0\)</span>.</p></li>
-<li><p>Si <span class="math inline">\(\Delta &gt; 0\)</span>, alors <span class="math inline">\(P(x) = a(x-x_1)(x-x_2)\)</span>, et l’étude est faite ci‑dessus.</p></li>
+<li><p>Si <span class="math inline">\(\Delta &gt; 0\)</span>, alors <span class="math inline">\(P(x) = a(x-x_1)(x-x_2)\)</span>, et l’étude est faite ci-dessus.</p></li>
 </ul>
 </details>
 <div class="bloc ex">
@@ -439,7 +552,7 @@ Cette dernière inégalité est vraie pour tout <span class="math inline">\(x \i
 <p>Soit <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = 3x^2 + 2x - 1\)</span>, une fonction polynôme du second degré.<br>
 <span class="math display">\[\Delta = 2^2 - 4 \times 3 \times (-1) = 4 + 12 = 16\]</span><br>
 Donc <span class="math inline">\(\Delta &gt; 0\)</span>. Ainsi <span class="math inline">\(f(x)\)</span> admet deux racines réelles distinctes.<br>
-<span class="math display">\[x_1 = \frac{-2 + 4}{6} = \frac{1}{3}~~~~\text{et}~~~~x_2 = \frac{-2 - 4}{6} = -1\]</span><br>
+<span class="math display">\[x_1 = \frac{-2 + 4}{6} = \frac{1}{3} \quad \text{et} \quad x_2 = \frac{-2 - 4}{6} = -1\]</span><br>
 Puisque <span class="math inline">\(3 &gt; 0\)</span>, on déduit que <span class="math inline">\(f(x)\)</span> est positive à l’extérieur des racines et négative à l’intérieur.</p>
 <ul>
 <li><span class="math inline">\(f(x) &gt; 0\)</span> si et seulement si <span class="math inline">\(x \in \left]- \infty\, ; \, -1 \right[ \cup \left] \frac{1}{3}\, ; \, +\infty \right[\)</span><br>
@@ -456,14 +569,13 @@ Puisque <span class="math inline">\(3 &gt; 0\)</span>, on déduit que <span clas
 <summary>
 Afficher la correction
 </summary>
-On pose pour tout réel <span class="math inline">\(x\)</span>,<br>
+<p>On pose pour tout réel <span class="math inline">\(x\)</span>,<br>
 <span class="math display">\[N(x) = 3x^2 - 7x + 4\]</span><br>
-Il admet comme discriminant<br>
+Il admet pour discriminant<br>
 <span class="math display">\[\Delta = (-7)^2 - 4 \times 3 \times 4 = 49 - 48 = 1\]</span><br>
 Donc <span class="math inline">\(N(x)\)</span> admet deux racines réelles distinctes :<br>
 <span class="math display">\[x_1 = \frac{7 + 1 }{6} = \frac{4}{3}, \quad x_2=\frac{7-1}{6} = 1\]</span><br>
-<span class="math display">\[A(x) = \frac{3(x - x_1)(x - x_2)}{(x - \sqrt{3})(x + \sqrt{3})}\]</span><br>
-
+<span class="math display">\[A(x) = \frac{3(x - x_1)(x - x_2)}{(x - \sqrt{3})(x + \sqrt{3})}\]</span></p>
 <div style="text-align: center;">
 <p><img src="../../image/tabsigne6.png" class="img-fluid" style="width:50.0%"></p>
 </div>
@@ -488,8 +600,8 @@ Donc <span class="math inline">\(N(x)\)</span> admet deux racines réelles disti
 <summary>
 Afficher la correction
 </summary>
-Pour tout réel <span class="math inline">\(x \neq -1\)</span>, <span class="math display">\[f(x)-g(x)= \frac{4-2x}{x+1}- \frac{1}{2}x+2 = \frac{8-4x -
-(x-4)(x+1)}{2(x+1)} = \frac{8-4x-x^2-x+4x+4}{2x+2} = \frac{-x^2-x+12}{2x+2}\]</span>
+Pour tout réel <span class="math inline">\(x \neq -1\)</span> :<br>
+<span class="math display">\[f(x)-g(x)= \frac{4-2x}{x+1}- \frac{1}{2}x+2 = \frac{8-4x - (x-4)(x+1)}{2(x+1)} = \frac{8-4x-x^2-x+4x+4}{2x+2} = \frac{-x^2-x+12}{2x+2}\]</span>
 </details>
 <ol start="2" type="1">
 <li>Établir le tableau de signes de <span class="math inline">\(f(x)-g(x)\)</span>.</li>
@@ -498,7 +610,12 @@ Pour tout réel <span class="math inline">\(x \neq -1\)</span>, <span class="mat
 <summary>
 Afficher la correction
 </summary>
-Soit <span class="math inline">\(-x^2-x+12\)</span>.<br> <span class="math inline">\(\Delta=(-1)^2-4 \times (-1) \times (12) = 49 &gt;0\)</span>.<br>S Donc le polynôme admet deux racines réelles distinctes <span class="math display">\[x_1=\frac{-(-1)+ \sqrt{49}}{2 \times (-1)} = -4 \quad \quad et \quad \quad x_2 = 3\]</span> Le polynôme est du signe de son coefficient dominant <span class="math inline">\(2&gt;0\)</span> à l’extérieur des racines et du signe contraire à l’intérieur.<br> On déduit le tableau de signe suivant
+<p>Soit <span class="math inline">\(-x^2-x+12\)</span>.<br>
+<span class="math inline">\(\Delta=(-1)^2-4 \times (-1) \times (12) = 49 &gt;0\)</span>.<br>
+Donc le polynôme admet deux racines réelles distinctes :<br>
+<span class="math display">\[x_1=\frac{-(-1)+ \sqrt{49}}{2 \times (-1)} = -4 \quad \text{et} \quad x_2 = 3\]</span></p>
+<p>Le polynôme est du signe de son coefficient dominant <span class="math inline">\(-1 &lt; 0\)</span> à l’extérieur des racines et du signe contraire à l’intérieur.</p>
+<p>On déduit le tableau de signes suivant :</p>
 <div style="text-align: center;">
 <p><img src="../../image/tabsigne7.png" class="img-fluid" style="width:50.0%"></p>
 </div>
@@ -510,11 +627,15 @@ Soit <span class="math inline">\(-x^2-x+12\)</span>.<br> <span class="math inlin
 <summary>
 Afficher la correction
 </summary>
-<p>D’après le tableau de signe précédent on déduit que :</p>
+<p>D’après le tableau de signes précédent on déduit que :</p>
 <ul>
-<li><span class="math inline">\(f(x) &gt; g(x)\)</span> pour <span class="math inline">\(x \in ]- \infty\,;\, -4[ \cup ]-1 \, ; \, 3[\)</span>.\ Donc <span class="math inline">\(\mathscr{C}_f\)</span> est au dessus de <span class="math inline">\(\mathscr{C}_g\)</span> sur ces deux intervalles.</li>
-<li><span class="math inline">\(f(x) &lt; g(x)\)</span> pour <span class="math inline">\(x \in ]-4 \, ; \, -1[ \cup ]3 \, ; \, + \infty[\)</span>.\ Donc <span class="math inline">\(\mathscr{C}_f\)</span> est en dessous de <span class="math inline">\(\mathscr{C}_g\)</span> sur ces deux intervalles.</li>
-<li><span class="math inline">\(f(x)= g(x)\)</span> pour <span class="math inline">\(x \in \{-4\, ; \, 3\}\)</span>, donc les représentations graphiques des fonctions <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> se coupent au point d’abscisses <span class="math inline">\(-8\)</span> et<span class="math inline">\(3\)</span>.</li>
+<li><span class="math inline">\(f(x) &gt; g(x)\)</span> pour <span class="math inline">\(x \in ]- \infty\,;\, -4[ \cup ]-1 \, ; \, 3[\)</span>.<br>
+Donc <span class="math inline">\(\mathscr{C}_f\)</span> est au-dessus de <span class="math inline">\(\mathscr{C}_g\)</span> sur ces deux intervalles.<br>
+</li>
+<li><span class="math inline">\(f(x) &lt; g(x)\)</span> pour <span class="math inline">\(x \in ]-4 \, ; \, -1[ \cup ]3 \, ; \, + \infty[\)</span>.<br>
+Donc <span class="math inline">\(\mathscr{C}_f\)</span> est en dessous de <span class="math inline">\(\mathscr{C}_g\)</span> sur ces deux intervalles.<br>
+</li>
+<li><span class="math inline">\(f(x)= g(x)\)</span> pour <span class="math inline">\(x \in \{-4\, ; \, 3\}\)</span>, donc les représentations graphiques des fonctions <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> se coupent en <span class="math inline">\(x=-4\)</span> et <span class="math inline">\(x=3\)</span>.</li>
 </ul>
 </details>
 </div>
@@ -547,7 +668,10 @@ Le discriminant doit être négatif pour que la fonction soit de signe constant.
 <summary>
 Afficher la correction
 </summary>
-<span class="math inline">\(h_m(x) &gt;0\)</span> pour tout réel <span class="math inline">\(x\)</span> si et seulement si son coefficient dominant est positif et son discriminant strictement négatif.<br> Donc <span class="math display">\[m &gt;0 \quad \et \quad 16+20m &lt;0\]</span> C’est-à-dire <span class="math display">\[m&gt;0 \quad \et \quad&nbsp;m &lt;\frac{-5}{4}\]</span> Ce qui est impossible.
+<span class="math inline">\(h_m(x) &gt;0\)</span> pour tout réel <span class="math inline">\(x\)</span> si et seulement si son coefficient dominant est positif et son discriminant strictement négatif.<br>
+Donc <span class="math display">\[m &gt;0 \quad \et \quad 16+20m &lt;0\]</span><br>
+C’est-à-dire <span class="math display">\[m&gt;0 \quad \et \quad m &lt;\frac{-5}{4}\]</span><br>
+Ce qui est impossible.
 </details>
 </div>
 <div class="nav-pages">

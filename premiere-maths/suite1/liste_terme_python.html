@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Déterminer la valeur des termes consécutifs d’une suite">
+<meta name="description" content="Algorithme de calcul des termes consécutifs - Notion de liste en Python.">
 
 <title>Liste des termes d’une suite numérique – Site pédagogique</title>
 <style>
@@ -149,6 +149,12 @@ window.MathJax = {
   }
 };
 </script>
+<link rel="stylesheet" href="../../assets/css/pyodide-mkdocs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css">
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<script src="../../assets/js/pyodide-mkdocs.js" defer=""></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -224,7 +230,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/suite1/definition.html">Suites numériques : Généralités</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/suite1/liste_therme_python.html">Liste des termes d’une suite numérique</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/suite1/definition.html">Suites numériques : Généralités</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/suite1/liste_terme_python.html">Liste des termes d’une suite numérique</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -271,7 +277,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe et inéquation</span></a>
+ <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -289,7 +295,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Equation et représentation graphique</span></a>
+ <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,12 +324,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de générations</span></a>
+ <span class="menu-text">Différents modes de génération</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_therme_python.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Liste des termes d’une suite numérique</span></a>
   </div>
 </li>
@@ -342,7 +348,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme et programmation – Exercices interactifs</span></a>
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -377,7 +383,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée- Dérivées usuelles</span></a>
+ <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
   </div>
 </li>
       </ul>
@@ -387,26 +399,20 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#liste-des-termes-dune-suite-numérique" id="toc-liste-des-termes-dune-suite-numérique" class="nav-link active" data-scroll-target="#liste-des-termes-dune-suite-numérique">Liste des termes d’une suite numérique</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/suite1/definition.html">Suites numériques : Généralités</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/suite1/liste_therme_python.html">Liste des termes d’une suite numérique</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/suite1/definition.html">Suites numériques : Généralités</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/suite1/liste_terme_python.html">Liste des termes d’une suite numérique</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Liste des termes d’une suite numérique</h1>
 </div>
 
 <div>
   <div class="description">
-    Déterminer la valeur des termes consécutifs d’une suite
+    Algorithme de calcul des termes consécutifs - Notion de liste en Python.
   </div>
 </div>
 
@@ -423,52 +429,96 @@ window.Quarto = {
 </header>
 
 
-<section id="liste-des-termes-dune-suite-numérique" class="level2">
-<h2 class="anchored" data-anchor-id="liste-des-termes-dune-suite-numérique">Liste des termes d’une suite numérique</h2>
-<p>On introduit dans cette partie la notion de <code>liste</code> en Python.</p>
+<p>On introduit dans cette partie la notion de <code>liste</code> en Python. Une liste est une structure Python qui permet de stocker, dans une variable, un ensemble d’éléments comme des nombres. <br> Une liste se crée avec :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> []    <span class="co"># on crée une liste vide</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> [<span class="dv">4</span>]   <span class="co"># on crée une liste dont le premier élément est 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>De plus, les listes sont des structures ordonnées. Chaque élément est repéré par sa position : son indice (comme pour les suites) : 0 pour le premier élément, 1 pour le deuxième, etc.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">8</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">4</span>]  <span class="co"># liste de quatre éléments : dans l'ordre 1, 8, -5 et 4</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># L[0] renvoie la valeur 1</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># L[2] renvoie la valeur -5</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>L.append(<span class="op">-</span><span class="dv">2</span>)       <span class="co"># permet d'ajouter -2 en dernière position de la liste</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo2">
+    <div class="bar-top"><span class="cell-num">Recherche de seuil</span></div>
+    <textarea id="code">L = [1, 8, -5, 4]  # liste de quatre éléments : dans l'ordre 1, 8, -5 et 4
+print(L[0])        # renvoie la valeur 1
+print(L[2])        # renvoie la valeur -5
+L.append(-2)       # ajout en dernière position
+print(L)
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled=""></button>
+      <button class="btn" id="check" disabled=""></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
 <p>Déterminer la suite des <span class="math inline">\(n\)</span> premiers termes de la suite <span class="math inline">\((u_n)\)</span> définie par :<br>
 <span class="math display">\[u_n = 3n^2 - 5n + 1\]</span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> terme_u(n):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> []</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> i<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">5</span> <span class="op">*</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        L.append(u)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>terme_u(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<iframe src="https://console.basthon.fr/?from=https://raw.githubusercontent.com/chris-degeuil/python/suite_cours1.py" width="100%" height="520" style="border:1px solid #ddd;border-radius:8px" loading="lazy">
-</iframe>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> terme_u(n):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> []</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> i<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">5</span> <span class="op">*</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        L.append(u)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>terme_u(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo3">
+    <div class="bar-top"><span class="cell-num">Recherche de seuil</span></div>
+    <textarea id="code">def terme_u(n):
+    L = []
+    for i in range(n):
+        u = 3 * i**2 - 5 * i + 1
+        L.append(u)
+    return L
+
+terme_u(10)
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled=""></button>
+      <button class="btn" id="check" disabled=""></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
 <p>Déterminer la suite des <span class="math inline">\(n\)</span> premiers termes de la suite <span class="math inline">\((u_n)\)</span> définie par :<br>
-<span class="math inline">\(u_0 = 3\)</span> et pour tout <span class="math inline">\(n \geqslant 2\)</span>,<br>
+<span class="math inline">\(u_0 = 3\)</span> et, pour tout <span class="math inline">\(n \geqslant 2\)</span>,<br>
 <span class="math display">\[u_{n+1} = \frac{u_n^2}{n-1}\]</span></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> terme_u(n):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> [u]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n <span class="op">+</span> <span class="dv">2</span>):</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> u<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> (i <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        L.append(u)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> terme_u_v2(n):</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> [<span class="dv">3</span>]</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n <span class="op">+</span> <span class="dv">2</span>):</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        L.append(L[<span class="op">-</span><span class="dv">1</span>]<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> (i <span class="op">-</span> <span class="dv">1</span>))</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>terme_u(<span class="dv">5</span>), terme_u_v2(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> terme_u(n):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> [u]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n <span class="op">+</span> <span class="dv">2</span>):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> u<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> (i <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        L.append(u)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> terme_u_v2(n):</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> [<span class="dv">3</span>]</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n <span class="op">+</span> <span class="dv">2</span>):</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        L.append(L[<span class="op">-</span><span class="dv">1</span>]<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> (i <span class="op">-</span> <span class="dv">1</span>))  <span class="co"># L[-1] permet d'appeler le dernier élément de la liste</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>terme_u(<span class="dv">5</span>), terme_u_v2(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<iframe src="https://console.basthon.fr/?from=https://raw.githubusercontent.com/chris-degeuil/python/suite_cours2.py" width="100%" height="520" style="border:1px solid #ddd;border-radius:8px" loading="lazy">
-</iframe>
+<div class="nav-pages">
+<p><a class="prev" href="generation.html">⬅️</a> <a class="next" href="variations.html">➡️</a></p>
+</div>
 
 
-</section>
 
-</main> <!-- /main -->
+</div></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

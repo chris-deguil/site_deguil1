@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Faire le lien entre les coefficients et les solutions d’une équation - Système d’équation à 2 inconnues">
 
 <title>Lien coefficients - racines – Site pédagogique</title>
 <style>
@@ -236,7 +237,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe et inéquation</span></a>
+ <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,7 +255,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Equation et représentation graphique</span></a>
+ <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -283,12 +284,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de générations</span></a>
+ <span class="menu-text">Différents modes de génération</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_therme_python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Liste des termes d’une suite numérique</span></a>
   </div>
 </li>
@@ -307,7 +308,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme et programmation – Exercices interactifs</span></a>
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -342,7 +343,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée- Dérivées usuelles</span></a>
+ <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
   </div>
 </li>
       </ul>
@@ -369,6 +376,11 @@ window.Quarto = {
 <h1 class="title">Lien coefficients - racines</h1>
 </div>
 
+<div>
+  <div class="description">
+    Faire le lien entre les coefficients et les solutions d’une équation - Système d’équation à 2 inconnues
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -388,38 +400,42 @@ window.Quarto = {
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
 <p>Soit <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> une fonction polynôme du second degré, de racines <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span> (éventuellement <span class="math inline">\(x_1 = x_2\)</span>).<br>
-Alors en appelant <span class="math inline">\(S\)</span> la somme des racines et <span class="math inline">\(P\)</span> le produit des racines, on a :<br>
-<span class="math display">\[S = x_1 + x_2 = - \frac{b}{a} ~~~~ \text{et} ~~~~ P = x_1 \times x_2 = \frac{c}{a}\]</span><br>
-et pour tout réel <span class="math inline">\(x\)</span> :<br>
-<span class="math display">\[f(x) = a \left(x^2 - Sx + P \right)\]</span></p>
+Alors, en appelant <span class="math inline">\(S\)</span> la somme des racines et <span class="math inline">\(P\)</span> le produit des racines, on a :</p>
+<p><span class="math display">\[S = x_1 + x_2 = - \frac{b}{a} \qquad \text{et} \qquad P = x_1 \times x_2 = \frac{c}{a}\]</span></p>
+<p>et pour tout réel <span class="math inline">\(x\)</span> :</p>
+<p><span class="math display">\[f(x) = a \left(x^2 - Sx + P \right)\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>Soit <span class="math inline">\(f:x \longmapsto ax^2+bx+c\)</span> une fonction du second degré ayant deux racines <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span> éventuellement confondues.<br>
-Alors, pour tout réel <span class="math inline">\(x\)</span> :<br>
-<span class="math display">\[\begin{align*}
-ax^2+bx+c=a(x-x_1)(x-x_2) &amp;\Longleftrightarrow ax^2+bx+c = ax^2 - a(x_1+x_2)x + ax_1x_2 \\
-&amp;\Longleftrightarrow x^2 + \frac{b}{a}x  + \frac{c}{a} = x^2 - (x_1+x_2)x + x_1x_2 \\
-&amp;\Longleftrightarrow -\frac{b}{a} = x_1+x_2 \quad \text{et} \quad \frac{c}{a} = x_1x_2
+<p>Soit <span class="math inline">\(f:x \longmapsto ax^2+bx+c\)</span> une fonction du second degré ayant deux racines <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span>, éventuellement confondues.<br>
+Alors, pour tout réel <span class="math inline">\(x\)</span> :</p>
+<p><span class="math display">\[\begin{align*}
+ax^2+bx+c &amp;= a(x-x_1)(x-x_2) \\
+&amp;= ax^2 - a(x_1+x_2)x + ax_1x_2 \\
+&amp;\Longleftrightarrow x^2 + \tfrac{b}{a}x  + \tfrac{c}{a} = x^2 - (x_1+x_2)x + x_1x_2 \\
+&amp;\Longleftrightarrow -\tfrac{b}{a} = x_1+x_2 \quad \text{et} \quad \tfrac{c}{a} = x_1x_2
 \end{align*}\]</span></p>
 </details>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque :</span><br>
-Lorsque l’on connaît l’expression algébrique d’un polynôme du second degré, et une de ses racines, alors on connaît automatiquement la seconde racine.<br>
-On peut chercher, par exemple, parmi les valeurs <span class="math inline">\(-2\)</span>, <span class="math inline">\(-1\)</span>, <span class="math inline">\(1\)</span> ou <span class="math inline">\(2\)</span> (éventuellement <span class="math inline">\(\sqrt{2}\)</span>), si une de ces valeurs n’est pas une racine de notre polynôme. Si c’est le cas, on peut alors la caractériser de <strong>racine évidente</strong>.</p>
+Lorsque l’on connaît l’expression algébrique d’un polynôme du second degré, et une de ses racines, alors on connaît automatiquement la seconde racine.</p>
+<p>On peut chercher, par exemple, parmi les valeurs <span class="math inline">\(-2\)</span>, <span class="math inline">\(-1\)</span>, <span class="math inline">\(1\)</span> ou <span class="math inline">\(2\)</span> (éventuellement <span class="math inline">\(\sqrt{2}\)</span>), si une de ces valeurs n’est pas une racine du polynôme. Si c’est le cas, on peut alors la caractériser de <strong>racine évidente</strong>.</p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
 <p>Soit <span class="math inline">\(f(x) = -5x^2 + 3x + 14\)</span>.<br>
-<span class="math inline">\(x_1 = 2\)</span> est une racine évidente, en effet :<br>
-<span class="math display">\[-5 \times 2^2 + 3 \times 2 + 14 = 0\]</span><br>
-Le polynôme admettant une racine, il en admet une deuxième <span class="math inline">\(x_2\)</span>, et :<br>
-<span class="math display">\[x_1 x_2 = \frac{14}{-5} \quad \Rightarrow \quad x_2 = \frac{14}{2 \times -5} = -\frac{7}{5}\]</span></p>
+<span class="math inline">\(x_1 = 2\)</span> est une racine évidente, en effet :</p>
+<p><span class="math display">\[-5 \times 2^2 + 3 \times 2 + 14 = 0\]</span></p>
+<p>Le polynôme admettant une racine, il en admet une deuxième <span class="math inline">\(x_2\)</span>, et :</p>
+<p><span class="math display">\[x_1 x_2 = \frac{14}{-5} \quad \Rightarrow \quad x_2 = \frac{14}{2 \times -5} = -\tfrac{7}{5}\]</span></p>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="coefficient.html">⬅️</a></p>
+</div>
+<div class="nav-pages">
+<p><a class="prev" href="signe.html">⬅️</a> <a class="next" href="parabole.html">➡️</a></p>
 </div>
 
 

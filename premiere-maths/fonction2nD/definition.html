@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Définir une fonction du second degré - Égalité de deux polynômes - Forme canonique">
 
 <title>Fonction polynôme du second degré – Site pédagogique</title>
 <style>
@@ -236,7 +237,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe et inéquation</span></a>
+ <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,7 +255,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Equation et représentation graphique</span></a>
+ <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -283,12 +284,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de générations</span></a>
+ <span class="menu-text">Différents modes de génération</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_therme_python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Liste des termes d’une suite numérique</span></a>
   </div>
 </li>
@@ -307,7 +308,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme et programmation – Exercices interactifs</span></a>
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -342,7 +343,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée- Dérivées usuelles</span></a>
+ <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
   </div>
 </li>
       </ul>
@@ -357,12 +364,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fonction-polynôme-du-second-degré" id="toc-fonction-polynôme-du-second-degré" class="nav-link active" data-scroll-target="#fonction-polynôme-du-second-degré">Fonction polynôme du second degré</a>
-  <ul class="collapse">
-  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link active" data-scroll-target="#définition">Définition</a></li>
   <li><a href="#théorème" id="toc-théorème" class="nav-link" data-scroll-target="#théorème">Théorème</a></li>
   <li><a href="#forme-canonique" id="toc-forme-canonique" class="nav-link" data-scroll-target="#forme-canonique">Forme canonique</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -374,6 +378,11 @@ window.Quarto = {
 <h1 class="title">Fonction polynôme du second degré</h1>
 </div>
 
+<div>
+  <div class="description">
+    Définir une fonction du second degré - Égalité de deux polynômes - Forme canonique
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -388,23 +397,21 @@ window.Quarto = {
 </header>
 
 
-<hr>
-<section id="fonction-polynôme-du-second-degré" class="level2">
-<h2 class="anchored" data-anchor-id="fonction-polynôme-du-second-degré">Fonction polynôme du second degré</h2>
 <section id="définition" class="level3">
 <h3 class="anchored" data-anchor-id="définition">Définition</h3>
 <div class="bloc def">
-<p><span class="bloc-titre"> Définition : Fonctions du second degré</span><br>
-On dit que <span class="math inline">\(f\)</span> est une fonction polynôme de degré 2 lorsqu’il existe <span class="math inline">\(a, b, c \in \mathbb{R}\)</span>, avec <span class="math inline">\(a \ne 0\)</span>, tels que :</p>
+<p><span class="bloc-titre">Définition : Fonctions du second degré</span></p>
+<p>On dit que <span class="math inline">\(f\)</span> est une fonction polynôme de degré 2 lorsqu’il existe <span class="math inline">\(a, b, c \in \mathbb{R}\)</span>, avec <span class="math inline">\(a \ne 0\)</span>, tels que :</p>
 <p><span class="math display">\[f(x) = ax^2 + bx + c\]</span></p>
 <ul>
-<li>Les réels <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> et <span class="math inline">\(c\)</span> sont appelés les coefficients du polynôme.</li>
+<li>Les réels <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> et <span class="math inline">\(c\)</span> sont appelés les coefficients du polynôme.<br>
+</li>
 <li>Le coefficient <span class="math inline">\(a\)</span> est appelé coefficient dominant, et <span class="math inline">\(c\)</span> le coefficient constant.</li>
 </ul>
 </div>
 <hr>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span></p>
+<p><span class="bloc-titre">Exemple :</span></p>
 <ol type="1">
 <li>Les fonctions suivantes sont des fonctions polynômes de degré 2 :</li>
 </ol>
@@ -414,12 +421,14 @@ g(x) = 2(x - 3)(5 - 3x),\quad
 h(x) = (x - 4)^2 - (2x - 4)^2
 \]</span></p>
 <ul>
-<li><p>Pour <span class="math inline">\(f\)</span> : <span class="math inline">\(a = 1\)</span>, <span class="math inline">\(b = 0\)</span>, <span class="math inline">\(c = -4\)</span>.</p></li>
+<li><p>Pour <span class="math inline">\(f\)</span> : <span class="math inline">\(a = 1\)</span>, <span class="math inline">\(b = 0\)</span>, <span class="math inline">\(c = -4\)</span>.<br>
+</p></li>
 <li><p>Après développement et simplification :<br>
 <span class="math display">\[
-g(x) = -6x^2 + 28x - 30,\quad h(x) = -3x^2 + 8x
+g(x) = -6x^2 + 28x - 30, \quad h(x) = -3x^2 + 8x
 \]</span></p></li>
-<li><p>Les coefficients dominants de <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> et <span class="math inline">\(h\)</span> sont respectivement <span class="math inline">\(1\)</span>, <span class="math inline">\(-6\)</span>, et <span class="math inline">\(-3\)</span>.</p></li>
+<li><p>Les coefficients dominants de <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> et <span class="math inline">\(h\)</span> sont respectivement <span class="math inline">\(1\)</span>, <span class="math inline">\(-6\)</span> et <span class="math inline">\(-3\)</span>.<br>
+</p></li>
 <li><p>Les coefficients constants sont respectivement <span class="math inline">\(-4\)</span>, <span class="math inline">\(-30\)</span> et <span class="math inline">\(0\)</span>.</p></li>
 </ul>
 <ol start="2" type="1">
@@ -441,7 +450,7 @@ k(x) = 3x - 1
 <section id="théorème" class="level3">
 <h3 class="anchored" data-anchor-id="théorème">Théorème</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br>
+<p><span class="bloc-titre">Théorème :</span><br>
 Une fonction polynôme du second degré est nulle si et seulement si <strong>tous</strong> ses coefficients sont nuls.</p>
 </div>
 <details class="bloc demo">
@@ -454,20 +463,23 @@ Démonstration
 </li>
 <li>Si <span class="math inline">\(f(x) = 0\)</span> pour tout <span class="math inline">\(x \in \mathbb{R}\)</span> :
 <ul>
-<li><span class="math inline">\(f(1) = a + b + c = 0\)</span></li>
-<li><span class="math inline">\(f(-1) = a - b + c = 0\)</span></li>
+<li><span class="math inline">\(f(1) = a + b + c = 0\)</span><br>
+</li>
+<li><span class="math inline">\(f(-1) = a - b + c = 0\)</span><br>
+</li>
 <li><span class="math inline">\(f(0) = c = 0\)</span></li>
 </ul></li>
 </ul>
 On en déduit que <span class="math inline">\(a + b = 0\)</span> et <span class="math inline">\(a - b = 0\)</span>, donc <span class="math inline">\(a = b = c = 0\)</span>.
 </details>
 <hr>
-<p><strong>Conséquence :</strong><br>
-Deux fonctions polynômes sont égales si et seulement si elles ont les mêmes coefficients.<br>
-L’écriture <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> est donc <strong>unique</strong>.</p>
+<div class="bloc rem">
+<p><span class="bloc-titre"> Conséquence : </span><br>
+Deux fonctions polynômes sont égales si et seulement si elles ont les mêmes coefficients, ainsi l’écriture d’une fonction polynôme du second degré sous la forme <span class="math display">\[f(x) =ax^2+bx+c\]</span> est unique.</p>
+</div>
 <hr>
 <div class="bloc ex">
-<p><span class="bloc-titre"> Exemple : </span></p>
+<p><span class="bloc-titre">Exemple :</span></p>
 <ol type="1">
 <li>Déterminer une fonction polynôme <span class="math inline">\(f\)</span> vérifiant <span class="math inline">\(f(x+1) - f(x) = x\)</span>.</li>
 </ol>
@@ -485,14 +497,12 @@ f(x+1) - f(x) &amp;= a(x+1)^2 + b(x+1) + c - (ax^2 + bx + c) \\
 \]</span></p>
 <p>On veut <span class="math inline">\(2ax + a + b = x\)</span>, donc :</p>
 <ul>
-<li><span class="math inline">\(2a = 1\)</span> donc <span class="math inline">\(a = \frac{1}{2}\)</span><br>
+<li><span class="math inline">\(2a = 1 \quad \Longrightarrow \quad a = \tfrac{1}{2}\)</span><br>
 </li>
-<li><span class="math inline">\(a + b = 0\)</span> donc <span class="math inline">\(b = -\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(a + b = 0 \quad \Longrightarrow \quad b = -\tfrac{1}{2}\)</span></li>
 </ul>
-Donc<br>
-<span class="math display">\[
-f(x) = \frac{1}{2}x^2 - \frac{1}{2}x
-\]</span>
+<p>Donc</p>
+<span class="math display">\[f(x) = \tfrac{1}{2}x^2 - \tfrac{1}{2}x\]</span>
 </details>
 <ol start="2" type="1">
 <li>En déduire une expression de <span class="math inline">\(S_n = \sum_{k=1}^n k\)</span>.</li>
@@ -501,10 +511,13 @@ f(x) = \frac{1}{2}x^2 - \frac{1}{2}x
 <summary>
 Afficher la correction
 </summary>
-Pour tout entier non nul <span class="math inline">\(k\)</span>, on a alors <span class="math inline">\(k=f(k+1)-f(k)\)</span>.\ Ainsi <span class="math display">\[\begin{align*}
-S_n&amp;=1+2+3+ \dots +(n-1)+n \\
-&amp;=(f(2)-f(1))+ (f(3)-f(2)) + \dots +(f(n)-f(n-1))+ (f(n+1)-f(n))\\ &amp;= f(n+1)- f(1) \\
-&amp;= \frac{1}{2}n^2+\frac{1}{2} n
+<p>Pour tout entier non nul <span class="math inline">\(k\)</span>, on a <span class="math inline">\(k = f(k+1) - f(k)\)</span>.</p>
+Ainsi :<br>
+<span class="math display">\[\begin{align*}
+S_n &amp;= 1 + 2 + 3 + \dots + (n-1) + n \\
+&amp;= (f(2)-f(1)) + (f(3)-f(2)) + \dots + (f(n)-f(n-1)) + (f(n+1)-f(n)) \\
+&amp;= f(n+1) - f(1) \\
+&amp;= \tfrac{1}{2}n^2 + \tfrac{1}{2}n
 \end{align*}\]</span>
 </details>
 </div>
@@ -513,12 +526,8 @@ S_n&amp;=1+2+3+ \dots +(n-1)+n \\
 <section id="forme-canonique" class="level3">
 <h3 class="anchored" data-anchor-id="forme-canonique">Forme canonique</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre"> Théorème : </span><br>
-Soit <span class="math inline">\(f(x) = ax^2 + bx + c\)</span>. Alors, pour tout <span class="math inline">\(x \in \mathbb{R}\)</span> : <span class="math display">\[
-f(x) = a(x - \alpha)^2 + \beta
-\]</span> avec <span class="math display">\[
-\alpha = -\frac{b}{2a}, \quad \beta = -\frac{b^2 - 4ac}{4a}
-\]</span></p>
+<p><span class="bloc-titre">Théorème :</span><br>
+Soit <span class="math inline">\(f\)</span> une fonction polynôme du second degré 2 définie sur <span class="math inline">\(\R\)</span> par <span class="math display">\[f(x) = ax^2 + bx +c \]</span> Alors pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[f(x) = a\left(x -\alpha\right)^2  +\beta \]</span> avec <span class="math display">\[\alpha=- \frac{b}{2a}\quad \et \quad \beta=- \fr\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
@@ -527,21 +536,20 @@ Démonstration
 <span class="math display">\[
 \begin{aligned}
 f(x) &amp;= ax^2 + bx + c \\
-&amp;= a\left(x^2 + \frac{b}{a}x\right) + c \\
-&amp;= a\left[\left(x + \frac{b}{2a}\right)^2 - \frac{b^2}{4a^2}\right] + c \\
-&amp;= a\left(x + \frac{b}{2a}\right)^2 - \frac{b^2 - 4ac}{4a}
+&amp;= a\left(x^2 + \tfrac{b}{a}x\right) + c \\
+&amp;= a\left[\left(x + \tfrac{b}{2a}\right)^2 - \tfrac{b^2}{4a^2}\right] + c \\
+&amp;= a\left(x + \tfrac{b}{2a}\right)^2 - \tfrac{b^2 - 4ac}{4a}
 \end{aligned}
 \]</span>
 </details>
 <hr>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span></p>
-<p>Il n’est pas utile de retenir les formules de <span class="math inline">\(\alpha\)</span> et <span class="math inline">\(\beta\)</span> par cœur :<br>
-il suffit de savoir <strong>mettre sous forme canonique</strong> en complétant le carré.</p>
+<p><span class="bloc-titre">Remarque :</span><br>
+On ne cherche pas à retenir les expressions de <span class="math inline">\(\alpha\)</span> et <span class="math inline">\(\beta\)</span>, il faut connaître la méthode de mise sous forme canonique.</p>
 </div>
 <hr>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span></p>
+<p><span class="bloc-titre">Exemple :</span></p>
 <ol type="1">
 <li><span class="math inline">\(f(x) = -x^2 + 4x - 5\)</span></li>
 </ol>
@@ -549,43 +557,41 @@ il suffit de savoir <strong>mettre sous forme canonique</strong> en complétant 
 <summary>
 Afficher la correction
 </summary>
-Pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math display">\[f(x)=-x^2+4x-5=-(\underbrace{x^2-4x}_{x^2+2\times (-2) \times x+\dots}) -5 = -\left((x-2)^2-4 \right)-5 = -(x-2)^2-1\]</span>
+<p>Pour tout <span class="math inline">\(x \in \R\)</span>,</p>
+<span class="math display">\[f(x) = -x^2 + 4x - 5 = -\big(x^2 - 4x\big) - 5 = -\big((x-2)^2 - 4\big) - 5 = -(x-2)^2 - 1\]</span>
 </details>
-<ol type="1">
-<li>Soit une fonction <span class="math inline">\(g\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(g(x) = 3x^2 + 6x - 3\)</span>. Résoudre <span class="math inline">\(g(x)=30\)</span></li>
+<ol start="2" type="1">
+<li>Soit une fonction <span class="math inline">\(g\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(g(x) = 3x^2 + 6x - 3\)</span>. Résoudre <span class="math inline">\(g(x)=30\)</span>=.</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<p>Pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math display">\[
+<p><em>On ne sait encore résoudre ce type d’équation, on va alors se ramener à une forme connue <span class="math inline">\(X^2=a\)</span></em><br> Pour tout <span class="math inline">\(x \in \R\)</span>,</p>
+<p><span class="math display">\[
 g(x) = 3x^2 + 6x - 3 = 3(\underbrace{x^2+2x}_{x^2+2 \times x \times 1 +\dots}) -3  = 3\left((x + 1)^2 - 1 \right) - 3 = 3(x+1)^2 - 6
 \]</span></p>
-<p>Ainsi, pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[\begin{aligned}
-g(x)=36 &amp;\Longleftrightarrow 3(x+1)^2 - 6 =30 \\
-&amp;\Longleftrightarrow 3(x+1)^2 =36 \\
-&amp;\Longleftrightarrow (x+1)^2=12 \\
-&amp;\Longleftrightarrow x+1 =\sqrt{12} \text{ ou }  x+1=-\sqrt{12} \\
-&amp;\Longleftrightarrow x=-1 \pm 2\sqrt{3}
-\end{aligned}\]</span></p>
+<p>Ainsi :<br>
+<span class="math display">\[\begin{align*}
+g(x)=30 &amp;\Longleftrightarrow 3(x+1)^2 - 6 = 30 \\
+&amp;\Longleftrightarrow 3(x+1)^2 = 36 \\
+&amp;\Longleftrightarrow (x+1)^2 = 12 \\
+&amp;\Longleftrightarrow x+1 = \pm \sqrt{12} \\
+&amp;\Longleftrightarrow x = -1 \pm 2\sqrt{3}
+\end{align*}\]</span></p>
 On déduit alors que les solutions de l’équation (c’est-à-dire les antécédents de <span class="math inline">\(30\)</span>) sont <span class="math inline">\(-1+2\sqrt{3}\)</span> et <span class="math inline">\(-21-2\sqrt{3}\)</span>
 </details>
 </div>
 <hr>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span></p>
-<ul>
-<li>La forme canonique de <span class="math inline">\(f\)</span> est une somme de termes négatifs → non factorisable.<br>
-</li>
-<li>Celle de <span class="math inline">\(g\)</span> est une différence de deux carrés → factorisable :<br>
-<span class="math display">\[
-g(x) = 3[(x+1)^2 - 2] = 3(x+1 - \sqrt{2})(x+1 + \sqrt{2})
-\]</span></li>
-</ul>
+<p><span class="bloc-titre">Remarque :</span><br>
+On remarque que l’on ne peut pas factoriser <span class="math inline">\(f\)</span>, puisque c’est la somme de deux quantités négatives (donc différent de <span class="math inline">\(a^2-b^2)\)</span>).\ La forme canonique obtenue pour la fonction <span class="math inline">\(g\)</span> étant différence de deux quantités positives, l’expression est alors factorisable : <span class="math display">\[a^2-b^2=(a-b)(a+b)\]</span> En effet, pour tout réel <span class="math inline">\(x\)</span> <span class="math display">\[g(x)=3(x+1)^2 - 6 =3 [(x+1)^2-2] = 3 (x+1-\sqrt{2})(x+1+\sqrt{2})\]</span></p>
+</div>
+<div class="nav-pages">
+<p><a class="next" href="racine.html">➡️</a></p>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

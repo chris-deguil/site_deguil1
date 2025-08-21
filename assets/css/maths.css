@@ -203,3 +203,26 @@ h2:has(+ .bloc.exo) {
 
 .bloc.exo .exo-extra { display: inline; }
 
+
+
+.nav-pages {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.nav-pages a {
+  font-size: 3em;       /* taille des flèches */
+  text-decoration: none;
+  color: inherit;
+  position: absolute;
+  top: 0;
+}
+
+.nav-pages a.prev {
+  left: 0;              /* collée à gauche */
+}
+
+.nav-pages a.next {
+  right: 0;             /* collée à droite */
+}

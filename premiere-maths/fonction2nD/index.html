@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -116,6 +147,35 @@ window.MathJax = {
 };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../assets/css/maths.css">
 </head>
@@ -191,10 +251,107 @@ window.MathJax = {
 </header>
 
 
+<div class="bloc rem">
+<p><span class="bloc-titre">Attendus et Savoir-faire :</span></p>
+<ul>
+<li>Étudier le signe d’une fonction polynôme du second degré donnée sous forme factorisée.</li>
+<li>Déterminer les fonctions polynômes du second degré s’annulant en deux nombres réels distincts.</li>
+<li>Factoriser une fonction polynôme du second degré, en diversifiant les stratégies : racine évidente, détection des racines par leur somme et leur produit, identité remarquable, application des formules générales.</li>
+<li>Choisir une forme adaptée (développée réduite, canonique, factorisée) d’une fonction polynôme du second degré dans le cadre de la résolution d’un problème (équation, inéquation, optimisation, variations).</li>
+<li>Déterminer l’axe de symétrie et le sommet d’une parabole d’équation <span class="math inline">\(y=ax^2+bx+c\)</span></li>
+</ul>
+</div>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1755767766031" data-listing-reading-time-sort="5" data-listing-word-count-sort="862" data-listing-title-sort="Fonction polynôme du second degré" data-listing-filename-sort="definition.qmd">
+<td>
+<a href="../../premiere-maths/fonction2nD/definition.html" class="title listing-title">Fonction polynôme du second degré</a>
+</td>
+<td>
+<span class="listing-description">Définir une fonction du second degré - Égalité de deux polynômes - Forme canonique</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1755766603041" data-listing-reading-time-sort="6" data-listing-word-count-sort="1135" data-listing-title-sort="Le second degré : racines d'une équation" data-listing-filename-sort="racine.qmd">
+<td>
+<a href="../../premiere-maths/fonction2nD/racine.html" class="title listing-title">Le second degré : racines d’une équation</a>
+</td>
+<td>
+<span class="listing-description">Racines d’un polynôme - Équation du second degré - Théorème de factorisation</span>
+</td>
+</tr>
+<tr data-index="2" data-listing-file-modified-sort="1755766623189" data-listing-reading-time-sort="2" data-listing-word-count-sort="287" data-listing-title-sort="Lien coefficients - racines" data-listing-filename-sort="coefficient.qmd">
+<td>
+<a href="../../premiere-maths/fonction2nD/coefficient.html" class="title listing-title">Lien coefficients - racines</a>
+</td>
+<td>
+<span class="listing-description">Faire le lien entre les coefficients et les solutions d’une équation - Système d’équation à 2 inconnues</span>
+</td>
+</tr>
+<tr data-index="3" data-listing-file-modified-sort="1755768557048" data-listing-reading-time-sort="8" data-listing-word-count-sort="1540" data-listing-title-sort="Factorisation et signe d'une fonction du second degré" data-listing-filename-sort="signe.qmd">
+<td>
+<a href="../../premiere-maths/fonction2nD/signe.html" class="title listing-title">Factorisation et signe d’une fonction du second degré</a>
+</td>
+<td>
+<span class="listing-description">Factoriser et Signe d’une expression du second degré - Inéquations</span>
+</td>
+</tr>
+<tr data-index="4" data-listing-file-modified-sort="1755766650418" data-listing-reading-time-sort="4" data-listing-word-count-sort="798" data-listing-title-sort="Parabole" data-listing-filename-sort="parabole.qmd">
+<td>
+<a href="../../premiere-maths/fonction2nD/parabole.html" class="title listing-title">Parabole</a>
+</td>
+<td>
+<span class="listing-description">Représentation graphique fonction du second degré - Axe de symétrie - Variations</span>
+</td>
+</tr>
+<tr data-index="5" data-listing-file-modified-sort="1755766663434" data-listing-reading-time-sort="4" data-listing-word-count-sort="702" data-listing-title-sort="Bilan : Équation et représentation graphique" data-listing-filename-sort="bilan.qmd">
+<td>
+<a href="../../premiere-maths/fonction2nD/bilan.html" class="title listing-title">Bilan : Équation et représentation graphique</a>
+</td>
+<td>
+<span class="listing-description">Lien entre les différentes parties du cours : Courbes - Discriminant - Signe</span>
+</td>
+</tr>
+<tr data-index="6" data-listing-file-modified-sort="1755760028873" data-listing-reading-time-sort="25" data-listing-word-count-sort="4811" data-listing-title-sort="Feuilles d'exercices — Second degré" data-listing-filename-sort="exercices.qmd">
+<td>
+<a href="../../premiere-maths/fonction2nD/exercices.html" class="title listing-title">Feuilles d’exercices — Second degré</a>
+</td>
+<td>
+<span class="listing-description"> </span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
