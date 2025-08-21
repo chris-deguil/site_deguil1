@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Tangente à la représentation graphique d’une fonction en a">
+<meta name="description" content="formules des probabilités totales et bilan">
 
-<title>Tangente à une courbe – Site pédagogique</title>
+<title>Formules des probabilités totales – Site pédagogique</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -190,7 +190,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/definition.html">Nombre dérivé</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/tangente.html">Tangente à une courbe</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Proabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/fpt.html">Formules des probabilités totales</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -321,13 +321,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Nombre dérivé</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/definition.html" class="sidebar-item-text sidebar-link">
@@ -336,7 +336,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/tangente.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../premiere-maths/NomDerive/tangente.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tangente à une courbe</span></a>
   </div>
 </li>
@@ -356,13 +356,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Proabilité conditionnelles</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
@@ -371,7 +371,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Formules des probabilités totales</span></a>
   </div>
 </li>
@@ -399,21 +399,23 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tangente-en-un-point-de-la-courbe" id="toc-tangente-en-un-point-de-la-courbe" class="nav-link active" data-scroll-target="#tangente-en-un-point-de-la-courbe">Tangente en un point de la courbe</a></li>
+  <li><a href="#cas-de-deux-évènements" id="toc-cas-de-deux-évènements" class="nav-link active" data-scroll-target="#cas-de-deux-évènements">Cas de deux évènements</a></li>
+  <li><a href="#cas-général" id="toc-cas-général" class="nav-link" data-scroll-target="#cas-général">Cas général</a></li>
+  <li><a href="#bilan" id="toc-bilan" class="nav-link" data-scroll-target="#bilan">Bilan</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/definition.html">Nombre dérivé</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/tangente.html">Tangente à une courbe</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Proabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/fpt.html">Formules des probabilités totales</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tangente à une courbe</h1>
+<h1 class="title">Formules des probabilités totales</h1>
 </div>
 
 <div>
   <div class="description">
-    Tangente à la représentation graphique d’une fonction en <span class="math inline">\(a\)</span>
+    formules des probabilités totales et bilan
   </div>
 </div>
 
@@ -430,97 +432,106 @@ window.Quarto = {
 </header>
 
 
-<section id="tangente-en-un-point-de-la-courbe" class="level2">
-<h2 class="anchored" data-anchor-id="tangente-en-un-point-de-la-courbe">Tangente en un point de la courbe</h2>
-<p>On considère une fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(I\)</span> non vide, et dérivable en <span class="math inline">\(a \in I\)</span>.<br>
-Faisons alors tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span> (comme pour la définition du nombre dérivé).<br>
-Le point <span class="math inline">\(M\)</span> se rapproche infiniment du point <span class="math inline">\(A\)</span> (sans pour autant être confondu avec le point <span class="math inline">\(A\)</span> !).</p>
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap;">
-<p><img src="../../image/nomDerive_courbe3.png" style="width: 100%;"></p>
-<p><img src="../../image/nomDerive_courbe4.png" style="width: 100%;"></p>
-</div>
-<p>L’ensemble de ces droites <span class="math inline">\((AM)\)</span> forme un faisceau de droites.<br>
-On peut donc voir le nombre <span class="math inline">\(f'(a)\)</span> comme le coefficient directeur de la « position limite » de ce faisceau de droites des sécantes <span class="math inline">\((AM)\)</span> lorsque le point <span class="math inline">\(M\)</span> se rapproche de <span class="math inline">\(A\)</span>.<br>
-Cette droite « limite » a un seul point de contact (dans un voisinage proche de <span class="math inline">\(A\)</span>) avec <span class="math inline">\(\mathcal{C}_f\)</span>, et tend donc à être la tangente en <span class="math inline">\(A\)</span> à <span class="math inline">\(\mathcal{C}_f\)</span>.</p>
+<section id="cas-de-deux-évènements" class="level2">
+<h2 class="anchored" data-anchor-id="cas-de-deux-évènements">Cas de deux évènements</h2>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
-Soit <span class="math inline">\(f\)</span> une fonction dérivable en <span class="math inline">\(a\)</span>.<br>
-<span class="math inline">\(f'(a)\)</span> est le coefficient directeur de la tangente au point d’abscisse <span class="math inline">\(a\)</span>.</p>
-</div>
-<p><img src="../../image/nomDerive5.png" class="img-fluid" style="display:block;margin:0 auto;width:60%;"></p>
-<div class="bloc ex">
-<p><strong>Déterminer graphiquement un nombre dérivé</strong><br>
-Sur le graphique ci-dessous, on a tracé la courbe représentative <span class="math inline">\(\mathcal{C}_f\)</span> d’une fonction <span class="math inline">\(f\)</span> définie et dérivable en tout point de l’intervalle <span class="math inline">\([-2 \,;\, 5]\)</span>.<br>
-On sait que :</p>
-<ul>
-<li>la tangente au point <span class="math inline">\(A(-1, 5)\)</span> à la courbe <span class="math inline">\(\mathcal{C}_f\)</span> est parallèle à l’axe des abscisses ;</li>
-<li>la tangente au point <span class="math inline">\(B(2, 1)\)</span> à la courbe <span class="math inline">\(\mathcal{C}_f\)</span> coupe l’axe des abscisses au point de coordonnées <span class="math inline">\((3, 0)\)</span>.</li>
-</ul>
-<p><img src="../../image/nomDerive_courbe6.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
-<p>Déterminons <span class="math inline">\(f'(-1)\)</span> et <span class="math inline">\(f'(2)\)</span>.</p>
-<details class="bloc cor">
-<summary>
-Afficher la correction
-</summary>
-<p>Le nombre dérivé en <span class="math inline">\(a\)</span> est le coefficient directeur de la tangente au point d’abscisse <span class="math inline">\(a\)</span>.</p>
-<ul>
-<li>La tangente en <span class="math inline">\(-1\)</span> étant parallèle à l’axe des abscisses, son coefficient directeur est nul.<br>
-Ainsi <span class="math inline">\(f'(-1) = 0\)</span>.<br>
-</li>
-<li>La tangente en <span class="math inline">\(B\)</span> passe par les points <span class="math inline">\(B(2, 1)\)</span> et <span class="math inline">\((3, 0)\)</span> :<br>
-Le coefficient directeur est <span class="math inline">\(\dfrac{1 - 0}{2 - 3} = -1\)</span>, donc <span class="math inline">\(f'(2) = -1\)</span>.</li>
-</ul>
-</details>
-</div>
-<div class="bloc thm">
-<p><span class="bloc-titre">Théorème :</span><br>
-Soit <span class="math inline">\(f\)</span> une fonction dérivable en <span class="math inline">\(a\)</span>, alors <span class="math inline">\(\mathcal{C}_f\)</span> admet une tangente au point d’abscisse <span class="math inline">\(a\)</span> d’équation :<br>
-<span class="math display">\[y = f'(a)(x - a) + f(a)\]</span></p>
+Si <span class="math inline">\(A\)</span> est un évènement de <span class="math inline">\(\Omega\)</span> tel que <span class="math inline">\(p(A) \ne 0\)</span> et <span class="math inline">\(p(A) \ne 1\)</span>, alors pour tout évènement <span class="math inline">\(B\)</span> de <span class="math inline">\(\Omega\)</span></p>
+<p><span class="math display">\[ p(B) = p(A \cap B) +  p(\overline{A} \cap B ) = p_A(B) \times p(A) + p_{\overline{A}}(B) \times p(\overline{A}) \]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p><span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(a\)</span>, donc <span class="math inline">\(f'(a)\)</span> est le coefficient directeur de la tangente de <span class="math inline">\(f\)</span> en <span class="math inline">\(a\)</span>.<br>
-Elle admet donc une équation réduite de la forme : <span class="math display">\[y = f'(a)x + p\]</span></p>
-<p>Le point <span class="math inline">\(A(a\,;\,f(a))\)</span> appartient à <span class="math inline">\(\mathcal{C}_f\)</span> donc vérifie cette équation : <span class="math display">\[f(a) = f'(a)a + p \Rightarrow p = f(a) - f'(a)a\]</span></p>
-Ainsi l’équation est : <span class="math display">\[y = f'(a)x + f(a) - f'(a)a = f'(a)(x - a) + f(a)\]</span>
+<p>Les évènements <span class="math inline">\(A\cap B\)</span> et $ B $ sont incompatibles.</p>
+<p><img src="../../image/proba_graphe3.png" class="img-fluid" style="display:block;margin:0 auto;width:50%;"></p>
+<p>Ainsi <span class="math display">\[B = \left( A\cap B \right) \cup \left(  \overline{A} \cap B\right)\]</span> d’où</p>
+<p><span class="math display">\[p(B) = p\left( A\cap B \right) + p(\overline{A} \cap B ) \]</span></p>
+<p>D’après la formule des probabilités composées :</p>
+<p><span class="math display">\[p(B) = p_A(B) \times p(A) + p_{\overline{A}}(B) \times p(\overline{A})\]</span></p>
 </details>
 <div class="bloc ex">
-<p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(D_f = ]0\,;\,+\infty[\)</span> par <span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span>.</p>
-<ol type="1">
-<li>Montrer que <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(3\)</span>.</li>
-</ol>
+<p><span class="bloc-titre">Exemple :</span><br>
+On reprend l’exemple sur le virus, et on cherche la probabilité qu’une personne soit atteinte par le virus <span class="math inline">\(A\)</span> et ne soit pas vacciné.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<p>Pour tout <span class="math inline">\(h\)</span> non nul, <span class="math display">\[
-\dfrac{f(3+h)-f(3)}{h} = \dfrac{\dfrac{1}{(h+3)^2} - \dfrac{1}{3^2}}{h} = \dfrac{\dfrac{9 - (h+3)^2 }{9(h+3)^2}}{h} = \dfrac{9 - (h^2 +6h + 9)}{9h(h+3)^2} = -\dfrac{h +6}{9(h+3)^2}
-\]</span></p>
-<p>Or,<br>
-<span class="math display">\[\lim_{h \to 0} -\dfrac{h +6}{9(h+3)^2} = - \frac{6}{81} = -\frac{2}{27}\]</span></p>
-Donc <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(3\)</span>, et <span class="math inline">\(f'(3) = -\frac{2}{27}\)</span>, <span class="math inline">\(f(3) = \frac{1}{9}\)</span>.
-</details>
-<ol start="2" type="1">
-<li>En déduire l’équation de la tangente au point d’abscisse <span class="math inline">\(3\)</span>.</li>
-</ol>
-<details class="bloc cor">
-<summary>
-Afficher la correction
-</summary>
-<p>Soit <span class="math inline">\(T_3\)</span> l’équation de la tangente au point d’abscisse <span class="math inline">\(3\)</span> : <span class="math display">\[y = f'(3)(x - 3) + f(3) = - \frac{2}{27}(x - 3) + \frac{1}{9} = -\frac{2}{27}x + \frac{1}{3}\]</span></p>
-Donc l’équation cherchée est :<br>
-<span class="math display">\[y = - \frac{2}{27}x + \frac{1}{3}\]</span>
+<p><span class="math inline">\(\{V \,; \, \bar{V} \}\)</span> est une partition de l’univers, donc de la formule des probabilités totales, on a</p>
+<p><span class="math display">\[p(A) = p(A \cap V) + p(A \cap \bar{V})\]</span></p>
+<p>Ainsi</p>
+<span class="math display">\[p(A \cap \bar{V}) = P(A) - P(A \cap V) =0,7-0,63 =0,07\]</span>
 </details>
 </div>
-<div class="bloc rem">
+</section>
+<section id="cas-général" class="level2">
+<h2 class="anchored" data-anchor-id="cas-général">Cas général</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition (Partition d’un ensemble) :</span><br>
+Soit <span class="math inline">\(n\)</span> un entier supérieur ou égal à 2 et <span class="math inline">\(\{A_1,\, A_2,\, \ldots , \, A_n \}\)</span> un ensemble d’évènements de probabilités non nulles d’un même univers <span class="math inline">\(\Omega\)</span>.<br>
+<span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, , <span class="math inline">\(A_n\)</span> forment une partition de l’univers <span class="math inline">\(\Omega\)</span> lorsque tout évènement élémentaire de <span class="math inline">\(\Omega\)</span> appartient à l’un des évènements <span class="math inline">\(A_i\)</span> et à un seul.</p>
+<p>C’est à dire si, et seulement si : 1. Pour tous entiers <span class="math inline">\(i\)</span> et <span class="math inline">\(j\)</span> tels que <span class="math inline">\(1 \leqslant i \leqslant n\)</span>, <span class="math inline">\(1 \leqslant j \leqslant n\)</span> et <span class="math inline">\(i\ne j\)</span>, <span class="math inline">\(A_i \cap A_j = \varnothing\)</span>. 2. <span class="math inline">\(A_1 \cup A_2 \cup \cdots \cup A_n = \Omega\)</span>.</p>
+</div>
+<div class="bloc ex">
 <p><span class="bloc-titre">Remarque :</span><br>
-La représentation graphique et sa tangente sont localement confondues en <span class="math inline">\(a\)</span>.<br>
-On peut donc écrire, pour <span class="math inline">\(h\)</span> proche de <span class="math inline">\(0\)</span> : <span class="math display">\[f(a + h) \approx  f(a) + h \cdot f'(a)\]</span></p>
+- Un évènement <span class="math inline">\(A\)</span> de probabilité non nulle et son évènement contraire <span class="math inline">\(\overline{A}\)</span> forment une partition de <span class="math inline">\(\Omega\)</span>.<br>
+- Si les évènements $A_1,, A_2,, , , A_n $ forment une partition de <span class="math inline">\(\Omega\)</span> alors</p>
+<p><span class="math display">\[ \displaystyle\sum_{i=1}^{n}p(A_i)=p\left( A_1\right) + p\left( A_2\right) + \cdots  + p\left(  A_n \right) =1 \]</span></p>
 </div>
+<div class="bloc thm">
+<p><span class="bloc-titre">Théorème (Formule des probabilités totales) :</span><br>
+Soit <span class="math inline">\(n\)</span> un entier supérieur ou égal à 2. Si <span class="math inline">\(\{A_1,\, A_2,\, \ldots , \, A_n \}\)</span> est une partition de <span class="math inline">\(\Omega\)</span> alors pour tout évènement <span class="math inline">\(B\)</span> de <span class="math inline">\(\Omega\)</span>,</p>
+<p><span class="math display">\[p(B) = p(A_1 \cap B ) + p(A_2 \cap B ) + \cdots + p(A_n \cap B ) \]</span></p>
+</div>
+<details class="bloc demo">
+<summary>
+Démonstration :
+</summary>
+<p>Les évènements <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, , <span class="math inline">\(A_n\)</span> forment une partition de l’univers <span class="math inline">\(\Omega\)</span> donc :</p>
+<ul>
+<li><span class="math inline">\(A_1 \cup A_2 \cup \cdots \cup A_n = \Omega\)</span>, d’où</li>
+</ul>
+<p><span class="math display">\[B = \Omega \cap B =\left( A_1 \cup A_2 \cup \cdots \cup A_n \right) \cap B =\left( A_1 \cap B \right) \cup \left( A_2 \cap B \right) \cup \cdots \cup \left( A_n \cap B \right)\]</span></p>
+<ul>
+<li>De plus les évènements <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, , <span class="math inline">\(A_n\)</span> sont deux à deux incompatibles, c’est-à-dire pour tout couple d’entiers <span class="math inline">\((i~;~j),~i \neq j\)</span>, <span class="math inline">\(A_i \cap A_j = \emptyset\)</span>.</li>
+</ul>
+<p>D’où pour tout couples <span class="math inline">\((i\,;\, j)\)</span> avec <span class="math inline">\(i \neq j\)</span>, on a</p>
+<p><span class="math display">\[\left( A_i \cap B \right) \cap \left( A_j \cap B \right) = \varnothing\]</span></p>
+<p>On en déduit que</p>
+<span class="math display">\[p(B) = p\left(\left( A_1 \cap B \right) \cup \left( A_2 \cap B \right) \cup \cdots \cup \left( A_n \cap B \right) \right) =  p(A_1 \cap B ) + p(A_2 \cap B ) + \cdots + p(A_n \cap B )\]</span>
+</details>
+<hr>
+<p><strong>Illustration sur un arbre :</strong></p>
+<p><img src="../../image/proba_graphe4.png" class="img-fluid" style="display:block;margin:0 auto;width:50%;"></p>
+<hr>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple :</span><br>
+Les élèves d’une classe ont le choix entre trois activités <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> et <span class="math inline">\(A_3\)</span>.<br>
+Chaque élève doit choisir parmi ces possibilités une et une seule activité.</p>
+<p>On note <span class="math inline">\(G\)</span> l’évènement l’élève est un garçon .</p>
+<p>On sait que <span class="math inline">\(p(G \cap A_1) = 0,2\)</span> et <span class="math inline">\(p(G \cap A_2) = 0,15\)</span> et on sait que la probabilité que l’élève ait choisi l’activité 1 sachant que c’est un garçon est de <span class="math inline">\(0,4\)</span>.</p>
+<p>Déterminer <span class="math inline">\(P(G \cap A_3)\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<ul>
+<li><p>On sait que <span class="math display">\[p_G(A_1)=\frac{p(A_1 \cap G)}{p(G)}\]</span>.<br>
+Donc <span class="math display">\[p(G) = \frac{p(A_1 \cap G)}{p_G(A_1)} = \frac{0,2}{0,4} =0,5\]</span></p></li>
+<li><p><span class="math inline">\(\{A_1 \, ; \, A_2 \, ; \, A_3\}\)</span> forme une partition de l’univers, donc d’après la formule des probabilités totales, on a</p></li>
+</ul>
+<p><span class="math display">\[p(G) = p(G \cap A_1) + p(G \cap A_2) + p(G \cap A_3)\]</span></p>
+<p>On en déduit donc que</p>
+<p><span class="math display">\[p(G \cap A_3) = p(G) - p(G \cap A_1) - p(G \cap A_2)\]</span></p>
+C’est-à-dire <span class="math display">\[p(G \cap A_3) =0,15\]</span>
+</details>
+</div>
+</section>
+<section id="bilan" class="level2">
+<h2 class="anchored" data-anchor-id="bilan">Bilan</h2>
+<p><img src="../../image/proba_graphe5.png" class="img-fluid" style="display:block;margin:0 auto;width:100%;"></p>
 <div class="nav-pages">
-<p><a class="prev" href="definition.html">⬅️</a> <a class="next" href="DerivUsuelles.html">➡️</a></p>
+<p><a class="prev" href="definition.html">⬅️</a> <a class="next" href="independance.html">➡️</a></p>
 </div>
 
 

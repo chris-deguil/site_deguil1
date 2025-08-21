@@ -1058,6 +1058,113 @@
     "text": "Attendus et Savoir-faire :\n\nCalculer un taux de variation, la pente d’une sécante.\n\nInterpréter le nombre dérivé en contexte : pente d’une tangente, vitesse instantanée, coût marginal.\n\nDéterminer graphiquement un nombre dérivé par la pente de la tangente.\n\nConstruire la tangente en un point à une courbe représentative connaissant le nombre dérivé.\n\nDéterminer l’équation de la tangente en un point à la courbe représentative d’une fonction.\n\nÀ partir de la définition, calculer le nombre dérivé en un point ou la fonction dérivée de la fonction carré, de la fonction inverse.\n\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nNombre dérivé\n\n\nFonction dérivable en \\(a\\), nombre dérivé en \\(a\\)\n\n\n\n\nTangente à une courbe\n\n\nTangente à la représentation graphique d’une fonction en \\(a\\)\n\n\n\n\nFonction dérivée - Dérivées usuelles\n\n\nFonctions dérivées, dérivées des fonctions usuelles\n\n\n\n\nFeuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "premiere-maths/probaCond/definition.html",
+    "href": "premiere-maths/probaCond/definition.html",
+    "title": "Probabilité conditionnelles : Définition et représentations",
+    "section": "",
+    "text": "La notion de probabilité conditionnelle intervient quand pendant le déroulement d’une expérience aléatoire, une information est fournie modifiant ainsi la probabilité d’un évènement.% (La probabilité cherchée ne dépend pas que de l’univers de départ)\nOn considère une expérience aléatoire dont l’univers associé est \\(\\Omega\\) que l’on muni de la loi de probabilité \\(p\\)\n\nDéfinition :\nSoit \\(A\\) et \\(B\\) deux évènements d’un même univers \\(\\Omega\\) tel que \\(p(A)\\ne 0\\).\nOn appelle probabilité conditionnelle de l’évènement \\(B\\) sachant que l’évènement \\(A\\) est réalisé, et on note \\(p_A(B)\\) ou \\(p(B|A)\\), le nombre :\n\\[ p_A(B)= \\frac{p\\left(A \\cap B \\right)}{p(A)} \\] On lit \\(p\\) de \\(B\\) sachant \\(A\\) .\n\n\nExemple :\nDans une classe, il y a \\(35\\) élèves, parmi ces élèves il y a \\(17\\) garçons dont \\(8\\) externes.\nOn note \\(G\\) l’événement l’élève est un garçon et \\(E\\) l’événement l’élève est externe .\nAinsi \\(P(G) = \\frac{17}{35}\\) et \\(P_G(E) = \\frac{8}{17}\\).\nEn effet, la première probabilité, l’univers est l’ensemble des élèves de la classe alors que dans la deuxième l’univers est l’ensemble des garçons.\n\n\nThéorème :\nSoit \\(A\\) un événement de \\(\\Omega\\), de probabilité non nulle, alors \\(P_A\\) est une probabilité sur \\(A\\)\nC’est-à-dire, que pour tout \\(B \\in \\Omega\\), on a :\n\\[ 0 \\leqslant P_A(B) \\leqslant 1\\quad \\text{ et } \\quad P_A(B) + P_A(\\bar{B)} = 1 \\]\n\n\n\nDémonstration :\n\nSoient \\(A\\) et \\(B\\) deux événements d’un univers \\(\\Omega\\), avec \\(P(A) \\neq 0\\)\n\nOn a \\(A \\cap B \\subset A\\).\nDonc \\[0 \\leqslant P(B \\cap A) \\leqslant P(A) \\]\nD’où, en divisant par \\(P(A) \\neq 0\\), on a \\(0 \\leqslant P_A(B) \\leqslant 1\\)\nOn a \\(A=(A \\cap B) \\cup (\\bar{A} \\cap B)\\), or\n\\((A \\cap B)\\) et \\((\\bar{B} \\cap A)\\) sont incompatibles, donc \\[P((A \\cap B) \\cup (\\bar{B} \\cap A)) =P(A\\cap B) + P(\\bar{B} \\cap A)\\]\nOn en déduit que \\[P(A) = P(A \\cap B) + P(\\bar{B} \\cap A)\\]\nOn obtient le résultat en divisant par \\(P(A)\\)\n\n\n\nThéorème (Probabilité composée) :\nSoit \\(A\\) et \\(B\\) deux évènements d’un même univers vérifiant \\(p(A)\\ne 0\\) et \\(p(B)\\ne 0\\).\nAlors :\n\\[ p\\left(A \\cap B \\right) = p_A(B) \\times p(A) =  p_B(A) \\times p(B) \\]\n\n\nExemple :\nDans un hôpital, on traite des patients contre un virus \\(A\\), on note alors : - \\(A\\) l’événement le patient est atteint par le virus A . - \\(V\\) l’événement On injecte le vaccin du virus A \nOn sait \\(p(A) = 0,7\\) et \\(p_A(V) = 0,9\\). - \\(p(A) = 0,7\\) : la probabilité que un patient pris au hasard dans l’hôpital soit atteint du virus \\(A\\) est de \\(0,7\\). - \\(p_A(V) = 0,9\\) : sachant que la patient choisit est atteint du virus, la probabilité de lui injecter le vaccin est de \\(0,9\\).\nDéterminer la probabilité d’injecter le vaccin contre le virus A à une personne atteinte par le virus.\n\n\n\nAfficher la correction\n\nOn cherche \\(P(A \\cap V)\\).\n\\[ p\\left(A \\cap V \\right) = p_A(V) \\times p(A) =  0,9 \\times 0,7 = 0,63 \\]",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Probabilité conditionnelles : Définition et représentations"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/definition.html#notion-de-probabilité-conditionnelle",
+    "href": "premiere-maths/probaCond/definition.html#notion-de-probabilité-conditionnelle",
+    "title": "Probabilité conditionnelles : Définition et représentations",
+    "section": "",
+    "text": "La notion de probabilité conditionnelle intervient quand pendant le déroulement d’une expérience aléatoire, une information est fournie modifiant ainsi la probabilité d’un évènement.% (La probabilité cherchée ne dépend pas que de l’univers de départ)\nOn considère une expérience aléatoire dont l’univers associé est \\(\\Omega\\) que l’on muni de la loi de probabilité \\(p\\)\n\nDéfinition :\nSoit \\(A\\) et \\(B\\) deux évènements d’un même univers \\(\\Omega\\) tel que \\(p(A)\\ne 0\\).\nOn appelle probabilité conditionnelle de l’évènement \\(B\\) sachant que l’évènement \\(A\\) est réalisé, et on note \\(p_A(B)\\) ou \\(p(B|A)\\), le nombre :\n\\[ p_A(B)= \\frac{p\\left(A \\cap B \\right)}{p(A)} \\] On lit \\(p\\) de \\(B\\) sachant \\(A\\) .\n\n\nExemple :\nDans une classe, il y a \\(35\\) élèves, parmi ces élèves il y a \\(17\\) garçons dont \\(8\\) externes.\nOn note \\(G\\) l’événement l’élève est un garçon et \\(E\\) l’événement l’élève est externe .\nAinsi \\(P(G) = \\frac{17}{35}\\) et \\(P_G(E) = \\frac{8}{17}\\).\nEn effet, la première probabilité, l’univers est l’ensemble des élèves de la classe alors que dans la deuxième l’univers est l’ensemble des garçons.\n\n\nThéorème :\nSoit \\(A\\) un événement de \\(\\Omega\\), de probabilité non nulle, alors \\(P_A\\) est une probabilité sur \\(A\\)\nC’est-à-dire, que pour tout \\(B \\in \\Omega\\), on a :\n\\[ 0 \\leqslant P_A(B) \\leqslant 1\\quad \\text{ et } \\quad P_A(B) + P_A(\\bar{B)} = 1 \\]\n\n\n\nDémonstration :\n\nSoient \\(A\\) et \\(B\\) deux événements d’un univers \\(\\Omega\\), avec \\(P(A) \\neq 0\\)\n\nOn a \\(A \\cap B \\subset A\\).\nDonc \\[0 \\leqslant P(B \\cap A) \\leqslant P(A) \\]\nD’où, en divisant par \\(P(A) \\neq 0\\), on a \\(0 \\leqslant P_A(B) \\leqslant 1\\)\nOn a \\(A=(A \\cap B) \\cup (\\bar{A} \\cap B)\\), or\n\\((A \\cap B)\\) et \\((\\bar{B} \\cap A)\\) sont incompatibles, donc \\[P((A \\cap B) \\cup (\\bar{B} \\cap A)) =P(A\\cap B) + P(\\bar{B} \\cap A)\\]\nOn en déduit que \\[P(A) = P(A \\cap B) + P(\\bar{B} \\cap A)\\]\nOn obtient le résultat en divisant par \\(P(A)\\)\n\n\n\nThéorème (Probabilité composée) :\nSoit \\(A\\) et \\(B\\) deux évènements d’un même univers vérifiant \\(p(A)\\ne 0\\) et \\(p(B)\\ne 0\\).\nAlors :\n\\[ p\\left(A \\cap B \\right) = p_A(B) \\times p(A) =  p_B(A) \\times p(B) \\]\n\n\nExemple :\nDans un hôpital, on traite des patients contre un virus \\(A\\), on note alors : - \\(A\\) l’événement le patient est atteint par le virus A . - \\(V\\) l’événement On injecte le vaccin du virus A \nOn sait \\(p(A) = 0,7\\) et \\(p_A(V) = 0,9\\). - \\(p(A) = 0,7\\) : la probabilité que un patient pris au hasard dans l’hôpital soit atteint du virus \\(A\\) est de \\(0,7\\). - \\(p_A(V) = 0,9\\) : sachant que la patient choisit est atteint du virus, la probabilité de lui injecter le vaccin est de \\(0,9\\).\nDéterminer la probabilité d’injecter le vaccin contre le virus A à une personne atteinte par le virus.\n\n\n\nAfficher la correction\n\nOn cherche \\(P(A \\cap V)\\).\n\\[ p\\left(A \\cap V \\right) = p_A(V) \\times p(A) =  0,9 \\times 0,7 = 0,63 \\]",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Probabilité conditionnelles : Définition et représentations"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/definition.html#représentation-avec-un-tableau",
+    "href": "premiere-maths/probaCond/definition.html#représentation-avec-un-tableau",
+    "title": "Probabilité conditionnelles : Définition et représentations",
+    "section": "Représentation avec un tableau",
+    "text": "Représentation avec un tableau\nOn peut donner les résultats sous la forme d’un tableau à double entrée.\nIl en existe de plusieurs types, pour cela il faut être attentif à la lecture et compréhension du tableau.\nOn considère le tableau suivant qui indique le nombre de reçus au baccalauréat dans une classe :\n\n\n\n\nReçu\nNon reçu\nTotal\n\n\n\n\nFilles\n18\n1\n19\n\n\nGarçons\n13\n3\n16\n\n\nTotal\n31\n4\n35\n\n\n\nDans ce tableau les nombres (ou les proportions indiquées), sont donnée par rapport à l’effectif total.\nAinsi \\[ P_F(R)=\\frac{P(R \\cap F)}{P(F)} = \\frac{18}{19} \\quad \\text{et} \\quad P_R(F) = \\frac{P(R \\cap F)}{P(R)} = \\frac{18}{31} \\] On peut donner directement toutes les probabilités conditionnelles que l’on souhaite.\nNotre partition de l’univers est dans un cas \\(\\{F\\, ;\\,G\\}\\) et dans l’autre cas \\(\\{R \\, ;\\, \\bar{R}\\}\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Probabilité conditionnelles : Définition et représentations"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/definition.html#représentation-graphique-arbre-pondéré",
+    "href": "premiere-maths/probaCond/definition.html#représentation-graphique-arbre-pondéré",
+    "title": "Probabilité conditionnelles : Définition et représentations",
+    "section": "Représentation graphique : Arbre pondéré",
+    "text": "Représentation graphique : Arbre pondéré\nUne expérience aléatoire peut être schématisée par un arbre pondéré dont chaque branche est affectée d’un poids qui est une probabilité.\n\n\nLa racine de l’arbre est l’univers \\(\\Omega\\)\nLes évènements qui se trouvent aux extrémités des branches issues d’un même noeud forment une partition de l’évènement situé à ce noeud.\n\n\\(\\{ A, B, C\\}\\) est une partition de l’univers \\(\\Omega\\).\n\\(\\{ S,\\overline{S} \\}\\) est une partition de l’évènement \\(B\\).\n\nUn chemin complet qui conduit à un sommet final, représente l’intersection des évènements qui le composent.\nPar exemple, le chemin dont l’extrémité est \\(R\\) représente l’évènement \\(A \\cap R\\).\nLe poids d’une branche primaire est la probabilité de l’évènement qui se trouve à son extrémité.\nLe poids d’une branche secondaire est la probabilité conditionnelle de l’évènement qui se trouve à son extrémité sachant que l’évènement qui se trouve à son origine est réalisé.\n\n\nExemple :\nConsidérons le cas d’une maladie et d’un test censé déterminer si un individu a cette maladie ou pas.\nOn note \\(M\\) l’événement l’individu est malade et \\(T\\) le test est positif.\nSupposons qu’un individu ait 1 chance sur 10 d’être malade et que le test soit fiable à \\(95\\%\\), autrement dit il y a 95 chances 100 que le test soit positif sachant que l’individu soit malade et 5 chances sur 100 que le test soit positif sachant que l’individu est sain.\n\nTraduire en terme probabiliste : chance sur 10 d’être maladeet chances sur 100 que le test soit positif sachant que l’individu est sain\n\n\nAfficher la correction\n\nLa première phrase se traduit par \\(P(M)=0,1\\), et la deuxième par \\(P_{\\bar{M}}(T)\\)\n\nConstruire l’arbre de probabilité associé à la situation\n\n\n\nAfficher la correction\n\n\n\nCalculer \\(P(T\\cap\\overline{M})\\)\n\n\n\nAfficher la correction\n\n\\(P(T\\cap\\overline{M})=P_{\\bar{M}}(T) \\times P(\\bar{M}) = 0,9 \\times 0,95 = 0,855\\)\n\nEn déduire, si possible, la probabilité de ne pas être malade sachant que le test est positif.\n\n\n\nAfficher la correction\n\n\\(P_{T}(\\bar{M)} = \\frac{P(T \\cap \\bar{M})}{P(T)}\\)\nOn connaît \\(P(T \\cap \\bar{M})\\), mais pas \\(P(T)\\).\nIl nous manque une information pour conclure.\n\n\n\n\n➡️",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Probabilité conditionnelles : Définition et représentations"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/fpt.html",
+    "href": "premiere-maths/probaCond/fpt.html",
+    "title": "Formules des probabilités totales",
+    "section": "",
+    "text": "Théorème :\nSi \\(A\\) est un évènement de \\(\\Omega\\) tel que \\(p(A) \\ne 0\\) et \\(p(A) \\ne 1\\), alors pour tout évènement \\(B\\) de \\(\\Omega\\)\n\\[ p(B) = p(A \\cap B) +  p(\\overline{A} \\cap B ) = p_A(B) \\times p(A) + p_{\\overline{A}}(B) \\times p(\\overline{A}) \\]\n\n\n\nDémonstration :\n\nLes évènements \\(A\\cap B\\) et $ B $ sont incompatibles.\n\nAinsi \\[B = \\left( A\\cap B \\right) \\cup \\left(  \\overline{A} \\cap B\\right)\\] d’où\n\\[p(B) = p\\left( A\\cap B \\right) + p(\\overline{A} \\cap B ) \\]\nD’après la formule des probabilités composées :\n\\[p(B) = p_A(B) \\times p(A) + p_{\\overline{A}}(B) \\times p(\\overline{A})\\]\n\n\nExemple :\nOn reprend l’exemple sur le virus, et on cherche la probabilité qu’une personne soit atteinte par le virus \\(A\\) et ne soit pas vacciné.\n\n\nAfficher la correction\n\n\\(\\{V \\,; \\, \\bar{V} \\}\\) est une partition de l’univers, donc de la formule des probabilités totales, on a\n\\[p(A) = p(A \\cap V) + p(A \\cap \\bar{V})\\]\nAinsi\n\\[p(A \\cap \\bar{V}) = P(A) - P(A \\cap V) =0,7-0,63 =0,07\\]",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Formules des probabilités totales"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/fpt.html#cas-de-deux-évènements",
+    "href": "premiere-maths/probaCond/fpt.html#cas-de-deux-évènements",
+    "title": "Formules des probabilités totales",
+    "section": "",
+    "text": "Théorème :\nSi \\(A\\) est un évènement de \\(\\Omega\\) tel que \\(p(A) \\ne 0\\) et \\(p(A) \\ne 1\\), alors pour tout évènement \\(B\\) de \\(\\Omega\\)\n\\[ p(B) = p(A \\cap B) +  p(\\overline{A} \\cap B ) = p_A(B) \\times p(A) + p_{\\overline{A}}(B) \\times p(\\overline{A}) \\]\n\n\n\nDémonstration :\n\nLes évènements \\(A\\cap B\\) et $ B $ sont incompatibles.\n\nAinsi \\[B = \\left( A\\cap B \\right) \\cup \\left(  \\overline{A} \\cap B\\right)\\] d’où\n\\[p(B) = p\\left( A\\cap B \\right) + p(\\overline{A} \\cap B ) \\]\nD’après la formule des probabilités composées :\n\\[p(B) = p_A(B) \\times p(A) + p_{\\overline{A}}(B) \\times p(\\overline{A})\\]\n\n\nExemple :\nOn reprend l’exemple sur le virus, et on cherche la probabilité qu’une personne soit atteinte par le virus \\(A\\) et ne soit pas vacciné.\n\n\nAfficher la correction\n\n\\(\\{V \\,; \\, \\bar{V} \\}\\) est une partition de l’univers, donc de la formule des probabilités totales, on a\n\\[p(A) = p(A \\cap V) + p(A \\cap \\bar{V})\\]\nAinsi\n\\[p(A \\cap \\bar{V}) = P(A) - P(A \\cap V) =0,7-0,63 =0,07\\]",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Formules des probabilités totales"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/fpt.html#cas-général",
+    "href": "premiere-maths/probaCond/fpt.html#cas-général",
+    "title": "Formules des probabilités totales",
+    "section": "Cas général",
+    "text": "Cas général\n\nDéfinition (Partition d’un ensemble) :\nSoit \\(n\\) un entier supérieur ou égal à 2 et \\(\\{A_1,\\, A_2,\\, \\ldots , \\, A_n \\}\\) un ensemble d’évènements de probabilités non nulles d’un même univers \\(\\Omega\\).\n\\(A_1\\), \\(A_2\\), , \\(A_n\\) forment une partition de l’univers \\(\\Omega\\) lorsque tout évènement élémentaire de \\(\\Omega\\) appartient à l’un des évènements \\(A_i\\) et à un seul.\nC’est à dire si, et seulement si : 1. Pour tous entiers \\(i\\) et \\(j\\) tels que \\(1 \\leqslant i \\leqslant n\\), \\(1 \\leqslant j \\leqslant n\\) et \\(i\\ne j\\), \\(A_i \\cap A_j = \\varnothing\\). 2. \\(A_1 \\cup A_2 \\cup \\cdots \\cup A_n = \\Omega\\).\n\n\nRemarque :\n- Un évènement \\(A\\) de probabilité non nulle et son évènement contraire \\(\\overline{A}\\) forment une partition de \\(\\Omega\\).\n- Si les évènements $A_1,, A_2,, , , A_n $ forment une partition de \\(\\Omega\\) alors\n\\[ \\displaystyle\\sum_{i=1}^{n}p(A_i)=p\\left( A_1\\right) + p\\left( A_2\\right) + \\cdots  + p\\left(  A_n \\right) =1 \\]\n\n\nThéorème (Formule des probabilités totales) :\nSoit \\(n\\) un entier supérieur ou égal à 2. Si \\(\\{A_1,\\, A_2,\\, \\ldots , \\, A_n \\}\\) est une partition de \\(\\Omega\\) alors pour tout évènement \\(B\\) de \\(\\Omega\\),\n\\[p(B) = p(A_1 \\cap B ) + p(A_2 \\cap B ) + \\cdots + p(A_n \\cap B ) \\]\n\n\n\nDémonstration :\n\nLes évènements \\(A_1\\), \\(A_2\\), , \\(A_n\\) forment une partition de l’univers \\(\\Omega\\) donc :\n\n\\(A_1 \\cup A_2 \\cup \\cdots \\cup A_n = \\Omega\\), d’où\n\n\\[B = \\Omega \\cap B =\\left( A_1 \\cup A_2 \\cup \\cdots \\cup A_n \\right) \\cap B =\\left( A_1 \\cap B \\right) \\cup \\left( A_2 \\cap B \\right) \\cup \\cdots \\cup \\left( A_n \\cap B \\right)\\]\n\nDe plus les évènements \\(A_1\\), \\(A_2\\), , \\(A_n\\) sont deux à deux incompatibles, c’est-à-dire pour tout couple d’entiers \\((i~;~j),~i \\neq j\\), \\(A_i \\cap A_j = \\emptyset\\).\n\nD’où pour tout couples \\((i\\,;\\, j)\\) avec \\(i \\neq j\\), on a\n\\[\\left( A_i \\cap B \\right) \\cap \\left( A_j \\cap B \\right) = \\varnothing\\]\nOn en déduit que\n\\[p(B) = p\\left(\\left( A_1 \\cap B \\right) \\cup \\left( A_2 \\cap B \\right) \\cup \\cdots \\cup \\left( A_n \\cap B \\right) \\right) =  p(A_1 \\cap B ) + p(A_2 \\cap B ) + \\cdots + p(A_n \\cap B )\\]\n\n\nIllustration sur un arbre :\n\n\n\nExemple :\nLes élèves d’une classe ont le choix entre trois activités \\(A_1\\), \\(A_2\\) et \\(A_3\\).\nChaque élève doit choisir parmi ces possibilités une et une seule activité.\nOn note \\(G\\) l’évènement l’élève est un garçon .\nOn sait que \\(p(G \\cap A_1) = 0,2\\) et \\(p(G \\cap A_2) = 0,15\\) et on sait que la probabilité que l’élève ait choisi l’activité 1 sachant que c’est un garçon est de \\(0,4\\).\nDéterminer \\(P(G \\cap A_3)\\).\n\n\nAfficher la correction\n\n\nOn sait que \\[p_G(A_1)=\\frac{p(A_1 \\cap G)}{p(G)}\\].\nDonc \\[p(G) = \\frac{p(A_1 \\cap G)}{p_G(A_1)} = \\frac{0,2}{0,4} =0,5\\]\n\\(\\{A_1 \\, ; \\, A_2 \\, ; \\, A_3\\}\\) forme une partition de l’univers, donc d’après la formule des probabilités totales, on a\n\n\\[p(G) = p(G \\cap A_1) + p(G \\cap A_2) + p(G \\cap A_3)\\]\nOn en déduit donc que\n\\[p(G \\cap A_3) = p(G) - p(G \\cap A_1) - p(G \\cap A_2)\\]\nC’est-à-dire \\[p(G \\cap A_3) =0,15\\]",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Formules des probabilités totales"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/fpt.html#bilan",
+    "href": "premiere-maths/probaCond/fpt.html#bilan",
+    "title": "Formules des probabilités totales",
+    "section": "Bilan",
+    "text": "Bilan\n\n\n⬅️ ➡️",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Formules des probabilités totales"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/index.html",
+    "href": "premiere-maths/index.html",
+    "title": "Cours de Première Spécialité maths",
+    "section": "",
+    "text": "Chapitre 1 : Le second degré\n\n\nForme canonique, racines, signe, parabole.\n\n\n\n\n\n\n\n\n\n\nChapitre 2 : Suites numériques : Généralités\n\n\nSuite numérique - Suite Recursive - variation - limite - Algorithme\n\n\n\n\n\n\n\n\n\n\nChapitre 3 : Le nombre dérivé\n\n\nnombre dérivé - tangente - dérivée usuelles.\n\n\n\n\n\n\n\n\n\n\nChapitre 4 : Probabilité conditionnelle\n\n\nProbabilité conditionnelle - Indépendance - Répétition d’épreuves\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Spé maths première",
+      "Cours de Première Spécialité maths"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Accueil",
@@ -1065,14 +1172,617 @@
     "text": "Bienvenue sur le site pédagogique\nUtilisez la barre de navigation ci-dessus pour accéder aux sections :\n\nSNT\nSpécialité Maths Première"
   },
   {
-    "objectID": "premiere-maths/index.html",
-    "href": "premiere-maths/index.html",
-    "title": "Cours de Première Spécialité maths",
+    "objectID": "premiere-maths/probaCond/index.html",
+    "href": "premiere-maths/probaCond/index.html",
+    "title": "Chapitre 4 : Probabilité conditionnelle",
     "section": "",
-    "text": "Chapitre 1 : Le second degré\n\n\nForme canonique, racines, signe, parabole.\n\n\n\n\n\n\n\n\n\n\nChapitre 2 : Suites numériques : Généralités\n\n\nSuite numérique - Suite Recursive - variation - limite - Algorithme\n\n\n\n\n\n\n\n\n\n\nChapitre 3 : Le nombre dérivé\n\n\nnombre dérivé - tangente - dérivée usuelles.\n\n\n\n\n\n\n\nNo matching items",
+    "text": "Attendus et savoir-faire :\n\nConstruire un arbre pondéré ou un tableau en lien avec une situation donnée. Passer du registre de la langue naturelle au registre symbolique et inversement.\nUtiliser un arbre pondéré ou un tableau pour calculer une probabilité.\nCalculer des probabilités conditionnelles lorsque les événements sont présentés sous forme de tableau croisé d’effectifs (tirage au sort avec équiprobabilité d’un individu dans une population).\nDans des cas simples, calculer une probabilité à l’aide de la formule des probabilités totales.\nDistinguer en situation (P(BA)) et (P(AB)), par exemple dans des situations de type « faux positifs ».\nReprésenter une répétition de deux épreuves indépendantes par un arbre ou un tableau."
+  },
+  {
+    "objectID": "premiere-maths/probaCond/index.html#attendus-et-savoir-faire",
+    "href": "premiere-maths/probaCond/index.html#attendus-et-savoir-faire",
+    "title": "Chapitre 4 : Probabilité conditionnelle",
+    "section": "",
+    "text": "Attendus et savoir-faire :\n\nConstruire un arbre pondéré ou un tableau en lien avec une situation donnée. Passer du registre de la langue naturelle au registre symbolique et inversement.\nUtiliser un arbre pondéré ou un tableau pour calculer une probabilité.\nCalculer des probabilités conditionnelles lorsque les événements sont présentés sous forme de tableau croisé d’effectifs (tirage au sort avec équiprobabilité d’un individu dans une population).\nDans des cas simples, calculer une probabilité à l’aide de la formule des probabilités totales.\nDistinguer en situation (P(BA)) et (P(AB)), par exemple dans des situations de type « faux positifs ».\nReprésenter une répétition de deux épreuves indépendantes par un arbre ou un tableau."
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html",
+    "href": "premiere-maths/probaCond/exercices.html",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "",
+    "text": "Exercice 1 : \nOn lance un dé truqué dont les faces sont numérotées de 1 à 6. La loi de probabilité est donnée par le tableau suivant :\n\n\n\n\n\n\n\n\n\n\n\n\nface\n1\n2\n3\n4\n5\n6\n\n\n\n\nprobabilité\n\\(\\LH{\\frac{1}{12} }\\)\n\\(a\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{12}\\)\n\\(\\frac{1}{3}\\)\n\\(\\frac{1}{12}\\)\n\n\n\n\nDéterminer la valeur de \\(a\\).\nÉcrire chacun des événements suivants sous forme d’un ensemble puis déterminer sa probabilité.\n\nA : Obtenir un chiffre pair\nB : Obtenir un chiffre inférieur ou égal à 5\n\\(\\mathrm{C} = \\mathrm{A} \\cup \\mathrm{B}\\).\n\n\n\n\n\n\n\nExercice 2 : \nUne urne contient 2 boules vertes, 1 boule rouge et 1 boule noire. On effectue successivement et avec remise deux tirages au hasard d’une boule dans l’urne. On note la couleur de chaque boule tirée. Une issue de cette expérience est un couple de deux couleurs dans l’ordre d’apparition.\n\nÀ l’aide d’un arbre, déterminer tous les tirages possibles puis toutes les issues de l’expérience. (Dans l’arbre, on pourra noter \\(\\mathrm{V}_{1}\\) et \\(\\mathrm{V}_{2}\\) les 2 boules vertes, R la boule rouge et N la boule noire.)\nQuel est l’univers de cette expérience?\nDéterminer la probabilité de l’événement A : les deux boules sont de la même couleur.\nOn considère l’événement B : Au moins une des boules tirées est noire.\n\nDécrire par une phrase l’événement \\(\\overline{\\mathrm{B}}\\).\n\nDéterminer la probabilité de \\(\\overline{\\mathrm{B}}\\) et en déduire celle de B.\n\n\n\n\n\n\n\nExercice 3 : \nLe tableau ci-dessous donne la répartition des communes de deux départements en fonction de leur nombre d’habitants \\(N\\). (Source : Insee.)\n\n\n\n\nCharente-Maritime\nYvelines\nTotal\n\n\n\n\n\\(N &lt; 500\\)\n215\n54\n\n\n\n\\(500 \\leqslant N &lt; 1000\\)\n129\n67\n\n\n\n\\(1000 \\leqslant N &lt; 3500\\)\n99\n58\n\n\n\n\\(N \\geqslant 3500\\)\n29\n83\n\n\n\nTotal\n\n\n\n\n\n\n\nCompléter le tableau.\nOn choisit au hasard une commune parmi les communes de ces deux départements. Quelle est la probabilité que cette commune soit une commune de Charente-Maritime?\n\nOn choisit au hasard une commune de Charente-Maritime. Quelle est la probabilité que cette commune ait moins de 1000 habitants?\n\nOn choisit au hasard une commune des Yvelines. Quelle est la probabilité que cette commune ait moins de 1000 habitants?\n\nOn choisit au hasard une commune parmi celles qui ont moins de 1000 habitants. Quelle est la probabilité que ce soit une commune de Charente-Maritime?\n\n\n\n\n\n\nExercice 4 : \nDans une population, les individus peuvent posséder (ou non) un caractère génétique \\(a\\) ou un caractère génétique \\(b\\) (ou les deux caractères). La probabilité, pour un individu choisi au hasard, de posséder le caractère \\(a\\) est 0,8, la probabilité de posséder le caractère \\(b\\) est 0,6 et la probabilité de posséder les deux caractères est 0,45.\nOn choisit un individu au hasard dans la population et on note : - A : l’individu possède le caractère \\(a\\) - B : l’individu possède le caractère \\(b\\).\n\nDonner la probabilité des événements \\(\\mathrm{A}\\), \\(\\mathrm{B}\\) et \\(\\mathrm{A} \\cap \\mathrm{B}\\) et en déduire la probabilité \\(\\mathrm{A} \\cup \\mathrm{B}\\).\nOn considère l’événement C : l’individu ne possède pas les deux caractères à la fois. Exprimer C à l’aide de A et B et en déduire la probabilité de C.\nOn considère l’événement D : l’individu ne possède aucun des deux caractères. Exprimer D à l’aide de A et B et en déduire la probabilité de D.\n\n\n\n\n\n\nExercice 5 : \nOn dispose de deux dés cubiques parfaitement équilibrés dont les faces sont numérotées de 1 à 6. On considère l’expérience aléatoire qui consiste à lancer simultanément ces deux dés et à soustraire le plus petit des deux nombres au plus grand. Par exemple, si on obtient 3 et 5, l’issue est \\(5-3=2\\). Si on obtient le même nombre sur les deux dés, l’issue est 0.\n\nCompléter le tableau ci-dessous et en déduire l’univers de cette expérience.\n\n\n\n\n1\n2\n3\n4\n5\n6\n\n\n\n\n1\n\n\n\n\n\n\n\n\n2\n\n\n\n\n\n\n\n\n3\n\n\n\n\n\n\n\n\n4\n\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\n6\n\n\n\n\n\n\n\n\n\nDéterminer la probabilité de chacun des événements élémentaires et présenter les résultats sous forme d’un tableau similaire à celui de l’exercice 1.\nL’expérience précédente est utilisée pour un jeu d’argent. On paie \\(3\\) € pour jouer et on gagne autant d’euros que l’issue obtenue. Par exemple, si on obtient 5 et 3 sur les dés, on gagne \\(2\\) €. A-t-on intérêt à jouer à ce jeu?",
     "crumbs": [
       "Spé maths première",
-      "Cours de Première Spécialité maths"
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice",
+    "href": "premiere-maths/probaCond/exercices.html#exercice",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "",
+    "text": "Exercice 1 : \nOn lance un dé truqué dont les faces sont numérotées de 1 à 6. La loi de probabilité est donnée par le tableau suivant :\n\n\n\n\n\n\n\n\n\n\n\n\nface\n1\n2\n3\n4\n5\n6\n\n\n\n\nprobabilité\n\\(\\LH{\\frac{1}{12} }\\)\n\\(a\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{12}\\)\n\\(\\frac{1}{3}\\)\n\\(\\frac{1}{12}\\)\n\n\n\n\nDéterminer la valeur de \\(a\\).\nÉcrire chacun des événements suivants sous forme d’un ensemble puis déterminer sa probabilité.\n\nA : Obtenir un chiffre pair\nB : Obtenir un chiffre inférieur ou égal à 5\n\\(\\mathrm{C} = \\mathrm{A} \\cup \\mathrm{B}\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-1",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-1",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "",
+    "text": "Exercice 2 : \nUne urne contient 2 boules vertes, 1 boule rouge et 1 boule noire. On effectue successivement et avec remise deux tirages au hasard d’une boule dans l’urne. On note la couleur de chaque boule tirée. Une issue de cette expérience est un couple de deux couleurs dans l’ordre d’apparition.\n\nÀ l’aide d’un arbre, déterminer tous les tirages possibles puis toutes les issues de l’expérience. (Dans l’arbre, on pourra noter \\(\\mathrm{V}_{1}\\) et \\(\\mathrm{V}_{2}\\) les 2 boules vertes, R la boule rouge et N la boule noire.)\nQuel est l’univers de cette expérience?\nDéterminer la probabilité de l’événement A : les deux boules sont de la même couleur.\nOn considère l’événement B : Au moins une des boules tirées est noire.\n\nDécrire par une phrase l’événement \\(\\overline{\\mathrm{B}}\\).\n\nDéterminer la probabilité de \\(\\overline{\\mathrm{B}}\\) et en déduire celle de B.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-2",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-2",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "",
+    "text": "Exercice 3 : \nLe tableau ci-dessous donne la répartition des communes de deux départements en fonction de leur nombre d’habitants \\(N\\). (Source : Insee.)\n\n\n\n\nCharente-Maritime\nYvelines\nTotal\n\n\n\n\n\\(N &lt; 500\\)\n215\n54\n\n\n\n\\(500 \\leqslant N &lt; 1000\\)\n129\n67\n\n\n\n\\(1000 \\leqslant N &lt; 3500\\)\n99\n58\n\n\n\n\\(N \\geqslant 3500\\)\n29\n83\n\n\n\nTotal\n\n\n\n\n\n\n\nCompléter le tableau.\nOn choisit au hasard une commune parmi les communes de ces deux départements. Quelle est la probabilité que cette commune soit une commune de Charente-Maritime?\n\nOn choisit au hasard une commune de Charente-Maritime. Quelle est la probabilité que cette commune ait moins de 1000 habitants?\n\nOn choisit au hasard une commune des Yvelines. Quelle est la probabilité que cette commune ait moins de 1000 habitants?\n\nOn choisit au hasard une commune parmi celles qui ont moins de 1000 habitants. Quelle est la probabilité que ce soit une commune de Charente-Maritime?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-3",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-3",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "",
+    "text": "Exercice 4 : \nDans une population, les individus peuvent posséder (ou non) un caractère génétique \\(a\\) ou un caractère génétique \\(b\\) (ou les deux caractères). La probabilité, pour un individu choisi au hasard, de posséder le caractère \\(a\\) est 0,8, la probabilité de posséder le caractère \\(b\\) est 0,6 et la probabilité de posséder les deux caractères est 0,45.\nOn choisit un individu au hasard dans la population et on note : - A : l’individu possède le caractère \\(a\\) - B : l’individu possède le caractère \\(b\\).\n\nDonner la probabilité des événements \\(\\mathrm{A}\\), \\(\\mathrm{B}\\) et \\(\\mathrm{A} \\cap \\mathrm{B}\\) et en déduire la probabilité \\(\\mathrm{A} \\cup \\mathrm{B}\\).\nOn considère l’événement C : l’individu ne possède pas les deux caractères à la fois. Exprimer C à l’aide de A et B et en déduire la probabilité de C.\nOn considère l’événement D : l’individu ne possède aucun des deux caractères. Exprimer D à l’aide de A et B et en déduire la probabilité de D.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-4",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-4",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "",
+    "text": "Exercice 5 : \nOn dispose de deux dés cubiques parfaitement équilibrés dont les faces sont numérotées de 1 à 6. On considère l’expérience aléatoire qui consiste à lancer simultanément ces deux dés et à soustraire le plus petit des deux nombres au plus grand. Par exemple, si on obtient 3 et 5, l’issue est \\(5-3=2\\). Si on obtient le même nombre sur les deux dés, l’issue est 0.\n\nCompléter le tableau ci-dessous et en déduire l’univers de cette expérience.\n\n\n\n\n1\n2\n3\n4\n5\n6\n\n\n\n\n1\n\n\n\n\n\n\n\n\n2\n\n\n\n\n\n\n\n\n3\n\n\n\n\n\n\n\n\n4\n\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\n6\n\n\n\n\n\n\n\n\n\nDéterminer la probabilité de chacun des événements élémentaires et présenter les résultats sous forme d’un tableau similaire à celui de l’exercice 1.\nL’expérience précédente est utilisée pour un jeu d’argent. On paie \\(3\\) € pour jouer et on gagne autant d’euros que l’issue obtenue. Par exemple, si on obtient 5 et 3 sur les dés, on gagne \\(2\\) €. A-t-on intérêt à jouer à ce jeu?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-5",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-5",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 6",
+    "text": "Exercice 6\n\nExercice 6 : \nOn choisit au hasard une personne dans une population. On note les événements H « la personne est un homme » et M « la personne est majeure ».\n\nAssocier chaque proposition à une probabilité.\n\n\n\n\n\n\n\n\nProposition\nProbabilité\n\n\n\n\n40% des hommes sont majeurs\n\\(P_H(M)\\)\n\n\n58% des personnes sont majeures\n\\(P(M)\\)\n\n\n22% des personnes sont des hommes majeurs\n\\(P(H \\cap M)\\)\n\n\n45% des personnes sont des femmes\n\\(P(\\overline{H})\\)\n\n\nParmi les majeurs, 38% sont des hommes\n\\(P_{\\overline{M}}(H)\\)\n\n\n80% des femmes sont majeures\n\\(P_M(H)\\)\n\n\nPrès d’un tiers des personnes sont des hommes mineurs\n\\(P(H \\cap \\overline{M})\\)\n\n\n\n\nÀ l’aide des renseignements fournis ci-dessus, calculer la probabilité que la personne choisie soit un homme sachant qu’elle est mineure.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-6",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-6",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 7",
+    "text": "Exercice 7\n\nExercice 7 : \nSoit \\(A\\) et \\(B\\) deux événements dont nous savons que : \\(p\\left(A\\right)=0,35\\), \\(p_A\\left(B\\right)=0,42\\) et \\(p_{\\overline{A}}\\left(\\overline{B}\\right)=0,18\\).\n\nPlacer les données sur un arbre pondéré.\n\nCompléter l’arbre avec les probabilités manquantes.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-7",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-7",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 8",
+    "text": "Exercice 8\n\nExercice 8 : \nSoit \\(A\\) et \\(B\\) deux événements.\n\nOn donne : \\(p\\left(A\\right)=0,45\\) et \\(P\\left( A \\cap B\\right)=0,15\\). Calculer \\(p_A\\left(B\\right)\\).\n\nOn donne : \\(p\\left(A\\right)=0,38\\) et \\(p_A\\left(B\\right)=0,5\\). Calculer \\(P\\left( A \\cap B\\right)\\).\n\nOn donne : \\(P\\left( A \\cap B\\right)=0,18\\) et \\(p_A\\left(B\\right)=0,6\\). Calculer \\(p\\left(A\\right)\\).\n\nOn donne : \\(P(B)=0,4\\) et \\(p(\\bar{A} \\cap \\bar{B})=0,15\\). Calculer la probabilité que \\(A\\) ne soit pas réalisé sachant que \\(B\\) ne l’est pas.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-8",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-8",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 9",
+    "text": "Exercice 9\n\nExercice 9 : \nSachant que \\(P(A)=0,4\\), \\(P(A\\cap B)=0,3\\) et \\(P(\\overline{A}\\cap B)=0,2\\), calculer \\(P_A(B)\\) et \\(P_{\\overline{A}}(B)\\).\nEn déduire \\(P_A(\\overline{B})\\) et \\(P_{\\overline{A}}(\\overline{B})\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-9",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-9",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 10",
+    "text": "Exercice 10\n\nExercice 10 : \nSachant que \\(P(A)=0,5\\), \\(P(A\\cap B)=0,2\\) et \\(P(\\overline{A}\\cap B)=0,4\\), calculer \\(P_A(B)\\) et \\(P_{\\overline{A}}(B)\\).\nEn déduire \\(P_A(\\overline{B})\\) et \\(P_{\\overline{A}}(\\overline{B})\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-10",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-10",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 11",
+    "text": "Exercice 11\n\nExercice 11 : \nSachant que \\(P(A)=0,6\\), \\(P(A\\cap B)=0,4\\) et \\(P(\\overline{A}\\cap B)=0,2\\), calculer \\(P_A(B)\\) et \\(P_{\\overline{A}}(B)\\).\nEn déduire \\(P_A(\\overline{B})\\) et \\(P_{\\overline{A}}(\\overline{B})\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-11",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-11",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 12",
+    "text": "Exercice 12\n\nExercice 12 : \nDans une entreprise de 300 salariés, 60% sont des femmes. Parmi les hommes, 35% ont plus de 10 ans d’ancienneté. Parmi les femmes, 15% ont plus de 10 ans d’ancienneté.\n\nRecopier et compléter le tableau d’effectifs suivant.\n\n\n\n\n\nFemmes\nHommes\nTotal\n\n\n\n\nMoins de 10 ans d’ancienneté\n\n\n\n\n\nPlus de 10 ans d’ancienneté\n\n\n\n\n\nTotal\n\n\n300\n\n\n\n\nOn choisit un salarié de l’entreprise au hasard.\n\nCalculer la probabilité \\(p_1\\) que le salarié soit une femme avec plus de 10 ans d’ancienneté.\n\nCalculer la probabilité \\(p_2\\) que le salarié soit une femme sachant qu’il a plus de 10 ans d’ancienneté.\n\nCalculer la probabilité \\(p_3\\) que le salarié ait plus de 10 ans d’ancienneté sachant que c’est une femme.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-12",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-12",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 13",
+    "text": "Exercice 13\n\nExercice 13 : \nSoient \\(A\\) et \\(B\\) deux événements dont les probabilités sont données dans les tableaux ci-dessous.\nCas 1 :\n\n\n\n\n\\(A\\)\n\\(\\overline A\\)\nTotal\n\n\n\n\n\\(B\\)\n\n0,25\n\n\n\n\\(\\overline B\\)\n\n\n0,4\n\n\nTotal\n0,6\n\n\n\n\n\nCas 2 :\n\n\n\n\n\\(A\\)\n\\(\\overline A\\)\nTotal\n\n\n\n\n\\(B\\)\n0,45\n\n0,9\n\n\n\\(\\overline B\\)\n\n\n\n\n\nTotal\n\n0,55\n\n\n\n\n\nRecopier et compléter le tableau.\n\nCalculer \\(P_A(B)\\) et \\(P_B(A)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-13",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-13",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 14",
+    "text": "Exercice 14\n\nExercice 14 : \nUne enquête sur l’ensemble des clients d’un garage durant l’année passée, montre que 55% des acheteurs potentiels d’un modèle automobile souhaitent qu’il soit équipé d’un GPS intégré, 65% souhaitent la climatisation et 30% souhaitent les deux.\n\nÉtablir un tableau illustrant cette situation.\n\nOn choisit au hasard une fiche de l’un des clients de ce garage. Quelle est la probabilité qu’il ne souhaite pas de GPS intégré ? qu’il souhaite au moins l’un des deux équipements ?\n\nOn choisit au hasard un individu parmi ceux qui souhaitent la climatisation. Quelle est la probabilité qu’il souhaite aussi un GPS ? Donner l’arrondi au centième.\n\nCalculer la probabilité pour qu’un client, qui ne souhaite pas le GPS, souhaite la climatisation. Donner l’arrondi au centième.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-14",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-14",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 15",
+    "text": "Exercice 15\n\nExercice 15 : \nDans une classe de 35 élèves, 18 élèves pratiquent un sport, 7 jouent un instrument de musique et 20 pratiquent l’une ou l’autre de ces deux activités. On choisit un élève de la classe au hasard. On note respectivement S et M les événements « l’élève pratique un sport » et « l’élève joue un instrument de musique ».\n\n\nCalculer la probabilité de \\(S\\), \\(M\\) et \\(S \\cup M\\).\n\nEn déduire la probabilité que l’élève pratique à la fois un sport et joue un instrument de musique.\n\n\nCalculer la probabilité que l’élève joue un instrument de musique sachant qu’il pratique un sport.\n\nCalculer la probabilité que l’élève pratique un sport sachant qu’il joue un instrument de musique.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-15",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-15",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 16",
+    "text": "Exercice 16\n\nExercice 16 :  On tire successivement et avec remise deux jetons dans un sac qui en contient six, numérotés de 1 à 6.\nCalculer la probabilité que la somme des deux résultats soit impaire sachant que le résultat du premier lancer est 1.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-16",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-16",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 17",
+    "text": "Exercice 17\n\nExercice 17 : \nLes affirmations suivantes sont-elles vraies ou fausses ? Justifier votre réponse.\n\nUn événement A d’un univers \\(\\Omega\\) et son événement contraire \\(\\overline{A}\\) forment une partition de l’univers \\(\\Omega\\).\nSoient A, B et C trois événements formant une partition d’un univers \\(\\Omega\\). On a \\(P(C) = P(\\Omega) - P(A) - P(B)\\).\nSi A et B sont deux événements d’un univers \\(\\Omega\\) de probabilités non nulles, alors on a :\n\n\\(P(B) = P_A(B) + P_{\\overline{A}}(B)\\)\n\n\\(P(\\overline{B}) = 1 - P(A \\cap B) - P(\\overline{A} \\cap B)\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-17",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-17",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 18",
+    "text": "Exercice 18\n\nExercice 18 : \nSoient \\(A\\) et \\(B\\) deux événements.\n\nDans chacun des cas ci-dessus : 1. Reproduire et compléter l’arbre ci-dessus. 2. Calculer \\(P(A\\cap B)\\). 3. En déduire \\(P(B)\\). 4. Calculer \\(P(\\overline B)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-18",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-18",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 19",
+    "text": "Exercice 19\n\nExercice 19 : \nUne agence de voyage propose deux durées de séjours, le week-end ou la semaine, et deux types de destinations, France ou étranger.\nParmi les dossiers de l’agence on constate que: - \\(60\\%\\) des séjours ont lieu en France; - \\(45\\%\\) des séjours en France durent une semaine; - \\(75\\%\\) des séjours à l’étranger durent une semaine.\nOn choisit un dossier au hasard et on note: - \\(F\\) l’événement: « Le séjour a lieu en France »; - \\(S\\) l’événement: « Le séjour dure une semaine »; - \\(E\\) l’événement contraire de \\(F\\).\n\nEn utilisant les données de l’énoncé, déterminer les probabilités suivantes:\na) \\(P\\left(F\\right)\\)  b) \\(P_F\\left(S\\right)\\)  c) \\(P_E\\left(S\\right)\\).\n\nDessiner un arbre pondéré modélisant cette situation.\n\nCalculer \\(P\\left( F \\cap S\\right)\\), \\(P\\left( E \\cap S\\right)\\).\n\nCalculer \\(P\\left( F \\cap \\overline{S}\\right)\\), \\(P\\left( E \\cap \\overline{S}\\right)\\).\n\nEn déduire \\(P\\left(S\\right)\\) et \\(P\\left( \\overline{S}\\right)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-19",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-19",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 20",
+    "text": "Exercice 20\n\nExercice 20 : \nUne situation est modélisée par l’arbre ci-dessous. \\(A\\) et \\(B\\) désignant deux événements. En utilisant l’arbre de gauche, compléter l’arbre de droite:",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-20",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-20",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 21",
+    "text": "Exercice 21\n\nExercice 21 : \nUne entreprise vend des calculatrices. Le service après-vente s’est aperçu qu’elles pouvaient présenter deux types de défauts, l’un lié au clavier et l’autre lié à l’affichage.\nDes études statistiques ont permis à l’entreprise d’utiliser la modélisation suivante: - La probabilité pour une calculatrice tirée au hasard de présenter un défaut de clavier est égale à \\(0,04\\). - En présence du défaut de clavier, la probabilité que la calculatrice soit en panne d’affichage est de \\(0,03\\). - En l’absence de défaut clavier, la probabilité de ne pas présenter de défaut d’affichage est de \\(0,94\\).\nOn note \\(C\\) l’événement « la calculatrice présente un défaut de clavier » et \\(A\\) l’événement « la calculatrice présente un défaut d’affichage ».\n\n\nDéterminer les probabilités suivantes: \\(p_{\\overline{C}}\\left(\\overline{A}\\right)\\), \\(p_C\\left(A\\right)\\) et \\(p\\left(C\\right)\\).\n\nConstruire un arbre pondéré décrivant cette situation.\n\n\nOn choisit une calculatrice au hasard.\n\nCalculer la probabilité pour que la calculatrice présente les deux défauts.\n\nCalculer la probabilité pour que la calculatrice présente au-moins un défaut.\n\nCalculer la probabilité pour que la calculatrice présente le défaut d’affichage mais pas le défaut de clavier.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-21",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-21",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 22",
+    "text": "Exercice 22\n\nExercice 22 : \nPour recruter des stagiaires, une entreprise organise des tests de sélection. Parmi les candidats qui se présentent aux épreuves, il y a \\(60\\%\\) de garçons. Après avoir pris connaissance des résultats aux tests, l’entreprise engage \\(70\\%\\) des garçons candidats et \\(80\\%\\) des filles candidates.\nOn rencontre au hasard un candidat qui s’est présenté aux tests. 1. Quelle est la probabilité que ce candidat soit un garçon et qu’il soit engagé comme stagiaire?\n2. Quelle est la probabilité que ce candidat soit une fille et qu’elle soit engagée comme stagiaire?\n3. Calculer la probabilité que ce candidat soit engagé.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-22",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-22",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 23",
+    "text": "Exercice 23\n\nExercice 23 : \nOn s’intéresse à un pays fictif ayant l’organisation politique suivante : une oligarchie participative où le peuple élit des soi-disant représentants qui gouvernent dans leurs intérêts. L’assemblée censée représenter le peuple est composé de trois partis : le C’était Mieux Avant (à \\(30\\%\\)), le Ne Changeons Rien (à \\(15\\%\\)) et l’Illusion du Progrès (à \\(55\\%\\)). On s’intéresse à la probabilité qu’un représentant pris au hasard dans l’assemblée serve ses propres intérêts. On note - \\(A\\) l’événement « le représentant est dans le parti C’était Mieux Avant » ; - \\(R\\) l’événement « le représentant est dans le parti Ne Changeons Rien » ; - \\(P\\) l’événement « le représentant est dans le parti de l’Illusion du Progrès » ; - \\(I\\) l’événement « le représentant sert ses intérêts ».\nOn sait que dans le parti C’était Mieux Avant, \\(55\\%\\) des représentants servent leurs intérêts ; \\(73\\%\\) pour le Ne Changeons Rien et \\(61\\%\\) pour l’Illusion du Progrès.\n\nDresser et compléter un tableau modélisant la situation à partir des informations ci-dessus.\n\nQuelle est la probabilité que le représentant tiré au hasard serve ses intérêts ?\n\nSachant que le représentant sert ses intérêts, quelle est la probabilité qu’il vienne du parti Ne Changeons Rien ? Du C’était Mieux Avant ?\n\nSachant que le représentant ne sert pas ses intérêts, quelle est la probabilité qu’il vienne du parti l’Illusion du Progrès ? Du C’était Mieux Avant ?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-23",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-23",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 24",
+    "text": "Exercice 24\n\nExercice 24 : \nWilly a des pommiers dans son jardin de deux variétés : Golden et Elstar. Lors de sa récolte, il a constaté que 85% des pommes Golden et 80% des pommes Elstar sont consommables. Willy choisit une pomme au hasard. On note G « la pomme est de variété Golden », E « la pomme est de variété Elstar » et C « la pomme est consommable ». 1. Montrer que les événements G et E forment une partition de l’univers.\n2. Les événements G et C forment-ils une partition de l’univers ? Pourquoi ?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-24",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-24",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 25",
+    "text": "Exercice 25\n\nExercice 25 : \nUne université propose uniquement trois filières A, B ou C. Les étudiants doivent s’inscrire dans une seule des trois filières. On choisit au hasard un étudiant de l’université. La probabilité qu’il soit inscrit en filière A est le double de celle qu’il soit inscrit en filière B. La probabilité d’une inscription en filière A est le triple de celle en filière C. De plus, 20% des inscrits dans la filière A sont des filles, contre 30% pour la filière B et 40% pour la filière C.\nOn note A l’événement « l’étudiant est inscrit dans la filière A », B « l’étudiant est inscrit dans la filière B », C « l’étudiant est inscrit dans la filière C » et F « l’étudiant est une fille ».\n\n\nMontrer que les événements A, B et C forment une partition de l’univers.\n\nOn note \\(p\\) la probabilité de l’événement A. Montrer que \\(p + \\frac{p}{2} + \\frac{p}{3} = 1\\).\n\nEn déduire la probabilité de A.\n\n\nConstruire un arbre pondéré.\n\nCalculer la probabilité que l’étudiant soit un garçon.\n\n\nCalculer la probabilité que l’étudiant soit dans la filière A sachant que c’est un garçon.\n\nCalculer la probabilité que l’étudiant soit dans la filière B sachant que c’est une fille.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-25",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-25",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 26",
+    "text": "Exercice 26\n\nExercice 26 : \nSoient \\(A\\) et \\(B\\) deux événements d’un même univers.\nDans chacun des cas suivants compléter l’arbre de probabilité en faisant apparaître les calculs nécessaires.\n\nCas A : On sait que \\(P(B) = 0,4575\\) et \\(P(A \\cap \\bar{B}) = 0,1575\\)\nCas B : On sait que \\(P(\\bar{B}) = 0,8061\\) et \\(P(B \\cap \\bar{A}) = 0,1675\\)",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-26",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-26",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 27",
+    "text": "Exercice 27\n\nExercice 27 : \nOn considère les événements \\(A\\) et \\(B\\) de probabilités respectives \\(\\frac{7}{8}\\) et \\(\\frac{2}{7}\\) et tels que \\(P(A\\cap B)=\\frac{1}{4}\\). \\(A\\) et \\(B\\) sont-ils indépendants ?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-27",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-27",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 28",
+    "text": "Exercice 28\n\nExercice 28 : \nOn lance un dé équilibré à six faces et on considère les événements suivants. 1.•\\(A\\) : le résultat est un nombre supérieur ou égale à \\(4\\) 2.•\\(B\\) : le résultat est un nombre pair \n\nReprésenter la situation par un arbre de probabilité.\nComment remarque-t-on sur l’arbre que \\(A\\) et \\(B\\) ne sont pas indépendants ?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-28",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-28",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 29",
+    "text": "Exercice 29\n\nExercice 29 : \n\\(A\\) et \\(B\\) sont deux événements indépendants tels que \\(P(A)=\\dfrac{1}{3}\\) et \\(P(B)=\\dfrac{2}{5}\\).\nCalculer \\(P(A\\cap B)\\) puis \\(P(\\overline{A}\\cap B)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-29",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-29",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 30",
+    "text": "Exercice 30\n\nExercice 30 : \n\\(A\\) et \\(B\\) deux événements tels que \\(P(A)=\\dfrac{1}{4}\\), \\(P(B)=\\dfrac{1}{5}\\) et \\(P(A\\cap B)=\\dfrac{1}{10}\\).\n\\(A\\) et \\(B\\) sont-ils indépendants ?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-30",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-30",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 31",
+    "text": "Exercice 31\n\nExercice 31 : \n\\(A\\) et \\(B\\) sont deux événements indépendants de même probabilité et \\(P(A\\cap B)=\\dfrac{1}{36}\\).\nCalculer \\(P(A)\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-31",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-31",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 32",
+    "text": "Exercice 32\n\nExercice 32 : \nChaque matin, Antoine peut être « victime » de deux événements indépendants : R « il n’entend pas son réveil » et V « son pneu de vélo est victime d’une crevaison ». Il a observé que chaque jour de la semaine : \\[ P(R) = 0.1 \\quad \\text{et} \\quad P(V) = 0.05 \\]\nLorsqu’au moins un des deux événements se produit, Antoine est en retard au lycée ; sinon il est à l’heure.\n\nDonner les probabilités ( P() ) et ( P_{}(V) ).\nCalculer la probabilité qu’Antoine soit à l’heure au lycée un jour donné.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-32",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-32",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 33",
+    "text": "Exercice 33\n\nExercice 33 : \nOn considère deux événements \\(A\\) et \\(B\\) tels que \\(P(A)=p\\), \\(P(B)=P(\\overline{A})\\) et \\(P(A \\cap B)=0,2p+0,15\\). 1. Montrer que, pour tout \\(p \\in \\R\\), \\[-p^2+0,8p-0,15=(0,3-p)(p-0,5)\\] 2. Trouver la probabilité \\(p\\) telle que \\(A\\) et \\(B\\) soient indépendants.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-33",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-33",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 34",
+    "text": "Exercice 34\n\nExercice 34 : \nOn considère deux événements \\(A\\) et \\(B\\) tels que \\(P(A \\cap B)=0,8\\) et \\(P(A \\cup B)=0,9\\). 1. Montrer que, pour tout \\(p \\in \\R\\), \\[x^2-1,7x+0,8=(x-0,85)^2+0,0775\\] 2. Montre que \\(A\\) et \\(B\\) ne peuvent pas être indépendants.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-34",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-34",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 35",
+    "text": "Exercice 35\n\nExercice 35 : \nDans un collège, les élèves doivent choisir une option parmi latin et théâtre et une langue vivantes parmi allemand et italien . Le tableau ci-dessous donne la répartition des élèves.\n\nLes événements faire du théâtre et de l’italien et faire du théâtre sont-ils indépendants ?\nLes événements faire du latin et faire de l’allemand sont-ils indépendants ?\nLes événements faire du latin et faire du théâtre sont-ils indépendants ?\n\n\n\n\n\nItalien\nAllemand\nTotal\n\n\n\n\nLatin\n30\n120\n150\n\n\nThéâtre\n90\n80\n170\n\n\nTotal\n120\n200\n320",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-35",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-35",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 36",
+    "text": "Exercice 36\n\nExercice 36 : \nOn tire une carte dans un jeu de 32 cartes. Dans chacun des cas suivants, dire si les événements sont indépendants. 1. \\(A\\) tirer un roi et \\(B\\) tirer un rouge ;\n2. \\(A\\) tirer un roi et \\(B\\) ne pas tirer un as ;\n3. \\(A\\) tirer un roi, ou une dame rouge et \\(B\\) tirer un rouge .",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-36",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-36",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 37",
+    "text": "Exercice 37\n\nExercice 37 : \nChaque année, une ruche a un risque de \\(5\\%\\) d’être attaquée par un frelon asiatique. Dans ce cas, ses chances de survie sont de \\(10\\%\\). Si ce n’est pas le cas, ses chances de survie sont de \\(90\\%\\). Chaque année, les risques sont les mêmes et les attaques sont indépendantes.\n\nModéliser la situation par un arbre de probabilité.\n\nQuelle est la probabilité que la ruche survive une année ?\n\nEn déduire quelle est la probabilité que la ruche survive trois années de suite.\n\nSi la menace du frelon n’existait pas, qu’elle serait alors cette même probabilité ?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-37",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-37",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 38",
+    "text": "Exercice 38\n\nExercice 38 : \nOn lance 10 fois de suite une pièce équilibrée. Quelle est la probabilité d’obtenir au moins une fois face au cours des 10 lancers ? On donnera le résultat sous forme d’une fraction irréductible.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-38",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-38",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 39",
+    "text": "Exercice 39\n\nExercice 39 : \nUne épreuve d’examen comporte un QCM composé de trois questions. Chaque question fait l’objet de trois propositions de réponses, dont une seule est exacte. Pour établir le barème, on étudie la situation correspondant à un candidat qui répondrait au hasard et de manière indépendante à chacune des trois questions.\n\nQuelle est la probabilité, pour une question donnée, de choisir la réponse exacte ?\n\nConstruire un arbre pondéré décrivant toutes les réponses possibles au QCM.\n\nCalculer la probabilité d’obtenir les trois réponses exactes. Justifier.\n\nCalculer la probabilité d’obtenir trois réponses inexactes.\n\n\n\n\nCombien y a-t-il de chemins complets dans l’arbre qui correspondent à une réponse exacte et deux réponses inexactes ?\n\nCalculer la probabilité d’obtenir une seule réponse exacte sur les trois questions.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-39",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-39",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 40",
+    "text": "Exercice 40\n\nExercice 40 : \nLe Problème des Deux Enfants\nOn suppose que la probabilité de donner naissance à une fille est la même que celle de donner naissance à un garçon : \\(P(F)=P(G)=\\dfrac{1}{2}\\). On admet de plus que le sexe d’un enfant à la naissance est indépendant de ceux nés avant. Vous allez chez une personne dont vous savez qu’elle a deux enfants mais dont vous ignorez le sexe. C’est une fille qui vous ouvre la porte ; on ne sait pas si c’est l’aînée ou pas des deux enfants.\nQuelle est la probabilité l’autre enfant soit un garçon : \\(\\dfrac{1}{2}\\) ou \\(\\dfrac{2}{3}\\) ? Justifier.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-40",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-40",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 41",
+    "text": "Exercice 41\n\nExercice 41 : \n\nUne puce est placée en 0 sur la droite graduée ci-dessus. À chaque rebond, elle saute à droite ou à gauche de manière aléatoire. On note D et G les événements « la puce effectue un saut à droite » et « la puce effectue un saut à gauche ».\n\nLa puce a effectué le déplacement DDGDG. En combien s’est-elle arrêtée ?\n\nLa puce effectue trois sauts.\n\nConstruire un arbre pondéré traduisant tous les déplacements possibles. Combien y en a-t-il ?\n\nCalculer la probabilité qu’elle effectue un seul saut à gauche.\n\nCalculer la probabilité qu’elle s’arrête en +1.\n\nPeut-elle s’arrêter en 0 ? Justifier.\n\n\nOn souhaite automatiser le comportement de la puce à l’aide d’un algorithme et déterminer combien de fois elle passe par 0. On donne ci-dessous l’algorithme rédigé en langage Python :\n\nfrom random import *\np = 0\nk = 0\nfor i in range(1, n+1):\n    d = randint(0, 1)\n    if d == 0:\n        p = p - 1\n    else:\n        p = p + 1\n    if p == 0:\n        k = k + 1\nreturn k\n\nExpliquer les rôles des variables p et k.\n\nExpliquer le rôle de la variable d.\n\nÀ l’aide de l’algorithme, simuler dix déplacements de la puce. Donner le parcours effectué, la position sur laquelle la puce s’arrête et le nombre de fois où elle est passée par 0.\n\nCompléter l’algorithme pour qu’il affiche la position finale de la puce.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-41",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-41",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 42",
+    "text": "Exercice 42\n\nExercice 42 : \nPour savoir si un mail est indésirable ou pas, celui-ci est testé par un algorithme. On note \\(T\\) l’événement « le test est positif » et \\(I\\) l’événement « le mail est indésirable ».\n\nReproduire et compléter le tableau ci-dessous.\n\n\n\n\n\n\\(I\\)\n\\(\\overline I\\)\nTotal\n\n\n\n\n\\(T\\)\n0,23\n\n\n\n\n\\(\\overline T\\)\n\n0,73\n\n\n\nTotal\n0,25\n\n\n\n\n\n\nQuelle est la probabilité que le test soit négatif sachant que le mail est indésirable ?\n\nQuelle est la probabilité que le test soit positif sachant que le mail est désirable ?\n\nEn déduire la probabilité que l’algorithme se trompe.\n\nOn applique le test à dix mails indépendamment les uns des autres sans savoir s’ils sont indésirables ou pas. Quelle est la probabilité qu’aucun test ne soit positif ?\n\nQuelle est alors la probabilité d’avoir au moins un test positif parmi les dix tests ?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-42",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-42",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 43",
+    "text": "Exercice 43\n\nExercice 43 : \n\nLa méthode de Monte Carlo est une technique permettant de calculer des approximations d’aires difficiles à obtenir à l’aide d’outils géométriques ou analytiques de façon simple grâce aux probabilités.\nOn considère \\(f\\) la fonction carrée et on souhaiterai connaître l’aire sous sa courbe sur l’intervalle \\([0\\,;\\,1]\\) représentée en gris ci-contre. On notera cette aire \\(\\mathcal{A}_g\\).\n\n\nOn place au hasard un point \\(M(x \\,;\\, y)\\) dans le carré \\(OABC\\). Exprimer en fonction en fonction de \\(\\mathcal{A}_g\\) et \\(\\mathcal{A}_{OABC}\\), l’aire du carré \\(OABC\\), la probabilité que \\(M\\) soit dans la zone grise.\n\nÀ quels intervalles appartiennent \\(x\\) et \\(y\\) ?\n\nÀ quelle(s) condition(s) sur \\(x\\) et \\(y\\) \\(M\\) appartient à la zone grise ?\n\nPour estimer l’aire \\(\\mathcal{A}_g\\), on va prendre 1000 points au hasard dans le le carré \\(OABC\\) et déterminer la proportion appartenant à \\(\\mathcal{A}_g\\). C’est le but de l’algorithme ci-dessous. Compléter le programme suivant afin d’approcher l’aire cherchée\n\nfrom random import *\n\ndef approche_aire(k):\n    c=0\n    for k in range range(1, ........):\n        x =  ........\n        y = ...........\n        if ................ :\n            c=c+1\n    return ...............\n\n\n\nComment améliorer l’estimation de \\(\\mathcal{A}_g\\) ?\n\n(*) En considérant le quart de disque trigonométrique inclus dans le carré \\(OABC\\), écrire et coder en Python un programme permettant d’approcher \\(\\pi\\).",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-43",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-43",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 44",
+    "text": "Exercice 44\n\nExercice 44 : \n(Extrai bac, Pondichery 2018)\nUne entreprise conditionne du sucre blanc provenant de deux exploitations U et V en paquets de 1 kg et de différentes qualités. Le sucre extra fin est conditionné séparément dans des paquets portant le label extra fin . On admet que 3,% du sucre provenant de l’exploitation U est extra fin et que 5,% du sucre provenant de l’exploitation V est extra fin.\nOn prélève au hasard un paquet de sucre dans la production de l’entreprise et, dans un souci de traçabilité, on s’intéresse à la provenance de ce paquet.\nOn considère les évènements suivants: - \\(U\\) : Le paquet contient du sucre provenant de l’exploitation U ; - \\(V\\) : Le paquet contient du sucre provenant de l’exploitation V ; - \\(E\\) : Le paquet porte le label “extra fin” .\n\nDans cette question, on admet que l’entreprise fabrique 30,% de ses paquets avec du sucre provenant de l’exploitation U et les autres avec du sucre provenant de l’exploitation V, sans mélanger les sucres des deux exploitations.\n\nQuelle est la probabilité que le paquet prélevé porte le label extra fin ?\n\nSachant qu’un paquet porte le label extra fin , quelle est la probabilité que le sucre qu’il contient provienne de l’exploitation U ?\n\n\nL’entreprise souhaite modifier son approvisionnement auprès des deux exploitations afin que parmi les paquets portant le label « extra fin », 30,% d’entre eux contiennent du sucre provenant de l’exploitation U.\nComment doit-elle s’approvisionner auprès des exploitations U et V ?\n.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-44",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-44",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 45",
+    "text": "Exercice 45\n\nExercice 45 : \n(Extrait bac, Antilles Guyanne 2015)\nUn circuit électronique est composé de deux composants identiques numérotés 1 et 2. On note \\(D_1\\) l’évènement « le composant 1 est défaillant avant un an » et on note \\(D_2\\) l’évènement « le composant 2 est défaillant avant un an ».\nOn suppose que les deux évènements \\(D_1\\) et \\(D_2\\) sont indépendants et que \\[\nP(D_1) = P(D_2) = 0,39.\n\\]\nDeux montages possibles sont envisagés, présentés ci-dessous :\n\nDéterminer dans chacun des cas la probabilités que le courant ne passe pas.",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/exercices.html#exercice-45",
+    "href": "premiere-maths/probaCond/exercices.html#exercice-45",
+    "title": "Feuilles d’exercices — Probabilités condtionnelles",
+    "section": "Exercice 46",
+    "text": "Exercice 46\n\nExercice 46 : \nÉtude d’une population\nUne agence de voyages propose trois circuits possibles au Canada l’été prochain : \\(C_1\\), \\(C_2\\), \\(C_3\\).\nLes clients ont la possibilité de choisir un hébergement en chambre de catégorie standard ou en chambre de catégorie supérieure. Une fois avant le départ, tous les circuits sont regroupés.\nLe tableau ci-dessous donne la répartition des 2 500 réservations effectuées pour tout l’été :\n\n\n\n\n\\(C_1\\)\n\\(C_2\\)\n\\(C_3\\)\nTotal\n\n\n\n\nChambre standard\n400\n300\n300\n1 000\n\n\nChambre supérieure\n850\n450\n200\n1 500\n\n\nTotal\n1 250\n750\n500\n2 500\n\n\n\nOn choisit au hasard la réservation d’un client.\nOn note respectivement \\(c_1\\), \\(c_2\\), \\(c_3\\) les événements « le client a choisi le circuit \\(C_1\\) », « le client a choisi le circuit \\(C_2\\) », « le client a choisi le circuit \\(C_3\\) » et \\(e\\) l’événement « le client a choisi une chambre en catégorie standard ».\n\nCalculer la probabilité que le client ait choisi le circuit \\(C_1\\) sachant qu’il a pris une chambre en catégorie standard.\n\nCalculer la probabilité que le client ait choisi une chambre en catégorie supérieure sachant qu’il a choisi le circuit \\(C_2\\).\n\nCalculer la probabilité que le client ait choisi une chambre en catégorie supérieure sachant qu’il a choisi le circuit \\(C_1\\).\n\nLes événements \\(c_1\\) et \\(e\\) sont-ils indépendants ?\n\nLes événements \\(c_3\\) et \\(e\\) sont-ils indépendants ?",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Feuilles d'exercices — Probabilités condtionnelles"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/independance.html",
+    "href": "premiere-maths/probaCond/independance.html",
+    "title": "Indépendances",
+    "section": "",
+    "text": "Définition :\nSoit \\(A\\) et \\(B\\) deux événements d’un même univers de probabilités non nulles.\nOn dit que \\(A\\) et \\(B\\) sont indépendants lorsque\n\\[P(A \\cap B) =P(A) \\times P(B)\\]\n\n\nExemple :\nOn considère un jeu de 32 cartes. On note \\(A\\) et \\(B\\) les événements Obtenir un as et Obtenir un coeur .\nDémontrer que les événements \\(A\\) et \\(B\\) sont indépendants.\n\n\nAfficher la correction\n\nLes cartes étant indiscernables on est en situation d’équiprobabilité.\nPuisqu’il y a quatre as dans le jeu et huit cartes à coeur, et un seul as de coeur, on a\n\\[P(A) = \\frac{1}{4} \\quad ; \\quad P(B)= \\frac{1}{8} \\quad ; \\quad P(A \\cap B) = \\frac{1}{32}\\]\nAinsi\n\\[P(A) \\times P(B) = \\frac{1}{4} \\times \\frac{1}{8} = \\frac{1}{32} = P(A \\cap B)\\]\nDonc par définition les événements \\(A\\) et \\(B\\) sont indépendants.\n\n\n\nRemarque :\nLa notion d’indépendance et d’incompatibilité ne sont pas les mêmes et ne peuvent pas se réaliser en même temps.\nEn effet si \\(A\\) et \\(B\\) sont indépendants, alors\n\\[P(A \\cap B) = P(A) \\times P(B)\\]\nOr si \\(A\\) et \\(B\\) sont incompatibles \\(P(A \\cap B) = 0\\).\nAinsi, on aurait \\(P(A) = 0\\) ou \\(P(B) = 0\\), ce qui est contraire à la définition d’indépendance de deux événements.\n\n\nExemple :\nSoient \\(A\\) et \\(B\\) vérifiant \\(P(A) =0,8\\), \\(P(B)= 0,35\\) et \\(P(A \\cup B) =0,87\\). Montrer que \\(A\\) et \\(B\\) sont indépendants.\n\n\nAfficher la correction\n\nOn utilise l’égalité :\n\\[P(A \\cup B) + P(A \\cap B) = P(A) + P(B)\\]\nDonc\n\\[P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 0,8 + 0,35 - 0,87 = 0,28\\]\nOr\n\\[P(A) \\times P(B) = 0,8 \\times 0,35 = 0,28\\]\nOn en déduit que\n\\[P(A \\cap B) = P(A ) \\times P(B)\\]\nDonc \\(A\\) et \\(B\\) sont indépendants.\n\n\n\nThéorème :\nOn considère \\(A\\) et \\(B\\) deux événements de probabilité non nulles.\nOn dit que \\(A\\) et \\(B\\) sont indépendants si et seulement si\n\\[P_A(B)=P(B)\\]\n\n\n\nDémonstration :\n\nSoit \\(A\\) et \\(B\\) deux événements :\n\\[ A \\text{ et } B \\text{ indépendants } \\Longleftrightarrow P(A  \\cap B) =P(A) \\times P(B) \\Longleftrightarrow P(B) = \\frac{P(A \\cap B)}{P(A)} \\Longleftrightarrow P(B) =  P_A(B)\\]\n\n\nComprendre la notion d’indépendance : \nLa propriété établit qu’il y a indépendance si et seulement si \\(P(A)=P_B(A)\\).\nC’est-à-dire que la réalisation de l’événement \\(B\\) ne modifie en rien la probabilité de l’événement \\(A\\).\n\n\nThéorème :\nSi \\(A\\) et \\(B\\) sont deux événements indépendants, alors \\(A\\) et \\(\\bar{B}\\) sont indépendants.\n\n\n\nDémonstration :\n\nSoient \\(A\\) et \\(B\\) deux événements indépendants, alors\n\\[P(A \\cap B)= P(A) \\times P(B)\\]\nDe plus \\(B\\) et \\(\\bar{B}\\) forment une partition de l’univers, donc\n\\[P(A) =P(A \\cap B) + P(A \\cap \\bar{B})\\]\nDonc\n\\[P(A \\cap \\bar{B}) =  P(A) - P(A)P(B) = P(A)(1-P(B))=P(A)P(\\bar{B})\\]\nD’où le résultat.\n\n\nExemple :\nDans l’urne ci-dessous, il y a des jetons numérotés de différentes couleurs.\n\n4 jetons bleus : 1, 2, 3, 4\n\n2 jetons verts : 1 et 3\n\n3 jetons rouges : deux numérotés 1 et un numéroté 2\n\n\nOn tire au hasard un jeton dans cette urne.\nOn considère les évènements suivants :\n\n\\(B\\) : « le jeton tiré est bleu »\n\n\\(I\\) : « le numéro du jeton tiré est impair »\n\n\nLes évènements \\(B\\) et \\(I\\) sont-ils indépendants ?\n\n\n\nAfficher la correction\n\nLes jetons étant indiscernables au toucher, on est en situation d’équiprobabilité.\n\\[P(B)= \\frac{4}{9}, \\quad P(I) = \\frac{6}{9} = \\frac{2}{3}, \\quad P(B \\cap I) = \\frac{2}{9}\\]\nAinsi\n\\[P(B) \\times P(I) = \\frac{4}{9} \\times \\frac{2}{3} = \\frac{8}{27} \\neq \\frac{2}{9} = P(B \\cap I)\\]\nDonc les événements ne sont pas indépendants.\n\n\nOn rajoute \\(n\\) jetons bleus numérotés « 1 » dans l’urne.\n\nExprimer en fonction de \\(n\\), les probabilités \\(P(B)\\), \\(P(I)\\) et \\(P(B \\cap I)\\).\n\n\n\nAfficher la correction\n\n\\[P(B) = \\frac{4+n}{9+n}, \\quad P(I) = \\frac{6+n}{9+n}, \\quad P(B \\cap I) = \\frac{2+n}{9+n}\\]\n\n\nDéterminer le nombre de jetons à rajouter pour que les événements \\(I\\) et \\(B\\) soient indépendants.\n\n\n\nAfficher la correction\n\nLes événements \\(I\\) et \\(B\\) sont indépendants si et seulement si\n\\[P(B \\cap I) = P(B)  \\times P(I)\\]\nOr\n\\[\\frac{4+n}{9+n} \\times \\frac{6+n}{9+n} = \\frac{2+n}{9+n} \\Longleftrightarrow (4+n)(6+n)=(2+n)(9+n)\\]\n\\[\\Longleftrightarrow 24+10n+n^2=18+11n+n^2 \\Longleftrightarrow n=6\\]\nAinsi, pour que les événements soient indépendants, il faut ajouter \\(6\\) jetons bleus numérotés « 1 ».",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Indépendances"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/independance.html#notion-dindépendance",
+    "href": "premiere-maths/probaCond/independance.html#notion-dindépendance",
+    "title": "Indépendances",
+    "section": "",
+    "text": "Définition :\nSoit \\(A\\) et \\(B\\) deux événements d’un même univers de probabilités non nulles.\nOn dit que \\(A\\) et \\(B\\) sont indépendants lorsque\n\\[P(A \\cap B) =P(A) \\times P(B)\\]\n\n\nExemple :\nOn considère un jeu de 32 cartes. On note \\(A\\) et \\(B\\) les événements Obtenir un as et Obtenir un coeur .\nDémontrer que les événements \\(A\\) et \\(B\\) sont indépendants.\n\n\nAfficher la correction\n\nLes cartes étant indiscernables on est en situation d’équiprobabilité.\nPuisqu’il y a quatre as dans le jeu et huit cartes à coeur, et un seul as de coeur, on a\n\\[P(A) = \\frac{1}{4} \\quad ; \\quad P(B)= \\frac{1}{8} \\quad ; \\quad P(A \\cap B) = \\frac{1}{32}\\]\nAinsi\n\\[P(A) \\times P(B) = \\frac{1}{4} \\times \\frac{1}{8} = \\frac{1}{32} = P(A \\cap B)\\]\nDonc par définition les événements \\(A\\) et \\(B\\) sont indépendants.\n\n\n\nRemarque :\nLa notion d’indépendance et d’incompatibilité ne sont pas les mêmes et ne peuvent pas se réaliser en même temps.\nEn effet si \\(A\\) et \\(B\\) sont indépendants, alors\n\\[P(A \\cap B) = P(A) \\times P(B)\\]\nOr si \\(A\\) et \\(B\\) sont incompatibles \\(P(A \\cap B) = 0\\).\nAinsi, on aurait \\(P(A) = 0\\) ou \\(P(B) = 0\\), ce qui est contraire à la définition d’indépendance de deux événements.\n\n\nExemple :\nSoient \\(A\\) et \\(B\\) vérifiant \\(P(A) =0,8\\), \\(P(B)= 0,35\\) et \\(P(A \\cup B) =0,87\\). Montrer que \\(A\\) et \\(B\\) sont indépendants.\n\n\nAfficher la correction\n\nOn utilise l’égalité :\n\\[P(A \\cup B) + P(A \\cap B) = P(A) + P(B)\\]\nDonc\n\\[P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 0,8 + 0,35 - 0,87 = 0,28\\]\nOr\n\\[P(A) \\times P(B) = 0,8 \\times 0,35 = 0,28\\]\nOn en déduit que\n\\[P(A \\cap B) = P(A ) \\times P(B)\\]\nDonc \\(A\\) et \\(B\\) sont indépendants.\n\n\n\nThéorème :\nOn considère \\(A\\) et \\(B\\) deux événements de probabilité non nulles.\nOn dit que \\(A\\) et \\(B\\) sont indépendants si et seulement si\n\\[P_A(B)=P(B)\\]\n\n\n\nDémonstration :\n\nSoit \\(A\\) et \\(B\\) deux événements :\n\\[ A \\text{ et } B \\text{ indépendants } \\Longleftrightarrow P(A  \\cap B) =P(A) \\times P(B) \\Longleftrightarrow P(B) = \\frac{P(A \\cap B)}{P(A)} \\Longleftrightarrow P(B) =  P_A(B)\\]\n\n\nComprendre la notion d’indépendance : \nLa propriété établit qu’il y a indépendance si et seulement si \\(P(A)=P_B(A)\\).\nC’est-à-dire que la réalisation de l’événement \\(B\\) ne modifie en rien la probabilité de l’événement \\(A\\).\n\n\nThéorème :\nSi \\(A\\) et \\(B\\) sont deux événements indépendants, alors \\(A\\) et \\(\\bar{B}\\) sont indépendants.\n\n\n\nDémonstration :\n\nSoient \\(A\\) et \\(B\\) deux événements indépendants, alors\n\\[P(A \\cap B)= P(A) \\times P(B)\\]\nDe plus \\(B\\) et \\(\\bar{B}\\) forment une partition de l’univers, donc\n\\[P(A) =P(A \\cap B) + P(A \\cap \\bar{B})\\]\nDonc\n\\[P(A \\cap \\bar{B}) =  P(A) - P(A)P(B) = P(A)(1-P(B))=P(A)P(\\bar{B})\\]\nD’où le résultat.\n\n\nExemple :\nDans l’urne ci-dessous, il y a des jetons numérotés de différentes couleurs.\n\n4 jetons bleus : 1, 2, 3, 4\n\n2 jetons verts : 1 et 3\n\n3 jetons rouges : deux numérotés 1 et un numéroté 2\n\n\nOn tire au hasard un jeton dans cette urne.\nOn considère les évènements suivants :\n\n\\(B\\) : « le jeton tiré est bleu »\n\n\\(I\\) : « le numéro du jeton tiré est impair »\n\n\nLes évènements \\(B\\) et \\(I\\) sont-ils indépendants ?\n\n\n\nAfficher la correction\n\nLes jetons étant indiscernables au toucher, on est en situation d’équiprobabilité.\n\\[P(B)= \\frac{4}{9}, \\quad P(I) = \\frac{6}{9} = \\frac{2}{3}, \\quad P(B \\cap I) = \\frac{2}{9}\\]\nAinsi\n\\[P(B) \\times P(I) = \\frac{4}{9} \\times \\frac{2}{3} = \\frac{8}{27} \\neq \\frac{2}{9} = P(B \\cap I)\\]\nDonc les événements ne sont pas indépendants.\n\n\nOn rajoute \\(n\\) jetons bleus numérotés « 1 » dans l’urne.\n\nExprimer en fonction de \\(n\\), les probabilités \\(P(B)\\), \\(P(I)\\) et \\(P(B \\cap I)\\).\n\n\n\nAfficher la correction\n\n\\[P(B) = \\frac{4+n}{9+n}, \\quad P(I) = \\frac{6+n}{9+n}, \\quad P(B \\cap I) = \\frac{2+n}{9+n}\\]\n\n\nDéterminer le nombre de jetons à rajouter pour que les événements \\(I\\) et \\(B\\) soient indépendants.\n\n\n\nAfficher la correction\n\nLes événements \\(I\\) et \\(B\\) sont indépendants si et seulement si\n\\[P(B \\cap I) = P(B)  \\times P(I)\\]\nOr\n\\[\\frac{4+n}{9+n} \\times \\frac{6+n}{9+n} = \\frac{2+n}{9+n} \\Longleftrightarrow (4+n)(6+n)=(2+n)(9+n)\\]\n\\[\\Longleftrightarrow 24+10n+n^2=18+11n+n^2 \\Longleftrightarrow n=6\\]\nAinsi, pour que les événements soient indépendants, il faut ajouter \\(6\\) jetons bleus numérotés « 1 ».",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Indépendances"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/probaCond/independance.html#réalisation-dépreuves-identiques-et-indépendantes",
+    "href": "premiere-maths/probaCond/independance.html#réalisation-dépreuves-identiques-et-indépendantes",
+    "title": "Indépendances",
+    "section": "Réalisation d’épreuves identiques et indépendantes",
+    "text": "Réalisation d’épreuves identiques et indépendantes\n\nDéfinition :\nOn appelle succession de deux épreuves identiques et indépendantes la répétition à l’identique d’une expérience aléatoire deux fois, les résultats de la première épreuve n’influençant pas ceux de la deuxième.\n\n\nRemarque :\n- Lors de la succession d’épreuves indépendantes, les probabilités de chaque issue ne changent pas.\n- Une succession d’épreuves indépendantes est assimilable à des tirages successifs (avec remise si il s’agit de la même épreuve). Le résultat du premier tirage n’influence pas le deuxième.\n\n\nExemple :\nUne urne contient deux boules vertes et une boule rouge, indiscernables au toucher. On répète le tirage d’une boule avec remise.\n\nReprésenter la situation à l’aide d’un arbre pour deux tirages.\n\n\nAfficher la correction\n\n\n\nDéterminer la probabilité de l’événement \\(A\\) « avoir exactement une boule rouge ».\n\n\nAfficher la correction\n\nPour avoir exactement une boule rouge, on a eu \\((R_1, V_2)\\) ou \\((V_1, R_2)\\).\n\\[A=(R_1 \\cap V_2) \\cup (V_1 \\cap R_2)\\]\n\\[P(A) = P(R_1 \\cap V_2) + P(V_1 \\cap R_2) = P(R_1)P(V_2) + P(V_1)P(R_2) = 2 P(R) \\times P(V) = \\frac{4}{9}\\]\nDonc la probabilité d’avoir exactement une boule rouge est \\(\\frac{4}{9}\\).\n\nOn répète \\(n\\) fois l’expérience :\n\nDéterminer la probabilité de l’événement \\(B\\) « avoir au moins une boule rouge ».\n\n\n\nAfficher la correction\n\nN’avoir aucune boule rouge signifie n’avoir que des boules vertes :\n\\[P(B) = 1 - P(\\bar{B}) = 1 - P(V_1 \\cap V_2 \\cap \\dots \\cap V_n) = 1 - P(V)^n = 1 - \\left(\\frac{2}{3}\\right)^n\\]\n\n\nDéterminer la probabilité de l’événement \\(A\\) « avoir exactement une boule rouge ».\n\n\n\nAfficher la correction\n\nChaque position possible du tirage de la boule rouge a la même probabilité :\n\\[P(R_{=1}) = n \\, P(R) \\, P(V)^{n-1} = n \\times \\frac{1}{3} \\times \\left(\\frac{2}{3}\\right)^{n-1} = \\frac{n \\cdot 2^{n-1}}{3^n}\\]\n\n\n\n\n⬅️",
+    "crumbs": [
+      "Spé maths première",
+      "Proabilité conditionnelles",
+      "Indépendances"
     ]
   },
   {
@@ -1332,7 +2042,7 @@
     "href": "premiere-maths/NomDerive/exercices.html#exercice-19",
     "title": "Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles",
     "section": "Exercice 20",
-    "text": "Exercice 20\n\nExercice 20 : \n (Vitesse réglementée) De retour de vacances, Léane emprunte l’autoroute allemande où la vitesse n’est pas limitée. Au passage à la frontière avec la France, elle réalise que la limitation de vitesse est de 130 km/h. Afin de respecter celle-ci, elle freine et stabilise sa vitesse au bout de 4 secondes.\nla distance parcorue, en mètres, par la voiture après \\(t\\)s secondes depuis le passage de la frontière vérifie : \\[\\forall t \\in [0\\,;\\, 4], \\, d(t) = \\frac{480t}{t+12}\\]\n\nCalculer la vitesse moyenne de la voiture entre \\(t=0,5\\) seconde et \\(t=3\\) secondes.\n\n\nMontrer que le taux de variation de la fonction \\(d\\) entre \\(0,5\\) et \\(0,5+h\\), avec \\(h \\in \\R^*\\) vaut \\[V(h) = \\frac{460,8}{h+12,5}\\]\nComment interpréter \\(V(h)\\) en terme de vitesse ?\n\nDémontrer que la fonction \\(d\\) est dérivable en \\(0,5\\) et en déduire la vitesse instantanée du véhicule à l’instant \\(t=0,5\\).\n\n\nLéane aperçoit un radar à \\(t=0,5\\). Aura-t-elle une contravention pour excès de vitesse ?",
+    "text": "Exercice 20\n\nExercice 20 :  (Vitesse réglementée)  De retour de vacances, Léane emprunte l’autoroute allemande où la vitesse n’est pas limitée. Au passage à la frontière avec la France, elle réalise que la limitation de vitesse est de 130 km/h. Afin de respecter celle-ci, elle freine et stabilise sa vitesse au bout de 4 secondes.\nla distance parcorue, en mètres, par la voiture après \\(t\\)s secondes depuis le passage de la frontière vérifie : \\[\\forall t \\in [0\\,;\\, 4], \\, d(t) = \\frac{480t}{t+12}\\]\n\nCalculer la vitesse moyenne de la voiture entre \\(t=0,5\\) seconde et \\(t=3\\) secondes.\n\n\nMontrer que le taux de variation de la fonction \\(d\\) entre \\(0,5\\) et \\(0,5+h\\), avec \\(h \\in \\R^*\\) vaut \\[V(h) = \\frac{460,8}{h+12,5}\\]\nComment interpréter \\(V(h)\\) en terme de vitesse ?\n\nDémontrer que la fonction \\(d\\) est dérivable en \\(0,5\\) et en déduire la vitesse instantanée du véhicule à l’instant \\(t=0,5\\).\n\n\nLéane aperçoit un radar à \\(t=0,5\\). Aura-t-elle une contravention pour excès de vitesse ?",
     "crumbs": [
       "Spé maths première",
       "Nombre dérivé",
@@ -1340,11 +2050,11 @@
     ]
   },
   {
-    "objectID": "premiere-maths/NomDerive/exercices.html#bilan",
-    "href": "premiere-maths/NomDerive/exercices.html#bilan",
+    "objectID": "premiere-maths/NomDerive/exercices.html#exercice-20",
+    "href": "premiere-maths/NomDerive/exercices.html#exercice-20",
     "title": "Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles",
-    "section": "Bilan",
-    "text": "Bilan\n\nPour chacune des affirmations suivantes, préciser la ou les bonnes réponses.\n\nSoit la fonction \\(f\\) définie par \\(f(x) = -2x + 5\\), alors :\n\npour tout réel \\(a\\), \\(f'(a) = 2\\).\n\\(f'(7) = -2\\).\nla courbe représentative de \\(f\\) est confondue avec toutes les tangentes.\n\nSoit la fonction cube définie, pour tout réel \\(x\\), par \\(g(x) = x^3\\). On note \\(\\mathcal{C}_g\\) sa courbe représentative.\n\nPour tout réel \\(a\\), \\(g'(a) = 3a^2\\).\nLa tangente à la courbe \\(\\mathcal{C}_g\\) au point d’abscisse \\(-1\\) a pour coefficient directeur \\(-3\\).\nLa tangente à la courbe \\(\\mathcal{C}_g\\) au point d’abscisse \\(2\\) admet pour équation \\(y = 12x - 16\\).\n\nSoit \\(h\\) la fonction inverse définie sur \\(\\mathbb{R}^*\\) par \\(h(x) = \\dfrac{1}{x}\\). On note \\(\\mathcal{C}_h\\) sa courbe représentative.\n\nPour tout réel \\(a\\) strictement positif, les tangentes à la courbe \\(\\mathcal{C}_h\\) aux points d’abscisses \\(a\\) et \\(-a\\) sont parallèles.\n\\(f'(2) = -\\dfrac{1}{4}\\).\nLa tangente à la courbe \\(\\mathcal{C}_h\\) au point d’abscisse \\(-1\\) admet pour équation \\(y = -x - 2\\).",
+    "section": "Exercice 21",
+    "text": "Exercice 21\n\nExercice 21 : \nPour chacune des affirmations suivantes, préciser la ou les bonnes réponses.\n\nSoit la fonction \\(f\\) définie par \\(f(x) = -2x + 5\\), alors :\n\npour tout réel \\(a\\), \\(f'(a) = 2\\).\n\\(f'(7) = -2\\).\nla courbe représentative de \\(f\\) est confondue avec toutes les tangentes.\n\nSoit la fonction cube définie, pour tout réel \\(x\\), par \\(g(x) = x^3\\). On note \\(\\mathcal{C}_g\\) sa courbe représentative.\n\nPour tout réel \\(a\\), \\(g'(a) = 3a^2\\).\nLa tangente à la courbe \\(\\mathcal{C}_g\\) au point d’abscisse \\(-1\\) a pour coefficient directeur \\(-3\\).\nLa tangente à la courbe \\(\\mathcal{C}_g\\) au point d’abscisse \\(2\\) admet pour équation \\(y = 12x - 16\\).\n\nSoit \\(h\\) la fonction inverse définie sur \\(\\mathbb{R}^*\\) par \\(h(x) = \\dfrac{1}{x}\\). On note \\(\\mathcal{C}_h\\) sa courbe représentative.\n\nPour tout réel \\(a\\) strictement positif, les tangentes à la courbe \\(\\mathcal{C}_h\\) aux points d’abscisses \\(a\\) et \\(-a\\) sont parallèles.\n\\(f'(2) = -\\dfrac{1}{4}\\).\nLa tangente à la courbe \\(\\mathcal{C}_h\\) au point d’abscisse \\(-1\\) admet pour équation \\(y = -x - 2\\).",
     "crumbs": [
       "Spé maths première",
       "Nombre dérivé",
@@ -1352,11 +2062,11 @@
     ]
   },
   {
-    "objectID": "premiere-maths/NomDerive/exercices.html#bilan-1",
-    "href": "premiere-maths/NomDerive/exercices.html#bilan-1",
+    "objectID": "premiere-maths/NomDerive/exercices.html#exercice-21",
+    "href": "premiere-maths/NomDerive/exercices.html#exercice-21",
     "title": "Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles",
-    "section": "Bilan",
-    "text": "Bilan\n\nOn considère la fonction \\(f\\) définie par : \\[\\[\nf(x) = x^3 - x^2 + 3x + 1\n\\]\nOn note sa courbe \\(\\mathcal{C}\\) et \\(A\\) le point d’abscisse \\(-1\\) de la courbe \\(\\mathcal{C}\\). Un logiciel de calcul formel donne le résultat suivant\nCAS&gt; f(x) := -x^3 + 3x^2 + 1\nf(x) = -x^3 + 3x^2 + 1\n\nCAS&gt; diff(f(x), x)\n-3x^2 + 6x + 1\n\nJustifier que \\(\\mathcal{C}\\) admet exactement deux tangentes parallèles à l’axe des abscisses. Préciser alors les coordonnées des points de tangence et tracer ces tangentes.\n\nMontrer que la tangente \\(\\mathcal{T}_{-1}\\) à la courbe \\(\\mathcal{C}\\) au point \\(A\\) d’abscisse \\(-1\\) a pour équation réduite : \\(y = -9x + 4\\).\n\nEn quel point la courbe \\(\\mathcal{C}\\) admet-elle une tangente parallèle à \\(\\mathcal{T}_{-1}\\) ? Préciser l’abscisse de ce point de tangence et son équation réduite.\n\n\nJustifier que, pour tout réel \\(a\\), la tangente \\(\\mathcal{T}_a\\) à \\(\\mathcal{C}\\) au point d’abscisse \\(a\\) admet pour équation réduite : \\[y = (3a^2 - 2a + 3)x + (-2a^3 + a^2 + 1)\n\\]\n\nMontrer alors que \\(\\mathcal{T}_a\\) passe par l’origine si et seulement si \\((a - 1)(2a^2 + 3) = 0\\).\n\nEn déduire les équations réduites des tangentes à \\(\\mathcal{C}\\) passant par l’origine du repère.",
+    "section": "Exercice 22",
+    "text": "Exercice 22\n\nExercice 22 : \nOn considère la fonction \\(f\\) définie par : \\[\\[\nf(x) = x^3 - x^2 + 3x + 1\n\\]\nOn note sa courbe \\(\\mathcal{C}\\) et \\(A\\) le point d’abscisse \\(-1\\) de la courbe \\(\\mathcal{C}\\). Un logiciel de calcul formel donne le résultat suivant\nCAS&gt; f(x) := -x^3 + 3x^2 + 1\nf(x) = -x^3 + 3x^2 + 1\n\nCAS&gt; diff(f(x), x)\n-3x^2 + 6x + 1\n\nJustifier que \\(\\mathcal{C}\\) admet exactement deux tangentes parallèles à l’axe des abscisses. Préciser alors les coordonnées des points de tangence et tracer ces tangentes.\n\nMontrer que la tangente \\(\\mathcal{T}_{-1}\\) à la courbe \\(\\mathcal{C}\\) au point \\(A\\) d’abscisse \\(-1\\) a pour équation réduite : \\(y = -9x + 4\\).\n\nEn quel point la courbe \\(\\mathcal{C}\\) admet-elle une tangente parallèle à \\(\\mathcal{T}_{-1}\\) ? Préciser l’abscisse de ce point de tangence et son équation réduite.\n\n\nJustifier que, pour tout réel \\(a\\), la tangente \\(\\mathcal{T}_a\\) à \\(\\mathcal{C}\\) au point d’abscisse \\(a\\) admet pour équation réduite : \\[y = (3a^2 - 2a + 3)x + (-2a^3 + a^2 + 1)\n\\]\n\nMontrer alors que \\(\\mathcal{T}_a\\) passe par l’origine si et seulement si \\((a - 1)(2a^2 + 3) = 0\\).\n\nEn déduire les équations réduites des tangentes à \\(\\mathcal{C}\\) passant par l’origine du repère.",
     "crumbs": [
       "Spé maths première",
       "Nombre dérivé",

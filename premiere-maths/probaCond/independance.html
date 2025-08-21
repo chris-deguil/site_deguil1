@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Tangente à la représentation graphique d’une fonction en a">
+<meta name="description" content="Indépendantes, répétition d’épreuve identiques">
 
-<title>Tangente à une courbe – Site pédagogique</title>
+<title>Indépendances – Site pédagogique</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -190,7 +190,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/definition.html">Nombre dérivé</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/tangente.html">Tangente à une courbe</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Proabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/independance.html">Indépendances</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -321,13 +321,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Nombre dérivé</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/NomDerive/definition.html" class="sidebar-item-text sidebar-link">
@@ -336,7 +336,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/tangente.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../premiere-maths/NomDerive/tangente.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tangente à une courbe</span></a>
   </div>
 </li>
@@ -356,13 +356,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Proabilité conditionnelles</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
@@ -377,7 +377,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Indépendances</span></a>
   </div>
 </li>
@@ -399,21 +399,22 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tangente-en-un-point-de-la-courbe" id="toc-tangente-en-un-point-de-la-courbe" class="nav-link active" data-scroll-target="#tangente-en-un-point-de-la-courbe">Tangente en un point de la courbe</a></li>
+  <li><a href="#notion-dindépendance" id="toc-notion-dindépendance" class="nav-link active" data-scroll-target="#notion-dindépendance">Notion d’indépendance</a></li>
+  <li><a href="#réalisation-dépreuves-identiques-et-indépendantes" id="toc-réalisation-dépreuves-identiques-et-indépendantes" class="nav-link" data-scroll-target="#réalisation-dépreuves-identiques-et-indépendantes">Réalisation d’épreuves identiques et indépendantes</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/definition.html">Nombre dérivé</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/tangente.html">Tangente à une courbe</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Proabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/independance.html">Indépendances</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tangente à une courbe</h1>
+<h1 class="title">Indépendances</h1>
 </div>
 
 <div>
   <div class="description">
-    Tangente à la représentation graphique d’une fonction en <span class="math inline">\(a\)</span>
+    Indépendantes, répétition d’épreuve identiques
   </div>
 </div>
 
@@ -430,97 +431,207 @@ window.Quarto = {
 </header>
 
 
-<section id="tangente-en-un-point-de-la-courbe" class="level2">
-<h2 class="anchored" data-anchor-id="tangente-en-un-point-de-la-courbe">Tangente en un point de la courbe</h2>
-<p>On considère une fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(I\)</span> non vide, et dérivable en <span class="math inline">\(a \in I\)</span>.<br>
-Faisons alors tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span> (comme pour la définition du nombre dérivé).<br>
-Le point <span class="math inline">\(M\)</span> se rapproche infiniment du point <span class="math inline">\(A\)</span> (sans pour autant être confondu avec le point <span class="math inline">\(A\)</span> !).</p>
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap;">
-<p><img src="../../image/nomDerive_courbe3.png" style="width: 100%;"></p>
-<p><img src="../../image/nomDerive_courbe4.png" style="width: 100%;"></p>
+<section id="notion-dindépendance" class="level2">
+<h2 class="anchored" data-anchor-id="notion-dindépendance">Notion d’indépendance</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition :</span><br>
+Soit <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements d’un même univers de probabilités non nulles.<br>
+On dit que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants lorsque</p>
+<p><span class="math display">\[P(A \cap B) =P(A) \times P(B)\]</span></p>
 </div>
-<p>L’ensemble de ces droites <span class="math inline">\((AM)\)</span> forme un faisceau de droites.<br>
-On peut donc voir le nombre <span class="math inline">\(f'(a)\)</span> comme le coefficient directeur de la « position limite » de ce faisceau de droites des sécantes <span class="math inline">\((AM)\)</span> lorsque le point <span class="math inline">\(M\)</span> se rapproche de <span class="math inline">\(A\)</span>.<br>
-Cette droite « limite » a un seul point de contact (dans un voisinage proche de <span class="math inline">\(A\)</span>) avec <span class="math inline">\(\mathcal{C}_f\)</span>, et tend donc à être la tangente en <span class="math inline">\(A\)</span> à <span class="math inline">\(\mathcal{C}_f\)</span>.</p>
-<div class="bloc thm">
-<p><span class="bloc-titre">Théorème :</span><br>
-Soit <span class="math inline">\(f\)</span> une fonction dérivable en <span class="math inline">\(a\)</span>.<br>
-<span class="math inline">\(f'(a)\)</span> est le coefficient directeur de la tangente au point d’abscisse <span class="math inline">\(a\)</span>.</p>
-</div>
-<p><img src="../../image/nomDerive5.png" class="img-fluid" style="display:block;margin:0 auto;width:60%;"></p>
 <div class="bloc ex">
-<p><strong>Déterminer graphiquement un nombre dérivé</strong><br>
-Sur le graphique ci-dessous, on a tracé la courbe représentative <span class="math inline">\(\mathcal{C}_f\)</span> d’une fonction <span class="math inline">\(f\)</span> définie et dérivable en tout point de l’intervalle <span class="math inline">\([-2 \,;\, 5]\)</span>.<br>
-On sait que :</p>
-<ul>
-<li>la tangente au point <span class="math inline">\(A(-1, 5)\)</span> à la courbe <span class="math inline">\(\mathcal{C}_f\)</span> est parallèle à l’axe des abscisses ;</li>
-<li>la tangente au point <span class="math inline">\(B(2, 1)\)</span> à la courbe <span class="math inline">\(\mathcal{C}_f\)</span> coupe l’axe des abscisses au point de coordonnées <span class="math inline">\((3, 0)\)</span>.</li>
-</ul>
-<p><img src="../../image/nomDerive_courbe6.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
-<p>Déterminons <span class="math inline">\(f'(-1)\)</span> et <span class="math inline">\(f'(2)\)</span>.</p>
+<p><span class="bloc-titre">Exemple :</span><br>
+On considère un jeu de 32 cartes. On note <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> les événements Obtenir un as et Obtenir un coeur .<br>
+Démontrer que les événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<p>Le nombre dérivé en <span class="math inline">\(a\)</span> est le coefficient directeur de la tangente au point d’abscisse <span class="math inline">\(a\)</span>.</p>
-<ul>
-<li>La tangente en <span class="math inline">\(-1\)</span> étant parallèle à l’axe des abscisses, son coefficient directeur est nul.<br>
-Ainsi <span class="math inline">\(f'(-1) = 0\)</span>.<br>
-</li>
-<li>La tangente en <span class="math inline">\(B\)</span> passe par les points <span class="math inline">\(B(2, 1)\)</span> et <span class="math inline">\((3, 0)\)</span> :<br>
-Le coefficient directeur est <span class="math inline">\(\dfrac{1 - 0}{2 - 3} = -1\)</span>, donc <span class="math inline">\(f'(2) = -1\)</span>.</li>
-</ul>
+<p>Les cartes étant indiscernables on est en situation d’équiprobabilité.<br>
+Puisqu’il y a quatre as dans le jeu et huit cartes à coeur, et un seul as de coeur, on a</p>
+<p><span class="math display">\[P(A) = \frac{1}{4} \quad ; \quad P(B)= \frac{1}{8} \quad ; \quad P(A \cap B) = \frac{1}{32}\]</span></p>
+<p>Ainsi</p>
+<p><span class="math display">\[P(A) \times P(B) = \frac{1}{4} \times \frac{1}{8} = \frac{1}{32} = P(A \cap B)\]</span></p>
+Donc par définition les événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.
+</details>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque :</span><br>
+La notion d’indépendance et d’incompatibilité ne sont pas les mêmes et ne peuvent pas se réaliser en même temps.</p>
+<p>En effet si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants, alors</p>
+<p><span class="math display">\[P(A \cap B) = P(A) \times P(B)\]</span></p>
+<p>Or si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont incompatibles <span class="math inline">\(P(A \cap B) = 0\)</span>.</p>
+<p>Ainsi, on aurait <span class="math inline">\(P(A) = 0\)</span> ou <span class="math inline">\(P(B) = 0\)</span>, ce qui est contraire à la définition d’indépendance de deux événements.</p>
+</div>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple :</span><br>
+Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> vérifiant <span class="math inline">\(P(A) =0,8\)</span>, <span class="math inline">\(P(B)= 0,35\)</span> et <span class="math inline">\(P(A \cup B) =0,87\)</span>. Montrer que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<p>On utilise l’égalité :</p>
+<p><span class="math display">\[P(A \cup B) + P(A \cap B) = P(A) + P(B)\]</span></p>
+<p>Donc</p>
+<p><span class="math display">\[P(A \cap B) = P(A) + P(B) - P(A \cup B) = 0,8 + 0,35 - 0,87 = 0,28\]</span></p>
+<p>Or</p>
+<p><span class="math display">\[P(A) \times P(B) = 0,8 \times 0,35 = 0,28\]</span></p>
+<p>On en déduit que</p>
+<p><span class="math display">\[P(A \cap B) = P(A ) \times P(B)\]</span></p>
+Donc <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.
 </details>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
-Soit <span class="math inline">\(f\)</span> une fonction dérivable en <span class="math inline">\(a\)</span>, alors <span class="math inline">\(\mathcal{C}_f\)</span> admet une tangente au point d’abscisse <span class="math inline">\(a\)</span> d’équation :<br>
-<span class="math display">\[y = f'(a)(x - a) + f(a)\]</span></p>
+On considère <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements de probabilité non nulles.<br>
+On dit que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants si et seulement si</p>
+<p><span class="math display">\[P_A(B)=P(B)\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p><span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(a\)</span>, donc <span class="math inline">\(f'(a)\)</span> est le coefficient directeur de la tangente de <span class="math inline">\(f\)</span> en <span class="math inline">\(a\)</span>.<br>
-Elle admet donc une équation réduite de la forme : <span class="math display">\[y = f'(a)x + p\]</span></p>
-<p>Le point <span class="math inline">\(A(a\,;\,f(a))\)</span> appartient à <span class="math inline">\(\mathcal{C}_f\)</span> donc vérifie cette équation : <span class="math display">\[f(a) = f'(a)a + p \Rightarrow p = f(a) - f'(a)a\]</span></p>
-Ainsi l’équation est : <span class="math display">\[y = f'(a)x + f(a) - f'(a)a = f'(a)(x - a) + f(a)\]</span>
+<p>Soit <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements :</p>
+<span class="math display">\[ A \text{ et } B \text{ indépendants } \Longleftrightarrow P(A  \cap B) =P(A) \times P(B) \Longleftrightarrow P(B) = \frac{P(A \cap B)}{P(A)} \Longleftrightarrow P(B) =  P_A(B)\]</span>
+</details>
+<div class="bloc rem">
+<p><span class="bloc-titre"><strong>Comprendre la notion d’indépendance :</strong> </span></p>
+<p>La propriété établit qu’il y a indépendance si et seulement si <span class="math inline">\(P(A)=P_B(A)\)</span>.<br>
+C’est-à-dire que la réalisation de l’événement <span class="math inline">\(B\)</span> ne modifie en rien la probabilité de l’événement <span class="math inline">\(A\)</span>.</p>
+</div>
+<div class="bloc thm">
+<p><span class="bloc-titre">Théorème :</span><br>
+Si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont deux événements indépendants, alors <span class="math inline">\(A\)</span> et <span class="math inline">\(\bar{B}\)</span> sont indépendants.</p>
+</div>
+<details class="bloc demo">
+<summary>
+Démonstration :
+</summary>
+<p>Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements indépendants, alors</p>
+<p><span class="math display">\[P(A \cap B)= P(A) \times P(B)\]</span></p>
+<p>De plus <span class="math inline">\(B\)</span> et <span class="math inline">\(\bar{B}\)</span> forment une partition de l’univers, donc</p>
+<p><span class="math display">\[P(A) =P(A \cap B) + P(A \cap \bar{B})\]</span></p>
+<p>Donc</p>
+<p><span class="math display">\[P(A \cap \bar{B}) =  P(A) - P(A)P(B) = P(A)(1-P(B))=P(A)P(\bar{B})\]</span></p>
+D’où le résultat.
 </details>
 <div class="bloc ex">
-<p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(D_f = ]0\,;\,+\infty[\)</span> par <span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span>.</p>
+<p><span class="bloc-titre">Exemple :</span><br>
+Dans l’urne ci-dessous, il y a des jetons numérotés de différentes couleurs.</p>
+<ul>
+<li>4 jetons bleus : 1, 2, 3, 4<br>
+</li>
+<li>2 jetons verts : 1 et 3<br>
+</li>
+<li>3 jetons rouges : deux numérotés 1 et un numéroté 2</li>
+</ul>
+<p><img src="../../image/urne_dst.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+<p>On tire au hasard un jeton dans cette urne.<br>
+On considère les évènements suivants :</p>
+<ul>
+<li><span class="math inline">\(B\)</span> : « le jeton tiré est bleu »<br>
+</li>
+<li><span class="math inline">\(I\)</span> : « le numéro du jeton tiré est impair »</li>
+</ul>
 <ol type="1">
-<li>Montrer que <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(3\)</span>.</li>
+<li>Les évènements <span class="math inline">\(B\)</span> et <span class="math inline">\(I\)</span> sont-ils indépendants ?</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<p>Pour tout <span class="math inline">\(h\)</span> non nul, <span class="math display">\[
-\dfrac{f(3+h)-f(3)}{h} = \dfrac{\dfrac{1}{(h+3)^2} - \dfrac{1}{3^2}}{h} = \dfrac{\dfrac{9 - (h+3)^2 }{9(h+3)^2}}{h} = \dfrac{9 - (h^2 +6h + 9)}{9h(h+3)^2} = -\dfrac{h +6}{9(h+3)^2}
-\]</span></p>
-<p>Or,<br>
-<span class="math display">\[\lim_{h \to 0} -\dfrac{h +6}{9(h+3)^2} = - \frac{6}{81} = -\frac{2}{27}\]</span></p>
-Donc <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(3\)</span>, et <span class="math inline">\(f'(3) = -\frac{2}{27}\)</span>, <span class="math inline">\(f(3) = \frac{1}{9}\)</span>.
+<p>Les jetons étant indiscernables au toucher, on est en situation d’équiprobabilité.</p>
+<p><span class="math display">\[P(B)= \frac{4}{9}, \quad P(I) = \frac{6}{9} = \frac{2}{3}, \quad P(B \cap I) = \frac{2}{9}\]</span></p>
+<p>Ainsi</p>
+<p><span class="math display">\[P(B) \times P(I) = \frac{4}{9} \times \frac{2}{3} = \frac{8}{27} \neq \frac{2}{9} = P(B \cap I)\]</span></p>
+Donc les événements ne sont pas indépendants.
 </details>
 <ol start="2" type="1">
-<li>En déduire l’équation de la tangente au point d’abscisse <span class="math inline">\(3\)</span>.</li>
+<li><p>On rajoute <span class="math inline">\(n\)</span> jetons bleus numérotés « 1 » dans l’urne.</p>
+<ol type="a">
+<li>Exprimer en fonction de <span class="math inline">\(n\)</span>, les probabilités <span class="math inline">\(P(B)\)</span>, <span class="math inline">\(P(I)\)</span> et <span class="math inline">\(P(B \cap I)\)</span>.</li>
 </ol>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+<p>Afficher la correction</p>
 </summary>
-<p>Soit <span class="math inline">\(T_3\)</span> l’équation de la tangente au point d’abscisse <span class="math inline">\(3\)</span> : <span class="math display">\[y = f'(3)(x - 3) + f(3) = - \frac{2}{27}(x - 3) + \frac{1}{9} = -\frac{2}{27}x + \frac{1}{3}\]</span></p>
-Donc l’équation cherchée est :<br>
-<span class="math display">\[y = - \frac{2}{27}x + \frac{1}{3}\]</span>
+<p><span class="math display">\[P(B) = \frac{4+n}{9+n}, \quad P(I) = \frac{6+n}{9+n}, \quad P(B \cap I) = \frac{2+n}{9+n}\]</span></p>
 </details>
+<ol start="2" type="a">
+<li>Déterminer le nombre de jetons à rajouter pour que les événements <span class="math inline">\(I\)</span> et <span class="math inline">\(B\)</span> soient indépendants.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction</p>
+</summary>
+<p>Les événements <span class="math inline">\(I\)</span> et <span class="math inline">\(B\)</span> sont indépendants si et seulement si</p>
+<p><span class="math display">\[P(B \cap I) = P(B)  \times P(I)\]</span></p>
+<p>Or</p>
+<p><span class="math display">\[\frac{4+n}{9+n} \times \frac{6+n}{9+n} = \frac{2+n}{9+n} \Longleftrightarrow (4+n)(6+n)=(2+n)(9+n)\]</span></p>
+<p><span class="math display">\[\Longleftrightarrow 24+10n+n^2=18+11n+n^2 \Longleftrightarrow n=6\]</span></p>
+<p>Ainsi, pour que les événements soient indépendants, il faut ajouter <span class="math inline">\(6\)</span> jetons bleus numérotés « 1 ».</p>
+</details></li>
+</ol>
 </div>
-<div class="bloc rem">
+<hr>
+</section>
+<section id="réalisation-dépreuves-identiques-et-indépendantes" class="level2">
+<h2 class="anchored" data-anchor-id="réalisation-dépreuves-identiques-et-indépendantes">Réalisation d’épreuves identiques et indépendantes</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition :</span><br>
+On appelle succession de deux épreuves identiques et indépendantes la répétition à l’identique d’une expérience aléatoire deux fois, les résultats de la première épreuve n’influençant pas ceux de la deuxième.</p>
+</div>
+<div class="bloc ex">
 <p><span class="bloc-titre">Remarque :</span><br>
-La représentation graphique et sa tangente sont localement confondues en <span class="math inline">\(a\)</span>.<br>
-On peut donc écrire, pour <span class="math inline">\(h\)</span> proche de <span class="math inline">\(0\)</span> : <span class="math display">\[f(a + h) \approx  f(a) + h \cdot f'(a)\]</span></p>
+- Lors de la succession d’épreuves indépendantes, les probabilités de chaque issue ne changent pas.<br>
+- Une succession d’épreuves indépendantes est assimilable à des tirages successifs (avec remise si il s’agit de la même épreuve). Le résultat du premier tirage n’influence pas le deuxième.</p>
+</div>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple :</span><br>
+Une urne contient deux boules vertes et une boule rouge, indiscernables au toucher. On répète le tirage d’une boule avec remise.</p>
+<ol type="1">
+<li><p>Représenter la situation à l’aide d’un arbre pour deux tirages.</p>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction</p>
+</summary>
+<p><img src="../../image/proba_graphe6.png" class="img-fluid" style="display:block;margin:0 auto;width:50%;"></p>
+</details></li>
+<li><p>Déterminer la probabilité de l’événement <span class="math inline">\(A\)</span> « avoir exactement une boule rouge ».</p>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction</p>
+</summary>
+<p>Pour avoir exactement une boule rouge, on a eu <span class="math inline">\((R_1, V_2)\)</span> ou <span class="math inline">\((V_1, R_2)\)</span>.</p>
+<p><span class="math display">\[A=(R_1 \cap V_2) \cup (V_1 \cap R_2)\]</span></p>
+<p><span class="math display">\[P(A) = P(R_1 \cap V_2) + P(V_1 \cap R_2) = P(R_1)P(V_2) + P(V_1)P(R_2) = 2 P(R) \times P(V) = \frac{4}{9}\]</span></p>
+<p>Donc la probabilité d’avoir exactement une boule rouge est <span class="math inline">\(\frac{4}{9}\)</span>.</p>
+</details></li>
+<li><p>On répète <span class="math inline">\(n\)</span> fois l’expérience :</p>
+<ol type="a">
+<li>Déterminer la probabilité de l’événement <span class="math inline">\(B\)</span> « avoir au moins une boule rouge ».</li>
+</ol>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction</p>
+</summary>
+<p>N’avoir aucune boule rouge signifie n’avoir que des boules vertes :</p>
+<p><span class="math display">\[P(B) = 1 - P(\bar{B}) = 1 - P(V_1 \cap V_2 \cap \dots \cap V_n) = 1 - P(V)^n = 1 - \left(\frac{2}{3}\right)^n\]</span></p>
+</details>
+<ol start="2" type="a">
+<li>Déterminer la probabilité de l’événement <span class="math inline">\(A\)</span> « avoir exactement une boule rouge ».</li>
+</ol>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction</p>
+</summary>
+<p>Chaque position possible du tirage de la boule rouge a la même probabilité :</p>
+<p><span class="math display">\[P(R_{=1}) = n \, P(R) \, P(V)^{n-1} = n \times \frac{1}{3} \times \left(\frac{2}{3}\right)^{n-1} = \frac{n \cdot 2^{n-1}}{3^n}\]</span></p>
+</details></li>
+</ol>
 </div>
 <div class="nav-pages">
-<p><a class="prev" href="definition.html">⬅️</a> <a class="next" href="DerivUsuelles.html">➡️</a></p>
+<p><a class="prev" href="fpt.html">⬅️</a></p>
 </div>
 
 

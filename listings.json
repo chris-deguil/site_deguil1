@@ -28,7 +28,17 @@
     "items": [
       "/premiere-maths/fonction2nD/index.html",
       "/premiere-maths/suite1/index.html",
-      "/premiere-maths/NomDerive/index.html"
+      "/premiere-maths/NomDerive/index.html",
+      "/premiere-maths/probaCond/index.html"
+    ]
+  },
+  {
+    "listing": "/premiere-maths/probaCond/index.html",
+    "items": [
+      "/premiere-maths/probaCond/definition.html",
+      "/premiere-maths/probaCond/fpt.html",
+      "/premiere-maths/probaCond/independance.html",
+      "/premiere-maths/probaCond/exercices.html"
     ]
   },
   {

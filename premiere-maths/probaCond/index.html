@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Tangente à la représentation graphique d’une fonction en a">
+<meta name="description" content="Probabilité conditionnelle - Indépendance - Répétition d’épreuves">
 
-<title>Tangente à une courbe – Site pédagogique</title>
+<title>Chapitre 4 : Probabilité conditionnelle – Site pédagogique</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -149,7 +180,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../assets/css/maths.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed maths-theme">
+<body class="nav-fixed maths-theme">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -167,7 +198,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -185,235 +216,31 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/definition.html">Nombre dérivé</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/tangente.html">Tangente à une courbe</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours de Première Spécialité maths</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Fonctions du second degré</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction polynôme du second degré</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/racine.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Le second degré : racines d’une équation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/coefficient.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lien coefficients - racines</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/parabole.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Parabole</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Second degré</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Suites numériques : Généralités</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Définitions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de génération</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Liste des termes d’une suite numérique</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/variations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Variations d’une suite</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/limites.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Notion de limite</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme : Somme et Seuil</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Nombre dérivé</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombre dérivé</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/tangente.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tangente à une courbe</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Proabilité conditionnelles</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tangente-en-un-point-de-la-courbe" id="toc-tangente-en-un-point-de-la-courbe" class="nav-link active" data-scroll-target="#tangente-en-un-point-de-la-courbe">Tangente en un point de la courbe</a></li>
+  <li><a href="#attendus-et-savoir-faire" id="toc-attendus-et-savoir-faire" class="nav-link active" data-scroll-target="#attendus-et-savoir-faire">Attendus et savoir-faire</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/definition.html">Nombre dérivé</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/NomDerive/tangente.html">Tangente à une courbe</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tangente à une courbe</h1>
+<h1 class="title">Chapitre 4 : Probabilité conditionnelle</h1>
 </div>
 
 <div>
   <div class="description">
-    Tangente à la représentation graphique d’une fonction en <span class="math inline">\(a\)</span>
+    Probabilité conditionnelle - Indépendance - Répétition d’épreuves
   </div>
 </div>
 
@@ -430,103 +257,87 @@ window.Quarto = {
 </header>
 
 
-<section id="tangente-en-un-point-de-la-courbe" class="level2">
-<h2 class="anchored" data-anchor-id="tangente-en-un-point-de-la-courbe">Tangente en un point de la courbe</h2>
-<p>On considère une fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(I\)</span> non vide, et dérivable en <span class="math inline">\(a \in I\)</span>.<br>
-Faisons alors tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span> (comme pour la définition du nombre dérivé).<br>
-Le point <span class="math inline">\(M\)</span> se rapproche infiniment du point <span class="math inline">\(A\)</span> (sans pour autant être confondu avec le point <span class="math inline">\(A\)</span> !).</p>
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap;">
-<p><img src="../../image/nomDerive_courbe3.png" style="width: 100%;"></p>
-<p><img src="../../image/nomDerive_courbe4.png" style="width: 100%;"></p>
-</div>
-<p>L’ensemble de ces droites <span class="math inline">\((AM)\)</span> forme un faisceau de droites.<br>
-On peut donc voir le nombre <span class="math inline">\(f'(a)\)</span> comme le coefficient directeur de la « position limite » de ce faisceau de droites des sécantes <span class="math inline">\((AM)\)</span> lorsque le point <span class="math inline">\(M\)</span> se rapproche de <span class="math inline">\(A\)</span>.<br>
-Cette droite « limite » a un seul point de contact (dans un voisinage proche de <span class="math inline">\(A\)</span>) avec <span class="math inline">\(\mathcal{C}_f\)</span>, et tend donc à être la tangente en <span class="math inline">\(A\)</span> à <span class="math inline">\(\mathcal{C}_f\)</span>.</p>
-<div class="bloc thm">
-<p><span class="bloc-titre">Théorème :</span><br>
-Soit <span class="math inline">\(f\)</span> une fonction dérivable en <span class="math inline">\(a\)</span>.<br>
-<span class="math inline">\(f'(a)\)</span> est le coefficient directeur de la tangente au point d’abscisse <span class="math inline">\(a\)</span>.</p>
-</div>
-<p><img src="../../image/nomDerive5.png" class="img-fluid" style="display:block;margin:0 auto;width:60%;"></p>
-<div class="bloc ex">
-<p><strong>Déterminer graphiquement un nombre dérivé</strong><br>
-Sur le graphique ci-dessous, on a tracé la courbe représentative <span class="math inline">\(\mathcal{C}_f\)</span> d’une fonction <span class="math inline">\(f\)</span> définie et dérivable en tout point de l’intervalle <span class="math inline">\([-2 \,;\, 5]\)</span>.<br>
-On sait que :</p>
-<ul>
-<li>la tangente au point <span class="math inline">\(A(-1, 5)\)</span> à la courbe <span class="math inline">\(\mathcal{C}_f\)</span> est parallèle à l’axe des abscisses ;</li>
-<li>la tangente au point <span class="math inline">\(B(2, 1)\)</span> à la courbe <span class="math inline">\(\mathcal{C}_f\)</span> coupe l’axe des abscisses au point de coordonnées <span class="math inline">\((3, 0)\)</span>.</li>
-</ul>
-<p><img src="../../image/nomDerive_courbe6.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
-<p>Déterminons <span class="math inline">\(f'(-1)\)</span> et <span class="math inline">\(f'(2)\)</span>.</p>
-<details class="bloc cor">
-<summary>
-Afficher la correction
-</summary>
-<p>Le nombre dérivé en <span class="math inline">\(a\)</span> est le coefficient directeur de la tangente au point d’abscisse <span class="math inline">\(a\)</span>.</p>
-<ul>
-<li>La tangente en <span class="math inline">\(-1\)</span> étant parallèle à l’axe des abscisses, son coefficient directeur est nul.<br>
-Ainsi <span class="math inline">\(f'(-1) = 0\)</span>.<br>
-</li>
-<li>La tangente en <span class="math inline">\(B\)</span> passe par les points <span class="math inline">\(B(2, 1)\)</span> et <span class="math inline">\((3, 0)\)</span> :<br>
-Le coefficient directeur est <span class="math inline">\(\dfrac{1 - 0}{2 - 3} = -1\)</span>, donc <span class="math inline">\(f'(2) = -1\)</span>.</li>
-</ul>
-</details>
-</div>
-<div class="bloc thm">
-<p><span class="bloc-titre">Théorème :</span><br>
-Soit <span class="math inline">\(f\)</span> une fonction dérivable en <span class="math inline">\(a\)</span>, alors <span class="math inline">\(\mathcal{C}_f\)</span> admet une tangente au point d’abscisse <span class="math inline">\(a\)</span> d’équation :<br>
-<span class="math display">\[y = f'(a)(x - a) + f(a)\]</span></p>
-</div>
-<details class="bloc demo">
-<summary>
-Démonstration :
-</summary>
-<p><span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(a\)</span>, donc <span class="math inline">\(f'(a)\)</span> est le coefficient directeur de la tangente de <span class="math inline">\(f\)</span> en <span class="math inline">\(a\)</span>.<br>
-Elle admet donc une équation réduite de la forme : <span class="math display">\[y = f'(a)x + p\]</span></p>
-<p>Le point <span class="math inline">\(A(a\,;\,f(a))\)</span> appartient à <span class="math inline">\(\mathcal{C}_f\)</span> donc vérifie cette équation : <span class="math display">\[f(a) = f'(a)a + p \Rightarrow p = f(a) - f'(a)a\]</span></p>
-Ainsi l’équation est : <span class="math display">\[y = f'(a)x + f(a) - f'(a)a = f'(a)(x - a) + f(a)\]</span>
-</details>
-<div class="bloc ex">
-<p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(D_f = ]0\,;\,+\infty[\)</span> par <span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span>.</p>
-<ol type="1">
-<li>Montrer que <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(3\)</span>.</li>
-</ol>
-<details class="bloc cor">
-<summary>
-Afficher la correction
-</summary>
-<p>Pour tout <span class="math inline">\(h\)</span> non nul, <span class="math display">\[
-\dfrac{f(3+h)-f(3)}{h} = \dfrac{\dfrac{1}{(h+3)^2} - \dfrac{1}{3^2}}{h} = \dfrac{\dfrac{9 - (h+3)^2 }{9(h+3)^2}}{h} = \dfrac{9 - (h^2 +6h + 9)}{9h(h+3)^2} = -\dfrac{h +6}{9(h+3)^2}
-\]</span></p>
-<p>Or,<br>
-<span class="math display">\[\lim_{h \to 0} -\dfrac{h +6}{9(h+3)^2} = - \frac{6}{81} = -\frac{2}{27}\]</span></p>
-Donc <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(3\)</span>, et <span class="math inline">\(f'(3) = -\frac{2}{27}\)</span>, <span class="math inline">\(f(3) = \frac{1}{9}\)</span>.
-</details>
-<ol start="2" type="1">
-<li>En déduire l’équation de la tangente au point d’abscisse <span class="math inline">\(3\)</span>.</li>
-</ol>
-<details class="bloc cor">
-<summary>
-Afficher la correction
-</summary>
-<p>Soit <span class="math inline">\(T_3\)</span> l’équation de la tangente au point d’abscisse <span class="math inline">\(3\)</span> : <span class="math display">\[y = f'(3)(x - 3) + f(3) = - \frac{2}{27}(x - 3) + \frac{1}{9} = -\frac{2}{27}x + \frac{1}{3}\]</span></p>
-Donc l’équation cherchée est :<br>
-<span class="math display">\[y = - \frac{2}{27}x + \frac{1}{3}\]</span>
-</details>
-</div>
+<section id="attendus-et-savoir-faire" class="level2">
+<h2 class="anchored" data-anchor-id="attendus-et-savoir-faire">Attendus et savoir-faire</h2>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque :</span><br>
-La représentation graphique et sa tangente sont localement confondues en <span class="math inline">\(a\)</span>.<br>
-On peut donc écrire, pour <span class="math inline">\(h\)</span> proche de <span class="math inline">\(0\)</span> : <span class="math display">\[f(a + h) \approx  f(a) + h \cdot f'(a)\]</span></p>
+<p><span class="bloc-titre">Attendus et savoir-faire :</span></p>
+<ul>
+<li>Construire un arbre pondéré ou un tableau en lien avec une situation donnée. Passer du registre de la langue naturelle au registre symbolique et inversement.</li>
+<li>Utiliser un arbre pondéré ou un tableau pour calculer une probabilité.</li>
+<li>Calculer des probabilités conditionnelles lorsque les événements sont présentés sous forme de tableau croisé d’effectifs (tirage au sort avec équiprobabilité d’un individu dans une population).</li>
+<li>Dans des cas simples, calculer une probabilité à l’aide de la formule des probabilités totales.</li>
+<li>Distinguer en situation (P(BA)) et (P(AB)), par exemple dans des situations de type « faux positifs ».</li>
+<li>Représenter une répétition de deux épreuves indépendantes par un arbre ou un tableau.</li>
+</ul>
 </div>
-<div class="nav-pages">
-<p><a class="prev" href="definition.html">⬅️</a> <a class="next" href="DerivUsuelles.html">➡️</a></p>
-</div>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1755779654495" data-listing-reading-time-sort="6" data-listing-word-count-sort="1137" data-listing-title-sort="Probabilité conditionnelles : Définition et représentations" data-listing-filename-sort="definition.qmd">
+<td>
+<a href="../../premiere-maths/probaCond/definition.html" class="title listing-title">Probabilité conditionnelles : Définition et représentations</a>
+</td>
+<td>
+<span class="listing-description">Défintion probabilité conditionnelle, différentes représentations : tableau et arbre</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1755779669851" data-listing-reading-time-sort="4" data-listing-word-count-sort="774" data-listing-title-sort="Formules des probabilités totales" data-listing-filename-sort="fpt.qmd">
+<td>
+<a href="../../premiere-maths/probaCond/fpt.html" class="title listing-title">Formules des probabilités totales</a>
+</td>
+<td>
+<span class="listing-description">formules des probabilités totales et bilan</span>
+</td>
+</tr>
+<tr data-index="2" data-listing-file-modified-sort="1755779639651" data-listing-reading-time-sort="7" data-listing-word-count-sort="1222" data-listing-title-sort="Indépendances" data-listing-filename-sort="independance.qmd">
+<td>
+<a href="../../premiere-maths/probaCond/independance.html" class="title listing-title">Indépendances</a>
+</td>
+<td>
+<span class="listing-description">Indépendantes, répétition d’épreuve identiques</span>
+</td>
+</tr>
+<tr data-index="3" data-listing-file-modified-sort="1755792618982" data-listing-reading-time-sort="32" data-listing-word-count-sort="6275" data-listing-title-sort="Feuilles d'exercices — Probabilités condtionnelles" data-listing-filename-sort="exercices.qmd">
+<td>
+<a href="../../premiere-maths/probaCond/exercices.html" class="title listing-title">Feuilles d’exercices — Probabilités condtionnelles</a>
+</td>
+<td>
+<span class="listing-description"> </span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
