@@ -4,8 +4,9 @@ format:
   html:
     toc: true
     number-sections: false
+description: "Différents types de suites numériques"
+order: 1
 ---
-
 
 ## Notion de suites numériques
 
@@ -16,7 +17,7 @@ On appelle **suite numérique** toute application $u$ définie sur $\mathbb{N}$ 
 $$u : n \longmapsto u(n) \quad \text{ou} \quad u_n$$  
 On note alors $u$, $(u_n)$ ou $(u_n)_{n \in \mathbb{N}}$ cette suite.  
 
-$n$ s'appelle le **rang** ou **l’indice** du terme $u_n$.
+$n$ s’appelle le **rang** ou **l’indice** du terme $u_n$.
 :::
 
 ::: {.bloc .rem}
@@ -39,5 +40,9 @@ $n$ s'appelle le **rang** ou **l’indice** du terme $u_n$.
 4. La suite $(u_n) = \{3\,;\,1\,;\,4\,;\,1\,;\,5\,;\,9\,;\,2\,;\dots\}$ : les décimales de $\pi$.  
 5. Soit $u : \mathbb{N} \to \mathbb{R}$ définie par $u(n) = \sqrt{3 - n}$.  
    Cet exemple **ne définit pas une suite** au sens classique car seuls les termes $u_0$, $u_1$, $u_2$, $u_3$ existent.  
-   ($u_4$, $u_5$, … ne sont pas définis car la racine carrée serait d’un nombre négatif).
+   ($u_4$, $u_5$, … ne sont pas définis car la racine carrée serait celle d’un nombre négatif).
 :::
+
+<div class="nav-pages">
+  <a class="next" href="generation.html">➡️</a>
+</div>

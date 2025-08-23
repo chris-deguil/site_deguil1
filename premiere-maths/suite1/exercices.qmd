@@ -1,11 +1,13 @@
 ---
-title: "Feuilles d'exercices — Second degré"
+title: "Feuilles d'exercices — Suites Numériques"
 format:
   html:
     toc: true
     toc-depth: 2
 filters:
   - ../../assets/exercise-counter.lua
+description: " "
+order: 7
 ---
 
 

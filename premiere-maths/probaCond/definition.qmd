@@ -1,0 +1,147 @@
+---
+title: "Probabilité conditionnelles : Définition et représentations"
+description: "Défintion probabilité conditionnelle, différentes représentations : tableau et arbre"
+format:
+  html:
+    toc: true
+    number-sections: false
+order: 1
+---
+
+
+## Notion de probabilité conditionnelle
+La notion de probabilité conditionnelle intervient quand pendant le déroulement d'une expérience aléatoire, une information est fournie modifiant ainsi la probabilité d'un évènement.% (La probabilité cherchée ne dépend pas que de l'univers de départ)
+
+On considère une expérience aléatoire dont l'univers associé est $\Omega$ que l'on muni de la loi de probabilité $p$
+  
+::: {.bloc .def}
+<span class="bloc-titre">Définition :</span>  
+Soit $A$ et $B$ deux évènements d'un même univers $\Omega$ tel que $p(A)\ne 0$.  
+On appelle probabilité conditionnelle de l'évènement $B$ sachant que l'évènement $A$ est réalisé, et on note $p_A(B)$ ou $p(B|A)$, le nombre :  
+$$ p_A(B)= \frac{p\left(A \cap B \right)}{p(A)} $$
+\noindent On lit \og $p$ de $B$ sachant $A$ \fg.
+:::
+
+  
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+Dans une classe, il y a $35$ élèves, parmi ces élèves il y a $17$ garçons dont $8$ externes.  
+On note $G$ l'événement \og l'élève est un garçon \fg et $E$ l'événement \og l'élève est externe \fg.  
+Ainsi $P(G) = \frac{17}{35}$ et $P_G(E) = \frac{8}{17}$.  
+En effet, la première probabilité, l'univers est l'ensemble des élèves de la classe alors que dans la deuxième l'univers est l'ensemble des garçons.
+:::
+
+  
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème :</span>  
+Soit $A$ un événement de $\Omega$, de probabilité non nulle, alors $P_A$ est une probabilité sur $A$  
+C'est-à-dire, que pour tout $B \in \Omega$, on a :  
+$$ 0 \leqslant P_A(B) \leqslant 1\quad \text{ et } \quad P_A(B) + P_A(\bar{B)} = 1 $$
+:::
+
+<details class="bloc demo"><summary>Démonstration :</summary>
+Soient $A$ et $B$ deux événements d'un univers $\Omega$, avec $P(A) \neq 0$
+
+- On a $A \cap B \subset A$.  
+Donc $$0 \leqslant P(B \cap A) \leqslant P(A) $$  
+D'où, en divisant par $P(A) \neq 0$, on a $0 \leqslant P_A(B) \leqslant 1$
+
+- On a $A=(A \cap B) \cup (\bar{A} \cap B)$, or  
+$(A \cap B)$ et $(\bar{B} \cap A)$ sont incompatibles, donc $$P((A \cap B) \cup (\bar{B} \cap A)) =P(A\cap B) + P(\bar{B} \cap A)$$  
+On en déduit que $$P(A) = P(A \cap B) + P(\bar{B} \cap A)$$  
+On obtient le résultat en divisant par $P(A)$
+</details>
+
+  
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (Probabilité composée) :</span>  
+Soit $A$ et $B$ deux évènements d'un même univers vérifiant $p(A)\ne 0$ et $p(B)\ne 0$.  
+Alors :  
+$$ p\left(A \cap B \right) = p_A(B) \times p(A) =  p_B(A) \times p(B) $$
+:::
+
+  
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+Dans un hôpital, on traite des patients contre un virus $A$, on note alors :
+- $A$ l'événement \og le patient est atteint par le virus A \fg.
+- $V$ l'événement \og On injecte le vaccin du virus A \fg
+
+On sait $p(A) = 0,7$ et $p_A(V) = 0,9$.
+- $p(A) = 0,7$ : la probabilité que un patient pris au hasard dans l'hôpital soit atteint du virus $A$ est de $0,7$.
+- $p_A(V) = 0,9$ :  sachant que la patient choisit est atteint du virus, la probabilité de lui injecter le vaccin est de $0,9$.
+
+Déterminer la probabilité d'injecter le vaccin contre le virus A à une personne atteinte par le virus.  
+<details class="bloc cor"><summary>Afficher la correction</summary>
+On cherche $P(A \cap V)$.  
+$$ p\left(A \cap V \right) = p_A(V) \times p(A) =  0,9 \times 0,7 = 0,63 $$
+</details>
+:::
+
+## Représentation avec un tableau
+On peut donner les résultats sous la forme d'un tableau à double entrée.  
+Il en existe de plusieurs types, pour cela il faut être attentif à la lecture et compréhension du tableau.
+
+On considère le tableau suivant qui indique le nombre de reçus au baccalauréat dans une classe :
+
+|        | Reçu | Non reçu | Total |
+|--------|------|----------|-------|
+| Filles | 18   | 1        | 19    |
+| Garçons| 13   | 3        | 16    |
+| Total  | 31   | 4        | 35    |
+
+
+Dans ce tableau les nombres (ou les proportions indiquées), sont donnée par rapport à l'effectif total.  
+Ainsi $$ P_F(R)=\frac{P(R \cap F)}{P(F)} = \frac{18}{19} \quad \text{et} \quad P_R(F) = \frac{P(R \cap F)}{P(R)} = \frac{18}{31} $$
+On peut donner directement toutes les probabilités conditionnelles que l'on souhaite.  
+Notre partition de l'univers est dans un cas $\{F\, ;\,G\}$ et dans l'autre cas $\{R \, ;\, \bar{R}\}$
+
+## Représentation graphique : Arbre pondéré
+\noindent Une expérience aléatoire peut être schématisée par un arbre pondéré dont chaque branche est affectée d'un poids qui est une probabilité.
+
+![](../../image/proba_graphe1.png){style="display:block;margin:0 auto;width:50%;"}
+
+- La racine de l'arbre est l'univers $\Omega$
+- Les évènements qui se trouvent aux extrémités des branches issues d'un même noeud forment une partition de l'évènement situé à ce noeud.
+  - $\{ A, B, C\}$ est une partition de l'univers $\Omega$.
+  - $\{ S,\overline{S} \}$ est une partition de l'évènement  $B$.
+- Un chemin complet qui conduit à un sommet final, représente l'intersection des évènements qui le composent.  
+Par exemple, le chemin dont l'extrémité est $R$ représente l'évènement $A \cap R$.
+- Le poids d'une branche primaire est la probabilité de l'évènement qui se trouve à son extrémité.
+- Le poids d'une branche secondaire est la probabilité conditionnelle de l'évènement qui se trouve à son extrémité sachant que l'évènement qui se trouve à son origine est réalisé.
+
+  
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+Considérons le cas d'une maladie et d'un test censé déterminer si un individu a cette maladie ou pas.  
+On note $M$ l’événement \og l'individu est malade\fg \ et $T$ \og le test est positif\fg.  
+Supposons qu'un individu ait 1 chance sur 10 d'être malade  et que le test soit fiable à $95\%$, autrement dit il y a 95 chances 100 que le test soit positif sachant que l'individu soit malade et 5 chances sur 100 que le test soit positif sachant que l'individu est sain.
+
+1. Traduire en terme probabiliste : \og 1 chance sur 10 d'être malade\fg et \og 5 chances sur 100 que le test soit positif sachant que l'individu est sain \fg  
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   La première phrase se traduit par $P(M)=0,1$, et la deuxième par $P_{\bar{M}}(T)$
+   </details>
+
+2. Construire l'arbre de probabilité associé à la situation  
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+![](../../image/proba_graphe2.png){style="display:block;margin:0 auto;width:50%;"}
+   </details>
+
+3. Calculer $P(T\cap\overline{M})$  
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   $P(T\cap\overline{M})=P_{\bar{M}}(T) \times P(\bar{M}) = 0,9 \times 0,95 = 0,855$
+   </details>
+
+4. En déduire, si possible, la probabilité de ne pas être malade sachant que le test est positif.  
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   $P_{T}(\bar{M)} = \frac{P(T \cap \bar{M})}{P(T)}$  
+   On connaît $P(T \cap \bar{M})$, mais pas $P(T)$.  
+   Il nous manque une information pour conclure.
+   </details>
+:::
+
+
+
+<div class="nav-pages">
+  <a class="next" href="fpt.html">➡️</a>
+</div>

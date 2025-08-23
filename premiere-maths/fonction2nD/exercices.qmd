@@ -6,6 +6,7 @@ format:
     toc-depth: 2
 filters:
   - ../../assets/exercise-counter.lua
+description: " "
 ---
 
 *"Les équations sont plus importantes pour moi, car la politique ne dure pas."*  

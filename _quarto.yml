@@ -6,8 +6,8 @@ project:
 website:
   title: "Site pédagogique"
   site-url: https://chris-deguil.github.io/site_deguil1/
-  repo-url: https://github.com/chris-deguil/site_deguil1/
-  
+  repo-url: https://github.com/chris-deguil/site_deguil1
+
   navbar:
     left:
       - text: "Accueil"
@@ -17,10 +17,10 @@ website:
       - text: "Spé maths première"
         href: premiere-maths/index.qmd
 
-  # Une sidebar spécifique à la SNT avec tes 2 thèmes
+
   sidebar:
     - title: "SNT"
-      logo: image/logoSNT.png   # ← chemin vers ton logo
+      logo: image/logoSNT.png   
       style: docked
       collapse-level: 1
       contents:
@@ -74,18 +74,26 @@ website:
           contents:
             - premiere-maths/suite1/definition.qmd
             - premiere-maths/suite1/generation.qmd
-            - premiere-maths/suite1/liste_therme_python.qmd
+            - premiere-maths/suite1/liste_terme_python.qmd
             - premiere-maths/suite1/variations.qmd
             - premiere-maths/suite1/limites.qmd
             - premiere-maths/suite1/algorithme.qmd
             - premiere-maths/suite1/exercices.qmd
-            - premiere-maths/suite1/test.qmd
 
         - section: "Nombre dérivé"
           contents:
             - premiere-maths/NomDerive/definition.qmd
             - premiere-maths/NomDerive/tangente.qmd
             - premiere-maths/NomDerive/DerivUsuelles.qmd
+            - premiere-maths/NomDerive/exercices.qmd
+
+        - section: "Proabilité conditionnelles"
+          contents:
+            - premiere-maths/probaCond/definition.qmd
+            - premiere-maths/probaCond/fpt.qmd
+            - premiere-maths/probaCond/independance.qmd
+            - premiere-maths/probaCond/exercices.qmd
+
 
 
 format:

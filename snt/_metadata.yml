@@ -5,6 +5,6 @@ format:
       light: [cosmo, ../assets/css/general.scss]
       dark:  [darkly, ../assets/css/general.scss]
     css: 
-     - ../assets/css/snt.scss
+     - ../assets/css/snt.css
 filters:
   - ../assets/macros_logo.lua

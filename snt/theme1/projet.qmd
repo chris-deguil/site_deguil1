@@ -8,7 +8,31 @@ order: 11
 
 ---
 
-## Projet 1 — Journaliste numérique (individuel)
+## Projet 1 — BD numérique « Le voyage d’un message » (en groupe)
+
+### Consigne
+Réalisez une **bande dessinée** qui raconte l’itinéraire d’un message sur Internet (ex. un mail, une recherche Google, un message WhatsApp…).
+
+### Étapes de travail
+1. Choisissez le type de message à suivre.  
+2. Découpez le trajet en étapes (DNS, routeurs, serveur, destinataire ... ).  
+3. Imaginez une histoire/mettez en scène le message comme un personnage.  
+4. Réalisez la BD en 6 à 10 cases (dessin scanné ou outil numérique).  
+
+### Production attendue
+- Une BD complète et lisible.  
+- Chaque étape du trajet du message doit être représentée.  
+- Format : fichier image ou PDF.  
+
+### Critères de réussite
+- ✔️ Parcours du message bien représenté (DNS, routeurs, serveur, navigateur).  
+- ✔️ Histoire créative et compréhensible.  
+- ✔️ Présentation claire, lisible et soignée.  
+
+
+---
+
+## Projet 2 — Journaliste numérique (individuel)
 
 ### Consigne
 Rédigez un **article de vulgarisation** destiné à un magazine scolaire sur le thème :  
@@ -34,23 +58,3 @@ Rédigez un **article de vulgarisation** destiné à un magazine scolaire sur le
 
 ---
 
-## Projet 2 — BD numérique « Le voyage d’un message » (en groupe)
-
-### Consigne
-Réalisez une **bande dessinée** qui raconte l’itinéraire d’un message sur Internet (ex. un mail, une recherche Google, un message WhatsApp…).
-
-### Étapes de travail
-1. Choisissez le type de message à suivre.  
-2. Découpez le trajet en étapes (DNS, routeurs, serveur, destinataire ... ).  
-3. Imaginez une histoire/mettez en scène le message comme un personnage.  
-4. Réalisez la BD en 6 à 10 cases (dessin scanné ou outil numérique).  
-
-### Production attendue
-- Une BD complète et lisible.  
-- Chaque étape du trajet du message doit être représentée.  
-- Format : fichier image ou PDF.  
-
-### Critères de réussite
-- ✔️ Parcours du message bien représenté (DNS, routeurs, serveur, navigateur).  
-- ✔️ Histoire créative et compréhensible.  
-- ✔️ Présentation claire, lisible et soignée.  

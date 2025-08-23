@@ -4,43 +4,46 @@ format:
   html:
     toc: true
     number-sections: false
----
-
+description: "Racines d'un polynôme - Équation du second degré - Théorème de factorisation"
+order: 2
 ---
 
 ## Équation et racine d'un polynôme
 
 ::: {.bloc .def}
-<span class="bloc-titre">Définition :</span>
+<span class="bloc-titre">Définition :</span>  
 On appelle équation polynomiale du second degré à une inconnue $x$ toute équation se ramenant à une équation de la forme :
 
 $$
 ax^2 + bx + c = 0
 $$
 
-où $a,b$ et $c$ sont trois réels quelconques avec $a \neq 0$.  
+où $a, b$ et $c$ sont trois réels quelconques avec $a \neq 0$.  
 Les solutions de cette équation (si elles existent) sont appelées les racines du polynôme ou zéros de la fonction $f$ associée.
 :::
 
-**Remarque :**
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque :</span>  
 Par abus de langage, on peut confondre polynôme et fonction polynôme associée.
+:::
+
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple :</span>
+<span class="bloc-titre">Exemple :</span>  
 Soit $f:x \longmapsto 5x^2+3x-2$.  
 Alors $f(-1)=0$, ainsi $-1$ est une racine du polynôme $5x^2+3x-2$ et un zéro de la fonction $f$.
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple :</span>
+<span class="bloc-titre">Exemple :</span>  
 Soit $f:x \longmapsto ax^2+bx+c$ une fonction polynôme de degré $2$ et $r$ une racine de $f$.  
 Montrer qu'il existe un réel $d$ tel que $f(x)=(x-r)(ax+d)$.
 
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
+<details class="bloc cor"><summary>Afficher la correction</summary>
 
 On considère $r$ un zéro de $f$, donc $f(r)=0$.  
-Ainsi, pour tout réel $x$,
+Ainsi, pour tout réel $x$ :
+
 $$
 \begin{aligned}
 f(x) &= f(x)-f(r) = ax^2+bx+c - ar^2 - br - c \\
@@ -48,22 +51,29 @@ f(x) &= f(x)-f(r) = ax^2+bx+c - ar^2 - br - c \\
      &= (x-r)(ax+ar+b)
 \end{aligned}
 $$
-On obtient le résultat voulu, en posant $d=ar+b$.
+
+On obtient le résultat voulu en posant $d=ar+b$.
 </details>
 :::
 
-**Remarque :**
 
-1. La méthode précédente est à connaître.
-2. On déduit de l'exercice que si une fonction polynôme admet une racine alors elle admet une autre racine $x=-\frac{ar+b}{a}$.
-3. La seconde racine peut-être identique à la première (racine double) :
-$$
-r=-\frac{b}{2a}
-$$
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque :</span>  
+
+- La méthode précédente est à connaître. Elle permet de factoriser siimplement lorsque l'on connait une racine.
+- On déduit de l'exercice que si une fonction polynôme admet une racine alors elle admet une autre racine $x=-\frac{ar+b}{a}$
+- La seconde racine peut-être identique à la première (on parle alors de racine double).\\
+On a alors $$r=-\frac{ar+b}{a}$$ Donc $$ar=-ar+b$$
+Donc 
+$$r=-\frac{b}{2a}$$
+:::
+
+
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème :</span>
-Soit $f$ une fonction polynôme de degré $2$ définie sur $\mathbb{R}$ par  
+<span class="bloc-titre">Théorème :</span>  
+Soit $f$ une fonction polynôme de degré $2$ définie sur $\mathbb{R}$ par :  
 $$
 f:x \longmapsto ax^2+bx+c
 $$
@@ -73,12 +83,12 @@ alors :
 - $a-b+c=0$ si et seulement si $-1$ est racine de $f$.
 :::
 
-<details class="bloc demo">
-<summary>Démonstration</summary>
-Soit $f:x \longmapsto ax^2+bx+c$,
+<details class="bloc demo"><summary>Démonstration</summary>
 
-- $a+b+c= 0 \Longleftrightarrow a \times 1^2 +b \times 1 +c = 0 \Longleftrightarrow f(1)= 0$
-- $a-b+c= 0 \Longleftrightarrow a \times (-1)^2 +b \times (-1) +c = 0 \Longleftrightarrow f(-1)= 0$
+Soit $f:x \longmapsto ax^2+bx+c$ :
+
+- $a+b+c= 0 \Longleftrightarrow a \times 1^2 + b \times 1 + c = 0 \Longleftrightarrow f(1)= 0$  
+- $a-b+c= 0 \Longleftrightarrow a \times (-1)^2 + b \times (-1) + c = 0 \Longleftrightarrow f(-1)= 0$
 </details>
 
 ---
@@ -86,277 +96,139 @@ Soit $f:x \longmapsto ax^2+bx+c$,
 ## Équation du second degré
 
 ::: {.bloc .def}
-<span class="bloc-titre">Définition :</span>
+<span class="bloc-titre">Définition :</span>  
 Soit l'équation du second degré $ax^2+bx+c=0$.  
-On appelle **discriminant** de l'équation (ou de la fonction polynôme associée) le nombre :
+On appelle **discriminant** de l'équation (ou de la fonction polynôme associée) le nombre :  
 $$
 \Delta = b^2 - 4ac
 $$
 :::
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème :</span>
-Soit $ax^2 + bx + c =0$ une équation du second degré et soit $\Delta$ son discriminant. 
+<span class="bloc-titre">Théorème :</span>  
+Soit $ax^2 + bx + c =0$ une équation du second degré et soit $\Delta$ son discriminant.
 
-1. Si $\Delta > 0$ : deux racines réelles distinctes  
-   $$
-   x_1 = \frac{-b + \sqrt{\Delta}}{2a},\quad x_2 = \frac{-b - \sqrt{\Delta}}{2a}
-   $$
-2. Si $\Delta = 0$ : une racine double  
-   $$
-   x = -\frac{b}{2a}
-   $$
-3. Si $\Delta < 0$ : aucune solution réelle
+1. Si $\Delta > 0$, alors l'équation admet deux racines réelles distinctes $$x_1 = \frac{-b + \sqrt{\Delta}}{2a} \et ~~x_2 = \frac{-b - \sqrt{\Delta}}{2a}$$
+2. Si $\Delta = 0$, alors l'équation admet une unique solution réelle $$x_0 = -\frac{b}{2a}$$ 
+Cette solution est appelée racine double (elle compte deux fois)
+1. Si $\Delta < 0$, alors l'équation n'admet pas aucune solution réelle.
 :::
 
-
-<details class="bloc demo">
-<summary>Démonstration</summary>
+<details class="bloc demo"><summary>Démonstration</summary>
 
 On traite le cas $a>0$. L'autre cas se traite de la même façon.  
 
+Pour tout réel $x$, 
 $$
 ax^2+bx+c= 0 \Longleftrightarrow a\left(x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a^2} = 0
 \Longleftrightarrow \left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}
 $$
 
-- Si $\Delta >0$, alors $\frac{\Delta}{4a^2}  >0$.
-$$\left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}  \Longleftrightarrow \left\{\begin{array}{l}
-\frac{\sqrt{\Delta}}{2a}= x + \frac{b}{2a}\\
+- Si $\Delta >0$, alors $\tfrac{\Delta}{4a^2} >0$.  
+$$
+\left(x + \tfrac{b}{2a}\right)^2 = \tfrac{\Delta}{4a^2} \Longleftrightarrow 
+\begin{cases}
+x = - \tfrac{b}{2a} + \tfrac{\sqrt{\Delta}}{2a}\\
 \text{ou}\\
-\frac{\sqrt{\Delta}}{2a}= -\left( x + \frac{b}{2a} \right)
-\end{array} \right.
-\Longleftrightarrow \left\{\begin{array}{l}
-x =- \frac{b}{2a} + \frac{\sqrt{\Delta}}{2a}\\
-\text{ou}\\
-x =  - \frac{b}{2a} - \frac{\sqrt{\Delta}}{2a}
-\end{array} \right.$$
-Donc il y a deux solutions  : $x_1 = \frac{-b + \sqrt{\Delta}}{2a}~~~~\text{et}~~~~x_2 = \frac{-b - \sqrt{\Delta}}{2a}$
-- Si $\Delta =0$, alors $\frac{\Delta}{4a^2}  =0$.\\
-%
-$\left(x + \frac{b}{2a}\right)^2 = 0 \Longleftrightarrow x + \frac{b}{2a} = 0 \Longleftrightarrow x  = - \frac{b}{2a}$.<br> Donc il y a une solution : $x_0 = -\frac{b}{2a}$
+x = - \tfrac{b}{2a} - \tfrac{\sqrt{\Delta}}{2a}
+\end{cases}
+$$
 
-- Si $\Delta <0$, alors $\left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}$ n'admet aucun solution.<br>
-Le membre de gauche est positif et le membre de droite strictement négatif.<br>
+Donc il y a deux solutions : $x_1 = \tfrac{-b + \sqrt{\Delta}}{2a}$ et $x_2 = \tfrac{-b - \sqrt{\Delta}}{2a}$.  
+
+- Si $\Delta =0$, alors $\tfrac{\Delta}{4a^2}  =0$.  
+$\left(x + \tfrac{b}{2a}\right)^2 = 0 \Longleftrightarrow x = - \tfrac{b}{2a}$.  
+Donc il y a une solution : $x_0 = -\tfrac{b}{2a}$.  
+
+- Si $\Delta <0$, alors $\left(x + \tfrac{b}{2a}\right)^2 = \tfrac{\Delta}{4a^2}$ n'admet aucune solution.  
+Le membre de gauche est positif et le membre de droite strictement négatif.  
 L'équation n'admet donc aucune solution.
 </details>
 
 
-**Remarque :**
-
-- Si $a$ et $c$ sont de signes contraires, alors $\Delta > 0$.
-- C'est une condition suffisante mais non nécessaire.
-
----
-
-::: {.bloc .ex}
-<span class="bloc-titre">Exemple :</span>
-1. Résoudre $4x^2 - 2x + 12 = 0$
-
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
-Son discriminant $\Delta = (-2)^2 - 4 \times 4 \times 14 = 4 - 384 < 0$
-
-Son discriminant étant négatif,   alors l'équation n'admet aucune solution réelle.
-</details>
-
-2. Résoudre $-3x^2 + 5x + 2 = 0$
-
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
-Son discriminant $\Delta = 5^2 - 4 \times (-3) \times 2 = 25 + 24 = 49$.
-
-Son discriminant étant strictement positif, alors l'équation admet deux solutions réelles distinctes.
-$$x_1 = \frac{-5 + \sqrt{49}}{2\times (-3)} = \frac{-5 + 7}{-6}=-\frac{1}{3} \et ~ x_2 = \frac{-5 - \sqrt{49}}{2\times (-3)} = 2$$
-</details>
-:::
-
-::: {.bloc .ex}
-<span class="bloc-titre">Exemple :</span>
-L'aire d'un rectangle est 15 et son périmètre 16. Déterminer ses dimensions.
-
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
-
-D'après l'énoncé on notant $x$ et $y$ la mesure des côtés de ce rectangle, avec $x\leqslant y$ , on a le système $\left\{\begin{array}{l}
-xy = 15\\
-x + y = 8 \end{array}\right.$
-
-Or pour tout $x, y \in \R$, 
-$$
-\left\{\begin{array}{l}
-xy = 15\\
-x + y = 8 \end{array}\right. \Longleftrightarrow \left\{\begin{array}{l}
-x(8-x) = 15\\
-y = 8-x \end{array}\right. \Longleftrightarrow \left\{\begin{array}{l}
-y = 8-x\\
-x^2-8x+15=0 \end{array}\right.$$
-
-Soit :  $x^2 - 8x + 15 = 0$
-
-$\Delta = (-8)^2 - 4 \times 1 \times (15) = 64 - 60 = 4$
-
-$\Delta >0$, ce polynôme  admet deux racines réelles distinctes.
-$$x_1 = \frac{8 + \sqrt{4}}{2} = 5~~~~\text{et}~~~~x_2 = \frac{8 - \sqrt{4}}{2} = 3$$
-Ainsi, on a respectivement $y_1=5$ et $y_2=5$, donc les dimensions du rectangles sont $3$ et $5$.
-</details>
-:::
-
-::: {.bloc .ex}
-<span class="bloc-titre">Exemple :</span>
-Résoudre $(E_2) : 6x^4 + 5x^2 - 4 = 0$
-
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
-Pour tout réel $x$, on a 
-
-$$6x^4+5x^2-4 = 0 \Longleftrightarrow \left\{
-\begin{array}{l}X=x^2\\
-6X^2+5X^2-4=0 
-\end{array}\right.$$
-
-Soit alors $(E_2') : 6X^2 + 5X - 4 = 0$.
-
-Son discriminant est $\Delta = 5^2 - 4 \times 6 \times (-4) = 25 + 96 = 121$
-
-Le discriminant est strictement positif, alors l'équation $(E_2')$ admet deux solutions réelles distinctes.
-$$X_1 = \frac{-5 + 11}{12} = \frac{1}{2}~~~~\text{et}~~~~X_2 = \frac{-5 - 11}{12} = -\frac{4}{3}$$
-Ainsi 
-$$5x^4+5x^2-4 = 0 \Longleftrightarrow \left\{\begin{array}{l}
-X=x^2\\
-6X^2+5X^2-4=0 
-\end{array}\right. 
-\Longleftrightarrow  
-\left\{\begin{array}{l}
-X=x^2\\
-X=\frac{1}{2} \text{ ou } X= -\frac{4}{3}\end{array}
-\right.$$
-
-Le carré d'un nombre étant positif, la deuxième équation n'admettant aucune solution.\\
-Les solutions de $(E_2)$ sont donc
-$\left\{\frac{\sqrt{2}}{2}\, ; \,-\frac{\sqrt{2}}{2} \right\}$ 
-</details>
-:::
-
-
-
-
-## Théorème de factorisation
-::: {.bloc .thm}
-<span class="bloc-titre">Théorème :</span>  
-Soit $f$ une fonction polynôme de degré 2 définie sur $\R$ par $f(x) = ax^2 + bx + c$.
-
-1. Si $\Delta > 0$, alors $f(x) = a(x - x_1)(x - x_2)$, où $x_1$ et $x_2$ sont les racines de $f(x)=0$.
-2. Si $\Delta = 0$, alors $f(x)= a (x - x_0)^2$, où $x_0$ est la racine double de $f(x)=0$.
-3. Si $\Delta < 0$, alors $f(x)$ ne se factorise pas (en fonction polynôme du premier degré, c’est-à-dire en produit de deux fonctions affines).
-
-Un polynôme que l’on ne peut pas factoriser est dit irréductible.
-:::
-
-<details class="bloc demo">
-<summary>Démonstration</summary>
-On considère la forme canonique $f(x)=a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a}$.\\
-
-1. Si $\Delta >0$,  
-$$f(x)= a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a} = a\left(\left((x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a^2}\right) = a(x-x_1)(x-x_2)$$  
-Donc $$f(x)=a(x-x_1)(x-x_2)$$
-
-2. Pour $\Delta=0$, $\beta=0$ donc pour tout réel $x$,  
-$f(x)=a\left(x- \frac{-b}{2a}\right)^2$
-
-3.  Si $\Delta <0$ alors $\frac{\Delta}{4a^2}<0$.\\  
-Ainsi $f(x)$ étant somme de deux quantités positives, elle n’est pas factorisable.\\  
-Donc $f(x)$ n’admet pas de forme factorisée.
-</details>
-
-
-::: {.bloc .ex}
-<span class="bloc-titre">Exemple :</span>  
-
-1. Factoriser $-3x^2+5x+4$.
-   
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
-
-$\Delta=5^2-4 \times (-3) \times 4 = 73 >0$.
-
-Ainsi le polynôme admet deux racines réelles distinctes $x_1=\frac{-5-\sqrt{73}}{-6}$ et $x_2=\frac{-5+\sqrt{73}}{-6}$.
-
-On déduit que pour tout réel $x$, $-3x^2+5x+4=-3(x-x_1)(x-x_2)$
-
-</details>
-
-2. Factoriser $x^2+(\sqrt{3}-2\sqrt{2})x+2\sqrt{6}$.
-   
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
-$\Delta=(\sqrt{3}-2\sqrt{2})^2-4 \times 1 \times 2\sqrt{6} = 3 -4\sqrt{6}+8 -8\sqrt{6} =-12\sqrt{6}+11 <0$.
-
-Le discriminant étant négatif, le polynôme n’est pas factorisable.
-</details>
-
-3. Soit $P(x) = a^2(b-x) + b^2(x-a)+x^2(a-b)$. Factoriser $P(x)$
-
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
-
-On remarque que $$P(a)=a^2(b-a)+b^2(a-a)+a^2(a-b)=0$$ de même $P(b)=0$.
-
-On a trouvé deux racines de $P$ distinctes, ce sont donc les deux racines de $P$.
-
-En développant et réorganisant l’expression de $P$, on obtient  
-$$P(x) = (a-b)x^2 + (b^2-a^2)x + ab(a-b)$$  
-Ainsi, le coefficient dominant étant $a-b$, on peut factoriser et pour tout réel $x$,  
-$$P(x)=(a-b)(x-a)(x-b)$$
-</details>
-:::
-
-\vspace{.45cm}
-
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque :</span>  
-Dans $\R$, tout polynôme se factorise en produit de polynôme du second degré et du premier degré.
+
+- Si $a$ et $c$ sont de signes contraires, alors $ac < 0$ et ainsi le discriminant est strictement positif, et donc le trinôme admet toujours deux racines réelles.  
+- La condition « $a$ et $c$ de signes contraires » est une condition suffisante et non nécessaire pour avoir deux racines réelles.  
 :::
+
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
-Soit $P(x)=2x^3-x-1$. Donner une forme factorisée de $P(x)$.
 
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
+1. Résoudre $4x^2 - 2x + 12 = 0$  
 
-$1$ est une racine évidente de $P$. En effet $P(1) = 2-1-1=0$.
+<details class="bloc cor"><summary>Afficher la correction</summary>  
+Son discriminant $\Delta = (-2)^2 - 4 \times 4 \times 12 = 4 - 192 < 0$.  
 
-Donc pour tout réel $x$, 
-$$P(x)=(x-1)(ax^2+bx+c)$$
+Son discriminant étant négatif, l'équation n'admet donc aucune solution réelle.  
+</details>  
 
-Or pour tout réel $x$,  
-$$(x-1)(ax^2+bx+c) = ax^3+(b-a)x^2 + (c-b)x - c$$  
-Donc  
-$$2x^3-x-1= ax^3 + (b-a)x^2 + (c-b)x - c$$  
-Ces polynômes étant égaux, alors les coefficients des mêmes monômes sont deux à deux égaux.\\
+2. Résoudre $-3x^2 + 5x + 2 = 0$  
+($a$ et $c$ sont de signes contraires, on sait que l'on doit trouver des solutions.)  
 
-On déduit alors que  
-$$\left\{
-\begin{array}{l} 
-a=2\\
-b-a=0\\
-c-b = -1\\
--c=-1 
-\end{array} 
-\right.$$  
-Ainsi $a=2, b=2$ et $c=-1$.
+<details class="bloc cor"><summary>Afficher la correction</summary>  
+Son discriminant $\Delta = 5^2 - 4 \times (-3) \times 2 = 25 + 24 = 49$.  
 
-Donc  
-$$P(x)=(x-1)(2x^2+2x+1)$$  
-Or $2x^2+2x-1$ admet comme discriminant $\Delta = 2^2-4 \times 2 \times 1 = -6 <0$.
-
-Donc ce trinôme du second degré n’est pas factorisable.
-
-On déduit qu’une forme factorisée de $P$ est  
-$$P(x)=(x-1)(2x^2+2x+1)$$
-</details>
+Son discriminant étant strictement positif, l'équation admet donc deux solutions réelles distinctes :  
+$$x_1 = \frac{-5 + \sqrt{49}}{2\times (-3)} = \frac{-5 + 7}{-6}=-\frac{1}{3} \quad \et \quad x_2 = \frac{-5 - \sqrt{49}}{2\times (-3)} = 2$$  
+</details>  
 :::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+L'aire d'un rectangle est de 15 unités d'aire, et son périmètre est de 16 unités.  
+Déterminer les dimensions d'un tel rectangle.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>  
+En notant $x$ et $y$ la mesure des côtés de ce rectangle, avec $x\leqslant y$, on a le système :  
+$$\left\{\begin{array}{l} xy = 15 \\ x + y = 8 \end{array}\right.$$  
+
+Or pour tout $x, y \in \R$,  
+$$\left\{\begin{array}{l} xy = 15 \\ x + y = 8 \end{array}\right. \Longleftrightarrow \left\{\begin{array}{l} x(8-x) = 15 \\ y = 8-x \end{array}\right. \Longleftrightarrow \left\{\begin{array}{l} y = 8-x \\ x^2-8x+15=0 \end{array}\right.$$  
+
+Soit : $x^2 - 8x + 15 = 0$  
+
+$\Delta = (-8)^2 - 4 \times 1 \times 15 = 64 - 60 = 4$  
+
+$\Delta > 0$, ce polynôme admet deux racines réelles distinctes :  
+$$x_1 = \frac{8 + \sqrt{4}}{2} = 5 \quad \text{et} \quad x_2 = \frac{8 - \sqrt{4}}{2} = 3$$  
+
+Ainsi, on a respectivement $y_1=3$ et $y_2=5$, donc les dimensions du rectangle sont $3$ et $5$.  
+</details>  
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : **Équation bi-carrée**</span>  
+
+  
+Résoudre $(E_2) : 6x^4 + 5x^2 - 4 = 0$  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>  
+Pour tout réel $x$,  
+$$6x^4+5x^2-4 = 0 \Longleftrightarrow \left\{\begin{array}{l}X=x^2\\6X^2+5X-4=0\end{array}\right.$$  
+
+Soit alors $(E_2') : 6X^2 + 5X - 4 = 0$.  
+
+Son discriminant est $\Delta = 5^2 - 4 \times 6 \times (-4) = 25 + 96 = 121$.  
+
+Le discriminant étant strictement positif, l'équation $(E_2')$ admet deux solutions réelles distinctes :  
+$$X_1 = \frac{-5 + 11}{12} = \frac{1}{2} \quad \text{et} \quad X_2 = \frac{-5 - 11}{12} = -\frac{4}{3}$$  
+
+Ainsi,  
+$$6x^4+5x^2-4 = 0 \Longleftrightarrow \left\{\begin{array}{l}X=x^2\\X=\frac{1}{2} \text{ ou } X= -\frac{4}{3}\end{array}\right.$$  
+
+Le carré d'un nombre étant positif, la deuxième équation n'admet aucune solution.  
+
+Les solutions de $(E_2)$ sont donc :  
+$$\left\{\frac{\sqrt{2}}{2}\, ; \,-\frac{\sqrt{2}}{2} \right\}$$  
+</details>  
+:::
+
 
 <div class="nav-pages">
   <a class="prev" href="definition.html">⬅️</a>

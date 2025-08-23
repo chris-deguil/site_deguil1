@@ -1,12 +1,15 @@
 ---
 title: "Variations d'une suite"
-description : "méthode d'études des varitioans d'une suite"
-format: html
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Méthode d’étude des variations d'une suite"
+order: 4
 ---
 
-## Variations d'une suite
 
-### Définition
+## Définition
 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition :</span>  
@@ -30,89 +33,84 @@ format: html
 <span class="bloc-titre">Remarque :</span>  
 
 - Lorsque les inégalités sont strictes, comme dans le cas des fonctions, on parle de suite strictement croissante ou strictement décroissante.  
-- On dit à « partir d'un certain rang », car c'est le comportement global de la suite qui nous intéresse et pas ce qui se passe sur les premiers termes.
+- On dit « à partir d'un certain rang », car c'est le comportement global de la suite qui nous intéresse et pas ce qui se passe sur les premiers termes.
 :::
 
-### Étude des variations
+## Étude des variations
 
-#### Application définition : Différence $u_{n+1} - u_n$
+### Application de la définition : Différence $u_{n+1} - u_n$
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 Étudier les variations de la suite $(u_n)_{n\in \mathbb{N}}$ définie par  
 $$u_n = n^2 - n$$
 
-
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
-Pour tout $n \in \N$, 
-$$u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n$$
-Or $n \geqslant 0$, donc $2n \geqslant 0$.<br>
-Ainsi pour tout $n \in \N$, $u_{n+1} - u_n \geqslant 0$.<br>
-Ainsi la suite $(u_n)_{n \in \N}$ est croissante.
+Pour tout $n \in \mathbb{N}$,  
+$$u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n$$  
+Or $n \geqslant 0$, donc $2n \geqslant 0$.  
+Ainsi pour tout $n \in \mathbb{N}$, $u_{n+1} - u_n \geqslant 0$.  
+Donc la suite $(u_n)_{n \in \mathbb{N}}$ est croissante.
 
 </details>
 :::
-
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 Soit $(u_n)$ définie par $u_0 = 3$ et $u_{n+1} = - u_n^2 - u_n - 1$.  
 Étudier les variations.
 
-
 <details class="bloc cor"><summary>Afficher la correction</summary>
-Pour tout $n \in \N$, on a :
-Alors pour tout $n \in \N$,
- $$u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = u_{n+1} = - u_n^2 - 2u_n - 1 = - (u_n +1)^2 $$
-Ce qui est toujours négatif. \\
-Ainsi pour tout $n \in \N$, $u_{n+1} - u_n \leqslant 0$, donc $(u_n)_{n \in \N}$ est une suite décroissante
-Donc la suite est décroissante.
+
+Pour tout $n \in \mathbb{N}$,  
+$$u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = - u_n^2 - 2u_n - 1 = - (u_n + 1)^2$$  
+
+Ce qui est toujours négatif.  
+Ainsi pour tout $n \in \mathbb{N}$, $u_{n+1} - u_n \leqslant 0$, donc $(u_n)_{n \in \mathbb{N}}$ est une suite décroissante.
 
 </details>
 :::
 
-
-#### Variation de la fonction associée
+### Variation de la fonction associée
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
 Soient $a \in \mathbb{R}^+$ et $I = [a ; +\infty[$.  
 Si $(u_n)$ est définie par $u_n = f(n)$ et $f$ est monotone sur $I$,  
-alors $(u_n)$ est monotone et a même variation que $f$ à partir de $n \geq a$.
+alors $(u_n)$ est monotone et a la même variation que $f$ à partir de $n \geq a$.
 :::
 
-<details class="bloc demo"><summary>Démonstration : </summary>
+<details class="bloc demo"><summary>Démonstration :</summary>
 
-On suppose $f$ croissante sur $I$. Alors pour tout entier naturel $n \geq a$,   $$u_{n+1} - u_n = f(n+1) - f(n) \geq 0 $$
-Donc la suite $(u_n)$ est croissante pour tout entier naturel $n \geq a$.\\
+On suppose $f$ croissante sur $I$. Alors pour tout entier naturel $n \geq a$,  
+$$u_{n+1} - u_n = f(n+1) - f(n) \geq 0$$  
+
+Donc la suite $(u_n)$ est croissante pour tout entier naturel $n \geq a$.  
 On raisonne de même pour une fonction décroissante.
 
 </details>
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
-Soit $u_n = x^2 - 3x + 1$  
+Soit $u_n = n^2 - 3n + 1$.  
 Étudier les variations.
-
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
-Soit $f$ la fonction définie sur $[0\,;\,+\infty[$ par $f(x) = 2x^2-3x+1$.<br>
-$f$ est une fonction polynôme de degré $2$, dont le coefficient dominant $2 >0$, ainsi la représentation graphique de la fonction $f$ est tournée vers le haut.<br>
-L'axe de symétrie de la parabole ayant pour équation $x = \frac{-(-3)}{2 \times 1} = \frac{3}{2}$, on déduit :
+Soit $f$ la fonction définie sur $[0\,;\,+\infty[$ par $f(x) = x^2 - 3x + 1$.  
+$f$ est une fonction polynôme de degré $2$, dont le coefficient dominant est positif, donc sa parabole est tournée vers le haut.  
 
-- La fonction $f$ est décroissante sur $[0\,;\,3/2]$
-- La fonction $f$ est croissante sur $[3/2\,;\,+\infty[$
--  $f(1)=f(2)$
+L'axe de symétrie est $x = \\tfrac{3}{2}$. On en déduit :  
 
+- La fonction $f$ est décroissante sur $[0\,;\,3/2]$  
+- La fonction $f$ est croissante sur $[3/2\,;\,+\infty[$  
+- $f(1) = f(2)$  
 
-On déduit que la suite $(u_n)$ est croissante à partir du rang $1$ et strictement croissante à partir du rang $2$.
+On en conclut que la suite $(u_n)$ est croissante à partir du rang $1$ et strictement croissante à partir du rang $2$.
 
 </details>
 :::
-
-
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque :</span>  
@@ -124,52 +122,68 @@ Par exemple,  $u_n = n + \cos(2\pi n)$ est croissante mais $f(x) = x + \cos(2\pi
 </div>
 :::
 
-#### Étude du quotient
+### Étude du quotient
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
 
-1. Si $u_n > 0$, alors :
-$$\frac{u_{n+1}}{u_n} \geq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \leq 1 \iff \text{décroissante}$$
+1. Si $u_n > 0$, alors :  
+$$\frac{u_{n+1}}{u_n} \geq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \leq 1 \iff \text{décroissante}$$  
 
-2. Si $u_n < 0$, alors :
+2. Si $u_n < 0$, alors :  
 $$\frac{u_{n+1}}{u_n} \leq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \geq 1 \iff \text{décroissante}$$
 :::
 
-<details class="bloc demo"><summary>Démonstration : </summary>
+<details class="bloc demo"><summary>Démonstration :</summary>
 
-On traite le cas $u_n <0$ , le cas $u_n>0$ se traite de façon analogue.\\
-Soit $(u_n)$ une suite numérique à terme strictement négatif.\\
-Alors pour tout $n \geqslant p$, 
-$$u_{n+1}-u_n \geqslant 0 \Longleftrightarrow u_{n+1} \geqslant u_n \underset{u_n <0}{\Longleftrightarrow} \frac{u_{n+1}}{u_n} \leqslant 1$$
-D'où la suite est croissante à partir du rang $p$ si et seulement si $\frac{u_{n+1}}{u_n} <1$
+On traite le cas $u_n < 0$, le cas $u_n > 0$ se traite de façon analogue.  
+
+Soit $(u_n)$ une suite numérique à termes strictement négatifs.  
+
+Alors pour tout $n \geqslant p$,  
+$$u_{n+1}-u_n \geqslant 0 \Longleftrightarrow u_{n+1} \geqslant u_n \underset{u_n <0}{\Longleftrightarrow} \frac{u_{n+1}}{u_n} \leqslant 1$$  
+
+D'où la suite est croissante à partir du rang $p$ si et seulement si $\frac{u_{n+1}}{u_n} \leq 1$.
 
 </details>
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 
-On considère la suite $(t_n)$ définie pour tout $n >4$ par $$t_n=\frac{-2^n}{n-4}$$
+On considère la suite $(t_n)$ définie pour tout $n > 4$ par  
+$$t_n = \frac{-2^n}{n-4}$$  
 
-1. A partir de quel rang la suite est-elle définie ?
-   
+1. À partir de quel rang la suite est-elle définie ?  
+
 <details class="bloc cor"><summary>Afficher la correction</summary>
 La suite est définie à partir du rang $5$, puisqu'elle n'est pas définie au rang $4$.
-  </details>
-
+</details>
 
 2. En utilisant la méthode du quotient, déterminer les variations de la suite $(t_n)$.
 
-<details class="bloc cor">
-<summary>Afficher la correction</summary>
-Pour tout $n > 4$, 
-$$\frac{t_{n+1}}{t_n} = \dfrac{\dfrac{-2^{n+1}}{n+1-4}}{\dfrac{-2^n}{n-4}} = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n} = \frac{2n-8}{n-3}$$
-Or pour tout $n \geqslant 5$, 
-$$\frac{2n-8}{n-3}  \geqslant 1 \underset{n-3 >0}{\Longleftrightarrow} 2n-8 \geqslant n-3 \Longleftrightarrow n \geqslant 5$$
-On déduit alors que pour tout $n \geqslant 5$, 
-$$\frac{t_{n+1}}{t_n} > 1$$
-La suite étant à terme strictement négatif puisque, pour tout $n >4$, $-2^n <0$ et $n-3>0$, on déduit que 
-$$\frac{t_{n+1}}{t_n}  \geqslant 1 \underset{t_n <0}{\Longleftrightarrow} t_{n+1} \leqslant t_n $$
-Donc la suite $(t_n)$ est négative
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+Pour tout $n > 4$,  
+$$\frac{t_{n+1}}{t_n} = \dfrac{\dfrac{-2^{n+1}}{n+1-4}}{\dfrac{-2^n}{n-4}} = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n} = \frac{2n-8}{n-3}$$  
+
+Or, pour tout $n \geqslant 5$,  
+$$\frac{2n-8}{n-3}  \geqslant 1 \Longleftrightarrow 2n-8 \geqslant n-3 \Longleftrightarrow n \geqslant 5$$  
+
+On déduit alors que pour tout $n \geqslant 5$,  
+$$\frac{t_{n+1}}{t_n} > 1$$  
+
+La suite étant à termes strictement négatifs puisque, pour tout $n > 4$, $$-2^n < 0 \quad \et \quad n-3 > 0$$ 
+On déduit que :  
+$$\frac{t_{n+1}}{t_n}  \geqslant 1 \underset{t_n <0}{\Longleftrightarrow} t_{n+1} \leqslant t_n $$  
+
+Donc la suite $(t_n)$ est décroissante à partir du rang $5$.
+
 </details>
 :::
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="liste_terme_python.html">⬅️</a>
+  <a class="next" href="limites.html">➡️</a>
+</div>

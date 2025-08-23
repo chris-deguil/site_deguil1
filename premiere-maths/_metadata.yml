@@ -5,4 +5,4 @@ format:
       light: [cosmo, ../assets/css/general.scss]
       dark:  [darkly, ../assets/css/general.scss]
     css: 
-     - ../assets/css/maths.scss
+     - ../assets/css/maths.css
