@@ -3243,11 +3243,11 @@
     "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nMa vie numérique aujourd’hui\n\n\nReflechir sur l’usage du numérique que l’on à au qotidien.\n\n\n\n\nQu’est ce qu’une adresse web ?\n\n\nDéterminer les différents composants d’un url, comprendre une adresse IP\n\n\n\n\nServeur DNS, quelle utilité ?\n\n\nComprendre le rôle d’un serveur DNS, comprendre une reqête\n\n\n\n\nComment choisir sa route ?\n\n\nRoutage en informatique, requête ping\n\n\n\n\nComment circule un message ?\n\n\nProtocole de communication, suite de protocoles TCP:IP\n\n\n\n\nHTTP, suite TCP/IP\n\n\nSuite de protocole TCP/IP, système de requêtes”\n\n\n\n\nGet, Post, comment sont transmis les informations ?\n\n\nProtocole de communication, suite de protocoles TCP:IP\n\n\n\n\nSe protéger, communication sécurisée.\n\n\nProtocole https, système de chiffrement\n\n\n\n\nTrace et vie privée\n\n\nComprendre les données personnelles, cookies\n\n\n\n\nQui gouverne internet ?\n\n\nNeutralit du net et gouvernance\n\n\n\n\nProjets — Thème 1 : De l’usage au réseau\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "snt/theme1/projet.html#projet-1-journaliste-numérique-individuel",
-    "href": "snt/theme1/projet.html#projet-1-journaliste-numérique-individuel",
+    "objectID": "snt/theme1/projet.html#projet-1-bd-numérique-le-voyage-dun-message-en-groupe",
+    "href": "snt/theme1/projet.html#projet-1-bd-numérique-le-voyage-dun-message-en-groupe",
     "title": "Projets — Thème 1 : De l’usage au réseau",
-    "section": "Projet 1 — Journaliste numérique (individuel)",
-    "text": "Projet 1 — Journaliste numérique (individuel)\n\nConsigne\nRédigez un article de vulgarisation destiné à un magazine scolaire sur le thème :\n\n\n« Pourquoi Internet a besoin de règles (ICANN, gouvernance, protocoles) »\n\n.\n\n\nÉtapes de travail\n\nRappelez brièvement ce qu’est Internet (réseau de réseaux).\n\nPrésentez un ou deux organismes clés (ex. ICANN, IETF).\n\nExpliquez à quoi servent les protocoles (ex. TCP/IP, HTTP).\n\nDonnez un exemple concret montrant que des règles sont nécessaires.\n\n\n\nProduction attendue\n\nUn texte d’environ 1 page (300–400 mots).\n\nStyle clair, structuré, adapté à des lycéens.\n\nPossibilité d’ajouter des illustrations (schéma, logo, dessin).\n\n\n\nCritères de réussite\n\n✔️ Article clair et compréhensible par tous.\n\n✔️ Notions techniques correctement expliquées.\n\n✔️ Présentation soignée et adaptée à un magazine scolaire.",
+    "section": "Projet 1 — BD numérique « Le voyage d’un message » (en groupe)",
+    "text": "Projet 1 — BD numérique « Le voyage d’un message » (en groupe)\n\nConsigne\nRéalisez une bande dessinée qui raconte l’itinéraire d’un message sur Internet (ex. un mail, une recherche Google, un message WhatsApp…).\n\n\nÉtapes de travail\n\nChoisissez le type de message à suivre.\n\nDécoupez le trajet en étapes (DNS, routeurs, serveur, destinataire … ).\n\nImaginez une histoire/mettez en scène le message comme un personnage.\n\nRéalisez la BD en 6 à 10 cases (dessin scanné ou outil numérique).\n\n\n\nProduction attendue\n\nUne BD complète et lisible.\n\nChaque étape du trajet du message doit être représentée.\n\nFormat : fichier image ou PDF.\n\n\n\nCritères de réussite\n\n✔️ Parcours du message bien représenté (DNS, routeurs, serveur, navigateur).\n\n✔️ Histoire créative et compréhensible.\n\n✔️ Présentation claire, lisible et soignée.",
     "crumbs": [
       "SNT",
       "Thème 1 · De l'usage au réseau",
@@ -3255,11 +3255,11 @@
     ]
   },
   {
-    "objectID": "snt/theme1/projet.html#projet-2-bd-numérique-le-voyage-dun-message-en-groupe",
-    "href": "snt/theme1/projet.html#projet-2-bd-numérique-le-voyage-dun-message-en-groupe",
+    "objectID": "snt/theme1/projet.html#projet-2-journaliste-numérique-individuel",
+    "href": "snt/theme1/projet.html#projet-2-journaliste-numérique-individuel",
     "title": "Projets — Thème 1 : De l’usage au réseau",
-    "section": "Projet 2 — BD numérique « Le voyage d’un message » (en groupe)",
-    "text": "Projet 2 — BD numérique « Le voyage d’un message » (en groupe)\n\nConsigne\nRéalisez une bande dessinée qui raconte l’itinéraire d’un message sur Internet (ex. un mail, une recherche Google, un message WhatsApp…).\n\n\nÉtapes de travail\n\nChoisissez le type de message à suivre.\n\nDécoupez le trajet en étapes (DNS, routeurs, serveur, destinataire … ).\n\nImaginez une histoire/mettez en scène le message comme un personnage.\n\nRéalisez la BD en 6 à 10 cases (dessin scanné ou outil numérique).\n\n\n\nProduction attendue\n\nUne BD complète et lisible.\n\nChaque étape du trajet du message doit être représentée.\n\nFormat : fichier image ou PDF.\n\n\n\nCritères de réussite\n\n✔️ Parcours du message bien représenté (DNS, routeurs, serveur, navigateur).\n\n✔️ Histoire créative et compréhensible.\n\n✔️ Présentation claire, lisible et soignée.",
+    "section": "Projet 2 — Journaliste numérique (individuel)",
+    "text": "Projet 2 — Journaliste numérique (individuel)\n\nConsigne\nRédigez un article de vulgarisation destiné à un magazine scolaire sur le thème :\n\n\n« Pourquoi Internet a besoin de règles (ICANN, gouvernance, protocoles) »\n\n.\n\n\nÉtapes de travail\n\nRappelez brièvement ce qu’est Internet (réseau de réseaux).\n\nPrésentez un ou deux organismes clés (ex. ICANN, IETF).\n\nExpliquez à quoi servent les protocoles (ex. TCP/IP, HTTP).\n\nDonnez un exemple concret montrant que des règles sont nécessaires.\n\n\n\nProduction attendue\n\nUn texte d’environ 1 page (300–400 mots).\n\nStyle clair, structuré, adapté à des lycéens.\n\nPossibilité d’ajouter des illustrations (schéma, logo, dessin).\n\n\n\nCritères de réussite\n\n✔️ Article clair et compréhensible par tous.\n\n✔️ Notions techniques correctement expliquées.\n\n✔️ Présentation soignée et adaptée à un magazine scolaire.",
     "crumbs": [
       "SNT",
       "Thème 1 · De l'usage au réseau",
