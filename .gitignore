@@ -3,3 +3,10 @@
 /.luarc.json
 .quarto/
 .DS_Store
+_site/
+*.deb
+*.msi
+*.pkg
+*.exe
+
+*.deb

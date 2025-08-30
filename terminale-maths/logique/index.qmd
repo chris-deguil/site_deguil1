@@ -1,0 +1,19 @@
+---
+title: "Chapitre 0 : Logique et raisonnements"
+description: "Quantificateur - différents types de raisonnement"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+

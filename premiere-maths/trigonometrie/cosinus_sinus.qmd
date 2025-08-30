@@ -1,0 +1,150 @@
+---
+title: "Cosinus et Sinus"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définir le cosinus et le sinus d'un angle - propriétés élémentaires"
+order: 3
+---
+
+### Définitions
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+Soit $t$ un nombre réel, et $M$ le point du cercle trigonométrique associé à $t$. <br>
+On appelle cosinus de $t$ et sinus de $t$ les coordonnées de $M$ dans le repère \Oij.<br>
+On note $M(\cos t \, ; \, \sin t)$.
+:::
+
+<div style="text-align:center;">
+  <img src="../../image/cosinus_sinus.png" alt="" />
+</div>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Cette définition, pour $t \in \left]0 \, ; \, \frac{\pi}{2} \right[$, revient à celle du cosinus et du sinus d'un angle aigu dans un triangle rectangle. Elle permet de prolonger la définition à tout réel.
+
+On considère le cercle trigonométrique de centre $O$ et le triangle $OAB$ rectangle en $A$. <br>
+On utilise les notations de la figure. Les triangles $OAB$ et $OCD$ sont en configuration de Thalès.<br>
+On a 
+$$
+\cos t = OD = \frac{OD}{1} = \frac{OD}{OC} = \frac{OA}{OB}
+$$
+et 
+$$
+\sin t = DC = \frac{DC}{1} = \frac{DC}{OC} = \frac{AB}{OB}.
+$$
+:::
+
+<div style="text-align:center;">
+  <img src="../../image/definir_cosinus.png" alt="" />
+</div>
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+On appelle tangente de $t$, $t\neq \frac{\pi}{2}~ [\pi]$, le rapport du sinus et du cosinus :
+$$
+\tan t = \frac{\sin t}{\cos t}.
+$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+**Tangente du collège**<br>
+D'un point de vue géométrique, cela correspond au coefficient directeur de la droite $(OM)$.<br>
+Cette valeur est aussi l'abscisse du point $A$ sur la tangente en $I$ à $\mathscr{C}$, dans le repère $\left(O~;~\ve{j}\right)$.
+
+En effet, $(AM)$ et $(IM')$ sont sécantes en $O$ et $(MM') // (AI)$. Donc, d'après le théorème de Thalès :
+$$
+\frac{OM}{OA} = \frac{OM'}{OI} = \frac{MM'}{IA}.
+$$
+Donc 
+$$
+IA = MM' \times \frac{OI}{OM'} = \sin t \times \frac{1}{\cos t} = \tan t.
+$$
+:::
+
+<div style="text-align:center;">
+  <img src="../../image/tangente.png" alt="" />
+</div>
+
+### Valeurs remarquables
+::: {.bloc .rem}
+Soit $OMI$ un triangle équilatéral et $H$ le projeté orthogonal de $M$ sur $(OI)$. Ainsi, $(MH)$ étant hauteur dans le triangle équilatéral $MOI$, elle est aussi bissectrice de $\widehat{OMI}$. Donc  
+$$
+\widehat{IMO} = \widehat{MOI} = \frac{\pi}{3}
+\quad \text{et} \quad 
+\widehat{HMO} = \frac{\pi}{6}.
+$$
+
+$H$ étant le pied de la hauteur, il est aussi le milieu de $[OI]$, donc $OH=  \frac{1}{2}$.<br>
+De plus, $IMH$ étant rectangle en $H$ et $OM=1$, on déduit du théorème de Pythagore que $MH =  \frac{\sqrt{3}}{2}$. Ainsi : 
+$$
+\cos \left(\frac{\pi}{3} \right) = \frac{1}{2}
+\qquad \text{et} \qquad
+\sin \left(\frac{\pi}{3} \right) = \frac{\sqrt{3}}{2}.
+$$
+
+On a 
+$$
+\cos \widehat{MOH}  =\cos \left(\frac{\pi}{3} \right) = \frac{OH}{OM} = \sin \widehat{OMH}  =\sin \left(\frac{\pi}{6} \right).
+$$
+
+On en déduit que 
+$$
+\cos \left(\frac{\pi}{6} \right) = \frac{\sqrt{3}}{2}
+\qquad \text{et} \qquad
+\sin \left(\frac{\pi}{6} \right) = \frac{1}{2}.
+$$
+
+On regroupe les résultats dans le tableau suivant :
+
+|  | $\LH{0}$ | $\LH{\frac{\pi}{6}}$ | $\frac{\pi}{4}$ | $\frac{\pi}{3}$ | $\frac{\pi}{2}$ |
+|---|---|---|---|---|---|
+| cos | $1$ | $\LH{\frac{\sqrt{3}}{2}}$ | $\frac{\sqrt{2}}{2}$ | $\frac{1}{2}$ | $0$ |
+| sin | $0$ | $\frac{1}{2}$ | $\frac{\sqrt{2}}{2}$ | $\LH{\frac{\sqrt{3}}{2}}$ | $1$ |
+:::
+
+### Propriétés élémentaires
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span><br>
+Pour tout $\alpha \in \R$ et $k \in \Z$ :
+$$
+\cos(\alpha + 2 k\pi) =\cos \alpha, \qquad 
+\sin(\alpha + 2 k\pi) =\sin \alpha, \qquad 
+\cos^2 \alpha + \sin^2 \alpha = 1, \qquad  
+-1 \leq \cos  \alpha \leq 1, \qquad 
+-1 \leq \sin\alpha \leq 1.
+$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Immédiat.
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+On donne $\cos  \frac{\pi}{5} =  \frac{\sqrt{5} + 1}{4}$. Déterminer $\sin \frac{\pi}{5}$.
+<details class="bloc cor"><summary>Afficher la correction : </summary>
+$$
+\begin{aligned}
+\cos^2  \frac{\pi}{5}+\sin^2 \frac{\pi}{5}=1 
+&\Longleftrightarrow \sin^2 \frac{\pi}{5}=1-\cos^2 \frac{\pi}{5} \\
+&\Longleftrightarrow \sin^2 \frac{\pi}{5}=1-\left( \frac{\sqrt{5} + 1}{4}\right)^2\\
+&\Longleftrightarrow \sin^2 \frac{\pi}{5}=1- \frac{5+1+2\sqrt{5}}{16} \\
+&\Longleftrightarrow \sin^2 \frac{\pi}{5}=1- \frac{6+2\sqrt{5}}{16}\\
+&\Longleftrightarrow \sin^2 \frac{\pi}{5}= \frac{16-6-2\sqrt{5}}{16} \\
+&\Longleftrightarrow \sin^2 \frac{\pi}{5}= \frac{10-2\sqrt{5}}{16}.
+\end{aligned}
+$$
+Or $ \frac{\pi}{5} \in \left[0 \, ; \,  \frac{\pi}{2} \right[$, donc $\sin \frac{\pi}{5} > 0$.<br>
+Donc 
+$$
+\sin \frac{\pi}{5} =  \frac{\sqrt{10-2\sqrt{5}}}{4}.
+$$
+</details>
+:::
+

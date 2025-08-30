@@ -7,7 +7,12 @@ website:
   title: "Site pédagogique"
   site-url: https://chris-deguil.github.io/site_deguil1/
   repo-url: https://github.com/chris-deguil/site_deguil1
-
+  page-footer:
+    left: "© 2025 — Cours de Mathématiques, NSI et SNT"
+    right: |
+      <a href="/">Accueil</a> ·
+      <a href="/index.qmd">Plan du site</a> ·
+      <a href="mailto:christophe.Deguil@ac-versailles.fr">Contact</a>
   navbar:
     left:
       - text: "Accueil"
@@ -16,6 +21,8 @@ website:
         href: snt/index.qmd
       - text: "Spé maths première"
         href: premiere-maths/index.qmd
+      - text: "Spé maths terminale"
+        href: terminale-maths/index.qmd
 
 
   sidebar:
@@ -87,15 +94,21 @@ website:
             - premiere-maths/NomDerive/DerivUsuelles.qmd
             - premiere-maths/NomDerive/exercices.qmd
 
-        - section: "Proabilité conditionnelles"
+        - section: "Probabilité conditionnelles"
           contents:
             - premiere-maths/probaCond/definition.qmd
             - premiere-maths/probaCond/fpt.qmd
             - premiere-maths/probaCond/independance.qmd
             - premiere-maths/probaCond/exercices.qmd
 
-
-
+        - section: "Trigonométrie et Fonctions trigonométriques"
+          contents:
+            - premiere-maths/trigonometrie/enroulement.qmd
+            - premiere-maths/trigonometrie/cosinus_sinus.qmd
+            - premiere-maths/trigonometrie/lignes_trigo.qmd
+            - premiere-maths/trigonometrie/fct_trigo.qmd
+            - premiere-maths/trigonometrie/equation.qmd       
+  
 format:
   html:
     include-in-header:
@@ -114,4 +127,5 @@ format:
     smooth-scroll: true
     mermaid:
       theme: forest 
+
 

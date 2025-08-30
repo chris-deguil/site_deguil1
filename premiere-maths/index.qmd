@@ -10,6 +10,7 @@ listing:
       - suite1/index.qmd
       - NomDerive/index.qmd
       - probaCond/index.qmd
+      - trigonometrie/index.qmd
 ---
 
 
