@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,9 +37,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -84,11 +84,15 @@ ul.task-list li input[type="checkbox"] {
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -109,8 +113,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -373,7 +377,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -393,6 +397,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
@@ -601,6 +611,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -696,7 +741,7 @@ On ne peut pas définir la suite à partir de <span class="math inline">\(n = 0\
 <p>Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = \sqrt{n - 2{,}5}\)</span>, définie pour <span class="math inline">\(n \ge 3\)</span>.<br>
 Le premier terme est donc <span class="math inline">\(u_3\)</span>.</p>
 <div style="text-align: center;">
-<p><img src="../../image/suite_courbe1.png" class="img-fluid" style="width:50.0%"></p>
+<p><img src="../../image/maths/Suite_numerique_courbe_suite1.png" class="img-fluid" style="width:40.0%"></p>
 </div>
 </div>
 </section>
@@ -778,7 +823,7 @@ F_{n+2} = F_{n+1} + F_n
 <p>Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_{n+1} = f(u_n)\)</span>.<br>
 Construction graphique des premiers termes sur l’axe des abscisses :</p>
 <div style="text-align: center;">
-<p><img src="../../image/suite_courbe2.png" class="img-fluid" style="width:50.0%"></p>
+<p><img src="../../image/maths/Suite_numerique_suite_courbe2.png" class="img-fluid" style="width:55.0%"></p>
 </div>
 </div>
 <div class="nav-pages">

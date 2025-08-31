@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,9 +36,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -83,11 +83,15 @@ ul.task-list li input[type="checkbox"] {
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -108,8 +112,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -360,7 +364,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/definition.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/exercices.html">Feuilles d’exercices — Second degré</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/index.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/exercices.html">Feuilles d’exercices — Second degré</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -372,7 +376,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -392,6 +396,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
@@ -600,6 +610,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -722,7 +767,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/definition.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/exercices.html">Feuilles d’exercices — Second degré</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/index.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/exercices.html">Feuilles d’exercices — Second degré</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Feuilles d’exercices — Second degré</h1>
 </div>
@@ -1316,8 +1361,10 @@ x^2+9x+14 &lt; 0
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 39 : </strong></span></p>
 <p>Dans le plan muni d’un repère orthonormé d’unité 1 cm, on considère la représentation graphique de la fonction <span class="math inline">\(f : x \longmapsto \sqrt{x}\)</span>.</p>
-<p>Soit <span class="math inline">\(M\)</span> un point d’abscisse <span class="math inline">\(x\)</span> de la représentation graphique de <span class="math inline">\(f\)</span> et <span class="math inline">\(A(2\,;\, 0)\)</span>.</p>
-<p><img src="../../image/exercice_fct2D_courbe1.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+Soit <span class="math inline">\(M\)</span> un point d’abscisse <span class="math inline">\(x\)</span> de la représentation graphique de <span class="math inline">\(f\)</span> et <span class="math inline">\(A(2\,;\, 0)\)</span>.
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f5_exercice_distance1.png" class="img-fluid" style="width:45.0%"></p>
+</div>
 <ol type="1">
 <li>Exprimer <span class="math inline">\(AM\)</span> en fonction de <span class="math inline">\(x\)</span><br>
 </li>
@@ -1345,7 +1392,9 @@ x^2+9x+14 &lt; 0
 <p><span class="exo-num"><strong>Exercice 41 : </strong></span></p>
 <p>Un jardin est de forme carrée. Son côté mesure 20 m. Deux allées rectilignes de même largeur, l’une horizontale, l’autre verticale, se croisent en son centre et délimitent quatre parterres de fleurs identiques. On souhaite semer des fleurs dans les zones en vert sur le schéma ci-dessous (les quatre parterres).</p>
 <p>On note <span class="math inline">\(x\)</span> la largeur (en mètres) de chaque allée.</p>
-<p><img src="../../image/exercice_croix.png" class="img-fluid" style="display:block;margin:0 auto;width:20%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/exercice_croix.png" class="img-fluid" style="width:20.0%"></p>
+</div>
 <ol type="1">
 <li>Exprimer l’aire totale des allées en fonction de <span class="math inline">\(x\)</span>.<br>
 </li>
@@ -1360,10 +1409,12 @@ x^2+9x+14 &lt; 0
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 42 : </strong></span></p>
 <p>(Extrait DST 2024-2025)</p>
-<p>Un miroir peut être représenté par la figure ci-dessous. Le rectangle <span class="math inline">\(ABCD\)</span> symbolise le cadre du miroir.<br>
+Un miroir peut être représenté par la figure ci-dessous. Le rectangle <span class="math inline">\(ABCD\)</span> symbolise le cadre du miroir.<br>
 <span class="math inline">\(AEFD\)</span> est un trapèze et constitue le miroir proprement dit.<br>
-Les deux triangles <span class="math inline">\(ABE\)</span> et <span class="math inline">\(DFC\)</span> sont des pièces de bois ouvragées.</p>
-<p><img src="../../image/exercice_mirroir.png" class="img-fluid" style="display:block;margin:0 auto;width:20%;"></p>
+Les deux triangles <span class="math inline">\(ABE\)</span> et <span class="math inline">\(DFC\)</span> sont des pièces de bois ouvragées.
+<div style="text-align: center;">
+<p><img src="../../image/maths/exercice_mirroir.png" class="img-fluid" style="width:20.0%"></p>
+</div>
 <p>L’unité est le centimètre. On pose <span class="math inline">\(EF = x\)</span>, et on a <span class="math inline">\(BE = FC\)</span>, <span class="math inline">\(AB = x + 20\)</span> et <span class="math inline">\(AD = 30\)</span>.</p>
 <ol type="1">
 <li>Montrer que l’expression de l’aire de <span class="math inline">\(AEFD\)</span> en fonction de <span class="math inline">\(x\)</span> est :<br>
@@ -1378,7 +1429,9 @@ Les deux triangles <span class="math inline">\(ABE\)</span> et <span class="math
 <p><span class="exo-num"><strong>Exercice 43 : </strong></span></p>
 <p>Un terrain carré <span class="math inline">\(ABCD\)</span> a pour côté 10 m.<br>
 Un paysagiste souhaite planter du gazon sur deux parties de ce terrain représentées par le carré <span class="math inline">\(AEFG\)</span> et le triangle <span class="math inline">\(BFC\)</span> de telle sorte que l’aire de la partie restante soit d’au moins 30 m². On note <span class="math inline">\(AE = x\)</span>.</p>
-<p><img src="../../image/exercice_geometrie_triangle_carre.png" class="img-fluid" style="display:block;margin:0 auto;width:20%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f5_gazon.png" class="img-fluid" style="width:15.0%"></p>
+</div>
 <ol type="1">
 <li>À quel intervalle le nombre <span class="math inline">\(x\)</span> appartient-il ?<br>
 </li>
@@ -1468,8 +1521,10 @@ Déterminer les solutions de l’équation :<br>
 <h2 class="anchored" data-anchor-id="exercice-49">Exercice 50</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 50 : </strong></span></p>
-<p>Sans utiliser la calculatrice, associer chaque fonction ci-dessous à la courbe qui lui correspond :</p>
-<p><img src="../../image/exercice_fcd2D_parabole1.png" class="img-fluid" style="display:block;margin:0 auto;width:35%;"></p>
+Sans utiliser la calculatrice, associer chaque fonction ci-dessous à la courbe qui lui correspond :
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f7_associer1.png" class="img-fluid" style="width:35.0%"></p>
+</div>
 <ul>
 <li><span class="math inline">\(f(x) = x^2 - 2x - 3\)</span><br>
 </li>
@@ -1487,7 +1542,9 @@ Déterminer les solutions de l’équation :<br>
 <p><span class="exo-num"><strong>Exercice 51 : </strong></span></p>
 <p>Les courbes données ci-dessous sont les représentations graphiques de fonctions polynômes de degré 2 sous la forme canonique<br>
 <span class="math display">\[f(x) = a(x - \alpha)^2 + \beta\]</span></p>
-<p><img src="../../image/exercice_fcd2D_parabole1.png" class="img-fluid" style="display:block;margin:0 auto;width:35%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f7_associer2.png" class="img-fluid" style="width:35.0%"></p>
+</div>
 <ol type="1">
 <li>Déterminer pour chacune d’elles le signe de <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> et <span class="math inline">\(a\)</span>.<br>
 </li>
@@ -1501,7 +1558,9 @@ Déterminer les solutions de l’équation :<br>
 <p><span class="exo-num"><strong>Exercice 52 : </strong></span></p>
 <p><strong>À la pêche</strong> 🎣<br>
 On souhaite attraper une carpe koi qui ne sort de sa cachette que pour manger.</p>
-<p><img src="../../image/exercice_fct2D_peche.png" class="img-fluid" style="display:block;margin:0 auto;width:25%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/trajectoire_carpe.png" class="img-fluid" style="width:25.0%"></p>
+</div>
 <p>Sa trajectoire est un arc de parabole d’équation :<br>
 <span class="math display">\[y = -x^2 + 4x - 4\]</span><br>
 L’épuisette suit la parabole d’équation :<br>
@@ -1531,7 +1590,9 @@ On considère une droite <span class="math inline">\(\mathscr{D}\)</span> de coe
 <p><span class="exo-num"><strong>Exercice 54 : </strong></span></p>
 <p><strong>À la piscine</strong> 🏊‍♀️<br>
 Emma plonge de 2 m de haut. Sa trajectoire suit une parabole <span class="math inline">\(\mathcal{P}\)</span> ayant pour sommet <span class="math inline">\(S(1\,;\,2{,}4)\)</span>.</p>
-<p><img src="../../image/exercice_fct2D_plongeon.png" class="img-fluid" style="display:block;margin:0 auto;width:35%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/piscine2.png" class="img-fluid" style="width:35.0%"></p>
+</div>
 <ol type="1">
 <li>Déterminer une équation de <span class="math inline">\(\mathcal{P}\)</span>.<br>
 </li>
@@ -1556,7 +1617,9 @@ Quentin présente un projet de rampe de skate modélisée par un arc de parabole
 </li>
 <li>Hauteur entre les extrémités de la plateforme : 1,50 m</li>
 </ul>
-<p><img src="../../image/exercice_fct2D_skate.png" class="img-fluid" style="display:block;margin:0 auto;width:35%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f7_skate1.png" class="img-fluid" style="width:45.0%"></p>
+</div>
 <p>À quelle distance du point H faut-il placer le pied de la seconde plateforme pour respecter toutes les conditions ?<br>
 (On utilisera des valeurs exactes.)</p>
 </div>
@@ -1632,7 +1695,9 @@ et on note <span class="math inline">\(\mathscr{C}\)</span> sa courbe représent
 <ol type="1">
 <li>On considère la fonction <span class="math inline">\(f\)</span> dont on donne le tableau de variations suivant :</li>
 </ol>
-<p><img src="../../image/exercice_fct2D_variation1.png" class="img-fluid" style="display:block;margin:0 auto;width:50%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f8_exo_var1.png" class="img-fluid" style="width:60.0%"></p>
+</div>
 <p>La fonction <span class="math inline">\(f\)</span> peut-elle être une fonction du second degré ? Justifier la réponse.</p>
 <ol start="2" type="1">
 <li>On considère une fonction du second degré <span class="math inline">\(g\)</span> vérifiant <span class="math inline">\(g(4)=g(-2)=5\)</span>.
@@ -1749,7 +1814,9 @@ avec <span class="math inline">\(v = 50\,\text{m/s}\)</span>, <span class="math 
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 64 : </strong></span></p>
 <p>On considère un segment <span class="math inline">\([AB]\)</span> de longueur <span class="math inline">\(1\)</span> mètre. Un point <span class="math inline">\(M\)</span> est sur <span class="math inline">\([AB]\)</span>, et on construit deux disques <span class="math inline">\(D_1\)</span> et <span class="math inline">\(D_2\)</span> de diamètres respectifs <span class="math inline">\([AM]\)</span> et <span class="math inline">\([MB]\)</span>.</p>
-<p><img src="../../image/exercice_fct2D_CercleTangent.png" class="img-fluid" style="display:block;margin:0 auto;width:35%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f10_distance2.png" class="img-fluid" style="width:45.0%"></p>
+</div>
 <p>Déterminer le ou les emplacements du point <span class="math inline">\(M\)</span> tels que la <strong>somme des aires</strong> des disques <span class="math inline">\(D_1\)</span> et <span class="math inline">\(D_2\)</span> soit minimale.</p>
 </div>
 </section>
@@ -1759,7 +1826,9 @@ avec <span class="math inline">\(v = 50\,\text{m/s}\)</span>, <span class="math 
 <p><span class="exo-num"><strong>Exercice 65 : </strong></span></p>
 <p>On considère la parabole <span class="math inline">\(\mathscr{C}\)</span> d’équation : <span class="math display">\[y = -x^2 + 11x - 18\]</span></p>
 <p>Un triangle <span class="math inline">\(ABM\)</span> est dessiné avec <span class="math inline">\(A(2,0)\)</span>, <span class="math inline">\(B(9,0)\)</span>, et <span class="math inline">\(M\)</span> sur <span class="math inline">\(\mathscr{C}\)</span>.</p>
-<p><img src="../../image/exercice_fct2D_triangle_parabole.png" class="img-fluid" style="display:block;margin:0 auto;width:35%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f10_optimisation1.png" class="img-fluid" style="width:45.0%"></p>
+</div>
 <p>Déterminer <strong>où placer le point <span class="math inline">\(M\)</span></strong> pour que <strong>l’aire du triangle <span class="math inline">\(ABM\)</span> soit maximale</strong>.</p>
 </div>
 </section>
@@ -1849,7 +1918,9 @@ Soient <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)
 <span class="math display">\[f(x) = x^2-3x-1\quad \text{et} \quad g(x) = 1 +\frac{2}{x-3}\]</span><br>
 dont on note <span class="math inline">\(\mathcal{P}\)</span> et <span class="math inline">\(\mathcal{H}\)</span> les représentations graphiques respectives.<br>
 On donne ci-dessous les représentations graphiques de ces deux fonctions.</p>
-<p><img src="../../image/exercice_fct2D_bilan2.png" class="img-fluid" style="display:block;margin:0 auto;width:50%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/ExoCourbe2.png" class="img-fluid" style="width:45.0%"></p>
+</div>
 <ol type="1">
 <li>Résolution graphique :
 <ol type="1">
@@ -1905,7 +1976,9 @@ On considère la fonction <span class="math inline">\(f\)</span> définie sur l�
 On note <span class="math inline">\(\mathcal{P}\)</span> sa courbe représentative.</p>
 <p>Pour <span class="math inline">\(x \in [0;2]\)</span>, on note <span class="math inline">\(M\)</span> le point de la courbe <span class="math inline">\(\mathcal{P}\)</span> d’abscisse <span class="math inline">\(x\)</span>, <span class="math inline">\(N\)</span> le symétrique de <span class="math inline">\(M\)</span> par rapport à l’axe des ordonnées, <span class="math inline">\(Q\)</span> et <span class="math inline">\(P\)</span> les projetés orthogonaux de <span class="math inline">\(M\)</span> et <span class="math inline">\(N\)</span> sur l’axe des abscisses.</p>
 <p>On s’intéresse au périmètre <span class="math inline">\(p(x)\)</span> du rectangle <span class="math inline">\(MNPQ\)</span>.</p>
-<p><img src="../../image/exercice_fct2D_bilan4.png" class="img-fluid" style="display:block;margin:0 auto;width:25%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Second_degre_f11_optimisation2.png" class="img-fluid" style="width:45.0%"></p>
+</div>
 <ol type="1">
 <li>Montrer que pour tout <span class="math inline">\(x \in [0;2]\)</span> :<br>
 <span class="math display">\[p(x) = -2x^2 + 4x + 8\]</span></li>

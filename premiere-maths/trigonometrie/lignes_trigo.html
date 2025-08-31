@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,9 +37,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -84,11 +84,15 @@ ul.task-list li input[type="checkbox"] {
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -109,8 +113,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -373,7 +377,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -393,6 +397,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
@@ -601,6 +611,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -648,43 +693,64 @@ window.Quarto = {
 <div class="bloc thm">
 <span class="bloc-titre">Théorème : </span><br>
 <div style="text-align:center;">
-<p><img src="../../image/ligne_trigo.png" alt="" width="70%/"></p>
+<p><img src="../../image/maths/ligne_trigo.png" alt="" width="70%/"></p>
 </div>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br></p>
 <ol type="1">
-<li>Déterminer les valeurs exactes du sinus et du cosinus de <span class="math inline">\(-\frac{\pi}{5}\)</span>, <span class="math inline">\(\frac{4\pi}{5}\)</span> et <span class="math inline">\(\frac{3\pi}{10}\)</span>.<br>
-
+<li>Déterminer les valeurs exactes du sinus et du cosinus de <span class="math inline">\(-\frac{\pi}{5}\)</span>, <span class="math inline">\(\frac{4\pi}{5}\)</span> et <span class="math inline">\(\frac{3\pi}{10}\)</span>.</li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<span class="math display">\[
-\begin{array}{l|l}
-\LH{\cos\left(-\frac{\pi}{5}\right) = \cos \frac{\pi}{5} = \tfrac{1 + \sqrt{5}}{4}} &amp;
-\sin\left(-\frac{\pi}{5}\right) = - \sin \frac{\pi}{5} = - \tfrac{\sqrt{10-2\sqrt{5}}}{4}\\[0.6em]
-\LH{\cos\frac{4\pi}{5} = \cos \left(\pi-\tfrac{\pi}{5}\right) = - \cos \tfrac{\pi}{5} = - \tfrac{1 + \sqrt{5}}{4}} &amp;
-\sin\frac{4\pi}{5} = \sin \left(\pi-\tfrac{\pi}{5}\right) = \sin \tfrac{\pi}{5} = \tfrac{\sqrt{10-2\sqrt{5}}}{4}\\[0.6em]
-\LH{\cos\frac{3\pi}{10} = \cos \left(\tfrac{\pi}{2}-\tfrac{\pi}{5}\right) = \sin \tfrac{\pi}{5} = \tfrac{\sqrt{10-2\sqrt{5}}}{4}} &amp;
-\sin\frac{3\pi}{10} = \sin \left(\tfrac{\pi}{2}-\tfrac{\pi}{5}\right) = \cos \tfrac{\pi}{5} = \tfrac{1 + \sqrt{5}}{4}
-\end{array}
-\]</span>
-</details></li>
+<p><span class="math display">\[
+  \begin{array}{l|l}
+  \LH{\cos\left(-\frac{\pi}{5}\right) = \cos \frac{\pi}{5} = \tfrac{1 + \sqrt{5}}{4}} &amp;
+  \sin\left(-\frac{\pi}{5}\right) = - \sin \frac{\pi}{5} = - \tfrac{\sqrt{10-2\sqrt{5}}}{4}\\
+  \LH{\cos\frac{4\pi}{5} = \cos \left(\pi-\tfrac{\pi}{5}\right) = - \cos \tfrac{\pi}{5} = - \tfrac{1 + \sqrt{5}}{4}} &amp;
+  \sin\frac{4\pi}{5} = \sin \left(\pi-\tfrac{\pi}{5}\right) = \sin \tfrac{\pi}{5} = \tfrac{\sqrt{10-2\sqrt{5}}}{4}\\
+  \LH{\cos\frac{3\pi}{10} = \cos \left(\tfrac{\pi}{2}-\tfrac{\pi}{5}\right) = \sin \tfrac{\pi}{5} = \frac{\sqrt{10-2\sqrt{5}}}{4}} &amp;
+  \sin\frac{3\pi}{10} = \sin \left(\tfrac{\pi}{2}-\tfrac{\pi}{5}\right) = \cos \tfrac{\pi}{5} = \tfrac{1 + \sqrt{5}}{4}
+  \end{array}
+  \]</span></p>
+</details>
+<ol type="1">
 <li>Montrer que <span class="math inline">\(\cos \tfrac{7 \pi}{3} - \sin\tfrac{17\pi}{6} = 0\)</span>.<br>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-On a : [ = ( + ) = . ] Ainsi : [ - = 0. ]
-</details></li>
+On a : <span class="math display">\[
+  \sin\frac{17\pi}{6} = \sin\left(\frac{7\pi}{3} + \frac{\pi}{2}\right) = \cos\frac{7 \pi}{3}.
+\]</span> Ainsi : <span class="math display">\[
+  \cos \frac{7 \pi}{3} - \sin\frac{17\pi}{6} = 0.
+\]</span></details></li>
+</ol>
+
+<ol type="1">
 <li>Montrer que <span class="math inline">\(\sin^2\!\left(\tfrac{8\pi}{5}\right) + \sin^2\!\left(-\tfrac{11\pi}{10} \right)= 1\)</span>.<br>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-Pour cela, il faut montrer que : [ (-) = . ] En effet : [ (-) = ( - ) = ( - ) = . ] Or, pour tout réel <span class="math inline">\(\alpha\)</span> : [ ^2 + ^2 = 1. ] Ainsi : [ ^2() + ^2 (- ) = 1. ]</details></li>
+Pour cela, il faut montrer que : <span class="math display">\[
+\sin\left(-\frac{11\pi}{10}\right) = \cos\frac{8 \pi}{5}.
+\]</span> En effet : <span class="math display">\[
+\sin\left(-\frac{11\pi}{10}\right)
+= \sin\left(\frac{5\pi}{10} - \frac{16\pi}{10}\right)
+= \sin\left(\frac{\pi}{2} - \frac{16\pi}{10}\right)
+= \cos\frac{8 \pi}{5}.
+\]</span> Or, pour tout réel <span class="math inline">\(\alpha\)</span> : <span class="math display">\[
+\cos^2 \alpha + \sin^2 \alpha = 1.
+\]</span> Ainsi : <span class="math display">\[
+\sin^2\left(\frac{8\pi}{5}\right) + \sin^2 \left(-\frac{11\pi}{10} \right) = 1.
+\]</span></details></li>
 </ol>
+</div>
+<div class="nav-pages">
+<p><a class="prev" href="fct_trigo.html">⬅️</a> <a class="next" href="equation.html">➡️</a></p>
 </div>
 
 

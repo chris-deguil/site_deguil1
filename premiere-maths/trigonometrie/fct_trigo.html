@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,9 +37,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -84,11 +84,15 @@ ul.task-list li input[type="checkbox"] {
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -109,8 +113,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -373,7 +377,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -393,6 +397,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
@@ -601,6 +611,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -658,7 +703,7 @@ window.Quarto = {
 </div>
 <strong>Courbe de la fonction <span class="math inline">\(\cos\)</span></strong><br>
 <div style="text-align:center;">
-<p><img src="../../image/fct_cos.png" alt="" width="70%/"></p>
+<p><img src="../../image/maths/Trigonometrie_fig_cos.png" alt="" width="70%/"></p>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème : </span><br> La fonction cosinus est : - paire ; - <span class="math inline">\(2\pi\)</span>-périodique ; - décroissante sur <span class="math inline">\([0~;~\pi]\)</span>.</p>
@@ -671,11 +716,11 @@ La parité et la <span class="math inline">\(2\pi\)</span>-périodicité provien
 </details>
 <strong>Tableau des variations de la fonction cosinus</strong><br>
 <div style="text-align:center;">
-<p><img src="../../image/var_cos.png" alt="" width="50%/"></p>
+<p><img src="../../image/maths/Trigonometrie_var_cos.png" alt="" width="50%/"></p>
 </div>
 <strong>Courbe de la fonction <span class="math inline">\(\sin\)</span></strong><br>
 <div style="text-align:center;">
-<p><img src="../../image/fct_sin.png" alt="" width="70%/"></p>
+<p><img src="../../image/maths/Trigonometrie_courbe_sin.png" alt="" width="70%/"></p>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème : </span><br> La fonction sinus est : - impaire ; - <span class="math inline">\(2\pi\)</span>-périodique ; - croissante sur <span class="math inline">\(\left[0~;~\frac{\pi}{2}\right]\)</span> puis décroissante sur <span class="math inline">\(\left[\frac{\pi}{2}~;~\pi \right]\)</span>.</p>
@@ -688,7 +733,7 @@ La parité et la <span class="math inline">\(2\pi\)</span>-périodicité provien
 </details>
 <strong>Tableau des variations de la fonction sinus</strong><br>
 <div style="text-align:center;">
-<p><img src="../../image/var_sinus.png" alt="" width="50%/"></p>
+<p><img src="../../image/maths/Trigonometrie_var_sin.png" alt="" width="50%/"></p>
 </div>
 <div class="bloc ex">
 <span class="bloc-titre">Exemple : </span><br> Comparer les sinus de <span class="math inline">\(-\frac{2\pi}{5}\)</span> et <span class="math inline">\(\frac{22 \pi}{6}\)</span>.<br>
@@ -717,7 +762,7 @@ f: &amp; \mathbb{R}&amp;\rightarrow &amp; \mathbb{R}\\
 \end{array}
 \]</span>
 <div style="text-align:center;">
-<p><img src="../../image/inf_param1.png" alt="" width="50%/"></p>
+<p><img src="../../image/maths/Trigonometrie_influence_courbe1.png" alt="" width="50%/"></p>
 </div>
 <p><span class="math inline">\(\bullet\)</span> Testons l’influence du paramètre <span class="math inline">\(A\)</span> en traçant la courbe représentative de la fonction : <span class="math display">\[
 \begin{array}{crcl}
@@ -726,7 +771,7 @@ g: &amp; \mathbb{R}&amp;\rightarrow &amp; \mathbb{R}\\
 \end{array}
 \]</span></p>
 <div style="text-align:center;">
-<p><img src="../../image/inf_param2.png" alt="" width="50%/"></p>
+<p><img src="../../image/maths/Trigonometrie_influence_courbe2.png" alt="" width="50%/"></p>
 </div>
 <p>On remarque que les valeurs minimales et maximales de la fonction ont été impactées. La période, par contre, ne subit aucun changement. Le coefficient <span class="math inline">\(A\)</span> représente de la fonction.</p>
 <p><span class="math inline">\(\bullet\)</span> Testons l’influence du paramètre <span class="math inline">\(\omega\)</span> en traçant la courbe représentative de la fonction : <span class="math display">\[
@@ -736,7 +781,7 @@ g: &amp; \mathbb{R}&amp;\rightarrow &amp; \mathbb{R}\\
 \end{array}
 \]</span></p>
 <div style="text-align:center;">
-<p><img src="../../image/inf_param3.png" alt="" width="50%/"></p>
+<p><img src="../../image/maths/Trigonometrie_influence_courbe3.png" alt="" width="50%/"></p>
 </div>
 <p>On remarque que les valeurs minimales et maximales de la fonction n’ont pas été impactées. Par contre, la fréquence (et donc la période) a été modifiée. Le coefficient <span class="math inline">\(\omega\)</span> représente la (exprimée en radians par seconde, rad/s). Elle est proportionnelle à la fréquence : <span class="math inline">\(\omega = 2 \pi f\)</span>. En connaissant la formule <span class="math inline">\(f=\dfrac{1}{T}\)</span>, on a aussi la relation <span class="math inline">\(\omega = \dfrac{2 \pi}{T}\)</span>.</p>
 <p><span class="math inline">\(\bullet\)</span> Testons l’influence du paramètre <span class="math inline">\(\varphi\)</span> en traçant la courbe représentative de la fonction : <span class="math display">\[
@@ -746,13 +791,13 @@ g: &amp; \mathbb{R}&amp;\rightarrow &amp; \mathbb{R}\\
 \end{array}
 \]</span></p>
 <div style="text-align:center;">
-<p><img src="../../image/inf_param4.png" alt="" width="50%/"></p>
+<p><img src="../../image/maths/Trigonometrie_influence_courbe4.png" alt="" width="50%/"></p>
 </div>
 <p>On remarque que la courbe s’est décalée de <span class="math inline">\(\dfrac{\pi}{2}\)</span> vers la gauche. Le coefficient <span class="math inline">\(\varphi\)</span> représente la (exprimée en radians, rad). Elle peut également se noter <span class="math inline">\(\Phi\)</span> (phi majuscule), <span class="math inline">\(\psi\)</span> (psi minuscule) ou <span class="math inline">\(\Psi\)</span> (psi majuscule).</p>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br> Soit <span class="math inline">\(f\)</span> une fonction dont la courbe est donnée sur le graphique ci-dessous. <br></p>
 <div style="text-align:center;">
-<p><img src="../../image/inf_param_exo.png" alt="" width="70%/"></p>
+<p><img src="../../image/maths/Trigonometrie_influence_courbe5.png" alt="" width="70%/"></p>
 </div>
 <p>Cette courbe est de la forme <span class="math inline">\(t \mapsto A\sin\left(\omega t + \varphi\right)\)</span>. L’objectif est de déterminer les valeurs des trois paramètres <span class="math inline">\(A\)</span>, <span class="math inline">\(\omega\)</span> et <span class="math inline">\(\varphi\)</span>.<br> On représente la fonction <span class="math inline">\(\sin t\)</span> (ici en rouge sur le graphique).</p>
 <ul>
@@ -760,6 +805,9 @@ g: &amp; \mathbb{R}&amp;\rightarrow &amp; \mathbb{R}\\
 <li>On remarque que, sur une période de la fonction <span class="math inline">\(\sin t\)</span>, il y a 3 périodes de la fonction <span class="math inline">\(f\)</span>. Donc <span class="math inline">\(\omega = 3\)</span>.<br></li>
 <li>On voit que la courbe en bleu est décalé de la courbe en rouge d’environ <span class="math inline">\(\dfrac{3\pi}{2}\)</span>. La phase a l’origine <span class="math inline">\(\varphi\)</span> est donc égale à <span class="math inline">\(\dfrac{3\pi}{2}\)</span></li>
 </ul>
+</div>
+<div class="nav-pages">
+<p><a class="prev" href="cosinus_sinus.html">⬅️</a> <a class="next" href="lignes_trigo.html">➡️</a></p>
 </div>
 
 

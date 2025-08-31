@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,9 +71,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -118,11 +118,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -143,8 +147,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -407,7 +411,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -427,6 +431,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
@@ -635,6 +645,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -744,13 +789,13 @@ window.Quarto = {
 <p>On lance un dé truqué dont les faces sont numérotées de 1 à 6. La loi de probabilité est donnée par le tableau suivant :</p>
 <table class="caption-top table">
 <colgroup>
+<col style="width: 21%">
 <col style="width: 13%">
-<col style="width: 23%">
-<col style="width: 5%">
-<col style="width: 15%">
-<col style="width: 15%">
 <col style="width: 13%">
-<col style="width: 15%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1257,8 +1302,16 @@ Calculer la probabilité que la somme des deux résultats soit impaire sachant q
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 18 : </strong></span></p>
 <p>Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements.</p>
-<p><img src="../../image/proba_graphe7.png" class="img-fluid" style="display:block;margin:0 auto;width:70%;"></p>
-<p>Dans chacun des cas ci-dessus : 1. Reproduire et compléter l’arbre ci-dessus. 2. Calculer <span class="math inline">\(P(A\cap B)\)</span>. 3. En déduire <span class="math inline">\(P(B)\)</span>. 4. Calculer <span class="math inline">\(P(\overline B)\)</span>.</p>
+<div style="text-align:center;">
+<p><img src="../../image/maths/Exercice_Probabilite_f26_exo_arbre1.png" width="30%" hspace="10%"> <img src="../../image/maths/Exercice_Probabilite_f26_exo_arbre2.png" width="30%"></p>
+</div>
+<p>Dans chacun des cas ci-dessus :</p>
+<ol type="1">
+<li>Reproduire et compléter l’arbre ci-dessus.</li>
+<li>Calculer <span class="math inline">\(P(A\cap B)\)</span>.</li>
+<li>En déduire <span class="math inline">\(P(B)\)</span>.</li>
+<li>Calculer <span class="math inline">\(P(\overline B)\)</span>.</li>
+</ol>
 </div>
 </section>
 <section id="exercice-18" class="level2">
@@ -1287,7 +1340,9 @@ Calculer la probabilité que la somme des deux résultats soit impaire sachant q
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 20 : </strong></span></p>
 <p>Une situation est modélisée par l’arbre ci-dessous. <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> désignant deux événements. En utilisant l’arbre de gauche, compléter l’arbre de droite:</p>
-<p><img src="../../image/proba_graphe8.png" class="img-fluid" style="display:block;margin:0 auto;width:70%;"></p>
+<div style="text-align:center;">
+<p><img src="../../image/maths/Exercice_Probabilite_f26_exo_arbre3.png" width="30%" hspace="10%"> <img src="../../image/maths/Exercice_Probabilite_f26_exo_arbre4.png" width="30%"></p>
+</div>
 </div>
 </section>
 <section id="exercice-20" class="level2">
@@ -1387,7 +1442,9 @@ Dans chacun des cas suivants compléter l’arbre de probabilité en faisant app
 <li><strong>Cas A :</strong> On sait que <span class="math inline">\(P(B) = 0,4575\)</span> et <span class="math inline">\(P(A \cap \bar{B}) = 0,1575\)</span></li>
 <li><strong>Cas B :</strong> On sait que <span class="math inline">\(P(\bar{B}) = 0,8061\)</span> et <span class="math inline">\(P(B \cap \bar{A}) = 0,1675\)</span></li>
 </ul>
-<p><img src="../../image/proba_graphe9.png" class="img-fluid" style="display:block;margin:0 auto;width:70%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/proba_graphe9.png" class="img-fluid" style="width:75.0%"></p>
+</div>
 </div>
 </section>
 </section>
@@ -1574,7 +1631,7 @@ Quelle est la probabilité l’autre enfant soit un garçon : <span class="math 
 <h2 class="anchored" data-anchor-id="exercice-40">Exercice 41</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 41 : </strong></span></p>
-<p><img src="../../image/puce.png" class="img-fluid" style="display:block;margin:0 auto;width:50%;"></p>
+<p><img src="../../image/maths/puce.png" class="img-fluid" style="display:block;margin:0 auto;width:50%;"></p>
 <p>Une puce est placée en 0 sur la droite graduée ci-dessus. À chaque rebond, elle saute à droite ou à gauche de manière aléatoire. On note D et G les événements « la puce effectue un saut à droite » et « la puce effectue un saut à gauche ».</p>
 <ol type="1">
 <li>La puce a effectué le déplacement DDGDG. En combien s’est-elle arrêtée ?<br>
@@ -1676,7 +1733,7 @@ Quelle est la probabilité l’autre enfant soit un garçon : <span class="math 
 <p><br>
 La méthode de Monte Carlo est une technique permettant de calculer des approximations d’aires difficiles à obtenir à l’aide d’outils géométriques ou analytiques de façon simple grâce aux probabilités.</p>
 <p>On considère <span class="math inline">\(f\)</span> la fonction carrée et on souhaiterai connaître l’aire sous sa courbe sur l’intervalle <span class="math inline">\([0\,;\,1]\)</span> représentée en gris ci-contre. On notera cette aire <span class="math inline">\(\mathcal{A}_g\)</span>.</p>
-<p><img src="../../image/monte-carlo.png" class="img-fluid" style="display:block;margin:0 auto;width:50%;"></p>
+<p><img src="../../image/maths/Exercice_Probabilite_f29_monte_carlo.png" class="img-fluid" style="display:block;margin:0 auto;width:30%;"></p>
 <ol type="1">
 <li>On place au hasard un point <span class="math inline">\(M(x \,;\, y)\)</span> dans le carré <span class="math inline">\(OABC\)</span>. Exprimer en fonction en fonction de <span class="math inline">\(\mathcal{A}_g\)</span> et <span class="math inline">\(\mathcal{A}_{OABC}\)</span>, l’aire du carré <span class="math inline">\(OABC\)</span>, la probabilité que <span class="math inline">\(M\)</span> soit dans la zone grise.<br>
 </li>
@@ -1708,11 +1765,14 @@ La méthode de Monte Carlo est une technique permettant de calculer des approxim
 <section id="exercice-43" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-43">Exercice 44</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 44 : </strong></span></p>
-<p>(Extrai bac, Pondichery 2018)<br>
-Une entreprise conditionne du sucre blanc provenant de deux exploitations U et V en paquets de 1 kg et de différentes qualités. Le sucre extra fin est conditionné séparément dans des paquets portant le label extra fin . On admet que 3,% du sucre provenant de l’exploitation U est extra fin et que 5,% du sucre provenant de l’exploitation V est extra fin.</p>
+<p><span class="exo-num"><strong>Exercice 44 : </strong></span><span class="exo-num"><strong>Exercice 44 : </strong></span><span class="exo-extra"> Extrait bac, Pondichery 2018 </span> Une entreprise conditionne du sucre blanc provenant de deux exploitations U et V en paquets de 1 kg et de différentes qualités. Le sucre extra fin est conditionné séparément dans des paquets portant le label extra fin . On admet que 3,% du sucre provenant de l’exploitation U est extra fin et que 5,% du sucre provenant de l’exploitation V est extra fin.</p>
 <p>On prélève au hasard un paquet de sucre dans la production de l’entreprise et, dans un souci de traçabilité, on s’intéresse à la provenance de ce paquet.</p>
-<p>On considère les évènements suivants: - <span class="math inline">\(U\)</span> : Le paquet contient du sucre provenant de l’exploitation U ; - <span class="math inline">\(V\)</span> : Le paquet contient du sucre provenant de l’exploitation V ; - <span class="math inline">\(E\)</span> : Le paquet porte le label “extra fin” .</p>
+<p>On considère les évènements suivants :</p>
+<ul>
+<li><span class="math inline">\(U\)</span> : Le paquet contient du sucre provenant de l’exploitation U ;</li>
+<li><span class="math inline">\(V\)</span> : Le paquet contient du sucre provenant de l’exploitation V ;</li>
+<li><span class="math inline">\(E\)</span> : Le paquet porte le label “extra fin” .</li>
+</ul>
 <ol type="1">
 <li>Dans cette question, on admet que l’entreprise fabrique 30,% de ses paquets avec du sucre provenant de l’exploitation U et les autres avec du sucre provenant de l’exploitation V, sans mélanger les sucres des deux exploitations.
 <ol type="a">
@@ -1730,21 +1790,18 @@ Comment doit-elle s’approvisionner auprès des exploitations U et V ?<br>
 <section id="exercice-44" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-44">Exercice 45</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 45 : </strong></span></p>
-<p>(Extrait bac, Antilles Guyanne 2015)<br>
-Un circuit électronique est composé de deux composants identiques numérotés 1 et 2. On note <span class="math inline">\(D_1\)</span> l’évènement « le composant 1 est défaillant avant un an » et on note <span class="math inline">\(D_2\)</span> l’évènement « le composant 2 est défaillant avant un an ».</p>
+<p><span class="exo-num"><strong>Exercice 45 : </strong></span><span class="exo-num"><strong>Exercice 45 : </strong></span><span class="exo-extra"> Extrait bac, Antilles Guyanne 2015 </span> Un circuit électronique est composé de deux composants identiques numérotés 1 et 2. On note <span class="math inline">\(D_1\)</span> l’évènement « le composant 1 est défaillant avant un an » et on note <span class="math inline">\(D_2\)</span> l’évènement « le composant 2 est défaillant avant un an ».</p>
 <p>On suppose que les deux évènements <span class="math inline">\(D_1\)</span> et <span class="math inline">\(D_2\)</span> sont indépendants et que <span class="math display">\[
 P(D_1) = P(D_2) = 0,39.
 \]</span></p>
 <p>Deux montages possibles sont envisagés, présentés ci-dessous :</p>
-<p><img src="../../image/circuit.png" class="img-fluid" style="display:block;margin:0 auto;width:70%;"></p>
+<p><img src="../../image/maths/Exercice_Probabilite_f29_exo_circuit.png" class="img-fluid" style="display:block;margin:0 auto;width:70%;"></p>
 <p>Déterminer dans chacun des cas la probabilités que le courant ne passe pas.</p>
 </div>
 </section>
 <section id="exercice-45" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-45">Exercice 46</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 46 : </strong></span></p>
 <p>Étude d’une population<br>
 Une agence de voyages propose trois circuits possibles au Canada l’été prochain : <span class="math inline">\(C_1\)</span>, <span class="math inline">\(C_2\)</span>, <span class="math inline">\(C_3\)</span>.<br>
 Les clients ont la possibilité de choisir un hébergement en chambre de catégorie standard ou en chambre de catégorie supérieure. Une fois avant le départ, tous les circuits sont regroupés.</p>

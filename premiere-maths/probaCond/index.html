@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,9 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -115,11 +115,15 @@ ul.task-list li input[type="checkbox"] {
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -140,8 +144,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -476,7 +480,7 @@ Description
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1756570791396" data-listing-reading-time-sort="6" data-listing-word-count-sort="1137" data-listing-title-sort="Probabilité conditionnelles : Définition et représentations" data-listing-filename-sort="definition.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1756653374374" data-listing-reading-time-sort="6" data-listing-word-count-sort="1141" data-listing-title-sort="Probabilité conditionnelles : Définition et représentations" data-listing-filename-sort="definition.qmd">
 <td>
 <a href="../../premiere-maths/probaCond/definition.html" class="title listing-title">Probabilité conditionnelles : Définition et représentations</a>
 </td>
@@ -486,7 +490,7 @@ Description
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1756570791396" data-listing-reading-time-sort="4" data-listing-word-count-sort="774" data-listing-title-sort="Formules des probabilités totales" data-listing-filename-sort="fpt.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1756653374374" data-listing-reading-time-sort="4" data-listing-word-count-sort="775" data-listing-title-sort="Formules des probabilités totales" data-listing-filename-sort="fpt.qmd">
 <td>
 <a href="../../premiere-maths/probaCond/fpt.html" class="title listing-title">Formules des probabilités totales</a>
 </td>
@@ -496,7 +500,7 @@ Description
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1756570791396" data-listing-reading-time-sort="7" data-listing-word-count-sort="1222" data-listing-title-sort="Indépendances" data-listing-filename-sort="independance.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1756653374374" data-listing-reading-time-sort="7" data-listing-word-count-sort="1213" data-listing-title-sort="Indépendances" data-listing-filename-sort="independance.qmd">
 <td>
 <a href="../../premiere-maths/probaCond/independance.html" class="title listing-title">Indépendances</a>
 </td>
@@ -506,7 +510,7 @@ Description
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1756570791396" data-listing-reading-time-sort="32" data-listing-word-count-sort="6275" data-listing-title-sort="Feuilles d'exercices — Probabilités condtionnelles" data-listing-filename-sort="exercices.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1756653374374" data-listing-reading-time-sort="32" data-listing-word-count-sort="6285" data-listing-title-sort="Feuilles d'exercices — Probabilités condtionnelles" data-listing-filename-sort="exercices.qmd">
 <td>
 <a href="../../premiere-maths/probaCond/exercices.html" class="title listing-title">Feuilles d’exercices — Probabilités condtionnelles</a>
 </td>

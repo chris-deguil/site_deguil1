@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,9 +71,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -118,11 +118,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -143,8 +147,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -407,7 +411,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -427,6 +431,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
@@ -635,6 +645,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -797,7 +842,12 @@ On considérera <span class="math inline">\(a &gt;0\)</span> et <span class="mat
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 6 : </strong></span></p>
 <p>On donne ci-dessous les représentations graphiques des fonctions <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span>, <span class="math inline">\(h\)</span> et <span class="math inline">\(k\)</span>.</p>
-<p><img src="../../image/exercice_derivation_courbe1.png" class="img-fluid" style="display:block;margin:0 auto;width:60%;"></p>
+<div style="text-align:center;">
+<p><img src="../../image/maths/Exercice_derivation_f19_derivable1.png" width="30%" hspace="10%"> <img src="../../image/maths/Exercice_derivation_f19_derivable2.png" width="30%"></p>
+</div>
+<div style="text-align:center;">
+<p><img src="../../image/maths/Exercice_derivation_f19_derivable3.png" width="30%" hspace="10%"> <img src="../../image/maths/Exercice_derivation_f19_derivable4.png" width="30%"></p>
+</div>
 <p>Pour chacune d’elles, préciser en quel(s) point(s) les fonctions associées ne sont pas dérivables.</p>
 </div>
 </section>
@@ -809,7 +859,9 @@ On considérera <span class="math inline">\(a &gt;0\)</span> et <span class="mat
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 7 : </strong></span></p>
 <p>On considère la fonction <span class="math inline">\(f\)</span> dont on donne la représentation graphique ci-dessous, ainsi que ses tangentes au point <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> et <span class="math inline">\(D\)</span>.</p>
-<p><img src="../../image/exercice_derivation_courbe2.png" class="img-fluid" style="display:block;margin:0 auto;width:30%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_derivation_f20_tangente1.png" class="img-fluid" style="width:30.0%"></p>
+</div>
 <p>Déterminer <span class="math inline">\(f'(-2)\)</span>, <span class="math inline">\(f''(2)\)</span>, <span class="math inline">\(f'(1)\)</span> et <span class="math inline">\(f'(0)\)</span>.</p>
 </div>
 </section>
@@ -819,7 +871,9 @@ On considérera <span class="math inline">\(a &gt;0\)</span> et <span class="mat
 <p><span class="exo-num"><strong>Exercice 8 : </strong></span></p>
 <p>On donne ci-dessous les représentations graphiques de deux fonctions.<br>
 Lire graphiquement l’abscisse <span class="math inline">\(a\)</span> du point de tangence et la valeur <span class="math inline">\(f'(a)\)</span>.</p>
-<p><img src="../../image/exercice_derivation_courbe3.png" class="img-fluid" style="display:block;margin:0 auto;width:70%;"></p>
+<div style="text-align:center;">
+<p><img src="../../image/maths/courbe_nbrderivee1.png" width="30%" hspace="10%"> <img src="../../image/maths/courbe_nbrderivee2.png" width="30%"></p>
+</div>
 </div>
 </section>
 <section id="exercice-8" class="level2">
@@ -858,8 +912,10 @@ On admet que pour tout réel <span class="math inline">\(a\)</span> non nul, <sp
 <h2 class="anchored" data-anchor-id="exercice-11">Exercice 12</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 12 : </strong></span></p>
-<p>On donne sur la figure ci-dessous la courbe représentative <span class="math inline">\(\mathcal{C}\)</span> d’une fonction <span class="math inline">\(f\)</span>. Sont aussi tracées les droites tangentes à la courbe aux points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span>.</p>
-<p><img src="../../image/exercice_derivation_courbe4.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+On donne sur la figure ci-dessous la courbe représentative <span class="math inline">\(\mathcal{C}\)</span> d’une fonction <span class="math inline">\(f\)</span>. Sont aussi tracées les droites tangentes à la courbe aux points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span>.
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_derivation_f20_tangente2.png" class="img-fluid" style="width:40.0%"></p>
+</div>
 <p>On note <span class="math inline">\(f'\)</span> la dérivée de la fonction <span class="math inline">\(f\)</span>. À partir du graphique et des renseignements fournis et en justifiant vos réponses :</p>
 <ol type="1">
 <li><ol type="a">
@@ -890,7 +946,9 @@ On admet que pour tout réel <span class="math inline">\(a\)</span> non nul, <sp
 <p><span class="exo-num"><strong>Exercice 13 : </strong></span><span class="exo-extra"> <em>(Extrait Devoir 2024)</em> </span></p>
 <p>On considère la fonction <span class="math inline">\(f\)</span> ; on donne ci-dessous la représentation graphique.<br>
 On considère <span class="math inline">\(T_A\)</span>, <span class="math inline">\(T_B\)</span> et <span class="math inline">\(T_C\)</span> les tangentes à <span class="math inline">\(\mathscr{C}_f\)</span> respectivement aux points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span>.</p>
-<p><img src="../../image/exercice_derivation_courbe5.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_derivation_f20_tangente3.png" class="img-fluid" style="width:30.0%"></p>
+</div>
 <ol type="1">
 <li><ol type="a">
 <li>Déterminer graphiquement <span class="math inline">\(f(-2)\)</span> et <span class="math inline">\(f(-1)\)</span>.<br>
@@ -1081,7 +1139,7 @@ la distance parcorue, en mètres, par la voiture après <span class="math inline
 <h2 class="anchored" data-anchor-id="exercice-21">Exercice 22</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 22 : </strong></span></p>
-<p>On considère la fonction <span class="math inline">\(f\)</span> définie par : <span class="math display">\[\[
+<p>On considère la fonction <span class="math inline">\(f\)</span> définie par : <span class="math display">\[
 f(x) = x^3 - x^2 + 3x + 1
 \]</span></p>
 <p>On note sa courbe <span class="math inline">\(\mathcal{C}\)</span> et <span class="math inline">\(A\)</span> le point d’abscisse <span class="math inline">\(-1\)</span> de la courbe <span class="math inline">\(\mathcal{C}\)</span>.<br> Un logiciel de calcul formel donne le résultat suivant</p>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,9 +37,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -84,11 +84,15 @@ ul.task-list li input[type="checkbox"] {
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -109,8 +113,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -344,7 +348,7 @@ window.MathJax = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logoSNT.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logoSNT.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -606,7 +610,7 @@ window.MathJax = {
 </div>
 </div>
 </div><div class="column" style="width:35%;">
-<p><img src="../../image/durkheim.png" class="img-fluid" style="display:block;margin:0 auto;width:70%;"></p>
+<p><img src="../../image/snt/durkheim.png" class="img-fluid" style="display:block;margin:0 auto;width:70%;"></p>
 </div>
 </div>
 <div class="columns">
@@ -621,7 +625,7 @@ window.MathJax = {
 </div>
 </div>
 </div><div class="column" style="width:35%;">
-<p><img src="../../image/milgram.png" class="img-fluid" style="display:block;margin:0 auto;width:60%;"></p>
+<p><img src="../../image/snt/milgram.png" class="img-fluid" style="display:block;margin:0 auto;width:60%;"></p>
 </div>
 </div>
 <p>En fonction du nombre d’intermédiaires que cela a nécessité, les graphiques ci-dessous indiquent :</p>
@@ -632,11 +636,11 @@ window.MathJax = {
 </ul>
 <div class="columns">
 <div class="column" style="width:33%;">
-<p><img src="../../image/milgram1.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="../../image/snt/milgram1.png" class="img-fluid" style="width:100.0%"></p>
 </div><div class="column" style="width:33%;">
-<p><img src="../../image/milgram2.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="../../image/snt/milgram2.png" class="img-fluid" style="width:100.0%"></p>
 </div><div class="column" style="width:33%;">
-<p><img src="../../image/milgramFacebook.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="../../image/snt/milgramFacebook.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <ol type="1">
@@ -662,7 +666,7 @@ window.MathJax = {
 <h1>Les influenceur.euse.s : Stars des Réseaux sociaux</h1>
 <p>Sur l’étude de Milgram, on formule la remarque suivante : les chaines forment des entonnoirs, passant par des “ stars ” sociales, 48% d’entre elles ne passant que par trois personnes en lien direct avec la cible.</p>
 <p>Avec l’avènement du Web 2.0 (web participatif) , émergent des blogueurs dits “influents”. Avec l’arrivée des médias sociaux, le terme d’ influenceur est utilisé.</p>
-<p><img src="../../image/influenceur.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+<p><img src="../../image/snt/influenceur.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
 <ol start="7" type="1">
 <li>Qu’est-ce qu’un influenceur et quelle est sa position privilégiée dans un graphe ?<br> Que peut-on conclure ?</li>
 <li>Quels types de contenus publient-ils ? Sont-ils toujours neutres ?</li>

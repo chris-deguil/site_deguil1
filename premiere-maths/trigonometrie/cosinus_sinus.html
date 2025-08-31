@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,9 +37,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -84,11 +84,15 @@ ul.task-list li input[type="checkbox"] {
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -109,8 +113,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -373,7 +377,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -393,6 +397,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
@@ -601,6 +611,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -651,7 +696,7 @@ window.Quarto = {
 <p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(t\)</span> un nombre réel, et <span class="math inline">\(M\)</span> le point du cercle trigonométrique associé à <span class="math inline">\(t\)</span>. <br> On appelle cosinus de <span class="math inline">\(t\)</span> et sinus de <span class="math inline">\(t\)</span> les coordonnées de <span class="math inline">\(M\)</span> dans le repère .<br> On note <span class="math inline">\(M(\cos t \, ; \, \sin t)\)</span>.</p>
 </div>
 <div style="text-align:center;">
-<p><img src="../../image/cosinus_sinus.png" alt=""></p>
+<p><img src="../../image/maths/Trigonometrie_def_cos_sin.png" alt="" width="30%"></p>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span><br> Cette définition, pour <span class="math inline">\(t \in \left]0 \, ; \, \frac{\pi}{2} \right[\)</span>, revient à celle du cosinus et du sinus d’un angle aigu dans un triangle rectangle. Elle permet de prolonger la définition à tout réel.</p>
@@ -662,7 +707,7 @@ window.Quarto = {
 \]</span></p>
 </div>
 <div style="text-align:center;">
-<p><img src="../../image/definir_cosinus.png" alt=""></p>
+<p><img src="../../image/maths/Trigonometrie_def_cos.png" alt="" width="30%"></p>
 </div>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition : </span><br> On appelle tangente de <span class="math inline">\(t\)</span>, <span class="math inline">\(t\neq \frac{\pi}{2}~ [\pi]\)</span>, le rapport du sinus et du cosinus : <span class="math display">\[
@@ -678,7 +723,7 @@ IA = MM' \times \frac{OI}{OM'} = \sin t \times \frac{1}{\cos t} = \tan t.
 \]</span></p>
 </div>
 <div style="text-align:center;">
-<p><img src="../../image/tangente.png" alt=""></p>
+<p><img src="../../image/maths/Trigonometrie_def_tan.png" alt="" width="30%"></p>
 </div>
 </section>
 <section id="valeurs-remarquables" class="level3">
@@ -767,8 +812,7 @@ Immédiat.
 <summary>
 Afficher la correction :
 </summary>
-<p><span class="math display">\[
-\begin{aligned}
+<p><span class="math display">\[\begin{aligned}
 \cos^2  \frac{\pi}{5}+\sin^2 \frac{\pi}{5}=1
 &amp;\Longleftrightarrow \sin^2 \frac{\pi}{5}=1-\cos^2 \frac{\pi}{5} \\
 &amp;\Longleftrightarrow \sin^2 \frac{\pi}{5}=1-\left( \frac{\sqrt{5} + 1}{4}\right)^2\\
@@ -777,7 +821,7 @@ Afficher la correction :
 &amp;\Longleftrightarrow \sin^2 \frac{\pi}{5}= \frac{16-6-2\sqrt{5}}{16} \\
 &amp;\Longleftrightarrow \sin^2 \frac{\pi}{5}= \frac{10-2\sqrt{5}}{16}.
 \end{aligned}
-\]</span> Or $ <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">Site pédagogique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uZXh0">Lignes trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2">Cercle trigonométrique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9pbmRleC5odG1sQ291cnMtZGUtUHJlbWnDqHJlLVNww6ljaWFsaXTDqS1tYXRocw==">Cours de Première Spécialité maths</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Fonctions du second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9kZWZpbml0aW9uLmh0bWxGb25jdGlvbi1wb2x5bsO0bWUtZHUtc2Vjb25kLWRlZ3LDqQ==">Fonction polynôme du second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9yYWNpbmUuaHRtbExlLXNlY29uZC1kZWdyw6ktOi1yYWNpbmVzLWQndW5lLcOpcXVhdGlvbg==">Le second degré : racines d’une équation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9zaWduZS5odG1sRmFjdG9yaXNhdGlvbi1ldC1zaWduZS1kJ3VuZS1mb25jdGlvbi1kdS1zZWNvbmQtZGVncsOp">Factorisation et signe d’une fonction du second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9jb2VmZmljaWVudC5odG1sTGllbi1jb2VmZmljaWVudHMtLS1yYWNpbmVz">Lien coefficients - racines</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9wYXJhYm9sZS5odG1sUGFyYWJvbGU=">Parabole</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9iaWxhbi5odG1sQmlsYW4tOi3DiXF1YXRpb24tZXQtcmVwcsOpc2VudGF0aW9uLWdyYXBoaXF1ZQ==">Bilan : Équation et représentation graphique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9leGVyY2ljZXMuaHRtbEZldWlsbGVzLWQnZXhlcmNpY2VzLeKAlC1TZWNvbmQtZGVncsOp">Feuilles d’exercices — Second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">Suites numériques : Généralités</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvZGVmaW5pdGlvbi5odG1sRMOpZmluaXRpb25z">Définitions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvZ2VuZXJhdGlvbi5odG1sRGlmZsOpcmVudHMtbW9kZXMtZGUtZ8OpbsOpcmF0aW9u">Différents modes de génération</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvbGlzdGVfdGVybWVfcHl0aG9uLmh0bWxMaXN0ZS1kZXMtdGVybWVzLWQndW5lLXN1aXRlLW51bcOpcmlxdWU=">Liste des termes d’une suite numérique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvdmFyaWF0aW9ucy5odG1sVmFyaWF0aW9ucy1kJ3VuZS1zdWl0ZQ==">Variations d’une suite</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvbGltaXRlcy5odG1sTm90aW9uLWRlLWxpbWl0ZQ==">Notion de limite</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvYWxnb3JpdGhtZS5odG1sQWxnb3JpdGhtZS06LVNvbW1lLWV0LVNldWls">Algorithme : Somme et Seuil</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvZXhlcmNpY2VzLmh0bWxGZXVpbGxlcy1kJ2V4ZXJjaWNlcy3igJQtU3VpdGVzLU51bcOpcmlxdWVz">Feuilles d’exercices — Suites Numériques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">Nombre dérivé</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9Ob21EZXJpdmUvZGVmaW5pdGlvbi5odG1sTm9tYnJlLWTDqXJpdsOp">Nombre dérivé</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9Ob21EZXJpdmUvdGFuZ2VudGUuaHRtbFRhbmdlbnRlLcOgLXVuZS1jb3VyYmU=">Tangente à une courbe</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9Ob21EZXJpdmUvRGVyaXZVc3VlbGxlcy5odG1sRm9uY3Rpb24tZMOpcml2w6llLS0tRMOpcml2w6llcy11c3VlbGxlcw==">Fonction dérivée - Dérivées usuelles</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9Ob21EZXJpdmUvZXhlcmNpY2VzLmh0bWxGZXVpbGxlcy1kJ2V4ZXJjaWNlcy3igJQtTm9tYnJlLWTDqXJpdsOpLC1Ew6lyaXbDqWVzLWRlcy1mb25jdGlvbnMtdXN1ZWxsZXM=">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNA==">Probabilité conditionnelles</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9wcm9iYUNvbmQvZGVmaW5pdGlvbi5odG1sUHJvYmFiaWxpdMOpLWNvbmRpdGlvbm5lbGxlcy06LUTDqWZpbml0aW9uLWV0LXJlcHLDqXNlbnRhdGlvbnM=">Probabilité conditionnelles : Définition et représentations</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9wcm9iYUNvbmQvZnB0Lmh0bWxGb3JtdWxlcy1kZXMtcHJvYmFiaWxpdMOpcy10b3RhbGVz">Formules des probabilités totales</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9wcm9iYUNvbmQvaW5kZXBlbmRhbmNlLmh0bWxJbmTDqXBlbmRhbmNlcw==">Indépendances</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9wcm9iYUNvbmQvZXhlcmNpY2VzLmh0bWxGZXVpbGxlcy1kJ2V4ZXJjaWNlcy3igJQtUHJvYmFiaWxpdMOpcy1jb25kdGlvbm5lbGxlcw==">Feuilles d’exercices — Probabilités condtionnelles</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNQ==">Trigonométrie et Fonctions trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2Vucm91bGVtZW50Lmh0bWxDZXJjbGUtdHJpZ29ub23DqXRyaXF1ZQ==">Cercle trigonométrique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2Nvc2ludXNfc2ludXMuaHRtbENvc2ludXMtZXQtU2ludXM=">Cosinus et Sinus</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2xpZ25lc190cmlnby5odG1sTGlnbmVzLXRyaWdvbm9tw6l0cmlxdWVz">Lignes trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2ZjdF90cmlnby5odG1sRm9uY3Rpb25zLXRyaWdvbm9tw6l0cmlxdWVz">Fonctions trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2VxdWF0aW9uLmh0bWxFcXVhdGlvbnMtdHJpZ29ub23DqXRyaXF1ZXM=">Equations trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QWNjdWVpbA==">Accueil</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2luZGV4Lmh0bWw=">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U05U">SNT</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NudC9pbmRleC5odG1s">/snt/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3DDqSBtYXRocyBwcmVtacOocmU=">Spé maths première</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3ByZW1pZXJlLW1hdGhzL2luZGV4Lmh0bWw=">/premiere-maths/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3DDqSBtYXRocyB0ZXJtaW5hbGU=">Spé maths terminale</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3Rlcm1pbmFsZS1tYXRocy9pbmRleC5odG1s">/terminale-maths/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLVRyaWdvbm9tw6l0cmllLWV0LUZvbmN0aW9ucy10cmlnb25vbcOpdHJpcXVlcw==">Trigonométrie et Fonctions trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLUNvc2ludXMtZXQtU2ludXM=">Cosinus et Sinus</span></p>
+\]</span> Or $ <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">Site pédagogique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uZXh0">Lignes trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2">Cercle trigonométrique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9pbmRleC5odG1sQ291cnMtZGUtUHJlbWnDqHJlLVNww6ljaWFsaXTDqS1tYXRocw==">Cours de Première Spécialité maths</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Fonctions du second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9pbmRleC5odG1sQ2hhcGl0cmUtMS06LUxlLXNlY29uZC1kZWdyw6k=">Chapitre 1 : Le second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9kZWZpbml0aW9uLmh0bWxGb25jdGlvbi1wb2x5bsO0bWUtZHUtc2Vjb25kLWRlZ3LDqQ==">Fonction polynôme du second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9yYWNpbmUuaHRtbExlLXNlY29uZC1kZWdyw6ktOi1yYWNpbmVzLWQndW5lLcOpcXVhdGlvbg==">Le second degré : racines d’une équation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9zaWduZS5odG1sRmFjdG9yaXNhdGlvbi1ldC1zaWduZS1kJ3VuZS1mb25jdGlvbi1kdS1zZWNvbmQtZGVncsOp">Factorisation et signe d’une fonction du second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9jb2VmZmljaWVudC5odG1sTGllbi1jb2VmZmljaWVudHMtLS1yYWNpbmVz">Lien coefficients - racines</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9wYXJhYm9sZS5odG1sUGFyYWJvbGU=">Parabole</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9iaWxhbi5odG1sQmlsYW4tOi3DiXF1YXRpb24tZXQtcmVwcsOpc2VudGF0aW9uLWdyYXBoaXF1ZQ==">Bilan : Équation et représentation graphique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9mb25jdGlvbjJuRC9leGVyY2ljZXMuaHRtbEZldWlsbGVzLWQnZXhlcmNpY2VzLeKAlC1TZWNvbmQtZGVncsOp">Feuilles d’exercices — Second degré</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">Suites numériques : Généralités</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvZGVmaW5pdGlvbi5odG1sRMOpZmluaXRpb25z">Définitions</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvZ2VuZXJhdGlvbi5odG1sRGlmZsOpcmVudHMtbW9kZXMtZGUtZ8OpbsOpcmF0aW9u">Différents modes de génération</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvbGlzdGVfdGVybWVfcHl0aG9uLmh0bWxMaXN0ZS1kZXMtdGVybWVzLWQndW5lLXN1aXRlLW51bcOpcmlxdWU=">Liste des termes d’une suite numérique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvdmFyaWF0aW9ucy5odG1sVmFyaWF0aW9ucy1kJ3VuZS1zdWl0ZQ==">Variations d’une suite</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvbGltaXRlcy5odG1sTm90aW9uLWRlLWxpbWl0ZQ==">Notion de limite</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvYWxnb3JpdGhtZS5odG1sQWxnb3JpdGhtZS06LVNvbW1lLWV0LVNldWls">Algorithme : Somme et Seuil</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9zdWl0ZTEvZXhlcmNpY2VzLmh0bWxGZXVpbGxlcy1kJ2V4ZXJjaWNlcy3igJQtU3VpdGVzLU51bcOpcmlxdWVz">Feuilles d’exercices — Suites Numériques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">Nombre dérivé</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9Ob21EZXJpdmUvZGVmaW5pdGlvbi5odG1sTm9tYnJlLWTDqXJpdsOp">Nombre dérivé</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9Ob21EZXJpdmUvdGFuZ2VudGUuaHRtbFRhbmdlbnRlLcOgLXVuZS1jb3VyYmU=">Tangente à une courbe</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9Ob21EZXJpdmUvRGVyaXZVc3VlbGxlcy5odG1sRm9uY3Rpb24tZMOpcml2w6llLS0tRMOpcml2w6llcy11c3VlbGxlcw==">Fonction dérivée - Dérivées usuelles</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9Ob21EZXJpdmUvZXhlcmNpY2VzLmh0bWxGZXVpbGxlcy1kJ2V4ZXJjaWNlcy3igJQtTm9tYnJlLWTDqXJpdsOpLC1Ew6lyaXbDqWVzLWRlcy1mb25jdGlvbnMtdXN1ZWxsZXM=">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNA==">Probabilité conditionnelles</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9wcm9iYUNvbmQvZGVmaW5pdGlvbi5odG1sUHJvYmFiaWxpdMOpLWNvbmRpdGlvbm5lbGxlcy06LUTDqWZpbml0aW9uLWV0LXJlcHLDqXNlbnRhdGlvbnM=">Probabilité conditionnelles : Définition et représentations</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9wcm9iYUNvbmQvZnB0Lmh0bWxGb3JtdWxlcy1kZXMtcHJvYmFiaWxpdMOpcy10b3RhbGVz">Formules des probabilités totales</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9wcm9iYUNvbmQvaW5kZXBlbmRhbmNlLmh0bWxJbmTDqXBlbmRhbmNlcw==">Indépendances</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9wcm9iYUNvbmQvZXhlcmNpY2VzLmh0bWxGZXVpbGxlcy1kJ2V4ZXJjaWNlcy3igJQtUHJvYmFiaWxpdMOpcy1jb25kdGlvbm5lbGxlcw==">Feuilles d’exercices — Probabilités condtionnelles</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNQ==">Trigonométrie et Fonctions trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2Vucm91bGVtZW50Lmh0bWxDZXJjbGUtdHJpZ29ub23DqXRyaXF1ZQ==">Cercle trigonométrique</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2Nvc2ludXNfc2ludXMuaHRtbENvc2ludXMtZXQtU2ludXM=">Cosinus et Sinus</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2xpZ25lc190cmlnby5odG1sTGlnbmVzLXRyaWdvbm9tw6l0cmlxdWVz">Lignes trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2ZjdF90cmlnby5odG1sRm9uY3Rpb25zLXRyaWdvbm9tw6l0cmlxdWVz">Fonctions trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy90cmlnb25vbWV0cmllL2VxdWF0aW9uLmh0bWxFcXVhdGlvbnMtdHJpZ29ub23DqXRyaXF1ZXM=">Equations trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNg==">Opérations sur les dérivées - Applications</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9PcGVyYXRpb25fRGVyaXZlZS9vcGVyYXRpb25zLmh0bWxPcMOpcmF0aW9ucy1zdXItbGVzLWTDqXJpdsOpZXM=">Opérations sur les dérivées</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9PcGVyYXRpb25fRGVyaXZlZS9jb21wb3NpdGlvbi5odG1sQ29tcG9zaXRpb24tOi1nKGF4K2Ip">Composition : g(ax+b)</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9PcGVyYXRpb25fRGVyaXZlZS9hcHBsaWNhdGlvbnMuaHRtbEFwcGxpY2F0aW9ucw==">Applications</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVtaWVyZS1tYXRocy9PcGVyYXRpb25fRGVyaXZlZS9leHRyZW1hLmh0bWxFeHRyZW1h">Extrema</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QWNjdWVpbA==">Accueil</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2luZGV4Lmh0bWw=">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U05U">SNT</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NudC9pbmRleC5odG1s">/snt/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3DDqSBtYXRocyBwcmVtacOocmU=">Spé maths première</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3ByZW1pZXJlLW1hdGhzL2luZGV4Lmh0bWw=">/premiere-maths/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3DDqSBtYXRocyB0ZXJtaW5hbGU=">Spé maths terminale</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3Rlcm1pbmFsZS1tYXRocy9pbmRleC5odG1s">/terminale-maths/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLVRyaWdvbm9tw6l0cmllLWV0LUZvbmN0aW9ucy10cmlnb25vbcOpdHJpcXVlcw==">Trigonométrie et Fonctions trigonométriques</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLUNvc2ludXMtZXQtU2ludXM=">Cosinus et Sinus</span></p>
 <div class="hidden quarto-markdown-envelope-contents" data-render-id="Zm9vdGVyLWxlZnQ=">
 <p>© 2025 — Cours de Mathématiques, NSI et SNT</p>
 </div>

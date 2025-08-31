@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,9 +71,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f5a9925dcef6154f17d314fb5d13745a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -118,11 +118,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     if (path.includes("/premiere-maths/")) {
       document.documentElement.classList.add("maths-theme");
     }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
   });
 </script>
 <script>
 window.MathJax = {
   tex: {
+        packages: {'[+]': ['enclose']},   
     macros: {
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
@@ -143,8 +147,8 @@ window.MathJax = {
 
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
-      wideparen:[ "\\wideparen{IJ}{IJ}",1],
-
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
@@ -407,7 +411,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -427,6 +431,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
@@ -631,6 +641,41 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/equation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Equations trigonométriques</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
   </div>
 </li>
       </ul>
@@ -965,8 +1010,10 @@ w_{n+1}=5w_n-2n
 <h2 class="anchored" data-anchor-id="exercice-13">Exercice 14</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 14 : </strong></span></p>
-<p>Sur un cercle, on place <span class="math inline">\(n\)</span> points distincts et on s’intéresse au nombre <span class="math inline">\(p_n\)</span> de cordes que l’on peut tracer.</p>
-<p><img src="../../image/exercice_suite_corde.png" class="img-fluid"></p>
+Sur un cercle, on place <span class="math inline">\(n\)</span> points distincts et on s’intéresse au nombre <span class="math inline">\(p_n\)</span> de cordes que l’on peut tracer.
+<div style="text-align: center;">
+<p><img src="../../image/maths/cercle_corde.png" class="img-fluid" style="width:55.0%"></p>
+</div>
 <ol type="1">
 <li>Déterminer <span class="math inline">\(p_3\)</span>, <span class="math inline">\(p_4\)</span> et <span class="math inline">\(p_5\)</span>.<br>
 </li>
@@ -1111,8 +1158,7 @@ où <span class="math inline">\(g:x \longmapsto x-4\)</span>. La suite <span cla
 <section id="exercice-23" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-23">Exercice 24</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 24 : </strong></span></p>
-<p>(Extrait Devoir)</p>
+<p><span class="exo-num"><strong>Exercice 24 : </strong></span><span class="exo-extra">(Extrait devoir) </span></p>
 <ol type="1">
 <li><p>On considère les suites <span class="math inline">\((u_n)\)</span>, <span class="math inline">\((v_n)\)</span> définies pour tout <span class="math inline">\(n \in \N\)</span> par<br>
 <span class="math display">\[u_n = 2n^2+4n-2 \quad ; \quad v_n = -\frac{3^n}{2} \quad ; \quad w_n= n- \frac{1}n\]</span></p>
@@ -1195,13 +1241,15 @@ Montrer que la suite <span class="math inline">\((u_{3n})\)</span> est constante
 <li>On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\([-3_,;\, + \infty[\)</span> par <span class="math display">\[f(x)= \sqrt{4x+12}\]</span><br>
 Soit la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0 =-1\)</span> et pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[u_{n+1}= f(u_n)\]</span></li>
 </ol>
-<p><img src="../../image/exercice_suite_courbe1.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Suite_numerique_f15_construction1.png" class="img-fluid" style="width:55.0%"></p>
+</div>
 <ol type="a">
 <li>Construire, sur le graphique fourni, les cinq premiers termes de la suite <span class="math inline">\((u_n)\)</span><br>
 </li>
 <li>Conjecturer le sens de variation de la suite <span class="math inline">\((u_n)\)</span></li>
 </ol>
-<ol start="3" type="1">
+<ol type="1">
 <li>On admet que pour tout entier <span class="math inline">\(n\)</span>,<br>
 <span class="math display">\[-1 \leqslant u_n \leqslant 6\]</span><br>
 En utilisant la question 1., démontrer que la suite <span class="math inline">\((u_n)\)</span> est croissante.</li>
@@ -1217,7 +1265,9 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <ol type="1">
 <li>Construire graphiquement les cinq premiers termes de la suite</li>
 </ol>
-<p><img src="../../image/exercice_suite_courbe2.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Suite_numerique_f15_construction.png" class="img-fluid" style="width:55.0%"></p>
+</div>
 <ol type="1">
 <li>Conjecturer les variations de la suite <span class="math inline">\((v_n)\)</span> ainsi que sa limite éventuelle<br>
 </li>
@@ -1389,7 +1439,9 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <p><span class="exo-num"><strong>Exercice 39 : </strong></span></p>
 <p>Soit un polygone à <span class="math inline">\(n\)</span> côtés inscrit dans le cercle trigonométrique comme dans la figure ci-dessous (<span class="math inline">\(n=8\)</span>, il s’agit d’un octogone).<br>
 On note <span class="math inline">\(\mathcal{A}_n\)</span> l’aire de ce polygone.</p>
-<p><img src="../../image/exercice_suite_polygone.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Suite_numerique_f17_aire_polygone.png" class="img-fluid" style="width:55.0%"></p>
+</div>
 <ol type="1">
 <li>Dans le cas de l’octogone, quelle est la mesure de l’angle <span class="math inline">\(\alpha=\widehat{IOM}\)</span> ?<br>
 </li>
@@ -1403,7 +1455,9 @@ On note <span class="math inline">\(\mathcal{A}_n\)</span> l’aire de ce polygo
 </li>
 <li>On pose sur <span class="math inline">\([0\,;\, \pi]\)</span> la fonction <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x)=\pi\dfrac{\sin(x)}{x}\)</span>. Quel est le lien entre <span class="math inline">\(\mathcal{A}_n\)</span> et <span class="math inline">\(f\)</span> ?</li>
 </ol>
-<p><img src="../../image/exercice_suite_polygone2.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Suite_numerique_f17_polygone_suite.png" class="img-fluid" style="width:55.0%"></p>
+</div>
 <ol type="1">
 <li>À l’aide de la courbe de <span class="math inline">\(f\)</span> ci-dessus, dresser le tableau de variation de <span class="math inline">\(f\)</span> sur <span class="math inline">\([0\,;\, \pi]\)</span>.<br>
 </li>
@@ -1541,8 +1595,10 @@ u_{n+1} = \frac{u_n}{1+u_n}
 <li>Conjecturer les variations et la limite de la suite <span class="math inline">\((u_n)\)</span>.</li>
 </ol></li>
 </ol>
-<p><img src="../../image/exercice_suite_courbe3.png" class="img-fluid" style="display:block;margin:0 auto;width:40%;"></p>
-<ol start="2" type="1">
+<div style="text-align: center;">
+<p><img src="../../image/maths/Suite_numerique_f18_construction3.png" class="img-fluid" style="width:55.0%"></p>
+</div>
+<ol type="1">
 <li></li>
 </ol>
 <ol type="a">
