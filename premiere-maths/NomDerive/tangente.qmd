@@ -9,22 +9,23 @@ order: 2
 ---
 
 ## Tangente en un point de la courbe
+::: {.bloc .rem}
 
 On considère une fonction $f$ définie sur $I$ non vide, et dérivable en $a \in I$.  
 Faisons alors tendre $h$ vers $0$ (comme pour la définition du nombre dérivé).  
 Le point $M$ se rapproche infiniment du point $A$ (sans pour autant être confondu avec le point $A$ !).
 
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap;">
-
-  <img src="../../image/nomDerive_courbe3.png" style="width: 100%;">
-
-  <img src="../../image/nomDerive_courbe4.png" style="width: 100%;">
-
+<div style="text-align: center;">
+  <img src="../../image/maths/NombreDerivee_limite_taux1.png" style="width: 49%;" margin-right="5%">
+  <img src="../../image/maths/NombreDerivee_limite_taux2.png" style="width: 49%;">
 </div>
+
+
 
 L'ensemble de ces droites $(AM)$ forme un faisceau de droites.  
 On peut donc voir le nombre $f'(a)$ comme le coefficient directeur de la « position limite » de ce faisceau de droites des sécantes $(AM)$ lorsque le point $M$ se rapproche de $A$.  
 Cette droite « limite » a un seul point de contact (dans un voisinage proche de $A$) avec $\mathcal{C}_f$, et tend donc à être la tangente en $A$ à $\mathcal{C}_f$.
+:::
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
@@ -32,7 +33,9 @@ Soit $f$ une fonction dérivable en $a$.
 $f'(a)$ est le coefficient directeur de la tangente au point d'abscisse $a$.
 :::
 
-![](../../image/nomDerive5.png){style="display:block;margin:0 auto;width:60%;"}
+<div style="text-align: center;">
+![](../../image/maths/NombreDerivee_coef_directeur.png){width=45%}
+</div>
 
 ::: {.bloc .ex}
 **Déterminer graphiquement un nombre dérivé**  
@@ -42,7 +45,9 @@ On sait que :
 - la tangente au point $A(-1, 5)$ à la courbe $\mathcal{C}_f$ est parallèle à l'axe des abscisses ;
 - la tangente au point $B(2, 1)$ à la courbe $\mathcal{C}_f$ coupe l'axe des abscisses au point de coordonnées $(3, 0)$.
 
-![](../../image/nomDerive_courbe6.png){style="display:block;margin:0 auto;width:40%;"}
+<div style="text-align: center;">
+![](../../image/maths/NombreDerivee_derivee_exo1.png){width=45%}
+</div>
 
 Déterminons $f'(-1)$ et $f'(2)$.
 

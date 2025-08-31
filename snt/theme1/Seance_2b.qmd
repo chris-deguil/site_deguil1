@@ -34,7 +34,7 @@ ___
 La correspondance entre cette adresse symbolique et l’adresse IP est assurée par un annuaire appelé *Domain Name Service (DNS)*.  
 Cet annuaire est organisé en domaines et sous-domaines, chacun correspondant à des ensembles et des sous‑ensembles d’adresses gérées en commun.
 
-![](../../image/AnnuaireDNS1.png)
+![](../../image/snt/AnnuaireDNS1.png)
 <!-- description:  ; catégorie:  -->
 </div>
 :::
@@ -68,7 +68,7 @@ Cet annuaire est organisé en domaines et sous-domaines, chacun correspondant à
 | H      | Échange avec 185.75.143.24 qui héberge la ressource           |
 | I      | Dis, tu connais les .fr ?                                     |
 
-![](../../image/CommunicationDNS2_1.png){style="display:block;margin:0 auto;width:60%;"}
+![](../../image/snt/CommunicationDNS2_1.png){style="display:block;margin:0 auto;width:60%;"}
 <!-- description:  ; catégorie:  -->
 
 5. Pourquoi la résolution d’une adresse IP nécessite‑t‑elle une collaboration entre plusieurs serveurs DNS ?  

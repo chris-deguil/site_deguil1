@@ -44,7 +44,7 @@ Ce protocole contrôle la façon dont le client formule ses demandes et la faço
 
 📘
 
-![](../../image/RequeteBase.png "tema : Comment circule un message ?")
+![](../../image/snt/RequeteBase.png "tema : Comment circule un message ?")
 <!-- description:  ; catégorie:  -->
 
 1. 📊 Compléter le schéma avec les bon numéros.

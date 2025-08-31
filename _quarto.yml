@@ -27,7 +27,7 @@ website:
 
   sidebar:
     - title: "SNT"
-      logo: image/logoSNT.png   
+      logo: image/logo/logoSNT.png   
       style: docked
       collapse-level: 1
       contents:
@@ -61,13 +61,14 @@ website:
 
 
     - title: "Première Spécialité Maths"
-      logo: image/logo_maths2.png   # ← chemin vers ton logo
+      logo: image/logo/logo_maths2.png   # ← chemin vers ton logo
       style: docked
       collapse-level: 1
       contents:
         - premiere-maths/index.qmd
         - section: "Fonctions du second degré"
           contents:
+            - premiere-maths/fonction2nD/index.qmd
             - premiere-maths/fonction2nD/definition.qmd
             - premiere-maths/fonction2nD/racine.qmd
             - premiere-maths/fonction2nD/signe.qmd
@@ -107,8 +108,34 @@ website:
             - premiere-maths/trigonometrie/cosinus_sinus.qmd
             - premiere-maths/trigonometrie/lignes_trigo.qmd
             - premiere-maths/trigonometrie/fct_trigo.qmd
-            - premiere-maths/trigonometrie/equation.qmd       
-  
+            - premiere-maths/trigonometrie/equation.qmd 
+
+        - section: "Opérations sur les dérivées - Applications"
+          contents:
+            - premiere-maths/Operation_Derivee/operations.qmd
+            - premiere-maths/Operation_Derivee/composition.qmd
+            - premiere-maths/Operation_Derivee/applications.qmd 
+            - premiere-maths/Operation_Derivee/extrema.qmd 
+
+    - title: "Terminale Spécialité Maths"
+      logo: image/logo/logo_maths2.png   # ← chemin vers ton logo
+      style: docked
+      collapse-level: 1
+      contents:
+        - terminale-maths/index.qmd
+        - section: "Logique et différents types de raisonnements"
+          contents:
+            - terminale-maths/logique/index.qmd
+        - section: "Récurrence - Application à l'étude des suites"
+          contents:
+            - terminale-maths/suite1/index.qmd   
+        - section: "Généralité sur les fonctions"
+          contents:
+            - terminale-maths/fct1/index.qmd
+        - section: "Espace : Plan, droites (Section - Intersection), Equation paramétriques"
+          contents:
+            - terminale-maths/espace1/index.qmd
+      
 format:
   html:
     include-in-header:

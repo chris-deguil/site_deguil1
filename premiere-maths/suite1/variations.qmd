@@ -118,8 +118,9 @@ La réciproque est fausse.
 Par exemple,  $u_n = n + \cos(2\pi n)$ est croissante mais $f(x) = x + \cos(2\pi x)$ ne l’est pas.  
 
 <div style="text-align: center;">
-![](../../image/suite_courbe3.png){width=50%}
+![](../../image/maths/Suite_numerique_suite_cos){width=40%}
 </div>
+
 :::
 
 ### Étude du quotient

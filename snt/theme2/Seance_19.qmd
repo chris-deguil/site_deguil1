@@ -136,6 +136,6 @@ Le ________ permet cependant de demander la suppression ou le ________ d’infor
 
 
 
-![](../../image/schema_bilan1.png){style="display:block;margin:0 auto;width:60%;"}
+![](../../image/snt/schema_bilan1.png){style="display:block;margin:0 auto;width:60%;"}
 
 

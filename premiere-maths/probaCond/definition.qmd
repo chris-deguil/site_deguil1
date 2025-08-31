@@ -10,10 +10,13 @@ order: 1
 
 
 ## Notion de probabilité conditionnelle
+::: {.bloc .rem}
+
 La notion de probabilité conditionnelle intervient quand pendant le déroulement d'une expérience aléatoire, une information est fournie modifiant ainsi la probabilité d'un évènement.% (La probabilité cherchée ne dépend pas que de l'univers de départ)
 
 On considère une expérience aléatoire dont l'univers associé est $\Omega$ que l'on muni de la loi de probabilité $p$
-  
+:::
+
 ::: {.bloc .def}
 <span class="bloc-titre">Définition :</span>  
 Soit $A$ et $B$ deux évènements d'un même univers $\Omega$ tel que $p(A)\ne 0$.  
@@ -79,6 +82,8 @@ $$ p\left(A \cap V \right) = p_A(V) \times p(A) =  0,9 \times 0,7 = 0,63 $$
 :::
 
 ## Représentation avec un tableau
+::: {.bloc .rem}
+
 On peut donner les résultats sous la forme d'un tableau à double entrée.  
 Il en existe de plusieurs types, pour cela il faut être attentif à la lecture et compréhension du tableau.
 
@@ -95,11 +100,16 @@ Dans ce tableau les nombres (ou les proportions indiquées), sont donnée par ra
 Ainsi $$ P_F(R)=\frac{P(R \cap F)}{P(F)} = \frac{18}{19} \quad \text{et} \quad P_R(F) = \frac{P(R \cap F)}{P(R)} = \frac{18}{31} $$
 On peut donner directement toutes les probabilités conditionnelles que l'on souhaite.  
 Notre partition de l'univers est dans un cas $\{F\, ;\,G\}$ et dans l'autre cas $\{R \, ;\, \bar{R}\}$
+:::
 
 ## Représentation graphique : Arbre pondéré
-\noindent Une expérience aléatoire peut être schématisée par un arbre pondéré dont chaque branche est affectée d'un poids qui est une probabilité.
+::: {.bloc .rem}
+ Une expérience aléatoire peut être schématisée par un arbre pondéré dont chaque branche est affectée d'un poids qui est une probabilité.
 
-![](../../image/proba_graphe1.png){style="display:block;margin:0 auto;width:50%;"}
+<div style="text-align: center;">
+![](../../image/maths/ProbaConditionelle_arbre1.png){width=40%}
+</div>
+
 
 - La racine de l'arbre est l'univers $\Omega$
 - Les évènements qui se trouvent aux extrémités des branches issues d'un même noeud forment une partition de l'évènement situé à ce noeud.
@@ -109,8 +119,9 @@ Notre partition de l'univers est dans un cas $\{F\, ;\,G\}$ et dans l'autre cas 
 Par exemple, le chemin dont l'extrémité est $R$ représente l'évènement $A \cap R$.
 - Le poids d'une branche primaire est la probabilité de l'évènement qui se trouve à son extrémité.
 - Le poids d'une branche secondaire est la probabilité conditionnelle de l'évènement qui se trouve à son extrémité sachant que l'évènement qui se trouve à son origine est réalisé.
+:::
 
-  
+
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 Considérons le cas d'une maladie et d'un test censé déterminer si un individu a cette maladie ou pas.  
@@ -124,8 +135,9 @@ Supposons qu'un individu ait 1 chance sur 10 d'être malade  et que le test soit
 
 2. Construire l'arbre de probabilité associé à la situation  
    <details class="bloc cor"><summary>Afficher la correction</summary>
-![](../../image/proba_graphe2.png){style="display:block;margin:0 auto;width:50%;"}
-   </details>
+<div style="text-align: center;">
+![](../../image/maths/ProbaConditionelle_arbre2.png){width=40%}
+</div>   </details>
 
 3. Calculer $P(T\cap\overline{M})$  
    <details class="bloc cor"><summary>Afficher la correction</summary>

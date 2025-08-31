@@ -65,5 +65,5 @@ Utilise la barre latérale pour naviguer par thèmes et activités.
 
 
 
-![](../../image/exercice_fct2D_courbe1.png){style="display:block;margin:0 auto;width:60%;"}
+![](../../image/snt/exercice_fct2D_courbe1.png){style="display:block;margin:0 auto;width:60%;"}
 <iframe src="https://www.youtube.com/embed/YYoPSUiPT90" title="Prix 2020 — Prix spécial cyberharcèlement" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>-->

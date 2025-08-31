@@ -35,16 +35,16 @@ order: 4
 
 Charles Oyster écrit une lettre à son amie Carla Lobster. À l’aide des quatre documents proposés ci-dessous, répondez aux questions suivantes :
 
-![](../../image/lettres.png){fig-align="center" width=50%}
+![](../../image/snt/lettres.png){fig-align="center" width=50%}
 <!-- description:  ; catégorie:  -->
 
-![](../../image/centre_tri.png){fig-align="center" width=50%}
+![](../../image/snt/centre_tri.png){fig-align="center" width=50%}
 <!-- description:  ; catégorie:  -->
 
-![](../../image/transport.png){fig-align="center" width=50%}
+![](../../image/snt/transport.png){fig-align="center" width=50%}
 <!-- description:  ; catégorie:  -->
 
-![](../../image/deviation.png){fig-align="center" width=50%}
+![](../../image/snt/deviation.png){fig-align="center" width=50%}
 <!-- description:  ; catégorie:  -->
 
 1. Quels sont les éléments qui sont précisés sur l'enveloppe de la lettre ?  
@@ -74,7 +74,7 @@ L’envoi est répété pour des fins statistiques : déterminer le taux de paqu
 
 Cette commande permet d’envoyer plusieurs paquets à un hôte distant ; cela permet de simuler l’envoi d’une donnée en plusieurs morceaux.
 
-![](../../image/ping1.png){fig-align="center" width=80%}
+![](../../image/snt/ping1.png){fig-align="center" width=80%}
 <!-- description:  ; catégorie:  -->
 
 1.  Comprendre un ping

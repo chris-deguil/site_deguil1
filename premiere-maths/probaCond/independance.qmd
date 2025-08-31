@@ -132,7 +132,7 @@ Dans l'urne ci-dessous, il y a des jetons numérotés de différentes couleurs.
 - 2 jetons verts : 1 et 3  
 - 3 jetons rouges : deux numérotés 1 et un numéroté 2  
 
-![](../../image/urne_dst.png){style="display:block;margin:0 auto;width:40%;"}
+![](../../image/maths/urne_dst.png){style="display:block;margin:0 auto;width:40%;"}
 
 On tire au hasard un jeton dans cette urne.  
 On considère les évènements suivants :  
@@ -202,9 +202,9 @@ Une urne contient deux boules vertes et une boule rouge, indiscernables au touch
 
 1. Représenter la situation à l'aide d'un arbre pour deux tirages.  
 
-   <details class="bloc cor"><summary>Afficher la correction</summary>
-![](../../image/proba_graphe6.png){style="display:block;margin:0 auto;width:50%;"}
-   </details>
+<div style="text-align: center;">
+![](../../image/maths/ProbaConditionelle_arbre4.png){width=40%}
+</div>
 
 2. Déterminer la probabilité de l'événement $A$ « avoir exactement une boule rouge ».  
 
@@ -236,7 +236,6 @@ Une urne contient deux boules vertes et une boule rouge, indiscernables au touch
    $$P(R_{=1}) = n \, P(R) \, P(V)^{n-1} = n \times \frac{1}{3} \times \left(\frac{2}{3}\right)^{n-1} = \frac{n \cdot 2^{n-1}}{3^n}$$
    </details>
 :::
-
 
 
 <div class="nav-pages">

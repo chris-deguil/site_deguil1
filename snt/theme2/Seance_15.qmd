@@ -61,7 +61,7 @@ C, le message n'arrive pas à destination. »
 :::
 
 ::: {.column width="35%"}
-![](../../image/durkheim.png){style="display:block;margin:0 auto;width:70%;"}
+![](../../image/snt/durkheim.png){style="display:block;margin:0 auto;width:70%;"}
 :::
 :::
 
@@ -84,7 +84,7 @@ On demanderait, à chaque personne, de transmettre le message à l'ami ou la con
 :::
 
 ::: {.column width="35%"}
-![](../../image/milgram.png){style="display:block;margin:0 auto;width:60%;"}
+![](../../image/snt/milgram.png){style="display:block;margin:0 auto;width:60%;"}
 :::
 :::
 
@@ -97,15 +97,15 @@ En fonction du nombre d'intermédiaires que cela a nécessité, les graphiques c
    
 ::: {.columns}
 ::: {.column width="33%"}
-![](../../image/milgram1.png){width="100%"}
+![](../../image/snt/milgram1.png){width="100%"}
 :::
 
 ::: {.column width="33%"}
-![](../../image/milgram2.png){width="100%"}
+![](../../image/snt/milgram2.png){width="100%"}
 :::
 
 ::: {.column width="33%"}
-![](../../image/milgramFacebook.png){width="100%"}
+![](../../image/snt/milgramFacebook.png){width="100%"}
 :::
 :::
 1. 
@@ -131,7 +131,7 @@ Avec l'avènement du Web 2.0 (web participatif) , émergent des blogueurs dits "
 d' influenceur  est utilisé.
 
 
-![](../../image/influenceur.png){style="display:block;margin:0 auto;width:40%;"}
+![](../../image/snt/influenceur.png){style="display:block;margin:0 auto;width:40%;"}
 
 
 7. Qu'est-ce qu'un influenceur et quelle est sa position privilégiée dans un graphe ?<br>

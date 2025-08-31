@@ -15,11 +15,14 @@ order: 3
 Soit $t$ un nombre réel, et $M$ le point du cercle trigonométrique associé à $t$. <br>
 On appelle cosinus de $t$ et sinus de $t$ les coordonnées de $M$ dans le repère \Oij.<br>
 On note $M(\cos t \, ; \, \sin t)$.
+
 :::
 
+
 <div style="text-align:center;">
-  <img src="../../image/cosinus_sinus.png" alt="" />
+  <img src="../../image/maths/Trigonometrie_def_cos_sin.png" alt="" width="30%"/>
 </div>
+
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span><br>
@@ -35,10 +38,12 @@ et
 $$
 \sin t = DC = \frac{DC}{1} = \frac{DC}{OC} = \frac{AB}{OB}.
 $$
+
 :::
 
+
 <div style="text-align:center;">
-  <img src="../../image/definir_cosinus.png" alt="" />
+  <img src="../../image/maths/Trigonometrie_def_cos.png" alt="" width="30%"/>
 </div>
 
 
@@ -48,7 +53,9 @@ On appelle tangente de $t$, $t\neq \frac{\pi}{2}~ [\pi]$, le rapport du sinus et
 $$
 \tan t = \frac{\sin t}{\cos t}.
 $$
+
 :::
+
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span><br>
@@ -64,10 +71,11 @@ Donc
 $$
 IA = MM' \times \frac{OI}{OM'} = \sin t \times \frac{1}{\cos t} = \tan t.
 $$
+
 :::
 
 <div style="text-align:center;">
-  <img src="../../image/tangente.png" alt="" />
+  <img src="../../image/maths/Trigonometrie_def_tan.png" alt="" width="30%"/>
 </div>
 
 ### Valeurs remarquables
@@ -119,6 +127,7 @@ $$
 -1 \leq \cos  \alpha \leq 1, \qquad 
 -1 \leq \sin\alpha \leq 1.
 $$
+
 :::
 
 <details class="bloc demo"><summary>Démonstration : </summary>
@@ -129,8 +138,8 @@ Immédiat.
 <span class="bloc-titre">Exemple : </span><br>
 On donne $\cos  \frac{\pi}{5} =  \frac{\sqrt{5} + 1}{4}$. Déterminer $\sin \frac{\pi}{5}$.
 <details class="bloc cor"><summary>Afficher la correction : </summary>
-$$
-\begin{aligned}
+
+$$\begin{aligned}
 \cos^2  \frac{\pi}{5}+\sin^2 \frac{\pi}{5}=1 
 &\Longleftrightarrow \sin^2 \frac{\pi}{5}=1-\cos^2 \frac{\pi}{5} \\
 &\Longleftrightarrow \sin^2 \frac{\pi}{5}=1-\left( \frac{\sqrt{5} + 1}{4}\right)^2\\
@@ -146,5 +155,10 @@ $$
 \sin \frac{\pi}{5} =  \frac{\sqrt{10-2\sqrt{5}}}{4}.
 $$
 </details>
+
 :::
 
+<div class="nav-pages">
+  <a class="prev" href="enroulement.html">⬅️</a>
+  <a class="next" href="fct_trigo.html">➡️</a>
+</div>

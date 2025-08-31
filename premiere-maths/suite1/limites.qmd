@@ -19,7 +19,7 @@ On dit alors que la suite $(u_n)$ converge vers $l$.
 ## Interprétation graphique
 
 <div style="text-align: center;">
-![](../../image/suite_limite1.png){width=70%}
+![](../../image/maths/Suite_numerique_suite_convergence.png){width=55%}
 </div>
 
 ::: {.bloc .ex}

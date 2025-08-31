@@ -36,7 +36,7 @@ order: 8
     b.  \'A partir du navigateur, se rendre sur <https://www.wikipedia.org>
    c. arrêter l'enregistrement.
    d. Chercher une ligne comme
-![](../../image/wireshar_wipedia_https.png)
+![](../../image/snt/wireshar_wipedia_https.png)
 
 1. Quelle différence voyez-vous dans l’URL par rapport à une page en HTTP ?
 2. Quel port est utilisé pour HTTPS ? (Comparer avec HTTP)
@@ -60,7 +60,7 @@ Ce certificat est daté, et possède une durée de validation et est attribué �
 
 📘 **Document :**
 
-![](../../image/ssl1.png){style="display:block;margin:0 auto;width:40%;"}
+![](../../image/snt/ssl1.png){style="display:block;margin:0 auto;width:40%;"}
 <!-- description:  ; catégorie:  -->
 
 ::: {.boitedoc}
@@ -77,7 +77,7 @@ L’hameçonnage  est une technique utilisée par des fraudeurs pour obtenir des
 
 📘 **Document : Attaque de l'homme du milieu**
 
-![](../../image/requeteHTTPs.png){style="display:block;margin:0 auto"}
+![](../../image/snt/requeteHTTPs.png){style="display:block;margin:0 auto"}
 <!-- description:  ; catégorie:  -->
 
 6. 🔎 Que signifie HTTPS  et quel est son intérêt ?
@@ -88,7 +88,7 @@ L’hameçonnage  est une technique utilisée par des fraudeurs pour obtenir des
 6. \logoBinome Compléter le schéma suivant avec :
 *Envoi du certificat SSl - Communication en https - Déchiffrage et validation du certificat SSl - Requêtes https - Autorité de certification*
 
-![](../../image/https_connexion_Acomplete.png){style="display:block;margin:0 auto;"}
+![](../../image/snt/https_connexion_Acomplete.png){style="display:block;margin:0 auto;"}
 <!-- description:  ; catégorie:  -->
 
 *Remarque :*<br>

@@ -44,10 +44,10 @@ En 2003, les États-Unis justifient leur intervention militaire en Irak par la p
 
 :::: {.columns}
 ::: {.column}
-![](../../image/irak1.png){style="display:block;margin:0 auto;max-width:13cm;width:100%"}
+![](../../image/snt/irak1.png){style="display:block;margin:0 auto;max-width:13cm;width:100%"}
 :::
 ::: {.column}
-![](../../image/irak2.png){style="display:block;margin:0 auto;max-width:15cm;width:100%"}
+![](../../image/snt/irak2.png){style="display:block;margin:0 auto;max-width:15cm;width:100%"}
 :::
 ::::
 ::: {.boitedoc}

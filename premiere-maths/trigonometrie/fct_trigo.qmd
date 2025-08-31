@@ -26,7 +26,7 @@ $$
 
 **Courbe de la fonction $\cos$**<br>
 <div style="text-align:center;">
-  <img src="../../image/fct_cos.png" alt="" width=70%/>
+  <img src="../../image/maths/Trigonometrie_fig_cos.png" alt="" width=70%/>
 </div>
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème : </span><br>
@@ -43,12 +43,12 @@ Le sens de variation de la fonction sur $[0~;~\pi]$ provient de la définition m
 
 **Tableau des variations de la fonction cosinus**<br>
 <div style="text-align:center;">
-  <img src="../../image/var_cos.png" alt="" width=50%/>
+  <img src="../../image/maths/Trigonometrie_var_cos.png" alt="" width=50%/>
 </div>
 
 **Courbe de la fonction $\sin$**<br>
 <div style="text-align:center;">
-  <img src="../../image/fct_sin.png" alt="" width=70%/>
+  <img src="../../image/maths/Trigonometrie_courbe_sin.png" alt="" width=70%/>
 </div>
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème : </span><br>
@@ -66,7 +66,7 @@ Le sens de variation de la fonction sur $[0~;~\pi]$ provient de la définition m
 
 **Tableau des variations de la fonction sinus**<br>
 <div style="text-align:center;">
-  <img src="../../image/var_sinus.png" alt="" width=50%/>
+  <img src="../../image/maths/Trigonometrie_var_sin.png" alt="" width=50%/>
 </div>
 
 ::: {.bloc .ex}
@@ -102,7 +102,7 @@ f: & \mathbb{R}&\rightarrow & \mathbb{R}\\
 \end{array} 
 $$
 <div style="text-align:center;">
-  <img src="../../image/inf_param1.png" alt="" width=50%/>
+  <img src="../../image/maths/Trigonometrie_influence_courbe1.png" alt="" width=50%/>
 </div>
 
 $\bullet$ Testons l'influence du paramètre $A$ en traçant la courbe représentative de la fonction :
@@ -114,7 +114,7 @@ g: & \mathbb{R}&\rightarrow & \mathbb{R}\\
 $$
 
 <div style="text-align:center;">
-  <img src="../../image/inf_param2.png" alt="" width=50%/>
+  <img src="../../image/maths/Trigonometrie_influence_courbe2.png" alt="" width=50%/>
 </div>
 On remarque que les valeurs minimales et maximales de la fonction ont été impactées. La période, par contre, ne subit aucun changement. Le coefficient $A$ représente \textbf{l'amplitude} de la fonction.
 
@@ -127,7 +127,7 @@ g: & \mathbb{R}&\rightarrow & \mathbb{R}\\
 $$
 
 <div style="text-align:center;">
-  <img src="../../image/inf_param3.png" alt="" width=50%/>
+  <img src="../../image/maths/Trigonometrie_influence_courbe3.png" alt="" width=50%/>
 </div>
 
 On remarque que les valeurs minimales et maximales de la fonction n'ont pas été impactées. Par contre, la fréquence (et donc la période) a été modifiée. Le coefficient $\omega$ représente la \textbf{pulsation} (exprimée en radians par seconde, rad/s). Elle est proportionnelle à la fréquence : $\omega = 2 \pi f$. En connaissant la formule $f=\dfrac{1}{T}$, on a aussi la relation $\omega = \dfrac{2 \pi}{T}$.
@@ -141,7 +141,7 @@ g: & \mathbb{R}&\rightarrow & \mathbb{R}\\
 $$
 
 <div style="text-align:center;">
-  <img src="../../image/inf_param4.png" alt="" width=50%/>
+  <img src="../../image/maths/Trigonometrie_influence_courbe4.png" alt="" width=50%/>
 </div>
 
 On remarque que la courbe s'est \og décalée \fg{} de $\dfrac{\pi}{2}$ vers la gauche. Le coefficient $\varphi$ représente la \textbf{phase à l'origine} (exprimée en radians, rad). Elle peut également se noter $\Phi$ (phi majuscule), $\psi$ (psi minuscule) ou $\Psi$ (psi majuscule).
@@ -151,7 +151,7 @@ On remarque que la courbe s'est \og décalée \fg{} de $\dfrac{\pi}{2}$ vers la 
 Soit $f$ une fonction dont la courbe est donnée sur le graphique ci-dessous. <br>
 
 <div style="text-align:center;">
-  <img src="../../image/inf_param_exo.png" alt="" width=70%/>
+  <img src="../../image/maths/Trigonometrie_influence_courbe5.png" alt="" width=70%/>
 </div>
 
 Cette courbe est de la forme $t \mapsto A\sin\left(\omega t + \varphi\right)$. L'objectif est de déterminer les valeurs des trois paramètres $A$, $\omega$ et $\varphi$.<br>
@@ -161,3 +161,9 @@ On représente la fonction $\sin t$ (ici en rouge sur le graphique).
 - On remarque que, sur une période de la fonction $\sin t$, il y a 3 périodes de la fonction $f$. Donc $\omega = 3$.<br>
 - On voit que la courbe en bleu est décalé de la courbe en rouge d'environ $\dfrac{3\pi}{2}$. La phase a l'origine $\varphi$ est donc égale à $\dfrac{3\pi}{2}$
 :::
+
+
+<div class="nav-pages">
+  <a class="prev" href="cosinus_sinus.html">⬅️</a>
+  <a class="next" href="lignes_trigo.html">➡️</a>
+</div>

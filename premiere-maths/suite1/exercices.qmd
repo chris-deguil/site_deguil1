@@ -231,8 +231,10 @@ $$
 <span class="exo-num"></span>
 
 Sur un cercle, on place $n$ points distincts et on s'intéresse au nombre $p_n$ de cordes que l'on peut tracer.
+<div style="text-align: center;">
+![](../../image/maths/cercle_corde.png){width=55%}
+</div>
 
-![](../../image/exercice_suite_corde.png)
 
 1. Déterminer $p_3$, $p_4$ et $p_5$.  
 2. $n$ points sont placés et les $p_n$ cordes sont tracées. On ajoute un nouveau point distinct des précédents.  
@@ -377,9 +379,8 @@ Soit $(u_n)$ une suite à termes strictement positifs.
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
+<span class="exo-num"></span><span class="exo-extra">(Extrait devoir)  </span>
 
-(Extrait Devoir)
 
 1. On considère les suites  $(u_n)$, $(v_n)$ définies pour tout $n \in \N$ par  
 $$u_n = 2n^2+4n-2 \quad ; \quad v_n = -\frac{3^n}{2} \quad ; \quad w_n= n- \frac{1}n$$
@@ -387,7 +388,7 @@ $$u_n = 2n^2+4n-2 \quad ; \quad v_n = -\frac{3^n}{2} \quad ; \quad w_n= n- \frac
     - Calculer le 3\up{ème} terme de la suite $(u_n)$.
     - Étudier les variations des suites $(u_n)$, $(v_n)$  et $(w_n)$ par étude de la différence.
 
-2. On considère la suite $(t_n)$ définie par  
+1. On considère la suite $(t_n)$ définie par  
 $$t_n=\frac{-2^n}{n-4}$$
 
     - À partir de quel rang la suite est-elle définie ?
@@ -460,14 +461,16 @@ $$f(x)= \sqrt{4x+12}$$
    Soit la suite $(u_n)$ définie par $u_0 =-1$ et pour tout $n \in \N$,
 $$u_{n+1}= f(u_n)$$
 
-![](../../image/exercice_suite_courbe1.png){style="display:block;margin:0 auto;width:40%;"}
+<div style="text-align: center;">
+![](../../image/maths/Suite_numerique_f15_construction1.png){width=55%}
+</div>
 
 
 
    a. Construire, sur le graphique fourni, les cinq premiers termes de la suite $(u_n)$  
    b. Conjecturer le sens de variation de la suite $(u_n)$
 
-3. On admet que pour tout entier $n$,  
+1. On admet que pour tout entier $n$,  
 $$-1 \leqslant u_n \leqslant 6$$  
 En utilisant la question 1., démontrer que la suite $(u_n)$ est croissante.
 :::
@@ -482,8 +485,9 @@ $v_{n+1}= f(v_n)$, où $f$ est une fonction représentée graphiquement.
 
 1. Construire graphiquement les cinq premiers termes de la suite  
 
-![](../../image/exercice_suite_courbe2.png){style="display:block;margin:0 auto;width:40%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Suite_numerique_f15_construction.png){width=55%}
+</div>
 1. Conjecturer les variations de la suite $(v_n)$ ainsi que sa limite éventuelle  
 2. Existe-t-il des valeurs de $v_0$ pour lesquels la suite ne semble pas converger ? Préciser.
 :::
@@ -645,8 +649,9 @@ $$S_n= \sum_{k=0}^n \frac{1}{k(k+1)}$$
 Soit un polygone à $n$ côtés inscrit dans le cercle trigonométrique comme dans la figure ci-dessous ($n=8$, il s'agit d'un octogone).  
 On note $\mathcal{A}_n$ l'aire de ce polygone.
 
-![](../../image/exercice_suite_polygone.png){style="display:block;margin:0 auto;width:40%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Suite_numerique_f17_aire_polygone.png){width=55%}
+</div>
 1. Dans le cas de l'octogone, quelle est la mesure de l'angle $\alpha=\widehat{IOM}$ ?  
 2. Dans le cas général d'un polygone régulier à $n\geq3$ côtés on pose $\alpha_n=\dfrac{2\pi}{n}$. Vérifier que pour $n=8$ on retrouve bien le résultat de la question précédente. Expliquer pourquoi.  
 3. Quelles sont les figures obtenues lorsque $n=3$ et $n=4$ ?  
@@ -655,8 +660,9 @@ On note $\mathcal{A}_n$ l'aire de ce polygone.
 6. On pose sur $[0\,;\, \pi]$ la fonction $f$ définie par $f(x)=\pi\dfrac{\sin(x)}{x}$. Quel est le lien entre $\mathcal{A}_n$ et $f$ ?
 
 
-![](../../image/exercice_suite_polygone2.png){style="display:block;margin:0 auto;width:40%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Suite_numerique_f17_polygone_suite.png){width=55%}
+</div>
 
 
 1. À l'aide de la courbe de $f$ ci-dessus, dresser le tableau de variation de $f$ sur $[0\,;\, \pi]$.  
@@ -795,9 +801,10 @@ $$
    b. Construire les 5 premiers termes de la suite $(u_n)$.  
    c. Conjecturer les variations et la limite de la suite $(u_n)$.
 
-![](../../image/exercice_suite_courbe3.png){style="display:block;margin:0 auto;width:40%;"}
-
-2.  
+<div style="text-align: center;">
+![](../../image/maths/Suite_numerique_f18_construction3.png){width=55%}
+</div>
+1.  
    a. Calculer les cinq premiers termes de la suite.  
    b. Conjecturer la forme générale de $u_n$.  
    c. Comment peut-on vérifier la cohérence la cohérence de la conjecture à l'aide de la calculatrice ?  

@@ -18,8 +18,8 @@ order: 4
 
 On lance un dé truqué dont les faces sont numérotées de 1 à 6. La loi de probabilité est donnée par le tableau suivant :
 
-| face        | 1                     | 2   | 3             | 4             | 5           | 6             |
-|-------------|-----------------------|-----|---------------|---------------|-------------|---------------|
+| face        | 1      | 2      | 3             | 4             | 5           | 6             |
+|-------------|--------|--------|--------|--------|--------|--------|
 | probabilité | $\LH{\frac{1}{12} }$ | $a$ | $\frac{1}{4}$ | $\frac{1}{12}$ | $\frac{1}{3}$ | $\frac{1}{12}$ |
 
 1. Déterminer la valeur de $a$.
@@ -272,10 +272,14 @@ Les affirmations suivantes sont-elles vraies ou fausses ? Justifier votre répon
 
 Soient $A$ et $B$ deux événements.
 
-![](../../image/proba_graphe7.png){style="display:block;margin:0 auto;width:70%;"}
+<div style="text-align:center;"> 
+  <img src="../../image/maths/Exercice_Probabilite_f26_exo_arbre1.png" width="30%" hspace="10%">
+  <img src="../../image/maths/Exercice_Probabilite_f26_exo_arbre2.png" width="30%">
+</div>
 
 
 Dans chacun des cas ci-dessus :
+
 1. Reproduire et compléter l'arbre ci-dessus.
 2. Calculer $P(A\cap B)$.
 3. En déduire $P(B)$.
@@ -312,7 +316,10 @@ On choisit un dossier au hasard et on note:
 
 Une situation est modélisée par l'arbre ci-dessous. $A$ et $B$ désignant deux événements. En utilisant l'arbre de gauche, compléter l'arbre de droite:
 
-![](../../image/proba_graphe8.png){style="display:block;margin:0 auto;width:70%;"}
+<div style="text-align:center;"> 
+  <img src="../../image/maths/Exercice_Probabilite_f26_exo_arbre3.png" width="30%" hspace="10%">
+  <img src="../../image/maths/Exercice_Probabilite_f26_exo_arbre4.png" width="30%">
+</div>
 
 :::
 
@@ -401,8 +408,10 @@ Dans chacun des cas suivants compléter l'arbre de probabilité en faisant appar
 - **Cas A :** On sait que $P(B) = 0,4575$ et $P(A \cap \bar{B}) = 0,1575$
 - **Cas B :** On sait que $P(\bar{B}) = 0,8061$ et $P(B \cap \bar{A}) = 0,1675$
 
+<div style="text-align: center;">
+![](../../image/maths/proba_graphe9.png){width=75%}
+</div>
 
-![](../../image/proba_graphe9.png){style="display:block;margin:0 auto;width:70%;"}
 
 :::
 
@@ -563,7 +572,7 @@ Quelle est la probabilité l'autre enfant soit un garçon : $\dfrac{1}{2}$ ou $\
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-![](../../image/puce.png){style="display:block;margin:0 auto;width:50%;"}
+![](../../image/maths/puce.png){style="display:block;margin:0 auto;width:50%;"}
 
 Une puce est placée en 0 sur la droite graduée ci-dessus. À chaque rebond, elle saute à droite ou à gauche de manière aléatoire. On note D et G les événements « la puce effectue un saut à droite » et « la puce effectue un saut à gauche ».
 
@@ -630,7 +639,7 @@ La méthode de Monte Carlo est une technique permettant de calculer des approxim
 
 On considère $f$ la fonction carrée et on souhaiterai connaître l'aire sous sa courbe sur l'intervalle $[0\,;\,1]$ représentée en gris ci-contre. On notera cette aire $\mathcal{A}_g$.
 
-![](../../image/monte-carlo.png){style="display:block;margin:0 auto;width:50%;"}
+![](../../image/maths/Exercice_Probabilite_f29_monte_carlo.png){style="display:block;margin:0 auto;width:30%;"}
 
 1. On place au hasard un point $M(x \,;\, y)$ dans le carré $OABC$. Exprimer en fonction en fonction de $\mathcal{A}_g$ et $\mathcal{A}_{OABC}$, l'aire du carré $OABC$, la probabilité que $M$ soit dans la zone grise.  
 2. À quels intervalles appartiennent $x$ et $y$ ?  
@@ -665,9 +674,8 @@ def approche_aire(k):
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
-
-\bilan (Extrai bac, Pondichery 2018)  
+<span class="exo-num"></span><span class="exo-num"></span><span class="exo-extra"> Extrait bac, Pondichery 2018
+ </span>
 Une entreprise conditionne du sucre blanc provenant de deux exploitations U et V en paquets de 1 kg et de différentes qualités.
 Le sucre extra fin est conditionné séparément dans des paquets portant le label \og  extra fin \fg. On admet que 3\,\% du sucre provenant de l'exploitation U est extra fin et que
 5\,\% du sucre provenant de l'exploitation V est extra fin.
@@ -675,7 +683,8 @@ Le sucre extra fin est conditionné séparément dans des paquets portant le lab
 On prélève au hasard un paquet de sucre dans la production de l'entreprise et, dans un souci
 de traçabilité, on s'intéresse à la provenance de ce paquet.
 
-On considère les évènements suivants:
+On considère les évènements suivants :
+
 - $U$ : \og  Le paquet contient du sucre provenant de l'exploitation U \fg{} ;
 - $V$ : \og Le paquet contient du sucre provenant de l'exploitation V \fg{} ;
 - $E$ : \og Le paquet porte le label "extra fin" \fg{}.
@@ -686,7 +695,7 @@ sans mélanger les sucres des deux exploitations.
    a. Quelle est la probabilité que le paquet prélevé porte le label \og extra fin \fg{} ?  
    b. Sachant qu'un paquet porte le label \og extra fin \fg, quelle est la probabilité que le sucre
 qu'il contient provienne de l'exploitation U ?  
-2. L'entreprise souhaite modifier son approvisionnement auprès des deux exploitations afin
+1. L'entreprise souhaite modifier son approvisionnement auprès des deux exploitations afin
 que parmi les paquets portant le label « extra fin », 30\,\% d'entre eux contiennent du sucre
 provenant de l'exploitation U.  
    Comment doit-elle s'approvisionner auprès des exploitations U et V ?  
@@ -695,9 +704,8 @@ provenant de l'exploitation U.
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
-
-\bilan (Extrait bac, Antilles  Guyanne 2015)  
+<span class="exo-num"></span><span class="exo-num"></span><span class="exo-extra"> Extrait bac, Antilles Guyanne 2015
+ </span>
 Un circuit électronique est composé de deux composants identiques numérotés 1 et 2.
 On note $D_1$ l'évènement « le composant 1 est défaillant avant un an » et on note $D_2$ l'évènement « le composant 2 est défaillant avant un an ».
 
@@ -708,7 +716,7 @@ $$
 
 Deux montages possibles sont envisagés, présentés ci-dessous :
 
-![](../../image/circuit.png){style="display:block;margin:0 auto;width:70%;"}
+![](../../image/maths/Exercice_Probabilite_f29_exo_circuit.png){style="display:block;margin:0 auto;width:70%;"}
 
 Déterminer dans chacun des cas la probabilités que le courant ne passe pas.
 
@@ -716,7 +724,8 @@ Déterminer dans chacun des cas la probabilités que le courant ne passe pas.
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
+
+
 
 \bilan Étude d’une population  
 Une agence de voyages propose trois circuits possibles au Canada l’été prochain : $C_1$, $C_2$, $C_3$.  

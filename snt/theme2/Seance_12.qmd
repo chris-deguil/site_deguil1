@@ -31,7 +31,7 @@ order: 12
 ## Temps de connexion
 📘 **Document :**
 
-![](../../image/moyenne_evolution_connexion_heure.png){style="display:block;margin:0 auto;width:25%;"}
+![](../../image/snt/moyenne_evolution_connexion_heure.png){style="display:block;margin:0 auto;width:25%;"}
 <!-- description:  ; catégorie:  -->
 
 1. Expliquer la valeur $3:47$.
@@ -46,7 +46,7 @@ order: 12
 1. Pour les réseaux sociaux \og gratuit \fg expliquer le fonctionnement de leur modèle économique.
 
 📘 **Document : ARPU (dans le monde)**
- ![](../../image/ARPU.png){style="display:block;margin:0 auto;width:70%;"}
+ ![](../../image/snt/ARPU.png){style="display:block;margin:0 auto;width:70%;"}
 <!-- description:  ; catégorie:  -->
 📘 **Document : Part de la publicité en 2024**
 

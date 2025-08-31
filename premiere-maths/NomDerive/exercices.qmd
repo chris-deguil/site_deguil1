@@ -111,8 +111,15 @@ for i in range(6):
 
 On donne ci-dessous les représentations graphiques des fonctions $f$, $g$, $h$ et $k$.  
 
-![](../../image/exercice_derivation_courbe1.png){style="display:block;margin:0 auto;width:60%;"}
+<div style="text-align:center;"> 
+ <img src="../../image/maths/Exercice_derivation_f19_derivable1.png" width="30%" hspace="10%">
+  <img src="../../image/maths/Exercice_derivation_f19_derivable2.png" width="30%">
+</div>
 
+<div style="text-align:center;"> 
+  <img src="../../image/maths/Exercice_derivation_f19_derivable3.png" width="30%" hspace="10%">
+  <img src="../../image/maths/Exercice_derivation_f19_derivable4.png" width="30%">
+</div>
 
 Pour chacune d'elles, préciser en quel(s) point(s) les fonctions associées ne sont pas dérivables.  
 
@@ -129,7 +136,9 @@ Pour chacune d'elles, préciser en quel(s) point(s) les fonctions associées ne 
 
 On considère la fonction $f$ dont on donne la représentation graphique ci-dessous, ainsi que ses tangentes au point $A$, $B$, $C$ et $D$.
 
-![](../../image/exercice_derivation_courbe2.png){style="display:block;margin:0 auto;width:30%;"}
+<div style="text-align: center;">
+![](../../image/maths/Exercice_derivation_f20_tangente1.png){width=30%}
+</div>
 
 Déterminer $f'(-2)$, $f''(2)$, $f'(1)$ et $f'(0)$.
 :::
@@ -142,10 +151,12 @@ Déterminer $f'(-2)$, $f''(2)$, $f'(1)$ et $f'(0)$.
 On donne ci-dessous les représentations graphiques de deux fonctions.  
 Lire graphiquement l'abscisse $a$ du point de tangence et la valeur $f'(a)$.
 
-![](../../image/exercice_derivation_courbe3.png){style="display:block;margin:0 auto;width:70%;"}
+<div style="text-align:center;"> 
+  <img src="../../image/maths/courbe_nbrderivee1.png" width="30%" hspace="10%">
+  <img src="../../image/maths/courbe_nbrderivee2.png" width="30%">
+</div>
 
 :::
-
 
 ## Exercice
 ::: {.bloc .exo}
@@ -186,8 +197,9 @@ On admet que pour tout réel $a$ non nul, $$f'(a)=\frac13 + \frac{5}{a^2}.$$
 <span class="exo-num"></span>
 
 On donne sur la figure ci-dessous la courbe représentative $\mathcal{C}$ d'une fonction $f$. Sont aussi tracées les droites tangentes à la courbe aux points $A$, $B$ et $C$.
-
-![](../../image/exercice_derivation_courbe4.png){style="display:block;margin:0 auto;width:40%;"}
+<div style="text-align: center;">
+![](../../image/maths/Exercice_derivation_f20_tangente2.png){width=40%}
+</div>
 
 On note $f'$ la dérivée de la fonction $f$. À partir du graphique et des renseignements fournis et en justifiant vos réponses :
 
@@ -210,8 +222,9 @@ On note $f'$ la dérivée de la fonction $f$. À partir du graphique et des rens
 On considère la fonction $f$ ; on donne ci-dessous la représentation graphique.  
 On considère $T_A$, $T_B$ et $T_C$ les tangentes à $\mathscr{C}_f$ respectivement aux points $A$, $B$ et $C$.
 
-![](../../image/exercice_derivation_courbe5.png){style="display:block;margin:0 auto;width:40%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Exercice_derivation_f20_tangente3.png){width=30%}
+</div>
 1. a. Déterminer graphiquement $f(-2)$ et $f(-1)$.  
    b. Déterminer graphiquement $f'(-2)$ et $f'(-1)$.  
    c. Déterminer, sans justifier, les équations réduites des tangentes en $C$ et $B$.  
@@ -379,7 +392,7 @@ Pour chacune des affirmations suivantes, préciser la ou les bonnes réponses.
 
 
 On considère la fonction $f$ définie par :
-$$\[
+$$
 f(x) = x^3 - x^2 + 3x + 1
 $$
 

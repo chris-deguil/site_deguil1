@@ -34,7 +34,7 @@ order: 16
 1. Quels mots vous viennent quand vous entendez cyberviolence ?
 
 
-![](../../image/Affiche_harcelement2.png){style="display:block;margin:0 auto;width:60%;"}
+![](../../image/snt/Affiche_harcelement2.png){style="display:block;margin:0 auto;width:60%;"}
 
 ___
 

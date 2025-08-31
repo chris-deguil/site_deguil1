@@ -52,7 +52,7 @@ order: 2
 
 Les documents du Web sont repérés par des adresses URL qui ont la forme suivante :  
 
-![](../../image/url2b.png){fig-align="center" width=50%}
+![](../../image/snt/url2b.png){fig-align="center" width=50%}
 
 - Le protocole indique le type de connexion ;  
 - Le nom du serveur est son adresse dans le système DNS ;  

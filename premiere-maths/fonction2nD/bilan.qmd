@@ -66,8 +66,8 @@ Soient $f(x) = 2x^2 - 5x + 3$ et $g(x) = -\left(x - \tfrac{3}{4}\right)^2 - 4$.
    On déduit de la forme canonique que cette représentation graphique admet la droite d'équation $x=\tfrac{5}{4}$ comme axe de symétrie.
 
    <div style="text-align: center;">
-   ![](../../image/SecondeDegre_variation.png){width=70%}
-   </div>
+![](../../image/maths/Second_degre_variation1.png){width=40%}
+</div> 
    </details>
 
    c. Donner le minimum de $f$
@@ -76,7 +76,7 @@ Soient $f(x) = 2x^2 - 5x + 3$ et $g(x) = -\left(x - \tfrac{3}{4}\right)^2 - 4$.
    On déduit du tableau des variations que la fonction $f$ admet un minimum en $x=\tfrac{5}{4}$ qui vaut $-\tfrac{1}{8}$.
    </details>
 
-3. La fonction $g$ admet-elle un extremum ?
+1. La fonction $g$ admet-elle un extremum ?
 
    <details class="bloc cor"><summary>Afficher la correction</summary>
    Réponse 1 :  
@@ -93,7 +93,7 @@ Soient $f(x) = 2x^2 - 5x + 3$ et $g(x) = -\left(x - \tfrac{3}{4}\right)^2 - 4$.
    Ainsi $g$ admet un maximum en $\tfrac{3}{4}$ qui vaut $g\!\left(\tfrac{3}{4}\right) = -4$.
    </details>
 
-4. Position relative des graphes de $f$ et $g$
+2. Position relative des graphes de $f$ et $g$
 
    <details class="bloc cor"><summary>Afficher la correction</summary>
    On a pour tout réel $x$,  

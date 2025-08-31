@@ -90,7 +90,7 @@ En mathématiques, et plus précisément en théorie des graphes, un graphe est 
 On donne (pour gagner du temps) le tableau des distances :
 En vous répartissant les lignes, compléter le tableau donnant la distance entre deux sommets.
 
-![](../../image/tabl_distance.png){style="display:block;margin:0 auto;width:75%;"}
+![](../../image/snt/tabl_distance.png){style="display:block;margin:0 auto;width:75%;"}
 
 
 4. Justifier la ligne de Jason

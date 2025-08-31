@@ -60,8 +60,8 @@ Soit $(u_n)$ définie par $u_n = \sqrt{n - 2{,}5}$, définie pour $n \ge 3$.
 Le premier terme est donc $u_3$.  
 
 <div style="text-align: center;">
-![](../../image/suite_courbe1.png){width=50%}
-</div>
+![](../../image/maths/Suite_numerique_courbe_suite1.png){width=40%}
+</div> 
 :::
 
 ## Suites définies par une relation de récurrence
@@ -164,8 +164,9 @@ Soit $(u_n)$ définie par $u_{n+1} = f(u_n)$.
 Construction graphique des premiers termes sur l’axe des abscisses :  
 
 <div style="text-align: center;">
-![](../../image/suite_courbe2.png){width=50%}
+![](../../image/maths/Suite_numerique_suite_courbe2.png){width=55%}
 </div>
+
 :::
 
 <div class="nav-pages">

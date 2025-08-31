@@ -56,7 +56,7 @@ Wireshark est un analyseur de paquets libre et gratuit. Il est utilisé dans le 
    b. Lancer Wireshark, et démarrer l’enregistrement en appuyant sur 🦈  
    c. Dans la barre de l’URL, taper : <http://glassus1.free.fr>, puis fermer la page.  
    d. Arrêter l’enregistrement en appuyant sur le carré rouge.  
-      ![](../../image/capture_wireshark_initiale.png)
+      ![](../../image/snt/capture_wireshark_initiale.png)
 2. Quand commence la communication (Wireshark) ?  
 3. Combien de paquets pour établir la communication ?  
 4. 🧠 Quelle information trouve-t-on dans la couche Réseau ? À quoi sert-elle ?  
@@ -71,7 +71,7 @@ On considère deux ordinateurs : la source S et la destination D ; et on ne s’
 
 5. Pourquoi n’envoie-t-on pas un fichier en un seul bloc ?  
 
-![](../../image/image_vague.png){fig-align="center" width=25%}
+![](../../image/snt/image_vague.png){fig-align="center" width=25%}
 
 6. Comment S peut-il être certain que D a bien reçu le message ? Que D a tout reçu ?  
 1. Que faire si le message se perd ? Et s’il arrive en double ?  
@@ -88,9 +88,9 @@ Les protocoles TCP et IP sont les principaux protocoles de cette suite.
 </div>
 :::
 
-![](../../image/encapsulation3.png){style="display:block;margin:0 auto;width:40%;"}
+![](../../image/snt/encapsulation3.png){style="display:block;margin:0 auto;width:40%;"}
 
-![](../../image/tcp_ip3.png){style="display:block;margin:0 auto;width:40%;"}
+![](../../image/snt/tcp_ip3.png){style="display:block;margin:0 auto;width:40%;"}
 
 1. 🔍 Que signifie TCP : ...  
    🔍 Que signifie IP : ...  

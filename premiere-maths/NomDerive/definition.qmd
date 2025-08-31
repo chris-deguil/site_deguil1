@@ -23,7 +23,10 @@ Le taux d'accroissement ou taux de variation entre $A$ et $M$ est le coefficient
 L'objet du chapitre est l'étude du comportement de la fonction $t$ lorsque $h \rightarrow 0$, c'est-à-dire lorsque $M \rightarrow A$.
 :::
 
-![](../../image/nomDerive_courbe1.png){style="display:block;margin:0 auto;width:40%;"}
+<div style="text-align: center;">
+![](../../image/maths/NombreDerivee_derviee_taux_accroissement.png){width=45%}
+</div>
+
 
 ::: {.bloc .rem}
 - **En physique :**  
@@ -92,6 +95,7 @@ On trouve comme résultat $\approx 0.47596$ (à $10^{-5}$ près).
 ---
 
 ### Des fonctions non dérivables en $a$
+::: {.bloc .rem}
 
 On peut alors être amené à calculer les limites suivantes :
 
@@ -101,6 +105,7 @@ $$
 
 On parle alors de **limite à droite** et de **limite à gauche**.  
 Si ces deux limites sont les mêmes alors la fonction est dérivable en $a$, sinon elle ne l'est pas.
+:::
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
@@ -133,8 +138,9 @@ On a donc une tangente dont le coefficient directeur est *infini*, donc en $0$, 
 Ces nombres ne sont pas égaux, donc on voit graphiquement que la fonction valeur absolue n'est pas dérivable en $0$.
 :::
 
-![](../../image/nomDerive_courbe2.png){style="display:block;margin:0 auto;width:40%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/NombreDerivee_valeur_absolue.png){width=25%}
+</div>
 
 <div class="nav-pages">
   <a class="next" href="tangente.html">➡️</a>

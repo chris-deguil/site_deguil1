@@ -527,8 +527,9 @@ $$
 Dans le plan muni d’un repère orthonormé d’unité 1 cm, on considère la représentation graphique de la fonction $f : x \longmapsto \sqrt{x}$.
 
 Soit $M$ un point d’abscisse $x$ de la représentation graphique de $f$ et $A(2\,;\, 0)$.
-
-![](../../image/exercice_fct2D_courbe1.png){style="display:block;margin:0 auto;width:40%;"}
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f5_exercice_distance1.png){width=45%}
+</div>
 
 1. Exprimer $AM$ en fonction de $x$  
 2. Dans chacun des cas suivants, déterminer la valeur de $x$ :  
@@ -554,7 +555,9 @@ Un jardin est de forme carrée. Son côté mesure 20 m. Deux allées rectilignes
 
 On note $x$ la largeur (en mètres) de chaque allée.
 
-![](../../image/exercice_croix.png){style="display:block;margin:0 auto;width:20%;"}
+<div style="text-align: center;">
+![](../../image/maths/exercice_croix.png){width=20%}
+</div>
 
 
 1. Exprimer l’aire totale des allées en fonction de $x$.  
@@ -572,8 +575,9 @@ On note $x$ la largeur (en mètres) de chaque allée.
 Un miroir peut être représenté par la figure ci-dessous. Le rectangle $ABCD$ symbolise le cadre du miroir.  
 $AEFD$ est un trapèze et constitue le miroir proprement dit.  
 Les deux triangles $ABE$ et $DFC$ sont des pièces de bois ouvragées.
-
-![](../../image/exercice_mirroir.png){style="display:block;margin:0 auto;width:20%;"}
+<div style="text-align: center;">
+![](../../image/maths/exercice_mirroir.png){width=20%}
+</div>
 
 L’unité est le centimètre. On pose $EF = x$, et on a $BE = FC$, $AB = x + 20$ et $AD = 30$.
 
@@ -589,7 +593,9 @@ L’unité est le centimètre. On pose $EF = x$, et on a $BE = FC$, $AB = x + 20
 Un terrain carré $ABCD$ a pour côté 10 m.  
 Un paysagiste souhaite planter du gazon sur deux parties de ce terrain représentées par le carré $AEFG$ et le triangle $BFC$ de telle sorte que l’aire de la partie restante soit d’au moins 30 m². On note $AE = x$.
 
-![](../../image/exercice_geometrie_triangle_carre.png){style="display:block;margin:0 auto;width:20%;"}
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f5_gazon.png){width=15%}
+</div>
 
 
 1. À quel intervalle le nombre $x$ appartient-il ?  
@@ -668,8 +674,9 @@ $$(x^2 - 7x + 11)^{x^2 - 3x + 2} = 1$$
 <span class="exo-num"></span>
 
 Sans utiliser la calculatrice, associer chaque fonction ci-dessous à la courbe qui lui correspond :
-
-![](../../image/exercice_fcd2D_parabole1.png){style="display:block;margin:0 auto;width:35%;"}
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f7_associer1.png){width=35%}
+</div>
 
 - $f(x) = x^2 - 2x - 3$  
 - $g(x) = x^2 + 2x - 3$  
@@ -685,8 +692,9 @@ Sans utiliser la calculatrice, associer chaque fonction ci-dessous à la courbe 
 Les courbes données ci-dessous sont les représentations graphiques de fonctions polynômes de degré 2 sous la forme canonique  
 $$f(x) = a(x - \alpha)^2 + \beta$$
 
-![](../../image/exercice_fcd2D_parabole1.png){style="display:block;margin:0 auto;width:35%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f7_associer2.png){width=35%}
+</div>
 
 1. Déterminer pour chacune d’elles le signe de $\alpha$, $\beta$ et $a$.  
 2. Déterminer les formes canoniques de chacune de ces fonctions.
@@ -700,8 +708,9 @@ $$f(x) = a(x - \alpha)^2 + \beta$$
 **À la pêche** 🎣  
 On souhaite attraper une carpe koi qui ne sort de sa cachette que pour manger.  
 
-![](../../image/exercice_fct2D_peche.png){style="display:block;margin:0 auto;width:25%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/trajectoire_carpe.png){width=25%}
+</div>
 
 Sa trajectoire est un arc de parabole d'équation :  
 $$y = -x^2 + 4x - 4$$  
@@ -731,8 +740,9 @@ On considère une droite $\mathscr{D}$ de coefficient directeur $m$ passant par 
 **À la piscine** 🏊‍♀️  
 Emma plonge de 2 m de haut. Sa trajectoire suit une parabole $\mathcal{P}$ ayant pour sommet $S(1\,;\,2{,}4)$.
 
-![](../../image/exercice_fct2D_plongeon.png){style="display:block;margin:0 auto;width:35%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/piscine2.png){width=35%}
+</div>
 
 1. Déterminer une équation de $\mathcal{P}$.  
 2. À quelle distance du pied du plongeoir Emma va-t-elle toucher l’eau ?  
@@ -752,8 +762,9 @@ Quentin présente un projet de rampe de skate modélisée par un arc de parabole
 - Point B à 20 cm du sol, projeté orthogonalement à 230 cm du pied de la plateforme  
 - Hauteur entre les extrémités de la plateforme : 1,50 m  
 
-![](../../image/exercice_fct2D_skate.png){style="display:block;margin:0 auto;width:35%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f7_skate1.png){width=45%}
+</div>
 
 À quelle distance du point H faut-il placer le pied de la seconde plateforme pour respecter toutes les conditions ?  
 (On utilisera des valeurs exactes.)
@@ -812,8 +823,9 @@ et on note $\mathscr{C}$ sa courbe représentative.
 
 1. On considère la fonction $f$ dont on donne le tableau de variations suivant :
 
-![](../../image/exercice_fct2D_variation1.png){style="display:block;margin:0 auto;width:50%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f8_exo_var1.png){width=60%}
+</div>
 
 La fonction $f$ peut-elle être une fonction du second degré ? Justifier la réponse.
 
@@ -893,8 +905,9 @@ avec $v = 50\,\text{m/s}$, $g = 9{,}8$ et $\theta = 80^\circ$.
 
 On considère un segment $[AB]$ de longueur $1$ mètre. Un point $M$ est sur $[AB]$, et on construit deux disques $D_1$ et $D_2$ de diamètres respectifs $[AM]$ et $[MB]$.  
 
-![](../../image/exercice_fct2D_CercleTangent.png){style="display:block;margin:0 auto;width:35%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f10_distance2.png){width=45%}
+</div>
 
 Déterminer le ou les emplacements du point $M$ tels que la **somme des aires** des disques $D_1$ et $D_2$ soit minimale.
 :::
@@ -908,8 +921,9 @@ $$y = -x^2 + 11x - 18$$
 
 Un triangle $ABM$ est dessiné avec $A(2,0)$, $B(9,0)$, et $M$ sur $\mathscr{C}$.  
 
-![](../../image/exercice_fct2D_triangle_parabole.png){style="display:block;margin:0 auto;width:35%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f10_optimisation1.png){width=45%}
+</div>
 
 Déterminer **où placer le point $M$** pour que **l’aire du triangle $ABM$ soit maximale**.
 :::
@@ -990,8 +1004,9 @@ $$f(x) = x^2-3x-1\quad \text{et} \quad g(x) = 1 +\frac{2}{x-3}$$
 dont on note $\mathcal{P}$ et $\mathcal{H}$ les représentations graphiques respectives.  
 On donne ci-dessous les représentations graphiques de ces deux fonctions.
 
-![](../../image/exercice_fct2D_bilan2.png){style="display:block;margin:0 auto;width:50%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/ExoCourbe2.png){width=45%}
+</div>
 
 1. Résolution graphique :  
    1. Déterminer graphiquement les solutions de $f(x) = 2$.  
@@ -1039,8 +1054,9 @@ Pour $x \in [0;2]$, on note $M$ le point de la courbe $\mathcal{P}$ d'abscisse $
 
 On s'intéresse au périmètre $p(x)$ du rectangle $MNPQ$.
 
-![](../../image/exercice_fct2D_bilan4.png){style="display:block;margin:0 auto;width:25%;"}
-
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_f11_optimisation2.png){width=45%}
+</div>
 
 
 1. Montrer que pour tout $x \in [0;2]$ :  

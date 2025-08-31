@@ -23,7 +23,7 @@ $$ p(B) = p(A \cap B) +  p(\overline{A} \cap B ) = p_A(B) \times p(A) + p_{\over
 <details class="bloc demo"><summary>Démonstration :</summary>
 Les évènements $A\cap B$ et  $\overline{A} \cap B $ sont incompatibles.  
 
-![](../../image/proba_graphe3.png){style="display:block;margin:0 auto;width:50%;"}
+![](../../image/maths/proba_graphe3.png){style="display:block;margin:0 auto;width:50%;"}
 
 
 Ainsi $$B = \left( A\cap B \right) \cup \left(  \overline{A} \cap B\right)$$ d'où  
@@ -103,7 +103,10 @@ $$p(B) = p\left(\left( A_1 \cap B \right) \cup \left( A_2 \cap B \right) \cup \c
 
 **Illustration sur un arbre :**  
 
-![](../../image/proba_graphe4.png){style="display:block;margin:0 auto;width:50%;"}
+<div style="text-align: center;">
+![](../../image/maths/ProbaConditionelle_arbre3.png){width=40%}
+</div>
+
 ---
 
 ::: {.bloc .ex}
@@ -137,7 +140,7 @@ C'est-à-dire $$p(G \cap A_3) =0,15$$
 
 ## Bilan 
 
-![](../../image/proba_graphe5.png){style="display:block;margin:0 auto;width:100%;"}
+![](../../image/maths/proba_graphe5.png){style="display:block;margin:0 auto;width:100%;"}
 
 
 

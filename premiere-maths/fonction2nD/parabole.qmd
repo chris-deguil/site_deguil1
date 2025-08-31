@@ -84,8 +84,8 @@ Donc la parabole a pour sommet $S(3\, ;\, 2)$.
 Dans le repère $(S \, ; \, \vec{i}, \vec{j})$, l’équation devient $y = 3x^2$.  
 
 <div style="text-align: center;">
-![](../../image/courbeSecondDegre.png){width=50%}
-</div>
+![](../../image/maths/Second_degre_courbe1.png){width=40%}
+</div> 
 :::
 
 ::: {.bloc .rem}

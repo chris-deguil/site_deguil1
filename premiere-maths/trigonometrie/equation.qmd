@@ -123,3 +123,7 @@ On admet que pour tout réel , $$\cos 4x = 8\cos^4x -8 \cos^2x +1$$
    $$\cos \alpha = \sqrt{\frac{2+\sqrt{2}}2} \quad \text{ et } \quad \cos \beta = \sqrt{\frac{2-\sqrt{2}}2}$$
    </details>
 :::
+
+<div class="nav-pages">
+  <a class="prev" href="lignes_trigo.html">⬅️</a>
+</div>

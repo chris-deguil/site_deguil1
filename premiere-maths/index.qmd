@@ -11,6 +11,7 @@ listing:
       - NomDerive/index.qmd
       - probaCond/index.qmd
       - trigonometrie/index.qmd
+      - Operation_Derivee/index.qmd
 ---
 
 

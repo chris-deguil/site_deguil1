@@ -14,6 +14,8 @@ Utilisez la barre de navigation ci-dessus pour accéder aux sections :
 
 - [SNT](snt/index.qmd)
 - [Spécialité Maths Première](premiere-maths/index.qmd)
+- [Spécialité Maths Terminale](terminale-maths/index.qmd)
+
 
 
 
