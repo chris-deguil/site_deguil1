@@ -119,8 +119,12 @@ ul.task-list li input[type="checkbox"] {
 <script>
 window.MathJax = {
   tex: {
-        packages: {'[+]': ['enclose']},   
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
     macros: {
+      // --- Constantes / ensembles ---
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
       R: "\\mathbb{R}",
@@ -130,6 +134,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
 
+      // --- Mises en forme / utilitaires ---
       rem: "\\mathbf{Remarque\\ :\\ }",
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
@@ -137,16 +142,32 @@ window.MathJax = {
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-
+            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
-      
+      np: ["\\text{#1}", 1],
+
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
-      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)"
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
 
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
+      // Usage : \llbracket x \rrbracket
+      llbracket: ["{\\left[\\!\\left[}", 0],
+      rrbracket: ["{\\right]\\!\\right]}", 0],
+
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
     }
   }
 };
@@ -182,9 +203,10 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../assets/css/maths.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed maths-theme">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -267,6 +289,48 @@ window.Quarto = {
  <span class="menu-text">Chapitre 0 : Logique et raisonnements</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/logique/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histoire de la logique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/logique/proposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proposition mathématique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/logique/quantificateurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les quantificateurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/logique/deduction_contreExemple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les différents types de raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/logique/disjonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contraposée et Disjonction des cas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/logique/absurde.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par l’absurde</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/logique/AnalyseSynthese.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par analyse - synthèse</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -281,7 +345,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../terminale-maths/suite1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+ <span class="menu-text">Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/suite1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">historique récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/suite1/principe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application à l’étude des suites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/suite1/convergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite convergente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/suite1/convergence_prop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Théorèmes de convergence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/suite1/divergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Divergence et limite par comparaison</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/suite1/operation_limite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les limites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limites des suites géomériques</span></a>
   </div>
 </li>
       </ul>
@@ -298,7 +410,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../terminale-maths/fct1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+ <span class="menu-text">Chapitre 2 : Gnéralités sur les fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/fct1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">historique récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/fct1/parite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions paires et impaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/fct1/composee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composée de deux fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/fct1/comp_derivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complément de dérivation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/fct1/convexite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de convexité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/fct1/convexite_derivee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexité et dérivée, point d’inflexion</span></a>
   </div>
 </li>
       </ul>
@@ -316,6 +464,45 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../terminale-maths/espace1/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/espace1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/espace1/vecteur_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteurs de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/espace1/repere_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repère de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">terminale-maths/espace1/droite_espace.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/espace1/position.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Position relative</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/espace1/parallele.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Etude des plans parallèles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminale-maths/espace1/representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Représentations paramétriques</span></a>
   </div>
 </li>
       </ul>
@@ -356,7 +543,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-Chapitre">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1756562719499" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1756749138096" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
 <a href="../terminale-maths/logique/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -370,35 +557,21 @@ Quantificateur - différents types de raisonnement
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1756562674572" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1756749363301" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
 <a href="../terminale-maths/suite1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Chapitre 1 : Le second degré
+Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite.
 </h5>
 <div class="card-text listing-description">
-Forme canonique, racines, signe, parabole.
+Raisonnement pa récurrence, étudier les variations et la limite d’une suite
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1756562670625" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<a href="../terminale-maths/fct1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Chapitre 1 : Le second degré
-</h5>
-<div class="card-text listing-description">
-Forme canonique, racines, signe, parabole.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1756562667228" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1756562667228" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
 <a href="../terminale-maths/espace1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -407,6 +580,20 @@ Chapitre 1 : Le second degré
 </h5>
 <div class="card-text listing-description">
 Forme canonique, racines, signe, parabole.
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1756749178485" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
+<a href="../terminale-maths/fct1/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Chapitre 2 : Gnéralités sur les fonctions
+</h5>
+<div class="card-text listing-description">
+parité - composée de deux fonctions - convexité
 </div>
 </div>
 </div>

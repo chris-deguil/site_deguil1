@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Intervalle image - composée de fonctions - dérivée de la composée">
+<meta name="description" content="Intervalle image - composée de deux fonctions - dérivée de la composée">
 
 <title>Composition : g(ax+b) – Site pédagogique</title>
 <style>
@@ -89,8 +89,12 @@ ul.task-list li input[type="checkbox"] {
 <script>
 window.MathJax = {
   tex: {
-        packages: {'[+]': ['enclose']},   
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
     macros: {
+      // --- Constantes / ensembles ---
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
       R: "\\mathbb{R}",
@@ -100,6 +104,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
 
+      // --- Mises en forme / utilitaires ---
       rem: "\\mathbf{Remarque\\ :\\ }",
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
@@ -107,16 +112,32 @@ window.MathJax = {
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-
+            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
-      
+      np: ["\\text{#1}", 1],
+
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
-      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)"
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
 
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
+      // Usage : \llbracket x \rrbracket
+      llbracket: ["{\\left[\\!\\left[}", 0],
+      rrbracket: ["{\\right]\\!\\right]}", 0],
+
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
     }
   }
 };
@@ -505,7 +526,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Intervalle image - composée de fonctions - dérivée de la composée
+    Intervalle image - composée de deux fonctions - dérivée de la composée
   </div>
 </div>
 
@@ -522,6 +543,7 @@ window.Quarto = {
 </header>
 
 
+<hr>
 <section id="dérivée-de-gaxb" class="level3">
 <h3 class="anchored" data-anchor-id="dérivée-de-gaxb">Dérivée de <span class="math inline">\(g(ax+b)\)</span></h3>
 <div class="bloc def">
@@ -580,7 +602,7 @@ h'(x)= 2 \times \frac{1}{2\sqrt{2x+5}} = \frac{1}{\sqrt{2x+5}}.
 <p><strong>Application à l’économie</strong><br> On considère <span class="math inline">\(t\)</span> le taux d’intérêt composé annuel d’un certain placement. On décide de placer une somme <span class="math inline">\(S\)</span> sur une période de <span class="math inline">\(n\)</span> années. Au bout de <span class="math inline">\(n\)</span> années, on dispose alors de <span class="math inline">\((1+t)^n S\)</span>.<br> Peut-on trouver un calcul simple lorsque <span class="math inline">\(t\)</span> est petit ?<br> On rappelle que l’approximation affine de <span class="math inline">\(f\)</span> en <span class="math inline">\(a\)</span> est donnée par <span class="math display">\[f(a+h) \approx f(a)+h\,f'(a).\]</span><br> On considère l’approximation affine de <span class="math inline">\((1+t)^n\)</span>. <br> Pour de petites valeurs de <span class="math inline">\(t\)</span>, on a <span class="math display">\[(1+t)^n \approx 1^n + t \times \big(n \, 1^{\,n-1}\big)=1+n\,t.\]</span><br> On déduit qu’après <span class="math inline">\(n\)</span> années, le montant disponible est alors environ <span class="math inline">\(S(1+nt)\)</span>, où <span class="math inline">\(t\)</span> est le taux d’évolution.</p>
 </div>
 <div class="nav-pages">
-<p><a class="prev" href="operation.html">⬅️</a> <a class="next" href="applications.html">➡️</a></p>
+<p><a class="prev" href="operations.html">⬅️</a> <a class="next" href="applications.html">➡️</a></p>
 </div>
 
 

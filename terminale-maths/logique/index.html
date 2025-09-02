@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -120,8 +120,12 @@ ul.task-list li input[type="checkbox"] {
 <script>
 window.MathJax = {
   tex: {
-        packages: {'[+]': ['enclose']},   
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
     macros: {
+      // --- Constantes / ensembles ---
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
       R: "\\mathbb{R}",
@@ -131,6 +135,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
 
+      // --- Mises en forme / utilitaires ---
       rem: "\\mathbf{Remarque\\ :\\ }",
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
@@ -138,16 +143,32 @@ window.MathJax = {
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-
+            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
-      
+      np: ["\\text{#1}", 1],
+
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
-      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)"
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
 
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
+      // Usage : \llbracket x \rrbracket
+      llbracket: ["{\\left[\\!\\left[}", 0],
+      rrbracket: ["{\\right]\\!\\right]}", 0],
+
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
     }
   }
 };
@@ -183,9 +204,10 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../../assets/css/maths.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed maths-theme">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -268,6 +290,48 @@ window.Quarto = {
  <span class="menu-text">Chapitre 0 : Logique et raisonnements</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histoire de la logique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/proposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proposition mathématique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/quantificateurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les quantificateurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/deduction_contreExemple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les différents types de raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/disjonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contraposée et Disjonction des cas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/absurde.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par l’absurde</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/AnalyseSynthese.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par analyse - synthèse</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -282,7 +346,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+ <span class="menu-text">Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">historique récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/principe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application à l’étude des suites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/convergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite convergente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/convergence_prop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Théorèmes de convergence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/divergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Divergence et limite par comparaison</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/operation_limite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les limites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limites des suites géomériques</span></a>
   </div>
 </li>
       </ul>
@@ -299,7 +411,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/fct1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+ <span class="menu-text">Chapitre 2 : Gnéralités sur les fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">historique récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/parite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions paires et impaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/composee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composée de deux fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/comp_derivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complément de dérivation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/convexite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de convexité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/convexite_derivee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexité et dérivée, point d’inflexion</span></a>
   </div>
 </li>
       </ul>
@@ -317,6 +465,45 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/espace1/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/vecteur_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteurs de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/repere_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repère de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">terminale-maths/espace1/droite_espace.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/position.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Position relative</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/parallele.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Etude des plans parallèles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Représentations paramétriques</span></a>
   </div>
 </li>
       </ul>
@@ -356,18 +543,43 @@ window.Quarto = {
 </header>
 
 
+<div class="bloc rem">
+<p><span class="bloc-titre">Attendus et Savoir-faire :</span></p>
+<ul>
+<li>reconnaître ce qu’est une proposition mathématique, à utiliser des variables pour écrire des propositions mathématiques ;</li>
+<li>lire et écrire des propositions contenant les connecteurs « et », « ou » ;</li>
+<li>formuler la négation de propositions simples, pouvant contenir un ou deux quantificateurs ;</li>
+<li>mobiliser un contre-exemple pour montrer qu’une proposition est fausse ;</li>
+<li>formuler une implication, une équivalence logique, et à les mobiliser dans un raisonnement simple ;</li>
+<li>formuler la réciproque d’une implication, ou sa contraposée ;</li>
+<li>lire et écrire des propositions contenant une quantification universelle ou existentielle (les symboles ∀ et ∃ ne sont pas exigibles) ;</li>
+<li>raisonner par disjonctions des cas, par l’absurde, par contraposée ;</li>
+<li>raisonner par équivalence, utiliser une propriété caractéristique ;</li>
+<li>distinguer condition nécessaire et condition suffisante ;</li>
+</ul>
+</div>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
 </div>
 <table class="quarto-listing-table table">
 <thead>
 <tr>
 <th>
-Title
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 <th>
 Description
@@ -375,6 +587,62 @@ Description
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1756736824736" data-listing-reading-time-sort="3" data-listing-word-count-sort="588" data-listing-title-sort="Histoire de la logique" data-listing-filename-sort="historique.qmd">
+<td>
+<a href="../../terminale-maths/logique/historique.html" class="title listing-title">Histoire de la logique</a>
+</td>
+<td>
+<span class="listing-description">Bref historique sur la logique mathématiques </span>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1756737855031" data-listing-reading-time-sort="5" data-listing-word-count-sort="874" data-listing-title-sort="Proposition mathématique" data-listing-filename-sort="proposition.qmd">
+<td>
+<a href="../../terminale-maths/logique/proposition.html" class="title listing-title">Proposition mathématique</a>
+</td>
+<td>
+<span class="listing-description">Connecteurs logiques - Négation</span>
+</td>
+</tr>
+<tr data-index="2" data-listing-file-modified-sort="1756737848682" data-listing-reading-time-sort="6" data-listing-word-count-sort="1061" data-listing-title-sort="Les quantificateurs" data-listing-filename-sort="quantificateurs.qmd">
+<td>
+<a href="../../terminale-maths/logique/quantificateurs.html" class="title listing-title">Les quantificateurs</a>
+</td>
+<td>
+<span class="listing-description">Implication - Quantificateurs</span>
+</td>
+</tr>
+<tr data-index="3" data-listing-file-modified-sort="1756737004189" data-listing-reading-time-sort="3" data-listing-word-count-sort="598" data-listing-title-sort="Les différents types de raisonnement" data-listing-filename-sort="deduction_contreExemple.qmd">
+<td>
+<a href="../../terminale-maths/logique/deduction_contreExemple.html" class="title listing-title">Les différents types de raisonnement</a>
+</td>
+<td>
+<span class="listing-description">Déduction et contre exemple</span>
+</td>
+</tr>
+<tr data-index="4" data-listing-file-modified-sort="1756737930782" data-listing-reading-time-sort="3" data-listing-word-count-sort="466" data-listing-title-sort="Contraposée et Disjonction des cas" data-listing-filename-sort="disjonctions.qmd">
+<td>
+<a href="../../terminale-maths/logique/disjonctions.html" class="title listing-title">Contraposée et Disjonction des cas</a>
+</td>
+<td>
+<span class="listing-description">contraposée - Disjonction des cas</span>
+</td>
+</tr>
+<tr data-index="5" data-listing-file-modified-sort="1756737919001" data-listing-reading-time-sort="3" data-listing-word-count-sort="452" data-listing-title-sort="Raisonnement par l'absurde" data-listing-filename-sort="absurde.qmd">
+<td>
+<a href="../../terminale-maths/logique/absurde.html" class="title listing-title">Raisonnement par l’absurde</a>
+</td>
+<td>
+<span class="listing-description">Raisonnement par l’absurde</span>
+</td>
+</tr>
+<tr data-index="6" data-listing-file-modified-sort="1756737882628" data-listing-reading-time-sort="2" data-listing-word-count-sort="397" data-listing-title-sort="Raisonnement par analyse - synthèse" data-listing-filename-sort="AnalyseSynthese.qmd">
+<td>
+<a href="../../terminale-maths/logique/AnalyseSynthese.html" class="title listing-title">Raisonnement par analyse - synthèse</a>
+</td>
+<td>
+<span class="listing-description">DRaisonnement par Analyse Synthèse</span>
+</td>
+</tr>
 </tbody>
 </table>
 <div class="listing-no-matching d-none">

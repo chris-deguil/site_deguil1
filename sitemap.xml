@@ -1,12 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/fct1/index.html</loc>
-    <lastmod>2025-08-30T14:04:30.625Z</lastmod>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/fct1/convexite.html</loc>
+    <lastmod>2025-09-02T06:07:36.423Z</lastmod>
   </url>
   <url>
-    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/index.html</loc>
-    <lastmod>2025-08-30T14:05:19.499Z</lastmod>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/fct1/parite.html</loc>
+    <lastmod>2025-09-02T07:58:55.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/fct1/convexite_derivee.html</loc>
+    <lastmod>2025-09-02T06:11:18.543Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/fct1/index.html</loc>
+    <lastmod>2025-09-01T17:52:58.485Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/convergence_def.html</loc>
+    <lastmod>2025-09-01T17:34:32.363Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/divergence_def.html</loc>
+    <lastmod>2025-09-01T17:31:46.876Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/operation_limite.html</loc>
+    <lastmod>2025-09-01T17:31:19.372Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/suite_geometrique.html</loc>
+    <lastmod>2025-09-01T17:30:57.099Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/AnalyseSynthese.html</loc>
+    <lastmod>2025-09-01T14:44:42.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/quantificateurs.html</loc>
+    <lastmod>2025-09-01T14:44:08.682Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/historique.html</loc>
+    <lastmod>2025-09-01T14:27:04.736Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/proposition.html</loc>
+    <lastmod>2025-09-01T14:44:15.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/espace1/droite_plan.html</loc>
+    <lastmod>2025-09-02T13:18:55.837Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/espace1/historique.html</loc>
+    <lastmod>2025-09-02T13:18:09.292Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/espace1/parallele.html</loc>
+    <lastmod>2025-09-02T13:19:59.658Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/espace1/position.html</loc>
+    <lastmod>2025-09-02T13:16:06.931Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/index.html</loc>
@@ -66,7 +122,7 @@
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/premiere-maths/trigonometrie/cosinus_sinus.html</loc>
-    <lastmod>2025-08-31T14:37:19.651Z</lastmod>
+    <lastmod>2025-08-31T16:18:12.088Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/premiere-maths/trigonometrie/index.html</loc>
@@ -126,7 +182,7 @@
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/premiere-maths/Operation_Derivee/operations.html</loc>
-    <lastmod>2025-08-31T14:57:57.995Z</lastmod>
+    <lastmod>2025-08-31T17:54:44.998Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/premiere-maths/Operation_Derivee/extrema.html</loc>
@@ -134,7 +190,7 @@
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/premiere-maths/Operation_Derivee/index.html</loc>
-    <lastmod>2025-08-30T18:16:16.931Z</lastmod>
+    <lastmod>2025-08-31T15:58:52.867Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/index.html</loc>
@@ -142,7 +198,7 @@
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/premiere-maths/Operation_Derivee/composition.html</loc>
-    <lastmod>2025-08-31T14:58:28.212Z</lastmod>
+    <lastmod>2025-08-31T17:55:03.722Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/premiere-maths/Operation_Derivee/applications.html</loc>
@@ -250,7 +306,7 @@
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/snt/theme1/Seance_1.html</loc>
-    <lastmod>2025-08-31T12:37:30.599Z</lastmod>
+    <lastmod>2025-08-31T16:06:10.468Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/site_deguil1/snt/theme1/Seance_2b.html</loc>
@@ -269,7 +325,63 @@
     <lastmod>2025-08-30T14:04:27.228Z</lastmod>
   </url>
   <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/espace1/vecteur_espace.html</loc>
+    <lastmod>2025-09-02T13:17:26.366Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/espace1/repere_espace.html</loc>
+    <lastmod>2025-09-02T13:19:20.485Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/espace1/representation.html</loc>
+    <lastmod>2025-09-02T13:23:47.038Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/index.html</loc>
+    <lastmod>2025-09-01T17:52:18.096Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/deduction_contreExemple.html</loc>
+    <lastmod>2025-09-01T14:30:04.189Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/absurde.html</loc>
+    <lastmod>2025-09-01T14:45:19.001Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/logique/disjonctions.html</loc>
+    <lastmod>2025-09-01T14:45:30.782Z</lastmod>
+  </url>
+  <url>
     <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/index.html</loc>
-    <lastmod>2025-08-30T14:04:34.572Z</lastmod>
+    <lastmod>2025-09-01T17:56:03.301Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/application.html</loc>
+    <lastmod>2025-09-01T17:32:55.198Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/historique.html</loc>
+    <lastmod>2025-09-01T17:33:25.631Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/convergence_prop.html</loc>
+    <lastmod>2025-09-01T17:44:16.805Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/suite1/principe.html</loc>
+    <lastmod>2025-09-01T17:33:09.820Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/fct1/composee.html</loc>
+    <lastmod>2025-09-02T06:00:50.190Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/fct1/historique.html</loc>
+    <lastmod>2025-09-02T07:58:36.012Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/site_deguil1/terminale-maths/fct1/comp_derivation.html</loc>
+    <lastmod>2025-09-02T06:01:14.004Z</lastmod>
   </url>
 </urlset>

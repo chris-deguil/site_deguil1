@@ -89,8 +89,12 @@ ul.task-list li input[type="checkbox"] {
 <script>
 window.MathJax = {
   tex: {
-        packages: {'[+]': ['enclose']},   
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
     macros: {
+      // --- Constantes / ensembles ---
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
       R: "\\mathbb{R}",
@@ -100,6 +104,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
 
+      // --- Mises en forme / utilitaires ---
       rem: "\\mathbf{Remarque\\ :\\ }",
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
@@ -107,16 +112,32 @@ window.MathJax = {
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-
+            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
-      
+      np: ["\\text{#1}", 1],
+
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
-      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)"
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
 
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
+      // Usage : \llbracket x \rrbracket
+      llbracket: ["{\\left[\\!\\left[}", 0],
+      rrbracket: ["{\\right]\\!\\right]}", 0],
+
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
     }
   }
 };
@@ -522,6 +543,7 @@ window.Quarto = {
 </header>
 
 
+<hr>
 <section id="somme-produit-quotient" class="level3">
 <h3 class="anchored" data-anchor-id="somme-produit-quotient">Somme, produit, quotient</h3>
 <div class="bloc thm">
@@ -639,7 +661,7 @@ Afficher la correction
 <span class="math display">\[
 \begin{array}{l l l}
 \LH{u(x) = 2x^2 - 3} &amp; \hphantom{\rule{1cm}{0pt}} &amp; u'(x) = 4x \\
-\LH{v(x) = (3x-4)^3}3 &amp; \hphantom{\rule{1cm}{0pt}} &amp;v'(x) = 9 (3x - 4)^2\\
+\LH{v(x) = (3x-4)^3} &amp; \hphantom{\rule{1cm}{0pt}} &amp;v'(x) = 9 (3x - 4)^2\\
 \end{array}\]</span> Ainsi <span class="math inline">\(f = \dfrac{u}{v}\)</span> donc <span class="math inline">\(f' = \dfrac{u'v - v'u}{v^2}\)</span>.<br> Donc pour tout <span class="math inline">\(x \in D_f\)</span>, <span class="math display">\[
 f'(x)
 = \frac{4x \,(3x-4)^3 - 9(3x - 4)^2 (2x^2 - 3)}{(3x-4)^6}

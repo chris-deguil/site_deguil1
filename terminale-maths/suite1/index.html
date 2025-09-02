@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Forme canonique, racines, signe, parabole.">
+<meta name="description" content="Raisonnement pa récurrence, étudier les variations et la limite d’une suite">
 
-<title>Chapitre 1 : Le second degré – Site pédagogique</title>
+<title>Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite. – Site pédagogique</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -120,8 +120,12 @@ ul.task-list li input[type="checkbox"] {
 <script>
 window.MathJax = {
   tex: {
-        packages: {'[+]': ['enclose']},   
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
     macros: {
+      // --- Constantes / ensembles ---
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
       R: "\\mathbb{R}",
@@ -131,6 +135,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
 
+      // --- Mises en forme / utilitaires ---
       rem: "\\mathbf{Remarque\\ :\\ }",
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
@@ -138,16 +143,32 @@ window.MathJax = {
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-
+            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
-      
+      np: ["\\text{#1}", 1],
+
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
-      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)"
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
 
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
+      // Usage : \llbracket x \rrbracket
+      llbracket: ["{\\left[\\!\\left[}", 0],
+      rrbracket: ["{\\right]\\!\\right]}", 0],
+
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
     }
   }
 };
@@ -183,9 +204,10 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../../assets/css/maths.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed maths-theme">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -230,7 +252,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Récurrence - Application à l’étude des suites</a></li><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Chapitre 1 : Le second degré</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Récurrence - Application à l’étude des suites</a></li><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite.</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -268,6 +290,48 @@ window.Quarto = {
  <span class="menu-text">Chapitre 0 : Logique et raisonnements</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histoire de la logique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/proposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proposition mathématique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/quantificateurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les quantificateurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/deduction_contreExemple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les différents types de raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/disjonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contraposée et Disjonction des cas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/absurde.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par l’absurde</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/AnalyseSynthese.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par analyse - synthèse</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -282,7 +346,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+ <span class="menu-text">Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">historique récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/principe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application à l’étude des suites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/convergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite convergente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/convergence_prop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Théorèmes de convergence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/divergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Divergence et limite par comparaison</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/operation_limite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les limites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limites des suites géomériques</span></a>
   </div>
 </li>
       </ul>
@@ -299,7 +411,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/fct1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+ <span class="menu-text">Chapitre 2 : Gnéralités sur les fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">historique récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/parite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions paires et impaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/composee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composée de deux fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/comp_derivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complément de dérivation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/convexite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de convexité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/convexite_derivee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexité et dérivée, point d’inflexion</span></a>
   </div>
 </li>
       </ul>
@@ -319,6 +467,45 @@ window.Quarto = {
  <span class="menu-text">Chapitre 1 : Le second degré</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/vecteur_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteurs de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/repere_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repère de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">terminale-maths/espace1/droite_espace.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/position.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Position relative</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/parallele.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Etude des plans parallèles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Représentations paramétriques</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -332,14 +519,14 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Récurrence - Application à l’étude des suites</a></li><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Chapitre 1 : Le second degré</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Récurrence - Application à l’étude des suites</a></li><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite.</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Chapitre 1 : Le second degré</h1>
+<h1 class="title">Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite.</h1>
 </div>
 
 <div>
   <div class="description">
-    Forme canonique, racines, signe, parabole.
+    Raisonnement pa récurrence, étudier les variations et la limite d’une suite
   </div>
 </div>
 
@@ -359,11 +546,12 @@ window.Quarto = {
 <div class="bloc rem">
 <p><span class="bloc-titre">Attendus et Savoir-faire :</span></p>
 <ul>
-<li>Étudier le signe d’une fonction polynôme du second degré donnée sous forme factorisée.</li>
-<li>Déterminer les fonctions polynômes du second degré s’annulant en deux nombres réels distincts.</li>
-<li>Factoriser une fonction polynôme du second degré, en diversifiant les stratégies : racine évidente, détection des racines par leur somme et leur produit, identité remarquable, application des formules générales.</li>
-<li>Choisir une forme adaptée (développée réduite, canonique, factorisée) d’une fonction polynôme du second degré dans le cadre de la résolution d’un problème (équation, inéquation, optimisation, variations).</li>
-<li>Déterminer l’axe de symétrie et le sommet d’une parabole d’équation <span class="math inline">\(y=ax^2+bx+c\)</span></li>
+<li>Composée de deux fonctions, notation v ○ u. Relation (v ○ u)’ = (v’ ○ u) × u’ pour la dérivée de la composée de deux fonctions dérivables</li>
+<li>Calculer la dérivée d’une fonction donnée par une formule simple mettant en jeu opérations algébriques et composition.</li>
+<li>Calculer la fonction dérivée, déterminer les limites et étudier les variations d’une fonction construite simplement à partir des fonctions de référence.</li>
+<li>Démontrer des inégalités en utilisant la convexité d’une fonction.</li>
+<li>Esquisser l’allure de la courbe représentative d’une fonction ƒ à partir de la donnée de tableaux de variations de ƒ, de ƒ’ ou de ƒ’’.</li>
+<li>Lire sur une représentation graphique de ƒ, de ƒ’ ou de ƒ’’ les intervalles où ƒ est convexe, concave, et les points d’inflexion. Dans le cadre de la résolution de problème, étudier et utiliser la convexité d’une fonction.</li>
 </ul>
 </div>
 
@@ -372,12 +560,22 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
 </div>
 <table class="quarto-listing-table table">
 <thead>
 <tr>
 <th>
-Title
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 <th>
 Description
@@ -385,6 +583,70 @@ Description
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1756748005631" data-listing-reading-time-sort="2" data-listing-word-count-sort="361" data-listing-title-sort="historique récurrence" data-listing-filename-sort="historique.qmd">
+<td>
+<a href="../../terminale-maths/suite1/historique.html" class="title listing-title">historique récurrence</a>
+</td>
+<td>
+<span class="listing-description">Principe de récurrence et application à l’étude des suites</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1756747989820" data-listing-reading-time-sort="5" data-listing-word-count-sort="903" data-listing-title-sort="La recurrence" data-listing-filename-sort="principe.qmd">
+<td>
+<a href="../../terminale-maths/suite1/principe.html" class="title listing-title">La recurrence</a>
+</td>
+<td>
+<span class="listing-description">Principe de récurrence et application à l’étude des suites</span>
+</td>
+</tr>
+<tr data-index="2" data-listing-file-modified-sort="1756747975198" data-listing-reading-time-sort="5" data-listing-word-count-sort="856" data-listing-title-sort="Application à l'étude des suites" data-listing-filename-sort="application.qmd">
+<td>
+<a href="../../terminale-maths/suite1/application.html" class="title listing-title">Application à l’étude des suites</a>
+</td>
+<td>
+<span class="listing-description">Etude des suites et inégalité de Bernoulli</span>
+</td>
+</tr>
+<tr data-index="3" data-listing-file-modified-sort="1756748072363" data-listing-reading-time-sort="4" data-listing-word-count-sort="620" data-listing-title-sort="Suite convergente" data-listing-filename-sort="convergence_def.qmd">
+<td>
+<a href="../../terminale-maths/suite1/convergence_def.html" class="title listing-title">Suite convergente</a>
+</td>
+<td>
+<span class="listing-description">Définition d’une suite convergente</span>
+</td>
+</tr>
+<tr data-index="4" data-listing-file-modified-sort="1756748656805" data-listing-reading-time-sort="4" data-listing-word-count-sort="681" data-listing-title-sort="Théorèmes de convergence" data-listing-filename-sort="convergence_prop.qmd">
+<td>
+<a href="../../terminale-maths/suite1/convergence_prop.html" class="title listing-title">Théorèmes de convergence</a>
+</td>
+<td>
+<span class="listing-description">Définition d’une suite convergente</span>
+</td>
+</tr>
+<tr data-index="5" data-listing-file-modified-sort="1756747906876" data-listing-reading-time-sort="3" data-listing-word-count-sort="521" data-listing-title-sort="Divergence et limite par comparaison" data-listing-filename-sort="divergence_def.qmd">
+<td>
+<a href="../../terminale-maths/suite1/divergence_def.html" class="title listing-title">Divergence et limite par comparaison</a>
+</td>
+<td>
+<span class="listing-description">Définition d’une suite divergente en ∞ , limite par comparaison</span>
+</td>
+</tr>
+<tr data-index="6" data-listing-file-modified-sort="1756747879372" data-listing-reading-time-sort="3" data-listing-word-count-sort="493" data-listing-title-sort="Opérations sur les limites" data-listing-filename-sort="operation_limite.qmd">
+<td>
+<a href="../../terminale-maths/suite1/operation_limite.html" class="title listing-title">Opérations sur les limites</a>
+</td>
+<td>
+<span class="listing-description">Some, produit et quotient - cas des formes indéterminées</span>
+</td>
+</tr>
+<tr data-index="7" data-listing-file-modified-sort="1756747857099" data-listing-reading-time-sort="3" data-listing-word-count-sort="572" data-listing-title-sort="Limites des suites géomériques" data-listing-filename-sort="suite_geometrique.qmd">
+<td>
+<a href="../../terminale-maths/suite1/suite_geometrique.html" class="title listing-title">Limites des suites géomériques</a>
+</td>
+<td>
+<span class="listing-description">Limites des suites géométriques</span>
+</td>
+</tr>
 </tbody>
 </table>
 <div class="listing-no-matching d-none">

@@ -120,8 +120,12 @@ ul.task-list li input[type="checkbox"] {
 <script>
 window.MathJax = {
   tex: {
-        packages: {'[+]': ['enclose']},   
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
     macros: {
+      // --- Constantes / ensembles ---
       dd: "\\mathrm{d}",
       e: "\\mathrm{e}",
       R: "\\mathbb{R}",
@@ -131,6 +135,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
 
+      // --- Mises en forme / utilitaires ---
       rem: "\\mathbf{Remarque\\ :\\ }",
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
@@ -138,16 +143,32 @@ window.MathJax = {
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-
+            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
-      
+      np: ["\\text{#1}", 1],
+
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
       Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
-      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)"
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
 
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
+      // Usage : \llbracket x \rrbracket
+      llbracket: ["{\\left[\\!\\left[}", 0],
+      rrbracket: ["{\\right]\\!\\right]}", 0],
+
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
     }
   }
 };
@@ -303,7 +324,7 @@ Description
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-listing-file-modified-sort="1756652277995" data-listing-reading-time-sort="5" data-listing-word-count-sort="804" data-listing-title-sort="Opérations sur les dérivées" data-listing-filename-sort="operations.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1756662884998" data-listing-reading-time-sort="5" data-listing-word-count-sort="804" data-listing-title-sort="Opérations sur les dérivées" data-listing-filename-sort="operations.qmd">
 <td>
 <a href="../../premiere-maths/Operation_Derivee/operations.html" class="title listing-title">Opérations sur les dérivées</a>
 </td>
@@ -311,12 +332,12 @@ Description
 <span class="listing-description">Opérations sur les dérivées</span>
 </td>
 </tr>
-<tr data-index="1" data-listing-file-modified-sort="1756652308212" data-listing-reading-time-sort="3" data-listing-word-count-sort="513" data-listing-title-sort="Composition : g(ax+b)" data-listing-filename-sort="composition.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1756662903722" data-listing-reading-time-sort="3" data-listing-word-count-sort="513" data-listing-title-sort="Composition : g(ax+b)" data-listing-filename-sort="composition.qmd">
 <td>
 <a href="../../premiere-maths/Operation_Derivee/composition.html" class="title listing-title">Composition : g(ax+b)</a>
 </td>
 <td>
-<span class="listing-description">Intervalle image - composée de fonctions - dérivée de la composée</span>
+<span class="listing-description">Intervalle image - composée de deux fonctions - dérivée de la composée</span>
 </td>
 </tr>
 <tr data-index="2" data-listing-file-modified-sort="1756652889849" data-listing-reading-time-sort="5" data-listing-word-count-sort="808" data-listing-title-sort="Applications" data-listing-filename-sort="applications.qmd">
