@@ -1,5 +1,5 @@
 ---
-title: "historique récurrence"
+title: "Historique récurrence"
 format:
   html:
     toc: true
@@ -16,6 +16,8 @@ order: 1
 ::: {.bloc .rem}
 
 Dans ses *Éléments* (vers -300 av. J.-C.), Euclide démontre que, à partir d'une liste finie de nombres premiers, on peut construire un nouveau nombre premier distinct de ceux déjà listés. Cette démonstration, souvent interprétée comme une preuve par l'absurde, se généralise immédiatement à toute énumération finie de nombres premiers. Il en déduit ainsi l'existence d'une infinité de nombres premiers, bien que la notion d'infini ne soit pas encore formalisée à son époque. Il construit, de façon implicite et récursive, une suite strictement croissante de nombres premiers.
+
+<br>
 
 On trouve également chez Archimède (IIIᵉ siècle av. J.-C.) des traces de raisonnements récursifs, notamment dans son approximation de $\pi$ par la méthode d'exhaustion, qui repose sur l'utilisation de polygones réguliers inscrits et circonscrits dont le nombre de côtés double à chaque étape.
 :::

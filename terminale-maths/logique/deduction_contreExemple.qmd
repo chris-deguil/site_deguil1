@@ -96,7 +96,7 @@ Faux, $P(40)=1681$, or $1681=41^2$.
 :::
 
 
-```{python}
+```python
 from math import sqrt
 
 def estpremier(n):
@@ -112,7 +112,7 @@ def estpremier(n):
     return True
 ```
 
-```{python}
+```python
 def P(n):
     return n**2 + n + 41
 

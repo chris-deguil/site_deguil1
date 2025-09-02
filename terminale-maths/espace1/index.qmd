@@ -1,5 +1,5 @@
 ---
-title: "Chapitre 1 : Le second degré"
+title: "Chapitre 3 : Espace 1"
 description: "Forme canonique, racines, signe, parabole."
 listing:
   type: table
@@ -19,10 +19,14 @@ listing:
 ::: {.bloc .rem}
 <span class="bloc-titre">Attendus et Savoir-faire :</span>  
 
-- Étudier le signe d’une fonction polynôme du second degré donnée sous forme factorisée.
-- Déterminer les fonctions polynômes du second degré s’annulant en deux nombres réels distincts.
-- Factoriser une fonction polynôme du second degré, en diversifiant les stratégies : racine évidente, détection des racines par leur somme et leur produit, identité remarquable, application des formules générales. 
-- Choisir une forme adaptée (développée réduite, canonique, factorisée) d’une fonction polynôme du second degré dans le cadre de la résolution d’un problème (équation, inéquation, optimisation, variations).
-- Déterminer l’axe de symétrie et le sommet d’une parabole d’équation $y=ax^2+bx+c$
+- Représenter des combinaisons linéaires de vecteurs donnés.
+- Exploiter une figure pour exprimer un vecteur comme combinaison linéaire de
+vecteurs.
+- Décrire la position relative de deux droites, d’une droite et d’un plan, de deux plans.
+- Lire sur une figure si deux vecteurs d’un plan, trois vecteurs de l’espace, forment une
+base.
+- Lire sur une figure la décomposition d'un vecteur dans une base.
+- Étudier géométriquement des problèmes simples de configurations dans l’espace
+(alignement, colinéarité, parallélisme, coplanarité)
 :::
 
