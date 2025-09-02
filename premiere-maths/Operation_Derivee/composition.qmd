@@ -1,12 +1,16 @@
 ---
 title: "Composition : g(ax+b)"
-description: "Intervalle image - composée de fonctions - dérivée de la composée"
+description: "Intervalle image - composée de deux fonctions - dérivée de la composée"
 format:
   html:
     toc: true
     number-sections: false
 order: 2
 ---
+
+
+-----
+
 
 ### Dérivée de $g(ax+b)$
 
@@ -121,6 +125,6 @@ On déduit qu'après $n$ années, le montant disponible est alors environ $S(1+n
 
 
 <div class="nav-pages">
-  <a class="prev" href="operation.html">⬅️</a>
+  <a class="prev" href="operations.html">⬅️</a>
   <a class="next" href="applications.html">➡️</a>
 </div>

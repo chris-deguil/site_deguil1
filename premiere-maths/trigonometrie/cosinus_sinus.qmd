@@ -8,6 +8,7 @@ description: "Définir le cosinus et le sinus d'un angle - propriétés élémen
 order: 3
 ---
 
+--------------
 ### Définitions
 
 ::: {.bloc .def}
@@ -20,9 +21,8 @@ On note $M(\cos t \, ; \, \sin t)$.
 
 
 <div style="text-align:center;">
-  <img src="../../image/maths/Trigonometrie_def_cos_sin.png" alt="" width="30%"/>
+  <img src="../../image/maths/Trigonometrie_def_cos_sin.png" alt="" width=20%/>
 </div>
-
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span><br>
@@ -43,13 +43,14 @@ $$
 
 
 <div style="text-align:center;">
-  <img src="../../image/maths/Trigonometrie_def_cos.png" alt="" width="30%"/>
+  <img src="../../image/maths/Trigonometrie_def_cos.png" alt="" width=30%/>
 </div>
 
 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : </span><br>
 On appelle tangente de $t$, $t\neq \frac{\pi}{2}~ [\pi]$, le rapport du sinus et du cosinus :
+
 $$
 \tan t = \frac{\sin t}{\cos t}.
 $$
@@ -74,11 +75,14 @@ $$
 
 :::
 
+
 <div style="text-align:center;">
-  <img src="../../image/maths/Trigonometrie_def_tan.png" alt="" width="30%"/>
+  <img src="../../image/maths/Trigonometrie_def_tan.png" alt="" width=30%/>
 </div>
 
 ### Valeurs remarquables
+
+
 ::: {.bloc .rem}
 Soit $OMI$ un triangle équilatéral et $H$ le projeté orthogonal de $M$ sur $(OI)$. Ainsi, $(MH)$ étant hauteur dans le triangle équilatéral $MOI$, elle est aussi bissectrice de $\widehat{OMI}$. Donc  
 $$
@@ -113,13 +117,17 @@ On regroupe les résultats dans le tableau suivant :
 |---|---|---|---|---|---|
 | cos | $1$ | $\LH{\frac{\sqrt{3}}{2}}$ | $\frac{\sqrt{2}}{2}$ | $\frac{1}{2}$ | $0$ |
 | sin | $0$ | $\frac{1}{2}$ | $\frac{\sqrt{2}}{2}$ | $\LH{\frac{\sqrt{3}}{2}}$ | $1$ |
+
 :::
+
+
 
 ### Propriétés élémentaires
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème : </span><br>
 Pour tout $\alpha \in \R$ et $k \in \Z$ :
+
 $$
 \cos(\alpha + 2 k\pi) =\cos \alpha, \qquad 
 \sin(\alpha + 2 k\pi) =\sin \alpha, \qquad 
@@ -134,9 +142,11 @@ $$
 Immédiat.
 </details>
 
+
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
 On donne $\cos  \frac{\pi}{5} =  \frac{\sqrt{5} + 1}{4}$. Déterminer $\sin \frac{\pi}{5}$.
+
 <details class="bloc cor"><summary>Afficher la correction : </summary>
 
 $$\begin{aligned}
@@ -149,7 +159,7 @@ $$\begin{aligned}
 &\Longleftrightarrow \sin^2 \frac{\pi}{5}= \frac{10-2\sqrt{5}}{16}.
 \end{aligned}
 $$
-Or $ \frac{\pi}{5} \in \left[0 \, ; \,  \frac{\pi}{2} \right[$, donc $\sin \frac{\pi}{5} > 0$.<br>
+Or $\frac{\pi}{5} \in \left[0 \, ; \,  \frac{\pi}{2} \right[$, donc $\sin \frac{\pi}{5} > 0$.<br>
 Donc 
 $$
 \sin \frac{\pi}{5} =  \frac{\sqrt{10-2\sqrt{5}}}{4}.
@@ -157,6 +167,16 @@ $$
 </details>
 
 :::
+
+
+
+
+
+
+
+
+
+
 
 <div class="nav-pages">
   <a class="prev" href="enroulement.html">⬅️</a>

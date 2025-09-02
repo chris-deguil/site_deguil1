@@ -61,7 +61,7 @@ website:
 
 
     - title: "Première Spécialité Maths"
-      logo: image/logo/logo_maths2.png   # ← chemin vers ton logo
+      logo: image/logo/logo_maths2.png   
       style: docked
       collapse-level: 1
       contents:
@@ -118,7 +118,7 @@ website:
             - premiere-maths/Operation_Derivee/extrema.qmd 
 
     - title: "Terminale Spécialité Maths"
-      logo: image/logo/logo_maths2.png   # ← chemin vers ton logo
+      logo: image/logo/logo_maths2.png   
       style: docked
       collapse-level: 1
       contents:
@@ -126,16 +126,48 @@ website:
         - section: "Logique et différents types de raisonnements"
           contents:
             - terminale-maths/logique/index.qmd
+            - terminale-maths/logique/historique.qmd
+            - terminale-maths/logique/proposition.qmd
+            - terminale-maths/logique/quantificateurs.qmd
+            - terminale-maths/logique/deduction_contreExemple.qmd
+            - terminale-maths/logique/disjonctions.qmd
+            - terminale-maths/logique/absurde.qmd
+            - terminale-maths/logique/AnalyseSynthese.qmd
+          
+
         - section: "Récurrence - Application à l'étude des suites"
           contents:
-            - terminale-maths/suite1/index.qmd   
+            - terminale-maths/suite1/index.qmd
+            - terminale-maths/suite1/historique.qmd   
+            - terminale-maths/suite1/principe.qmd   
+            - terminale-maths/suite1/application.qmd   
+            - terminale-maths/suite1/convergence_def.qmd   
+            - terminale-maths/suite1/convergence_prop.qmd   
+            - terminale-maths/suite1/divergence_def.qmd   
+            - terminale-maths/suite1/operation_limite.qmd  
+            - terminale-maths/suite1/suite_geometrique.qmd   
+
         - section: "Généralité sur les fonctions"
           contents:
             - terminale-maths/fct1/index.qmd
+            - terminale-maths/fct1/historique.qmd
+            - terminale-maths/fct1/parite.qmd
+            - terminale-maths/fct1/composee.qmd
+            - terminale-maths/fct1/comp_derivation.qmd
+            - terminale-maths/fct1/convexite.qmd
+            - terminale-maths/fct1/convexite_derivee.qmd
+      
         - section: "Espace : Plan, droites (Section - Intersection), Equation paramétriques"
           contents:
             - terminale-maths/espace1/index.qmd
-      
+            - terminale-maths/espace1/historique.qmd
+            - terminale-maths/espace1/vecteur_espace.qmd
+            - terminale-maths/espace1/repere_espace.qmd
+            - terminale-maths/espace1/droite_espace.qmd
+            - terminale-maths/espace1/position.qmd
+            - terminale-maths/espace1/parallele.qmd
+            - terminale-maths/espace1/representation.qmd
+
 format:
   html:
     include-in-header:

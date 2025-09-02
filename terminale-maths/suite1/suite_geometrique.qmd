@@ -1,0 +1,132 @@
+---
+title: "Limites des suites géomériques"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Limites des suites géométriques"
+order: 8
+---
+
+
+
+
+------
+
+\subsubsection{Limite des suites géométriques}
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span><br>
+Soit $q \in \R$. La suite $(q^n)$ converge si et seulement si $\abs{q} < 1$ ou $q = 1$.
+
+De plus :
+- Si $\abs{q} < 1$, alors la suite $(q^n)$ converge vers $0$.
+- Si $q > 1$, la suite $(q^n)$ diverge vers $+\infty$.
+- Si $q = -1$, la suite $(q^n)$ diverge.
+- Si $q = 0$, la suite $(q^n)$ converge vers $0$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+- Si $q > 1$, il existe $a \in \R^+$ tel que $q = 1 + a$.  
+D'après l'inégalité de Bernoulli, on a $q^n = (1 + a)^n \geqslant 1 + n a$.  
+Or, $\lim_{n \to +\infty} n = +\infty$, donc $\lim_{n \to +\infty} (n a + 1) = +\infty$.  
+Par comparaison, on déduit que $\lim_{n \to +\infty} q^n = +\infty$.
+
+- Si $\abs{q} < 1$, alors $\frac{1}{\abs{q}} > 1$, donc $\lim_{n \to +\infty} \left(\frac{1}{\abs{q}}\right)^n = +\infty$.  
+Ainsi, par passage à l'inverse, $\lim_{n \to +\infty} \abs{q}^n = 0$.  
+Donc, $\lim_{n \to +\infty} q^n = 0$.
+
+- Les cas $q = 1$ et $q = 0$ sont immédiats puisque les suites sont constantes, égales à $1$ et $0$.
+
+- Réciproquement, on suppose que la suite $u_n = q^n$ converge vers $l$.  
+Pour tout $n \in \N$, $u_{n+1} = q^{n+1} = q q^n = q u_n$.  
+Or, par unicité de la limite, $\lim_{n \to +\infty} u_{n+1} = l$ et $\lim_{n \to +\infty} u_n = l$.  
+Ainsi, on déduit que $l = q l$.  
+On conclut que $q = 1$ ou $l = 0$.
+
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+On considère la suite $(u_n)$ définie par $u_n = \frac{2^n + 5^n}{3^n + 4^n}$.  
+Déterminons $\lim_{n \to +\infty} u_n$.
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+Pour tout $n \in \N$, on a
+$$
+u_n = \dfrac{5^n \left(\left(\dfrac{2}{5}\right)^n + 1\right)}{4^n \left(\left(\dfrac{3}{4}\right)^n + 1\right)} = \left(\dfrac{5}{4}\right)^n \dfrac{\left(\dfrac{2}{5}\right)^n + 1}{\left(\dfrac{3}{4}\right)^n + 1}.
+$$
+$\frac{2}{5}, \frac{3}{4} \in ]-1, 1[$, donc $\lim_{n \to +\infty} \left(\frac{3}{4}\right)^n = 0$ et $\lim_{n \to +\infty} \left(\frac{2}{5}\right)^n = 0$.  
+On déduit, par quotient, que
+$$
+\lim_{n \to +\infty} \dfrac{\left(\dfrac{2}{5}\right)^n + 1}{\left(\dfrac{3}{4}\right)^n + 1} = 1.
+$$
+Or, $\frac{5}{4} > 1$, donc $\lim_{n \to +\infty} \left(\frac{5}{4}\right)^n = +\infty$.  
+Ainsi, par produit,
+$$
+\lim_{n \to +\infty} u_n = +\infty.
+$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+On considère les suites $(v_n)$ et $(u_n)$ définies par $u_n = 2n^2 - 3$ et $v_n = \frac{1}{n^2}$.  
+Déterminons $\lim_{n \to +\infty} u_n v_n$.
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+Pour tout $n \in \N$,
+$$
+u_n v_n = (2n^2 - 3) \times \frac{1}{n^2} = \frac{n^2 \left(2 - \frac{3}{n^2}\right)}{n^2} = 2 - \frac{3}{n^2}.
+$$
+Or, $\lim_{n \to +\infty} \frac{3}{n^2} = 0$.  
+Donc, $\lim_{n \to +\infty} u_n v_n = 2$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Montrons que la suite $u_n = \sum_{k=0}^n \frac{1}{k!}$ converge.
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+- Montrons que la suite est croissante :
+$$
+u_{n+1} - u_n = \sum_{k=0}^{n+1} \frac{1}{k!} - \sum_{k=0}^n \frac{1}{k!} = \frac{1}{(n+1)!} > 0.
+$$
+Donc, la suite $(u_n)$ est croissante.
+
+- Montrons que la suite est bornée.  
+Pour tout $k \geqslant 1$,
+$$
+k! = 1 \times 2 \times 3 \times \dots \times k \geqslant 1 \times 2 \times 2 \times \dots \times 2 = 2^{k-1}.
+$$
+Donc,
+$$
+\frac{1}{k!} \leqslant \frac{1}{2^{k-1}}.
+$$
+Donc,
+$$
+u_n \leqslant 1 + \sum_{k=1}^n \frac{1}{2^{k-1}} = 1 + \frac{1 - \frac{1}{2^n}}{1 - \frac{1}{2}} = 1 + 2 \left(1 - \frac{1}{2^n}\right) = 3 - \frac{1}{2^{n-1}}.
+$$
+Or, $\frac{1}{2} \in [0, 1[$, donc
+$$
+\lim_{n \to +\infty} \frac{1 - \frac{1}{2^n}}{1 - \frac{1}{2}} = 2.
+$$
+D'où la suite $(u_n)$ est majorée.
+
+La suite $(u_n)$ est croissante et majorée, donc elle converge.  
+On peut démontrer que $\lim_{n \to +\infty} u_n = e$.
+
+</details>
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="operation_limite.html">⬅️</a>
+</div>

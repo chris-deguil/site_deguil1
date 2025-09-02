@@ -1,6 +1,6 @@
 ---
-title: "Chapitre 1 : Le second degré"
-description: "Forme canonique, racines, signe, parabole."
+title: "Chapitre 1 : La récurrence, application à l'étude de suites, limite d'une suite."
+description: "Raisonnement pa récurrence, étudier les variations et la limite d'une suite"
 listing:
   type: table
   fields: [title, description]
@@ -19,10 +19,18 @@ listing:
 ::: {.bloc .rem}
 <span class="bloc-titre">Attendus et Savoir-faire :</span>  
 
-- Étudier le signe d’une fonction polynôme du second degré donnée sous forme factorisée.
-- Déterminer les fonctions polynômes du second degré s’annulant en deux nombres réels distincts.
-- Factoriser une fonction polynôme du second degré, en diversifiant les stratégies : racine évidente, détection des racines par leur somme et leur produit, identité remarquable, application des formules générales. 
-- Choisir une forme adaptée (développée réduite, canonique, factorisée) d’une fonction polynôme du second degré dans le cadre de la résolution d’un problème (équation, inéquation, optimisation, variations).
-- Déterminer l’axe de symétrie et le sommet d’une parabole d’équation $y=ax^2+bx+c$
+-  Composée de deux fonctions, notation v ○ u. Relation (v ○ u)’ = (v’ ○ u) × u’ pour la
+dérivée de la composée de deux fonctions dérivables
+- Calculer la dérivée d’une fonction donnée par une formule simple mettant en jeu
+opérations algébriques et composition.
+-  Calculer la fonction dérivée, déterminer les limites et étudier les variations d'une
+fonction construite simplement à partir des fonctions de référence.
+-  Démontrer des inégalités en utilisant la convexité d’une fonction.
+-  Esquisser l’allure de la courbe représentative d’une fonction ƒ à partir de la donnée
+de tableaux de variations de ƒ, de ƒ’ ou de ƒ’’.
+-  Lire sur une représentation graphique de ƒ, de ƒ’ ou de ƒ’’ les intervalles où ƒ est
+convexe, concave, et les points d’inflexion. Dans le cadre de la résolution de
+problème, étudier et utiliser la convexité d’une fonction.
 :::
+
 

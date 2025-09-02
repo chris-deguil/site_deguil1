@@ -27,6 +27,7 @@ listing:
 - Résoudre un problème d’optimisation.
 - Exploiter les variations d’une fonction pour établir une inégalité.  
 - Étudier  la  position relative de deux courbes représentatives.
+
 :::
 
 

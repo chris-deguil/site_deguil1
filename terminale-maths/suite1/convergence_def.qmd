@@ -1,0 +1,180 @@
+---
+title: "Suite convergente"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition d'une suite convergente"
+order: 4
+---
+
+
+
+
+------
+
+
+### Définition
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>  
+Soit $(u_n)$ une suite réelle. On dit que la suite $(u_n)$ converge vers un réel $l$ ou admet $l$ pour limite lorsque
+
+$$
+\forall \epsilon > 0, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n \geqslant n_0 \Rightarrow \lvert u_n - l\rvert < \epsilon).
+$$
+
+On note alors
+
+$$
+\lim_{n \to +\infty} u_n = l.
+$$
+
+Une suite qui ne converge pas est dite **divergente**.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>  
+C’est-à-dire que tout intervalle ouvert contenant $l$ contient tous les termes de la suite $(u_n)$ à partir d’un certain rang (sauf un nombre fini).
+:::
+
+**Interprétation graphique**  
+Si on représente une suite convergente vers $l$ par un nuage de points dans un repère, à partir d’un certain rang $n_0$, tous les points sont dans la bande délimitée par les droites d’équation $y= l -\epsilon$ et $y=l + \epsilon$.
+
+   <div style="text-align:center;">
+  <img src="../../image/maths_term/Chap1_Recurrence_suite_convergente.png" alt="" width=40%/>
+</div> 
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+
+1. Montrons que la suite $(u_n)$ définie par $u_n = \dfrac{1}{\sqrt{n+1}}$ converge vers $0$.
+
+Pour $\epsilon>0$,
+$$
+\abs{\frac{1}{\sqrt{n+1}} - 0 } < \epsilon
+\Longleftrightarrow
+\frac{1}{\sqrt{n+1}} < \epsilon
+\Longleftrightarrow
+\frac{1}{\epsilon^2} < n+1
+\Longleftrightarrow
+n > \frac{1}{\epsilon^2} - 1.
+$$
+
+Soit $n_0 = \mathrm{Ent}\!\left(\dfrac{1}{\epsilon^2}\right) + 1$. Alors, pour tout $n \ge n_0$, $\dfrac{1}{\sqrt{n+1}} < \epsilon$, donc
+$$
+\lim_{n \to +\infty} \frac{1}{\sqrt{n+1}} = 0.
+$$
+
+2.  Prouvons la convergence de $v_n = \dfrac{2\sqrt{n+1}+1}{\sqrt{n+1}}$.
+
+Pour tout $n \in \N$,
+$$
+\frac{2\sqrt{n+1}+1}{\sqrt{n+1}}
+= \frac{2\sqrt{n+1}}{\sqrt{n+1}} + \frac{1}{\sqrt{n+1}}
+= 2 + u_n.
+$$
+
+Or $(u_n) \to 0$, donc pour tout $\epsilon>0$, il existe $n_0$ tel que $n>n_0 \Rightarrow |u_n|<\epsilon$. Ainsi
+$$
+|v_n - 2| = |u_n| < \epsilon,
+$$
+donc $\lim\limits_{n\to+\infty} v_n = 2$.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>  
+On considère la suite $(u_n)$ définie par $u_n = (-1)^n$. Montrons que cette suite diverge.
+
+Supposons qu’elle converge vers $l \in \R$. Prenons $\epsilon=1$. Il existe $n_0$ tel que, pour $n\ge n_0$,
+$$
+|(-1)^n - l| < 1.
+$$
+
+- Si $n=2k$, alors $|1-l|<1 \iff 0<l<2$.
+
+- Si $n=2k+1$, alors $|-1-l|<1 \iff -2<l<0$.
+
+On obtient donc $l \in\, ]-2,0[ \cap ]0,2[\, = \emptyset$, contradiction. Ainsi, $((-1)^n)$ ne converge pas.
+:::
+
+
+### Propriétés
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span>  
+Toute suite convergente est bornée.
+:::
+
+<details class="bloc demo"><summary>Démonstration</summary>
+
+Soit $(u_n)$ une suite convergente vers $l$. En prenant $\epsilon=1$, il existe $n_0\in\N$ tel que, pour $n\ge n_0$, $|u_n-l|<1$. Alors
+$$
+|u_n| = |u_n-l+l| \le |u_n-l| + |l| < 1+|l|.
+$$
+
+En posant $M = \max\!\big(\,|u_0|,\dots,|u_{n_0}|,\,1+|l|\,\big)$, on a $\forall n\in\N,\ |u_n|\le M$.
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>  
+Pour montrer qu’une suite ne converge pas, on peut montrer qu’elle n’est pas bornée.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>  
+Soit la suite croissante $(u_n)$ définie par $u_n = 3n^2 + 1$. Montrons qu’elle ne converge pas.
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+Raisonnons par l’absurde et supposons qu’elle soit majorée : $\exists L\in\R$ tel que $\forall n,\ u_n \le L$.  
+Soit $n_0$ tel que $u_{n_0}=L$ (ou au moins $u_{n_0}\le L$). Pour $n>n_0$, la fonction $f(x)=3x^2+1$ étant croissante sur $\R^+$, on a $u_n=f(n)>f(n_0)=u_{n_0}\ge L$, contradiction.  
+Ainsi $(u_n)$ n’est pas majorée. Étant croissante et non majorée, elle ne converge pas.
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span>  
+Si une suite $(u_n)$ converge vers un réel $l$, alors ce réel $l$ est unique.
+:::
+
+<details class="bloc demo"><summary>Démonstration</summary>
+
+Supposons $(u_n)\to l$ et $(u_n)\to l'$ avec $l\ne l'$. Posez $\epsilon=\dfrac{|l-l'|}{3}$.  
+Il existe $n_0,n_0'$ tels que, pour $n\ge n_0$, $|u_n-l|\le \epsilon$ et pour $n\ge n_0'$, $|u_n-l'|\le \epsilon$.  
+Pour $n\ge N=\max(n_0,n_0')$,
+$$
+|l-l'| = |(l-u_n)+(u_n-l')|
+\le |u_n-l| + |u_n-l'|
+\le \frac{2|l-l'|}{3},
+$$
+d’où $|l-l'|\le 0$ donc $l=l'$, contradiction. L’unicité est prouvée.
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>  
+Que peut-on dire de la suite $u_n=\cos(\pi n)$ ?
+
+- $u_{2n} = \cos(2n\pi)=1$ donc $(u_{2n}) \to 1$.
+
+- $u_{2n+1} = \cos((2n+1)\pi)=-1$ donc $(u_{2n+1}) \to -1$.
+
+La suite alterne entre $1$ et $-1$ et ne peut donc pas converger vers une unique limite. Elle ne converge pas.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>  
+Soit $k \in \N^*$, alors
+$$
+\lim_{n \to +\infty} \frac{1}{n^k} = 0
+\quad \text{et} \quad
+\lim_{n \to +\infty} \frac{1}{\sqrt{n}} = 0.
+$$
+:::
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="application.html">⬅️</a>
+  <a class="next" href="convergence_prop.html">➡️</a>
+</div>

@@ -1,0 +1,112 @@
+---
+title: "Raisonnement par analyse - synthèse"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "DRaisonnement par Analyse Synthèse"
+order: 7
+---
+
+-----
+
+
+### Raisonnement par Analyse-Synthèse
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Un raisonnement par analyse-synthèse se déroule en deux étapes :
+
+- **Analyse** : on raisonne sur une hypothétique solution au problème et on accumule des déductions de propriétés qu’elle doit vérifier, du seul fait qu’elle soit solution.
+- **Synthèse** : on examine tous les objets vérifiant les conditions nécessaires précédemment accumulées (ce sont les seuls candidats pouvant être des solutions) et on détermine, parmi eux, lesquels sont réellement des solutions.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Démontrer que toute fonction est la somme d’une fonction paire et d’une fonction impaire.
+
+- **Analyse** : (on suppose l’existence de $p$ et $i$)  
+On pose $f=p+i$ où $p$ est une fonction paire et $i$ une fonction impaire.  
+Ainsi, pour tout $x \in I$,
+
+$$f(-x)=p(-x)+i(-x) = p(x)-i(x).$$
+
+<div style="display: flex; justify-content: space-between;">
+<div style="width:45%; text-align:center;">
+par sommation  
+$$p(x) = \frac{f(x)+f(-x)}{2}$$
+</div>
+<div style="width:45%; text-align:center;">
+par soustraction  
+$$i(x) = \frac{f(x)-f(-x)}{2}$$
+</div>
+</div>
+
+Ainsi, sous condition d’existence de $i$ et $p$, la décomposition est unique.
+
+- **Synthèse** :  
+Soit $i(x)= \frac{f(x)-f(-x)}{2}$ et $p(x)= \frac{f(x)+f(-x)}{2}$, alors
+
+- $f=p+i$
+- $p$ est paire
+- $i$ est impaire
+
+L’existence de la décomposition est prouvée, donc le résultat est démontré.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Soit $f$ la fonction définie sur $\R \setminus \left\{\frac{1}{2} \right\}$ par :  
+$$f(x)= \frac{x+1}{2x-1}.$$  
+Montrer que pour tout $y \neq \frac{1}{2}$, il existe $x \neq \frac{1}{2}$ tel que $f(x)=y$.
+
+- **Analyse** :  
+On suppose avoir un tel $x$ tel que $f(x)=y$. Alors  
+
+$$\frac{x+1}{2x-1} = y  \Longrightarrow x+1 = y(2x-1) \Longrightarrow 1+y = x(2y-1) \Longrightarrow x = \frac{1+y}{2y-1}.$$
+
+- **Synthèse** :  
+Soit $y \neq \frac{1}{2}$, alors $2y-1 \neq 0$. On pose $x = \frac{1+y}{2y-1}$. Alors  
+
+$$
+x+1=\frac{1+y}{2y-1}+1=\frac{3y}{2y-1},\qquad
+2x-1=\frac{2(1+y)}{2y-1}-1=\frac{3}{2y-1},
+$$
+
+et donc  
+
+$$
+f(x)=\frac{x+1}{2x-1}=\frac{\frac{3y}{2y-1}}{\frac{3}{2y-1}}=y.
+$$
+
+Il reste à montrer que $x \neq \frac{1}{2}$.  
+Supposons par l’absurde $x =\frac{1}{2}$, alors  
+
+$$\frac{1}{2} = \frac{1+y}{2y-1} \Longrightarrow 2y-1 = 2+2y \Longrightarrow -1 =2,$$
+
+ce qui est absurde. Donc $x \neq \frac{1}{2}$.  
+
+Ainsi, $\forall y \in \R \setminus \left\{\frac{1}{2} \right\}, \, \exists x \neq \frac{1}{2}$ tel que $f(x)=y$.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Résoudre $x=\sqrt{3x^2-3x+1}$
+
+- **Analyse** :  
+$$x=\sqrt{3x^2-3x+1} \Longrightarrow x^2=3x^2-3x+1 \Longrightarrow 2x^2-3x+1 = 0 \Longrightarrow x=1 \ \text{ ou }\ x= \tfrac{1}{2}$$  
+Ainsi s’il existe des solutions, elles appartiennent à $S=\left\{1 ; \frac{1}{2} \right\}$
+
+- **Synthèse** :  
+$$\sqrt{3 \times 1^2-3 \times 1 + 1} = \sqrt{1} = 1$$  
+$$\sqrt{3 \times \left(\frac{1}{2} \right)^2 - 3 \times \frac{1}{2} + 1} = \sqrt{\tfrac{1}{4}} = \tfrac{1}{2}$$  
+
+Ainsi l’équation admet deux solutions : $S=\{1 ; \tfrac{1}{2}\}$.
+:::
+
+<div class="nav-pages">
+  <a class="prev" href="absurde.html">⬅️</a>
+</div>

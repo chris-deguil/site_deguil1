@@ -1,0 +1,144 @@
+---
+title: "Repère de l'espace"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Coordonnées d'un point, coordonnées de vecteurs"
+order: 3
+---
+
+
+
+### Notion de repère et coordonnées
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+On appelle base de l'espace tout triplet $\left(\ve{i},\ve{j},\ve{k}\right)$ de vecteurs non coplanaires de $\vE$.  
+On appelle repère de l'espace, la donnée d'un quadruplet $\left(O\,;\,\ve{i},\ve{j},\ve{k}\right)$ où $O$ est un point de $\E$ appelé origine du repère et $\left(\ve{i},\ve{j},\ve{k}\right)$ une base de l'espace.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+On considère $\left(O\,;\,\ve{i},\ve{j},\ve{k}\right)$ un repère de l'espace.  
+Pour tout point $M$ de l'espace il existe un unique triplet $(x\,;\,y\,;\,z)$ de réels tels que  
+$$\ve{OM}=x\ve{i}+y\ve{j}+z\ve{k}.$$  
+
+1. On dit alors que $M$ a pour coordonnées $(x,y,z)$ où $x$ est l'abscisse de $M$, $y$ son ordonnée et $z$ sa cote.  
+2. Pour tout $\ve{u} \in \vE$ tel que $\ve{u}=\ve{OM}$,  
+$$\ve{u}=x\ve{i}+y\ve{j}+z\ve{k}.$$  
+On note alors $\ve{u}\begin{pmatrix}x\\y\\z\end{pmatrix}$ ou $\ve{u}(x\,;\,y\,;\,z)$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soit $\ve{w}$ un vecteur de l'espace, $O$ un point de l'espace et $M$ le point de l'espace tel que $\ve{w}=\ve{OM}$. On note $M'$ le projeté de $M$ sur $\left(O\,;\,\ve{i},\ve{j}\right)$ parallèlement à $\left(O\,;\,\ve{k}\right)$.  
+On a alors $\ve{OM}=\ve{OM'}+\ve{M'M}$.  
+Or $\ve{M'M}$ est colinéaire à $\ve{k}$, donc il existe un réel $z$ tel que $\ve{M'M}=z\ve{k}$.  
+Comme $M' \in \left(O\,;\,\ve{i},\ve{j}\right)$, alors il existe $x,y \in \R$ tels que $\ve{OM'}=x\ve{i}+y\ve{j}$.  
+D'où le résultat. L'unicité du triplet est une conséquence de l'unicité du point $M$.
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Il existe d'autres types de coordonnées, comme par exemple les coordonnées sphériques (celles utilisées pour repérer un point sur terre).
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+On considère un cube $ABCDEFGH$.
+
+1. Justifier que $\left(\ve{AB},\ve{AE},\ve{AD}\right)$ est une base de l'espace.  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Les trois vecteurs $\ve{AB}$, $\ve{AE}$ et $\ve{AD}$ ne sont pas coplanaires, donc ils forment une base de l’espace.
+</details>
+
+2. Déterminer les coordonnées des vecteurs $\ve{AH}$ et $\ve{AG}$.  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Dans le repère $\left(A\,;\,\ve{AB},\ve{AE},\ve{AD}\right)$ :  
+$H$ a pour coordonnées $(0,1,1)$, donc $\ve{AH}(0,1,1)$.  
+De plus, $G$ a pour coordonnées $(1,1,1)$, donc $\ve{AG}(1,1,1)$.
+</details>
+:::
+
+---
+
+### Calculs et coordonnées
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soit $\left(O\,;\,\ve{i},\ve{j},\ve{k}\right)$ un repère de l'espace.  
+On considère $A(x_A,y_A,z_A)$ et $B(x_B,y_B,z_B)$ deux points de $\E$, $\ve{u}\begin{pmatrix}x\\y\\z\end{pmatrix}$ et $\ve{v}\begin{pmatrix}x'\\y'\\z'\end{pmatrix}$ deux vecteurs de $\vE$ et $k \in \R$.  
+
+Alors  
+
+$$\ve{AB}\begin{pmatrix}x_B-x_A\\y_B-y_A\\z_B-z_A\end{pmatrix} \qquad
+\ve{u}+\ve{v}\begin{pmatrix}x+x'\\y+y'\\z+z'\end{pmatrix} \qquad
+k\ve{u}\begin{pmatrix}kx\\ky\\kz\end{pmatrix}$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Les démonstrations sont faciles et sont uniquement basées sur la définition des coordonnées d'un point et d'un vecteur dans un repère.
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Soit $\left(O\,;\,\ve{i},\ve{j},\ve{k}\right)$ un repère de l'espace et $A(2,-5,3)$, $B(-1,3,1)$ deux points de l'espace.
+
+1. Déterminer les coordonnées de $\ve{AB}$  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$\ve{AB}\begin{pmatrix}
+-1-2\\
+3-(-5)\\
+1-3
+\end{pmatrix}
+= \begin{pmatrix}
+-3\\8\\-2
+\end{pmatrix}$
+</details>
+
+2. Déterminer les coordonnées de $C$ vérifiant $\ve{AC}=2\ve{CB}$  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$$\left\{\begin{array}{l}
+x_C-2=2(-1-x_C)\\
+y_C-(-5)=2(3-y_C)\\
+z_C-3=2(1-z_C)
+\end{array}\right.
+\Longleftrightarrow
+\left\{\begin{array}{l}
+x_C=0\\
+y_C=\frac{1}{3}\\
+z_C=\frac{5}{3}
+\end{array}\right.$$
+
+Donc $C\left(0\,;\,\frac{1}{3}\,;\,\frac{5}{3}\right)$
+</details>
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+On considère $\ve{u}\begin{pmatrix}1\\1\\1\end{pmatrix}$, $\ve{v}\begin{pmatrix}-1\\1\\0\end{pmatrix}$ et $\ve{w}\begin{pmatrix}1\\0\\1\end{pmatrix}$.  
+Montrer que ces vecteurs ne sont pas coplanaires.
+
+On considère $a,b,c \in \R$ tels que $a\ve{u}+b\ve{v}+c\ve{w}=\ve{0}$.
+
+$$a\ve{u}+b\ve{v}+c\ve{w}=\ve{0}\Longleftrightarrow
+\left\{\begin{array}{l}
+a-b+c=0\\
+a+b=0\\
+a+c=0
+\end{array}\right.
+\Longleftrightarrow
+\left\{\begin{array}{l}
+a=0\\
+b=0\\
+c=0
+\end{array}\right.$$
+
+On déduit alors que les trois vecteurs sont linéairement indépendants. Ils forment donc une base de l'espace.
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="vecteur_espace.html">⬅️</a>
+  <a class="next" href="droite_plan.html">➡️</a>
+</div>

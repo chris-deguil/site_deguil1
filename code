@@ -1,0 +1,42 @@
+<div style="text-align: center;">
+  <img src="../../image/maths/NombreDerivee_limite_taux1.png" style="width:49%; margin-right:5%">
+  <img src="../../image/maths/NombreDerivee_limite_taux2.png" style="width: 49%;">
+</div>
+
+
+<div style="text-align: center;">
+  <img src="../../image/maths/NombreDerivee_limite_taux1.png" style="width: 49%;">
+</div>
+
+
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+
+:::
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+
+:::
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+</details>
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+
+</details>
