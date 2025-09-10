@@ -131,13 +131,13 @@ Soit $ABCDEFGH$ un cube. Soit $Q$ le milieu de $[BC]$.  Déterminons l'intersect
 
 Ainsi
 $$
-\left. \begin{array}{l}
+\left \{ \begin{array}{l}
 I = (AQ) \cap (DC)\\
 J =(FQ) \cap (GC)
-\end{array} \right\} \text{ Donc } \left. \begin{array}{l}
+\end{array} \right.  \quad \text{ Donc } \quad \left \{ \begin{array}{l}
 I \in (AQF) \cap (DCG)\\
 J \in (FQA) \cap (GCG)
-\end{array} \right\}
+\end{array} \right .
 $$
 
 <div style="text-align: center;">

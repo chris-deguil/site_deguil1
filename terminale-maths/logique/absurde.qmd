@@ -43,8 +43,9 @@ $(d)$ étant la tangente au cercle, elle admet donc $A$ comme unique point d’i
 Supposons par l’absurde que cette droite ne soit pas perpendiculaire à $(OA)$.<br>
 On note $H$ le projeté orthogonal de $O$ sur $(d)$. Par hypothèse, les points $H$ et $A$ sont distincts.
 
-**INSERTION IMAGE**
-
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap0_Logique_logique_tangente_cercle.png" style="width: 49%;">
+</div>
 Soit $B$ le symétrique de $A$ par rapport à $H$, on a alors $OA = OB$ (propriété de la médiatrice), autrement dit $B$ est un point du cercle.  
 Le point $B$ appartient également à $(d)$ (puisque $(OH) \perp (d)$).  
 Ainsi $(d)$ a deux points d’intersection distincts avec le cercle, ce qui est absurde puisqu’on a, comme hypothèse de départ, un seul point d’intersection.<br>
@@ -68,7 +69,7 @@ On en déduit par l’absurde que la décomposition est unique.
 :::
 
 
-
+<iframe src="https://www.yout-ube.com/watch?v=-R58StXNi0c" title=" cassou math prepar raisonnement" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
 
 <div class="nav-pages">
   <a class="prev" href="disjonctions.html">⬅️</a>

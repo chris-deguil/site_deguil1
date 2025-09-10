@@ -163,7 +163,7 @@ website:
             - terminale-maths/espace1/historique.qmd
             - terminale-maths/espace1/vecteur_espace.qmd
             - terminale-maths/espace1/repere_espace.qmd
-            - terminale-maths/espace1/droite_espace.qmd
+            - terminale-maths/espace1/droite_plan.qmd
             - terminale-maths/espace1/position.qmd
             - terminale-maths/espace1/parallele.qmd
             - terminale-maths/espace1/representation.qmd
@@ -187,4 +187,5 @@ format:
     mermaid:
       theme: forest 
 
-
+execute:
+  freeze: auto

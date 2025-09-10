@@ -39,6 +39,7 @@ Il se décompose en trois étapes :
 
 1. **Initialisation :**  
    C'est l'étape où l'on prouve que la proposition est vraie au départ (au rang $n_0$).  
+   
    Il faut donc démontrer : $P_{n_0}$ vraie.
 
 2. **Hérédité :**  
@@ -49,7 +50,7 @@ Il se décompose en trois étapes :
    On dit alors que la propriété est **héréditaire**.
 
 3. **Conclusion :**  
-   On a $P_0$ et $\forall \, k \in \N, \, (P_k \Longrightarrow P_{k+1})$ vraie (il s'agit de l’hérédité).  
+   On a $P_{n_0}$ et $\forall \, k \in \N, \, (P_k \Longrightarrow P_{k+1})$ vraie (il s'agit de l’hérédité).  
    On déduit que $\forall \, n \in \N, \, P_n$ est vraie.
 :::
 
