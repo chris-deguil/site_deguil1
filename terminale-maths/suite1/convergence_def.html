@@ -345,7 +345,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/convergence_prop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Théorèmes de convergence</span></a>
+ <span class="menu-text">Propriété s de convergence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -544,7 +544,7 @@ C’est-à-dire que tout intervalle ouvert contenant <span class="math inline">\
 <p><strong>Interprétation graphique</strong><br>
 Si on représente une suite convergente vers <span class="math inline">\(l\)</span> par un nuage de points dans un repère, à partir d’un certain rang <span class="math inline">\(n_0\)</span>, tous les points sont dans la bande délimitée par les droites d’équation <span class="math inline">\(y= l -\epsilon\)</span> et <span class="math inline">\(y=l + \epsilon\)</span>.</p>
 <div style="text-align:center;">
-<p><img src="../../image/maths_term/Chap1_Recurrence_suite_convergente.png" alt="" width="40%/"></p>
+<p><img src="../../image/maths_term/Chap1_Recurrence_suite_convergente.png" alt="" width="60%/"></p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemples : </span></p>
@@ -591,7 +591,7 @@ On considère la suite <span class="math inline">\((u_n)\)</span> définie par <
 <section id="propriétés" class="level3">
 <h3 class="anchored" data-anchor-id="propriétés">Propriétés</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br>
+<p><span class="bloc-titre">Propriété : </span><br>
 Toute suite convergente est bornée.</p>
 </div>
 <details class="bloc demo">
@@ -614,13 +614,17 @@ Soit la suite croissante <span class="math inline">\((u_n)\)</span> définie par
 <summary>
 Afficher la correction
 </summary>
-Raisonnons par l’absurde et supposons qu’elle soit majorée : <span class="math inline">\(\exists L\in\R\)</span> tel que <span class="math inline">\(\forall n,\ u_n \le L\)</span>.<br>
-Soit <span class="math inline">\(n_0\)</span> tel que <span class="math inline">\(u_{n_0}=L\)</span> (ou au moins <span class="math inline">\(u_{n_0}\le L\)</span>). Pour <span class="math inline">\(n&gt;n_0\)</span>, la fonction <span class="math inline">\(f(x)=3x^2+1\)</span> étant croissante sur <span class="math inline">\(\R^+\)</span>, on a <span class="math inline">\(u_n=f(n)&gt;f(n_0)=u_{n_0}\ge L\)</span>, contradiction.<br>
-Ainsi <span class="math inline">\((u_n)\)</span> n’est pas majorée. Étant croissante et non majorée, elle ne converge pas.
+<p>On raisonne par l’absurde et on suppose que la suite est majorée, donc il existe <span class="math inline">\(L\)</span> tel que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(u_n \leqslant L\)</span>.</p>
+<p>Or <span class="math display">\[u_n &gt; L \Longleftrightarrow 3n^2+1 &gt; L \Longleftrightarrow n &gt; \sqrt{\frac{L-1}{3}}\]</span></p>
+<p>On pose alors <span class="math inline">\(n_0 = \text{Ent}\left(\sqrt{\frac{L-1}{3}}\right)+1\)</span></p>
+<p>La fonction associée à <span class="math inline">\((u_n)\)</span> étant strictement croissante, on a<br>
+<span class="math display">\[\forall  n \geqslant n_0, \,   u_n \geqslant u_{n_0}\]</span></p>
+<p>Donc la suite <span class="math inline">\(u_n &gt; L\)</span></p>
+<p>La suite n’est donc pas majorée, donc elle ne converge pas.</p>
 </details>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br>
+<p><span class="bloc-titre">Propriété : </span><br>
 Si une suite <span class="math inline">\((u_n)\)</span> converge vers un réel <span class="math inline">\(l\)</span>, alors ce réel <span class="math inline">\(l\)</span> est unique.</p>
 </div>
 <details class="bloc demo">
@@ -645,7 +649,7 @@ Que peut-on dire de la suite <span class="math inline">\(u_n=\cos(\pi n)\)</span
 <p>La suite alterne entre <span class="math inline">\(1\)</span> et <span class="math inline">\(-1\)</span> et ne peut donc pas converger vers une unique limite. Elle ne converge pas.</p>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème (admis) : </span><br>
+<p><span class="bloc-titre">Propriété (admis) : </span><br>
 Soit <span class="math inline">\(k \in \N^*\)</span>, alors <span class="math display">\[
 \lim_{n \to +\infty} \frac{1}{n^k} = 0
 \quad \text{et} \quad

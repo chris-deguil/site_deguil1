@@ -345,7 +345,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/convergence_prop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Théorèmes de convergence</span></a>
+ <span class="menu-text">Propriété s de convergence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -541,9 +541,10 @@ window.Quarto = {
 <p><strong>Illustration graphique :</strong><br>
 On a représenté ci-dessous une suite <span class="math inline">\(\left(u_n\right)\)</span> ayant une limite égale à <span class="math inline">\(+\infty\)</span>.</p>
 <div style="text-align:center;">
-<p><img src="../../image/maths_term/divergence.png" alt="" width="40%/"></p>
+<p><img src="../../image/maths_term/divergence.png" alt="" width="60%/"></p>
 </div>
 <div class="bloc ex">
+<p><span class="bloc-titre">Exemple : </span></p>
 <p>Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = n^2 + 1\)</span>. Déterminons la limite de la suite <span class="math inline">\((u_n)\)</span>.</p>
 <p>Soit <span class="math inline">\(A &gt; 1\)</span>, alors</p>
 <p><span class="math display">\[
@@ -556,6 +557,7 @@ n^2 + 1 &gt; A \Longleftrightarrow n &gt; \sqrt{A - 1}.
 \]</span></p>
 </div>
 <div class="bloc thm">
+<p><span class="bloc-titre">Propriété :</span></p>
 <ol type="1">
 <li>Toute suite croissante non majorée diverge vers <span class="math inline">\(+\infty\)</span>.<br>
 </li>
@@ -572,8 +574,8 @@ Démonstration :
 Donc, on a prouvé qu’à partir du rang <span class="math inline">\(p\)</span>, tous les termes de la suite sont supérieurs à <span class="math inline">\(A\)</span>. Ce qui donne le résultat.
 </details>
 <div class="bloc thm">
-<p><em>(admis)</em><br>
-Soit <span class="math inline">\(p \in \N^*\)</span>, alors</p>
+<p><span class="bloc-titre">Propriété (admis) :</span></p>
+<p>Soit <span class="math inline">\(p \in \N^*\)</span>, alors</p>
 <p><span class="math display">\[
 \lim_{n \to +\infty} n^p = +\infty \quad \et \quad \lim_{n \to +\infty} \sqrt{n} = +\infty.
 \]</span></p>
@@ -581,6 +583,7 @@ Soit <span class="math inline">\(p \in \N^*\)</span>, alors</p>
 <section id="limites-par-comparaison" class="level3">
 <h3 class="anchored" data-anchor-id="limites-par-comparaison">Limites par comparaison</h3>
 <div class="bloc thm">
+<p><span class="bloc-titre">Propriété :</span></p>
 <p>Soit <span class="math inline">\((u_n)\)</span> et <span class="math inline">\((v_n)\)</span> deux suites. Supposons qu’il existe <span class="math inline">\(n_0 \in \N\)</span> tel que pour tout <span class="math inline">\(n \geqslant n_0\)</span>, <span class="math inline">\(u_n \leqslant v_n\)</span>.</p>
 <ul>
 <li>Si <span class="math inline">\(\lim_{n \to +\infty} u_n = +\infty\)</span>, alors <span class="math inline">\(\lim_{n \to +\infty} v_n = +\infty\)</span>.<br>
@@ -598,6 +601,7 @@ Démonstration :
 On en déduit que <span class="math inline">\(I\)</span> contient tous les termes <span class="math inline">\(v_n\)</span> à partir du rang <span class="math inline">\(n_0\)</span>. Donc <span class="math inline">\(\lim_{n \to +\infty} v_n = +\infty\)</span>.
 </details>
 <div class="bloc ex">
+<p><span class="bloc-titre">Exemple :</span></p>
 <p>Soit <span class="math inline">\((u_n)\)</span> une suite définie par <span class="math inline">\(u_n = -2n^4 + \sin(n)\)</span>. Déterminons sa limite.</p>
 <details class="bloc cor">
 <summary>
