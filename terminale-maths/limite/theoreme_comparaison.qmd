@@ -1,0 +1,179 @@
+---
+title: "Théorèmes d'encadrtement et de comparaison"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Encadrer ou comparer pour déterminer des limites."
+order: 10
+---
+
+### Théorème d'encadrement
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Théorème d'encadrement</span><br>
+On considère $f$, $g$ et $h$ trois fonctions définies sur $D = [a \, ; \, +\infty[$ et telles que $\lim_{x \to +\infty} f(x)= \lim_{x \to +\infty} g(x)=l$.
+
+Si  dans un voisinage de $+\infty$ on a $f \leqslant h \leqslant g$ alors $$\lim_{x \to +\infty} h(x) = l$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soit $\epsilon >0$ fixé, alors il existe $x_1, x_2 \in D$ tels que 
+
+$$\forall x \in D, \, ( x \geqslant x_1 \Rightarrow \abs{f(x)-l} \leqslant \epsilon ) \qquad \et  \qquad \forall x \in D, \, ( x \geqslant x_2 \Rightarrow \abs{g(x)-l} \leqslant \epsilon)$$
+
+Ainsi pour $x \geqslant x_1$ et $x \geqslant x_2$ on a 
+$$l-\epsilon \leqslant f(x) \qquad \text{ et } \qquad g(x) \leqslant l + \epsilon$$
+
+De plus, 
+$$\exists x_3\in D, \,( x \geqslant x_3 \Rightarrow f(x) \leqslant h(x) \leqslant g(x))$$
+
+Soit $x_{max} = \max\{x_1, x_2, x_3\}$, alors 
+$$\forall x \geqslant x_{max}, \quad l- \epsilon \leqslant f(x) \leqslant h(x) \leqslant g(x) \leqslant l + \epsilon$$
+
+Ce qui est la définition de $$\lim_{x \to +\infty} h(x) = l$$
+
+</details>
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+On considère la fonction $f$ définie sur $\R^*_+$ par $f(x)= \frac{5\cos(x)}{x}$. 
+
+Déterminons la limite en $+\infty$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout réel $x>0$, 
+$$ -1 \leqslant \cos(x) \leqslant 1 \Longrightarrow -5 \leqslant 5 \cos(x) \leqslant 5 \Longrightarrow\frac{-5}{x} \leqslant f(x) \leqslant \frac{5}{x}$$
+
+Or $$\lim_{x \to +\infty} \frac{5}{x} = \lim_{x \to +\infty} \frac{-5}{x} = 0$$
+On déduit du théorème d'encadrement que 
+$$\lim_{x \to +\infty} f(x) = 0$$
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap4_Limite_figure16.png" style="width: 40%;">
+</div>
+</details>
+:::
+
+
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+
+
+:::
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+</details>
+
+
+
+
+
+### Théorème de comparaison
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soient $f$ et $g$ deux fonctions définies au voisinage de $+\infty$ telles que $\lim_{x \to + \infty}f(x) = +\infty$.
+
+S'il existe un réel $a$ tel que pour tout $x \in ]a\, ; \, +\infty[, \, f(x) \leqslant g(x)$ alors $$\lim_{x \to +\infty} g(x) = +\infty$$
+
+:::
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soit $A$ un réel quelconque. Nous cherchons à trouver un réel $B'$ tel que si $x > B'$, alors $g(x) > A$.
+
+On a $$\displaystyle \lim_{x\to +\infty} f(x) = +\infty$$
+Par définition, pour le $A$ fixé, il existe un réel $B$ tel que :
+    
+$$x > B \implies f(x) > A $$
+
+Or pour tout $x >a$, $f(x) \le g(x)$.
+
+Soit alors $B' = \max(a, B)$ :
+    
+Soit $x > B'$, alors $x > B$, et on a alors
+    $$$g(x) \ge f(x) \et  f(x) > A$$
+    Par transitivité de l'inégalité, nous obtenons :
+    $$
+    x > B' \implies g(x) > A
+    $$
+
+Conclusion :
+
+Nous avons montré que pour tout réel $A$, il existe un réel $B'$ tel que si $x > B'$, alors $g(x) > A$. Par conséquent, par définition :
+    $$
+    \lim_{x\to +\infty} g(x) = +\infty
+    $$
+</details>
+
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+Soient $f$ et $g$ les fonctions définies respectivement par $f(x)=x+1$ et $g(x)=\e^x$ sur $\R$.
+
+Déterminer $\lim_{x \to +\infty} \e^x$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+La droite d'équation $y=x+1$ est la tangente au point d'abscisse $0$ à la représentation graphique de la fonction exponentielle.
+
+La fonction exponentielle étant convexe sur $\R$, on déduit que pour tout réel $x$,
+$$x+1 \leqslant \e^x.$$
+Or $\lim_{x \to +\infty} (x+1) = +\infty$.\\
+Par comparaison, on déduit que $$\lim_{x \to +\infty} \e^x = +\infty.$$
+</details>
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Prolongement des inégalités</span><br>
+Soient $f$ et $g$ deux fonctions définies au voisinage de $\pm\infty$ et ayant pour limites respectives $l$ et $l'$.
+
+S'il existe $x_0$, tel que $\forall x \geqslant x_0, \, f(x) < g(x)$ alors 
+
+$$l \leqslant l'$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On raisonne par l'absurde.
+
+On suppose que $l > l'$, alors $l-l' >0$.
+
+Donc par définition dans un voisinage de $\infty$, la fonction $f-g$ est positive ce qui est exclu par hypothèse.
+
+</details>
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Par passage à la limite, on passe d'inégalités strictes à des inégalités larges.
+:::
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="operations_limites.html">⬅️</a>
+  <a class="next" href="limite_exponentielle.html">➡️</a>
+</div>

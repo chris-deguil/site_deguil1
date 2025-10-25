@@ -1,0 +1,225 @@
+---
+title: "Opérations sur les limites"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Somme, produit, quotient, composée "
+order: 9
+---
+
+
+### Somme de limites
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Somme de limites</span><br>
+$$
+\begin{array}{|m{4cm}|*{6}{c|}}
+\hline
+\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= & \ell & \ell & \ell & +\infty & -\infty & +\infty \\
+\hline
+\text{et } \displaystyle \lim_{x\to \alpha}v(x)= & \ell ' & +\infty & -\infty & +\infty & -\infty & -\infty \\
+\hline
+\text{alors par somme } \displaystyle \lim_{x\to \alpha}(u+v)(x)= & \ell + \ell ' & +\infty & -\infty & +\infty & -\infty & \textcolor{red}{\text{F.I}} \\
+\hline
+\end{array}
+$$
+
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+\textbf{F.I.} signifiant forme indéterminée. Ce qui signifie que sans \og traitement \fg on ne peut pas donner la limite de la fonction au point considéré.
+
+Dans ces conditions, il faut lever l'indétermination grâce au calcul pour un autre théorème.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+Soit $f$ la fonction définie sur $]0 ; +\infty[$ par $f(x)=x^2-1+\dfrac{1}{x}$.
+
+1. Montrer que la fonction admet l'axe des ordonnées comme asymptote
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+$$\displaystyle \lim_{\underset{x>0}{x\to 0}}x^2-1=-1 \et \displaystyle \lim_{\underset{x>0}{x\to 0}}\dfrac{1}{x}=+\infty$$ donc, par somme, $$\displaystyle \lim_{\underset{x>0}{x\to 0}}f(x)=+\infty$.$ 
+
+	La courbe représentative de la fonction $f$ admet pour asymptote l'axe des ordonnées.
+</details>
+   
+2. Déterminer la limite en $+\infty$
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+    $$\displaystyle \lim_{x\to +\infty}x^2-1=+\infty \et \displaystyle \lim_{x\to +\infty}\dfrac{1}{x}=0$$
+
+    donc, par somme, $$\displaystyle \lim_{x\to +\infty}f(x)=+\infty$$
+</details>
+
+:::
+
+
+
+### Produit de limites
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : Produit de limites</span>
+
+$$
+\begin{array}{|m{4cm}|c|c|c|c|}
+\hline
+\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= & \ell & \ell \ne 0 & +\infty \text{ ou } -\infty & 0 \\
+\hline
+\text{et } \displaystyle \lim_{x\to \alpha}v(x)= & \ell ' & +\infty \text{ ou } -\infty & +\infty \text{ ou } -\infty & +\infty \text{ ou } -\infty \\
+\hline
+\text{alors par produit } \displaystyle \lim_{x\to \alpha}(u \times v)(x)= & \ell \times \ell ' & \pm\infty & \pm\infty & \textcolor{red}{\text{F.I.}} \\
+\hline
+\end{array}$$
+
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+Soit $f$ la fonction définie sur $]0 ; +\infty[$ par $f(x)=x^2\times \left(\dfrac{1}{x}-1\right)$.
+
+Déterminer les limites aux bornes de l'ensemble de définition
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+- $\lim_{\underset{x>0}{x\to 0}} x^2=0 \et  \lim_{\underset{x>0}{x\to 0}} \left(\dfrac{1}{x}-1\right)=+\infty$. 
+  
+  (Nous sommes en présence de la forme indéterminée  \og $0\times \infty$ \fg.)
+
+
+	Pour tout réel $x$ non nul, $$x^2\times \left(\dfrac{1}{x}-1\right)=x- x^2$$
+
+	De plus $$\displaystyle \lim_{\underset{x>0}{x\to 0}} x- x^2=0$$
+      On en déduit que $$\displaystyle \lim_{\underset{x>0}{x\to 0}}f(x)=0$$
+- $\displaystyle \lim_{x\to +\infty} x^2 = +\infty \et \displaystyle \lim_{x\to +\infty}\left(\dfrac{1}{x}-1\right)=-1$ 
+
+donc, par produit,  $$\displaystyle \lim_{x\to +\infty}f(x)=-\infty$$
+
+</details>
+
+
+:::
+
+
+
+
+
+
+
+### Quotient de limites
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : Quotient de limites </span><br>
+
+$$
+\renewcommand{\arraystretch}{1.8}
+\begin{array}{|m{3cm}|c|c|c|c|c|c|}
+\hline
+\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= & \ell & \ell \ne 0 & \ell & +\infty \text{ ou } -\infty & 0 & +\infty \text{ ou } -\infty \\ 
+\hline
+\text{et } \displaystyle \lim_{x\to \alpha}v(x)= & \ell ' \ne 0 & 0 & +\infty \text{ ou } -\infty & \ell ' & 0 & +\infty \text{ ou } -\infty \\ 
+\hline
+\text{alors par quotient } \displaystyle \lim_{x\to \alpha}\left(\dfrac{u}{v} \right)(x)= & \dfrac{\ell}{ \ell '} & \pm\infty & 0 & \pm\infty & \textcolor{red}{\text{F.I.}} & \textcolor{red}{\text{F.I.}} \\ 
+\hline
+\end{array}
+$$
+
+:::
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+Soit $f$ la fonction définie sur $]1 ; +\infty[$ par $f(x)=\dfrac{x^3-1}{x^2-1}$.
+
+Déterminer les limites aux bornes de l'ensemble de définition
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+- $\lim_{x\to 1}x^3-1=0 \et \lim_{x\to 1}x^2-1=0$. 
+Nous sommes en présence de la forme indéterminée \og $\dfrac{0}{0}$ \fg.
+
+Or pour tout réel $x \ne 1$, 
+
+$$\dfrac{x^3-1}{x^2-1} = \dfrac{(x-1)(x^2+x+1)}{(x-1)(x+1)} = \dfrac{x^2+x+1}{x+1}$$
+
+Comme 
+
+$$\displaystyle \lim_{x\to 1}\dfrac{x^2+x+1}{x+1}=\dfrac{3}{2}$$ 
+    
+nous pouvons conclure que, $$\displaystyle \lim_{x\to 1}f(x)=\dfrac{3}{2}$$
+
+- $\displaystyle \lim_{x\to +\infty} x^3-1 = +\infty \et \displaystyle \lim_{x\to +\infty}x^2-1=+\infty$. 
+
+Nous sommes en présence de la forme indéterminée \og $\dfrac{\infty}{\infty}$\fg.
+
+Or pour pour tout réel $x \ne 0$, 
+    
+$$\dfrac{x^3-1}{x^2-1} =\dfrac{x^3\left(1-\dfrac{1}{x^3}\right)}{x^2\left(1-\dfrac{1}{x^2}\right)}=\dfrac{x\left(1-\dfrac{1}{x^3}\right)}{1-\dfrac{1}{x^2}}$$ 
+
+Comme 
+$$\displaystyle \lim_{x\to +\infty}x\left(1-\dfrac{1}{x^3}\right)=+\infty \et \displaystyle \lim_{x\to +\infty}1-\dfrac{1}{x^2}=1$$ 
+
+il s'ensuit que 	$$\displaystyle \lim_{x\to +\infty}f(x)=+\infty$$ 
+
+</details>
+:::
+
+
+
+
+
+
+### Composée de limites
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Théorème de composition des limites</span><br>
+Soit $a,b,c \in \R \cup \{-\infty ; +\infty\}$. 
+
+Si $$\lim_{x \to a} f(x)=b \et \lim_{x \to b} g(x)= c$$ alors $$\lim_{x \to a} (g \circ f)(x) = c$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On considère le cas $a,b,c \in \R$. Par hypothèse on a successivement :
+
+$$\forall \epsilon >0, \; \exists \delta  >0, \forall x \in \R,\; (\abs{f(x)-b} \leqslant \delta  \Rightarrow \abs{(g \circ f)(x)-c} \leqslant \epsilon)$$
+
+
+et
+
+$$\forall \epsilon' >0, \; \exists \delta'  >0, \forall y \in \R, \; (\abs{x-a} \leqslant \epsilon' \Rightarrow \abs{f(x)-b} \leqslant \delta')$$
+
+Ainsi, en prenant $\epsilon'=\delta$, on a 
+
+$$\forall \epsilon >0, \; \exists \delta, \; \forall x \in I, \; (\abs{x-a} \leqslant \delta  \Rightarrow \abs{g(f(x))-c} \leqslant\epsilon)$$
+</details>
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+Soit $f:x \longmapsto \exp\left(\sqrt{1+\frac{1}{x^2}}\right)$ définie sur $\R^*$. 
+
+Déterminons la limite en $0^+$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$$
+\left. \begin{array}{lll}
+\left . \begin{array}{l}
+\lim_{x \to 0^+} 1+\frac{1}{x^2} = + \infty\\
+\lim_{y \to +\infty} \sqrt{y} = +\infty
+\end{array} \right\} \text{ Par composition } &\lim_{x \to 0^+} \sqrt{1+\frac{1}{x^2}} = + \infty&    \\
+  &\lim_{y \to +\infty} \e^{y} = +\infty &  \end{array} \right\} \text{ Par composition } \lim_{x \to 0^+} f(x) = + \infty$$
+
+</details>
+
+:::
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="limite_infinie_en_a.html">⬅️</a>
+  <a class="next" href="theoreme_comparaison.html">➡️</a>
+</div>

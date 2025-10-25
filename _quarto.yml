@@ -168,6 +168,29 @@ website:
             - terminale-maths/espace1/parallele.qmd
             - terminale-maths/espace1/representation.qmd
 
+        - section: "Fonction : Limites"
+          contents:
+            - terminale-maths/limite/index.qmd
+            - terminale-maths/limite/historique.qmd
+            - terminale-maths/limite/limite_infini_infinie.qmd
+            - terminale-maths/limite/limite_finie_infinie.qmd
+            - terminale-maths/limite/limite_asymptote.qmd
+            - terminale-maths/limite/limite_en_a.qmd
+            - terminale-maths/limite/limite_en_a_propriete.qmd
+            - terminale-maths/limite/limite_gauche_droite.qmd
+            - terminale-maths/limite/limite_infinie_en_a.qmd
+            - terminale-maths/limite/operations_limites.qmd
+            - terminale-maths/limite/theoreme_comparaison.qmd
+            - terminale-maths/limite/limite_exponentielle.qmd
+
+
+
+        - section: "Fonction : Continuités"
+          contents:
+            - terminale-maths/limite/index.qmd
+            - terminale-maths/limite/historique.qmd
+
+            
 format:
   html:
     include-in-header:

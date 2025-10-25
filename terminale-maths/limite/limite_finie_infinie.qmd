@@ -1,0 +1,113 @@
+---
+title: "Limite finie en l'infinie"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Notion de limite"
+order: 3
+---
+
+
+## Limite finie
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+Soit $l \in \R$ et $f$ une fonction définie sur $D_f$. 
+
+On dit que $f$ admet une limite finie $l$ en $+\infty$ (resp. $-\infty$) et on note $$\lim_{x \to +\infty} f(x)= l \quad \left( \text{resp. } \lim_{x \to -\infty} f(x)= l\right)$$
+lorsque 
+$$\forall \epsilon > 0, \, \exists x_0 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_0  \Rightarrow \abs{f(x)-l} \leqslant \epsilon) \quad \left(\text{resp. } (x \leqslant x_0  \Rightarrow \abs{f(x)-l} \leqslant \epsilon) \right) $$
+:::
+
+
+::: {.bloc .ex}
+Soit $f:x \longmapsto (2x+3)\e^{-0,63x}-2$
+
+<span class="bloc-titre">Illustration : </span>
+   <div style="text-align:center;">
+  <img src="../../image/maths_term/Chap4_Limite_figure2.png" alt="" width="40%/"style="margin-right:20px">
+    <img src="../../image/maths_term/Chap4_Limite_figure3.png" alt="" width="40%/">
+
+</div> 
+
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Unicité de la limite</span><br>
+Soit $f$ une fonction admettant une limite finie $l$ en $\pm \infty$.
+%c'est-à-dire  $$\lim_{x \to +\infty} f(x)= l$$
+Alors le réel $l$ est unique et ce nombre est appelé la limite de $f$ au voisinage de $\pm \infty$.
+
+:::
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On suppose qu'il existe deux limites distinctes $l$ et $l'$.
+
+Par définition on a 
+$$\forall \epsilon > 0, \, \exists x_0 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_0 \Rightarrow \abs{f(x)-l} \leqslant \epsilon)$$
+et 
+$$\forall \epsilon > 0, \, \exists x_1 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_1 \Rightarrow \abs{f(x)-l'} \leqslant \epsilon)$$
+
+Soit alors $\epsilon =\frac{\abs{l-l'}}{4}$ et $x_{max} = \max(x_0,x_1)$.
+
+Ainsi pour tout réel $x \geqslant x_{max}$,  $$\abs{l-l'} =\abs{f(x)-l' - (f(x)-l)} \leqslant \abs{f(x)-l'} + \abs{f(x)-l} \leqslant \frac{\abs{l-l'}}{4} + \frac{\abs{l-l'}}{4} = \frac{\abs{l-l'}}{2}$$
+
+Ce qui est impossible, d'où l'unicité de la limite.
+
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : Fonction inverse ou presque</span>
+Soit $f:x \longmapsto 2+\frac{1}{x}$ définie sur $\R^*$.
+
+La fonction inverse étant décroissante sur $\R^*_+$, on a $$x \geqslant x_0 \Rightarrow \frac{1}{x} \leqslant \frac{1}{x_0}$$
+
+Soit $x_0=\frac{1}{\epsilon}$, alors : $$ \forall x \in \R, \, \left(x \geqslant x_0 \Rightarrow \abs{f(x) - 2} \leqslant \frac{1}{x_0} \right) = \epsilon$$
+
+Ainsi, par définition, $\lim_{x \to +\infty} f(x) = 2$.
+
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : le cosinus </span>
+On considère la fonction $f$ définie sur $\R$ par $f(x) = \cos(\pi x)$. Montrons qu'elle n'admet pas de limite en l'infini.
+
+Si la fonction admet une limite alors elle est unique et $$\lim_{x \to +\infty} \cos( \pi x) = l$$
+
+
+- On considère les $x_n=2n$, alors $\cos(\pi x) = \cos(2 \pi n) = 1$, ainsi $$\lim_{n \to +\infty} \cos(2 n \pi) = 1.$$
+- On considère les $y_n=2n+1$, alors $\cos(\pi x) = \cos(2 \pi n +\pi) = \cos(\pi) = -1$, ainsi $$\lim_{n \to +\infty} \cos(2 n \pi + \pi) = -1.$$
+
+
+La fonction admettant alors deux limites en l'infini, elle ne peut en admettre aucune.
+
+:::
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+On considère $n \in \N^*$
+
+$$\lim_{x \to +\infty} \frac{1}{x^n}= 0  \qquad \lim_{x \to + \infty} \frac{1}{\sqrt{x}}= 0    \qquad \qquad\lim_{x \to - \infty} \frac{1}{x^n} = \left\{\begin{array}{l}
+0^+, \text{ si } n \text{ pair}\\
+0^-, \text{ si } n \text{ impair}\\
+\end{array} \right.$$
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap4_Limite_figure4.png" style="width: 49%;">
+</div>
+On parle de $0^+$ et $0^-$. En effet, il s'agit de savoir si on s'approche de $0$ par des valeurs inférieures ou de $0$ par des valeurs supérieures.
+:::
+
+<div class="nav-pages">
+ <a class="prev" href="limite_infini_infinie.html">⬅️</a>
+  <a class="next" href="limite_asymptote.html">➡️</a>
+</div>

@@ -17,7 +17,7 @@ Dans cette partie, on considère $(u_n)$ et $(v_n)$ deux suites et $l$ et $l'$ d
 F.I. signifie Forme Indéterminée.
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème (admis) : </span>  
+<span class="bloc-titre">Propriété  (admis) : </span>  
 
 
 | $\lim_{n\rightarrow +\infty} u_n$ | $l$ | $l$ | $l$ | $+\infty$ | $-\infty$ | $+\infty$ |
@@ -27,7 +27,7 @@ F.I. signifie Forme Indéterminée.
 :::
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème (admis) : </span>  
+<span class="bloc-titre">Propriété  (admis) : </span>  
 
 
 | $\lim_{n\rightarrow +\infty} u_n$ | $l$ | $l \neq 0$ | $\infty$ | $0$ |
@@ -37,7 +37,7 @@ F.I. signifie Forme Indéterminée.
 :::
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème (admis) : </span>  
+<span class="bloc-titre">Propriété  (admis) : </span>  
 
  On suppose que $v_n$ ne s'annule pas.
 

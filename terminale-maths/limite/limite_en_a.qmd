@@ -1,0 +1,60 @@
+---
+title: "Limite en $x_0$"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Limite en un point"
+order: 5
+---
+
+## Notion de limite en $x_0$
+
+
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+Soit $x_0$ un réel fini. La limite d’une fonction $f$ en $x_0$ est la valeur vers laquelle $f(x)$ se rapproche
+quand $x$ se rapproche de $x_0$. On la note 
+
+$$\lim_{x \to x_0} f(x)$$
+:::
+
+
+
+::: {.bloc }
+On a deux cas de figure qui peuvent se présenter :
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap4_Limite_figure8.png" style="width: 40%;">
+</div>
+La limite est finie ou ne l'est pas ...
+
+:::
+
+
+___
+
+## Cas particulier : Le nombre dérivé
+
+::: {.bloc .rem}
+On pose, pour tout $x \in D_f \backslash \{x_0\}$, 
+$$\tau_{x_0}(x)=\frac{f(x)-f(x_0)}{x-x_0}$$
+Ainsi, pour $f$ dérivable en $x_0$, on a 
+$$f'(x_0) = \lim_{x \to x_0} \tau_{x_0}(x)$$
+
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+$$\lim_{x \to 0} \frac{\e^x-1}{x} = \exp'(0) = 1 \quad \text{ ; } \quad \lim_{x \to \frac{\pi}{2}} \frac{\cos(x)}{x-\frac{\pi}{2}} = \cos'\left(\frac{\pi}{2}\right) = \sin\left(\frac{\pi}{2}\right) = 1$$  
+
+:::
+
+
+<div class="nav-pages">
+ <a class="prev" href="limite_asymptote.html">⬅️</a>
+  <a class="next" href="limite_en_a_proprite.html">➡️</a>
+</div>

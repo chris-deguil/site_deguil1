@@ -42,7 +42,7 @@ C’est-à-dire que tout intervalle ouvert contenant $l$ contient tous les terme
 Si on représente une suite convergente vers $l$ par un nuage de points dans un repère, à partir d’un certain rang $n_0$, tous les points sont dans la bande délimitée par les droites d’équation $y= l -\epsilon$ et $y=l + \epsilon$.
 
    <div style="text-align:center;">
-  <img src="../../image/maths_term/Chap1_Recurrence_suite_convergente.png" alt="" width=40%/>
+  <img src="../../image/maths_term/Chap1_Recurrence_suite_convergente.png" alt="" width=60%/>
 </div> 
 
 ::: {.bloc .ex}
@@ -102,7 +102,7 @@ On obtient donc $l \in\, ]-2,0[ \cap ]0,2[\, = \emptyset$, contradiction. Ainsi,
 
 ### Propriétés
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème : </span>  
+<span class="bloc-titre">Propriété  : </span>  
 Toute suite convergente est bornée.
 :::
 
@@ -127,14 +127,25 @@ Soit la suite croissante $(u_n)$ définie par $u_n = 3n^2 + 1$. Montrons qu’el
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
-Raisonnons par l’absurde et supposons qu’elle soit majorée : $\exists L\in\R$ tel que $\forall n,\ u_n \le L$.  
-Soit $n_0$ tel que $u_{n_0}=L$ (ou au moins $u_{n_0}\le L$). Pour $n>n_0$, la fonction $f(x)=3x^2+1$ étant croissante sur $\R^+$, on a $u_n=f(n)>f(n_0)=u_{n_0}\ge L$, contradiction.  
-Ainsi $(u_n)$ n’est pas majorée. Étant croissante et non majorée, elle ne converge pas.
+On raisonne par l'absurde et on suppose que la suite est majorée, donc il existe $L$ tel que pour tout $n$, $u_n \leqslant L$.
+
+Or 
+$$u_n > L \Longleftrightarrow 3n^2+1 > L \Longleftrightarrow n > \sqrt{\frac{L-1}{3}}$$
+ 
+On pose alors $n_0 = \text{Ent}\left(\sqrt{\frac{L-1}{3}}\right)+1$
+
+La fonction associée à $(u_n)$ étant strictement croissante, on a  
+$$\forall  n \geqslant n_0, \,   u_n \geqslant u_{n_0}$$
+
+Donc la suite $u_n > L$
+  
+La suite n'est donc pas majorée, donc elle ne converge pas. 
+ 
 </details>
 :::
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème : </span>  
+<span class="bloc-titre">Propriété  : </span>  
 Si une suite $(u_n)$ converge vers un réel $l$, alors ce réel $l$ est unique.
 :::
 
@@ -163,7 +174,7 @@ La suite alterne entre $1$ et $-1$ et ne peut donc pas converger vers une unique
 :::
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème (admis) : </span>  
+<span class="bloc-titre">Propriété  (admis) : </span>  
 Soit $k \in \N^*$, alors
 $$
 \lim_{n \to +\infty} \frac{1}{n^k} = 0

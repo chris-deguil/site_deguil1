@@ -33,10 +33,12 @@ $$
 On a représenté ci-dessous une suite $\left(u_n\right)$ ayant une limite égale à $+\infty$.
 
    <div style="text-align:center;">
-  <img src="../../image/maths_term/divergence.png" alt="" width=40%/>
+  <img src="../../image/maths_term/divergence.png" alt="" width=60%/>
 </div> 
 
 ::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>  
+
 Soit $(u_n)$ définie par $u_n = n^2 + 1$. Déterminons la limite de la suite $(u_n)$.
 
 Soit $A > 1$, alors  
@@ -55,6 +57,7 @@ $$
 :::
 
 ::: {.bloc .thm}
+<span class="bloc-titre">Propriété :</span>  
 
 1. Toute suite croissante non majorée diverge vers $+\infty$.  
 2. Toute suite décroissante non minorée diverge vers $-\infty$.
@@ -72,7 +75,8 @@ Donc, on a prouvé qu'à partir du rang $p$, tous les termes de la suite sont su
 </details>
 
 ::: {.bloc .thm}
-*(admis)*  
+<span class="bloc-titre">Propriété (admis) :</span>  
+
 Soit $p \in \N^*$, alors  
 
 $$
@@ -84,6 +88,8 @@ $$
 ### Limites par comparaison
 
 ::: {.bloc .thm}
+<span class="bloc-titre">Propriété :</span>  
+
 Soit $(u_n)$ et $(v_n)$ deux suites. Supposons qu'il existe $n_0 \in \N$ tel que pour tout $n \geqslant n_0$, $u_n \leqslant v_n$.
 
 - Si $\lim_{n \to +\infty} u_n = +\infty$, alors $\lim_{n \to +\infty} v_n = +\infty$.  
@@ -102,6 +108,8 @@ On en déduit que $I$ contient tous les termes $v_n$ à partir du rang $n_0$. Do
 </details>
 
 ::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
 Soit $(u_n)$ une suite définie par $u_n = -2n^4 + \sin(n)$. Déterminons sa limite.  
 
 <details class="bloc cor"><summary>Afficher la correction</summary>

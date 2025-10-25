@@ -27,6 +27,19 @@
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété : </span><br>
 
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+
+</details>
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+
+
 :::
 
 
@@ -36,7 +49,10 @@
 
 
 
-<details class="bloc demo"><summary>Démonstration : </summary>
 
 
-</details>
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+
+
+:::

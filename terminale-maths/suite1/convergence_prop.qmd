@@ -1,5 +1,5 @@
 ---
-title: "Théorèmes de convergence"
+title: "Propriétés de convergence"
 format:
   html:
     toc: true
@@ -8,9 +8,9 @@ description: "Définition d'une suite convergente"
 order: 5
 ---
 
-### Théorèmes de convergences monotone
+### Propriétés de convergences monotone
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème (admis) : Théorème de convergence monotone</span>
+<span class="bloc-titre">Propriété  (admis) : Théorème  de convergence monotone</span>
 
 1. Toute suite croissante et majorée converge.  
 2. Toute suite décroissante et minorée converge.
@@ -27,7 +27,7 @@ Soit $P_n : u_n \ge 2$.
 
 - *Initialisation :*
   $u_0 = 4 > 2$, donc $P_0$ est vraie.
-
+ 
 - *Hérédité :*
   Supposons $P_n$ vraie (donc $u_n \ge 2$). Alors
   $$
@@ -55,13 +55,13 @@ Donc $u_{n+1} \le u_n$ : la suite est décroissante.
 
 3. **Conclusion :**  
   <details class="bloc cor"><summary>Correction</summary>
-La suite $(u_n)$ est décroissante et minorée, donc elle converge (théorème de convergence monotone).
+La suite $(u_n)$ est décroissante et minorée, donc elle converge (Propriété  de convergence monotone).
 </details>
 :::
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque</span>  
-Le théorème assure l’existence de la limite mais ne donne pas sa valeur.
+Le Propriété  assure l’existence de la limite mais ne donne pas sa valeur.
 :::
 
 ::: {.bloc .ex}
@@ -95,17 +95,17 @@ Pour tout $n\ge 0$, posons $P_n :\; -1 \le u_n \le u_{n+1} \le 6$.
 - *Conclusion :* Par récurrence, $P_n$ est vraie pour tout $n$, donc $(u_n)$ est croissante et majorée par $6$.
 </details>
 
-1. **Conclusion :**  
+3. **Conclusion :**  
 
  <details class="bloc cor"><summary>Correction</summary>
-$(u_n)$ est croissante et majorée, donc elle converge (théorème de convergence monotone).
+$(u_n)$ est croissante et majorée, donc elle converge (Propriété  de convergence monotone).
 </details>
 :::
 
-### Théorème d’encadrement
+### Propriété  d’encadrement
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème : Théorème d’encadrement</span>  
+<span class="bloc-titre">Propriété  : Théorème  d’encadrement</span>  
 Soit $(u_n)$, $(v_n)$, $(w_n)$ et $n_0\in\N$ tels que
 $$
 \forall n \ge n_0,\quad u_n \le v_n \le w_n.
@@ -138,7 +138,7 @@ $$
 $$
 Or, $\lim_{n \to +\infty} \pm \frac{1}{n} = 0$.
 
-Ainsi, par le théorème d'encadrement, on déduit que
+Ainsi, par le Propriété  d'encadrement, on déduit que
 $$
 \lim_{n \to +\infty} u_n = 0.
 $$

@@ -16,10 +16,11 @@ order: 8
 \subsubsection{Limite des suites géométriques}
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Théorème : </span><br>
+<span class="bloc-titre">Propriété  : </span><br>
 Soit $q \in \R$. La suite $(q^n)$ converge si et seulement si $\abs{q} < 1$ ou $q = 1$.
 
 De plus :
+
 - Si $\abs{q} < 1$, alors la suite $(q^n)$ converge vers $0$.
 - Si $q > 1$, la suite $(q^n)$ diverge vers $+\infty$.
 - Si $q = -1$, la suite $(q^n)$ diverge.
