@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,18 +35,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -191,7 +192,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -379,6 +380,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Site pédagogique</span>
     </a>
@@ -429,7 +432,6 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -866,7 +868,7 @@ Description
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1761411794545" data-listing-reading-time-sort="3" data-listing-word-count-sort="588" data-listing-title-sort="Histoire de la logique" data-listing-filename-sort="historique.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1761411793636" data-listing-reading-time-sort="3" data-listing-word-count-sort="588" data-listing-title-sort="Histoire de la logique" data-listing-filename-sort="historique.qmd">
 <td>
 <a href="../../terminale-maths/logique/historique.html" class="title listing-title">Histoire de la logique</a>
 </td>
@@ -876,7 +878,7 @@ Description
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1761411794545" data-listing-reading-time-sort="5" data-listing-word-count-sort="874" data-listing-title-sort="Proposition mathématique" data-listing-filename-sort="proposition.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1761411793636" data-listing-reading-time-sort="5" data-listing-word-count-sort="874" data-listing-title-sort="Proposition mathématique" data-listing-filename-sort="proposition.qmd">
 <td>
 <a href="../../terminale-maths/logique/proposition.html" class="title listing-title">Proposition mathématique</a>
 </td>
@@ -886,7 +888,7 @@ Description
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1761411794545" data-listing-reading-time-sort="6" data-listing-word-count-sort="1061" data-listing-title-sort="Les quantificateurs" data-listing-filename-sort="quantificateurs.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1761411793636" data-listing-reading-time-sort="6" data-listing-word-count-sort="1061" data-listing-title-sort="Les quantificateurs" data-listing-filename-sort="quantificateurs.qmd">
 <td>
 <a href="../../terminale-maths/logique/quantificateurs.html" class="title listing-title">Les quantificateurs</a>
 </td>
@@ -896,7 +898,7 @@ Description
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1761411794545" data-listing-reading-time-sort="3" data-listing-word-count-sort="598" data-listing-title-sort="Les différents types de raisonnement" data-listing-filename-sort="deduction_contreExemple.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1761411793636" data-listing-reading-time-sort="3" data-listing-word-count-sort="598" data-listing-title-sort="Les différents types de raisonnement" data-listing-filename-sort="deduction_contreExemple.qmd">
 <td>
 <a href="../../terminale-maths/logique/deduction_contreExemple.html" class="title listing-title">Les différents types de raisonnement</a>
 </td>
@@ -906,7 +908,7 @@ Description
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1761411794545" data-listing-reading-time-sort="3" data-listing-word-count-sort="466" data-listing-title-sort="Contraposée et Disjonction des cas" data-listing-filename-sort="disjonctions.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1761411793636" data-listing-reading-time-sort="3" data-listing-word-count-sort="466" data-listing-title-sort="Contraposée et Disjonction des cas" data-listing-filename-sort="disjonctions.qmd">
 <td>
 <a href="../../terminale-maths/logique/disjonctions.html" class="title listing-title">Contraposée et Disjonction des cas</a>
 </td>
@@ -916,7 +918,7 @@ Description
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1761411794545" data-listing-reading-time-sort="3" data-listing-word-count-sort="466" data-listing-title-sort="Raisonnement par l'absurde" data-listing-filename-sort="absurde.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1761411793636" data-listing-reading-time-sort="3" data-listing-word-count-sort="466" data-listing-title-sort="Raisonnement par l'absurde" data-listing-filename-sort="absurde.qmd">
 <td>
 <a href="../../terminale-maths/logique/absurde.html" class="title listing-title">Raisonnement par l’absurde</a>
 </td>
@@ -926,7 +928,7 @@ Description
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1761411794545" data-listing-reading-time-sort="2" data-listing-word-count-sort="397" data-listing-title-sort="Raisonnement par analyse - synthèse" data-listing-filename-sort="AnalyseSynthese.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1761411793636" data-listing-reading-time-sort="2" data-listing-word-count-sort="397" data-listing-title-sort="Raisonnement par analyse - synthèse" data-listing-filename-sort="AnalyseSynthese.qmd">
 <td>
 <a href="../../terminale-maths/logique/AnalyseSynthese.html" class="title listing-title">Raisonnement par analyse - synthèse</a>
 </td>
@@ -1004,13 +1006,14 @@ Description
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
