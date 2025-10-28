@@ -114,6 +114,48 @@ Donc $C\left(0\,;\,\frac{1}{3}\,;\,\frac{5}{3}\right)$
 </details>
 :::
 
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+ Dans un repère de l'espace, on considère les points $A(1;2;7)$, $B(−3;−2;3)$, $C(0;5;22)$, $D(4;0;−10)$.
+Ces quatre points sont-ils coplanaires ? Justifier.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $\ve{AB} \begin{pmatrix}-4 \\ -4 \\-4 \end{pmatrix}$, \ve{AC} \begin{pmatrix}-1 \\ 3 \\15 \end{pmatrix}$ et 3\ve{AB} \begin{pmatrix}3 \\ -2 \\-17 \end{pmatrix}$
+
+On suppose qu'il existe $a$ et $b$ tels que $$\ve{AD}=a \ve{AB}+ b \ve{AC}$$
+Or 
+$$\left\{\begin{array}{l}
+ 3 = -4a - b\\
+-2 = -4 a +3 b\\
+-17 =-4a +15 b
+\end{array}
+\right. \Longleftrightarrow 
+\left\{\begin{array}{l}
+3 = -4a -b\\
+5 = -4b\\
+20 = - 16b
+\end{array}
+\right. 
+\Longleftrightarrow 
+\left\{\begin{array}{l}
+b= -\frac54
+b= - \frac54 
+ 3 = -4a + \frac54\\
+\end{array}
+\right. 
+\Longleftrightarrow 
+\left\{\begin{array}{l}
+b= -\frac54
+a= -\frac{7}{16}
+\end{array}
+\right. $$
+Or $-\frac{7}{16} \neq \frac12$, donc on déduit que les vecteurs ne sont pas coplanaires, donc les points ne sont pas coplanaires.
+</details>
+:::
+
+
+
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
 On considère $\ve{u}\begin{pmatrix}1\\1\\1\end{pmatrix}$, $\ve{v}\begin{pmatrix}-1\\1\\0\end{pmatrix}$ et $\ve{w}\begin{pmatrix}1\\0\\1\end{pmatrix}$.  
@@ -136,6 +178,10 @@ c=0
 
 On déduit alors que les trois vecteurs sont linéairement indépendants. Ils forment donc une base de l'espace.
 :::
+
+
+
+
 
 
 <div class="nav-pages">

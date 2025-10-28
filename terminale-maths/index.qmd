@@ -11,6 +11,8 @@ listing:
       - fct1/index.qmd
       - espace1/index.qmd
       - limite/index.qmd
+      - binomiale/index.qmd
+      - continuite/index.qmd
 ---
 
 
