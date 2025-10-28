@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,7 +161,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -350,8 +349,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Site pédagogique</span>
     </a>
@@ -402,6 +399,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -998,6 +996,44 @@ Donc <span class="math inline">\(C\left(0\,;\,\frac{1}{3}\,;\,\frac{5}{3}\right)
 
 </div>
 <div class="bloc ex">
+<p><span class="bloc-titre">Exemple : </span><br> Dans un repère de l’espace, on considère les points <span class="math inline">\(A(1;2;7)\)</span>, <span class="math inline">\(B(−3;−2;3)\)</span>, <span class="math inline">\(C(0;5;22)\)</span>, <span class="math inline">\(D(4;0;−10)\)</span>. Ces quatre points sont-ils coplanaires ? Justifier.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+Soit <span class="math inline">\(\ve{AB} \begin{pmatrix}-4 \\ -4 \\-4 \end{pmatrix}\)</span>,
+<span class="math display">\[\begin{pmatrix}-1 \\ 3 \\15 \end{pmatrix}\]</span>
+$ et 3
+<span class="math display">\[\begin{pmatrix}3 \\ -2 \\-17 \end{pmatrix}\]</span>
+<p>$</p>
+On suppose qu’il existe <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span> tels que <span class="math display">\[\ve{AD}=a \ve{AB}+ b \ve{AC}\]</span> Or <span class="math display">\[\left\{\begin{array}{l}
+3 = -4a - b\\
+-2 = -4 a +3 b\\
+-17 =-4a +15 b
+\end{array}
+\right. \Longleftrightarrow
+\left\{\begin{array}{l}
+3 = -4a -b\\
+5 = -4b\\
+20 = - 16b
+\end{array}
+\right.
+\Longleftrightarrow
+\left\{\begin{array}{l}
+b= -\frac54
+b= - \frac54
+3 = -4a + \frac54\\
+\end{array}
+\right.
+\Longleftrightarrow
+\left\{\begin{array}{l}
+b= -\frac54
+a= -\frac{7}{16}
+\end{array}
+\right. \]</span> Or <span class="math inline">\(-\frac{7}{16} \neq \frac12\)</span>, donc on déduit que les vecteurs ne sont pas coplanaires, donc les points ne sont pas coplanaires.
+</details>
+</div>
+<div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br> On considère <span class="math inline">\(\ve{u}\begin{pmatrix}1\\1\\1\end{pmatrix}\)</span>, <span class="math inline">\(\ve{v}\begin{pmatrix}-1\\1\\0\end{pmatrix}\)</span> et <span class="math inline">\(\ve{w}\begin{pmatrix}1\\0\\1\end{pmatrix}\)</span>.<br>
 Montrer que ces vecteurs ne sont pas coplanaires.</p>
 <p>On considère <span class="math inline">\(a,b,c \in \R\)</span> tels que <span class="math inline">\(a\ve{u}+b\ve{v}+c\ve{w}=\ve{0}\)</span>.</p>
@@ -1087,14 +1123,13 @@ c=0
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
