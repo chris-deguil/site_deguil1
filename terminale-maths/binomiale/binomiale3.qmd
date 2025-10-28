@@ -1,0 +1,253 @@
+---
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bernoulli - Binomiale"
+order: 7
+---
+
+____
+
+
+### Expresion de la loi binomiale
+
+:::{.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soient $X$ un variable aléatoire suivant $\mathcal{B}(n~;~p)$, alors pour tous entiers naturels $k$ et $n$ vérifiant $0\leqslant k \leqslant n$, on a 
+$$p(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On se place dans les hypothèses de la propriété.
+
+Soit $k$ fixé, alors la probabilité d'obtenir un mot constitué des lettres $S$ et $\bar{S}$.
+
+On choisit la position de $k$ lettres $S$, le reste étant alors des $\bar{S}$.
+
+La probabilité associé à ce mot précis est, compte tenu de l'indépendance des répétition, $p^k (1-p)^{n-k}$.
+
+Il y a $\binom{n}{k}$ mots différents ayant exactement $k$ lettres $S$, et ces mots ont la même probabilité (indépendance des répétitions).
+
+
+On déduit alors que $P(X=k)= \binom{n}{k} p^k (1-p)^{n-k}$
+
+</details>
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+La formule explicite de $\binom{n}{k}$  sera donnée dans le chapitre "Dénombrement".
+
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Détermination de $P(X = k)$ et $P(X \leqslant k)$
+On considère une variable aléatoire $X$ suivant la loi binomiale de paramètre $10$ et $0,7$.
+
+1. Déterminons $P(X = 7)$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a alors $P(X = 7) = \binom{10}{7}\times  0,7^7 \times 0,3^3 \approx 0,266$. (à l'aide de la calculatrice)\\ 
+
+</details>
+
+2. Déterminons $P(X \leqslant 7)$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Il s'agit de la la probabilité que $X$ réalise au plus $7$ succès.
+
+On a alors 
+$$P(X \leqslant 7) = P(X=0) + P(X=1) + P(X=2)+ p(X=3) + P(X=4)  + P(X=5) + P(X=6) + P(X=7)$$
+A l'aide de la calculatrice on obtient $P(X \leqslant 7) \approx 0.617$
+</details>
+:::
+
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soient $n$ un entier naturel non nul, $\alpha$ et $p$ deux réels de $[0 \, ; \, 1]$. On considère $X$ la variable aléatoire qui suit la loi binomiale $\mathcal{B}(n\, ;\, p)$.
+
+Il existe un intervalle $I$ non bide tel que $P(X \in I) \geqslant 1 - \alpha$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+$I=[0\, ; \, n]$ convient. En effet, pour tout $\alpha \in [0\, ; \, 1]$, $1- \alpha \leqslant 1$ et $P(0 \leqslant X \leqslant n) = 1$. D'où le résultat.
+
+</details>
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Cet intervalle $I$ n'est pas unique. On peut le chercher sous la forme $[0 \, ; \, b]$, $[a\, ; \, n]$ où $[a\, ; \, b]$, où $a$ et $b$ sont les valeurs à trouver.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : D'après Bac S, Pondichéry Juin 2016 (suite)</span>
+
+1. Donner $P(X \geqslant 400)$
+   
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a $P(X \geqslant 400) = 1- P(X < 400) = 1- P(X \leqslant 399) \approx 0,9427$ à $10^{-4}$ près.
+
+</details>
+
+2. On interroge maintenant $n$ personnes.<br>
+Combien de personnes l'institut doit-il interroger au minimum pour garantir, avec une probabilité supérieure à $\frac{9}{10}$, que le nombre de personnes répondant au sondage soit supérieur ou égal à 500 ?
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On interroge $n$ personnes et on note $X_n$ la variable aléatoire comptant le nombre de personne acceptant de répondre. $X_n$ suit une loi binomiale de paramètre $n$ et $p=\frac{3}{5}$.
+
+On cherche le plus petit entier $n$ vérifiant $P(X_n \geqslant 500) > 0,9$
+
+Donc $P(X \leqslant 499) <0,1$
+
+On obtient à l'aide de la calculatrice $n=864$.
+</details>
+
+
+3. Dans cette question on suppose que 500 personnes ont répondu à la question et on admet que ces personnes constituent un échantillon aléatoire de taille 500. On note $Y$ la variable aléatoire égale au nombre de personnes de l'échantillon favorables au projet. Donner un intervalle $I$ de $\R$ tel que $P(Y \in I) \geqslant 0,95$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $I=[a\, ; \, b]$. Cherchons alors :
+
+- le plus petit entier $b$ vérifiant $P(Y \leqslant b) \geqslant 0,975$.\\
+On trouve $b=321$
+- le plus grand entier $a$ vérifiant $P(Y\geqslant a) \leqslant 0,025$.\\
+On trouve $a=277$
+
+Ainsi $P(Y \geqslant 321) \geqslant 0,975$ et $-P(Y \leqslant 277) \geqslant -0,025$.\\
+Donc $P(Y \in [277 \, ; \, 321])=P(Y \leqslant 321)- P(Y\leqslant 277) \geqslant 0,95$
+</details>
+
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Un entraîneur d’une équipe de football a étudié les statistiques de tir au but (pénalty) de ses joueurs. Il
+a alors remarqué que sur une série de cinq tirs au but, un joueur pris au hasard dans son équipe marque :
+
+- 5 buts avec une probabilité de $0,2$ ;
+- 4 buts avec une probabilité de $0,5$ ;
+- 3 buts avec une probabilité  de $0,3$.
+
+
+On appellera :
+
+- l'événement \og le joueur marque 5 buts \fg ;
+- l'événement \og le joueur marque 4 buts \fg ;
+- l'événement \og le joueur marque 3 buts \fg.
+
+
+Chaque joueur, à l’entraînement, tire 2 séries de 5 ballons. On admet que les résultats d’un joueur à chacune des 2 séries sont indépendants.
+
+Soit $X$ la variable aléatoire égale au nombre de tirs aux buts réussis par un joueur au cours d’un entraînement.
+
+
+1. a.  Calculez la probabilité , pour un joueur pris au hasard, de réussir tous ses tirs au buts lors d’un
+   entraînement.
+
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+
+   Les séances de tir au but étant indépendantes,
+   $$P(X=10) = P(A) \times P(A) = 0,04$$
+   </details>
+
+   b. Préciser les valeurs possibles pour $X$ et établir sa loi de probabilité . (on pourra s’aider d’un arbre).
+
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+
+   $X \in \{6,7,8,9,10 \}$
+
+
+   $$
+   \begin{array}{|c|c|c|c|c|c|}
+   \hline
+   k & 6 & 7 & 8 & 9 & 10 \\
+   \hline
+   P(X=k) & 0,09 & 0,30 & 0,37 & 0,20 & 0,04 \\
+   \hline
+   \end{array}
+   $$
+
+   En effet, on a par exemple $$P(X=8) = P(B) \times P(B) + P(A) \times P(C) + P(C) \times P(B) = 0,25+ 0,06 +0,06$$
+   </details>   
+    
+   c. Calculez l’espérance de $X$ .
+
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+   $E(X) = \sum_{k \in \{6,7,8,9,10 \}} k P(X=k)$.
+   Donc $E(X) = 6 \times 0,06 + 7 \times 0,3+ 8 \times 0,37 + 9 \times 0,2 + 10 \times 0,04$.
+
+   On déduit que, en moyenne, le joueur réussira $8,25$  de tirs au buts sur les 10 tirs totaux.
+   </details>  
+
+2. L’entraîneur considère que le joueur a réussi l’épreuve des tirs au but lorsque $X \geqslant 8$.\\
+   Montrez que la
+   probabilité  pour un joueur de réussir cette épreuve lors d’un entraînement est égale à $0,61$.
+
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+   $$P(X \geqslant 8) = P(X=8) + P(X=9) + P(X=10)= 0,37+0,2+0,04 = 0,61$$
+   </details>
+
+3. Chaque joueur participe à $10$ séances d’entraînement. On admet que les épreuves de tirs au but sont indépendantes les unes des autres.
+ 
+   On appelle $Y$ la variable aléatoire égale au nombre de succès d’un joueur à l’épreuve des tirs au but au cours des ces $10$ entraînements, c’est à dire le nombre de fois où il a marqué au moins 8 buts. Si au cours d’une séance d’entraînement, il ne marque pas au moins $8$ buts, on dit qu’il a eu un échec.\\
+   Les résultats seront donnés par défaut, avec 3 chiffres après la virgule.
+   Calculez pour un joueur :
+
+   a. la probabilité  de n’avoir aucun échec lors des 10 séances.\\\textit{On répète 10 fois de façons identique et indépendante une même épreuve à deux issus dont le succès \og réussir la séance \fg a pour probabilité associé $0,61$.\\
+   On a donc un schéma de Bernoulli de paramètre $n=10$ et $p=0,61$.\\
+   Soit $Y$ la variable aléatoire réelle comptant le nombre de succès dans ce schéma de Bernoulli, ainsi $Y$ suit la loi binomiale de paramètre $n$ et $p$.\\
+   Pour tout $k \in [0 \, ; \, 10 ] \cap \N$, $$P(Y=k) = \binom{10}{k} p^k (1-p)^{10-k}$$
+   On a $P(Y=10) =  \binom{10}{10} \times 0,61^{10} \times 0,39^0 \approx $}
+
+   b. La probabilité  d’avoir exactement 6 succès.$$P(Y=6) = \binom{10}{6} 0,61^6 \times 0,39^4 \approx $$ 
+    
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+   $$P(Y=6) = \binom{10}{6} 0,61^6 \times 0,39^4 \approx $$
+   </details>
+
+   c. La probabilité  d’avoir au moins 1 succès.
+
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+   $$P(Y \geqslant 1) = 1- P(Y=0) = 1 - 0,39^{10} \approx $$
+   </details>
+
+4. Calculez le nombre minimal d’entraînement auxquels doit participer un joueur pour que la probabilité 
+   d’avoir au moins un succès soit supérieure à $0,99$.
+
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+   $0,31 \in ]0\,;\,1[$ donc la suite $(0,31^n)$ est une suite strictement décroissante. 
+
+   On déduite alors que $(1-0,31^n)$ est une suite strictement croissante.
+
+   Or $1-0,31^{3} <0,99$ et $1-0,31^4 > 0,99$.
+
+   On déduit que le nombre d'entraînement minimal nécessaire est de 4.
+   </details>
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="binomiale2.html">⬅️</a>
+  <a class="next" href="binomiale4.html">➡️</a>
+</div>

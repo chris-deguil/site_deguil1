@@ -13,7 +13,6 @@ order: 8
 
 ------
 
-\subsubsection{Limite des suites géométriques}
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété  : </span><br>

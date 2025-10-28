@@ -1,0 +1,100 @@
+---
+title: "Loi binomiale"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bernoulli - Binomiale"
+order: 5
+---
+
+
+
+_____
+
+
+### Définition
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+On appelle loi binomiale de paramètre $n$ et $p$, la loi de la variable aléatoire $X$ qui donne le nombre de succès dans la répétition de $n$ épreuves de Bernoulli de paramètre $p$.
+
+On dit alors que $X$ suit la loi binomiale de paramètre $n$ et $p$. On note alors $X \hookrightarrow  \mathcal{B}(n~;~p)$.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Dans l'exemple étudié précédemment, si on considère la variable aléatoire $X$ qui compte le nombre de $5$ obtenue pour le lancer de $3$ dés, alors $X$ suit la loi binomiale de paramètre $3$ et $\frac{1}{6}$.
+
+On peut aussi noter $X \hookrightarrow \mathcal{B}\left(3 \, ; \,\frac{1}{6} \right)$.
+:::
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : D'après Bac S, Pondichéry Juin 2016</span>
+Un institut effectue $n$ sondages pour connaître, dans une population donnée, la proportion de personnes favorable à un projet d'aménagement du territoire. Pour cela, on interroge un échantillon aléatoire de personnes de cette population, et l'on pose la même question à chaque personne.\\
+L'institut de sondage interroge 700 personnes. On note $X$ la variable aléatoire correspondant au nombre de personnes interrogées qui acceptent de répondre. On admet que la personne interrogée accepte de réponde avec une probabilité de $\frac{3}{5}$.
+
+Quelle est la loi de variable aléatoire $X$ ?
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On répète $700$ fois de façon indépendante une même expérience aléatoire à deux issus, dont le succès est  \og la personne accepte de répondre au sondage  \fg dont la probabilité est $\frac{3}{5}$.
+
+Ainsi la variable aléatoire $X$ comptant le nombre de succès dans ce schéma de Bernoulli suit la loi binomiale de paramètre $\left(700 \, ; \, \frac{3}{5}\right)$
+</details>
+:::
+
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : </span><br>
+Soit $X \hookrightarrow \mathcal{B}(n\, ; \, p)$. Alors :
+$$E(x)=np \qquad  \text{et}  \qquad V(X) =np(1-p) $$
+
+:::
+
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Un QCM comporte 20 questions. Pour chaque question, quatre réponses sont proposées dont une seule est juste. Chaque question juste rapporte un point et il n'y a pas de pénalité pour une réponse fausse. Un candidat répond au hasard à toutes les questions.
+
+On considère alors l'expérience répondre juste à une question. La probabilité du succès est de $0,25$, et on répète $20$ fois de façons indépendantes et identiques cette expérience. Alors la variable aléatoire $X$ qui compte le nombre de succès suit la loi binomiale $\mathcal{B}(20~;~0,25)$.
+
+1. Le nombre de points que peut espérer le candidat correspond au nombre de réponses justes.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+ Ce nombre est alors $E(X) = 20 \times 0,25 = 5$.
+</details>
+   
+   
+
+2. On souhaite maintenant qu'un candidat n'ayant pas travaillé, et répondant au hasard à toute les questions ne puisse espérer que $2$ points. Cherchons alors la pénalité à appliquer pour chaque mauvaise réponse.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $1 \times E(X) + p \times (20-E(X)) = 2$. On montre alors que $p=0,2$.
+Il faut donc pénaliser de $0,2$ point par mauvaise réponse.
+</details>
+  
+
+
+3. Les résultats n'étant pas satisfaisant. On décide que chaque bonne réponse rapporte $1,25$ points et on ajoute $2$ au résultat final. Quel note peut espérer un élève qui répond au hasard ?
+4. 
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $Y$ la note de l'élève, alors $Y=1,25X+2$.
+Ainsi, par linéarité de l'espérance,  $E(Y)=E(1,25X+2) =1,25E(X)+2 = 8,25$.
+</details>
+:::
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="bernoulli2.html">⬅️</a>
+  <a class="next" href="biomiale2.html">➡️</a>
+</div>

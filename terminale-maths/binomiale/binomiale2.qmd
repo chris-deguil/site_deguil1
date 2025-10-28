@@ -1,0 +1,84 @@
+---
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bernoulli - Binomiale"
+order: 6
+---
+___
+
+### Cas particuliers
+
+::: {.bloc}
+On suppose par la suite que $X$ suit la loi binomiale  $\mathcal{B}(n~;~p)$.
+
+
+- $P(X = 0)$ étant la probabilité qu'il n'y ait aucun succès, c'est donc la probabilité de n'avoir que des échecs. Comme à chaque étape, on a le choix entre deux issues, on a donc toujours choisit le \og chemin \fg menant au $\bar{S}$. Il n'y a alors qu'un seul chemin possible, on a alors $$P(X = 0) = (1-p)^n$$
+ Le même raisonnement donne $$P(X = n) = p^n$$
+
+- La probabilité de chacun des chemins n'ayant qu'un seul succès est $p(1-p)^{n-1}$.
+- 
+Il suffit alors de \og compter \fg le nombre de chemins n'ayant qu'un seul succès. Cela revient alors à choisir à quelle place parmi les $n$, se trouve le succès. On a alors $n$ possibilités, et donc $n$ chemins possibles.\\
+Ainsi $$P(X = 1) = n p(1-p)^{n-1}\quad \text{et} \quad P(X=n-1) = n (1-p)p^{n-1}$$
+
+
+
+
+Dans les autres cas, cela se complique très rapidement, car il faut compter le nombre de chemins.
+
+Chacune des issues réalisant deux succès a comme probabilité $p^2(1-p)^2$.
+
+Ainsi déterminer $P(X = 2)$ revient à déterminer le nombre de chemin réalisant exactement deux succès, c'est-à-dire à déterminer le nombre de façons de choisir deux positions "succès"  parmi les $n$ places dans le mot.  On montre facilement que ce nombre est $\frac{n(n-1)}{2}$
+:::
+
+
+
+### Coefficient binomiale
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+On considère $2$ entiers naturels $n$ et $k$ où $0\leqslant k \leqslant n$, on note $\binom{n}{k}$ et on lit "$k$ parmi $n$", le nombre de chemin qui réalise exactement $k$ succès dans un arbre à $n$ niveaux, associé à un schéma de Bernoulli.
+
+Ces nombres sont appelés coefficient binomiaux
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+D'après les résultats précédents, on a 
+$$\binom{n}{0} = 1 \qquad \qquad \binom{n}{1} = n \qquad \qquad \binom{n}{n-1} = n-1 \qquad \qquad \binom{n}{n} = 1\qquad \qquad\binom{3}{2}=3$$
+
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+
+- Une autre façon de voir ce coefficient binomial est de savoir combien de sous ensemble à $k$ éléments exactement peut-on faire à partir d'un ensemble à $n$ éléments.
+- On peut aussi le voir comme le nombre de mots de $n$ lettres constitués de $S$ et $\bar{S}$ ayant exactement $k$ lettres $S$.
+:::
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soit $n \in \N^*$
+$$\sum_{k=0}^n \binom{n}{k} = 2^n$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+$\binom{n}{k}$ est le nombre de mots ayant exactement $k$ succès dans la répétition de $n$ épreuves à deux issues (succès et échec).
+
+Alors la somme correspond à toutes les possibilités : nombre de chemins menant à 0 succès, un succès, deux, succès , \dots , n succès.
+
+
+Il s'agit donc du nombre de chemins possibles dans un arbre à $n$ niveaux, c'est-à-dire $2^n$ 
+
+</details>
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="binomiale1.html">⬅️</a>
+  <a class="next" href="binomiale3.html">➡️</a>
+</div>

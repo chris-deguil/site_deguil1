@@ -183,12 +183,29 @@ website:
             - terminale-maths/limite/theoreme_comparaison.qmd
             - terminale-maths/limite/limite_exponentielle.qmd
 
+        - section: "Probabilité : Loi binomiale"
+          contents:
+            - terminale-maths/binomiale/index.qmd
+            - terminale-maths/binomiale/historique.qmd
+            - terminale-maths/binomiale/epreuve_independante.qmd
+            - terminale-maths/binomiale/bernoulli1.qmd
+            - terminale-maths/binomiale/bernoulli2.qmd
+            - terminale-maths/binomiale/binomiale1.qmd
+            - terminale-maths/binomiale/binomiale2.qmd
+            - terminale-maths/binomiale/binomiale3.qmd
 
 
         - section: "Fonction : Continuités"
           contents:
-            - terminale-maths/limite/index.qmd
-            - terminale-maths/limite/historique.qmd
+            - terminale-maths/continuite/index.qmd
+            - terminale-maths/continuite/historique.qmd
+            - terminale-maths/continuite/continuite.qmd
+            - terminale-maths/continuite/operation.qmd
+            - terminale-maths/continuite/tvi.qmd
+            - terminale-maths/continuite/tvi_python.qmd
+            - terminale-maths/continuite/caracterisation.qmd
+
+
 
             
 format:
