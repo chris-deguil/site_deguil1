@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,7 +161,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -350,8 +349,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Site pédagogique</span>
     </a>
@@ -402,6 +399,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -723,12 +721,12 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="représentation-graphique-des-fonctions-polynômes-du-second-degré">Représentation graphique des fonctions polynômes du second degré</h3>
 <div class="bloc rem">
 <p>On considère, sur <span class="math inline">\(\mathbb{R}\)</span>, les fonctions <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> et <span class="math inline">\(h\)</span> définie par <span class="math inline">\(h(x) = ax^2\)</span>, où <span class="math inline">\(a\)</span> est un réel non nul.<br>
-Soit le vecteur <span class="math inline">\(\vec{u}(\alpha \, ; \, \beta)\)</span>, où <span class="math inline">\(\alpha = -\frac{b}{2a}\)</span> et <span class="math inline">\(\beta = f(\alpha)\)</span>.<br>
-Montrons que <span class="math inline">\(\mathscr{C}_f = t_{\vec{u}}(\mathscr{C}_h)\)</span>.</p>
-<p>On montre successivement les deux inclusions :</p>
+Soit le vecteur <span class="math inline">\(\ve{u}(\alpha \, ; \, \beta)\)</span>, où <span class="math inline">\(\alpha = -\frac{b}{2a}\)</span> et <span class="math inline">\(\beta = f(\alpha)\)</span>.<br>
+Montrons que <span class="math inline">\(\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)\)</span>.</p>
+<p>Pour cela, on va montrer deux inclusions : <span class="math inline">\(\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)\)</span> et que $ t_{}(_h) _f$.</p>
 <ul>
-<li><p>Soit <span class="math inline">\(M'(x' \, ;\, y') \in t_{\vec{u}}(\mathscr{C}_h)\)</span>.<br>
-Il existe <span class="math inline">\(M(x\, ;\,y) \in \mathscr{C}_h\)</span> tel que <span class="math inline">\(t_{\vec{u}}(M)=M'\)</span>.<br>
+<li><p>Soit <span class="math inline">\(M'(x' \, ;\, y') \in t_{\ve{u}}(\mathscr{C}_h)\)</span>.<br>
+Il existe <span class="math inline">\(M(x\, ;\,y) \in \mathscr{C}_h\)</span> tel que <span class="math inline">\(t_{\ve{u}}(M)=M'\)</span>.<br>
 Puisque <span class="math inline">\(y = ax^2\)</span>, on a : <span class="math display">\[
 \begin{pmatrix}
 x'\\
@@ -754,16 +752,16 @@ a(x' - \alpha)^2 + \beta
 \end{pmatrix}
 \]</span> Donc <span class="math inline">\(y' = a(x' - \alpha)^2 + \beta\)</span> et <span class="math inline">\(M' \in \mathscr{C}_f\)</span>.<br>
 Ainsi :<br>
-<span class="math display">\[t_{\vec{u}}(\mathscr{C}_h) \subset \mathscr{C}_f\]</span></p></li>
+<span class="math display">\[t_{\ve{u}}(\mathscr{C}_h) \subset \mathscr{C}_f\]</span></p></li>
 <li><p>Réciproquement, soit <span class="math inline">\(N'(x'\, ;\,y') \in \mathscr{C}_f\)</span>.<br>
 On pose <span class="math inline">\(N(x'-\alpha\,;\, y'-\beta)\)</span>.<br>
-Alors <span class="math inline">\(\vec{NN'} = \vec{u}\)</span>, donc <span class="math inline">\(t_{\vec{u}}(N) = N'\)</span>.<br>
+Alors <span class="math inline">\(\ve{NN'} = \ve{u}\)</span>, donc <span class="math inline">\(t_{\ve{u}}(N) = N'\)</span>.<br>
 Il reste à montrer que <span class="math inline">\(N \in \mathscr{C}_h\)</span>.<br>
 Puisque <span class="math inline">\(y' = a(x' - \alpha)^2 + \beta\)</span>, on a : <span class="math display">\[y = y' - \beta = a(x' - \alpha)^2\]</span><br>
 Donc <span class="math inline">\(N \in \mathscr{C}_h\)</span> et<br>
-<span class="math display">\[\mathscr{C}_f \subset t_{\vec{u}}(\mathscr{C}_h)\]</span></p></li>
+<span class="math display">\[\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)\]</span></p></li>
 </ul>
-<p>Ainsi <span class="math inline">\(\mathscr{C}_f = t_{\vec{u}}(\mathscr{C}_h)\)</span>.</p>
+<p>Ainsi <span class="math inline">\(\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)\)</span>.</p>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
@@ -782,14 +780,14 @@ La démonstration correspond à ce qui précède.
 On a :<br>
 <span class="math display">\[f(x) = 3(x - 3)^2 + 2\]</span><br>
 Donc la parabole a pour sommet <span class="math inline">\(S(3\, ;\, 2)\)</span>.<br>
-Dans le repère <span class="math inline">\((S \, ; \, \vec{i}, \vec{j})\)</span>, l’équation devient <span class="math inline">\(y = 3x^2\)</span>.</p>
+Dans le repère <span class="math inline">\((S \, ; \, \ve{i}, \ve{j})\)</span>, l’équation devient <span class="math inline">\(y = 3x^2\)</span>.</p>
 <div style="text-align: center;">
 <p><img src="../../image/maths/Second_degre_courbe1.png" class="img-fluid" style="width:40.0%"></p>
 </div>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque :</span> En appliquant une transformation appelée <strong>affinité</strong>, on peut passer au repère<br>
-<span class="math inline">\((S \, ; \, \vec{i}, \, \tfrac{1}{3} \vec{j})\)</span>, où l’équation devient <span class="math inline">\(y = x^2\)</span>.<br>
+<span class="math inline">\((S \, ; \, \ve{i}, \, \tfrac{1}{3} \ve{j})\)</span>, où l’équation devient <span class="math inline">\(y = x^2\)</span>.<br>
 Il s’agit d’un changement d’échelle dans une seule direction.</p>
 </div>
 </section>
@@ -804,7 +802,7 @@ Alors la droite <span class="math inline">\(d\)</span> d’équation <span class
 <summary>
 Démonstration
 </summary>
-Soit <span class="math inline">\(d:x =\alpha\)</span> et <span class="math inline">\(\mathscr{C}\)</span> la représentation graphique d’une fonction <span class="math inline">\(f\)</span> du second degré.<br> Or, lLa droite <span class="math inline">\(d\)</span> est un axe de symétrie de <span class="math inline">\(\mathscr{C}\)</span> si et seulement si pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math inline">\(M( \alpha - x, f(\alpha - x ))\)</span> et <span class="math inline">\(M'(x + \alpha, f(x + \alpha))\)</span> sont symétriques par rapport à la droite <span class="math inline">\(d\)</span> si et seulement si <span class="math inline">\(\forall x \in \R,\;f(\alpha-x) = f(\alpha +x')\)</span><br> De plus, pour tout réel <span class="math inline">\(x\)</span> <span class="math display">\[f( \alpha - x) = a(\alpha - x - \alpha)^2 + \beta = ax^2 + \beta~~~~\text{et}~~~~f( \alpha + x) = a(\alpha + x - \alpha)^2 + \beta = ax^2 + \beta\]</span> On déduit donc que les points <span class="math inline">\(M\)</span> et <span class="math inline">\(M'\)</span> sont symétriques par rapport à <span class="math inline">\(d\)</span>. }
+Soit <span class="math inline">\(d:x =\alpha\)</span> et <span class="math inline">\(\mathscr{C}\)</span> la représentation graphique d’une fonction <span class="math inline">\(f\)</span> du second degré.<br> Or, lLa droite <span class="math inline">\(d\)</span> est un axe de symétrie de <span class="math inline">\(\mathscr{C}\)</span> si et seulement si pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math inline">\(M( \alpha - x, f(\alpha - x ))\)</span> et <span class="math inline">\(M'(x + \alpha, f(x + \alpha))\)</span> sont symétriques par rapport à la droite <span class="math inline">\(d\)</span> si et seulement si <span class="math inline">\(\forall x \in \R,\;f(\alpha-x) = f(\alpha +x')\)</span><br> De plus, pour tout réel <span class="math inline">\(x\)</span> <span class="math display">\[f( \alpha - x) = a(\alpha - x - \alpha)^2 + \beta = ax^2 + \beta~~~~\text{et}~~~~f( \alpha + x) = a(\alpha + x - \alpha)^2 + \beta = ax^2 + \beta\]</span> On déduit donc que les points <span class="math inline">\(M\)</span> et <span class="math inline">\(M'\)</span> sont symétriques par rapport à <span class="math inline">\(d\)</span>.
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
@@ -825,8 +823,40 @@ L’axe de symétrie a pour équation : <span class="math display">\[x = \frac{-
 <summary>
 Afficher la correction
 </summary>
-L’axe de symétrie a pour équation : $<span class="math inline">\(x = \tfrac{5}{4} = 1,25\)</span> $ Or <span class="math inline">\(1\)</span> et <span class="math inline">\(1,5\)</span> sont symétriques par rapport à <span class="math inline">\(1,25\)</span>.<br>
+<p>L’axe de symétrie a pour équation : <span class="math display">\[x = \frac{5}{4}\]</span></p>
+Or <span class="math display">\[1,25 - 0,25 = 1 \et 1,25+0,25 = 1,5\]</span> Ainsi <span class="math inline">\(1\)</span> et <span class="math inline">\(1,5\)</span> sont symétriques par rapport à <span class="math inline">\(1,25\)</span>.<br>
 Donc <span class="math inline">\(f(1) = f(1,5)\)</span><br> Ainsi l’autre racine est <span class="math inline">\(1,5\)</span>
+</details>
+</div>
+<div class="bloc thm">
+<p><span class="bloc-titre">Théorème :</span> Soit <span class="math inline">\(f\)</span> une fonction du second degré définie par <span class="math inline">\(f(x)=ax^2+bx+c\)</span>.<br> Les racines de <span class="math inline">\(f\)</span>, si elles existent, ont pour milieu <span class="math inline">\(-\frac{b}{2a}\)</span>.</p>
+</div>
+<details class="bloc demo">
+<summary>
+Démonstration
+</summary>
+Immédiat
+</details>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple :</span> Soit <span class="math inline">\(f:x \longmapsto ax^2+bx+c\)</span>, <span class="math inline">\(a \neq 0\)</span> une fonction polynôme de degré <span class="math inline">\(2\)</span>, dont la représentation graphique admet <span class="math inline">\(S(4\, ; \, -2)\)</span> comme sommet. <br> On suppose de plus que <span class="math inline">\(f(-3)=0\)</span>.</p>
+<ol type="1">
+<li>Déterminer la valeur de la seconde racine.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<span class="math inline">\(S(4\, ; \, -2)\)</span> est le sommet de la représentation graphique de <span class="math inline">\(f\)</span>, donc la droite <span class="math inline">\(x=4\)</span> est un axe de symétrie de cette représentation.<br> On a <span class="math inline">\(-3 = 4-7\)</span> et <span class="math inline">\(f(-3)=0\)</span>, donc par symétrie <span class="math inline">\(f(4+7)=0\)</span>. Ainsi la seconde racine est <span class="math inline">\(11\)</span>.
+</details>
+<ol start="2" type="1">
+<li>Déterminer le signe de <span class="math inline">\(a\)</span> et celui de <span class="math inline">\(b\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<p>On a, pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f(x)=a(x-4)^2-2\)</span>.<br> Ainsi <span class="math inline">\(f(x)=0 \Longleftrightarrow (x-4)^2=\frac{2}{a}\)</span>.<br> Or cette équation n’admet deux solutions que si et seulement si <span class="math inline">\(a&gt;0\)</span>.<br> <span class="math inline">\(f\)</span> admettant deux racines, on déduit alors que <span class="math inline">\(a&gt;0\)</span>, et donc puisque <span class="math display">\[4=\alpha=-\frac{b}{2a}\]</span></p>
+On déduit de la règle des signes que <span class="math inline">\(b&lt;0\)</span>.
 </details>
 </div>
 </section>
@@ -933,14 +963,13 @@ et croissante sur <span class="math inline">\(\left[\tfrac{7}{4} \, ; \, +\infty
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

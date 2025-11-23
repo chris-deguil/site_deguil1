@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,7 +161,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -350,8 +349,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Site pédagogique</span>
     </a>
@@ -402,6 +399,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -774,11 +772,11 @@ Une fonction polynôme du second degré est nulle si et seulement si <strong>tou
 <summary>
 Démonstration
 </summary>
-<p>Soit <span class="math inline">\(f(x) = ax^2 + bx + c\)</span>.</p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction polynôme du second degré définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x) = ax^2 + bx + c\)</span>.</p>
 <ul>
-<li>Si <span class="math inline">\(a = b = c = 0\)</span>, alors <span class="math inline">\(f(x) = 0\)</span> pour tout <span class="math inline">\(x\)</span>.<br>
-</li>
-<li>Si <span class="math inline">\(f(x) = 0\)</span> pour tout <span class="math inline">\(x \in \mathbb{R}\)</span> :
+<li><p>Si <span class="math inline">\(a = b = c = 0\)</span>, alors <span class="math inline">\(f(x) = 0\)</span> pour tout <span class="math inline">\(x\)</span>.<br>
+</p></li>
+<li><p>Si <span class="math inline">\(f(x) = 0\)</span>, pour tout réel <span class="math inline">\(x\)</span> <span class="math display">\[f(1)=f(-1)=f(0)=0\]</span> Donc</p>
 <ul>
 <li><span class="math inline">\(f(1) = a + b + c = 0\)</span><br>
 </li>
@@ -792,7 +790,8 @@ On en déduit que <span class="math inline">\(a + b = 0\)</span> et <span class=
 <hr>
 <div class="bloc rem">
 <p><span class="bloc-titre"> Conséquence : </span><br>
-Deux fonctions polynômes sont égales si et seulement si elles ont les mêmes coefficients, ainsi l’écriture d’une fonction polynôme du second degré sous la forme <span class="math display">\[f(x) =ax^2+bx+c\]</span> est unique.</p>
+Deux fonctions polynômes sont égales si et seulement si elles ont les mêmes coefficients.</p>
+<p>On déduit que l’écriture d’une fonction polynôme du second degré sous la forme <span class="math display">\[f(x) =ax^2+bx+c\]</span> est unique.</p>
 </div>
 <hr>
 <div class="bloc ex">
@@ -804,8 +803,8 @@ Deux fonctions polynômes sont égales si et seulement si elles ont les mêmes c
 <summary>
 Afficher la correction
 </summary>
-<p>Soit <span class="math inline">\(f(x) = ax^2 + bx + c\)</span>, avec <span class="math inline">\(a \ne 0\)</span>.</p>
-<p><span class="math display">\[
+<p>Soit <span class="math inline">\(f:x \longmpasto ax^2 + bx + c\)</span>, avec <span class="math inline">\(a,b,c \in \R\)</span> et <span class="math inline">\(a \neq 0\)</span>.</p>
+<p>Pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math display">\[
 \begin{aligned}
 f(x+1) - f(x) &amp;= a(x+1)^2 + b(x+1) + c - (ax^2 + bx + c) \\
 &amp;= ax^2 + 2ax + a + bx + b - ax^2 - bx \\
@@ -844,7 +843,8 @@ S_n &amp;= 1 + 2 + 3 + \dots + (n-1) + n \\
 <h3 class="anchored" data-anchor-id="forme-canonique">Forme canonique</h3>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
-Soit <span class="math inline">\(f\)</span> une fonction polynôme du second degré 2 définie sur <span class="math inline">\(\R\)</span> par <span class="math display">\[f(x) = ax^2 + bx +c \]</span> Alors pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[f(x) = a\left(x -\alpha\right)^2  +\beta \]</span> avec <span class="math display">\[\alpha=- \frac{b}{2a}\quad \et \quad \beta=- \fr\]</span></p>
+Soit <span class="math inline">\(f\)</span> une fonction polynôme du second degré 2 définie sur <span class="math inline">\(\R\)</span> par <span class="math display">\[f(x) = ax^2 + bx +c \]</span> Alors pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[f(x) = a\left(x -\alpha\right)^2  +\beta \]</span> avec <span class="math display">\[\alpha=- \frac{b}{2a}\quad \et \quad \beta=- \frac{b^2-4ac}{4a}\]</span></p>
+<p>Cette forme est appelée forme canonique.</p>
 </div>
 <details class="bloc demo">
 <summary>
@@ -868,7 +868,7 @@ On ne cherche pas à retenir les expressions de <span class="math inline">\(\alp
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
 <ol type="1">
-<li><span class="math inline">\(f(x) = -x^2 + 4x - 5\)</span></li>
+<li>Détermienr la forme canonique de la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x) = -x^2 + 4x - 5\)</span></li>
 </ol>
 <details class="bloc cor">
 <summary>
@@ -878,7 +878,7 @@ Afficher la correction
 <span class="math display">\[f(x) = -x^2 + 4x - 5 = -\big(x^2 - 4x\big) - 5 = -\big((x-2)^2 - 4\big) - 5 = -(x-2)^2 - 1\]</span>
 </details>
 <ol start="2" type="1">
-<li>Soit une fonction <span class="math inline">\(g\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(g(x) = 3x^2 + 6x - 3\)</span>. Résoudre <span class="math inline">\(g(x)=30\)</span>=.</li>
+<li>Soit une fonction <span class="math inline">\(g\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(g(x) = 3x^2 + 6x - 3\)</span>. <br> Résoudre <span class="math inline">\(g(x)=30\)</span>=.</li>
 </ol>
 <details class="bloc cor">
 <summary>
@@ -902,7 +902,7 @@ On déduit alors que les solutions de l’équation (c’est-à-dire les antéc�
 <hr>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque :</span><br>
-On remarque que l’on ne peut pas factoriser <span class="math inline">\(f\)</span>, puisque c’est la somme de deux quantités négatives (donc différent de <span class="math inline">\(a^2-b^2)\)</span>).\ La forme canonique obtenue pour la fonction <span class="math inline">\(g\)</span> étant différence de deux quantités positives, l’expression est alors factorisable : <span class="math display">\[a^2-b^2=(a-b)(a+b)\]</span> En effet, pour tout réel <span class="math inline">\(x\)</span> <span class="math display">\[g(x)=3(x+1)^2 - 6 =3 [(x+1)^2-2] = 3 (x+1-\sqrt{2})(x+1+\sqrt{2})\]</span></p>
+On remarque que l’on ne peut pas factoriser <span class="math inline">\(f\)</span>, puisque c’est la somme de deux quantités négatives (donc différent de <span class="math inline">\(a^2-b^2)\)</span>.<br> La forme canonique obtenue pour la fonction <span class="math inline">\(g\)</span> étant différence de deux quantités positives, l’expression est alors factorisable : <span class="math display">\[a^2-b^2=(a-b)(a+b)\]</span> En effet, pour tout réel <span class="math inline">\(x\)</span> <span class="math display">\[g(x)=3(x+1)^2 - 6 =3 [(x+1)^2-2] = 3 (x+1-\sqrt{2})(x+1+\sqrt{2})\]</span></p>
 </div>
 <div class="nav-pages">
 <p><a class="next" href="racine.html">➡️</a></p>
@@ -976,14 +976,13 @@ On remarque que l’on ne peut pas factoriser <span class="math inline">\(f\)</s
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

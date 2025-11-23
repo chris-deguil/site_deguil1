@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,7 +161,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -350,8 +349,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Site pédagogique</span>
     </a>
@@ -402,6 +399,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -791,9 +789,8 @@ Ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span cla
 <h3 class="anchored" data-anchor-id="variation-de-la-fonction-associée">Variation de la fonction associée</h3>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
-Soient <span class="math inline">\(a \in \mathbb{R}^+\)</span> et <span class="math inline">\(I = [a ; +\infty[\)</span>.<br>
-Si <span class="math inline">\((u_n)\)</span> est définie par <span class="math inline">\(u_n = f(n)\)</span> et <span class="math inline">\(f\)</span> est monotone sur <span class="math inline">\(I\)</span>,<br>
-alors <span class="math inline">\((u_n)\)</span> est monotone et a la même variation que <span class="math inline">\(f\)</span> à partir de <span class="math inline">\(n \geq a\)</span>.</p>
+Soient <span class="math inline">\(a \in \R^+\)</span> et <span class="math inline">\(I = [a\,;\,+\infty[\)</span>.<br> Soit <span class="math inline">\((u_n)\)</span> la suite définie par la relation <span class="math inline">\(u_n = f(n)\)</span>, où <span class="math inline">\(f\)</span> est une fonction définie sur <span class="math inline">\(I\)</span>.</p>
+<p>Si <span class="math inline">\(f\)</span> est une fonction monotone sur <span class="math inline">\(I\)</span>, alors <span class="math inline">\((u_n)\)</span> est monotone et a les mêmes variations que <span class="math inline">\(f\)</span>, pour tout entier naturel <span class="math inline">\(n \geq a\)</span>.</p>
 </div>
 <details class="bloc demo">
 <summary>
@@ -839,10 +836,16 @@ Par exemple, <span class="math inline">\(u_n = n + \cos(2\pi n)\)</span> est cro
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
 <ol type="1">
-<li><p>Si <span class="math inline">\(u_n &gt; 0\)</span>, alors :<br>
-<span class="math display">\[\frac{u_{n+1}}{u_n} \geq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \leq 1 \iff \text{décroissante}\]</span></p></li>
-<li><p>Si <span class="math inline">\(u_n &lt; 0\)</span>, alors :<br>
-<span class="math display">\[\frac{u_{n+1}}{u_n} \leq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \geq 1 \iff \text{décroissante}\]</span></p></li>
+<li><p>Si <span class="math inline">\((u_n)\)</span> est à terme strictement positif à partir d’un certain rang <span class="math inline">\(p\)</span>, alors pour tout <span class="math inline">\(n  \geqslant p\)</span> : <span class="math display">\[
+\frac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante},
+\qquad
+\frac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
+\]</span></p></li>
+<li><p>Si <span class="math inline">\((u_n)\)</span> est à terme strictement négatif à partir d’un certain rang <span class="math inline">\(p\)</span>, alors pour tout <span class="math inline">\(n  \geqslant p\)</span> : <span class="math display">\[
+\frac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante},
+\qquad
+\frac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
+\]</span></p></li>
 </ol>
 </div>
 <details class="bloc demo">
@@ -875,15 +878,29 @@ La suite est définie à partir du rang <span class="math inline">\(5\)</span>, 
 <summary>
 Afficher la correction
 </summary>
-<p>Pour tout <span class="math inline">\(n &gt; 4\)</span>,<br>
-<span class="math display">\[\frac{t_{n+1}}{t_n} = \dfrac{\dfrac{-2^{n+1}}{n+1-4}}{\dfrac{-2^n}{n-4}} = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n} = \frac{2n-8}{n-3}\]</span></p>
-<p>Or, pour tout <span class="math inline">\(n \geqslant 5\)</span>,<br>
-<span class="math display">\[\frac{2n-8}{n-3}  \geqslant 1 \Longleftrightarrow 2n-8 \geqslant n-3 \Longleftrightarrow n \geqslant 5\]</span></p>
-<p>On déduit alors que pour tout <span class="math inline">\(n \geqslant 5\)</span>,<br>
-<span class="math display">\[\frac{t_{n+1}}{t_n} &gt; 1\]</span></p>
-<p>La suite étant à termes strictement négatifs puisque, pour tout <span class="math inline">\(n &gt; 4\)</span>, <span class="math display">\[-2^n &lt; 0 \quad \et \quad n-3 &gt; 0\]</span> On déduit que :<br>
-<span class="math display">\[\frac{t_{n+1}}{t_n}  \geqslant 1 \underset{t_n &lt;0}{\Longleftrightarrow} t_{n+1} \leqslant t_n \]</span></p>
-<p>Donc la suite <span class="math inline">\((t_n)\)</span> est décroissante à partir du rang <span class="math inline">\(5\)</span>.</p>
+<p>Pour tout <span class="math inline">\(n &gt; 4\)</span>, <span class="math display">\[
+  \frac{t_{n+1}}{t_n}
+  = \dfrac{\dfrac{-2^{n+1}}{(n+1)-4}}{\dfrac{-2^n}{n-4}}
+  = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n}
+  = \frac{2(n-4)}{n-3}.
+  \]</span></p>
+<p>Or pour tout <span class="math inline">\(n \geqslant 5\)</span>, <span class="math display">\[
+  \frac{2(n-4)}{n-3}  \geqslant 1
+  \underset{n-3 &gt;0}{\Longleftrightarrow}
+  2n-8 \geqslant n-3
+  \Longleftrightarrow n \geqslant 5.
+  \]</span></p>
+<p>Donc pour tout <span class="math inline">\(n \geqslant 5\)</span>,</p>
+<p><span class="math display">\[
+  \frac{t_{n+1}}{t_n} \geqslant 1.
+  \]</span></p>
+<p>La suite étant à terme strictement négatif puisque, pour tout <span class="math inline">\(n &gt;4\)</span>, <span class="math inline">\(-2^n &lt;0\)</span> et <span class="math inline">\(n-4&gt;0\)</span>, on déduit que</p>
+<p><span class="math display">\[
+  \frac{t_{n+1}}{t_n}  \geqslant 1
+  \underset{t_n &lt;0}{\Longleftrightarrow}
+  t_{n+1} \leqslant t_n.
+  \]</span></p>
+<p>Donc la suite <span class="math inline">\((t_n)\)</span> est décroissante.</p>
 </details>
 </div>
 <div class="nav-pages">
@@ -959,14 +976,13 @@ Afficher la correction
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
