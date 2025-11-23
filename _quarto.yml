@@ -43,7 +43,7 @@ website:
             - snt/theme1/Seance_6.qmd
             - snt/theme1/Seance_7.qmd
             - snt/theme1/Seance_8.qmd
-            - snt/theme1/Seance_10.qmd
+          # - snt/theme1/Seance_10.qmd
             - snt/theme1/projet.qmd
                     
         - section: "Thème 2 · Moi et les réseaux"

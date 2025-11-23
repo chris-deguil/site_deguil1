@@ -46,7 +46,8 @@ Ainsi, pour tout réel $x$ :
 
 $$
 \begin{aligned}
-f(x) &= f(x)-f(r) = ax^2+bx+c - ar^2 - br - c \\
+f(x) &= f(x)-f(r) \\
+&= ax^2+bx+c - ar^2 - br - c \\
      &= a(x^2 - r^2) + b(x-r) = a(x-r)(x+r) + b(x-r) \\
      &= (x-r)(ax+ar+b)
 \end{aligned}
@@ -63,7 +64,7 @@ On obtient le résultat voulu en posant $d=ar+b$.
 
 - La méthode précédente est à connaître. Elle permet de factoriser siimplement lorsque l'on connait une racine.
 - On déduit de l'exercice que si une fonction polynôme admet une racine alors elle admet une autre racine $x=-\frac{ar+b}{a}$
-- La seconde racine peut-être identique à la première (on parle alors de racine double).\\
+- La seconde racine peut-être identique à la première (on parle alors de racine double).<br>
 On a alors $$r=-\frac{ar+b}{a}$$ Donc $$ar=-ar+b$$
 Donc 
 $$r=-\frac{b}{2a}$$

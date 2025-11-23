@@ -14,10 +14,10 @@ On considère $f$ une fonction polynôme de degré 2.
 À partir de la forme canonique, et suivant le signe de son coefficient dominant et de $\Delta$, on obtient ces cas de figure.
 
 <div style="text-align: center;">
-![](../../image/SecDegre_bilan1.png){width=70%}
+![](../../image/maths/SecDegre_bilan1.png){width=70%}
 </div>
 <div style="text-align: center;">
-![](../../image/SecDegre_bilan2.png){width=70%}
+![](../../image/maths/SecDegre_bilan2.png){width=70%}
 </div>
 
 ::: {.bloc .ex}

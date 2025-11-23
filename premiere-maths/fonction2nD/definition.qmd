@@ -68,10 +68,12 @@ Une fonction polynôme du second degré est nulle si et seulement si **tous** se
 
 <details class="bloc demo"><summary>Démonstration</summary>
 
-Soit $f(x) = ax^2 + bx + c$.
+Soit $f$ une fonction polynôme du second degré définie sur $\R$ par $f(x) = ax^2 + bx + c$.
 
 - Si $a = b = c = 0$, alors $f(x) = 0$ pour tout $x$.  
-- Si $f(x) = 0$ pour tout $x \in \mathbb{R}$ :  
+- Si $f(x) = 0$,  pour tout réel $x$ $$f(1)=f(-1)=f(0)=0$$ 
+  Donc 
+
   - $f(1) = a + b + c = 0$  
   - $f(-1) = a - b + c = 0$  
   - $f(0) = c = 0$  
@@ -83,7 +85,9 @@ On en déduit que $a + b = 0$ et $a - b = 0$, donc $a = b = c = 0$.
 
 ::: {.bloc .rem}
 <span class="bloc-titre"> Conséquence : </span>  
-Deux fonctions polynômes sont égales si et seulement si elles ont les mêmes coefficients, ainsi l'écriture d'une fonction polynôme du second degré sous la forme 
+Deux fonctions polynômes sont égales si et seulement si elles ont les mêmes coefficients.
+
+On déduit  que l'écriture d'une fonction polynôme du second degré sous la forme 
 $$f(x) =ax^2+bx+c$$
  est unique.
 :::
@@ -97,8 +101,9 @@ $$f(x) =ax^2+bx+c$$
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
-Soit $f(x) = ax^2 + bx + c$, avec $a \ne 0$.
+Soit $f:x \longmpasto ax^2 + bx + c$, avec $a,b,c \in \R$ et $a \neq 0$.
 
+Pour tout $x \in \R$, 
 $$
 \begin{aligned}
 f(x+1) - f(x) &= a(x+1)^2 + b(x+1) + c - (ax^2 + bx + c) \\
@@ -142,7 +147,9 @@ S_n &= 1 + 2 + 3 + \dots + (n-1) + n \\
 Soit $f$ une fonction polynôme du second degré 2 définie sur $\R$ par  $$f(x) = ax^2 + bx +c $$
 Alors pour tout réel $x$,
 $$f(x) = a\left(x -\alpha\right)^2  +\beta $$
-avec $$\alpha=- \frac{b}{2a}\quad \et \quad \beta=- \fr$$
+avec $$\alpha=- \frac{b}{2a}\quad \et \quad \beta=- \frac{b^2-4ac}{4a}$$
+
+Cette forme est appelée forme canonique.
 :::
 
 <details class="bloc demo"><summary>Démonstration</summary>
@@ -169,7 +176,7 @@ On ne cherche pas à retenir les expressions de $\alpha$ et $\beta$, il faut con
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 
-1. $f(x) = -x^2 + 4x - 5$
+1. Détermienr la forme canonique de la fonction $f$ définie sur $\R$ par  $f(x) = -x^2 + 4x - 5$
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
@@ -178,7 +185,8 @@ Pour tout $x \in \R$,
 $$f(x) = -x^2 + 4x - 5 = -\big(x^2 - 4x\big) - 5 = -\big((x-2)^2 - 4\big) - 5 = -(x-2)^2 - 1$$
 </details>
    
-2.  Soit une fonction $g$ définie sur $\R$ par $g(x) = 3x^2 + 6x - 3$. Résoudre $g(x)=30$=.
+2.  Soit une fonction $g$ définie sur $\R$ par $g(x) = 3x^2 + 6x - 3$. <br>
+   Résoudre $g(x)=30$=.
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 *On ne sait encore résoudre ce type d'équation, on va alors se ramener à une forme connue $X^2=a$*<br>
@@ -205,7 +213,7 @@ On déduit alors que les solutions de l'équation (c'est-à-dire les antécéden
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque :</span>  
-On remarque que l'on ne peut pas factoriser $f$, puisque c'est la somme de deux quantités négatives (donc différent de $a^2-b^2)$).\\
+On remarque que l'on ne peut pas factoriser $f$, puisque c'est la somme de deux quantités négatives (donc différent de $a^2-b^2)$.<br>
 La forme canonique obtenue pour la fonction $g$ étant différence de deux quantités positives, l'expression est alors factorisable : $$a^2-b^2=(a-b)(a+b)$$
 En effet, pour tout réel $x$
 $$g(x)=3(x+1)^2 - 6 =3 [(x+1)^2-2] = 3 (x+1-\sqrt{2})(x+1+\sqrt{2})$$

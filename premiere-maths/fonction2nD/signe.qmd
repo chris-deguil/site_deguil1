@@ -92,7 +92,7 @@ Soit $P(x)=2x^3-x-1$. Donner une forme factorisée de $P(x)$.
 <details class="bloc cor"><summary>Afficher la correction</summary>  
 $1$ est une racine évidente de $P$. En effet $P(1) = 2-1-1=0$.  
 
-Donc pour tout réel $x$,  
+Donc il existe trois réels $a,b,c$ tels que pour tout réel $x$,  
 $$P(x)=(x-1)(ax^2+bx+c)$$  
 
 Or pour tout réel $x$,  

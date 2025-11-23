@@ -35,7 +35,9 @@ $n$ s’appelle le **rang** ou **l’indice** du terme $u_n$.
 1. La suite $u = \{2\,;\,3\,;\,5\,;\,7\,;\,11\,;\dots\}$ : les nombres premiers.  
 2. La suite définie par $u(n) = 2n + 1$ pour tout $n \ge 0$ :  
    $$(u_n) = \{1\,;\,3\,;\,5\,;\,7\,;\dots\}$$  
-3. La suite $v = \{1\,;\,4\,;\,13\,;\,40\,;\dots\}$, avec $u_0 = 1$ et pour tout $n \in \mathbb{N}$ :  
+3. La suite $v = \{1\,;\,4\,;\,13\,;\,40\,;\dots\}$, où chaque terme $u_n$ est obtenu en multipliant le précédent $u_{n-1}$ par 3, puis en ajoutant 1.<br>
+
+   avec $u_0 = 1$ et pour tout $n \in \mathbb{N}$ :  
    $$u_{n+1} = 3u_n + 1$$  
 4. La suite $(u_n) = \{3\,;\,1\,;\,4\,;\,1\,;\,5\,;\,9\,;\,2\,;\dots\}$ : les décimales de $\pi$.  
 5. Soit $u : \mathbb{N} \to \mathbb{R}$ définie par $u(n) = \sqrt{3 - n}$.  

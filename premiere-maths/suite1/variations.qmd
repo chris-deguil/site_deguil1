@@ -76,9 +76,10 @@ Ainsi pour tout $n \in \mathbb{N}$, $u_{n+1} - u_n \leqslant 0$, donc $(u_n)_{n 
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
-Soient $a \in \mathbb{R}^+$ et $I = [a ; +\infty[$.  
-Si $(u_n)$ est définie par $u_n = f(n)$ et $f$ est monotone sur $I$,  
-alors $(u_n)$ est monotone et a la même variation que $f$ à partir de $n \geq a$.
+Soient $a \in \R^+$ et $I = [a\,;\,+\infty[$.<br>
+Soit $(u_n)$ la suite définie par la relation $u_n = f(n)$, où $f$ est une fonction définie sur $I$.
+
+Si $f$ est une fonction monotone sur $I$, alors $(u_n)$ est monotone et a les mêmes variations que $f$, pour tout entier naturel $n \geq a$.
 :::
 
 <details class="bloc demo"><summary>Démonstration :</summary>
@@ -128,11 +129,19 @@ Par exemple,  $u_n = n + \cos(2\pi n)$ est croissante mais $f(x) = x + \cos(2\pi
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
 
-1. Si $u_n > 0$, alors :  
-$$\frac{u_{n+1}}{u_n} \geq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \leq 1 \iff \text{décroissante}$$  
+1.  Si $(u_n)$ est à terme strictement positif à partir d'un certain rang $p$, alors pour tout $n  \geqslant p$ :
+$$
+\frac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante}, 
+\qquad 
+\frac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
+$$
 
-2. Si $u_n < 0$, alors :  
-$$\frac{u_{n+1}}{u_n} \leq 1 \iff \text{croissante} \quad ; \quad \frac{u_{n+1}}{u_n} \geq 1 \iff \text{décroissante}$$
+2. Si $(u_n)$ est à terme strictement négatif à partir d'un certain rang $p$, alors pour tout $n  \geqslant p$ :
+$$
+\frac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante}, 
+\qquad 
+\frac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
+$$
 :::
 
 <details class="bloc demo"><summary>Démonstration :</summary>
@@ -164,20 +173,37 @@ La suite est définie à partir du rang $5$, puisqu'elle n'est pas définie au r
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
-Pour tout $n > 4$,  
-$$\frac{t_{n+1}}{t_n} = \dfrac{\dfrac{-2^{n+1}}{n+1-4}}{\dfrac{-2^n}{n-4}} = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n} = \frac{2n-8}{n-3}$$  
+Pour tout $n > 4$, 
+  $$
+  \frac{t_{n+1}}{t_n} 
+  = \dfrac{\dfrac{-2^{n+1}}{(n+1)-4}}{\dfrac{-2^n}{n-4}} 
+  = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n} 
+  = \frac{2(n-4)}{n-3}.
+  $$
 
-Or, pour tout $n \geqslant 5$,  
-$$\frac{2n-8}{n-3}  \geqslant 1 \Longleftrightarrow 2n-8 \geqslant n-3 \Longleftrightarrow n \geqslant 5$$  
+  Or pour tout $n \geqslant 5$, 
+  $$
+  \frac{2(n-4)}{n-3}  \geqslant 1 
+  \underset{n-3 >0}{\Longleftrightarrow} 
+  2n-8 \geqslant n-3 
+  \Longleftrightarrow n \geqslant 5.
+  $$
 
-On déduit alors que pour tout $n \geqslant 5$,  
-$$\frac{t_{n+1}}{t_n} > 1$$  
+  Donc pour tout $n \geqslant 5$, 
 
-La suite étant à termes strictement négatifs puisque, pour tout $n > 4$, $$-2^n < 0 \quad \et \quad n-3 > 0$$ 
-On déduit que :  
-$$\frac{t_{n+1}}{t_n}  \geqslant 1 \underset{t_n <0}{\Longleftrightarrow} t_{n+1} \leqslant t_n $$  
+  $$
+  \frac{t_{n+1}}{t_n} \geqslant 1.
+  $$
 
-Donc la suite $(t_n)$ est décroissante à partir du rang $5$.
+  La suite étant à terme strictement négatif puisque, pour tout $n >4$, $-2^n <0$ et $n-4>0$, on déduit que 
+  
+  $$
+  \frac{t_{n+1}}{t_n}  \geqslant 1 
+  \underset{t_n <0}{\Longleftrightarrow} 
+  t_{n+1} \leqslant t_n.
+  $$
+  
+  Donc la suite $(t_n)$ est décroissante.
 
 </details>
 :::

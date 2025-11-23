@@ -34,7 +34,9 @@ $$\forall n \in \mathbb{N},~n \ge a,~u_n = f(n)$$
 <span class="bloc-titre">Exemples :</span>  
 
 - À partir de $f(x) = 2x^2 - 5$ définie sur $[0, +\infty[$, on peut définir la suite $(u_n)$ en posant $u_n = 2n^2 - 5$.  <br>
-  On a ainsi $u_0 = -5$, $u_5 = 2 \times 5^2 - 5 = 45$ ; de même on trouve $u_{20} = 795$.
+- Cette suite admet pour premier terme $u_0= -5$.<br>
+On peut directement calculer n'importe quel terme de la suite : <br>
+ $u_5 = 2\times 5^2 - 5 = 45$, $u_{20} = 2 \times 20^2-5 = 795$, \dots
 - À partir de $f(x) = \dfrac{x}{x - 2}$ définie sur $]2, +\infty[$, on définit, pour tout $n > 2$, la suite $(u_n)$ par $u_n = \dfrac{n}{n - 2}$.  <br>
   Premier terme : $u_3 = 3$, puis $u_4 = 2$, $u_5 = \dfrac{5}{3}$, etc.
 :::
@@ -60,7 +62,7 @@ Soit $(u_n)$ définie par $u_n = \sqrt{n - 2{,}5}$, définie pour $n \ge 3$.
 Le premier terme est donc $u_3$.  
 
 <div style="text-align: center;">
-![](../../image/maths/Suite_numerique_courbe_suite1.png){width=40%}
+![](../../image/maths/Suite_numerique_courbe_suite1.png){width=50%}
 </div> 
 :::
 
