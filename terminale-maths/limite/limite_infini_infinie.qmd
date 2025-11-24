@@ -77,7 +77,7 @@ $$\forall A \in \R, \, \exists x_0 \in D_f, \, \forall x \in \R, \, (x \leqslant
 <span class="bloc-titre">Exemple : Fonction affine</span>
 Soit $f :x \longmapsto ax+b$, où $a <0$
 
-Soit alors $x_0= \frac{A-b}{a} $ (qui est un nombre négatif)
+Soit alors $x_0= \frac{A-b}{a}$ (qui est un nombre négatif)
 
 $$\forall x \in \R, \, (x \leqslant x_0 \Rightarrow f(x) \geqslant A)$$
 
@@ -113,7 +113,7 @@ Ainsi
 $$\lim_{x \to  \pm \infty} f(x)= +\infty$$
 Le tableau des variations complet de $f$ est alors 
    <div style="text-align:center;">
-  <img src="../../image/maths_term/Chap4_Limite_figure20.png" alt="" width=50%/>
+  <img src="../../image/maths_term/Chap4_Limite_figure20.png" alt="" width=70%/>
 </div> 
 
 :::

@@ -36,8 +36,7 @@ Soit $f:x \longmapsto (2x+3)\e^{-0,63x}-2$
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété : Unicité de la limite</span><br>
-Soit $f$ une fonction admettant une limite finie $l$ en $\pm \infty$.
-%c'est-à-dire  $$\lim_{x \to +\infty} f(x)= l$$
+Soit $f$ une fonction admettant une limite finie $l$ en $\pm \infty$. C'est-à-dire  $$\lim_{x \to +\infty} f(x)= l$$
 Alors le réel $l$ est unique et ce nombre est appelé la limite de $f$ au voisinage de $\pm \infty$.
 
 :::
@@ -65,7 +64,7 @@ Soit $f:x \longmapsto 2+\frac{1}{x}$ définie sur $\R^*$.
 
 La fonction inverse étant décroissante sur $\R^*_+$, on a $$x \geqslant x_0 \Rightarrow \frac{1}{x} \leqslant \frac{1}{x_0}$$
 
-Soit $x_0=\frac{1}{\epsilon}$, alors : $$ \forall x \in \R, \, \left(x \geqslant x_0 \Rightarrow \abs{f(x) - 2} \leqslant \frac{1}{x_0} \right) = \epsilon$$
+Soit $x_0=\frac{1}{\epsilon}$, alors : $$ \forall x \in \R, \, \left(x \geqslant x_0 \Rightarrow \abs{f(x) - 2} \leqslant \frac{1}{x_0}  = \epsilon\right)$$
 
 Ainsi, par définition, $\lim_{x \to +\infty} f(x) = 2$.
 

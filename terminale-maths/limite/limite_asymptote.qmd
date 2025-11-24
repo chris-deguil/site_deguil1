@@ -12,9 +12,9 @@ order: 4
 ## Notion d'asymptote en l'infini
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : </span><br>
-Soient $f$ une fonction et $l \in \R$ tel que $\lim_{x \to +\infty} f(x) = l$.
+Soient $f$ une fonction et $l \in \R$ tel que $\lim_{x \to +\infty} f(x) = l$ (resp. $\lim_[x \to - \infty} f(x)= l$)
 
-La droite d'équation $y=l$ est une asymptote horizontale à la courbe représentative de la fonction $f$ au voisinage de $+\infty$.
+La droite d'équation $y=l$ est une asymptote horizontale à la courbe représentative de la fonction $f$ au voisinage de $+\infty$ (resp. au voisinage de $-\infty$)
 :::
 
 
