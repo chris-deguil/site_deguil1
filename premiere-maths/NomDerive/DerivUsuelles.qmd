@@ -15,13 +15,14 @@ On appelle alors **fonction dérivée** de la fonction $f$, la fonction notée $
 $$f' : x \longmapsto f'(x)$$
 :::
 
-::: {.bloc .ex}
+::: {.bloc .exo}
+<span class="bloc-titre">Exemple :</span>  
 On considère la fonction $f$, définie par $f(x)=2x^2-3x+5$. Déterminons la fonction dérivée associée.  
 <details class="bloc cor"><summary>Afficher la correction</summary>
 Pour tout $h$ non nul, et tout réel $a$ :  
-$$\frac{f(a+h) - f(a)}{h} = \frac{2a^2+2h^2+4ah-3a-3h -2a^2+6a-5}{h} = \frac{2h^2+4ah-3h}{h} = 2h+4a-3$$  
+$$\frac{f(a+h) - f(a)}{h} = \frac{2a^2+2h^2+4ah -3a-3h +5 -2a^2+6a-5}{h} = \frac{2h^2+4ah-3h}{h} = 2h+4a-3$$  
 Or :  
-$$\lim_{h \to 0} 2h+4a-3 = 4a-3$$  
+$$\lim_{h \to 0} \, 2h+4a-3 = 4a-3$$  
 Donc $f$ est dérivable en $a$ et $f'(a) = 4a-3$.  
 On en déduit que la fonction dérivée de $f$ est $f'(x) = 4x - 3$ définie sur $\R$.
 </details>
@@ -56,7 +57,7 @@ $f'(a)= 2a$.
 - Soit $f$ définie sur $\R_+$ par $f(x) = \sqrt{x}$.  
 Pour tout $a \in \R_+$ et $h \in \R^*$ tel que $a+h > 0$,  
 $$\sqrt{a+h} - \sqrt{a} = \frac{a + h - a}{\sqrt{a+h} + \sqrt{a}} = \frac{h}{\sqrt{a+h} + \sqrt{a}}$$  
-Ainsi  
+Ainsi
 $$\frac{f(a+h) - f(a)}{h} = \frac{1}{\sqrt{a+h} + \sqrt{a}}$$  
 Donc en faisant tendre $h$ vers $0$, on obtient $f'(a)= \frac{1}{2 \sqrt{a}}$.  
 </details>
@@ -74,16 +75,20 @@ alors
 $$f':x \longmapsto 3x^2 \qquad \et \qquad g':x \longmapsto -\frac{5}{x^6}$$
 :::
 
-::: {.bloc .ex}
-1. Démontrer que la fonction inverse est dérivable en tout réel $a \ne 0$.  
-<details class="bloc cor"><summary>Afficher la correction</summary>
-Pour tout réel $a \neq 0$, et tout $h \neq 0$ tel que $a+h \neq 0$,  
-$$\tau_a(h) = \dfrac{\dfrac{1}{a+h} - \dfrac{1}{a}}{h} = \dfrac{a-(a+h)}{h a(a+h)} = - \frac{1}{a(a+h)}$$  
-Or $\lim_{h \to 0} \tau_a(h) = - \frac{1}{a^2}$.  
-Ainsi la fonction inverse est dérivable en tout réel $a$ non nul, et pour tout $a \neq 0$, $f'(a) =-\frac{1}{a^2}$.
-</details>
+::: {.bloc .exo}
+<span class="bloc-titre">Exemple :</span>  
 
-2. Équation de la tangente $T_a$ :  
+1. Démontrer que la fonction inverse est dérivable en tout réel $a \ne 0$.  
+
+  <details class="bloc cor"><summary>Afficher la correction</summary>
+  Pour tout réel $a \neq 0$, et tout $h \neq 0$ tel que $a+h \neq 0$,  
+  $$\tau_a(h) = \dfrac{\dfrac{1}{a+h} - \dfrac{1}{a}}{h} = \dfrac{a-(a+h)}{h a(a+h)} = - \frac{1}{a(a+h)}$$  
+  Or $\lim_{h \to 0} \, \tau_a(h) = - \frac{1}{a^2}$.  
+  Ainsi la fonction inverse est dérivable en tout réel $a$ non nul, et pour tout $a \neq 0$, $f'(a) =-\frac{1}{a^2}$.
+  </details>
+
+2. Déterminer l'équation réduite de la $T_a$, tangente à $\mathscr{C}_f$ au point d'abscisse $a$ :  
+   
 <details class="bloc cor"><summary>Afficher la correction</summary>
 $M(x\,;\,y) \in T_a \Longleftrightarrow y=f'(a)(x-a)+f(a)$  
 $\Longleftrightarrow y=-\frac{1}{a^2} x + \frac{1}{a} + \frac{1}{a}$  
@@ -92,8 +97,10 @@ Donc
 $$T_a: y=- \frac{1}{a^2}x + \frac{2}{a}$$
 </details>
 
-3. Coordonnées des points $A$ et $B$ (intersections avec les axes) :  
+3. Déterminer les coordonnées des points $A$ et $B$, points d'intersection de la tangente avec les axes du repère.  
+   
 <details class="bloc cor"><summary>Afficher la correction</summary>
+
 - $A(x_A\, ; \, y_A)$ le point d'intersection de $T_a$ avec l'axe des abscisses : $y_A=0$.  
 Donc  
 $$0=-\frac{1}{a^2}x_A+ \frac{2}{a} \quad \Rightarrow \quad x_A=2a$$  
@@ -106,12 +113,13 @@ Ainsi $A\left(2a \, ; \, 0\right)$ et $B \left(0 \, ;\, \frac{2}{a} \right)$.
 </details>
 
 4. Montrer que le milieu de $[AB]$ est le point de tangence :  
-<details class="bloc cor"><summary>Afficher la correction</summary>
-Soit $M$ le milieu de $[AB]$, alors  
-$$M\left(\frac{2a+0}{2} \, ; \dfrac{0+\frac{2}{a}}{2} \right) = \left(a \, ; \, \frac{1}{a} \right)$$  
 
-Or $M \in \mathscr{C}_f$ (car $f(a)=1/a$), et $M \in (AB)$, donc $M$ est bien le point de tangence.  
-</details>
+  <details class="bloc cor"><summary>Afficher la correction</summary>
+  Soit $M$ le milieu de $[AB]$, alors  
+  $$M\left(\frac{2a+0}{2} \, ; \dfrac{0+\frac{2}{a}}{2} \right) = \left(a \, ; \, \frac{1}{a} \right)$$  
+
+  Or $M \in \mathscr{C}_f$ (car $f(a)=1/a$), et $M \in (AB)$, donc $M$ est bien le point de tangence.  
+  </details>
 :::
 
 

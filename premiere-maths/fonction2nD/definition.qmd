@@ -186,7 +186,7 @@ $$f(x) = -x^2 + 4x - 5 = -\big(x^2 - 4x\big) - 5 = -\big((x-2)^2 - 4\big) - 5 = 
 </details>
    
 2.  Soit une fonction $g$ définie sur $\R$ par $g(x) = 3x^2 + 6x - 3$. <br>
-   Résoudre $g(x)=30$=.
+   Résoudre $g(x)=30$.
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 *On ne sait encore résoudre ce type d'équation, on va alors se ramener à une forme connue $X^2=a$*<br>

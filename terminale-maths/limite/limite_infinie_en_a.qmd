@@ -54,7 +54,7 @@ On dit alors que la droite d'équation $x=a$ est une asymptote verticale à la c
 </div>
 On écrit alors $$\lim_{x \to a^-} f(x)= + \infty$$
 
-- Cas de la limite en $a^+$ (limite à gauche)
+- Cas de la limite en $a^+$ (limite à droite)
 <div style="text-align: center;">
   <img src="../../image/maths_term/Chap4_Limite_figure14.png" style="width: 40%;">
 </div>
@@ -81,7 +81,7 @@ $$\lim_{x \to 0^+} \frac{1}{x^n}= +\infty  \qquad \qquad \lim_{x \to 0^+} \frac{
 Tableau des variations de la fonction inverse
 
 <div style="text-align: center;">
-  <img src="../../image/maths_term/Chap4_Limite_figure15.png" style="width: 40%;">
+  <img src="../../image/maths_term/Chap4_Limite_figure15.png" style="width: 65%;">
 </div>
 
 :::

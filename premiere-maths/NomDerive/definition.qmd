@@ -82,7 +82,10 @@ Donc $g$ est dérivable en $4$, et $g'(4) = -1$.
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 **Avec la calculatrice**  
-On cherche à connaître une valeur approchée de $f'(2)$ où $f(x) = \frac{1-x^2}{\sqrt{x^3-2} -1}$.  
+On cherche à connaître une valeur approchée de $f'(2)$ où 
+
+$$f(x) = \frac{1-x^2}{\sqrt{x^3-2} -1}$$
+
 *Le calcul est trop compliqué, et inintéressant, pour passer par le taux d'accroissement...*
 
 | Avec une TI                              | Avec une Casio            |

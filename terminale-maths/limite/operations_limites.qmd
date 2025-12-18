@@ -42,7 +42,7 @@ Soit $f$ la fonction définie sur $]0 ; +\infty[$ par $f(x)=x^2-1+\dfrac{1}{x}$.
 
 1. Montrer que la fonction admet l'axe des ordonnées comme asymptote
    <details class="bloc cor"><summary>Afficher la correction :</summary>
-$$\displaystyle \lim_{\underset{x>0}{x\to 0}}x^2-1=-1 \et \displaystyle \lim_{\underset{x>0}{x\to 0}}\dfrac{1}{x}=+\infty$$ donc, par somme, $$\displaystyle \lim_{\underset{x>0}{x\to 0}}f(x)=+\infty$.$ 
+$$\displaystyle \lim_{\underset{x>0}{x\to 0}} \, x^2-1=-1 \et \displaystyle \lim_{\underset{x>0}{x\to 0}} \, \dfrac{1}{x}=+\infty$$ donc, par somme, $$\displaystyle \lim_{\underset{x>0}{x\to 0}}f(x)=+\infty$$ 
 
 	La courbe représentative de la fonction $f$ admet pour asymptote l'axe des ordonnées.
 </details>
@@ -85,18 +85,19 @@ Déterminer les limites aux bornes de l'ensemble de définition
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-- $\lim_{\underset{x>0}{x\to 0}} x^2=0 \et  \lim_{\underset{x>0}{x\to 0}} \left(\dfrac{1}{x}-1\right)=+\infty$. 
+- $\lim_{\underset{x>0}{x\to 0}} \, x^2=0 \et  \lim_{\underset{x>0}{x\to 0}} \, \left(\dfrac{1}{x}-1\right)=+\infty$. 
   
   (Nous sommes en présence de la forme indéterminée  \og $0\times \infty$ \fg.)
 
 
 	Pour tout réel $x$ non nul, $$x^2\times \left(\dfrac{1}{x}-1\right)=x- x^2$$
 
-	De plus $$\displaystyle \lim_{\underset{x>0}{x\to 0}} x- x^2=0$$
+	De plus $$\displaystyle \lim_{\underset{x>0}{x\to 0}} \,  x- x^2=0$$
+
       On en déduit que $$\displaystyle \lim_{\underset{x>0}{x\to 0}}f(x)=0$$
 - $\displaystyle \lim_{x\to +\infty} x^2 = +\infty \et \displaystyle \lim_{x\to +\infty}\left(\dfrac{1}{x}-1\right)=-1$ 
 
-donc, par produit,  $$\displaystyle \lim_{x\to +\infty}f(x)=-\infty$$
+donc, par produit,  $$\displaystyle \lim_{x\to +\infty} \, f(x)=-\infty$$
 
 </details>
 
@@ -139,7 +140,7 @@ Déterminer les limites aux bornes de l'ensemble de définition
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-- $\lim_{x\to 1}x^3-1=0 \et \lim_{x\to 1}x^2-1=0$. 
+- $\lim_{x\to 1}\, x^3-1=0 \et \lim_{x\to 1}  \, x^2-1=0$. 
 Nous sommes en présence de la forme indéterminée \og $\dfrac{0}{0}$ \fg.
 
 Or pour tout réel $x \ne 1$, 
@@ -152,7 +153,7 @@ $$\displaystyle \lim_{x\to 1}\dfrac{x^2+x+1}{x+1}=\dfrac{3}{2}$$
     
 nous pouvons conclure que, $$\displaystyle \lim_{x\to 1}f(x)=\dfrac{3}{2}$$
 
-- $\displaystyle \lim_{x\to +\infty} x^3-1 = +\infty \et \displaystyle \lim_{x\to +\infty}x^2-1=+\infty$. 
+- $\displaystyle \lim_{x\to +\infty} \, x^3-1 = +\infty \et \displaystyle \lim_{x\to +\infty} \, x^2-1=+\infty$. 
 
 Nous sommes en présence de la forme indéterminée \og $\dfrac{\infty}{\infty}$\fg.
 
@@ -161,9 +162,9 @@ Or pour pour tout réel $x \ne 0$,
 $$\dfrac{x^3-1}{x^2-1} =\dfrac{x^3\left(1-\dfrac{1}{x^3}\right)}{x^2\left(1-\dfrac{1}{x^2}\right)}=\dfrac{x\left(1-\dfrac{1}{x^3}\right)}{1-\dfrac{1}{x^2}}$$ 
 
 Comme 
-$$\displaystyle \lim_{x\to +\infty}x\left(1-\dfrac{1}{x^3}\right)=+\infty \et \displaystyle \lim_{x\to +\infty}1-\dfrac{1}{x^2}=1$$ 
+$$\displaystyle \lim_{x\to +\infty} \, x \left(1-\dfrac{1}{x^3}\right)=+\infty \et \displaystyle \lim_{x\to +\infty}\, 1-\dfrac{1}{x^2}=1$$ 
 
-il s'ensuit que 	$$\displaystyle \lim_{x\to +\infty}f(x)=+\infty$$ 
+il s'ensuit que 	$$\displaystyle \lim_{x\to +\infty}\, f(x)=+\infty$$ 
 
 </details>
 :::
