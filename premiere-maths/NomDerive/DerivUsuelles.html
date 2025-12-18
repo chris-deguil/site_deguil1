@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,7 +161,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -361,7 +360,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -369,7 +368,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -400,6 +399,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -710,7 +710,8 @@ On dit que <span class="math inline">\(f\)</span> est dérivable sur <span class
 On appelle alors <strong>fonction dérivée</strong> de la fonction <span class="math inline">\(f\)</span>, la fonction notée <span class="math inline">\(f'\)</span>, définie sur <span class="math inline">\(I\)</span> par :<br>
 <span class="math display">\[f' : x \longmapsto f'(x)\]</span></p>
 </div>
-<div class="bloc ex">
+<div class="bloc exo">
+<span class="bloc-titre">Exemple :</span><br>
 On considère la fonction <span class="math inline">\(f\)</span>, définie par <span class="math inline">\(f(x)=2x^2-3x+5\)</span>. Déterminons la fonction dérivée associée.<br>
 
 <details class="bloc cor">
@@ -718,9 +719,9 @@ On considère la fonction <span class="math inline">\(f\)</span>, définie par <
 Afficher la correction
 </summary>
 Pour tout <span class="math inline">\(h\)</span> non nul, et tout réel <span class="math inline">\(a\)</span> :<br>
-<span class="math display">\[\frac{f(a+h) - f(a)}{h} = \frac{2a^2+2h^2+4ah-3a-3h -2a^2+6a-5}{h} = \frac{2h^2+4ah-3h}{h} = 2h+4a-3\]</span><br>
+<span class="math display">\[\frac{f(a+h) - f(a)}{h} = \frac{2a^2+2h^2+4ah -3a-3h +5 -2a^2+6a-5}{h} = \frac{2h^2+4ah-3h}{h} = 2h+4a-3\]</span><br>
 Or :<br>
-<span class="math display">\[\lim_{h \to 0} 2h+4a-3 = 4a-3\]</span><br>
+<span class="math display">\[\lim_{h \to 0} \, 2h+4a-3 = 4a-3\]</span><br>
 Donc <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(a\)</span> et <span class="math inline">\(f'(a) = 4a-3\)</span>.<br>
 On en déduit que la fonction dérivée de <span class="math inline">\(f\)</span> est <span class="math inline">\(f'(x) = 4x - 3\)</span> définie sur <span class="math inline">\(\R\)</span>.
 </details>
@@ -801,8 +802,7 @@ Donc en faisant tendre <span class="math inline">\(h\)</span> vers <span class="
 <li><p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R_+\)</span> par <span class="math inline">\(f(x) = \sqrt{x}\)</span>.<br>
 Pour tout <span class="math inline">\(a \in \R_+\)</span> et <span class="math inline">\(h \in \R^*\)</span> tel que <span class="math inline">\(a+h &gt; 0\)</span>,<br>
 <span class="math display">\[\sqrt{a+h} - \sqrt{a} = \frac{a + h - a}{\sqrt{a+h} + \sqrt{a}} = \frac{h}{\sqrt{a+h} + \sqrt{a}}\]</span><br>
-Ainsi<br>
-<span class="math display">\[\frac{f(a+h) - f(a)}{h} = \frac{1}{\sqrt{a+h} + \sqrt{a}}\]</span><br>
+Ainsi <span class="math display">\[\frac{f(a+h) - f(a)}{h} = \frac{1}{\sqrt{a+h} + \sqrt{a}}\]</span><br>
 Donc en faisant tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span>, on obtient <span class="math inline">\(f'(a)= \frac{1}{2 \sqrt{a}}\)</span>.<br>
 </p></li>
 </ul>
@@ -817,39 +817,39 @@ On peut retenir que pour tout <span class="math inline">\(n \in \N^*\)</span>, a
 alors<br>
 <span class="math display">\[f':x \longmapsto 3x^2 \qquad \et \qquad g':x \longmapsto -\frac{5}{x^6}\]</span></p>
 </div>
-<div class="bloc ex">
+<div class="bloc exo">
+<p><span class="bloc-titre">Exemple :</span></p>
 <ol type="1">
-<li>Démontrer que la fonction inverse est dérivable en tout réel <span class="math inline">\(a \ne 0\)</span>.<br>
-
+<li>Démontrer que la fonction inverse est dérivable en tout réel <span class="math inline">\(a \ne 0\)</span>.</li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
 Pour tout réel <span class="math inline">\(a \neq 0\)</span>, et tout <span class="math inline">\(h \neq 0\)</span> tel que <span class="math inline">\(a+h \neq 0\)</span>,<br>
 <span class="math display">\[\tau_a(h) = \dfrac{\dfrac{1}{a+h} - \dfrac{1}{a}}{h} = \dfrac{a-(a+h)}{h a(a+h)} = - \frac{1}{a(a+h)}\]</span><br>
-Or <span class="math inline">\(\lim_{h \to 0} \tau_a(h) = - \frac{1}{a^2}\)</span>.<br>
+Or <span class="math inline">\(\lim_{h \to 0} \, \tau_a(h) = - \frac{1}{a^2}\)</span>.<br>
 Ainsi la fonction inverse est dérivable en tout réel <span class="math inline">\(a\)</span> non nul, et pour tout <span class="math inline">\(a \neq 0\)</span>, <span class="math inline">\(f'(a) =-\frac{1}{a^2}\)</span>.
-</details></li>
-<li>Équation de la tangente <span class="math inline">\(T_a\)</span> :<br>
-
+</details>
+<ol start="2" type="1">
+<li>Déterminer l’équation réduite de la <span class="math inline">\(T_a\)</span>, tangente à <span class="math inline">\(\mathscr{C}_f\)</span> au point d’abscisse <span class="math inline">\(a\)</span> :</li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<span class="math inline">\(M(x\,;\,y) \in T_a \Longleftrightarrow y=f'(a)(x-a)+f(a)\)</span><br>
-<span class="math inline">\(\Longleftrightarrow y=-\frac{1}{a^2} x + \frac{1}{a} + \frac{1}{a}\)</span></details></li>
-</ol>
+<p><span class="math inline">\(M(x\,;\,y) \in T_a \Longleftrightarrow y=f'(a)(x-a)+f(a)\)</span><br>
+<span class="math inline">\(\Longleftrightarrow y=-\frac{1}{a^2} x + \frac{1}{a} + \frac{1}{a}\)</span></p>
 Donc<br>
 <span class="math display">\[T_a: y=- \frac{1}{a^2}x + \frac{2}{a}\]</span>
-
+</details>
 <ol start="3" type="1">
-<li>Coordonnées des points <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> (intersections avec les axes) :<br>
-
+<li>Déterminer les coordonnées des points <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, points d’intersection de la tangente avec les axes du repère.</li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
-</summary></details></li>
-</ol>
+</summary>
 <ul>
 <li><p><span class="math inline">\(A(x_A\, ; \, y_A)\)</span> le point d’intersection de <span class="math inline">\(T_a\)</span> avec l’axe des abscisses : <span class="math inline">\(y_A=0\)</span>.<br>
 Donc<br>
@@ -859,20 +859,19 @@ Donc<br>
 <span class="math display">\[y_B=-\frac{1}{a^2} \times 0 + \frac{2}{a}=\frac{2}{a}\]</span></p></li>
 </ul>
 Ainsi <span class="math inline">\(A\left(2a \, ; \, 0\right)\)</span> et <span class="math inline">\(B \left(0 \, ;\, \frac{2}{a} \right)\)</span>.
-
+</details>
 <ol start="4" type="1">
-<li>Montrer que le milieu de <span class="math inline">\([AB]\)</span> est le point de tangence :<br>
-
+<li>Montrer que le milieu de <span class="math inline">\([AB]\)</span> est le point de tangence :</li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-Soit <span class="math inline">\(M\)</span> le milieu de <span class="math inline">\([AB]\)</span>, alors<br>
-<span class="math display">\[M\left(\frac{2a+0}{2} \, ; \dfrac{0+\frac{2}{a}}{2} \right) = \left(a \, ; \, \frac{1}{a} \right)\]</span></details></li>
-</ol>
+<p>Soit <span class="math inline">\(M\)</span> le milieu de <span class="math inline">\([AB]\)</span>, alors<br>
+<span class="math display">\[M\left(\frac{2a+0}{2} \, ; \dfrac{0+\frac{2}{a}}{2} \right) = \left(a \, ; \, \frac{1}{a} \right)\]</span></p>
 Or <span class="math inline">\(M \in \mathscr{C}_f\)</span> (car <span class="math inline">\(f(a)=1/a\)</span>), et <span class="math inline">\(M \in (AB)\)</span>, donc <span class="math inline">\(M\)</span> est bien le point de tangence.<br>
 
-
+</details>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="tangente.html">⬅️</a></p>
@@ -945,14 +944,13 @@ Or <span class="math inline">\(M \in \mathscr{C}_f\)</span> (car <span class="ma
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
