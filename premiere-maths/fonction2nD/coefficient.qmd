@@ -13,27 +13,41 @@ order: 3
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
 
-Soit $f(x) = ax^2 + bx + c$ une fonction polynôme du second degré, de racines $x_1$ et $x_2$ (éventuellement $x_1 = x_2$).  
-Alors, en appelant $S$ la somme des racines et $P$ le produit des racines, on a :  
+Soit $f(x) = ax^2 + bx + c$ une fonction polynôme du second degré, de racine $x_1$ et $x_2$ (éventuellement $x_1=x_2$). 
 
-$$S = x_1 + x_2 = - \frac{b}{a} \qquad \text{et} \qquad P = x_1 \times x_2 = \frac{c}{a}$$  
+Alors en appelant $S$ la somme des racines et $P$ le produit des racines, on a 
 
-et pour tout réel $x$ :  
+$$S = x_1 + x_2 = - \frac{b}{a} \et P = x_1 \times x_2 = \frac{c}{a}$$
 
-$$f(x) = a \left(x^2 - Sx + P \right)$$
+
+et pour tout réel $x$,  
+
+$$f(x) = a \left(x^2 - S x + P \right)$$
 :::
 
 <details class="bloc demo"><summary>Démonstration :</summary>
 
-Soit $f:x \longmapsto ax^2+bx+c$ une fonction du second degré ayant deux racines $x_1$ et $x_2$, éventuellement confondues.  
-Alors, pour tout réel $x$ :  
+Soit $f(x) = ax^2 + bx + c$ une fonction polynôme du second degré, de racine $x_1$ et $x_2$, alors 
+$$S = x_1 + x_2 = \frac{-b + \sqrt{\Delta}}{2a}+  \frac{-b + \sqrt{\Delta}}{2a}= -\frac{b}{a}$$
 
-\begin{align*}
-ax^2+bx+c &= a(x-x_1)(x-x_2) \\
-&= ax^2 - a(x_1+x_2)x + ax_1x_2 \\
-&\Longleftrightarrow x^2 + \tfrac{b}{a}x  + \tfrac{c}{a} = x^2 - (x_1+x_2)x + x_1x_2 \\
-&\Longleftrightarrow -\tfrac{b}{a} = x_1+x_2 \quad \text{et} \quad \tfrac{c}{a} = x_1x_2
-\end{align*}
+et 
+
+$$P = x_1 x_2 = \frac{-b + \sqrt{\Delta}}{2a} \times  \frac{-b - \sqrt{\Delta}}{2a}
+=\frac{(-b)^2 - \Delta}{4a^2} = \frac{b^2 - b^2 + 4ac}{4a^2} =\frac{c}{a}
+$$
+
+Réciproquement, supposons $ax^2 - aSx + aP = 0$.
+
+Cette équation admet pour discriminant 
+
+$$\Delta = (-aS)^2 - 4aP = a((x_1 + x_2)^2 - 4x_1 x_2) = a(x_1^2 + x_2^2 + 2x_1x_2 - 4x_1 x_2) =a (x_1-x_2)^2$$
+
+Ainsi les solutions $u$ et $v$ de cette équation sont 
+
+$$u = \frac{S + x_1 - x_2}{2} \et v = \frac{S -( x_1 -x_2)}{2}$$
+Donc 
+
+$$u = x_1 \quad \text{ et } \quad  v = x_2$$
 
 </details>
 
@@ -41,7 +55,7 @@ ax^2+bx+c &= a(x-x_1)(x-x_2) \\
 <span class="bloc-titre">Remarque :</span>  
 Lorsque l’on connaît l’expression algébrique d’un polynôme du second degré, et une de ses racines, alors on connaît automatiquement la seconde racine.  
 
-On peut chercher, par exemple, parmi les valeurs $-2$, $-1$, $1$ ou $2$ (éventuellement $\sqrt{2}$), si une de ces valeurs n’est pas une racine du polynôme. Si c’est le cas, on peut alors la caractériser de **racine évidente**.
+On peut chercher, par exemple, parmi les valeurs $-2$, $-1$, $1$ ou $2$ (éventuellement $\sqrt{2}$), si une de ces valeurs n’est pas une racine du polynôme. Si c’est le cas, on peut alors la caractériser de racine évidente.
 :::
 
 ::: {.bloc .ex}
@@ -56,6 +70,12 @@ Le polynôme admettant une racine, il en admet une deuxième $x_2$, et :
 
 $$x_1 x_2 = \frac{14}{-5} \quad \Rightarrow \quad x_2 = \frac{14}{2 \times -5} = -\tfrac{7}{5}$$
 :::
+
+
+
+
+
+
 
 <div class="nav-pages">
   <a class="prev" href="coefficient.html">⬅️</a>

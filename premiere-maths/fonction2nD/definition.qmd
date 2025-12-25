@@ -45,7 +45,7 @@ $$
 - Les coefficients dominants de $f$, $g$ et $h$ sont respectivement $1$, $-6$ et $-3$.  
 - Les coefficients constants sont respectivement $-4$, $-30$ et $0$.
 
-2. Les fonctions suivantes **ne sont pas** des polynômes de degré 2 :
+2. Les fonctions suivantes ne sont pas des polynômes de degré 2 :
 
 $$
 i(x) = \sqrt{x} - 3x^2,\quad
@@ -101,7 +101,7 @@ $$f(x) =ax^2+bx+c$$
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
-Soit $f:x \longmpasto ax^2 + bx + c$, avec $a,b,c \in \R$ et $a \neq 0$.
+Soit $f:x \longmapsto ax^2 + bx + c$, avec $a,b,c \in \R$ et $a \neq 0$.
 
 Pour tout $x \in \R$, 
 $$
@@ -189,7 +189,6 @@ $$f(x) = -x^2 + 4x - 5 = -\big(x^2 - 4x\big) - 5 = -\big((x-2)^2 - 4\big) - 5 = 
    Résoudre $g(x)=30$.
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
-*On ne sait encore résoudre ce type d'équation, on va alors se ramener à une forme connue $X^2=a$*<br>
 Pour tout $x \in \R$,  
 
 $$
@@ -213,10 +212,14 @@ On déduit alors que les solutions de l'équation (c'est-à-dire les antécéden
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque :</span>  
-On remarque que l'on ne peut pas factoriser $f$, puisque c'est la somme de deux quantités négatives (donc différent de $a^2-b^2)$.<br>
-La forme canonique obtenue pour la fonction $g$ étant différence de deux quantités positives, l'expression est alors factorisable : $$a^2-b^2=(a-b)(a+b)$$
-En effet, pour tout réel $x$
-$$g(x)=3(x+1)^2 - 6 =3 [(x+1)^2-2] = 3 (x+1-\sqrt{2})(x+1+\sqrt{2})$$
+On remarque que l'on ne peut pas factoriser $f$, puisque c'est la somme de deux quantités négatives (donc différente de $a^2-b^2$).
+
+La forme canonique obtenue pour la fonction $g$ étant la différence de deux quantités positives, l'expression est alors factorisable : 
+
+$$a^2-b^2=(a-b)(a+b)$$
+
+En effet, pour tout réel $x$, 
+$$g(x) = 3(x+1)^2 - 6 = 3\big[(x+1)^2-2\big] = 3(x+1-\sqrt{2})(x+1+\sqrt{2})$$
 
 :::
 

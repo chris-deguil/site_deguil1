@@ -13,54 +13,58 @@ order: 5
 ### Représentation graphique des fonctions polynômes du second degré
 
 ::: {.bloc .rem}
-On considère, sur $\mathbb{R}$, les fonctions $f$ définie par $f(x) = ax^2 + bx + c$ et $h$ définie par $h(x) = ax^2$, où $a$ est un réel non nul.  
-Soit le vecteur $\ve{u}(\alpha \, ; \, \beta)$, où $\alpha = -\frac{b}{2a}$ et $\beta = f(\alpha)$.  
+On considère, sur $\R$, les fonctions $f$ définie par $f(x)=ax^2+bx+c$ et $h$ définie par $h(x)=ax^2$, où $a$ est un réel non nul.\\
+Soit alors le vecteur $\ve{u}(\alpha \, ; \, \beta)$, où $\alpha=-\dfrac{b}{2a}$ et $\beta=f(\alpha)$.
+
 Montrons que $\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)$.
 
+Pour cela, on va montrer que $\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)$ et que $ t_{\ve{u}}(\mathscr{C}_h) \subset \mathscr{C}_f$.
 
-Pour cela, on va montrer deux inclusions :  $\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)$ et que $ t_{\ve{u}}(\mathscr{C}_h) \subset \mathscr{C}_f$.
 
 - Soit $M'(x' \, ;\, y') \in t_{\ve{u}}(\mathscr{C}_h)$.  
-Il existe $M(x\, ;\,y) \in \mathscr{C}_h$ tel que $t_{\ve{u}}(M)=M'$.  
-Puisque $y = ax^2$, on a :
-$$
-\begin{pmatrix}
+  Il existe $M(x\, ;\,y) \in \mathscr{C}_h$ tel que $t_{\ve{u}}(M)=M'$.
+  
+  On a alors, puisque $y=ax^2$ :
+$$\begin{pmatrix}
 x'\\
 y'
-\end{pmatrix} =  
-\begin{pmatrix}
+\end{pmatrix} = \begin{pmatrix}
 \alpha\\
 \beta
-\end{pmatrix} +
-\begin{pmatrix}
-x\\
-ax^2
-\end{pmatrix}
-=
-\begin{pmatrix}
-x + \alpha \\
-a(x + \alpha - \alpha)^2 + \beta
-\end{pmatrix}
-=
-\begin{pmatrix}
+\end{pmatrix} + \begin{pmatrix}
+x\\y
+\end{pmatrix} = \begin{pmatrix}
+x+\alpha\\
+ax^2+\beta
+\end{pmatrix}   = \begin{pmatrix}
+x+\alpha\\
+a(x-\alpha+\alpha)^2+ \beta
+\end{pmatrix}  
+= \begin{pmatrix}
 x'\\
-a(x' - \alpha)^2 + \beta
-\end{pmatrix}
+a(x'-\alpha)^2+ \beta
+\end{pmatrix}  
 $$
-Donc $y' = a(x' - \alpha)^2 + \beta$ et $M' \in \mathscr{C}_f$.  
-Ainsi :  
-$$t_{\ve{u}}(\mathscr{C}_h) \subset \mathscr{C}_f$$
+Ainsi $$y'=a(x'-\alpha)^2+ \beta.$$
+Donc $$(\forall M \in \mathscr{P}, \, M \in t_{\ve{u}}(\mathscr{C}_h) \Longrightarrow M \in \mathscr{C}_f) \Longrightarrow t_{\ve{u}}(\mathscr{C}_h) \subset \mathscr{C}_f.$$
 
-- Réciproquement, soit $N'(x'\, ;\,y') \in \mathscr{C}_f$.  
-On pose $N(x'-\alpha\,;\, y'-\beta)$.  
-Alors $\ve{NN'} = \ve{u}$, donc $t_{\ve{u}}(N) = N'$.  
-Il reste à montrer que $N \in \mathscr{C}_h$.  
-Puisque $y' = a(x' - \alpha)^2 + \beta$, on a :
-$$y = y' - \beta = a(x' - \alpha)^2$$  
-Donc $N \in \mathscr{C}_h$ et  
-$$\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)$$
+- Réciproquement, soit $N'(x'\, ;\,y') \in \mathscr{C}_f$. 
+  On considère alors $N (x'-\alpha \,;\, y'-\beta)$.
+  
+  On a donc  $\ve{NN'}= \ve{u}$, d'où $t_{\ve{u}}(N)=N'$
 
-Ainsi $\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)$.
+  Ainsi $N$ est l'antécédent de $N'$ par la translation de vecteur $\ve{u}$.
+
+  Reste à montrer que $N \in \mathscr{C}_h$.
+
+  Pour tout réel $x$, puisque $N'(x'\, ;\, y') \in \mathscr{C}_f$ :
+$$
+ax^2 =a(x'-\alpha)^2 = a(x'-\alpha)^2 + \beta - \beta = y'- \beta = y.
+$$
+
+Donc $N \in \mathscr{C}_h$, d'où $\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)$.
+\end{itemize}
+Des inclusions réciproques, on déduit donc que $\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)$.
 :::
 
 ::: {.bloc .thm}
@@ -68,7 +72,7 @@ Ainsi $\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)$.
 
 Dans un repère orthonormé, la représentation graphique de $f(x) = ax^2 + bx + c$ (avec $a \ne 0$) est une parabole de sommet  
 $S(\alpha \, ; \, \beta)$ <br>
-avec $$\alpha = -\tfrac{b}{2a} \text{ et } \beta = f(\alpha) = -\tfrac{\Delta}{4a}$$
+avec $$\alpha = -\dfrac{b}{2a} \et \beta = f(\alpha) = -\dfrac{\Delta}{4a}$$
 :::
 
 <details class="bloc demo"><summary>Démonstration</summary>
@@ -101,8 +105,9 @@ Il s’agit d’un changement d’échelle dans une seule direction.
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
 
-Soit $f(x) = a(x - \alpha)^2 + \beta$ avec $a \ne 0$.  
-Alors la droite $d$ d’équation $x = \alpha$ est un axe de symétrie de la courbe représentative de $f$.
+Soit $f$ une fonction du second degré, telle que $f(x) = a(x - \alpha)^2 + \beta$, où $\alpha$ et $\beta$ sont des réels et $a$ est non nul.
+
+Alors la droite $(d)$ d'équation $x = \alpha$ est un axe de symétrie de la représentation graphique de la fonction $f$.
 :::
 
 <details class="bloc demo"><summary>Démonstration</summary>

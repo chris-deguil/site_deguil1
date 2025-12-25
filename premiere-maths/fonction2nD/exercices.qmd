@@ -26,7 +26,7 @@ Résoudre les équations suivantes :
 - $(E_3)\,:\,(x-5)^2=3$
 - $(E_4)\,:\,(5x-4)^2-(3x+7)^2$
 - $(E_5)\,:\,(2x+1)^2+x(1-2x)=4x^2-1$
-- $(E_6)\,:\,\frac{2x+3}{x-2} = 2$
+- $(E_6)\,:\,\dfrac{2x+3}{x-2} = 2$
 - $(E_7)\,:\,(6x-3)^2 -(2x-1)=0$
 :::
 
@@ -37,9 +37,9 @@ Résoudre les équations suivantes :
 Résoudre dans $\R$ les inéquations suivantes :
 
 - $(I_0)\,:\,(5x+3)(1-2x) > 0$
-- $(I_1)\,:\,\frac{(5x + 3)(2x-1)}{x^2 - 4} < 0$
+- $(I_1)\,:\,\dfrac{(5x + 3)(2x-1)}{x^2 - 4} < 0$
 - $(I_2)\,:\,16a^4-9  < 0$
-- $(I_3)\,:\,\frac{3x - 16}{5x - 2} \geqslant 3x + 8$
+- $(I_3)\,:\,\dfrac{3x - 16}{5x - 2} \geqslant 3x + 8$
 :::
 
 ## Exercice
@@ -50,7 +50,7 @@ Parmi les fonctions suivantes, déterminer celles qui sont des fonctions du seco
 
 - $f(x)= (3x-1)(2-3x)-5x$
 - $g(x) =(x-3)(6x^2+x+1) - (3x^2-1)(2x+1)$
-- $h(x)= \frac{x^3-x^2-5x+2}{x+2}$
+- $h(x)= \dfrac{x^3-x^2-5x+2}{x+2}$
 - $i(x)= \sqrt{x^2+3}$
 :::
 
@@ -112,7 +112,7 @@ Soit $f$ la fonction définie sur $\R$ par $$f(x)=(2x-3)^2+(x+5)(2x-3)$$
 2. Déterminer la forme développée réduite de $f$
 3. Déterminer la forme canonique de $f$.
 4. En utilisant la forme la plus adaptée de $f$  :
-   1. Calculer $f(0)$, $f(\sqrt{3})$ et $f\left(\frac{5}{12}\right)$.
+   1. Calculer $f(0)$, $f(\sqrt{3})$ et $f\left(\dfrac{5}{12}\right)$.
    2. Déterminer les racines de $f$.
    3. Déterminer les antécédents de 24 par $f$.
    4. Déterminer le minimum de $f$.
@@ -129,7 +129,7 @@ ____
 Pour chacune des fonctions suivantes, dire si le nombre $x_0$ est une racine.
 
 - $f(x)= 2x^2-5x+1$ et $x_0=1$
-- $g(x)= 6x^2+x-1$ et $x_0=\frac{1}{3}$
+- $g(x)= 6x^2+x-1$ et $x_0=\dfrac{1}{3}$
 - $h(x)= x^2-2x+2\sqrt{2}$ et $x_0=\sqrt{2}$
 :::
 
@@ -164,11 +164,11 @@ Pour chacune des équations suivantes, déterminer une racine évidente et facto
 <span class="exo-num"></span>
 
 1. Montrer que l'équation $-x^2+2x+1$ admet $1-\sqrt{2}$ comme racines
-2. On considère $\varphi =\frac{1+\sqrt{5}}{2}$
+2. On considère $\varphi =\dfrac{1+\sqrt{5}}{2}$
 
    1. Montrer que $\varphi$ est solution de l'équation $x^2-x-1=0$
    2. En utilisant la méthode $f(x)-f(r)$ donner une forme factorisée de $x^2-x-1$.
-   3. En déduire que l'autre racine est $-\frac{1}{\varphi}$
+   3. En déduire que l'autre racine est $-\dfrac{1}{\varphi}$
    4. Sans aucun calcul numérique, donner la valeur exacte de $\varphi^3$.
 :::
 
@@ -195,7 +195,7 @@ Résoudre les équations du second degré suivantes :
 
 1. Factoriser $x^2+3x+2$.
 2. En déduire la résolution de 
-$$(E_1):\, x^2+3x+2=5(x+1) \qquad et \qquad (E_2)\,:\, \frac{2}{x^2+3x+2} =\frac{1}{x+2}$$
+$$(E_1):\, x^2+3x+2=5(x+1) \et (E_2)\,:\, \dfrac{2}{x^2+3x+2} =\dfrac{1}{x+2}$$
 :::
 
 
@@ -205,12 +205,12 @@ $$(E_1):\, x^2+3x+2=5(x+1) \qquad et \qquad (E_2)\,:\, \frac{2}{x^2+3x+2} =\frac
 
 Résoudre les équations suivantes :
 
-- $(E_1)\,:\, -\frac{-2x}{x^2+1} =3$
-- $(E_2)\,:\, \frac{3}{x} - \frac{1}{2x-1} = 2$
-- $(E_3)\,:\, \frac{3}{x^2} = \frac{1}{2x} +1$
+- $(E_1)\,:\, -\dfrac{-2x}{x^2+1} =3$
+- $(E_2)\,:\, \dfrac{3}{x} - \dfrac{1}{2x-1} = 2$
+- $(E_3)\,:\, \dfrac{3}{x^2} = \dfrac{1}{2x} +1$
 - $(E_4)\,:\, x^3-x^2+4x=0$
-- $(E_5)\,:\, \frac{6x^2-13x+5}{2x-1}=0$
-- $(E_6) \,:\,\frac{1}{x} + \frac{2}{x+1} = \frac{3}{x-1}$
+- $(E_5)\,:\, \dfrac{6x^2-13x+5}{2x-1}=0$
+- $(E_6) \,:\,\dfrac{1}{x} + \dfrac{2}{x+1} = \dfrac{3}{x-1}$
 :::
 
 
@@ -256,16 +256,16 @@ En utilisant la même méthode qu'à l'exercice précédent, résoudre les équa
 On considère la fonction $f: x \mapsto 2x^4 - 9x^3 + 14x^2 - 9x + 2$.
 
 1. Le nombre 0 est-il racine de $f$ ?
-2. Soit $r \in \mathbb{R}$. Montrer que si $r$ est une racine de $f$ alors $\frac{1}{r}$ est également une racine de $f$.
+2. Soit $r \in \mathbb{R}$. Montrer que si $r$ est une racine de $f$ alors $\dfrac{1}{r}$ est également une racine de $f$.
     1. Montrer que l'équation $f(x) = 0$ est équivalente à l'équation
     $$
-    (E): 2\left(x^2 + \frac{1}{x^2}\right) - 9\left(x + \frac{1}{x}\right) + 14 = 0.
+    (E): 2\left(x^2 + \dfrac{1}{x^2}\right) - 9\left(x + \dfrac{1}{x}\right) + 14 = 0.
     $$
-3. On pose $u = x + \frac{1}{x}$. Déduire de la question précédente que $ (E) $ est équivalente à
+3. On pose $u = x + \dfrac{1}{x}$. Déduire de la question précédente que $(E)$ est équivalente à
     $$
     (E'): 2u^2 - 9u + 10 = 0.
     $$
-4. Résoudre $(E') $ et en déduire les solutions de $(E) $.
+4. Résoudre $(E')$ et en déduire les solutions de $(E) $.
  
  
 :::
@@ -359,7 +359,6 @@ On considère l'équation $2x^2 - 2x - 7 = 0$.
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-(Extrait Évaluation)
 
 On considère la fonction $f$ définie par $f(x)= 3x^2 - 5x - 7$.  
 On admet que cette fonction admet deux racines distinctes $x_1$ et $x_2$, que l'on ne cherchera pas à calculer, avec $x_1 < x_2$.
@@ -385,7 +384,8 @@ a^2b + ab^2 = 4
 # Factorisation - Signe d'une fonction du second degré
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"> Vrai/ faux </span>
+<span class="exo-num"> <span class="exo-extra"> Vraie/Faux </span>
+
 Pour chacune des affirmations suivantes, dire si elles sont vraies ou fausses.  
 On considère $f$ une fonction définie sur $\R$ par $$f(x)=ax^2+bx+c$$
 
@@ -463,12 +463,12 @@ Résoudre les inéquations suivantes :
 <span class="exo-num"></span>
 
 1. $f$ est la fonction polynôme définie sur $\mathbb{R}$ par $f(x) = 4x^3 + 2x^2 - 2x - 1$.  
-   1. Démontrer que pour tout réel $x$, $f(x) = (2x + 1)(ax^2 + bx + c)$, où $a$, $b$ et $c$ sont des réels à déterminer.  
-   2. Résoudre dans $\mathbb{R}$ l'équation $f(x) = 0$.  
+   a. Démontrer que pour tout réel $x$, $f(x) = (2x + 1)(ax^2 + bx + c)$, où $a$, $b$ et $c$ sont des réels à déterminer.  
+   b. Résoudre dans $\mathbb{R}$ l'équation $f(x) = 0$.  
 
 2. $f$ est la fonction polynôme définie sur $\mathbb{R}$ par $f(x) = x^3 - 4x^2 - \dfrac{9}{4}x + 9$.  
-   1. Démontrer que pour tout réel $x$, $f(x) = (x - 4)(ax^2 + bx + c)$, où $a$, $b$ et $c$ sont des réels à déterminer.  
-   2. Donner le tableau de signe de $f(x)$.
+   a. Démontrer que pour tout réel $x$, $f(x) = (x - 4)(ax^2 + bx + c)$, où $a$, $b$ et $c$ sont des réels à déterminer.  
+   b. Donner le tableau de signe de $f(x)$.
 :::
 
 ## Exercice
@@ -568,9 +568,7 @@ On note $x$ la largeur (en mètres) de chaque allée.
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
-
-(Extrait DST 2024-2025)
+<span class="exo-num"></span> <span class="exo-extra"> Extrait DST 2024-2025 </span>
 
 Un miroir peut être représenté par la figure ci-dessous. Le rectangle $ABCD$ symbolise le cadre du miroir.  
 $AEFD$ est un trapèze et constitue le miroir proprement dit.  
@@ -628,7 +626,7 @@ $$g(x) = f(x) - x^2$$
 <span class="exo-num"></span>
 
 La fonction $f$ est une fonction polynôme de degré $98$, telle que pour tout entier $k$ compris entre 1 et 99 on ait :  
-$$f(k) = \frac{1}{k}$$
+$$f(k) = \dfrac{1}{k}$$
 
 1. On considère la fonction $g$ définie pour tout réel $x$ par :  
    $$g(x) = x f(x) - k$$
@@ -660,9 +658,8 @@ Déterminer le réel $k$ tel que la droite d’équation $y = k$ coupe $(P)$ en 
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
+<span class="exo-num"></span> <span class="exo-extra"> Kangourou des maths, 2016 </span>
 
-(Kangourou des maths, 2016)  
 Déterminer les solutions de l’équation :  
 $$(x^2 - 7x + 11)^{x^2 - 3x + 2} = 1$$
 :::
@@ -703,9 +700,9 @@ $$f(x) = a(x - \alpha)^2 + \beta$$
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
+<span class="exo-num"></span> <span class="exo-extra"> **À la pêche** 🎣  </span>
 
-**À la pêche** 🎣  
+ 
 On souhaite attraper une carpe koi qui ne sort de sa cachette que pour manger.  
 
 <div style="text-align: center;">
@@ -722,9 +719,9 @@ Est-il possible d’atteindre la carpe ? Si oui, combien de fois ?
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
+<span class="exo-num"></span> <span class="exo-extra">  **Convexité de la fonction carré**   </span>
 
-**Convexité de la fonction carré**  
+
 On considère la parabole $\mathscr{P} : y = x^2$ et un point $A(a\,;\,a^2)$ sur $\mathscr{P}$.  
 On considère une droite $\mathscr{D}$ de coefficient directeur $m$ passant par $A$.
 
@@ -735,9 +732,9 @@ On considère une droite $\mathscr{D}$ de coefficient directeur $m$ passant par 
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
+<span class="exo-num"></span> <span class="exo-extra"> **À la piscine** 🏊‍♀️    </span>
 
-**À la piscine** 🏊‍♀️  
+ 
 Emma plonge de 2 m de haut. Sa trajectoire suit une parabole $\mathcal{P}$ ayant pour sommet $S(1\,;\,2{,}4)$.
 
 <div style="text-align: center;">
@@ -753,9 +750,9 @@ Emma plonge de 2 m de haut. Sa trajectoire suit une parabole $\mathcal{P}$ ayant
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
+<span class="exo-num"></span> <span class="exo-extra">  **Projet de rampe de skate** 🛹     </span>
 
-**Projet de rampe de skate** 🛹  
+ 
 Quentin présente un projet de rampe de skate modélisée par un arc de parabole, avec les conditions suivantes :  
 
 - Plateforme hauteur 70 cm, largeur 30 cm  
@@ -816,9 +813,8 @@ et on note $\mathscr{C}$ sa courbe représentative.
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
+<span class="exo-num"></span><span class="exo-extra">  Extrait Évaluation    </span>
 
-(Extrait Évaluation)  
 *Dans cet exercice les questions sont indépendantes. 1. et 2. sont indépendantes.*
 
 1. On considère la fonction $f$ dont on donne le tableau de variations suivant :
@@ -891,7 +887,7 @@ On note $\Delta_m$ le discriminant de $h_m$.
 <span class="exo-num"></span>
 
 Pour fêter la fin de leur année d'étude à Poudlard, Fred et Georges tirent un feu d’artifice. La trajectoire est donnée par :  
-$$y = -\frac{g}{2v^2}(1 + \tan^2\theta)x^2 + x \tan\theta$$  
+$$y = -\dfrac{g}{2v^2}(1 + \tan^2\theta)x^2 + x \tan\theta$$  
 avec $v = 50\,\text{m/s}$, $g = 9{,}8$ et $\theta = 80^\circ$.  
 
 1. Quelle est la hauteur maximale atteinte par les fusées et à quelle distance ?  
@@ -940,7 +936,7 @@ Dans un repère, on considère $A(-4\,; -3)$, $B(6\,; 2)$, $C(0\,; 4)$.
 2. On pose $\vec{AM} = t\vec{AB}$ et $f(t) = CM^2$.  
    a. Justifier l'existence de $t$  
    b. Montrer que $M(-4 + 10t\,;\, -3 + 5t)$  
-   c. Montrer que $f(t) = 125(t - \frac{3}{5})^2 + 20$  
+   c. Montrer que $f(t) = 125(t - \dfrac{3}{5})^2 + 20$  
    d. En déduire le tableau des variations de $f$  
    e. Déterminer $M$ tel que $CM$ soit minimale  
    f. Calculer l’aire du triangle $ABC$
@@ -954,7 +950,7 @@ On considère le polynôme :
 $$P(x) = 4x^2 - (\sqrt{6} + 4\sqrt{3})x + 3\sqrt{2}$$
 
 1.  
-   a. Montrer que $\frac{\sqrt{6}}{4}$ est une racine de $P$  
+   a. Montrer que $\dfrac{\sqrt{6}}{4}$ est une racine de $P$  
    b. En déduire l’autre racine par factorisation  
 
 2.  
@@ -981,14 +977,13 @@ $$t = \sqrt[3]{\sqrt{5}+2} - \sqrt[3]{\sqrt{5}-2}$$
 ::: {.bloc .exo}
 <span class="exo-num"></span>  
 On considère la fonction $f$ définie sur $\R$ par $f(x)=-3x^2+6x-4$, de représentation graphique $\mathscr{C}$.
-1.  
-   1. Résoudre l'équation $f(x)=<0$ .
-   2. En déduire la position de $\mathscr{C}$ par rapport à l'axe des abscisses.
+
+1. a. Résoudre l'équation $f(x)=<0$ .
+   b. En déduire la position de $\mathscr{C}$ par rapport à l'axe des abscisses.
 2. Déterminer la forme canonique de $f$.
 3. Déterminer l'équation de l'axe de symétrie de $\mathscr{C}$ ainsi que les coordonnées du sommet.
-4.  
-   1. Dresser le tableau de variations de $f$.
-   2. En déduire, suivant les valeurs du réel $m$, le nombre de solution de l'équation $f(x)=m$.
+4. a. Dresser le tableau de variations de $f$.
+   b. En déduire, suivant les valeurs du réel $m$, le nombre de solution de l'équation $f(x)=m$.
 5. Déterminer les coordonnées des points d'intersection de $\mathscr{C}$ avec la droite d'équation $y=-4$.
 6. Étudier la position relative de $\mathscr{C}$ et de la droite d'équation $y=-4x+3$.
 :::
@@ -1000,7 +995,7 @@ On considère la fonction $f$ définie sur $\R$ par $f(x)=-3x^2+6x-4$, de repré
 ::: {.bloc .exo}
 <span class="exo-num"></span>  
 Soient $f$ et $g$ deux fonctions définies sur $\R \backslash \{3\}$ respectivement par  
-$$f(x) = x^2-3x-1\quad \text{et} \quad g(x) = 1 +\frac{2}{x-3}$$  
+$$f(x) = x^2-3x-1\quad \text{et} \quad g(x) = 1 +\dfrac{2}{x-3}$$  
 dont on note $\mathcal{P}$ et $\mathcal{H}$ les représentations graphiques respectives.  
 On donne ci-dessous les représentations graphiques de ces deux fonctions.
 
@@ -1009,17 +1004,16 @@ On donne ci-dessous les représentations graphiques de ces deux fonctions.
 </div>
 
 1. Résolution graphique :  
-   1. Déterminer graphiquement les solutions de $f(x) = 2$.  
-   2. Déterminer graphiquement les solutions de $f(x) = g(x)$.
+   a. Déterminer graphiquement les solutions de $f(x) = 2$.  
+   b. Déterminer graphiquement les solutions de $f(x) = g(x)$.
 2. Résolution algébrique :  
-   1. Déterminer les antécédents de $-1$ par $f$ et de $1$ par $g$ si ils existent.  
-   2. Démontrer que $M(x,y) \in \mathcal{P} \cap \mathcal{H}$ si et seulement si  
+   a. Déterminer les antécédents de $-1$ par $f$ et de $1$ par $g$ si ils existent.  
+   b. Démontrer que $M(x,y) \in \mathcal{P} \cap \mathcal{H}$ si et seulement si  
    $$
-   \frac{(x-4)(x^2 -2x -1)}{x-3} = 0
+   \dfrac{(x-4)(x^2 -2x -1)}{x-3} = 0
    $$
-   (On remarquera que $x^2 - 2x - 1 = (x-1)^2 - 2$)
-   3. En déduire les abscisses des éléments de $\mathcal{P} \cap \mathcal{H}$.
-   4. En utilisant (1), déterminer les positions relatives de $\mathcal{P}$ et $\mathcal{H}$.
+   c. En déduire les abscisses des éléments de $\mathcal{P} \cap \mathcal{H}$.
+   d. En utilisant (1), déterminer les positions relatives de $\mathcal{P}$ et $\mathcal{H}$.
 :::
 
 ---
@@ -1029,13 +1023,13 @@ On donne ci-dessous les représentations graphiques de ces deux fonctions.
 ::: {.bloc .exo}
 <span class="exo-num"></span>  
 On considère la fonction $f$ définie sur $]-1\,;\,+\infty[$ par  
-$$f(x)= \frac{x^2 - x + 1}{x + 1}$$  
+$$f(x)= \dfrac{x^2 - x + 1}{x + 1}$$  
 On note $\mathscr{C}$ sa courbe représentative.
 
 1. Montrer que la courbe $\mathscr{C}$ est située au-dessus de l'axe des abscisses.
 2. Résoudre $f(x) \geqslant 1$
-3.  a. Démontrer que pour tout $x \in ]-1 \,;\,+\infty[$,  
-   $$f(x) = x - 2 + \frac{3}{x+1}$$
+3. a. Démontrer que pour tout $x \in ]-1 \,;\,+\infty[$,  
+   $$f(x) = x - 2 + \dfrac{3}{x+1}$$
    b. En déduire la position relative de $\mathscr{C}$ par rapport à la droite $\mathscr{D}\,:\, y = x - 2$
 4. Étudier la position relative de $\mathscr{C}$ par rapport à la droite $\mathscr{D}\,:\, y = -x + 3$
 :::

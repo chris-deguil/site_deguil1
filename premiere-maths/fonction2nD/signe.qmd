@@ -23,19 +23,18 @@ Un polynôme que l’on ne peut pas factoriser est dit **irréductible**.
 :::
 
 <details class="bloc demo"><summary>Démonstration :</summary>  
-On considère la forme canonique :  
-$$f(x)=a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a}$$
+On considère la forme canonique $f(x)=a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a}$.\\
 
-1. Si $\Delta > 0$,  
-$$f(x)= a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a} = a\left(\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a^2}\right) = a(x-x_1)(x-x_2)$$  
-Donc $$f(x)=a(x-x_1)(x-x_2)$$  
 
-2. Pour $\Delta=0$, $\beta=0$ donc pour tout réel $x$,  
-$$f(x)=a\left(x- \frac{-b}{2a}\right)^2$$  
+1. Si $\Delta >0$,
+$$ f(x)= a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a} = a\left(\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a^2}\right) = a(x-x_1)(x-x_2)$$
 
-3. Si $\Delta <0$, alors $\frac{\Delta}{4a^2}<0$.  
-Ainsi $f(x)$ étant somme de deux quantités positives, il n’est pas factorisable.  
-Donc $f(x)$ n’admet pas de forme factorisée.
+Donc $$f(x)=a(x-x_1)(x-x_2)$$
+
+2. Pour $\Delta=0$, $\beta=0$ donc pour tout réel $x$, $f(x)=a\left(x- \frac{-b}{2a}\right)^2$.
+3. Si $\Delta <0$, alors $\frac{\Delta}{4a^2}<0$.\\
+Ainsi $f(x)$ étant somme de deux quantités positives, il n'est pas factorisable.
+Donc $f(x)$ n'admet pas de forme factorisée.
 </details>
 
 
@@ -142,16 +141,23 @@ On obtient le tableau de signes de $P(x)$ suivant le signe de $a$.
 Soit $f$ une fonction polynôme de degré $2$ dont $a$ est le coefficient dominant et $\Delta$ son discriminant.
 
 - Si $\Delta > 0$ :  
-$f$ est du signe de son coefficient dominant sauf entre les racines où il est du signe contraire.  
+  $f$ est du signe de son coefficient dominant sauf entre les racines où il est du signe contraire.  
 <div style="text-align: center;">
 ![](../../image/maths/Second_degre_tableau_signe4.png){width=50%}
 </div>
 
-- Si $\Delta \leqslant 0$ :  
-$f$ est du signe de son coefficient dominant :  
+- Si $\Delta = 0$ :  
+  $f$ est du signe de son coefficient dominant :  
 
 <div style="text-align: center;">
 <img src="../../image/maths/Second_degre_tableau_signe5.png" style="width:40%; margin-right:5%;" />
+</div>
+
+- Si $\Delta < 0$ :  
+  $f$ est du signe de son coefficient dominant :  
+
+
+<div style="text-align: center;">
 <img src="../../image/maths/Second_degre_tableau_signe6.png" style="width:20%;" />
 </div>
 

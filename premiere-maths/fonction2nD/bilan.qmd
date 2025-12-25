@@ -106,6 +106,57 @@ Soient $f(x) = 2x^2 - 5x + 3$ et $g(x) = -\left(x - \tfrac{3}{4}\right)^2 - 4$.
 :::
 
 
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : **(Bilan : Extrait Devoir 2015)**</span>  
+
+Soit $f$ la fonction définie sur $\mathbb{R}$ par : $$f(x)=3x^{2}+12x+4$$
+
+1. Déterminer la forme canonique de la fonction $f$.
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   Pour tout $x \in \R$, $$f(x)= 3x^2+12x+4 =3(x^2+4x)+4 = 3\left((x+2)^2-4\right) + 4 = 3(x+2)^2 - 8$$
+   </details>
+2. Quelles sont les coordonnées du sommet de la parabole $\mathcal{C}_f$ représentant $f$ ?
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   On déduit de la question précédente que les coordonnées du sommet sont $(-2\,;\, -8)$
+   </details>
+3. Déterminer le tableau de variation de la fonction $f$.
+   
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   $f$ est une fonction polynôme du second degré de coefficient dominant $3>0$. Sa représentation graphique est une parabole orientée vers le haut. Elle admet pour axe de symétrie la droite d'équation $x= -2$.
+
+   Ainsi 
+
+   <div style="text-align: center;">
+   ![](../../image/maths/Second_degre_variation2.png){width=40%}
+</div> 
+   </details>
+
+1. On admet que ce polynôme admet deux racines $x_1$ et $x_2$.
+   a. Déterminer un réel $a\neq 5$ tel que $f(a)= f(5)$
+
+      <details class="bloc cor"><summary>Afficher la correction</summary>
+   Ainsi $f(5)= f(-2+7)= f(-2-7) = f(-9)$.\\
+   Ainsi $a=-9$
+
+      </details>
+   
+   b. Sans calculer les racines, montrer que $\frac{x_1+x_2}{x_1x_2}=-3$
+      <details class="bloc cor"><summary>Afficher la correction</summary>
+   Soit $x_1$ et $x_2$ les racines , alors, en notant $S$ et $P$ respectivement la somme et le produit des racines, on a 
+  $$\frac{x_1+x_2}{x_1x_2} = \frac{S}{P} = \dfrac{\dfrac{-12}{3}}{\dfrac{4}{3}} =\frac{-12}{4} = -3$$
+
+      </details>
+   
+
+
+
+
+
+
 <div class="nav-pages">
   <a class="prev" href="parabole.html">⬅️</a>
 </div>
