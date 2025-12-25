@@ -714,29 +714,32 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="liens-entre-racines-et-coefficients">Liens entre racines et coefficients</h3>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
-<p>Soit <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> une fonction polynôme du second degré, de racines <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span> (éventuellement <span class="math inline">\(x_1 = x_2\)</span>).<br>
-Alors, en appelant <span class="math inline">\(S\)</span> la somme des racines et <span class="math inline">\(P\)</span> le produit des racines, on a :</p>
-<p><span class="math display">\[S = x_1 + x_2 = - \frac{b}{a} \qquad \text{et} \qquad P = x_1 \times x_2 = \frac{c}{a}\]</span></p>
-<p>et pour tout réel <span class="math inline">\(x\)</span> :</p>
-<p><span class="math display">\[f(x) = a \left(x^2 - Sx + P \right)\]</span></p>
+<p>Soit <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> une fonction polynôme du second degré, de racine <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span> (éventuellement <span class="math inline">\(x_1=x_2\)</span>).</p>
+<p>Alors en appelant <span class="math inline">\(S\)</span> la somme des racines et <span class="math inline">\(P\)</span> le produit des racines, on a</p>
+<p><span class="math display">\[S = x_1 + x_2 = - \frac{b}{a} \et P = x_1 \times x_2 = \frac{c}{a}\]</span></p>
+<p>et pour tout réel <span class="math inline">\(x\)</span>,</p>
+<p><span class="math display">\[f(x) = a \left(x^2 - S x + P \right)\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>Soit <span class="math inline">\(f:x \longmapsto ax^2+bx+c\)</span> une fonction du second degré ayant deux racines <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span>, éventuellement confondues.<br>
-Alors, pour tout réel <span class="math inline">\(x\)</span> :</p>
-<p><span class="math display">\[\begin{align*}
-ax^2+bx+c &amp;= a(x-x_1)(x-x_2) \\
-&amp;= ax^2 - a(x_1+x_2)x + ax_1x_2 \\
-&amp;\Longleftrightarrow x^2 + \tfrac{b}{a}x  + \tfrac{c}{a} = x^2 - (x_1+x_2)x + x_1x_2 \\
-&amp;\Longleftrightarrow -\tfrac{b}{a} = x_1+x_2 \quad \text{et} \quad \tfrac{c}{a} = x_1x_2
-\end{align*}\]</span></p>
+<p>Soit <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> une fonction polynôme du second degré, de racine <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span>, alors <span class="math display">\[S = x_1 + x_2 = \frac{-b + \sqrt{\Delta}}{2a}+  \frac{-b + \sqrt{\Delta}}{2a}= -\frac{b}{a}\]</span></p>
+<p>et</p>
+<p><span class="math display">\[P = x_1 x_2 = \frac{-b + \sqrt{\Delta}}{2a} \times  \frac{-b - \sqrt{\Delta}}{2a}
+=\frac{(-b)^2 - \Delta}{4a^2} = \frac{b^2 - b^2 + 4ac}{4a^2} =\frac{c}{a}
+\]</span></p>
+<p>Réciproquement, supposons <span class="math inline">\(ax^2 - aSx + aP = 0\)</span>.</p>
+<p>Cette équation admet pour discriminant</p>
+<p><span class="math display">\[\Delta = (-aS)^2 - 4aP = a((x_1 + x_2)^2 - 4x_1 x_2) = a(x_1^2 + x_2^2 + 2x_1x_2 - 4x_1 x_2) =a (x_1-x_2)^2\]</span></p>
+<p>Ainsi les solutions <span class="math inline">\(u\)</span> et <span class="math inline">\(v\)</span> de cette équation sont</p>
+<p><span class="math display">\[u = \frac{S + x_1 - x_2}{2} \et v = \frac{S -( x_1 -x_2)}{2}\]</span> Donc</p>
+<p><span class="math display">\[u = x_1 \quad \text{ et } \quad  v = x_2\]</span></p>
 </details>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque :</span><br>
 Lorsque l’on connaît l’expression algébrique d’un polynôme du second degré, et une de ses racines, alors on connaît automatiquement la seconde racine.</p>
-<p>On peut chercher, par exemple, parmi les valeurs <span class="math inline">\(-2\)</span>, <span class="math inline">\(-1\)</span>, <span class="math inline">\(1\)</span> ou <span class="math inline">\(2\)</span> (éventuellement <span class="math inline">\(\sqrt{2}\)</span>), si une de ces valeurs n’est pas une racine du polynôme. Si c’est le cas, on peut alors la caractériser de <strong>racine évidente</strong>.</p>
+<p>On peut chercher, par exemple, parmi les valeurs <span class="math inline">\(-2\)</span>, <span class="math inline">\(-1\)</span>, <span class="math inline">\(1\)</span> ou <span class="math inline">\(2\)</span> (éventuellement <span class="math inline">\(\sqrt{2}\)</span>), si une de ces valeurs n’est pas une racine du polynôme. Si c’est le cas, on peut alors la caractériser de racine évidente.</p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>

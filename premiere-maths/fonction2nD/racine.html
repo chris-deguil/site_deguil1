@@ -715,12 +715,9 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="équation-et-racine-dun-polynôme">Équation et racine d’un polynôme</h2>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition :</span><br>
-On appelle équation polynomiale du second degré à une inconnue <span class="math inline">\(x\)</span> toute équation se ramenant à une équation de la forme :</p>
-<p><span class="math display">\[
-ax^2 + bx + c = 0
-\]</span></p>
-<p>où <span class="math inline">\(a, b\)</span> et <span class="math inline">\(c\)</span> sont trois réels quelconques avec <span class="math inline">\(a \neq 0\)</span>.<br>
-Les solutions de cette équation (si elles existent) sont appelées les racines du polynôme ou zéros de la fonction <span class="math inline">\(f\)</span> associée.</p>
+On appelle équation polynomiale du second degré à une inconnue <span class="math inline">\(x\)</span> toute équation se ramenant à une équation de la forme : <span class="math display">\[ax^2 + bx + c = 0\]</span></p>
+<p>où <span class="math inline">\(a, b\)</span> et <span class="math inline">\(c\)</span> sont trois réels quelconques avec <span class="math inline">\(a \neq 0\)</span>.</p>
+<p>Les solutions de cette équation (si elles existent) sont appelées les racines du polynôme ou zéros de la fonction <span class="math inline">\(f\)</span> associée.</p>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque :</span><br>
@@ -728,8 +725,9 @@ Par abus de langage, on peut confondre polynôme et fonction polynôme associée
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
-Soit <span class="math inline">\(f:x \longmapsto 5x^2+3x-2\)</span>.<br>
-Alors <span class="math inline">\(f(-1)=0\)</span>, ainsi <span class="math inline">\(-1\)</span> est une racine du polynôme <span class="math inline">\(5x^2+3x-2\)</span> et un zéro de la fonction <span class="math inline">\(f\)</span>.</p>
+Soit <span class="math inline">\(f:x \longmapsto 5x^2+3x-2\)</span>.</p>
+<p>Alors <span class="math inline">\(f(-1)=0\)</span>, ainsi <span class="math inline">\(-1\)</span> est une racine du polynôme <span class="math inline">\(5x^2+3x-2\)</span> et un zéro de la fonction <span class="math inline">\(f\)</span>.</p>
+<p>On peut vérifier que <span class="math inline">\(\frac25\)</span> est aussi une racine du polynôme.</p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
@@ -755,10 +753,11 @@ On obtient le résultat voulu en posant <span class="math inline">\(d=ar+b\)</sp
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque :</span></p>
 <ul>
-<li>La méthode précédente est à connaître. Elle permet de factoriser siimplement lorsque l’on connait une racine.</li>
-<li>On déduit de l’exercice que si une fonction polynôme admet une racine alors elle admet une autre racine <span class="math inline">\(x=-\frac{ar+b}{a}\)</span></li>
-<li>La seconde racine peut-être identique à la première (on parle alors de racine double).<br> On a alors <span class="math display">\[r=-\frac{ar+b}{a}\]</span> Donc <span class="math display">\[ar=-ar+b\]</span> Donc <span class="math display">\[r=-\frac{b}{2a}\]</span></li>
+<li>La méthode précédente est à connaître.</li>
+<li>On déduit de l’exercice que si une fonction polynôme admet une racine, alors elle admet une autre racine <span class="math inline">\(x=-\frac{ar+b}{a}\)</span>.</li>
+<li>La seconde racine peut être identique à la première (on parle alors de racine double).\ On a alors <span class="math display">\[r=-\frac{ar+b}{a}\]</span></li>
 </ul>
+<p>Donc <span class="math display">\[ar=-ar+b\]</span> Donc <span class="math display">\[r=-\frac{b}{2a}\]</span></p>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
@@ -789,7 +788,7 @@ Démonstration
 <div class="bloc def">
 <p><span class="bloc-titre">Définition :</span><br>
 Soit l’équation du second degré <span class="math inline">\(ax^2+bx+c=0\)</span>.<br>
-On appelle <strong>discriminant</strong> de l’équation (ou de la fonction polynôme associée) le nombre :<br>
+On appelle discriminant de l’équation (ou de la fonction polynôme associée) le nombre :<br>
 <span class="math display">\[
 \Delta = b^2 - 4ac
 \]</span></p>
@@ -807,30 +806,24 @@ Soit <span class="math inline">\(ax^2 + bx + c =0\)</span> une équation du seco
 <summary>
 Démonstration
 </summary>
-<p>On traite le cas <span class="math inline">\(a&gt;0\)</span>. L’autre cas se traite de la même façon.</p>
-<p>Pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[
-ax^2+bx+c= 0 \Longleftrightarrow a\left(x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a^2} = 0
-\Longleftrightarrow \left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}
-\]</span></p>
+<p>On traite le cas <span class="math inline">\(a &gt;0\)</span>, ainsi <span class="math inline">\(\sqrt{a^2}=a\)</span>.</p>
+<p>On a pour tout réel <span class="math inline">\(x\)</span>,</p>
+<p><span class="math display">\[ax^2+bx+c= 0 \Longleftrightarrow  a\left(x + \frac{b}{2a}\right)^2 - \frac{b^2 - 4ac}{4a} = 0 \Longleftrightarrow \left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}  \]</span></p>
 <ul>
-<li>Si <span class="math inline">\(\Delta &gt;0\)</span>, alors <span class="math inline">\(\tfrac{\Delta}{4a^2} &gt;0\)</span>.<br>
-<span class="math display">\[
-\left(x + \tfrac{b}{2a}\right)^2 = \tfrac{\Delta}{4a^2} \Longleftrightarrow
-\begin{cases}
-x = - \tfrac{b}{2a} + \tfrac{\sqrt{\Delta}}{2a}\\
+<li><p>Si <span class="math inline">\(\Delta &gt;0\)</span>, alors <span class="math inline">\(\dfrac{\Delta}{4a^2} &gt;0\)</span>. <span class="math display">\[\left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}  \Longleftrightarrow \left\{\begin{array}{l}
+\dfrac{\sqrt{\Delta}}{2a}= x + \frac{b}{2a}\\
 \text{ou}\\
-x = - \tfrac{b}{2a} - \tfrac{\sqrt{\Delta}}{2a}
-\end{cases}
-\]</span></li>
-</ul>
-<p>Donc il y a deux solutions : <span class="math inline">\(x_1 = \tfrac{-b + \sqrt{\Delta}}{2a}\)</span> et <span class="math inline">\(x_2 = \tfrac{-b - \sqrt{\Delta}}{2a}\)</span>.</p>
-<ul>
-<li><p>Si <span class="math inline">\(\Delta =0\)</span>, alors <span class="math inline">\(\tfrac{\Delta}{4a^2}  =0\)</span>.<br>
-<span class="math inline">\(\left(x + \tfrac{b}{2a}\right)^2 = 0 \Longleftrightarrow x = - \tfrac{b}{2a}\)</span>.<br>
-Donc il y a une solution : <span class="math inline">\(x_0 = -\tfrac{b}{2a}\)</span>.</p></li>
-<li><p>Si <span class="math inline">\(\Delta &lt;0\)</span>, alors <span class="math inline">\(\left(x + \tfrac{b}{2a}\right)^2 = \tfrac{\Delta}{4a^2}\)</span> n’admet aucune solution.<br>
-Le membre de gauche est positif et le membre de droite strictement négatif.<br>
-L’équation n’admet donc aucune solution.</p></li>
+\dfrac{\sqrt{\Delta}}{2a}= -\left( x + \frac{b}{2a} \right)
+\end{array} \right.
+\Longleftrightarrow \left\{\begin{array}{l}
+x =- \dfrac{b}{2a} + \dfrac{\sqrt{\Delta}}{2a}\\
+\text{ou}\\
+x =  - \dfrac{b}{2a} - \dfrac{\sqrt{\Delta}}{2a}
+\end{array} \right.\]</span> Donc il y a deux solutions : <span class="math inline">\(x_1 = \dfrac{-b + \sqrt{\Delta}}{2a}\)</span> et <span class="math inline">\(x_2 = \dfrac{-b - \sqrt{\Delta}}{2a}\)</span></p></li>
+<li><p>Si <span class="math inline">\(\Delta =0\)</span>, alors <span class="math inline">\(\dfrac{\Delta}{4a^2}  =0\)</span>.</p>
+<p><span class="math inline">\(\left(x + \dfrac{b}{2a}\right)^2 = 0 \Longleftrightarrow x + \dfrac{b}{2a} = 0 \Longleftrightarrow x  = - \dfrac{b}{2a}\)</span>.</p>
+<p>Donc il y a une solution : <span class="math inline">\(x_0 = -\dfrac{b}{2a}\)</span></p></li>
+<li><p>Si <span class="math inline">\(\Delta &lt;0\)</span>, alors <span class="math inline">\(\left(x + \dfrac{b}{2a}\right)^2 = \dfrac{\Delta}{4a^2}\)</span> n’admet aucune solution. Le membre de gauche est positif et le membre de droite strictement négatif. L’équation n’admet donc aucune solution.</p></li>
 </ul>
 </details>
 <div class="bloc rem">
@@ -845,6 +838,17 @@ L’équation n’admet donc aucune solution.</p></li>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
 <ol type="1">
+<li>Résoudre <span class="math inline">\(x^2-3x= 0\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<p>Pour tout réel <span class="math inline">\(x\)</span>,</p>
+<p><span class="math display">\[9x^2-3x= 0 \Longleftrightarrow (3x(3x-1) = 0 \Longleftrightarrow x=0 \et x= \frac13\]</span></p>
+Donc <span class="math inline">\(S=\left\{0 \,;\, \frac13 \right\}\)</span>
+</details>
+<ol type="1">
 <li>Résoudre <span class="math inline">\(4x^2 - 2x + 12 = 0\)</span></li>
 </ol>
 <details class="bloc cor">
@@ -852,19 +856,22 @@ L’équation n’admet donc aucune solution.</p></li>
 Afficher la correction
 </summary>
 <p>Son discriminant <span class="math inline">\(\Delta = (-2)^2 - 4 \times 4 \times 12 = 4 - 192 &lt; 0\)</span>.</p>
-Son discriminant étant négatif, l’équation n’admet donc aucune solution réelle.
+<p>Son discriminant étant négatif, alors l’équation n’admet aucune solution réelle.</p>
+Donc <span class="math inline">\(S=\emptyset\)</span>
 </details>
-<ol start="2" type="1">
-<li>Résoudre <span class="math inline">\(-3x^2 + 5x + 2 = 0\)</span><br>
-(<span class="math inline">\(a\)</span> et <span class="math inline">\(c\)</span> sont de signes contraires, on sait que l’on doit trouver des solutions.)</li>
+<ol start="3" type="1">
+<li>Résoudre <span class="math inline">\(-3x^2 + 5x + 2 = 0\)</span></li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
+<p>(<span class="math inline">\(a\)</span> et <span class="math inline">\(c\)</span> sont de signes contraires, on sait que l’on doit trouver des solutions.)</p>
+<p><em><span class="math inline">\(a\)</span> et <span class="math inline">\(c\)</span> sont de signes contraires, on sait que l’on doit trouver des solutions.</em></p>
 <p>Son discriminant <span class="math inline">\(\Delta = 5^2 - 4 \times (-3) \times 2 = 25 + 24 = 49\)</span>.</p>
-Son discriminant étant strictement positif, l’équation admet donc deux solutions réelles distinctes :<br>
-<span class="math display">\[x_1 = \frac{-5 + \sqrt{49}}{2\times (-3)} = \frac{-5 + 7}{-6}=-\frac{1}{3} \quad \et \quad x_2 = \frac{-5 - \sqrt{49}}{2\times (-3)} = 2\]</span>
+<p><span class="math inline">\(\Delta\)</span> $étant strictement positif, alors l’équation admet deux solutions réelles distinctes.</p>
+<p><span class="math display">\[x_1 = \frac{-5 + \sqrt{49}}{2\times (-3)} = \frac{-5 + 7}{-6} = -\frac{1}{3} \et x_2 = \frac{-5 - \sqrt{49}}{2\times (-3)} = 2\]</span></p>
+Donc <span class="math inline">\(S=\left\{x_1 \,;\, x_2 \right\}\)</span>
 </details>
 </div>
 <div class="bloc ex">
@@ -875,8 +882,8 @@ Déterminer les dimensions d’un tel rectangle.</p>
 <summary>
 Afficher la correction
 </summary>
-<p>En notant <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> la mesure des côtés de ce rectangle, avec <span class="math inline">\(x\leqslant y\)</span>, on a le système :<br>
-<span class="math display">\[\left\{\begin{array}{l} xy = 15 \\ x + y = 8 \end{array}\right.\]</span></p>
+<p>ED’après l’énoncé, en notant <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> les mesures des côtés de ce rectangle, avec <span class="math inline">\(x\leqslant y\)</span>, on a le système</p>
+<p><span class="math display">\[\left\{\begin{array}{l} xy = 15 \\ x + y = 8 \end{array}\right.\]</span></p>
 <p>Or pour tout <span class="math inline">\(x, y \in \R\)</span>,<br>
 <span class="math display">\[\left\{\begin{array}{l} xy = 15 \\ x + y = 8 \end{array}\right. \Longleftrightarrow \left\{\begin{array}{l} x(8-x) = 15 \\ y = 8-x \end{array}\right. \Longleftrightarrow \left\{\begin{array}{l} y = 8-x \\ x^2-8x+15=0 \end{array}\right.\]</span></p>
 <p>Soit : <span class="math inline">\(x^2 - 8x + 15 = 0\)</span></p>
@@ -884,6 +891,37 @@ Afficher la correction
 <p><span class="math inline">\(\Delta &gt; 0\)</span>, ce polynôme admet deux racines réelles distinctes :<br>
 <span class="math display">\[x_1 = \frac{8 + \sqrt{4}}{2} = 5 \quad \text{et} \quad x_2 = \frac{8 - \sqrt{4}}{2} = 3\]</span></p>
 Ainsi, on a respectivement <span class="math inline">\(y_1=3\)</span> et <span class="math inline">\(y_2=5\)</span>, donc les dimensions du rectangle sont <span class="math inline">\(3\)</span> et <span class="math inline">\(5\)</span>.
+</details>
+</div>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition : </span><br> Une équation de la forme <span class="math inline">\(ax^4 + b x^2 + c = 0\)</span>, où <span class="math inline">\(a, b, c\)</span> réels avec <span class="math inline">\(a \neq 0\)</span> est appelé équation bi-carré.</p>
+</div>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple : <strong>Équation bi-carrée</strong></span></p>
+<p>Résoudre <span class="math inline">\((E_1) : x^4 - 5x^2 + 4 = 0\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
+<p>Pour tout réel <span class="math inline">\(x\)</span>,</p>
+<p><span class="math display">\[(E_1) : x^4 - 5x^2 + 4 = 0 \Longleftrightarrow \left\{\begin{array}{l} X=x^2\\
+(E_1) : \, X^2-5X+4=0 \end{array} \right.\]</span></p>
+<p>Le discriminant de, <span class="math inline">\((E_2)\)</span> est <span class="math inline">\(\Delta = (-5)^2 - 4 \times 1 \times 4 = 9\)</span></p>
+<p>Le discriminant est strictement positif, alors l’équation <span class="math inline">\((E_2)\)</span> admet deux solutions réelles distinctes.</p>
+<p><span class="math display">\[X_1 = \frac{5 + 3}{2} = 4 \et X_2 = \frac{5 - 3}{2} = 1\]</span></p>
+<p> Donc <span class="math display">\[\begin{align*}
+x^4 - 5x^2 + 4 = 0 &amp;\Longleftrightarrow \left\{\begin{array}{l} X=x^2
+
+X^2-5X+4=0 \end{array} \right.
+\\
+&amp;\Longleftrightarrow
+\left\{\begin{array}{l} X=x^2\\
+X =4 \text{ ou } X= 1 \end{array} \right.\\
+&amp;\Longleftrightarrow
+x^2=4 \text{ ou }x^2=1 \\
+&amp; \Longleftrightarrow x=-2 \text{ ou } x= 2 \text{ ou } x=-1 \text{ ou } x=1
+\end{align*}\]</span></p>
+Ainsi les solutions de <span class="math inline">\((E_1)\)</span> sont <span class="math inline">\(\{-2~;~-1~;~1~2 \}\)</span>
 </details>
 </div>
 <div class="bloc ex">

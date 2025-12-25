@@ -720,53 +720,46 @@ window.Quarto = {
 <section id="représentation-graphique-des-fonctions-polynômes-du-second-degré" class="level3">
 <h3 class="anchored" data-anchor-id="représentation-graphique-des-fonctions-polynômes-du-second-degré">Représentation graphique des fonctions polynômes du second degré</h3>
 <div class="bloc rem">
-<p>On considère, sur <span class="math inline">\(\mathbb{R}\)</span>, les fonctions <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> et <span class="math inline">\(h\)</span> définie par <span class="math inline">\(h(x) = ax^2\)</span>, où <span class="math inline">\(a\)</span> est un réel non nul.<br>
-Soit le vecteur <span class="math inline">\(\ve{u}(\alpha \, ; \, \beta)\)</span>, où <span class="math inline">\(\alpha = -\frac{b}{2a}\)</span> et <span class="math inline">\(\beta = f(\alpha)\)</span>.<br>
-Montrons que <span class="math inline">\(\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)\)</span>.</p>
-<p>Pour cela, on va montrer deux inclusions : <span class="math inline">\(\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)\)</span> et que $ t_{}(_h) _f$.</p>
+<p>On considère, sur <span class="math inline">\(\R\)</span>, les fonctions <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x)=ax^2+bx+c\)</span> et <span class="math inline">\(h\)</span> définie par <span class="math inline">\(h(x)=ax^2\)</span>, où <span class="math inline">\(a\)</span> est un réel non nul.\ Soit alors le vecteur <span class="math inline">\(\ve{u}(\alpha \, ; \, \beta)\)</span>, où <span class="math inline">\(\alpha=-\dfrac{b}{2a}\)</span> et <span class="math inline">\(\beta=f(\alpha)\)</span>.</p>
+<p>Montrons que <span class="math inline">\(\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)\)</span>.</p>
+<p>Pour cela, on va montrer que <span class="math inline">\(\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)\)</span> et que $ t_{}(_h) _f$.</p>
 <ul>
 <li><p>Soit <span class="math inline">\(M'(x' \, ;\, y') \in t_{\ve{u}}(\mathscr{C}_h)\)</span>.<br>
-Il existe <span class="math inline">\(M(x\, ;\,y) \in \mathscr{C}_h\)</span> tel que <span class="math inline">\(t_{\ve{u}}(M)=M'\)</span>.<br>
-Puisque <span class="math inline">\(y = ax^2\)</span>, on a : <span class="math display">\[
-\begin{pmatrix}
+Il existe <span class="math inline">\(M(x\, ;\,y) \in \mathscr{C}_h\)</span> tel que <span class="math inline">\(t_{\ve{u}}(M)=M'\)</span>.</p>
+<p>On a alors, puisque <span class="math inline">\(y=ax^2\)</span> : <span class="math display">\[\begin{pmatrix}
 x'\\
 y'
-\end{pmatrix} =  
-\begin{pmatrix}
+\end{pmatrix} = \begin{pmatrix}
 \alpha\\
 \beta
-\end{pmatrix} +
-\begin{pmatrix}
-x\\
-ax^2
-\end{pmatrix}
-=
-\begin{pmatrix}
-x + \alpha \\
-a(x + \alpha - \alpha)^2 + \beta
-\end{pmatrix}
-=
-\begin{pmatrix}
+\end{pmatrix} + \begin{pmatrix}
+x\\y
+\end{pmatrix} = \begin{pmatrix}
+x+\alpha\\
+ax^2+\beta
+\end{pmatrix}   = \begin{pmatrix}
+x+\alpha\\
+a(x-\alpha+\alpha)^2+ \beta
+\end{pmatrix}  
+= \begin{pmatrix}
 x'\\
-a(x' - \alpha)^2 + \beta
-\end{pmatrix}
-\]</span> Donc <span class="math inline">\(y' = a(x' - \alpha)^2 + \beta\)</span> et <span class="math inline">\(M' \in \mathscr{C}_f\)</span>.<br>
-Ainsi :<br>
-<span class="math display">\[t_{\ve{u}}(\mathscr{C}_h) \subset \mathscr{C}_f\]</span></p></li>
-<li><p>Réciproquement, soit <span class="math inline">\(N'(x'\, ;\,y') \in \mathscr{C}_f\)</span>.<br>
-On pose <span class="math inline">\(N(x'-\alpha\,;\, y'-\beta)\)</span>.<br>
-Alors <span class="math inline">\(\ve{NN'} = \ve{u}\)</span>, donc <span class="math inline">\(t_{\ve{u}}(N) = N'\)</span>.<br>
-Il reste à montrer que <span class="math inline">\(N \in \mathscr{C}_h\)</span>.<br>
-Puisque <span class="math inline">\(y' = a(x' - \alpha)^2 + \beta\)</span>, on a : <span class="math display">\[y = y' - \beta = a(x' - \alpha)^2\]</span><br>
-Donc <span class="math inline">\(N \in \mathscr{C}_h\)</span> et<br>
-<span class="math display">\[\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)\]</span></p></li>
+a(x'-\alpha)^2+ \beta
+\end{pmatrix}  
+\]</span> Ainsi <span class="math display">\[y'=a(x'-\alpha)^2+ \beta.\]</span> Donc <span class="math display">\[(\forall M \in \mathscr{P}, \, M \in t_{\ve{u}}(\mathscr{C}_h) \Longrightarrow M \in \mathscr{C}_f) \Longrightarrow t_{\ve{u}}(\mathscr{C}_h) \subset \mathscr{C}_f.\]</span></p></li>
+<li><p>Réciproquement, soit <span class="math inline">\(N'(x'\, ;\,y') \in \mathscr{C}_f\)</span>. On considère alors <span class="math inline">\(N (x'-\alpha \,;\, y'-\beta)\)</span>.</p>
+<p>On a donc <span class="math inline">\(\ve{NN'}= \ve{u}\)</span>, d’où <span class="math inline">\(t_{\ve{u}}(N)=N'\)</span></p>
+<p>Ainsi <span class="math inline">\(N\)</span> est l’antécédent de <span class="math inline">\(N'\)</span> par la translation de vecteur <span class="math inline">\(\ve{u}\)</span>.</p>
+<p>Reste à montrer que <span class="math inline">\(N \in \mathscr{C}_h\)</span>.</p>
+<p>Pour tout réel <span class="math inline">\(x\)</span>, puisque <span class="math inline">\(N'(x'\, ;\, y') \in \mathscr{C}_f\)</span> : <span class="math display">\[
+ax^2 =a(x'-\alpha)^2 = a(x'-\alpha)^2 + \beta - \beta = y'- \beta = y.
+\]</span></p></li>
 </ul>
-<p>Ainsi <span class="math inline">\(\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)\)</span>.</p>
+<p>Donc <span class="math inline">\(N \in \mathscr{C}_h\)</span>, d’où <span class="math inline">\(\mathscr{C}_f \subset t_{\ve{u}}(\mathscr{C}_h)\)</span>. \end{itemize} Des inclusions réciproques, on déduit donc que <span class="math inline">\(\mathscr{C}_f = t_{\ve{u}}(\mathscr{C}_h)\)</span>.</p>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
 <p>Dans un repère orthonormé, la représentation graphique de <span class="math inline">\(f(x) = ax^2 + bx + c\)</span> (avec <span class="math inline">\(a \ne 0\)</span>) est une parabole de sommet<br>
-<span class="math inline">\(S(\alpha \, ; \, \beta)\)</span> <br> avec <span class="math display">\[\alpha = -\tfrac{b}{2a} \text{ et } \beta = f(\alpha) = -\tfrac{\Delta}{4a}\]</span></p>
+<span class="math inline">\(S(\alpha \, ; \, \beta)\)</span> <br> avec <span class="math display">\[\alpha = -\dfrac{b}{2a} \et \beta = f(\alpha) = -\dfrac{\Delta}{4a}\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
@@ -795,8 +788,8 @@ Il s’agit d’un changement d’échelle dans une seule direction.</p>
 <h3 class="anchored" data-anchor-id="axe-de-symétrie">Axe de symétrie</h3>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
-<p>Soit <span class="math inline">\(f(x) = a(x - \alpha)^2 + \beta\)</span> avec <span class="math inline">\(a \ne 0\)</span>.<br>
-Alors la droite <span class="math inline">\(d\)</span> d’équation <span class="math inline">\(x = \alpha\)</span> est un axe de symétrie de la courbe représentative de <span class="math inline">\(f\)</span>.</p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction du second degré, telle que <span class="math inline">\(f(x) = a(x - \alpha)^2 + \beta\)</span>, où <span class="math inline">\(\alpha\)</span> et <span class="math inline">\(\beta\)</span> sont des réels et <span class="math inline">\(a\)</span> est non nul.</p>
+<p>Alors la droite <span class="math inline">\((d)\)</span> d’équation <span class="math inline">\(x = \alpha\)</span> est un axe de symétrie de la représentation graphique de la fonction <span class="math inline">\(f\)</span>.</p>
 </div>
 <details class="bloc demo">
 <summary>
