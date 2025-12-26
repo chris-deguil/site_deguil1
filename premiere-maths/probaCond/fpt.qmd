@@ -5,7 +5,7 @@ format:
   html:
     toc: true
     number-sections: false
-order: 2
+order: 3
 ---
 
 
@@ -15,9 +15,9 @@ order: 2
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
-Si $A$ est un évènement de $\Omega$ tel que $p(A) \ne 0$ et $p(A) \ne 1$, alors pour tout évènement $B$ de $\Omega$  
+Si $A$ est un événement de $\Omega$ tel que $p(A) \ne 0$ et $p(A) \ne 1$, alors pour tout événement $B$ de $\Omega$
+$$ p(B) = p(A \cap B) +  p(\overline{A} \cap B ) = p_A(B) \times p(A) + p_{\overline{A}}(B) \times p(\overline{A})$$
 
-$$ p(B) = p(A \cap B) +  p(\overline{A} \cap B ) = p_A(B) \times p(A) + p_{\overline{A}}(B) \times p(\overline{A}) $$
 :::
 
 <details class="bloc demo"><summary>Démonstration :</summary>
@@ -37,7 +37,46 @@ $$p(B) = p_A(B) \times p(A) + p_{\overline{A}}(B) \times p(\overline{A})$$
 
 </details>
 
+
+ ::: {.bloc .ex}
+<div class="bloc-titre">Exercice <span class="exemp-extra">Calculs de probabilités</span></div>
+
+Soient $A$ et $B$ deux événements tels que :
+$P(A) = 0,6$, $P(B) = 0,5$ et $P(A \cup B) = 0,8$.
+
+1. Déterminer $P(\bar{A})$
   
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  $P(\bar{A}) = 1 - P(A) = 1 - 0,6 = 0,4$.
+  </details>
+
+
+
+2. Déterminer $P(A \cap B)$
+  
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  On sait que :
+  $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
+  On en déduit :
+  $$P(A \cap B) = P(A) + P(B) - P(A \cup B) = 0,6 + 0,5 - 0,8 = 0,3$$
+  </details>
+
+
+
+3. Déterminer $P_{\bar{B}}(A)$
+   
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  $\{B, \bar{B}\}$ est une partition de l'univers, donc d'après la formule des probabilités totales, on a :
+  $$P(A) = P(A \cap B) + P(A \cap \bar{B})$$
+  D'où $P(A \cap \bar{B}) = P(A) - P(A \cap B)$.
+
+  Par définition de la probabilité conditionnelle :
+  $$P_{\bar{B}}(A) = \frac{P(\bar{B} \cap A)}{P(\bar{B})} = \frac{P(A) - P(A \cap B)}{1 - P(B)}$$
+  $$P_{\bar{B}}(A) = \frac{0,6 - 0,3}{1 - 0,5} = \frac{0,3}{0,5} = \frac{3}{5} = 0,6$$
+  </details>
+
+:::
+
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 On reprend l'exemple sur le virus, et on cherche la probabilité qu'une personne soit atteinte par le virus $A$ et ne soit pas vacciné.  
@@ -122,8 +161,8 @@ Déterminer $P(G \cap A_3)$.
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
-- On sait que $$p_G(A_1)=\frac{p(A_1 \cap G)}{p(G)}$$.  
-Donc $$p(G) = \frac{p(A_1 \cap G)}{p_G(A_1)} = \frac{0,2}{0,4} =0,5$$  
+- On sait que $$p_G(A_1)=\dfrac{p(A_1 \cap G)}{p(G)}$$.  
+Donc $$p(G) = \dfrac{p(A_1 \cap G)}{p_G(A_1)} = \dfrac{0,2}{0,4} =0,5$$  
 
 - $\{A_1 \, ; \, A_2 \, ; \, A_3\}$ forme une partition de l'univers, donc d'après la formule des probabilités totales, on a  
 

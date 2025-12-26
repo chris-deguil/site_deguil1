@@ -17,7 +17,7 @@ order: 7
 <span class="exo-num"></span>
 
 1. Soit $(u_n)$ une suite définie pour tout entier $n \in \N$, par $u_n=n^2-3$. Calculer $u_{11}$.
-2. Soit $(v_n)$ une suite définie pour tout entier $n \in \N$, par $v_n=\frac{n^2-3n}{n-5}$. Calculer le premier terme de la suite.
+2. Soit $(v_n)$ une suite définie pour tout entier $n \in \N$, par $v_n=\dfrac{n^2-3n}{n-5}$. Calculer le premier terme de la suite.
 3. Soit $(w_n)$ une suite définie pour tout entier $n \in \N$, par $$w_n=\sum_{k=0}^n 2^k=1+2+2^2+\dots +2^n$$ Calculer $u_4$.
 
 :::
@@ -104,7 +104,7 @@ Pour chacune des suites suivantes définies par récurrence pour tout entier nat
 <span class="exo-num"></span>
 
 1. a. Soit $(u_n)$ une suite définie pour tout entier $n \in \N$, par $u_0= 3$ et $u_{n+1}=u_n^2-3$. Calculer les trois premiers termes.  
-   b. Soit $(v_n)$ une suite définie pour tout entier $n \in \N$, par $v_0=3$ et $v_{n+1}=\frac{v_n}{2n+1}$. Calculer les trois premiers termes.
+   b. Soit $(v_n)$ une suite définie pour tout entier $n \in \N$, par $v_0=3$ et $v_{n+1}=\dfrac{v_n}{2n+1}$. Calculer les trois premiers termes.
 
 1. Modifier le script de l'exercice précédent afin que le programme renvoie la liste des $n$ premiers termes de la suite $(u_n)$.
 :::
@@ -138,15 +138,15 @@ Exprimer $u_{n+1}$ en fonction de $u_n$ et $n$, puis $u_{n+2}$ en fonction de $u
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-Soit $(u_n)$ une suite définie pour tout entier $n$ par $u_n=1+(-1)^n \frac{5}{2^{n-1}}$.  
-Montrer que la suite $v_n = \frac{u_{n+1}-1}{u_{n}-1}$ est constante.
+Soit $(u_n)$ une suite définie pour tout entier $n$ par $u_n=1+(-1)^n \dfrac{5}{2^{n-1}}$.  
+Montrer que la suite $v_n = \dfrac{u_{n+1}-1}{u_{n}-1}$ est constante.
 :::
 
 ## Exercice
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-Soit la suite $(un_)$ définie sur $\N$ par $u_0=1$ et $u_{n+1} = \frac{u_n}{1+u_n(1+2n)}$
+Soit la suite $(un_)$ définie sur $\N$ par $u_0=1$ et $u_{n+1} = \dfrac{u_n}{1+u_n(1+2n)}$
 
 1.  
    a. Calculer les 5 premiers de la suite $(u_n)$.  
@@ -159,7 +159,7 @@ Soit la suite $(un_)$ définie sur $\N$ par $u_0=1$ et $u_{n+1} = \frac{u_n}{1+u
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-1. On considère la suite définie par $u_n=\frac{2n-5}{n^2-4}$  
+1. On considère la suite définie par $u_n=\dfrac{2n-5}{n^2-4}$  
    a. À partir de quel rang la suite est-elle parfaitement définie ? Justifier brièvement.  
    b. Exprimer, en fonction de $n$, $u_{n+1}$ et $u_{2n}$.  
    c. Exprimer $u_n - 1$ en fonction de $n$, et en déduire que tout $u_n <1$.
@@ -198,7 +198,7 @@ $$u_n=\sum_{k=1}^n k^2$$
    b. Établir une relation de récurrence entre $u_{n+1}$ et $u_n$.
 
 2. On considère la suite $(v_n)$ définie pour tout $n \leqslant 1$ par 
-$$v_n=\frac{n(n+1)(2n+1)}{6}$$
+$$v_n=\dfrac{n(n+1)(2n+1)}{6}$$
 
    a. Montrer que $u_1=v_1$.  
    b. Montrer que $v_n$ vérifie la relation de récurrence de la question 1.b  
@@ -212,8 +212,8 @@ $$v_n=\frac{n(n+1)(2n+1)}{6}$$
 
 Écrire un script python qui permet de retourner la liste des $k$ premiers de la suite $(u_n)$.
 
-1. $u_n=\frac{2n}{n^2+1}$  
-2. $u_0=3$ et $u_{n+1}=\frac{u_n-1}{u_n+1}$  
+1. $u_n=\dfrac{2n}{n^2+1}$  
+2. $u_0=3$ et $u_{n+1}=\dfrac{u_n-1}{u_n+1}$  
 3. 
 $$
 \left\{
@@ -269,7 +269,7 @@ Déterminer $p_n$ en fonction de $n$.
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-Soit $(u_n)_{n \geq 0}$ définie par $u_n= \frac{2n - 1}{n + 1}$
+Soit $(u_n)_{n \geq 0}$ définie par $u_n= \dfrac{2n - 1}{n + 1}$
 
 1. Calculer les 3 premiers termes de la suite.
 2. Étudier les variations de la suite.
@@ -301,10 +301,10 @@ Dans chacun des cas suivants, étudier les variations de la suite $(u_n)$ puis c
 <span class="exo-num"></span><span class="exo-extra"> Étude par le quotient </span>
 
 
-En étudiant le signe de $u_n$ et le quotient $\frac{u_{n+1}}{u_n}$ (on admettra que pour tout $n$, $u_n\neq 0$)
+En étudiant le signe de $u_n$ et le quotient $\dfrac{u_{n+1}}{u_n}$ (on admettra que pour tout $n$, $u_n\neq 0$)
 
-- $u_n = \frac{10}{7^n}$
-- $v_n = \frac{2^{n+1}}{3^{1-n}}$
+- $u_n = \dfrac{10}{7^n}$
+- $v_n = \dfrac{2^{n+1}}{3^{1-n}}$
 - $w_n = n \times 3^{-n}$
 - $\left\{\begin{array}{l}t_0 = -1\\ t_{n+1} = t_n^3 +2t_n \end{array} \right.$
 :::
@@ -321,7 +321,7 @@ En étudiant le signe de $u_n$ et le quotient $\frac{u_{n+1}}{u_n}$ (on admettra
     - $u_n = -n^3 + 3n$
     - $w_n = n^2 -2n +1$
     - $s_n=\sqrt{2n-4}$
-    - $t_n=\frac{4-n}{n+1}$
+    - $t_n=\dfrac{4-n}{n+1}$
 
 2. Peut-on appliquer cette méthode à la suite $(r_n)$ définie par $r_0=4$ et pour tout $n \in \N$, $$r_{n+1}=r_n^2-2n+3$$
 :::
@@ -348,9 +348,9 @@ On considère les propositions suivantes :
 
 Étudier les variations des suites suivantes en utilisant la méthode de votre choix.
 
-- $u_n = n + \frac{1}{n+1}$
-- $v_n = \frac{n+1}{2^n}$
-- $\left\{\begin{array}{l}w_0=1\\ w_n = w_{n+1} + \frac{1}{n} \end{array} \right.$
+- $u_n = n + \dfrac{1}{n+1}$
+- $v_n = \dfrac{n+1}{2^n}$
+- $\left\{\begin{array}{l}w_0=1\\ w_n = w_{n+1} + \dfrac{1}{n} \end{array} \right.$
 :::
 
 ## Exercice
@@ -373,7 +373,7 @@ où $g:x \longmapsto x-4$. La suite $(v_n)$ est croissante.
 
 Soit $(u_n)$ une suite à termes strictement positifs.
 
-1. Démontrer que si $(u_n)$ est strictement croissante alors $\left(\frac{1}{u_n} \right)$ est strictement décroissante.
+1. Démontrer que si $(u_n)$ est strictement croissante alors $\left(\dfrac{1}{u_n} \right)$ est strictement décroissante.
 2. Que peut-on dire de la réciproque ?
 :::
 
@@ -383,13 +383,13 @@ Soit $(u_n)$ une suite à termes strictement positifs.
 
 
 1. On considère les suites  $(u_n)$, $(v_n)$ définies pour tout $n \in \N$ par  
-$$u_n = 2n^2+4n-2 \quad ; \quad v_n = -\frac{3^n}{2} \quad ; \quad w_n= n- \frac{1}n$$
+$$u_n = 2n^2+4n-2 \quad ; \quad v_n = -\dfrac{3^n}{2} \quad ; \quad w_n= n- \dfrac{1}n$$
 
     - Calculer le 3\up{ème} terme de la suite $(u_n)$.
     - Étudier les variations des suites $(u_n)$, $(v_n)$  et $(w_n)$ par étude de la différence.
 
 1. On considère la suite $(t_n)$ définie par  
-$$t_n=\frac{-2^n}{n-4}$$
+$$t_n=\dfrac{-2^n}{n-4}$$
 
     - À partir de quel rang la suite est-elle définie ?
     - En utilisant la méthode du quotient, déterminer les variations de la suite $(t_n)$.
@@ -400,7 +400,7 @@ $$t_n=\frac{-2^n}{n-4}$$
 <span class="exo-num"></span>
 
 On considère la suite $(u_n)$ définie pour tout $n \geqslant 1$ par  
-$$u_n=\sum_{k=1}^n \frac{(-1)^k}{k}$$  
+$$u_n=\sum_{k=1}^n \dfrac{(-1)^k}{k}$$  
 Étudier les variations de la suite $(v_n)$ où pour tout $n \in \N^*$, $v_n=u_{2n}$
 :::
 
@@ -432,11 +432,11 @@ On considère la fonction $f$ tel que $u_{n+1} =f(u_n)$ définie sur $[0;1]$.
 <span class="exo-num"></span>
 
 On considère la suite $(u_n)$ définie sur $\N$ par 
-$$u_n=\frac{-3^n}{(n^2+2)2^n}$$
+$$u_n=\dfrac{-3^n}{(n^2+2)2^n}$$
 
 1. Justifier que pour tout $n >0$, $u_n <0$  
 2. Montrer que pour tout $n \in \N$,
-$$\frac{u_{n+1}}{u_n}>1 \Longleftrightarrow n(n-4) >0$$  
+$$\dfrac{u_{n+1}}{u_n}>1 \Longleftrightarrow n(n-4) >0$$  
 3. Résoudre $n(n-4) >0$  
 4. En déduire la monotonie de la suite $(u_n)$.
 :::
@@ -447,7 +447,7 @@ $$\frac{u_{n+1}}{u_n}>1 \Longleftrightarrow n(n-4) >0$$
 <span class="exo-num"></span>
 
 On considère la suite $(u_n)$ définie par $u_0=2$ et pour tout $n \in \N$,  
-$$u_{n+1}=1- \frac{1}{u_n}$$  
+$$u_{n+1}=1- \dfrac{1}{u_n}$$  
 Montrer que la suite $(u_{3n})$ est constante.
 :::
 
@@ -497,14 +497,14 @@ $v_{n+1}= f(v_n)$, où $f$ est une fonction représentée graphiquement.
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-On considère la suite $(u_n)$ définie par $u_0= \frac12$ et pour tout $n \in \N$,  
-$$u_{n+1} = \frac{3u_n}{1+2u_n}$$
+On considère la suite $(u_n)$ définie par $u_0= \dfrac12$ et pour tout $n \in \N$,  
+$$u_{n+1} = \dfrac{3u_n}{1+2u_n}$$
 
 1. Déterminer les trois premiers termes de la suite  
 2.  a. A l'aide de la calculatrice, conjecturer les variations de la suite  
    b. On admet que la suite $(u_n)$ est majorée par $1$. Montrer que la suite $(u_n)$ est croissante  
 3. On considère la suite $(v_n)$ définie sur $\N$ par  
-$$v_{n+1} = \frac{u_n}{1-u_n}$$  
+$$v_{n+1} = \dfrac{u_n}{1-u_n}$$  
    a. Calculer $v_0$ et $v_1$  
    b. Démontrer que la suite $(w_n)$ définie par $w_n= 3^n$ vérifie la relation de récurrence de la suite $(v_n)$  
    c. En déduire l'expression de la suite $(v_n)$ en fonction de $n$  
@@ -517,7 +517,7 @@ $$v_{n+1} = \frac{u_n}{1-u_n}$$
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-On considère la suite définie sur $\N^*$ par $u_n=2-\frac{1}{n^2}$
+On considère la suite définie sur $\N^*$ par $u_n=2-\dfrac{1}{n^2}$
 
 1. Montrer que la suite $(u_n)$ est croissante.
 2. Démontrer que pour tout $n \geqslant 1$, $u_n <2$
@@ -532,10 +532,10 @@ On considère la suite définie sur $\N^*$ par $u_n=2-\frac{1}{n^2}$
 
 À l'aide de la calculatrice, déterminer la limite des suites suivantes :
 
-- $u_n=\frac{5 \times (-1)^n}{n+1}$
-- $v_n=\frac{1}{4} n^2-2n-1$
+- $u_n=\dfrac{5 \times (-1)^n}{n+1}$
+- $v_n=\dfrac{1}{4} n^2-2n-1$
 - $\left\{\begin{array}{l}w_0=5\\ w_{n+1}=0,8 \times 0,8 w_n\end{array} \right.$
-- $\left\{\begin{array}{l}t_0=1\\ t_{n+1}=-\frac{2}{3} t_n +4\end{array} \right.$
+- $\left\{\begin{array}{l}t_0=1\\ t_{n+1}=-\dfrac{2}{3} t_n +4\end{array} \right.$
 
 :::
 
@@ -547,7 +547,7 @@ Déterminer les limites des suites suivantes :
 
 - $u_n=-5n+2$
 - $v_n=4n^2+n+7$
-- $w_n=\frac{2n+3}{n}$
+- $w_n=\dfrac{2n+3}{n}$
 - $wx_n=(-1)^n$
 
 :::
@@ -556,7 +556,7 @@ Déterminer les limites des suites suivantes :
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-On considère la suite $(u_n)$ définie par $u_0=3$ et pour tout $n \in \N$, $u_{n+1} = \frac{1}{2} u_n +1$.
+On considère la suite $(u_n)$ définie par $u_0=3$ et pour tout $n \in \N$, $u_{n+1} = \dfrac{1}{2} u_n +1$.
 
 1. On admet que pour tout $n \in \N$, $u_n \leqslant 2$
    a. Déterminer, à l'aide de la calculatrice, la limite de la suite.
@@ -583,7 +583,7 @@ def seuil_suite():
 
 
 2. Étude algébrique :
-   a. Montrer que pour tout $n$, $u_n= \left(\frac{1}{2}\right)^n + 2$
+   a. Montrer que pour tout $n$, $u_n= \left(\dfrac{1}{2}\right)^n + 2$
    b. Démontrer que la suite $(u_n)$ est croissante et déterminer sa limite.
    c. Déterminer, à l'aide des variations de la suite, le plus petit entier $n$ tel que $2 \leqslant u_n < 2,00001$
 
@@ -607,10 +607,10 @@ On considère la suite $(u_n)$ définie par $u_n=n^2-n$.
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-On considère la suite $(v_n)$ définie sur $\N$ par $v_n=\frac{10n+1}{5n+6}$.
+On considère la suite $(v_n)$ définie sur $\N$ par $v_n=\dfrac{10n+1}{5n+6}$.
 
 1. Conjecturer le comportement de la suite au voisinage de $+\infty$.
-2. a. Démontrer que pour tout $n$, $v_n-2= \frac{-11}{5n+6}$  
+2. a. Démontrer que pour tout $n$, $v_n-2= \dfrac{-11}{5n+6}$  
    b. Valider par un argument votre conjecture.
 3. Écrire une fonction `seuil_suite` qui retourne le rang $p$ à partir duquel $\left|u_n-2\right| < 10^{-7}$.
 4. *(Bonus)* En utilisant la question 2.a, déterminer les variations de la suite $(u_n)$.
@@ -631,12 +631,12 @@ On considère la suite $(v_n)$ définie sur $\N$ par $v_n=\frac{10n+1}{5n+6}$.
 <span class="exo-num"></span>
 
 On pose pour tout entier $n \neq 0$, 
-$$S_n= \sum_{k=0}^n \frac{1}{k(k+1)}$$
+$$S_n= \sum_{k=0}^n \dfrac{1}{k(k+1)}$$
 
 1. Démontrer que la suite $(S_n)$ est croissante.  
 2. Démontrer que pour tout entier $k \neq 0$,  
    $$
-   \frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}
+   \dfrac{1}{k(k+1)} = \dfrac{1}{k} - \dfrac{1}{k+1}
    $$
 3. En déduire une expression simple de la $S_n$.  
 4. Déterminer la limite de $(S_n)$.
@@ -680,11 +680,11 @@ On note $\mathcal{A}_n$ l'aire de ce polygone.
 
 1. Soit $x$ et $y$ deux réels positifs ou nuls.  
    a. Développer $(\sqrt{x} - \sqrt{y})^2$.  
-   b. En déduire que $\sqrt{xy} \leq \frac{x + y}{2}$.
+   b. En déduire que $\sqrt{xy} \leq \dfrac{x + y}{2}$.
 
 2. On considère les deux suites $(u_n)$ et $(v_n)$ définies par $u_0 = 1$, $v_0 = 4$ et, pour tout entier naturel $n$,  
 $$
-u_{n+1} = \frac{u_n + v_n}{2} \quad \text{et} \quad v_{n+1} = \sqrt{u_n v_n}
+u_{n+1} = \dfrac{u_n + v_n}{2} \quad \text{et} \quad v_{n+1} = \sqrt{u_n v_n}
 $$  
    a. Calculer les valeurs exactes de $u_1$, $u_2$, $v_1$ et $v_2$.  
    b. Démontrer que, pour tout entier $n \geq 1$, $v_n \leq u_n$.  
@@ -705,13 +705,13 @@ $$
 1. Déterminer les variations de la suite $(u_n)$.  
    a. Démontrer que pour tout $n \in \N^*$,  
    $$
-   \frac{1}{2\sqrt{n+1}} \leqslant u_n \leqslant \frac{1}{2\sqrt{n}}
+   \dfrac{1}{2\sqrt{n+1}} \leqslant u_n \leqslant \dfrac{1}{2\sqrt{n}}
    $$
    b. En déduire (ou conjecturer) la limite de la suite $(u_n)$.
 
 2. On définit la suite $(v_n)$ par 
 $$
-v_n =\frac{u_1+u_2+ \dots + u_3}{\sqrt{n}}
+v_n =\dfrac{u_1+u_2+ \dots + u_3}{\sqrt{n}}
 $$  
 Quelle est la limite de la suite $(v_n)$ ?
 :::
@@ -792,8 +792,8 @@ $$
 
 On considère la suite $(u_n)$ définie, pour tout $n \in \mathbb{N}$, par :
 $$
-u_0 = 1 \\
-u_{n+1} = \frac{u_n}{1+u_n}
+u_0 = 1 \et 
+u_{n+1} = \dfrac{u_n}{1+u_n}
 $$
 
 1. On considère la fonction $g$ définie sur $[0\,;\,+ \infty[$ telle que $u_{n+1}= g(u_n)$.  
@@ -802,10 +802,10 @@ $$
    c. Conjecturer les variations et la limite de la suite $(u_n)$.
 
 <div style="text-align: center;">
-![](../../image/maths/Suite_numerique_f18_construction3.png){width=55%}
+![](../../image/maths/Suite_numerique_f18_construction3.png){width=75%}
 </div>
-1.  
-   a. Calculer les cinq premiers termes de la suite.  
+
+2. a. Calculer les cinq premiers termes de la suite.  
    b. Conjecturer la forme générale de $u_n$.  
    c. Comment peut-on vérifier la cohérence la cohérence de la conjecture à l'aide de la calculatrice ?  
    d. Vérifier la conjecture algébriquement.

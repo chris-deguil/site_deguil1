@@ -1,0 +1,19 @@
+---
+title: "Transformations"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Utiliser le prioduit sclaire pour transformer les écriktures, obtenir des égalités, lignes de  niveau"
+order: 4
+---
+
+___
+
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="Proprietes.html">⬅️</a>
+  <a class="next" href="Bilans.html">➡️</a>
+</div>

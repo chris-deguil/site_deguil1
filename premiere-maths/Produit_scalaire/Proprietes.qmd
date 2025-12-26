@@ -1,0 +1,19 @@
+---
+title: "Propriétés du produit scalaire"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Opérations sur le produit sclaire, Al-Hashi"
+order: 3
+---
+
+___
+
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="Proprietes.html">⬅️</a>
+  <a class="next" href="Transformations.html">➡️</a>
+</div>

@@ -49,8 +49,11 @@ $$u_n = n^2 - n$$
 
 Pour tout $n \in \mathbb{N}$,  
 $$u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n$$  
+
 Or $n \geqslant 0$, donc $2n \geqslant 0$.  
+
 Ainsi pour tout $n \in \mathbb{N}$, $u_{n+1} - u_n \geqslant 0$.  
+
 Donc la suite $(u_n)_{n \in \mathbb{N}}$ est croissante.
 
 </details>
@@ -59,6 +62,7 @@ Donc la suite $(u_n)_{n \in \mathbb{N}}$ est croissante.
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 Soit $(u_n)$ définie par $u_0 = 3$ et $u_{n+1} = - u_n^2 - u_n - 1$.  
+
 Étudier les variations.
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
@@ -67,6 +71,7 @@ Pour tout $n \in \mathbb{N}$,
 $$u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = - u_n^2 - 2u_n - 1 = - (u_n + 1)^2$$  
 
 Ce qui est toujours négatif.  
+
 Ainsi pour tout $n \in \mathbb{N}$, $u_{n+1} - u_n \leqslant 0$, donc $(u_n)_{n \in \mathbb{N}}$ est une suite décroissante.
 
 </details>
@@ -76,7 +81,8 @@ Ainsi pour tout $n \in \mathbb{N}$, $u_{n+1} - u_n \leqslant 0$, donc $(u_n)_{n 
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème :</span>  
-Soient $a \in \R^+$ et $I = [a\,;\,+\infty[$.<br>
+Soient $a \in \R^+$ et $I = [a\,;\,+\infty[$.
+
 Soit $(u_n)$ la suite définie par la relation $u_n = f(n)$, où $f$ est une fonction définie sur $I$.
 
 Si $f$ est une fonction monotone sur $I$, alors $(u_n)$ est monotone et a les mêmes variations que $f$, pour tout entier naturel $n \geq a$.
@@ -88,6 +94,7 @@ On suppose $f$ croissante sur $I$. Alors pour tout entier naturel $n \geq a$,
 $$u_{n+1} - u_n = f(n+1) - f(n) \geq 0$$  
 
 Donc la suite $(u_n)$ est croissante pour tout entier naturel $n \geq a$.  
+
 On raisonne de même pour une fonction décroissante.
 
 </details>
@@ -95,6 +102,7 @@ On raisonne de même pour une fonction décroissante.
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 Soit $u_n = n^2 - 3n + 1$.  
+
 Étudier les variations.
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
@@ -115,8 +123,22 @@ On en conclut que la suite $(u_n)$ est croissante à partir du rang $1$ et stric
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque :</span>  
-La réciproque est fausse.  
-Par exemple,  $u_n = n + \cos(2\pi n)$ est croissante mais $f(x) = x + \cos(2\pi x)$ ne l’est pas.  
+La réciproque de cette propriété est fausse. En effet, soit la suite définie par  
+$$u_n = n + \cos(2 \pi n).$$
+
+Il est immédiat que cette suite est croissante puisque pour tout $n \in \N$,
+$$
+\begin{aligned} 
+u_{n+1} &= (n+1) + \cos(2\pi(n+1)) \\
+&= n+1 + \cos(2\pi n + 2\pi) \\
+&= n+1 + \cos(2\pi n) \\
+& =u_n + 1
+\end{aligned}
+$$
+
+Donc $u_{n+1} > u_n$ pour tout $n \in \N$.
+
+Mais la fonction associée $f$ définie par $f(x) = x + \cos (2\pi x)$ n'est pas croissante, comme le montre sa courbe représentative : 
 
 <div style="text-align: center;">
 ![](../../image/maths/Suite_numerique_suite_cos){width=40%}
@@ -131,29 +153,31 @@ Par exemple,  $u_n = n + \cos(2\pi n)$ est croissante mais $f(x) = x + \cos(2\pi
 
 1.  Si $(u_n)$ est à terme strictement positif à partir d'un certain rang $p$, alors pour tout $n  \geqslant p$ :
 $$
-\frac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante}, 
+\dfrac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante}, 
 \qquad 
-\frac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
+\dfrac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
 $$
-
 2. Si $(u_n)$ est à terme strictement négatif à partir d'un certain rang $p$, alors pour tout $n  \geqslant p$ :
 $$
-\frac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante}, 
+\dfrac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante}, 
 \qquad 
-\frac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
+\dfrac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
 $$
 :::
 
 <details class="bloc demo"><summary>Démonstration :</summary>
 
-On traite le cas $u_n < 0$, le cas $u_n > 0$ se traite de façon analogue.  
+On traite le cas $u_n <0$ ; le cas $u_n>0$ se traite de façon analogue.
 
-Soit $(u_n)$ une suite numérique à termes strictement négatifs.  
+Soit $(u_n)$ une suite numérique à terme strictement négatif.
 
-Alors pour tout $n \geqslant p$,  
-$$u_{n+1}-u_n \geqslant 0 \Longleftrightarrow u_{n+1} \geqslant u_n \underset{u_n <0}{\Longleftrightarrow} \frac{u_{n+1}}{u_n} \leqslant 1$$  
-
-D'où la suite est croissante à partir du rang $p$ si et seulement si $\frac{u_{n+1}}{u_n} \leq 1$.
+Alors pour tout $n \geqslant p$, 
+$$
+u_{n+1}-u_n \geqslant 0 
+\;\;\Longleftrightarrow\;\; u_{n+1} \geqslant u_n 
+\underset{u_n <0}{\Longleftrightarrow} \dfrac{u_{n+1}}{u_n} \leqslant 1.
+$$
+Ainsi la suite est croissante à partir du rang $p$ si et seulement si $\dfrac{u_{n+1}}{u_n} \leqslant 1$.
 
 </details>
 
@@ -161,7 +185,7 @@ D'où la suite est croissante à partir du rang $p$ si et seulement si $\frac{u_
 <span class="bloc-titre">Exemple :</span>  
 
 On considère la suite $(t_n)$ définie pour tout $n > 4$ par  
-$$t_n = \frac{-2^n}{n-4}$$  
+$$t_n = \dfrac{-2^n}{n-4}$$  
 
 1. À partir de quel rang la suite est-elle définie ?  
 
@@ -175,15 +199,15 @@ La suite est définie à partir du rang $5$, puisqu'elle n'est pas définie au r
 
 Pour tout $n > 4$, 
   $$
-  \frac{t_{n+1}}{t_n} 
+  \dfrac{t_{n+1}}{t_n} 
   = \dfrac{\dfrac{-2^{n+1}}{(n+1)-4}}{\dfrac{-2^n}{n-4}} 
   = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n} 
-  = \frac{2(n-4)}{n-3}.
+  = \dfrac{2(n-4)}{n-3}.
   $$
 
   Or pour tout $n \geqslant 5$, 
   $$
-  \frac{2(n-4)}{n-3}  \geqslant 1 
+  \dfrac{2(n-4)}{n-3}  \geqslant 1 
   \underset{n-3 >0}{\Longleftrightarrow} 
   2n-8 \geqslant n-3 
   \Longleftrightarrow n \geqslant 5.
@@ -192,13 +216,13 @@ Pour tout $n > 4$,
   Donc pour tout $n \geqslant 5$, 
 
   $$
-  \frac{t_{n+1}}{t_n} \geqslant 1.
+  \dfrac{t_{n+1}}{t_n} \geqslant 1.
   $$
 
   La suite étant à terme strictement négatif puisque, pour tout $n >4$, $-2^n <0$ et $n-4>0$, on déduit que 
   
   $$
-  \frac{t_{n+1}}{t_n}  \geqslant 1 
+  \dfrac{t_{n+1}}{t_n}  \geqslant 1 
   \underset{t_n <0}{\Longleftrightarrow} 
   t_{n+1} \leqslant t_n.
   $$

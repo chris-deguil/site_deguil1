@@ -5,7 +5,7 @@ format:
   html:
     toc: true
     number-sections: false
-order: 2
+order: 3
 ---
 
 
@@ -16,48 +16,72 @@ order: 2
 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : </span><br>
-Soit $f$ une fonction définie sur $I$.<br>
 On appelle \emph{intervalle image} de $I$ par $f$ l'ensemble noté $f(I)$ défini par
-
-$$
-f(I) = \left\{\,f(x)\; ;\; x \in I \right\}.
-$$
+$$f(I) = \left\{\,f(x)\; ;\; x \in I \right\}$$
 :::
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span><br>
-$f(I)$ est l'ensemble de toutes les images $f(x)$ lorsque $x$ parcourt $I$.
+
+- $f(I)$ est l'ensemble de toutes les images $f(x)$ lorsque $x$ parcourt $I$.
+- L'image d'un intervalle n'est pas toujours un intervalle.
 :::
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
-Soit $f$ définie sur $I=[-3 \, ; \, 4]$ par $f(x)=x^2+2$.<br>
-Alors, pour tout $x \in [-3\, ; \, 4]$, on montre que $f(x) \in [2\, ; \, 18]$.<br>
-Ainsi $f(I)= [2\, ; \, 18]$.
+Soit $f$ définie sur $I=[-3 \, ; \, 4]$ par $f(x)=x^2+2$. Déterminer $f(I)$
 
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+La fonction $f$ est une fonction polynôme du second degré dont le coefficient dominant $1 >0$, ainsi sa représentation graphique est une parabole orientée vers le haut, admettant pour axe de symétrie la droite d'équation $x= 0$.
+
+D'où 
+
+- $f$ décroissante sur [-3 \,;\, 0]$ et à valeur dans $[2\,;\, 11]$
+- $f$ croissante sur $[0\,;\, 4]$ et à valeur dans $[2\, ;\, 18]$
+
+Alors, pour tout $x \in [-3\, ; \, 4]$, on a $f(x) \in [2\, ; \, 18]$.
+
+Ainsi $f(I)= [2\, ; \, 18]$.
+</details>
 :::
 
 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : </span><br>
-Soit $f$ définie sur $I$ et $g$ définie sur $J$ telles que $f(I)\subset J$.<br>
-On appelle \emph{fonction composée} de $f$ par $g$ la fonction notée $h$ définie pour tout $x \in I$ par
-
-$$
-h(x)=(g \circ f)(x)=g(f(x)).
-$$ 
+Soient $f$ une fonction définie sur un intervalle $I$ et $g$ une fonction définie sur un intervalle $J$. 
+Si l'image de $I$ par $f$ est incluse dans $J$ ($f(I) \subset J$), on appelle fonction composée de $f$ par $g$ la fonction notée $g \circ f$ définie sur $I$ par :
+$$(g \circ f)(x) = g\big(f(x)\big)$$
 :::
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
 On considère les fonctions :
-- $g$ définie sur $\R^*$ par $g(x) = \dfrac{1}{x}$ ;
-- $f$ définie sur $\R$ par $f(x)=3x^2+1$ et à valeurs dans $[1~;~+\infty[\subset \R^*$.<br>
-Ainsi $g \circ f$ est bien définie sur $\R$, et pour tout $x \in \R$,
 
-$$h(x) = \frac{1}{3x^2+1}$$
+- $g$ définie sur $\R^*$ par $g(x) = \dfrac{1}{x}$ ;
+-  $f$ définie sur $\R$ par $f(x)=3x^2+1$ et à valeurs dans $[1\,;\, +\infty[\subset \R^*$.
+
+Déterminer $g \circ f$ et $f \circ g$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+- Pour tout $x \in \R$, $3x^2+1 >0$, d'où $f(\R) \subset  \R^*$.
+  
+  Ainsi $g \circ f$ est bien définie sur $\R$.
+
+  Pour tout $x \in \R$, 
+  $$(g \circ f)(x) = \frac{1}{3x^2+1}$$
+
+-  Pour tout $x \in \R^*$, $\frac{1}{x} \in \R$, d'où $g(\R^*) \subset  \R$.
+    
+  Ainsi $f \circ g$ est bien définie sur $\R^*$.
+
+  Pour tout $x \in \R$, 
+  $$(h \circ g)(x) = \frac{3}{x^2} + 1$$
+
+</details>
 
 :::
+
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème (admis) : </span><br>
@@ -86,19 +110,31 @@ $$
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span><br>
-Déterminer la dérivée de la fonction définie sur $I=]-2{,}5 \, ;\, +\infty[$ par $f(x) =\sqrt{2x+5}$.<br>
-<details class="bloc cor"><summary>Afficher la correction</summary>
-Soit $u$ définie sur $I$ par $u:x \longmapsto 2x+5$, et à valeurs dans $\R_+$.<br>
-$u$ est dérivable sur $I$ et, pour tout $x \in I$, $u'(x)= 2$.<br>
-Soit $v$ la fonction définie sur $\R_+^*$ par $v:x \longmapsto \sqrt{x}$.<br>
-$v$ est dérivable sur $\R_+^*$ et, pour tout $x \in \R_+^*$, $v'(x)= \dfrac{1}{2\sqrt{x}}$.<br>
-Ainsi $h=v \circ u$ est dérivable sur $I$. Or $$h'=(v'\circ u)\times u'.$$<br>
-Pour tout réel $x \in I$,
-$$
-h'(x)= 2 \times \frac{1}{2\sqrt{2x+5}} = \frac{1}{\sqrt{2x+5}}.
-$$
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Dérivée d'une fonction composée</span></div>
+
+Déterminer la fonction dérivée de la fonction $f$ définie sur $I = \left] -2,5 \,;\, +\infty \right[$ par :
+$$f(x) = \sqrt{2x+5}$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On reconnaît une forme $v \circ u$ (ou $\sqrt{u}$).
+
+* Soit $u(x) = 2x+5$.  
+
+  $u$ est une fonction affine dérivable sur $I$ et, pour tout $x \in I$, $u'(x) = 2$.
+  Pour tout $x \in I$, $2x+5 > 0$, donc $u(I) \subset \mathbb{R}_+^*$.
+
+* $v$ est dérivable sur $\mathbb{R}_+^*$ et, pour tout $x > 0$, $v'(x) = \dfrac{1}{2\sqrt{x}}$.
+
+Par composition, $f$ est dérivable sur $I$ et on utilise la formule $( \sqrt{u} )' = \dfrac{u'}{2\sqrt{u}}$.
+
+Ainsi, pour tout $x \in I$ :
+$$f'(x) = 2 \times \frac{1}{2\sqrt{2x+5}}$$
+D'où :
+$$f'(x) = \frac{1}{\sqrt{2x+5}}$$
 </details>
+
 :::
 
 ::: {.bloc .ex}

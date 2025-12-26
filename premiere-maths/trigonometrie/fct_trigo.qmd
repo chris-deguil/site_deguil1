@@ -55,7 +55,7 @@ Le sens de variation de la fonction sur $[0~;~\pi]$ provient de la définition m
 La fonction sinus est : 
 - impaire ;
 - $2\pi$-périodique ;
-- croissante sur $\left[0~;~\frac{\pi}{2}\right]$ puis décroissante sur  $\left[\frac{\pi}{2}~;~\pi \right]$.
+- croissante sur $\left[0~;~\dfrac{\pi}{2}\right]$ puis décroissante sur  $\left[\dfrac{\pi}{2}~;~\pi \right]$.
 :::
 
 
@@ -71,22 +71,22 @@ Le sens de variation de la fonction sur $[0~;~\pi]$ provient de la définition m
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
-Comparer les sinus de $-\frac{2\pi}{5}$ et $\frac{22 \pi}{6}$.<br>
+Comparer les sinus de $-\dfrac{2\pi}{5}$ et $\dfrac{22 \pi}{6}$.<br>
 <details class="bloc cor"><summary>Afficher la correction</summary>
 On a
 $$
-\sin\left(-  \frac{2 \pi}{5} \right) = - \sin  \frac{2\pi}{5}, 
+\sin\left(-  \dfrac{2 \pi}{5} \right) = - \sin  \dfrac{2\pi}{5}, 
 \quad 
-\sin\left( \frac{22 \pi}{6} \right) = \sin\left(- \frac{2\pi}{6} + 4 \pi \right) = \sin\left(- \frac{\pi}{3} \right) = - \sin  \frac{\pi}{3}.
+\sin\left( \dfrac{22 \pi}{6} \right) = \sin\left(- \dfrac{2\pi}{6} + 4 \pi \right) = \sin\left(- \dfrac{\pi}{3} \right) = - \sin  \dfrac{\pi}{3}.
 $$
 Or :
 $$
-0 <  \frac{\pi}{3} <  \frac{2 \pi}{5} <  \frac{\pi}{2}.
+0 <  \dfrac{\pi}{3} <  \dfrac{2 \pi}{5} <  \dfrac{\pi}{2}.
 $$
-La fonction sinus est croissante sur $\left[0~;~ \frac{\pi}{2}\right]$. <br>
-Ainsi $\sin  \frac{\pi}{3}  < \sin  \frac{2 \pi}{5}$, donc, en multipliant par $-1$, on déduit que :
+La fonction sinus est croissante sur $\left[0~;~ \dfrac{\pi}{2}\right]$. <br>
+Ainsi $\sin  \dfrac{\pi}{3}  < \sin  \dfrac{2 \pi}{5}$, donc, en multipliant par $-1$, on déduit que :
 $$
-\sin \left(- \frac{\pi}{3}\right)  > \sin \left( \frac{22 \pi}{6} \right).
+\sin \left(- \dfrac{\pi}{3}\right)  > \sin \left( \dfrac{22 \pi}{6} \right).
 $$
 </details>
 :::
@@ -154,12 +154,36 @@ Soit $f$ une fonction dont la courbe est donnée sur le graphique ci-dessous. <b
   <img src="../../image/maths/Trigonometrie_influence_courbe5.png" alt="" width=70%/>
 </div>
 
-Cette courbe est de la forme $t \mapsto A\sin\left(\omega t + \varphi\right)$. L'objectif est de déterminer les valeurs des trois paramètres $A$, $\omega$ et $\varphi$.<br>
+Cette courbe est de la forme $t \mapsto A\sin\left(\omega t + \varphi\right)$. L'objectif est de déterminer les valeurs des trois paramètres $A$, $\omega$ et $\varphi$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 On représente la fonction $\sin t$ (ici en rouge sur le graphique).
 
-- L'amplitude $A$ de cette fonction est $0,75$.<br>
-- On remarque que, sur une période de la fonction $\sin t$, il y a 3 périodes de la fonction $f$. Donc $\omega = 3$.<br>
-- On voit que la courbe en bleu est décalé de la courbe en rouge d'environ $\dfrac{3\pi}{2}$. La phase a l'origine $\varphi$ est donc égale à $\dfrac{3\pi}{2}$
+
+- Déterminons l’amplitude $A$  :
+  
+  D'après les formules des angles associés, on sait que pour tout réel $X$ :
+    $$\sin\left(X + \dfrac{3\pi}{2}\right) = -\cos(X)$$
+
+  Ainsi , en posant $X = 3t$, l'expression de la fonction devient :
+    $$f(t) = -0,75 \cos(3t)$$
+  Pour $t=0$, on a $f(0) = -0,75 \cos(0) = -0,75 \times 1 = -0,75$.
+
+- Déterminons la pulsation $\omega$ : 
+  
+  On compare la période de la fonction $f$, notée $T_f$, à celle de la fonction sinus de référence ($T = 2\pi$). \\
+    On observe sur le graphique que sur un intervalle de $2\pi$, la fonction $f$ effectue exactement $3$ cycles complets. Sa période est donc $T_f = \dfrac{2\pi}{3}$, ainsi  $\omega = \dfrac{2\pi}{T_f}$.\\
+    Donc $\omega = 3$.
+- Détermination de la phase à l'origine $\varphi$ : 
+  
+  On regarde la valeur de la fonction en $t=0$. 
+    Ici, $f(0) = 0,75 \sin(\varphi)$. 
+    Graphiquement, on voit que pour $t=0$, la courbe bleue est à son minimum, soit $f(0) = -0,75$.
+    On doit donc résoudre $\sin(\varphi) = -1$, ce qui donne $\varphi = -\dfrac{\pi}{2}$
+     (ou $\dfrac{3\pi}{2}$).
+</details>
+
+
 :::
 
 

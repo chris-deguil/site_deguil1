@@ -86,6 +86,7 @@ website:
             - premiere-maths/suite1/variations.qmd
             - premiere-maths/suite1/limites.qmd
             - premiere-maths/suite1/algorithme.qmd
+            - premiere-maths/suite1/bilan.qmd
             - premiere-maths/suite1/exercices.qmd
 
         - section: "Nombre dérivé"
@@ -95,13 +96,6 @@ website:
             - premiere-maths/NomDerive/DerivUsuelles.qmd
             - premiere-maths/NomDerive/exercices.qmd
 
-        - section: "Probabilité conditionnelles"
-          contents:
-            - premiere-maths/probaCond/definition.qmd
-            - premiere-maths/probaCond/fpt.qmd
-            - premiere-maths/probaCond/independance.qmd
-            - premiere-maths/probaCond/exercices.qmd
-
         - section: "Trigonométrie et Fonctions trigonométriques"
           contents:
             - premiere-maths/trigonometrie/enroulement.qmd
@@ -110,12 +104,32 @@ website:
             - premiere-maths/trigonometrie/fct_trigo.qmd
             - premiere-maths/trigonometrie/equation.qmd 
 
+        - section: "Probabilité conditionnelles"
+          contents:
+            - premiere-maths/probaCond/rappels.qmd
+            - premiere-maths/probaCond/definition.qmd
+            - premiere-maths/probaCond/fpt.qmd
+            - premiere-maths/probaCond/independance.qmd
+            - premiere-maths/probaCond/exercices.qmd
+
         - section: "Opérations sur les dérivées - Applications"
           contents:
+            - premiere-maths/Operation_Derivee/lemmes.qmd
             - premiere-maths/Operation_Derivee/operations.qmd
             - premiere-maths/Operation_Derivee/composition.qmd
             - premiere-maths/Operation_Derivee/applications.qmd 
             - premiere-maths/Operation_Derivee/extrema.qmd 
+
+
+        - section: "Produit scalaire"
+          contents:
+            - premiere-maths/Produit_scalaire/definition.qmd
+            - premiere-maths/Produit_scalaire/orthogonalité.qmd
+            - premiere-maths/Produit_scalaire/Proprietes.qmd
+            - premiere-maths/Produit_scalaire/Transformation.qmd
+            - premiere-maths/Produit_scalaire/Bilans.qmd
+        
+
 
     - title: "Terminale Spécialité Maths"
       logo: image/logo/logo_maths2.png   

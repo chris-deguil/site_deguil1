@@ -12,7 +12,8 @@ order: 5
 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition :</span>  
-On dit qu'une suite numérique $(u_n)$ admet une limite réelle $l$ si tous les termes de la suite $(u_n)$ sont aussi proches que l'on veut de $l$ à partir d'un certain rang.  
+On dit qu'une suite numérique $(u_n)$ admet une limite réelle $l$ si tous les termes de la suite $(u_n)$ sont aussi proches que l'on veut de $l$ à partir d'un certain rang.
+
 On dit alors que la suite $(u_n)$ converge vers $l$.
 :::
 
@@ -54,11 +55,11 @@ Pour tout $n \in \mathbb{N}$,
 
 $$
 \begin{aligned}
-3{,}9 \leqslant u_n \leqslant 4{,}1 
-&\Longleftrightarrow 3{,}9 \leqslant \frac{4n+1}{n+2} \leqslant 4{,}1 \\
-&\underset{n+2 >0}{\Longleftrightarrow } 3{,}9(n+2)  \leqslant 4n+1 \leqslant 4{,}1(n+2)  \\
-&\Longleftrightarrow -0{,}1n \leqslant -6{,}8 \;\; \text{et} \;\; -0{,}1n \leqslant 7{,}2 \\
-&\underset{-0{,}1<0}{\Longleftrightarrow} n\geqslant 68 \;\; \text{et} \;\; n \geqslant -72 
+3,9 \leqslant u_n \leqslant 4,1 
+&\Longleftrightarrow 3,9 \leqslant \dfrac{4n+1}{n+2} \leqslant 4,1 \\
+&\underset{n+2 >0}{\Longleftrightarrow } 3,9(n+2)  \leqslant 4n+1 \leqslant 4,1(n+2)  \\
+&\Longleftrightarrow -0,1n \leqslant -6,8 \;\; \text{et} \;\; -0,1n \leqslant 7,2 \\
+&\underset{-0,1<0}{\Longleftrightarrow} n\geqslant 68 \;\; \text{et} \;\; n \geqslant -72.
 \end{aligned}
 $$
 
@@ -73,44 +74,46 @@ $$u_n \in ]4-\epsilon \,;\, 4+ \epsilon[.$$
 <span class="bloc-titre">Exemple :</span>  
 
 On considère la suite $(u_n)$ définie par $u_n= 1 -\tfrac{1}{3n^2}$.  
+
 L'utilisation de la calculatrice permet de conjecturer que la suite converge vers 1.  
+
 Montrons alors que pour tout $k \in \mathbb{N}$, il existe un $n$ vérifiant $1-u_n < 10^{-k}$.
 
 <details class="bloc cor"><summary>Afficher la correction</summary>
 
-Pour tout entier $n$,  
-$$1-u_n = \frac{1}{3n^2}.$$  
-
-Pour tout entier $k$,  
-
+Pour tout entier $n$, $1-u_n = \frac{1}{3n^2}$.\\
+Pour tout entier $k$, 
 $$
 \frac{1}{3n^2} <10^{-k} 
-\Longleftrightarrow 3n^2 > \frac{1}{10^{-k}} 
+\Longleftrightarrow 3n^2 > 10^k 
 \Longleftrightarrow n^2> \frac{10^k}{3} 
 \Longleftrightarrow n>\sqrt{\frac{10^k}{3}}.
 $$
-
-Il suffit de prendre le premier entier directement supérieur à $\sqrt{\tfrac{10^k}{3}}$.  
-Donc on a montré ce qui était demandé, et on peut conclure que la suite $(u_n)$ converge vers $1$.
+Il suffit de prendre le premier entier strictement supérieur à $\sqrt{\frac{10^k}{3}}$.\\
+On a ainsi montré ce qui était demandé, et donc on peut conclure que la suite $(u_n)$ converge vers $1$.
 
 </details>
 :::
 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition :</span>  
-On dit qu'une suite numérique est **divergente** lorsqu'elle ne converge pas.
+On dit qu'une suite numérique est divergente lorsqu'elle ne converge pas.
 :::
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 
 Montrons que la suite $u_n = n^2$ diverge.  
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 Pour cela, il suffit de montrer que pour tout $A \in \mathbb{R}^+$, il existe un $n$ vérifiant $u_n> A$.  
 
 $$n^2 > A \Longleftrightarrow n >  \sqrt{A}$$  
 
 Il suffit de prendre le premier entier directement supérieur à $\sqrt{A}$.  
 On déduit alors que la suite $(u_n)$ ne converge pas : elle diverge vers $+\infty$.
+</details>
+
 :::
 
 

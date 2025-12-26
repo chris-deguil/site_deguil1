@@ -43,8 +43,8 @@ def somme(n):
     n = 0
     u = 3
     S = u
-    for i in range(1, n+ 1):
-        u = u - (i-1) + 2
+    for i in range(1, n+1):
+        u = u - i + 2
         S = S + u
     return S
 ~~~
@@ -54,11 +54,12 @@ def somme(n):
   <div class="editor-shell" id="exo1">
     <div class="bar-top"><span class="cell-num">Somme des termes</span></div>
     <textarea id="code">def somme(n):
+def somme(n):
     n = 0
     u = 3
     S = u
-    for i in range(1, n + 1):
-        u = u - (i-1) + 2
+    for i in range(1, n+1):
+        u = u - i + 2
         S = S + u
     return S
 
@@ -81,14 +82,18 @@ print(somme(6))</textarea>
 ## Problème de seuil
 
 On considère une suite $u_n$.  
+
 Un problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de $u_n$.
 
 ::: {.bloc .ex}
 Nous considérons la suite $u_n$ définie dans la partie précédente.  
+
 Les termes de $u_n$ semblent décroître de plus en plus rapidement à partir de $n = 3$.  
+
 On se demande si la suite $u_n$ peut atteindre une valeur aussi basse que souhaitée.
 
 Étant donné que le nombre d'étapes requises est inconnu à l'avance, on utilise forcément une boucle conditionnelle.  
+
 Dans le cas présent, nous recherchons le plus petit entier $n \in \mathbb{N}$ tel que $u_n \leq -750$.
 
 Si nous exécutions cet algorithme à la main, nous écririons :
@@ -115,6 +120,7 @@ def seuil_u(seuil):
   <div class="editor-shell" id="exo2">
     <div class="bar-top"><span class="cell-num">Recherche de seuil</span></div>
     <textarea id="code">def seuil_u(seuil):
+def seuil_u(seuil):
     n = 0
     u = 3
     while u > seuil:
@@ -122,7 +128,8 @@ def seuil_u(seuil):
         n = n + 1
     print(u, n)
 
-seuil_u(-750)</textarea>
+seuil_u(-750
+</textarea>
     <div class="output" id="out"><pre></pre></div>
     <div class="toolbar">
       <button class="btn" id="run" disabled></button>
@@ -140,4 +147,5 @@ seuil_u(-750)</textarea>
 
 <div class="nav-pages">
   <a class="prev" href="limites.html">⬅️</a>
+   <a class="next" href="bilan.html">➡️</a>
 </div>

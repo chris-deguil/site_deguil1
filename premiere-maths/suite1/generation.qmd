@@ -17,42 +17,84 @@ ___
 ::: {.bloc .def}
 <span class="bloc-titre">Définition :</span>  
 
-Soit $f$ une fonction définie sur $[a \, ; \, +\infty[$, avec $a$ réel positif ou nul.  
-On définit une suite $(u_n)$ par :  
-$$\forall n \in \mathbb{N},~n \ge a,~u_n = f(n)$$
+Soit $f$ une fonction définie sur $[a\,;\,+ \infty[$, avec $a$ réel positif ou nul.
+
+On définit une suite $(u_n)$ : 
+ $$\forall n \in \N,\; n \geq a,\; u_n = f(n) $$
 :::
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque :</span>  
 
-- Le premier terme est $u_{n_0}$, où $n_0$ est le plus petit entier de $[a \, ; \, +\infty[ \cap \mathbb{N}$.  
-- Tous les termes à partir de ce rang doivent exister pour que la suite soit bien définie.  
-- On peut calculer tout terme $u_n$ directement : c’est une **suite explicite**.
+- Le premier terme de la suite est $u_{n_0}$ où $n_0$ est le plus petit entier de $[a\, ; \,+ \infty[ \cap \N$.
+- Pour qu'une suite soit définie, tous les termes de la suite, à partir de son premier terme, doivent exister.
+-  On peut calculer n'importe quel terme de la suite connaissant son indice. On parle alors de suite définie de façon explicite.
 :::
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemples :</span>  
 
-- À partir de $f(x) = 2x^2 - 5$ définie sur $[0, +\infty[$, on peut définir la suite $(u_n)$ en posant $u_n = 2n^2 - 5$.  <br>
-- Cette suite admet pour premier terme $u_0= -5$.<br>
-On peut directement calculer n'importe quel terme de la suite : <br>
- $u_5 = 2\times 5^2 - 5 = 45$, $u_{20} = 2 \times 20^2-5 = 795$, \dots
-- À partir de $f(x) = \dfrac{x}{x - 2}$ définie sur $]2, +\infty[$, on définit, pour tout $n > 2$, la suite $(u_n)$ par $u_n = \dfrac{n}{n - 2}$.  <br>
-  Premier terme : $u_3 = 3$, puis $u_4 = 2$, $u_5 = \dfrac{5}{3}$, etc.
+1. Soit la fonction $f$ définie sur $]\R$ par $f(x)  = 2x^2-5$.
+   
+   Exprimer en fonction de $n$, la suite $u_n=f(n)$ et calculer les premiers termes.
+
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  Pour tout $n \geq 0$ la suite $u_n = 2n^2-5$.
+
+  Cette suite admet pour premier terme $u_0= -5$.
+
+  On peut directement calculer n'importe quel terme de la suite :
+
+  $u_5 = 2\times 5^2 - 5 = 45$, $u_{20} = 2 \times 20^2-5 = 795$, \dots}
+  </details>
+
+
+
+2. Soit la fonction $f$ définie sur $]2\,;\,+\infty[$ par $f(x) = \dfrac{x}{x - 2}$.
+   
+   Exprimer en fonction de $n$, la suite $u_n=f(n)$ et calculer les premiers termes.
+
+   <details class="bloc cor"><summary>Afficher la correction :</summary>
+  Pour tout $n > 2$ la suite $u_n = \dfrac{n}{n -2}$.
+
+  Le premier terme de la suite est $u_3 = \dfrac{3}{3-2} = 3$.
+
+O n a ensuite $u_4 = 2$, $u_5 = \dfrac{5}{3}$, \dots
+  </details>
+
+
 :::
 
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque :</span>  
-On ne peut pas définir la suite à partir de $n = 0$ ici, car $f(2)$ n’est pas défini.
+On ne peut pas définir la suite à partir de $u_0$, puisque $u_2$ n'est pas défini.
 :::
+
+
+
+| Caractéristique | Fonction $f$ | Suite $(u_n)$ |
+|:---|:---|:---|
+| **Variable** | Réelle : $x \in \mathbb{R}$ | Entière : $n \in \mathbb{N}$ |
+| **Notation** | $f(x)$ (image de $x$) | $u_n$ (terme de rang $n$) |
+| **Domaine** | Continu (intervalle) | Discret (valeurs isolées) |
+| **Graphique** | Courbe (ligne continue) | Nuage de points isolés |
+| **Calcul** | On peut calculer $f(0,5)$ | $u_{0,5}$ n'existe pas |
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque :</span>  
+Pour une suite fonctionnelle définie par $u_n = f(n)$, les points de la représentation graphique de la suite sont les points de la courbe de $f$ dont les abscisses sont des nombres entiers.
+
+:::
+
 
 ### Représentation graphique
 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition :</span>  
 
-On appelle **représentation graphique** d’une suite $(u_n)$ l’ensemble des points de coordonnées $(n \, ; \, u_n)$ avec $n \in \mathbb{N}$.
+On appelle représentation graphique d'une suite $(u_n)$ l'ensemble des points de coordonnées $(n \, ; \, u_n)$ où $n \in \N$.
 :::
 
 ::: {.bloc .ex}
@@ -69,6 +111,13 @@ Le premier terme est donc $u_3$.
 ## Suites définies par une relation de récurrence
 
 ### Définition
+::: {.bloc .rem}
+On peut aussi définir une suite par une relation de récurrence, c'est-à-dire que le terme $u_{n+1}$ dépend de la ou des valeurs des termes précédents. Il est donc nécessaire de calculer $u_0$, $u_1$, \dots, $u_{n-1}$ pour calculer $u_n$.
+
+Ainsi pour définir une suite par récurrence, il faut une ou des conditions initiales.
+:::
+
+
 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition :</span>  
@@ -83,67 +132,103 @@ u_{n+1} = f(u_n)
 \end{array}
 \right.
 $$
-est appelée **suite récurrente d’ordre 1**.
+est appelée suite récurrente d’ordre 1.
 :::
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarques :</span>  
 
-- Le terme $u_{n+1}$ dépend du précédent : c’est une suite **d’ordre 1**.  
-- Certaines suites peuvent dépendre de plusieurs termes précédents (ordre 2, 3, etc.).  
-- On doit connaître tous les termes précédents pour calculer $u_n$.
+- On parle de premier ordre (ou d’ordre 1) car le terme $u_{n+1}$ est exprimé en fonction du terme précédent.
+- On peut définir des suites à partir de plusieurs termes précédents (ordre 2, ordre 3, etc.).
+- Pour calculer un terme de la suite, on doit calculer tous les termes précédents.
 :::
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple :</span>  
 
-Soit la fonction $f$ définie sur $\mathbb{R}$ par $f(x) = 3x - 1$.  <br>
-On définit une suite $(u_n)_{n \in \mathbb{N}}$ par récurrence en posant
+On considère la suite $(u_n)$ définie par $u_0=2$ et pour tout  $n \in \N$, $$u_{n+1} = \dfrac{u_n -1}{n+1}$$
+Déterminer les trois premiers termes de la suite.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$u_0=2 \quad u_1 = \dfrac{u_0-1}{0+1} = 1 \quad u_2 = \dfrac{u_1-1}{1+1} = 0$
+
+</details>
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+On considère la suite $(u_n)$ définie par $u_0=2$ et pour tout  $n \in \N$, $$u_{n+1} = \dfrac{u_n -1}{n+1}$$
+Déterminer les trois premiers termes de la suite.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$u_0=2 \quad u_1 = \dfrac{u_0-1}{0+1} = 1 \quad u_2 = \dfrac{u_1-1}{1+1} = 0$
+
+</details>
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>
+Soit la fonction $f$ définie sur $\R$ par $f(x) = 3x - 1$.
+
+On définit une suite $(u_n)_{n \in \N}$ par récurrence en posant 
+
 $$
 \left\{
 \begin{array}{l}
 u_0 = 3 \\
-u_{n+1} = 3u_n - 1
-\end{array}
+u_{n+1} = 3 u_n - 1
+\end{array} 
 \right.
 $$
-Ainsi $u_1 = 3u_0 - 1 = 8$, $u_2 = 3u_1 - 1 = 23$, …  <br>
-On peut montrer que, pour tout $n \in \mathbb{N}$,
-$$u_n = \frac{5}{2} \times 3^n + \frac{1}{2}$$
 
-   <details class="bloc cor"><summary>Afficher la correction</summary>
-Soit $(v_n)$ la suite définie par 
-$$v_n = \frac{5}{2} \times 3^n + \frac{1}{2}$$
-Montrons que $(v_n)$ vérifie la relation de récurrence.<br>
-Pour tout $n \in \N$, on a $$vu_n -1 = 3 \times \left( \frac{5}{2} \times 3^n + \frac{1}{2} \right) -1 = \frac{5}{2} \times 3^{n+1} -\frac{3}{2}-1 =   \frac{5}{2} \times 3^{n+1} + \frac{1}{2} =v_{n+1}$$
-De plus $$v_0= \frac{5}{2} \times 3^0 + \frac{1}{2} = 3 = u_0$$
-On démontre ainsi que $(u_n)$ et $(v_n)$ coincide en tout point, donc elles sont égales.
-Donc 
-$$u_n=\frac{5}{2} \times 3^n + \frac{1}{2}$$
-   </details>
+Ainsi $u_1 = 3 u_0 - 1 = 8$, $u_2 = 3u_1 - 1 = 23$, etc.
+
+Montrer que pour tout $n \in \N$, $$u_n=\dfrac{5}{2} \times  3^n + \dfrac{1}{2}$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $(v_n)$ la suite définie sur $\N$ par 
+
+$$v_n = \dfrac{5}{2} \times 3^n + \dfrac{1}{2}$$
+
+Montrons que $(v_n)$ vérifie la même relation de récurrence.
+
+Pour tout $n \in \N$, on a $$3 v_n -1 = 3 \times \left( \dfrac{5}{2} \times 3^n + \dfrac{1}{2} \right) -1 = \dfrac{5}{2} \times 3^{n+1} -\dfrac{3}{2}-1 =   \dfrac{5}{2} \times 3^{n+1} + \dfrac{1}{2} =v_{n+1}$$
+De plus $$v_0= \dfrac{5}{2} \times 3^0 + \dfrac{1}{2} = 3 = u_0$$
+
+Les suites $(u_n)$ et $(v_n)$ vérifient la même relation de récurrence (du 1ère ordre) et vérifient $u_0=v_0$. 
+
+Ainsi elles coïncident en tout point.
+
+Donc  $(u_n)$ et $(v_n)$ sont égales.
+
+Ainsi  pour tout $n \in \N$, 
+
+$$u_n=\dfrac{5}{2} \times 3^n + \dfrac{1}{2}$$
+
+</details>
 :::
 
 
+
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple :</span>  
+<span class="bloc-titre">Exemple :</span>  <span class="exo-extra"> Suite de Fibonacci  </span>
 
-Suite de Fibonacci :  <br>
-Pour tout $n \in \mathbb{N}$,
-$$
-\left\{
-\begin{array}{l}
-F_0 = 1,~F_1 = 1 \\
-F_{n+2} = F_{n+1} + F_n
-\end{array}
-\right.
-$$
+Soit $F_0=1$ et $F_1=1$, et pour tout $n \in \N$, 
+$$F_{n+2}=F_{n+1}+F_n.$$
 
-Chaque terme étant défini en fonction des deux précédents, cette suite est une suite récurrente d’ordre 2 (pour définir cette suite à l’aide d’une fonction, il faudrait introduire les fonctions à deux variables).  <br>
-On a ainsi
-$$F_3 = F_2 + F_1 = 2 \; , \; F_4 = F_3 + F_2 = 3 \; , \; F_5 = F_4 + F_3 = 3 + 2 = 5 \; , \; \dots$$
+Chaque terme étant défini en fonction des deux précédents, cette suite est une suite récurrente d'ordre 2 (pour définir cette suite à l'aide d'une fonction, il faudrait introduire des fonctions à deux variables).
 
-On peut montrer (formule de Binet), où $\varphi$ est le nombre d’or, que, pour tout $n \in \mathbb{N}$,
-$$F_n = \frac{1}{\sqrt{5}}\left(\varphi^n - \left(-\frac{1}{\varphi}\right)^n\right).$$
+On a ainsi 
+$$F_3=F_2+F_1=2 \; , \;F_4=F_3+F_2=3 \; , \; F_5=F_4+F_3=3+2=5 \; , \; \dots $$
+
+On peut montrer (Formule de Binet), où $\varphi$ est le nombre d'or, que pour tout $n \in \N$, 
+$$F_n= \dfrac{1}{\sqrt{5}} \left(\varphi^n - \left(-\dfrac{1}{\varphi}\right)^n\right).$$
 :::
 
 ### Construction graphique d’une suite récurrente
