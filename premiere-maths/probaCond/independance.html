@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,14 +113,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -129,6 +130,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -162,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -361,7 +363,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -369,7 +371,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -388,7 +390,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Probabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/independance.html">Indépendances</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/rappels.html">Probabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/independance.html">Indépendances</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -400,6 +402,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -516,6 +519,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -559,48 +568,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Probabilité conditionnelles</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
@@ -635,6 +609,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
@@ -642,6 +657,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -668,6 +689,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -687,7 +743,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Probabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/independance.html">Indépendances</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/rappels.html">Probabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/independance.html">Indépendances</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Indépendances</h1>
 </div>
@@ -715,9 +771,9 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="notion-dindépendance">Notion d’indépendance</h2>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition :</span><br>
-Soit <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements d’un même univers de probabilités non nulles.<br>
-On dit que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants lorsque</p>
-<p><span class="math display">\[P(A \cap B) =P(A) \times P(B)\]</span></p>
+Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements d’un même univers de probabilités non nulles.\ On dit que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants lorsque <span class="math display">\[
+P(A \cap B) = P(A) \times P(B).
+\]</span></p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
@@ -729,37 +785,70 @@ Afficher la correction
 </summary>
 <p>Les cartes étant indiscernables on est en situation d’équiprobabilité.<br>
 Puisqu’il y a quatre as dans le jeu et huit cartes à coeur, et un seul as de coeur, on a</p>
-<p><span class="math display">\[P(A) = \frac{1}{4} \quad ; \quad P(B)= \frac{1}{8} \quad ; \quad P(A \cap B) = \frac{1}{32}\]</span></p>
+<p><span class="math display">\[P(A) = \dfrac{1}{4} \quad ; \quad P(B)= \dfrac{1}{8} \quad ; \quad P(A \cap B) = \dfrac{1}{32}\]</span></p>
 <p>Ainsi</p>
-<p><span class="math display">\[P(A) \times P(B) = \frac{1}{4} \times \frac{1}{8} = \frac{1}{32} = P(A \cap B)\]</span></p>
+<p><span class="math display">\[P(A) \times P(B) = \dfrac{1}{4} \times \dfrac{1}{8} = \dfrac{1}{32} = P(A \cap B)\]</span></p>
 Donc par définition les événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.
 </details>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque :</span><br>
-La notion d’indépendance et d’incompatibilité ne sont pas les mêmes et ne peuvent pas se réaliser en même temps.</p>
-<p>En effet si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants, alors</p>
-<p><span class="math display">\[P(A \cap B) = P(A) \times P(B)\]</span></p>
-<p>Or si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont incompatibles <span class="math inline">\(P(A \cap B) = 0\)</span>.</p>
-<p>Ainsi, on aurait <span class="math inline">\(P(A) = 0\)</span> ou <span class="math inline">\(P(B) = 0\)</span>, ce qui est contraire à la définition d’indépendance de deux événements.</p>
+<p><span class="bloc-titre">Remarque :</span></p>
+<ul>
+<li><p>On voit par cet exemple que la notion d’indépendance et celle d’incompatibilité ne sont pas les mêmes.</p>
+<p>Deux événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont incompatibles lorsque <span class="math inline">\(P(A \cap B) = 0\)</span>, c’est-à-dire qu’ils ne peuvent se réaliser en même temps.</p></li>
+<li><p>Démontrons-le !</p>
+<p>En effet, si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants, alors <span class="math inline">\(P(A \cap B) = P(A) \times P(B)\)</span>.</p>
+<p>Or si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont incompatibles, <span class="math inline">\(P(A \cap B) = 0\)</span>.</p>
+<p>Ainsi, on aurait <span class="math inline">\(P(A) = 0\)</span> ou <span class="math inline">\(P(B) = 0\)</span>, ce qui est contraire à la définition d’indépendance de deux événements.</p></li>
+</ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple :</span><br>
-Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> vérifiant <span class="math inline">\(P(A) =0,8\)</span>, <span class="math inline">\(P(B)= 0,35\)</span> et <span class="math inline">\(P(A \cup B) =0,87\)</span>. Montrer que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.</p>
+<p><span class="bloc-titre">Exemple :</span></p>
+<ul>
+<li><p>Soit <span class="math inline">\(\Omega = \{1,2,3,4\}\)</span>. Considérons les événements <span class="math inline">\(A = \{1,4\}\)</span> et <span class="math inline">\(B = \{2,4\}\)</span>. Montrer que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants. On choisit un numéro au hasard.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+<p>Afficher la correction :</p>
 </summary>
-<p>On utilise l’égalité :</p>
-<p><span class="math display">\[P(A \cup B) + P(A \cap B) = P(A) + P(B)\]</span></p>
+<p>On a <span class="math inline">\(A \cap B = \{4\}\)</span>.</p>
+<p>Le choix du numéro étant aléatoire, on est alors en situation d’équiprobabilité. Ainsi <span class="math display">\[
+P(A) = \dfrac{1}{2}, \quad P(B) = \dfrac{1}{2} \quad \text{et} \quad P(A \cap B) = \dfrac{1}{4}.
+\]</span></p>
 <p>Donc</p>
-<p><span class="math display">\[P(A \cap B) = P(A) + P(B) - P(A \cup B) = 0,8 + 0,35 - 0,87 = 0,28\]</span></p>
-<p>Or</p>
-<p><span class="math display">\[P(A) \times P(B) = 0,8 \times 0,35 = 0,28\]</span></p>
-<p>On en déduit que</p>
-<p><span class="math display">\[P(A \cap B) = P(A ) \times P(B)\]</span></p>
-Donc <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.
-</details>
+<p><span class="math display">\[
+P(A \cap B) = P(A)P(B)
+\]</span></p>
+<p>Les événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.</p>
+</details></li>
+<li><p>Reprenons l’exemple précédent en changeant la probabilité. Nous prenons maintenant la probabilité <span class="math inline">\(P\)</span> définie par <span class="math display">\[
+P(\{1\}) = 0,1,\; P(\{2\}) = 0,2,\; P(\{3\}) = 0,3 \; \text{et} \; P(\{4\}) = 0,4.
+\]</span></p>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction :</p>
+</summary>
+<p>On a alors, puisque l’on ne peut pas choisir <span class="math inline">\(1\)</span> et <span class="math inline">\(2\)</span>, où <span class="math inline">\(2\)</span> et <span class="math inline">\(4\)</span>, en même temps <span class="math display">\[
+P(A) = P(\{1\}) + P(\{4\}) = 0.5 \et
+P(B) = P(\{2\}) + P(\{4\}) = 0.6
+\]</span></p>
+<p>Or <span class="math display">\[
+P(A \cap B) = 0.4.
+\]</span></p>
+<p>Ainsi <span class="math display">\[
+P(A \cap B) \neq P(A)P(B)
+\]</span></p>
+<p>Les événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> ne sont pas indépendants. Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> vérifiant <span class="math inline">\(P(A) =0,8\)</span>, <span class="math inline">\(P(B)= 0,35\)</span> et <span class="math inline">\(P(A \cup B) =0,87\)</span>. Montrer que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.<br>
+</p>
+</details></li>
+</ul>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque :</span></p>
+<ul>
+<li>L’indépendance est une notion mathématique (liée à la mesure P) et non toujours physique.</li>
+<li>L’indépendance sera souvent une donnée de l’énoncé. L’expression d’expériences indépendantes indiquera que les événements relatifs à ces expériences sont indépendants. Il y aura ici une indépendance intrinsèque des événements.</li>
+<li>Mais les deux exemples précédents montrent que la notion d’indépendance de deux événements n’est en général pas intrinsèque, mais dépend de la probabilité retenue.</li>
+</ul>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
@@ -772,12 +861,39 @@ On dit que <span class="math inline">\(A\)</span> et <span class="math inline">\
 Démonstration :
 </summary>
 <p>Soit <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements :</p>
-<span class="math display">\[ A \text{ et } B \text{ indépendants } \Longleftrightarrow P(A  \cap B) =P(A) \times P(B) \Longleftrightarrow P(B) = \frac{P(A \cap B)}{P(A)} \Longleftrightarrow P(B) =  P_A(B)\]</span>
+<span class="math display">\[ A \text{ et } B \text{ indépendants } \Longleftrightarrow P(A  \cap B) =P(A) \times P(B) \Longleftrightarrow P(B) = \dfrac{P(A \cap B)}{P(A)} \Longleftrightarrow P(B) =  P_A(B)\]</span>
 </details>
 <div class="bloc rem">
 <p><span class="bloc-titre"><strong>Comprendre la notion d’indépendance :</strong> </span></p>
 <p>La propriété établit qu’il y a indépendance si et seulement si <span class="math inline">\(P(A)=P_B(A)\)</span>.<br>
 C’est-à-dire que la réalisation de l’événement <span class="math inline">\(B\)</span> ne modifie en rien la probabilité de l’événement <span class="math inline">\(A\)</span>.</p>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple <span class="exemp-extra"> </span>
+</div>
+<p>On considère <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements indépendants tel que <span class="math inline">\(P(A)=0,3\)</span> et <span class="math inline">\(P(A \cap B) = 0,1\)</span>.</p>
+<p>Modéliser la situation par un arbre de probabilité.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On a <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> indépendants, donc <span class="math display">\[P(A \cap B) = P(A) \times P(B)\]</span></p>
+<p>D’où <span class="math display">\[P(B) = \dfrac{0,1}{0,3}\]</span></p>
+<p>Donc <span class="math display">\[P(B) =\dfrac13\]</span></p>
+<p>De plus on a <span class="math display">\[P(B)=P_A(B)\]</span></p>
+<p>On déduit l’arbre suivant :</p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/ProbaConditionnelle_arbre5.png" class="img-fluid" style="width:40.0%"></p>
+</div>
+</details>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span><br> On reconnaît une situation d’indépendance dans les arbres semblables à celui ci-dessus. En effet, considérant l’arbre suivant :</p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/ProbaConditionnelle_arbre6.png" class="img-fluid" style="width:40.0%"></p>
+</div>
+<p>On a, puisque <span class="math inline">\(\{A \,;\, \bar{A} \}\)</span> est une partition de l’univers, d’après la formule des probabilités totales <span class="math display">\[P(B) = P(A \cap B) + P(\bar{A} \cap B) = P_A(B) \times P(A) + P_{\bar{A}}(B) \times P(\bar{A}) = ab + (1_a)b = b\]</span> Ainsi <span class="math display">\[P_A(B)=P(B)\]</span> Donc <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.</p>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
@@ -795,6 +911,32 @@ Démonstration :
 <p><span class="math display">\[P(A \cap \bar{B}) =  P(A) - P(A)P(B) = P(A)(1-P(B))=P(A)P(\bar{B})\]</span></p>
 D’où le résultat.
 </details>
+<div class="bloc thm">
+<p><span class="bloc-titre">Propriété : </span><br></p>
+</div>
+<details class="bloc demo">
+<summary>
+Démonstration :
+</summary>
+</details>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple <span class="exemp-extra"> </span>
+</div>
+<p>Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> vérifiant <span class="math inline">\(P(A) = 0,8\)</span>, <span class="math inline">\(P(B) = 0,35\)</span> et <span class="math inline">\(P(A \cup B) = 0,87\)</span>. Montrer que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+On a la formule <span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span>.\ Donc <span class="math display">\[
+P(A \cap B) = P(A) + P(B) - P(A \cup B) = 0,8 + 0,35 - 0,87 = 0,28.
+\]</span> Or <span class="math display">\[
+P(A) \times P(B) = 0,8 \times 0,35 = 0,28.
+\]</span> On en déduit que <span class="math display">\[
+P(A \cap B) = P(A ) \times P(B),
+\]</span> donc <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont indépendants.
+</details>
+</div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
 Dans l’urne ci-dessous, il y a des jetons numérotés de différentes couleurs.</p>
@@ -821,9 +963,9 @@ On considère les évènements suivants :</p>
 Afficher la correction
 </summary>
 <p>Les jetons étant indiscernables au toucher, on est en situation d’équiprobabilité.</p>
-<p><span class="math display">\[P(B)= \frac{4}{9}, \quad P(I) = \frac{6}{9} = \frac{2}{3}, \quad P(B \cap I) = \frac{2}{9}\]</span></p>
+<p><span class="math display">\[P(B)= \dfrac{4}{9}, \quad P(I) = \dfrac{6}{9} = \dfrac{2}{3}, \quad P(B \cap I) = \dfrac{2}{9}\]</span></p>
 <p>Ainsi</p>
-<p><span class="math display">\[P(B) \times P(I) = \frac{4}{9} \times \frac{2}{3} = \frac{8}{27} \neq \frac{2}{9} = P(B \cap I)\]</span></p>
+<p><span class="math display">\[P(B) \times P(I) = \dfrac{4}{9} \times \dfrac{2}{3} = \dfrac{8}{27} \neq \dfrac{2}{9} = P(B \cap I)\]</span></p>
 Donc les événements ne sont pas indépendants.
 </details>
 <ol start="2" type="1">
@@ -835,7 +977,7 @@ Donc les événements ne sont pas indépendants.
 <summary>
 <p>Afficher la correction</p>
 </summary>
-<p><span class="math display">\[P(B) = \frac{4+n}{9+n}, \quad P(I) = \frac{6+n}{9+n}, \quad P(B \cap I) = \frac{2+n}{9+n}\]</span></p>
+<p><span class="math display">\[P(B) = \dfrac{4+n}{9+n}, \quad P(I) = \dfrac{6+n}{9+n}, \quad P(B \cap I) = \dfrac{2+n}{9+n}\]</span></p>
 </details>
 <ol start="2" type="a">
 <li>Déterminer le nombre de jetons à rajouter pour que les événements <span class="math inline">\(I\)</span> et <span class="math inline">\(B\)</span> soient indépendants.</li>
@@ -847,7 +989,7 @@ Donc les événements ne sont pas indépendants.
 <p>Les événements <span class="math inline">\(I\)</span> et <span class="math inline">\(B\)</span> sont indépendants si et seulement si</p>
 <p><span class="math display">\[P(B \cap I) = P(B)  \times P(I)\]</span></p>
 <p>Or</p>
-<p><span class="math display">\[\frac{4+n}{9+n} \times \frac{6+n}{9+n} = \frac{2+n}{9+n} \Longleftrightarrow (4+n)(6+n)=(2+n)(9+n)\]</span></p>
+<p><span class="math display">\[\dfrac{4+n}{9+n} \times \dfrac{6+n}{9+n} = \dfrac{2+n}{9+n} \Longleftrightarrow (4+n)(6+n)=(2+n)(9+n)\]</span></p>
 <p><span class="math display">\[\Longleftrightarrow 24+10n+n^2=18+11n+n^2 \Longleftrightarrow n=6\]</span></p>
 <p>Ainsi, pour que les événements soient indépendants, il faut ajouter <span class="math inline">\(6\)</span> jetons bleus numérotés « 1 ».</p>
 </details></li>
@@ -872,19 +1014,28 @@ Une urne contient deux boules vertes et une boule rouge, indiscernables au touch
 <ol type="1">
 <li>Représenter la situation à l’aide d’un arbre pour deux tirages.</li>
 </ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction
+</summary>
 <div style="text-align: center;">
 <p><img src="../../image/maths/ProbaConditionelle_arbre4.png" class="img-fluid" style="width:40.0%"></p>
 </div>
+</details>
 <ol start="2" type="1">
 <li><p>Déterminer la probabilité de l’événement <span class="math inline">\(A\)</span> « avoir exactement une boule rouge ».</p>
 <details class="bloc cor">
 <summary>
 <p>Afficher la correction</p>
 </summary>
-<p>Pour avoir exactement une boule rouge, on a eu <span class="math inline">\((R_1, V_2)\)</span> ou <span class="math inline">\((V_1, R_2)\)</span>.</p>
-<p><span class="math display">\[A=(R_1 \cap V_2) \cup (V_1 \cap R_2)\]</span></p>
-<p><span class="math display">\[P(A) = P(R_1 \cap V_2) + P(V_1 \cap R_2) = P(R_1)P(V_2) + P(V_1)P(R_2) = 2 P(R) \times P(V) = \frac{4}{9}\]</span></p>
-<p>Donc la probabilité d’avoir exactement une boule rouge est <span class="math inline">\(\frac{4}{9}\)</span>.</p>
+<p>On a une unique boule rouge, si on tire une boule rouge au premier tirage et une boule verte au second, ou une boule verte au premier tirage et une boule rouge au second tirage, ainsi <span class="math display">\[R_{=1} = (R_1 \cap V_2) \cup (V_1 \cap R_2)\]</span> Ainsi <span class="math inline">\(R_{=1}\)</span> est union de deux événements disjoints, donc</p>
+<p><span class="math display">\[\begin{aligned}
+P(R_{=1}) &amp;= P\big((R_1 \cap V_2) \cup (V_1 \cap R_2)\big) \\
+&amp;= P(R_1 \cap V_2) + P(V_1 \cap R_2) \\
+&amp;= P(R_1)\times P(V_2) + P(V_1)\times P(R_2) \\
+&amp;= 2 \times P(R)\,P(V) \\
+&amp;=  \frac{4}{9}
+\end{aligned}\]</span> Ainsi, la probabilité d’avoir exactement une boule rouge est $ $.</p>
 </details></li>
 <li><p>On répète <span class="math inline">\(n\)</span> fois l’expérience :</p>
 <ol type="a">
@@ -894,8 +1045,11 @@ Une urne contient deux boules vertes et une boule rouge, indiscernables au touch
 <summary>
 <p>Afficher la correction</p>
 </summary>
-<p>N’avoir aucune boule rouge signifie n’avoir que des boules vertes :</p>
-<p><span class="math display">\[P(B) = 1 - P(\bar{B}) = 1 - P(V_1 \cap V_2 \cap \dots \cap V_n) = 1 - P(V)^n = 1 - \left(\frac{2}{3}\right)^n\]</span></p>
+<p>Avoir au moins une boule rouge est l’événement contraire de n’avoir aucune boule rouge, c’est-à-dire n’avoir que des boules vertes.\ Ainsi en notant <span class="math inline">\(V_{=n}\)</span> l’événement n’avoir que des boules vertes , on a <span class="math display">\[V_{=n} = V_1 \cap V_2 \cap \dots \cap V_n\]</span> D’où de l’indépendance des événéments où tous les <span class="math inline">\(P(V_i)\)</span> sont égaux à <span class="math inline">\(\frac23\)</span>.</p>
+<p><span class="math display">\[P(V_{=n}) = P\left(V_1 \cap V_2 \cap \dots \cap V_n \right) P(V_1) \times P(V_2) \times \dots \times P(V_n) = (P(V))^n\]</span></p>
+<p>Ainsi <span class="math display">\[
+P(R_{\geqslant 1}) = 1 - P(V_{=n}) = 1 - P(V)^n = 1 - \left( \frac{2}{3}\right)^n.
+\]</span></p>
 </details>
 <ol start="2" type="a">
 <li>Déterminer la probabilité de l’événement <span class="math inline">\(A\)</span> « avoir exactement une boule rouge ».</li>
@@ -904,8 +1058,11 @@ Une urne contient deux boules vertes et une boule rouge, indiscernables au touch
 <summary>
 <p>Afficher la correction</p>
 </summary>
-<p>Chaque position possible du tirage de la boule rouge a la même probabilité :</p>
-<p><span class="math display">\[P(R_{=1}) = n \, P(R) \, P(V)^{n-1} = n \times \frac{1}{3} \times \left(\frac{2}{3}\right)^{n-1} = \frac{n \cdot 2^{n-1}}{3^n}\]</span></p>
+<p>Tous les événements <span class="math inline">\((R_1,V_2,\dots,V_n), (V_1,R_2,V_3,\dots,V_n), \dots, (V_1,V_2,\dots,V_{n-1},R_n)\)</span> ont la même probabilité.\ Par indépendance : <span class="math display">\[
+P(R_1 \cap V_2 \cap \dots \cap V_n) = P(R)\,P(V)^{n-1}.
+\]</span> De même pour chaque autre position de la boule rouge.\ Comme il y a <span class="math inline">\(n\)</span> façons de placer la boule rouge, on a <span class="math display">\[
+P(R_{=1}) = n \, P(R)\,P(V)^{\,n-1} = n \times \frac{1}{3}\left(\frac{2}{3}\right)^{n-1} = \frac{n\,2^{n-1}}{3^n}.
+\]</span></p>
 </details></li>
 </ol>
 </div>
@@ -981,14 +1138,13 @@ Une urne contient deux boules vertes et une boule rouge, indiscernables au touch
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

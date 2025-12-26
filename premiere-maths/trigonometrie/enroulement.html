@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,14 +113,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -129,6 +130,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -162,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -361,7 +363,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -369,7 +371,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -400,6 +402,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -516,6 +519,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -559,48 +568,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Probabilité conditionnelles</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link active">
@@ -635,6 +609,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
@@ -642,6 +657,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -664,6 +685,41 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
   </div>
 </li>
       </ul>
@@ -718,14 +774,18 @@ window.Quarto = {
 <section id="enroulement-de-la-droite" class="level2">
 <h2 class="anchored" data-anchor-id="enroulement-de-la-droite">Enroulement de la droite</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(\Oij\)</span> un repère du plan. <br> On appelle cercle trigonométrique le cercle de rayon <span class="math inline">\(1\)</span> unité et de centre l’origine du repère et muni d’un sens de parcours.<br> On appelle alors sens direct le sens contraire au sens des aiguilles d’une montre et sens indirect l’autre sens.</p>
+<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(\Oij\)</span> un repère du plan.</p>
+<p>On appelle cercle trigonométrique le cercle de rayon <span class="math inline">\(1\)</span> unité et de centre l’origine du repère et muni d’un sens de parcours.</p>
+<p>On appelle alors sens direct le sens contraire au sens des aiguilles d’une montre et sens indirect l’autre sens.</p>
 </div>
 <div class="bloc">
-<p>On considère <span class="math inline">\(\mathscr{C}\)</span> un cercle trigonométrique de centre <span class="math inline">\(I(1;0)\)</span> et <span class="math inline">\(d\)</span> la tangente à <span class="math inline">\(\mathscr{C}\)</span> en <span class="math inline">\(I\)</span>, dont un repère est <span class="math inline">\(\left(I,\ve{j} \right)\)</span>.<br> Cette droite est appelée <strong>axe des réels</strong>.</p>
+<p>On considère <span class="math inline">\(\mathscr{C}\)</span> un cercle trigonométrique de centre <span class="math inline">\(O(O\,;\,0)\)</span> et <span class="math inline">\(d\)</span> la tangente à <span class="math inline">\(\mathscr{C}\)</span> en <span class="math inline">\(I(1\,;\,0)\)</span>. On muni la droite du repère <span class="math inline">\(\left(I,\ve{j} \right)\)</span>.</p>
+<p>Cette droite est appelée axe des réels.</p>
 <div style="text-align:center;">
 <p><img src="../../image/maths/enroulement.png" alt=""></p>
 </div>
-<p>On enroule cette droite autour du cercle. Ainsi, à chaque point <span class="math inline">\(N\)</span> d’abscisse <span class="math inline">\(t\)</span> de la droite réelle <span class="math inline">\(d\)</span> dans le repère <span class="math inline">\(\left(I ; \ve{j} \right)\)</span> correspond <strong>un unique point</strong> <span class="math inline">\(M\)</span> du cercle <span class="math inline">\(\mathscr{C}\)</span>.<br> Un tel point <span class="math inline">\(M\)</span> est alors appelé image de <span class="math inline">\(t\)</span> sur <span class="math inline">\(\mathscr{C}\)</span></p>
+<p>On enroule cette droite autour du cercle. Ainsi, à chaque point <span class="math inline">\(N\)</span> d’abscisse <span class="math inline">\(t\)</span> de la droite réelle <span class="math inline">\(d\)</span>, muni du repère <span class="math inline">\(\left(I ; \ve{j} \right)\)</span>, correspond un point <span class="math inline">\(M\)</span> unique du cercle <span class="math inline">\(\mathscr{C}\)</span>.</p>
+<p>Un tel point <span class="math inline">\(M\)</span> est alors appelé image de <span class="math inline">\(t\)</span> sur <span class="math inline">\(\mathscr{C}\)</span></p>
 <ul>
 <li>dans le sens direct si <span class="math inline">\(t &gt; 0\)</span>.</li>
 <li>dans le sens indirect si <span class="math inline">\(t &lt; 0\)</span>.</li>
@@ -734,26 +794,71 @@ window.Quarto = {
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span><br></p>
 <ul>
-<li>L’arc <span class="math inline">\(\wideparen{IJ}\)</span>, dans le sens direct, fait un quart de cercle. La circonférence du cercle trigonométrique étant de <span class="math inline">\(2 \pi\)</span>, l’arc <span class="math inline">\(\wideparen{IJ}\)</span> fait <span class="math inline">\(\frac{\pi}{2}\)</span> unités. Donc <span class="math inline">\(J\)</span> est l’image de <span class="math inline">\(\frac{\pi}{2}\)</span>.<br>
-De même, le symétrique du point <span class="math inline">\(I\)</span> par rapport au centre du cercle est l’image de <span class="math inline">\(\pi\)</span>.</li>
-<li>Dans le sens indirect, l’arc <span class="math inline">\(\wideparen{IJ}\)</span> ayant une mesure de <span class="math inline">\(\frac{3 \pi}{2}\)</span>, il est l’image de <span class="math inline">\(-\frac{3\pi}{2}\)</span>.<br> Le symétrique de <span class="math inline">\(I\)</span> par rapport à l’origine est alors l’image de <span class="math inline">\(- \pi\)</span>.</li>
+<li><p>L’arc <span class="math inline">\(\wideparen{IJ}\)</span>, dans le sens direct, fait un quart de cercle. La circonférence du cercle trigonométrique étant de <span class="math inline">\(2 \pi\)</span>, l’arc <span class="math inline">\(\wideparen{IJ}\)</span> a pour mesure <span class="math inline">\(\dfrac{\pi}{2}\)</span> unités. Donc <span class="math inline">\(J\)</span> est l’image de <span class="math inline">\(\dfrac{\pi}{2}\)</span>.</p></li>
+<li><p>Le symétrique du point <span class="math inline">\(I\)</span> par rapport au centre du cercle est l’image de <span class="math inline">\(\pi\)</span>.</p></li>
+<li><p>Dans le sens indirect, l’arc <span class="math inline">\(\wideparen{IJ}\)</span> ayant une mesure de <span class="math inline">\(\dfrac{3 \pi}{2}\)</span>, il est l’image de <span class="math inline">\(-\dfrac{3\pi}{2}\)</span>.</p>
+<p>Le symétrique de <span class="math inline">\(I\)</span> par rapport à l’origine est alors l’image de <span class="math inline">\(- \pi\)</span>.</p></li>
 </ul>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br> Soient <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> deux nombres réels. Alors, <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> ont la même image sur le cercle trigonométrique si et seulement s’il existe un entier relatif <span class="math inline">\(k\)</span> tel que <span class="math inline">\(y - x = 2k \pi\)</span>.<br> On dit alors que <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> sont égaux modulo <span class="math inline">\(2 \pi\)</span> et on note <span class="math inline">\(x  = y \,[2\pi]\)</span>.</p>
+<p><span class="bloc-titre">Théorème : </span><br> Soient <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> deux nombres réels. Alors, <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> ont la même image sur le cercle trigonométrique si et seulement s’il existe un entier relatif <span class="math inline">\(k\)</span> tel que <span class="math inline">\(y - x = 2k \pi\)</span>.</p>
+<p>On dit alors que <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> sont égaux modulo <span class="math inline">\(2 \pi\)</span> et on note <span class="math inline">\(x  = y \,[2\pi]\)</span>.</p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> ont pour image le même point <span class="math inline">\(M\)</span> si et seulement si, de <span class="math inline">\(t\)</span> à <span class="math inline">\(t'\)</span>, l’enroulement de la droite réelle sur le cercle trigonométrique correspond à un nombre entier de tours.<br> Le périmètre du cercle étant <span class="math inline">\(2\pi\)</span>, alors <span class="math inline">\(x = y + 2k\pi\)</span>, où <span class="math inline">\(k \in \Z\)</span>. (Si <span class="math inline">\(k &gt; 0\)</span>, les tours sont dans le sens direct, sinon dans le sens indirect.)
+<p><span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> ont pour image le même point <span class="math inline">\(M\)</span> si et seulement si, de <span class="math inline">\(t\)</span> à <span class="math inline">\(t'\)</span>, l’enroulement de la droite réelle sur le cercle trigonométrique correspond à un nombre entier de tours.</p>
+Le périmètre du cercle étant <span class="math inline">\(2\pi\)</span>, alors <span class="math inline">\(x = y + 2k\pi\)</span>, où <span class="math inline">\(k \in \Z\)</span>. (Si <span class="math inline">\(k &gt; 0\)</span>, les tours sont dans le sens direct, sinon dans le sens indirect.
 </details>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> - Tout point du cercle trigonométrique est l’image d’une infinité de réels. - Dans la propriété et la démonstration précédentes : <span class="math inline">\(\abs{k}\)</span> correspond au nombre de tours.</p>
+<p><span class="bloc-titre">Remarque : </span></p>
+<ul>
+<li>Tout point du cercle trigonométrique est l’image d’une infinité de réels.</li>
+<li>Dans la propriété et la démonstration précédentes : <span class="math inline">\(\abs{k}\)</span> correspond au nombre de tours</li>
+</ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> 1. Le point <span class="math inline">\(J\)</span> est l’image de <span class="math inline">\(\frac{\pi}{2}\)</span>, mais aussi de <span class="math inline">\(\frac{5\pi}{2}\)</span>, <span class="math inline">\(\frac{9\pi}{2}\)</span>… 2. <span class="math inline">\(\frac{7\pi}{11}\)</span> et <span class="math inline">\(\frac{51\pi}{11}\)</span> ont la même image.<br>
-En effet, <span class="math inline">\(\frac{7\pi}{11}-\frac{51\pi}{11} = -4\pi = 2 \times (-2)\pi\)</span>. 3. Tous les réels ayant la même image que <span class="math inline">\(\frac{7}{3} \pi\)</span> sur le cercle trigonométrique sont les réels <span class="math inline">\(\frac{7}{3} \pi + 2k \pi\)</span>, <span class="math inline">\(k \in \Z\)</span>.</p>
+<p><span class="bloc-titre">Exemple : </span></p>
+<ol type="1">
+<li>Montrer que <span class="math inline">\(\dfrac{7\pi}{11}\)</span> et <span class="math inline">\(\dfrac{51\pi}{11}\)</span> ont la même image sur le cercle trigonométrique.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+On calcule la différence entre les deux mesures : <span class="math display">\[\dfrac{51\pi}{11} - \dfrac{7\pi}{11} = \dfrac{44\pi}{11} = 4\pi = 2 \times 2\pi\]</span> La différence est un multiple de <span class="math inline">\(2\pi\)</span>, par conséquent, les deux réels ont la même image sur le cercle.
+</details>
+<ol start="2" type="1">
+<li>Déterminer l’ensemble des réels qui ont pour image <span class="math inline">\(\dfrac{7\pi}{11}\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+Tous les réels ayant la même image que <span class="math inline">\(\dfrac{7}{11} \pi\)</span> sur le cercle trigonométrique sont les réels de la forme : <span class="math display">\[\dfrac{7}{11} \pi + 2k \pi, \quad k \in \mathbb{Z}\]</span>
+</details>
+</div>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple : </span></p>
+<p>Sur le cercle trigonométrique on a placé <span class="math inline">\(A\)</span> image du réel <span class="math inline">\(\dfrac{\pi}{7}\)</span>.</p>
+<p>Sans justifier, placer les points <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(D\)</span> et <span class="math inline">\(E\)</span> images des réels <span class="math display">\[-\dfrac{\pi}{7}\quad ; \quad \dfrac{8\pi}{7}\quad ; \quad \dfrac{33\pi}{7}\quad ; \quad \dfrac{9\pi}{14}\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<div style="text-align:center;">
+<p><img src="../../image/maths/Trigonometrie_cercle_points.png" style="width: 35%;"></p>
+</div>
+<ul>
+<li><p><span class="math inline">\(B\)</span> se construit par symétrie de <span class="math inline">\(A\)</span> par rapport à l’axe des abscisse.</p></li>
+<li><p><span class="math inline">\(\dfrac{8\pi}{7} =\pi+ \dfrac{\pi}{7}\)</span>.</p>
+<p>Donc <span class="math inline">\(C\)</span> se construit par symétrie de <span class="math inline">\(A\)</span> par rapport à l’origine.</p></li>
+<li><p><span class="math inline">\(\dfrac{33\pi}{7} = \dfrac{5\pi + 28\pi}{7} = \dfrac{5\pi}{7} + 2 \pi\)</span>.</p>
+<p>Donc <span class="math inline">\(D\)</span> se construit en reportant 5 fois la mesure de l’arc <span class="math inline">\(IA\)</span>, à partir de <span class="math inline">\(I\)</span>.</p></li>
+<li><p><span class="math inline">\(\dfrac{9\pi}{14} = \dfrac{\pi}{7} + \dfrac{\pi}{2}\)</span>. Donc <span class="math inline">\(E\)</span> est l’image de <span class="math inline">\(A\)</span> par une rotation de <span class="math inline">\(90^\circ\)</span> de centre <span class="math inline">\(O\)</span>.</p></li>
+</ul>
+</details>
 </div>
 </section>
 <section id="mesure-en-radian" class="level2">
@@ -761,56 +866,69 @@ En effet, <span class="math inline">\(\frac{7\pi}{11}-\frac{51\pi}{11} = -4\pi =
 <section id="définition" class="level3">
 <h3 class="anchored" data-anchor-id="définition">Définition</h3>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> On considère le cercle trigonométrique et <span class="math inline">\(M\)</span> un point de ce cercle trigonométrique. <br> Tout nombre <span class="math inline">\(a\)</span> dont l’image sur le cercle est <span class="math inline">\(M\)</span> est appelé une mesure en radian de l’angle <span class="math inline">\(\widehat{IOM}\)</span>.</p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>On considère le cercle trigonométrique et <span class="math inline">\(M\)</span> un point de ce cercle trigonométrique.</p>
+<p>Tout nombre <span class="math inline">\(a\)</span> dont l’image sur le cercle est <span class="math inline">\(M\)</span> est appelé une mesure en radian de l’angle <span class="math inline">\(\widehat{IOM}\)</span>.</p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> 1. Le symbole du radian est <em>rad</em>.<br> 2. Un même angle admet une infinité de mesures en radian différentes, elles sont alors toutes égales modulo <span class="math inline">\(2 \pi\)</span>.</p>
+<p><span class="bloc-titre">Remarque : </span> 1. Le symbole du radian est <em>rad</em>.<br> 2. Un même angle admet une infinité de mesures en radian différentes, elles sont alors toutes égales modulo <span class="math inline">\(2 \pi\)</span>.</p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> En appliquant les règles d’opérations sur les angles, comme pour les degrés, pour deux points <span class="math inline">\(M (a)\)</span> et <span class="math inline">\(N (b)\)</span> du cercle trigonométrique, une mesure en radian de l’angle <span class="math inline">\(\widehat{MON}\)</span> est<br>
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>En appliquant les règles d’opérations sur les angles, comme pour les degrés, pour deux points <span class="math inline">\(M (a)\)</span> et <span class="math inline">\(N (b)\)</span> du cercle trigonométrique, une mesure en radian de l’angle <span class="math inline">\(\widehat{MON}\)</span> est<br>
 <span class="math display">\[\widehat{MON} = \widehat{ION} - \widehat{IOM} = b - a \, [2\pi]\]</span></p>
 </div>
 <p><strong>Cas du <span class="math inline">\(1\; rad\)</span> :</strong> <br> On considère un cercle de rayon <span class="math inline">\(R\)</span>, et un arc de cercle <span class="math inline">\(AB\)</span> de longueur <span class="math inline">\(R\)</span>. D’après la définition, l’angle au centre qui intercepte cet arc de cercle a pour mesure <span class="math inline">\(1~rad\)</span>.<br> La mesure du segment <span class="math inline">\([AB]\)</span> est inférieure à <span class="math inline">\(R\)</span>, ainsi un angle dont la mesure est <span class="math inline">\(1\,rad\)</span> est plus petit qu’un angle dont la mesure est de <span class="math inline">\(60^{\circ}\)</span>.<br> On montre que <span class="math inline">\(1~rad \approx 57^{\circ}17'44''\)</span>.</p>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> La mesure principale d’un angle en radian est la mesure qui, parmi toutes les autres, se situe dans l’intervalle <span class="math inline">\(]-\pi \, ; \, \pi]\)</span>.</p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>La mesure principale d’un angle en radian est la mesure qui, parmi toutes les autres, se situe dans l’intervalle <span class="math inline">\(]-\pi \, ; \, \pi]\)</span>.</p>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>L’intervalle <span class="math inline">\(]-\pi \, ; \, \pi]\)</span> est privilégié pour la mesure principale car il permet de parcourir l’ensemble du cercle trigonométrique une unique fois en restant, en valeur absolue, au plus proche de l’origine <span class="math inline">\(0\)</span>.</p>
+<ul>
+<li>On exclut <span class="math inline">\(-\pi\)</span> et on inclut <span class="math inline">\(\pi\)</span> car ces deux valeurs correspondent au même point du cercle (le point diamétralement opposé à <span class="math inline">\(I\)</span>). En garder une seule assure l’unicité de la mesure principale.</li>
+<li>Les valeurs positives correspondent au demi-cercle supérieur (sens direct).</li>
+<li>Les valeurs négatives correspondent au demi-cercle inférieur (sens indirect).</li>
+</ul>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br></p>
 <ul>
-<li>Sur un petit angle <span class="math inline">\(\frac{-57}{7} \pi\)</span><br> Méthode 1 : pas à pas :<br>
+<li>Sur un petit angle <span class="math inline">\(\dfrac{-57}{7} \pi\)</span><br> Méthode 1 : pas à pas :<br>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<span class="math inline">\(\frac{-57}{7} \pi &lt; -\pi\)</span> (on n’a donc pas assez de tours …)
+<span class="math inline">\(\dfrac{-57}{7} \pi &lt; -\pi\)</span> (on n’a donc pas assez de tours …)
 <ul>
-<li><span class="math inline">\(\frac{-57}{7} \pi + 2\pi = \frac{-57+14}{7}\pi = \frac{-43}{7} \pi\)</span> et <span class="math inline">\(\frac{-43}{7} \pi &lt; -\pi\)</span></li>
-<li><span class="math inline">\(\frac{-43}{7} \pi + 2\pi = \frac{-43+14}{7}\pi = \frac{-29}{7} \pi\)</span> et <span class="math inline">\(\frac{-29}{7} \pi &lt; -\pi\)</span></li>
-<li><span class="math inline">\(\frac{-29}{7} \pi + 2\pi = \frac{-29+14}{7}\pi = \frac{-15}{7} \pi\)</span> et <span class="math inline">\(\frac{-15}{7} \pi &lt; -\pi\)</span></li>
-<li><span class="math inline">\(\frac{-15}{7} \pi + 2\pi = \frac{-15+14}{7}\pi = \frac{-1}{7} \pi\)</span> et <span class="math inline">\(- \pi &lt; \frac{-1}{7} \pi \leqslant  \pi\)</span><br>
-Ainsi la mesure principale de l’angle est <span class="math inline">\(\frac{-\pi}{7}\)</span>.<br></li>
+<li><span class="math inline">\(\dfrac{-57}{7} \pi + 2\pi = \dfrac{-57+14}{7}\pi = \dfrac{-43}{7} \pi\)</span> et <span class="math inline">\(\dfrac{-43}{7} \pi &lt; -\pi\)</span></li>
+<li><span class="math inline">\(\dfrac{-43}{7} \pi + 2\pi = \dfrac{-43+14}{7}\pi = \dfrac{-29}{7} \pi\)</span> et <span class="math inline">\(\dfrac{-29}{7} \pi &lt; -\pi\)</span></li>
+<li><span class="math inline">\(\dfrac{-29}{7} \pi + 2\pi = \dfrac{-29+14}{7}\pi = \dfrac{-15}{7} \pi\)</span> et <span class="math inline">\(\dfrac{-15}{7} \pi &lt; -\pi\)</span></li>
+<li><span class="math inline">\(\dfrac{-15}{7} \pi + 2\pi = \dfrac{-15+14}{7}\pi = \dfrac{-1}{7} \pi\)</span> et <span class="math inline">\(- \pi &lt; \dfrac{-1}{7} \pi \leqslant  \pi\)</span><br>
+Ainsi la mesure principale de l’angle est <span class="math inline">\(\dfrac{-\pi}{7}\)</span>.<br></li>
 </ul>
 </details></li>
-<li>Sur un angle « grand » : <span class="math inline">\(\frac{192}{7} \pi\)</span> <br> Méthode 2 : On cherche le nombre de tours à rajouter ou à retirer.<br>
+<li>Sur un angle « grand » : <span class="math inline">\(\dfrac{192}{7} \pi\)</span> <br> Méthode 2 : On cherche le nombre de tours à rajouter ou à retirer.<br>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
 Pour tout <span class="math inline">\(k \in \Z\)</span>, <span class="math display">\[
 \begin{aligned}
--\pi &lt;\frac{192}{7} \pi +2k\pi \leqslant \pi &amp;\Longleftrightarrow -\pi - \frac{192}{7} \pi  \leqslant  2k\pi \leqslant \pi - \frac{192}{7} \pi \\
-&amp;\Longleftrightarrow - \frac{199}{7} \pi  \leqslant  2k\pi \leqslant - \frac{185}{7} \pi \\
-&amp;\Longleftrightarrow - \frac{199}{14} \leqslant  k \leqslant - \frac{185}{14}\\
+-\pi &lt;\dfrac{192}{7} \pi +2k\pi \leqslant \pi &amp;\Longleftrightarrow -\pi - \dfrac{192}{7} \pi  \leqslant  2k\pi \leqslant \pi - \dfrac{192}{7} \pi \\
+&amp;\Longleftrightarrow - \dfrac{199}{7} \pi  \leqslant  2k\pi \leqslant - \dfrac{185}{7} \pi \\
+&amp;\Longleftrightarrow - \dfrac{199}{14} \leqslant  k \leqslant - \dfrac{185}{14}\\
 &amp;\Longleftrightarrow -14,2 &lt; k &lt;-13,2
 \end{aligned}
-\]</span> On déduit donc que <span class="math inline">\(k=-14\)</span>.<br> <span class="math inline">\(\frac{192}{7} \pi - 14 \times 2 \pi = \frac{192}{7} \pi - 28 \pi = \frac{192}{7} \pi - \frac{196}{7} \pi = - \frac{4}{7} \pi\)</span>.<br> Cette dernière valeur est la mesure principale.<br>
+\]</span> On déduit donc que <span class="math inline">\(k=-14\)</span>.<br> <span class="math inline">\(\dfrac{192}{7} \pi - 14 \times 2 \pi = \dfrac{192}{7} \pi - 28 \pi = \dfrac{192}{7} \pi - \dfrac{196}{7} \pi = - \dfrac{4}{7} \pi\)</span>.<br> Cette dernière valeur est la mesure principale.<br>
 </details></li>
 <li>Méthode 3 : On cherche un multiple.<br>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-On a, pour tout <span class="math inline">\(k \in \Z\)</span>, <span class="math inline">\(\frac{192}{7} \pi - 2k\pi = \frac{192\pi - 14k\pi}{7}\)</span>.<br> On cherche dans la table de <span class="math inline">\(14\)</span> le multiple le plus proche de <span class="math inline">\(192\)</span>.<br> <span class="math inline">\(13 \times 14 = 182\)</span> et <span class="math inline">\(14 \times 14 = 196\)</span>, le multiple le plus proche est donc <span class="math inline">\(196\)</span>.<br> Ainsi on prend <span class="math inline">\(k=14\)</span>.
+On a, pour tout <span class="math inline">\(k \in \Z\)</span>, <span class="math inline">\(\dfrac{192}{7} \pi - 2k\pi = \dfrac{192\pi - 14k\pi}{7}\)</span>.<br> On cherche dans la table de <span class="math inline">\(14\)</span> le multiple le plus proche de <span class="math inline">\(192\)</span>.<br> <span class="math inline">\(13 \times 14 = 182\)</span> et <span class="math inline">\(14 \times 14 = 196\)</span>, le multiple le plus proche est donc <span class="math inline">\(196\)</span>.<br> Ainsi on prend <span class="math inline">\(k=14\)</span>.
 </details></li>
 </ul>
 </div>
@@ -819,16 +937,50 @@ On a, pour tout <span class="math inline">\(k \in \Z\)</span>, <span class="math
 <section id="lien-radian---degré" class="level3">
 <h3 class="anchored" data-anchor-id="lien-radian---degré">Lien radian - degré</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br> Les angles en radian et en degré sont proportionnels.</p>
+<p><span class="bloc-titre">Théorème : </span><br> Les mesures d’un angle en radians et en degrés sont proportionnelles</p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-Soit le cercle trigonométrique, et <span class="math inline">\(M\)</span> image du réel <span class="math inline">\(\alpha\)</span>, alors <span class="math inline">\(\widehat{IOM}\)</span> a pour mesure en radian <span class="math inline">\(\alpha\)</span>.<br> Soit <span class="math inline">\(a\)</span> la mesure en degré de cet angle, alors <span class="math display">\[a= \frac{360 \times \alpha}{2\pi}.\]</span>
+<p>La circonférence du cercle trigonométrique est <span class="math inline">\(2\pi\)</span>.</p>
+<p>Par convention, un tour complet correspond à <span class="math inline">\(360^{\circ}\)</span>.</p>
+<p>La mesure d’un angle étant proportionnelle à la longueur de l’arc intercepté, on en déduit que les mesures en degrés (<span class="math inline">\(D\)</span>) et en radians (<span class="math inline">\(\alpha\)</span>) sont proportionnelles.</p>
+<div id="tbl-conversion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-conversion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Tableau de proportionnalité entre degrés et radians
+</figcaption>
+<div aria-describedby="tbl-conversion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Angle</th>
+<th style="text-align: center;">Demi-tour</th>
+<th style="text-align: center;">Mesure quelconque</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Degrés</strong></td>
+<td style="text-align: center;"><span class="math inline">\(180\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Radians</strong></td>
+<td style="text-align: center;"><span class="math inline">\(\pi\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\alpha\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>D’après le produit en croix, on obtient la relation : <span class="math display">\[180 \times \alpha = \pi \times D\]</span></p>
+<p>Ce qui permet d’établir les formules de conversion : <span class="math display">\[\alpha = \dfrac{D \times \pi}{180} \quad \text{et} \quad D = \dfrac{\alpha \times 180}{\pi}\]</span></p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> - À un angle de <span class="math inline">\(60^{\circ}\)</span> correspond un angle de <span class="math inline">\(\frac{60 \times 2 \pi}{360} = \frac{\pi}{3}~rad\)</span>.<br>
+<p><span class="bloc-titre">Exemple : </span><br> - À un angle de <span class="math inline">\(60^{\circ}\)</span> correspond un angle de <span class="math inline">\(\dfrac{60 \times 2 \pi}{360} = \dfrac{\pi}{3}~rad\)</span>.<br>
 - À un angle de <span class="math inline">\(\dfrac{11 \pi}{8}~rad\)</span> correspond un angle de <span class="math inline">\(\dfrac{\dfrac{11 \pi}{8} \times 360}{2 \pi} = 247,5^{\circ}\)</span>.</p>
 </div>
 <div class="bloc">
@@ -870,6 +1022,15 @@ Soit le cercle trigonométrique, et <span class="math inline">\(M\)</span> image
 </tbody>
 </table>
 </div>
+<div class="bloc thm">
+<p><span class="bloc-titre">Propriété : </span><br> Dans le cercle trigonométrique, la longueur de l’arc de cercle intercepté est égale à la mesure de l’angle au centre en radians.</p>
+</div>
+<details class="bloc demo">
+<summary>
+Démonstration :
+</summary>
+<p>La longueur d’un arc de cercle est proportionnelle à la mesure de l’angle au centre qui l’intercepte. Dans un cercle de rayon <span class="math inline">\(R=1\)</span>, le périmètre complet mesure <span class="math inline">\(2\pi\)</span> et correspond à un angle au centre de <span class="math inline">\(2\pi\)</span> radians. Soit <span class="math inline">\(L\)</span> la longueur d’un arc correspondant à un angle <span class="math inline">\(\alpha\)</span> en radians. On a le rapport de proportionnalité suivant : <span class="math display">\[\dfrac{L}{\alpha} = \dfrac{2\pi}{2\pi} = 1\]</span> On en déduit immédiatement que <span class="math inline">\(L = \alpha\)</span>. La longueur de l’arc est donc égale à la mesure de l’angle en radians.</p>
+</details>
 <div class="nav-pages">
 <p><a class="next" href="cosinus_sinus.html">➡️</a></p>
 </div>
@@ -943,14 +1104,13 @@ Soit le cercle trigonométrique, et <span class="math inline">\(M\)</span> image
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

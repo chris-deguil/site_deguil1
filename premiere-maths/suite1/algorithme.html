@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -68,19 +68,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -149,14 +148,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -164,6 +165,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -203,7 +205,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -402,7 +404,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -410,7 +412,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -441,6 +443,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -557,6 +560,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -601,47 +610,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Probabilité conditionnelles</span></a>
+ <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
@@ -676,6 +650,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
@@ -683,6 +698,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -705,6 +726,41 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
   </div>
 </li>
       </ul>
@@ -801,23 +857,24 @@ u_{n+1} = u_n - n + 2 \quad \text{pour tout } n \in \mathbb{N}.
 </table>
 <p>Le programme en Python donne :</p>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme(n):</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme(n):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    S <span class="op">=</span> u</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> u <span class="op">-</span> (i<span class="op">-</span><span class="dv">1</span>) <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> u <span class="op">-</span> i <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        S <span class="op">=</span> S <span class="op">+</span> u</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> S</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> S</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="exo-wrap">
   <div class="editor-shell" id="exo1">
     <div class="bar-top"><span class="cell-num">Somme des termes</span></div>
     <textarea id="code">def somme(n):
+def somme(n):
     n = 0
     u = 3
     S = u
-    for i in range(1, n + 1):
-        u = u - (i-1) + 2
+    for i in range(1, n+1):
+        u = u - i + 2
         S = S + u
     return S
 
@@ -837,14 +894,14 @@ print(somme(6))</textarea>
 </section>
 <section id="problème-de-seuil" class="level2">
 <h2 class="anchored" data-anchor-id="problème-de-seuil">Problème de seuil</h2>
-<p>On considère une suite <span class="math inline">\(u_n\)</span>.<br>
-Un problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de <span class="math inline">\(u_n\)</span>.</p>
+<p>On considère une suite <span class="math inline">\(u_n\)</span>.</p>
+<p>Un problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de <span class="math inline">\(u_n\)</span>.</p>
 <div class="bloc ex">
-<p>Nous considérons la suite <span class="math inline">\(u_n\)</span> définie dans la partie précédente.<br>
-Les termes de <span class="math inline">\(u_n\)</span> semblent décroître de plus en plus rapidement à partir de <span class="math inline">\(n = 3\)</span>.<br>
-On se demande si la suite <span class="math inline">\(u_n\)</span> peut atteindre une valeur aussi basse que souhaitée.</p>
-<p>Étant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.<br>
-Dans le cas présent, nous recherchons le plus petit entier <span class="math inline">\(n \in \mathbb{N}\)</span> tel que <span class="math inline">\(u_n \leq -750\)</span>.</p>
+<p>Nous considérons la suite <span class="math inline">\(u_n\)</span> définie dans la partie précédente.</p>
+<p>Les termes de <span class="math inline">\(u_n\)</span> semblent décroître de plus en plus rapidement à partir de <span class="math inline">\(n = 3\)</span>.</p>
+<p>On se demande si la suite <span class="math inline">\(u_n\)</span> peut atteindre une valeur aussi basse que souhaitée.</p>
+<p>Étant donné que le nombre d’étapes requises est inconnu à l’avance, on utilise forcément une boucle conditionnelle.</p>
+<p>Dans le cas présent, nous recherchons le plus petit entier <span class="math inline">\(n \in \mathbb{N}\)</span> tel que <span class="math inline">\(u_n \leq -750\)</span>.</p>
 <p>Si nous exécutions cet algorithme à la main, nous écririons :</p>
 <table class="caption-top table">
 <thead>
@@ -874,17 +931,18 @@ Dans le cas présent, nous recherchons le plus petit entier <span class="math in
 </table>
 <p>La valeur recherchée et affichée serait bien 42. En Python, cet algorithme s’écrit :</p>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seuil_u(seuil):</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seuil_u(seuil):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> u <span class="op">&gt;</span> seuil:</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> u <span class="op">-</span> n <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> n <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(u, n)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(u, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="exo-wrap">
   <div class="editor-shell" id="exo2">
     <div class="bar-top"><span class="cell-num">Recherche de seuil</span></div>
     <textarea id="code">def seuil_u(seuil):
+def seuil_u(seuil):
     n = 0
     u = 3
     while u &gt; seuil:
@@ -892,7 +950,8 @@ Dans le cas présent, nous recherchons le plus petit entier <span class="math in
         n = n + 1
     print(u, n)
 
-seuil_u(-750)</textarea>
+seuil_u(-750
+</textarea>
     <div class="output" id="out"><pre></pre></div>
     <div class="toolbar">
       <button class="btn" id="run" disabled=""></button>
@@ -905,7 +964,7 @@ seuil_u(-750)</textarea>
   </div>
 </div>
 <div class="nav-pages">
-<p><a class="prev" href="limites.html">⬅️</a></p>
+<p><a class="prev" href="limites.html">⬅️</a> <a class="next" href="bilan.html">➡️</a></p>
 </div>
 
 
@@ -976,14 +1035,13 @@ seuil_u(-750)</textarea>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

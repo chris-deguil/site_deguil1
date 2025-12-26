@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,14 +113,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -129,6 +130,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -162,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -361,7 +363,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -369,7 +371,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -388,7 +390,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Probabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Probabilité conditionnelles : Définition et représentations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/rappels.html">Probabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Probabilité conditionnelles : Définition et représentations</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -400,6 +402,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -516,6 +519,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -559,48 +568,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Probabilité conditionnelles</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
@@ -635,6 +609,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
@@ -642,6 +657,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -668,6 +689,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -688,7 +744,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Probabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Probabilité conditionnelles : Définition et représentations</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/rappels.html">Probabilité conditionnelles</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/probaCond/definition.html">Probabilité conditionnelles : Définition et représentations</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Probabilité conditionnelles : Définition et représentations</h1>
 </div>
@@ -715,27 +771,46 @@ window.Quarto = {
 <section id="notion-de-probabilité-conditionnelle" class="level2">
 <h2 class="anchored" data-anchor-id="notion-de-probabilité-conditionnelle">Notion de probabilité conditionnelle</h2>
 <div class="bloc rem">
-<p>La notion de probabilité conditionnelle intervient quand pendant le déroulement d’une expérience aléatoire, une information est fournie modifiant ainsi la probabilité d’un évènement.% (La probabilité cherchée ne dépend pas que de l’univers de départ)</p>
-<p>On considère une expérience aléatoire dont l’univers associé est <span class="math inline">\(\Omega\)</span> que l’on muni de la loi de probabilité <span class="math inline">\(p\)</span></p>
+<p>La notion de probabilité conditionnelle intervient quand pendant le déroulement d’une expérience aléatoire, une information est fournie modifiant ainsi la probabilité d’un événement.</p>
 </div>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition :</span><br>
-Soit <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux évènements d’un même univers <span class="math inline">\(\Omega\)</span> tel que <span class="math inline">\(p(A)\ne 0\)</span>.<br>
-On appelle probabilité conditionnelle de l’évènement <span class="math inline">\(B\)</span> sachant que l’évènement <span class="math inline">\(A\)</span> est réalisé, et on note <span class="math inline">\(p_A(B)\)</span> ou <span class="math inline">\(p(B|A)\)</span>, le nombre :<br>
-<span class="math display">\[ p_A(B)= \frac{p\left(A \cap B \right)}{p(A)} \]</span> On lit <span class="math inline">\(p\)</span> de <span class="math inline">\(B\)</span> sachant <span class="math inline">\(A\)</span> .</p>
+Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements d’un même univers tel que <span class="math inline">\(P(A)\ne 0\)</span>.</p>
+<p>La probabilité conditionnelle de l’événement <span class="math inline">\(B\)</span> sachant que l’événement <span class="math inline">\(A\)</span> est réalisé se note <span class="math inline">\(P_A(B)\)</span> ou <span class="math inline">\(P(B|A)\)</span> et on a : <span class="math display">\[P_A(B)= \dfrac{P\left(A \cap B \right)}{P(A)}\]</span></p>
+<p>On lit <span class="math inline">\(P\)</span> de <span class="math inline">\(B\)</span> sachant <span class="math inline">\(A\)</span> .</p>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span><br> Le contenu intuitif de cette définition est conforme au nom donné. On est alors amené à calculer la probabilité de <span class="math inline">\(B\)</span> dans un univers restreint , celui où <span class="math inline">\(A\)</span> est réalisé.</p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
 Dans une classe, il y a <span class="math inline">\(35\)</span> élèves, parmi ces élèves il y a <span class="math inline">\(17\)</span> garçons dont <span class="math inline">\(8\)</span> externes.<br>
 On note <span class="math inline">\(G\)</span> l’événement l’élève est un garçon et <span class="math inline">\(E\)</span> l’événement l’élève est externe .<br>
-Ainsi <span class="math inline">\(P(G) = \frac{17}{35}\)</span> et <span class="math inline">\(P_G(E) = \frac{8}{17}\)</span>.<br>
-En effet, la première probabilité, l’univers est l’ensemble des élèves de la classe alors que dans la deuxième l’univers est l’ensemble des garçons.</p>
+Ainsi $<span class="math inline">\(P(G) = \dfrac{17}{35}\)</span> et <span class="math inline">\(P_G(E) = \dfrac{8}{17}\)</span>.$ En effet, la première probabilité, l’univers est l’ensemble des élèves de la classe alors que dans la deuxième l’univers est l’ensemble des garçons.</p>
+</div>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple :</span><br>
+On considère une urne contenant <span class="math inline">\(r\)</span> boules rouges et <span class="math inline">\(v\)</span> boules vertes. On pioche successivement et sans remise deux boules de l’urne, au hasard. Calculer la probabilité que la deuxième boule soit verte lorsque la première boule tirée est verte.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On considère les événements suivants :</p>
+<ul>
+<li><span class="math inline">\(V_1\)</span> : la première boule tirée est verte ;</li>
+<li><span class="math inline">\(V_2\)</span> : la deuxième boule tirée est verte.</li>
+</ul>
+Le tirage étant aléatoire et les boules étant indiscernables on est en situation d’équiprobabilité (dit aussi probabilité uniforme).\ Ainsi <span class="math display">\[P(V_1) = \dfrac{v}{r+v} \et P(V_1  \cap V_2) = \dfrac{v(v-1)}{v+r-1}\]</span> Ainsi <span class="math display">\[P_{V_1}(V_2) = \dfrac{P(V_1 \cap V_2)}{P(V_1)}=  \dfrac{v(v-1)}{v+r-1} \times \dfrac{(v+r}{v} = \dfrac{v-1}{v+r-1}\]</span>
+</details>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span><br> De la définition et de son interprétation, on aurait pu effectuer le calcul d’une autre façon.\ Après le premier tirage , il ne reste que <span class="math inline">\(v-1\)</span> boules vertes (puisque la première tirée est verte), et donc <span class="math inline">\(n+r-1\)</span> boules.\ Ainsi <span class="math display">\[P_{V_1}(V_2) = \dfrac{v-1}{v+r-1}\]</span></p>
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
 Soit <span class="math inline">\(A\)</span> un événement de <span class="math inline">\(\Omega\)</span>, de probabilité non nulle, alors <span class="math inline">\(P_A\)</span> est une probabilité sur <span class="math inline">\(A\)</span><br>
 C’est-à-dire, que pour tout <span class="math inline">\(B \in \Omega\)</span>, on a :<br>
-<span class="math display">\[ 0 \leqslant P_A(B) \leqslant 1\quad \text{ et } \quad P_A(B) + P_A(\bar{B)} = 1 \]</span></p>
+<span class="math display">\[0 \leqslant P_A(B) \leqslant 1\quad \text{ et } \quad P_A(B) + P_A(\bar{B)} = 1 \]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
@@ -743,42 +818,133 @@ Démonstration :
 </summary>
 <p>Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements d’un univers <span class="math inline">\(\Omega\)</span>, avec <span class="math inline">\(P(A) \neq 0\)</span></p>
 <ul>
-<li><p>On a <span class="math inline">\(A \cap B \subset A\)</span>.<br>
-Donc <span class="math display">\[0 \leqslant P(B \cap A) \leqslant P(A) \]</span><br>
+<li><p>On a <span class="math inline">\(A \cap B \subset A\)</span>.</p>
+<p>Donc <span class="math display">\[0 \leqslant P(B \cap A) \leqslant P(A) \]</span><br>
 D’où, en divisant par <span class="math inline">\(P(A) \neq 0\)</span>, on a <span class="math inline">\(0 \leqslant P_A(B) \leqslant 1\)</span></p></li>
-<li><p>On a <span class="math inline">\(A=(A \cap B) \cup (\bar{A} \cap B)\)</span>, or<br>
-<span class="math inline">\((A \cap B)\)</span> et <span class="math inline">\((\bar{B} \cap A)\)</span> sont incompatibles, donc <span class="math display">\[P((A \cap B) \cup (\bar{B} \cap A)) =P(A\cap B) + P(\bar{B} \cap A)\]</span><br>
+<li><p>On a <span class="math inline">\(A=(A \cap B) \cup (\bar{A} \cap B)\)</span>,</p>
+<p>Or <span class="math inline">\((A \cap B)\)</span> et <span class="math inline">\((\bar{B} \cap A)\)</span> sont incompatibles, donc <span class="math display">\[P((A \cap B) \cup (\bar{B} \cap A)) =P(A\cap B) + P(\bar{B} \cap A)\]</span><br>
 On en déduit que <span class="math display">\[P(A) = P(A \cap B) + P(\bar{B} \cap A)\]</span><br>
 On obtient le résultat en divisant par <span class="math inline">\(P(A)\)</span></p></li>
 </ul>
 </details>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple <span class="exemp-extra"> </span>
+</div>
+<p>Une expérience aléatoire est modélisée par une probabilité <span class="math inline">\(P\)</span> sur un univers <span class="math inline">\(\Omega\)</span>. Soit <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements tels que <span class="math inline">\(P (A) = 0,6\)</span>; <span class="math inline">\(P (B) = 0,5\)</span> et <span class="math inline">\(P (A \cap B) = 0,3\)</span>.</p>
+<ol type="1">
+<li>Calculer <span class="math inline">\(P (\bar{A})\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<span class="math inline">\(P(\bar{A})=1-P(A)= 1-0,6=0,4\)</span>
+</details>
+<ol start="2" type="1">
+<li>Calculer <span class="math inline">\(P (A \cup B)\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>D’après la formule fondamentale des probabilités <span class="math display">\[P(A \cup B) + P(A \cap B)=P(A)+P(B)\]</span></p>
+Ainsi <span class="math inline">\(P(A \cup B) = P(A)+P(B) - P(A \cap B) = 0,6+0,5 -0,3 = 0,8\)</span>
+</details>
+<ol start="3" type="1">
+<li>Calculer <span class="math inline">\(P_A(B)\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<span class="math inline">\(P_A(B) = \frac{P(B \cap A)}{P(A)} = \frac{0,3}{0,6} = 0,5\)</span>
+</details>
+<ol start="4" type="1">
+<li>Déterminer <span class="math inline">\(P_A(\bar{B})\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<span class="math inline">\(P_A(\bar{B})= 1 - P_A(B) = 0,5\)</span>
+</details>
+</div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème (Probabilité composée) :</span><br>
-Soit <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux évènements d’un même univers vérifiant <span class="math inline">\(p(A)\ne 0\)</span> et <span class="math inline">\(p(B)\ne 0\)</span>.<br>
-Alors :<br>
-<span class="math display">\[ p\left(A \cap B \right) = p_A(B) \times p(A) =  p_B(A) \times p(B) \]</span></p>
+<p><span class="bloc-titre">Théorème : Probabilité composée </span><br>
+Soit <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements d’un même univers vérifiant <span class="math inline">\(p(A)\ne 0\)</span> et <span class="math inline">\(p(B)\ne 0\)</span>.\ Alors : <span class="math display">\[P\left(A \cap B \right) = P_A(B) \times P(A) =  P_B(A) \times P(B)\]</span></p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
-Dans un hôpital, on traite des patients contre un virus <span class="math inline">\(A\)</span>, on note alors : - <span class="math inline">\(A\)</span> l’événement le patient est atteint par le virus A . - <span class="math inline">\(V\)</span> l’événement On injecte le vaccin du virus A </p>
-<p>On sait <span class="math inline">\(p(A) = 0,7\)</span> et <span class="math inline">\(p_A(V) = 0,9\)</span>. - <span class="math inline">\(p(A) = 0,7\)</span> : la probabilité que un patient pris au hasard dans l’hôpital soit atteint du virus <span class="math inline">\(A\)</span> est de <span class="math inline">\(0,7\)</span>. - <span class="math inline">\(p_A(V) = 0,9\)</span> : sachant que la patient choisit est atteint du virus, la probabilité de lui injecter le vaccin est de <span class="math inline">\(0,9\)</span>.</p>
-Déterminer la probabilité d’injecter le vaccin contre le virus A à une personne atteinte par le virus.<br>
-
+Dans un hôpital, on traite des patients contre un virus <span class="math inline">\(A\)</span>, on note alors :</p>
+<ul>
+<li><span class="math inline">\(A\)</span> l’événement le patient est atteint par le virus A .</li>
+<li><span class="math inline">\(V\)</span> l’événement On injecte le vaccin du virus A </li>
+</ul>
+<p>On sait <span class="math inline">\(P(A) = 0,7\)</span> et <span class="math inline">\(P_A(V) = 0,9\)</span></p>
+<ol type="1">
+<li>Que signifie ces probabilités ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<ul>
+<li><span class="math inline">\(P(A) = 0,7\)</span> signifie que la probabilité que un patient pris au hasard dans l’hôpital soit atteint du virus <span class="math inline">\(A\)</span> est de <span class="math inline">\(0,7\)</span>.</li>
+<li><span class="math inline">\(P_A(V) = 0,9\)</span> signifie que sachant que la patient choisit est atteint du virus, la probabilité de lui injecter le vaccin est de <span class="math inline">\(0,9\)</span>.</li>
+</ul>
+</details>
+<ol start="2" type="1">
+<li>Déterminer la probabilité d’injecter le vaccin contre le virus A à une personne atteinte par le virus.</li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-On cherche <span class="math inline">\(P(A \cap V)\)</span>.<br>
-<span class="math display">\[ p\left(A \cap V \right) = p_A(V) \times p(A) =  0,9 \times 0,7 = 0,63 \]</span>
+On cherche <span class="math inline">\(P(A \cap V)\)</span>. <span class="math display">\[P\left(A \cap V \right) = P_A(V) \times P(A) =  0,9 \times 0,7 = 0,63\]</span>
+</details>
+</div>
+<div class="bloc thm">
+<p><span class="bloc-titre">Propriété : Probabilité composée généralisée (admis)</span><br> Soit <span class="math inline">\((A_1\,;\, A_2 \,;\, A_3 \,;\, \dots \,;\, A_n)\)</span> une famille d’événement d’un même univers vérifiant <span class="math display">\[P(A_1 \cap A_2 \cap A_3 \cap \dots \cap A_{n-1} ) \neq  0\]</span> \ Alors : <span class="math display">\[
+P(A_1 \cap A_2 \cap \cdots \cap A_n)
+= P(A_1)\,P_{A_1}(A_2)\,P_{A_1 \cap A_2}(A_3)\,\cdots\,P_{A_1 \cap A_2 \cap \cdots \cap A_{n-1}}(A_n).
+\]</span></p>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple <span class="exemp-extra"> </span>
+</div>
+<p>On tire successivement, sans remise et au hasard, 4 cartes d’un jeu de 52 cartes.</p>
+<p>Quelle est la probabilité de tirer 4 as ?</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Soit un entier <span class="math inline">\(i \in \{1,2,3,4\}\)</span>.\ Le tirage étant aléatoire et les cartes étant indiscernables, on est dans le cas d’une probabilité uniforme.\ Notons <span class="math inline">\(A_i\)</span> l’événement la <span class="math inline">\(i\)</span> carte tirée est un as , si bien que la probabilité recherchée est <span class="math display">\[
+P(A_1 \cap A_2 \cap A_3 \cap A_4).
+\]</span></p>
+<p>On a <span class="math display">\[
+P(A_1) = \dfrac{4}{52} \et
+P_{A_1}(A_2) = \dfrac{3}{51} \et
+P_{A_1 \cap A_2}(A_3) = \dfrac{2}{50} \et
+P_{A_1 \cap A_2 \cap A_3}(A_4) = \dfrac{1}{49}
+\]</span></p>
+<p>On applique alors la formule des probabilités composées à la famille <span class="math inline">\((A_1, A_2, A_3, A_4)\)</span> où <span class="math display">\[
+P(A_1 \cap A_2 \cap A_3) \neq 0.
+\]</span></p>
+On obtient alors <span class="math display">\[
+P(A_1 \cap A_2 \cap A_3 \cap A_4)
+= \dfrac{4 \times 3 \times 2 \times 1}{52 \times 51 \times 50 \times 49}.
+\]</span>
 </details>
 </div>
 </section>
 <section id="représentation-avec-un-tableau" class="level2">
 <h2 class="anchored" data-anchor-id="représentation-avec-un-tableau">Représentation avec un tableau</h2>
 <div class="bloc rem">
-<p>On peut donner les résultats sous la forme d’un tableau à double entrée.<br>
-Il en existe de plusieurs types, pour cela il faut être attentif à la lecture et compréhension du tableau.</p>
-<p>On considère le tableau suivant qui indique le nombre de reçus au baccalauréat dans une classe :</p>
+<p>On peut donner les résultats sous la forme d’un tableau à double entrée.</p>
+<p>Il en existe de plusieurs types, pour cela il faut être attentif à la lecture et compréhension du tableau.</p>
+<p>On considère le tableau suivant qui indique le nombre de reçus au baccalauréat dans une classe .</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -809,9 +975,11 @@ Il en existe de plusieurs types, pour cela il faut être attentif à la lecture 
 </tr>
 </tbody>
 </table>
-<p>Dans ce tableau les nombres (ou les proportions indiquées), sont donnée par rapport à l’effectif total.<br>
-Ainsi <span class="math display">\[ P_F(R)=\frac{P(R \cap F)}{P(F)} = \frac{18}{19} \quad \text{et} \quad P_R(F) = \frac{P(R \cap F)}{P(R)} = \frac{18}{31} \]</span> On peut donner directement toutes les probabilités conditionnelles que l’on souhaite.<br>
-Notre partition de l’univers est dans un cas <span class="math inline">\(\{F\, ;\,G\}\)</span> et dans l’autre cas <span class="math inline">\(\{R \, ;\, \bar{R}\}\)</span></p>
+<p>Dans ce tableau les nombres (ou les proportions indiquées), sont données par rapport à l’effectif total.</p>
+<p>Ainsi <span class="math display">\[P_F(R)=\frac{P(R \cap F)}{P(F)} = \dfrac{\dfrac{\card{R \cap F}}{\card \Omega}}{\dfrac{\card F}{\card \Omega}} = \dfrac{\card{R \cap F}}{\card F)}= \frac{18}{19}\]</span></p>
+<p>On peut donner directement toutes les probabilités conditionnelles que l’on souhaite à partir des effectifs donnés.</p>
+<p><span class="math display">\[ P_R(F) = \frac{P(R \cap F)}{P(R)} = \frac{18}{31}\]</span></p>
+<p>Notre partition de l’univers est dans le premier cas <span class="math inline">\(\{F\, ;\,G\}\)</span> et dans le deuxième cas <span class="math inline">\(\{R \, ;\, \bar{R}\}\)</span></p>
 </div>
 </section>
 <section id="représentation-graphique-arbre-pondéré" class="level2">
@@ -871,14 +1039,14 @@ Afficher la correction
 <summary>
 Afficher la correction
 </summary>
-<span class="math inline">\(P_{T}(\bar{M)} = \frac{P(T \cap \bar{M})}{P(T)}\)</span><br>
+<span class="math inline">\(P_{T}(\bar{M)} = \dfrac{P(T \cap \bar{M})}{P(T)}\)</span><br>
 On connaît <span class="math inline">\(P(T \cap \bar{M})\)</span>, mais pas <span class="math inline">\(P(T)\)</span>.<br>
 Il nous manque une information pour conclure.
 </details></li>
 </ol>
 </div>
 <div class="nav-pages">
-<p><a class="next" href="fpt.html">➡️</a></p>
+<p><a class="prev" href="rappels.html">⬅️</a> <a class="next" href="fpt.html">➡️</a></p>
 </div>
 
 
@@ -949,14 +1117,13 @@ Il nous manque une information pour conclure.
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

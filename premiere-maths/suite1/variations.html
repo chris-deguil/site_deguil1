@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,14 +113,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -129,6 +130,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -162,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -361,7 +363,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -369,7 +371,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -400,6 +402,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -516,6 +519,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -560,47 +569,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Probabilité conditionnelles</span></a>
+ <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
@@ -635,6 +609,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
@@ -642,6 +657,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -664,6 +685,41 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
   </div>
 </li>
       </ul>
@@ -764,24 +820,24 @@ Pour tout entier naturel <span class="math inline">\(p \leq n\)</span> on a <spa
 Afficher la correction
 </summary>
 <p>Pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>,<br>
-<span class="math display">\[u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n\]</span><br>
-Or <span class="math inline">\(n \geqslant 0\)</span>, donc <span class="math inline">\(2n \geqslant 0\)</span>.<br>
-Ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(u_{n+1} - u_n \geqslant 0\)</span>.<br>
-Donc la suite <span class="math inline">\((u_n)_{n \in \mathbb{N}}\)</span> est croissante.</p>
+<span class="math display">\[u_{n+1} - u_n = (n+1)^2 - (n+1) -  n^2 + n = n^2 + 2n + 1 - n - 1 - n^2 + n = 2n\]</span></p>
+<p>Or <span class="math inline">\(n \geqslant 0\)</span>, donc <span class="math inline">\(2n \geqslant 0\)</span>.</p>
+<p>Ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(u_{n+1} - u_n \geqslant 0\)</span>.</p>
+<p>Donc la suite <span class="math inline">\((u_n)_{n \in \mathbb{N}}\)</span> est croissante.</p>
 </details>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
-Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0 = 3\)</span> et <span class="math inline">\(u_{n+1} = - u_n^2 - u_n - 1\)</span>.<br>
-Étudier les variations.</p>
+Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0 = 3\)</span> et <span class="math inline">\(u_{n+1} = - u_n^2 - u_n - 1\)</span>.</p>
+<p>Étudier les variations.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
 <p>Pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>,<br>
 <span class="math display">\[u_{n+1} - u_n = - u_n^2 - u_n - 1 - u_n = - u_n^2 - 2u_n - 1 = - (u_n + 1)^2\]</span></p>
-<p>Ce qui est toujours négatif.<br>
-Ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(u_{n+1} - u_n \leqslant 0\)</span>, donc <span class="math inline">\((u_n)_{n \in \mathbb{N}}\)</span> est une suite décroissante.</p>
+<p>Ce qui est toujours négatif.</p>
+<p>Ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(u_{n+1} - u_n \leqslant 0\)</span>, donc <span class="math inline">\((u_n)_{n \in \mathbb{N}}\)</span> est une suite décroissante.</p>
 </details>
 </div>
 </section>
@@ -789,7 +845,8 @@ Ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span cla
 <h3 class="anchored" data-anchor-id="variation-de-la-fonction-associée">Variation de la fonction associée</h3>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span><br>
-Soient <span class="math inline">\(a \in \R^+\)</span> et <span class="math inline">\(I = [a\,;\,+\infty[\)</span>.<br> Soit <span class="math inline">\((u_n)\)</span> la suite définie par la relation <span class="math inline">\(u_n = f(n)\)</span>, où <span class="math inline">\(f\)</span> est une fonction définie sur <span class="math inline">\(I\)</span>.</p>
+Soient <span class="math inline">\(a \in \R^+\)</span> et <span class="math inline">\(I = [a\,;\,+\infty[\)</span>.</p>
+<p>Soit <span class="math inline">\((u_n)\)</span> la suite définie par la relation <span class="math inline">\(u_n = f(n)\)</span>, où <span class="math inline">\(f\)</span> est une fonction définie sur <span class="math inline">\(I\)</span>.</p>
 <p>Si <span class="math inline">\(f\)</span> est une fonction monotone sur <span class="math inline">\(I\)</span>, alors <span class="math inline">\((u_n)\)</span> est monotone et a les mêmes variations que <span class="math inline">\(f\)</span>, pour tout entier naturel <span class="math inline">\(n \geq a\)</span>.</p>
 </div>
 <details class="bloc demo">
@@ -798,13 +855,13 @@ Démonstration :
 </summary>
 <p>On suppose <span class="math inline">\(f\)</span> croissante sur <span class="math inline">\(I\)</span>. Alors pour tout entier naturel <span class="math inline">\(n \geq a\)</span>,<br>
 <span class="math display">\[u_{n+1} - u_n = f(n+1) - f(n) \geq 0\]</span></p>
-<p>Donc la suite <span class="math inline">\((u_n)\)</span> est croissante pour tout entier naturel <span class="math inline">\(n \geq a\)</span>.<br>
-On raisonne de même pour une fonction décroissante.</p>
+<p>Donc la suite <span class="math inline">\((u_n)\)</span> est croissante pour tout entier naturel <span class="math inline">\(n \geq a\)</span>.</p>
+<p>On raisonne de même pour une fonction décroissante.</p>
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span><br>
-Soit <span class="math inline">\(u_n = n^2 - 3n + 1\)</span>.<br>
-Étudier les variations.</p>
+Soit <span class="math inline">\(u_n = n^2 - 3n + 1\)</span>.</p>
+<p>Étudier les variations.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction
@@ -824,8 +881,18 @@ Afficher la correction
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque :</span><br>
-La réciproque est fausse.<br>
-Par exemple, <span class="math inline">\(u_n = n + \cos(2\pi n)\)</span> est croissante mais <span class="math inline">\(f(x) = x + \cos(2\pi x)\)</span> ne l’est pas.</p>
+La réciproque de cette propriété est fausse. En effet, soit la suite définie par<br>
+<span class="math display">\[u_n = n + \cos(2 \pi n).\]</span></p>
+<p>Il est immédiat que cette suite est croissante puisque pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[
+\begin{aligned}
+u_{n+1} &amp;= (n+1) + \cos(2\pi(n+1)) \\
+&amp;= n+1 + \cos(2\pi n + 2\pi) \\
+&amp;= n+1 + \cos(2\pi n) \\
+&amp; =u_n + 1
+\end{aligned}
+\]</span></p>
+<p>Donc <span class="math inline">\(u_{n+1} &gt; u_n\)</span> pour tout <span class="math inline">\(n \in \N\)</span>.</p>
+<p>Mais la fonction associée <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = x + \cos (2\pi x)\)</span> n’est pas croissante, comme le montre sa courbe représentative :</p>
 <div style="text-align: center;">
 <p><img src="../../image/maths/Suite_numerique_suite_cos.png" class="img-fluid" style="width:40.0%"></p>
 </div>
@@ -836,32 +903,34 @@ Par exemple, <span class="math inline">\(u_n = n + \cos(2\pi n)\)</span> est cro
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème :</span></p>
 <ol type="1">
-<li><p>Si <span class="math inline">\((u_n)\)</span> est à terme strictement positif à partir d’un certain rang <span class="math inline">\(p\)</span>, alors pour tout <span class="math inline">\(n  \geqslant p\)</span> : <span class="math display">\[
-\frac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante},
+<li>Si <span class="math inline">\((u_n)\)</span> est à terme strictement positif à partir d’un certain rang <span class="math inline">\(p\)</span>, alors pour tout <span class="math inline">\(n  \geqslant p\)</span> : <span class="math display">\[
+\dfrac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante},
 \qquad
-\frac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
-\]</span></p></li>
-<li><p>Si <span class="math inline">\((u_n)\)</span> est à terme strictement négatif à partir d’un certain rang <span class="math inline">\(p\)</span>, alors pour tout <span class="math inline">\(n  \geqslant p\)</span> : <span class="math display">\[
-\frac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante},
+\dfrac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
+\]</span></li>
+<li>Si <span class="math inline">\((u_n)\)</span> est à terme strictement négatif à partir d’un certain rang <span class="math inline">\(p\)</span>, alors pour tout <span class="math inline">\(n  \geqslant p\)</span> : <span class="math display">\[
+\dfrac{u_{n+1}}{u_n} \leqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est croissante},
 \qquad
-\frac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
-\]</span></p></li>
+\dfrac{u_{n+1}}{u_n} \geqslant 1 \;\; \Longleftrightarrow \;\; \text{la suite est décroissante}.
+\]</span></li>
 </ol>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>On traite le cas <span class="math inline">\(u_n &lt; 0\)</span>, le cas <span class="math inline">\(u_n &gt; 0\)</span> se traite de façon analogue.</p>
-<p>Soit <span class="math inline">\((u_n)\)</span> une suite numérique à termes strictement négatifs.</p>
-<p>Alors pour tout <span class="math inline">\(n \geqslant p\)</span>,<br>
-<span class="math display">\[u_{n+1}-u_n \geqslant 0 \Longleftrightarrow u_{n+1} \geqslant u_n \underset{u_n &lt;0}{\Longleftrightarrow} \frac{u_{n+1}}{u_n} \leqslant 1\]</span></p>
-<p>D’où la suite est croissante à partir du rang <span class="math inline">\(p\)</span> si et seulement si <span class="math inline">\(\frac{u_{n+1}}{u_n} \leq 1\)</span>.</p>
+<p>On traite le cas <span class="math inline">\(u_n &lt;0\)</span> ; le cas <span class="math inline">\(u_n&gt;0\)</span> se traite de façon analogue.</p>
+<p>Soit <span class="math inline">\((u_n)\)</span> une suite numérique à terme strictement négatif.</p>
+<p>Alors pour tout <span class="math inline">\(n \geqslant p\)</span>, <span class="math display">\[
+u_{n+1}-u_n \geqslant 0
+\;\;\Longleftrightarrow\;\; u_{n+1} \geqslant u_n
+\underset{u_n &lt;0}{\Longleftrightarrow} \dfrac{u_{n+1}}{u_n} \leqslant 1.
+\]</span> Ainsi la suite est croissante à partir du rang <span class="math inline">\(p\)</span> si et seulement si <span class="math inline">\(\dfrac{u_{n+1}}{u_n} \leqslant 1\)</span>.</p>
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple :</span></p>
 <p>On considère la suite <span class="math inline">\((t_n)\)</span> définie pour tout <span class="math inline">\(n &gt; 4\)</span> par<br>
-<span class="math display">\[t_n = \frac{-2^n}{n-4}\]</span></p>
+<span class="math display">\[t_n = \dfrac{-2^n}{n-4}\]</span></p>
 <ol type="1">
 <li>À partir de quel rang la suite est-elle définie ?</li>
 </ol>
@@ -879,24 +948,24 @@ La suite est définie à partir du rang <span class="math inline">\(5\)</span>, 
 Afficher la correction
 </summary>
 <p>Pour tout <span class="math inline">\(n &gt; 4\)</span>, <span class="math display">\[
-  \frac{t_{n+1}}{t_n}
+  \dfrac{t_{n+1}}{t_n}
   = \dfrac{\dfrac{-2^{n+1}}{(n+1)-4}}{\dfrac{-2^n}{n-4}}
   = \dfrac{-2^{n+1}}{n-3} \times \dfrac{n-4}{-2^n}
-  = \frac{2(n-4)}{n-3}.
+  = \dfrac{2(n-4)}{n-3}.
   \]</span></p>
 <p>Or pour tout <span class="math inline">\(n \geqslant 5\)</span>, <span class="math display">\[
-  \frac{2(n-4)}{n-3}  \geqslant 1
+  \dfrac{2(n-4)}{n-3}  \geqslant 1
   \underset{n-3 &gt;0}{\Longleftrightarrow}
   2n-8 \geqslant n-3
   \Longleftrightarrow n \geqslant 5.
   \]</span></p>
 <p>Donc pour tout <span class="math inline">\(n \geqslant 5\)</span>,</p>
 <p><span class="math display">\[
-  \frac{t_{n+1}}{t_n} \geqslant 1.
+  \dfrac{t_{n+1}}{t_n} \geqslant 1.
   \]</span></p>
 <p>La suite étant à terme strictement négatif puisque, pour tout <span class="math inline">\(n &gt;4\)</span>, <span class="math inline">\(-2^n &lt;0\)</span> et <span class="math inline">\(n-4&gt;0\)</span>, on déduit que</p>
 <p><span class="math display">\[
-  \frac{t_{n+1}}{t_n}  \geqslant 1
+  \dfrac{t_{n+1}}{t_n}  \geqslant 1
   \underset{t_n &lt;0}{\Longleftrightarrow}
   t_{n+1} \leqslant t_n.
   \]</span></p>
@@ -976,14 +1045,13 @@ Afficher la correction
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

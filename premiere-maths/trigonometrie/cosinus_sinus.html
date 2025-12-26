@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,14 +113,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -129,6 +130,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -162,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -361,7 +363,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -369,7 +371,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -400,6 +402,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -516,6 +519,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -559,48 +568,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Probabilité conditionnelles</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
@@ -635,6 +609,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
@@ -642,6 +657,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -664,6 +685,41 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
   </div>
 </li>
       </ul>
@@ -716,14 +772,16 @@ window.Quarto = {
 <section id="définitions" class="level3">
 <h3 class="anchored" data-anchor-id="définitions">Définitions</h3>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(t\)</span> un nombre réel, et <span class="math inline">\(M\)</span> le point du cercle trigonométrique associé à <span class="math inline">\(t\)</span>. <br> On appelle cosinus de <span class="math inline">\(t\)</span> et sinus de <span class="math inline">\(t\)</span> les coordonnées de <span class="math inline">\(M\)</span> dans le repère .<br> On note <span class="math inline">\(M(\cos t \, ; \, \sin t)\)</span>.</p>
+<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(t\)</span> un nombre réel, et <span class="math inline">\(M\)</span> le point du cercle trigonométrique associé à <span class="math inline">\(t\)</span>. \ On appelle cosinus de <span class="math inline">\(t\)</span> et sinus de <span class="math inline">\(t\)</span> les coordonnées de <span class="math inline">\(M\)</span> dans le repère .\ On note <span class="math inline">\(M(\cos t \, ; \, \sin t)\)</span>.</p>
 </div>
 <div style="text-align:center;">
 <p><img src="../../image/maths/Trigonometrie_def_cos_sin.png" alt="" width="20%/"></p>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span><br> Cette définition, pour <span class="math inline">\(t \in \left]0 \, ; \, \frac{\pi}{2} \right[\)</span>, revient à celle du cosinus et du sinus d’un angle aigu dans un triangle rectangle. Elle permet de prolonger la définition à tout réel.</p>
-<p>On considère le cercle trigonométrique de centre <span class="math inline">\(O\)</span> et le triangle <span class="math inline">\(OAB\)</span> rectangle en <span class="math inline">\(A\)</span>. <br> On utilise les notations de la figure. Les triangles <span class="math inline">\(OAB\)</span> et <span class="math inline">\(OCD\)</span> sont en configuration de Thalès.<br> On a <span class="math display">\[
+<p>On considère le cercle trigonométrique de centre <span class="math inline">\(O\)</span> et le triangle <span class="math inline">\(OAB\)</span> rectangle en <span class="math inline">\(A\)</span>.</p>
+<p>On utilise les notations de la figure. Les triangles <span class="math inline">\(OAB\)</span> et <span class="math inline">\(OCD\)</span> sont en configuration de Thalès.</p>
+<p>On a <span class="math display">\[
 \cos t = OD = \frac{OD}{1} = \frac{OD}{OC} = \frac{OA}{OB}
 \]</span> et <span class="math display">\[
 \sin t = DC = \frac{DC}{1} = \frac{DC}{OC} = \frac{AB}{OB}.
@@ -739,7 +797,10 @@ window.Quarto = {
 \]</span></p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> <strong>Tangente du collège</strong><br> D’un point de vue géométrique, cela correspond au coefficient directeur de la droite <span class="math inline">\((OM)\)</span>.<br> Cette valeur est aussi l’abscisse du point <span class="math inline">\(A\)</span> sur la tangente en <span class="math inline">\(I\)</span> à <span class="math inline">\(\mathscr{C}\)</span>, dans le repère <span class="math inline">\(\left(O~;~\ve{j}\right)\)</span>.</p>
+<div class="bloc-titre">
+Remarque : <span class="exemp-extra"> <strong>Tangente du collège</strong> </span>
+</div>
+<p>D’un point de vue géométrique, cela correspond au coefficient directeur de la droite <span class="math inline">\((OM)\)</span>.\ Cette valeur est aussi l’abscisse du point <span class="math inline">\(A\)</span> sur la tangente en <span class="math inline">\(I\)</span> à <span class="math inline">\(\mathscr{C}\)</span>, dans le repère <span class="math inline">\(\left(I~;~\ve{j}\right)\)</span>.</p>
 <p>En effet, <span class="math inline">\((AM)\)</span> et <span class="math inline">\((IM')\)</span> sont sécantes en <span class="math inline">\(O\)</span> et <span class="math inline">\((MM') // (AI)\)</span>. Donc, d’après le théorème de Thalès : <span class="math display">\[
 \frac{OM}{OA} = \frac{OM'}{OI} = \frac{MM'}{IA}.
 \]</span> Donc <span class="math display">\[
@@ -759,7 +820,8 @@ IA = MM' \times \frac{OI}{OM'} = \sin t \times \frac{1}{\cos t} = \tan t.
 \quad \text{et} \quad
 \widehat{HMO} = \frac{\pi}{6}.
 \]</span></p>
-<p><span class="math inline">\(H\)</span> étant le pied de la hauteur, il est aussi le milieu de <span class="math inline">\([OI]\)</span>, donc <span class="math inline">\(OH=  \frac{1}{2}\)</span>.<br> De plus, <span class="math inline">\(IMH\)</span> étant rectangle en <span class="math inline">\(H\)</span> et <span class="math inline">\(OM=1\)</span>, on déduit du théorème de Pythagore que <span class="math inline">\(MH =  \frac{\sqrt{3}}{2}\)</span>. Ainsi : <span class="math display">\[
+<p><span class="math inline">\(H\)</span> étant le pied de la hauteur, il est aussi le milieu de <span class="math inline">\([OI]\)</span>, donc <span class="math inline">\(OH= \dfrac{1}{2}\)</span>.</p>
+<p>De plus, <span class="math inline">\(IMH\)</span> étant rectangle en <span class="math inline">\(H\)</span> et <span class="math inline">\(OM = 1\)</span>, on déduit du théorème de Pythagore que <span class="math inline">\(MH = \dfrac{\sqrt{3}}{2}\)</span>. Ainsi : <span class="math display">\[
 \cos \left(\frac{\pi}{3} \right) = \frac{1}{2}
 \qquad \text{et} \qquad
 \sin \left(\frac{\pi}{3} \right) = \frac{\sqrt{3}}{2}.
@@ -772,45 +834,7 @@ IA = MM' \times \frac{OI}{OM'} = \sin t \times \frac{1}{\cos t} = \tan t.
 \qquad \text{et} \qquad
 \sin \left(\frac{\pi}{6} \right) = \frac{1}{2}.
 \]</span></p>
-<p>On regroupe les résultats dans le tableau suivant :</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th><span class="math inline">\(\LH{0}\)</span></th>
-<th><span class="math inline">\(\LH{\frac{\pi}{6}}\)</span></th>
-<th><span class="math inline">\(\frac{\pi}{4}\)</span></th>
-<th><span class="math inline">\(\frac{\pi}{3}\)</span></th>
-<th><span class="math inline">\(\frac{\pi}{2}\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>cos</td>
-<td><span class="math inline">\(1\)</span></td>
-<td><span class="math inline">\(\LH{\frac{\sqrt{3}}{2}}\)</span></td>
-<td><span class="math inline">\(\frac{\sqrt{2}}{2}\)</span></td>
-<td><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="even">
-<td>sin</td>
-<td><span class="math inline">\(0\)</span></td>
-<td><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td><span class="math inline">\(\frac{\sqrt{2}}{2}\)</span></td>
-<td><span class="math inline">\(\LH{\frac{\sqrt{3}}{2}}\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-</tr>
-</tbody>
-</table>
+<p>On regroupe les résultats dans le tableau suivant : | | <span class="math inline">\(\LH{0}\)</span> | <span class="math inline">\(\LH{\frac{\pi}{6}}\)</span> | <span class="math inline">\(\frac{\pi}{4}\)</span> | <span class="math inline">\(\frac{\pi}{3}\)</span> | <span class="math inline">\(\frac{\pi}{2}\)</span> | |—|—|—|—|—|—| | cos | <span class="math inline">\(1\)</span> | <span class="math inline">\(\LH{\frac{\sqrt{3}}{2}}\)</span> | <span class="math inline">\(\frac{\sqrt{2}}{2}\)</span> | <span class="math inline">\(\frac{1}{2}\)</span> | <span class="math inline">\(0\)</span> | | sin | <span class="math inline">\(0\)</span> | <span class="math inline">\(\frac{1}{2}\)</span> | <span class="math inline">\(\frac{\sqrt{2}}{2}\)</span> | <span class="math inline">\(\LH{\frac{\sqrt{3}}{2}}\)</span> | <span class="math inline">\(1\)</span> |</p>
 </div>
 </section>
 <section id="propriétés-élémentaires" class="level3">
@@ -829,7 +853,20 @@ IA = MM' \times \frac{OI}{OM'} = \sin t \times \frac{1}{\cos t} = \tan t.
 <summary>
 Démonstration :
 </summary>
-Immédiat.
+<p>Soit <span class="math inline">\(M\)</span> le point image du réel <span class="math inline">\(\alpha\)</span> sur le cercle trigonométrique de centre <span class="math inline">\(O\)</span>.</p>
+<p>Par définition, ses coordonnées dans le repère sont <span class="math inline">\((\cos \alpha \, ; \, \sin \alpha)\)</span>.</p>
+<ul>
+<li><p>Périodicité :<br>
+L’enroulement de la droite réelle sur le cercle associe le même point <span class="math inline">\(M\)</span> aux réels <span class="math inline">\(\alpha\)</span> et <span class="math inline">\(\alpha + 2k\pi\)</span> (où <span class="math inline">\(k \in \mathbb{Z}\)</span> correspond au nombre de tours complets). Les coordonnées du point <span class="math inline">\(M\)</span> étant uniques, on en déduit que : <span class="math display">\[\cos(\alpha + 2k\pi) = \cos \alpha \quad \text{et} \quad \sin(\alpha + 2k\pi) = \sin \alpha\]</span></p></li>
+<li><p>Relation fondamentale :</p>
+<p>Le point <span class="math inline">\(M\)</span> appartient au cercle trigonométrique de centre <span class="math inline">\(O(0;0)\)</span> et de rayon <span class="math inline">\(1\)</span>. La distance <span class="math inline">\(OM\)</span> est donc égale à <span class="math inline">\(1\)</span>, d’où <span class="math inline">\(OM^2 = 1\)</span>.</p>
+<p>En utilisant la formule de la distance entre deux points, on a : <span class="math display">\[(x_M - x_O)^2 + (y_M - y_O)^2 = 1\]</span> <span class="math display">\[(\cos \alpha - 0)^2 + (\sin \alpha - 0)^2 = 1\]</span> Ce qui donne : <span class="math inline">\(\cos^2 \alpha + \sin^2 \alpha = 1\)</span>.</p></li>
+<li><p>Encadrement :</p>
+<p>Comme la somme de deux carrés est égale à <span class="math inline">\(1\)</span>, chaque carré est nécessairement inférieur ou égal à <span class="math inline">\(1\)</span>.</p>
+<p>Ainsi, <span class="math inline">\(\cos^2 \alpha \leqslant 1\)</span> et <span class="math inline">\(\sin^2 \alpha \leqslant 1\)</span>.</p>
+<p>D’après les propriétés de la fonction carrée, cela implique : <span class="math display">\[-1 \leqslant \cos \alpha \leqslant 1 \quad \text{et} \quad -1 \leqslant \sin \alpha \leqslant 1\]</span></p>
+<p>Graphiquement, cela se justifie par le fait que le cercle est contenu dans le carré délimité par les droites d’équations <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(x=1\)</span>, <span class="math inline">\(y=-1\)</span> et <span class="math inline">\(y=1\)</span>.</p></li>
+</ul>
 </details>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br> On donne <span class="math inline">\(\cos  \frac{\pi}{5} =  \frac{\sqrt{5} + 1}{4}\)</span>. Déterminer <span class="math inline">\(\sin \frac{\pi}{5}\)</span>.</p>
@@ -923,14 +960,13 @@ Afficher la correction :
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

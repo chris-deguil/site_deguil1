@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,14 +113,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -129,6 +130,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -162,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -361,7 +363,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -369,7 +371,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -400,6 +402,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -516,6 +519,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -560,47 +569,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Probabilité conditionnelles</span></a>
+ <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
@@ -635,6 +609,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
@@ -642,6 +657,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -664,6 +685,41 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
   </div>
 </li>
       </ul>
@@ -706,24 +762,28 @@ window.Quarto = {
 
 <div class="bloc def">
 <p><span class="bloc-titre">Définition :</span><br>
-On dit que <span class="math inline">\(f\)</span> est dérivable sur <span class="math inline">\(I\)</span> lorsque <span class="math inline">\(f\)</span> est dérivable en tout point <span class="math inline">\(a\)</span> de <span class="math inline">\(I\)</span>.<br>
-On appelle alors <strong>fonction dérivée</strong> de la fonction <span class="math inline">\(f\)</span>, la fonction notée <span class="math inline">\(f'\)</span>, définie sur <span class="math inline">\(I\)</span> par :<br>
-<span class="math display">\[f' : x \longmapsto f'(x)\]</span></p>
+On dit que <span class="math inline">\(f\)</span> est dérivable sur <span class="math inline">\(I\)</span> lorsque <span class="math inline">\(f\)</span> est dérivable en tout point <span class="math inline">\(a\)</span> de <span class="math inline">\(I\)</span>.</p>
+<p>On appelle alors de la fonction <span class="math inline">\(f\)</span>, la fonction notée <span class="math inline">\(f'\)</span>, définie sur <span class="math inline">\(I\)</span> par <span class="math display">\[f' : x \longmapsto f'(x)\]</span></p>
 </div>
 <div class="bloc exo">
-<span class="bloc-titre">Exemple :</span><br>
-On considère la fonction <span class="math inline">\(f\)</span>, définie par <span class="math inline">\(f(x)=2x^2-3x+5\)</span>. Déterminons la fonction dérivée associée.<br>
-
+<p><span class="bloc-titre">Exemple :</span><br>
+On considère la fonction <span class="math inline">\(f\)</span>, définie par <span class="math inline">\(f(x)=2x^2-3x+5\)</span>. Déterminons la fonction dérivée associée.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-Pour tout <span class="math inline">\(h\)</span> non nul, et tout réel <span class="math inline">\(a\)</span> :<br>
-<span class="math display">\[\frac{f(a+h) - f(a)}{h} = \frac{2a^2+2h^2+4ah -3a-3h +5 -2a^2+6a-5}{h} = \frac{2h^2+4ah-3h}{h} = 2h+4a-3\]</span><br>
-Or :<br>
-<span class="math display">\[\lim_{h \to 0} \, 2h+4a-3 = 4a-3\]</span><br>
-Donc <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(a\)</span> et <span class="math inline">\(f'(a) = 4a-3\)</span>.<br>
-On en déduit que la fonction dérivée de <span class="math inline">\(f\)</span> est <span class="math inline">\(f'(x) = 4x - 3\)</span> définie sur <span class="math inline">\(\R\)</span>.
+<p>Pour tout <span class="math inline">\(h\)</span> non nul et tout réel <span class="math inline">\(a\)</span>, <span class="math display">\[
+\tau_a(h) = \dfrac{f(a+h) - f(a)}{h} = \dfrac{2(a+h)^2 - 3(a+h) + 5 - (2a^2 - 3a + 5)}{h}
+\]</span></p>
+<p>On développe : <span class="math display">\[
+\tau_a(h)= \dfrac{2(a^2 + 2ah + h^2) - 3a - 3h + 5 - 2a^2 + 3a - 5}{h}
+= \dfrac{4ah + 2h^2 - 3h}{h} = 4a + 2h - 3
+\]</span></p>
+<p>Or <span class="math display">\[
+\lim_{h \to 0} \tau_a(h) = \lim_{h \to 0} 4a + 2h - 3 = 4a - 3
+\]</span></p>
+<p>La limite existe, donc <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(a\)</span>, et <span class="math inline">\(f'(a) = 4a-3\)</span>.</p>
+On déduit alors que la fonction dérivée de la fonction <span class="math inline">\(f\)</span> est la fonction <span class="math inline">\(f'\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f'(x)=4x-3\)</span>.
 </details>
 </div>
 <div class="bloc thm">
@@ -796,82 +856,90 @@ Démonstration :
 Pour tout <span class="math inline">\(a,h \in \R\)</span>,<br>
 <span class="math display">\[(a+h)^2 - a^2 = 2ah+h^2\]</span><br>
 Donc<br>
-<span class="math display">\[\frac{f(a+h) - f(a)}{h} = 2a+h\]</span><br>
+<span class="math display">\[\dfrac{f(a+h) - f(a)}{h} = 2a+h\]</span><br>
 Donc en faisant tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span>, on obtient<br>
 <span class="math inline">\(f'(a)= 2a\)</span>.</p></li>
 <li><p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R_+\)</span> par <span class="math inline">\(f(x) = \sqrt{x}\)</span>.<br>
 Pour tout <span class="math inline">\(a \in \R_+\)</span> et <span class="math inline">\(h \in \R^*\)</span> tel que <span class="math inline">\(a+h &gt; 0\)</span>,<br>
-<span class="math display">\[\sqrt{a+h} - \sqrt{a} = \frac{a + h - a}{\sqrt{a+h} + \sqrt{a}} = \frac{h}{\sqrt{a+h} + \sqrt{a}}\]</span><br>
-Ainsi <span class="math display">\[\frac{f(a+h) - f(a)}{h} = \frac{1}{\sqrt{a+h} + \sqrt{a}}\]</span><br>
-Donc en faisant tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span>, on obtient <span class="math inline">\(f'(a)= \frac{1}{2 \sqrt{a}}\)</span>.<br>
+<span class="math display">\[\sqrt{a+h} - \sqrt{a} = \dfrac{a + h - a}{\sqrt{a+h} + \sqrt{a}} = \dfrac{h}{\sqrt{a+h} + \sqrt{a}}\]</span><br>
+Ainsi <span class="math display">\[\dfrac{f(a+h) - f(a)}{h} = \dfrac{1}{\sqrt{a+h} + \sqrt{a}}\]</span><br>
+Donc en faisant tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span>, on obtient <span class="math inline">\(f'(a)= \dfrac{1}{2 \sqrt{a}}\)</span>.<br>
 </p></li>
 </ul>
 </details>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque :</span><br>
-On peut retenir que pour tout <span class="math inline">\(n \in \N^*\)</span>, avec <span class="math inline">\(f:x \longmapsto x^n\)</span> définie sur <span class="math inline">\(\R\)</span> et <span class="math inline">\(g:x \longmapsto \frac{1}{x^n}\)</span> définie sur <span class="math inline">\(]-\infty\,;\, 0[\)</span> ou sur <span class="math inline">\(]0\,;\, + \infty[\)</span>.</p>
-<p>On démontre par récurrence (programme de terminale) que :<br>
-<span class="math display">\[f':x \longmapsto n x^{n-1} \quad \et \quad g':x \longmapsto - \frac{n}{x^{n+1}}\]</span></p>
-<p>Par exemple si<br>
-<span class="math display">\[f:x \longmapsto x^3 \qquad \et \qquad  g:x \longmapsto \frac{1}{x^5}\]</span><br>
-alors<br>
-<span class="math display">\[f':x \longmapsto 3x^2 \qquad \et \qquad g':x \longmapsto -\frac{5}{x^6}\]</span></p>
+Soit <span class="math inline">\(n \in \N^*\)</span>, on définie les fonctions <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> par</p>
+<ul>
+<li><span class="math inline">\(f:x \longmapsto x^n\)</span> définie sur <span class="math inline">\(\R\)</span>,<br>
+</li>
+<li><span class="math inline">\(g:x \longmapsto \dfrac{1}{x^n}\)</span> définie sur <span class="math inline">\(]-\infty\,;\,0[ \cup ]0\,;\,+\infty[\)</span>,</li>
+</ul>
+<p>on démontre par récurrence (programme de terminale) que <span class="math display">\[
+f':x \longmapsto n x^{n-1}
+\quad \et \quad
+g':x \longmapsto -\dfrac{n}{x^{n+1}}.
+\]</span></p>
+<p>Par exemple si <span class="math inline">\(f:x \longmapsto x^3\)</span> et <span class="math inline">\(g:x \longmapsto \dfrac{1}{x^5}\)</span>, alors <span class="math display">\[
+f'(x)=3x^2 \qquad \et \qquad g'(x)=-\dfrac{5}{x^6}.
+\]</span></p>
 </div>
 <div class="bloc exo">
-<p><span class="bloc-titre">Exemple :</span></p>
+<p><span class="bloc-titre">Exemple :</span><br>
+On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f'(x)= 3x^2-5x+3\)</span>.</p>
 <ol type="1">
-<li>Démontrer que la fonction inverse est dérivable en tout réel <span class="math inline">\(a \ne 0\)</span>.</li>
+<li>Déterminer l’équation réduite de la tangente à l représetnation graphique de <span class="math inline">\(f\)</span> au point d’abscisse <span class="math inline">\(2\)</span>.</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-Pour tout réel <span class="math inline">\(a \neq 0\)</span>, et tout <span class="math inline">\(h \neq 0\)</span> tel que <span class="math inline">\(a+h \neq 0\)</span>,<br>
-<span class="math display">\[\tau_a(h) = \dfrac{\dfrac{1}{a+h} - \dfrac{1}{a}}{h} = \dfrac{a-(a+h)}{h a(a+h)} = - \frac{1}{a(a+h)}\]</span><br>
-Or <span class="math inline">\(\lim_{h \to 0} \, \tau_a(h) = - \frac{1}{a^2}\)</span>.<br>
-Ainsi la fonction inverse est dérivable en tout réel <span class="math inline">\(a\)</span> non nul, et pour tout <span class="math inline">\(a \neq 0\)</span>, <span class="math inline">\(f'(a) =-\frac{1}{a^2}\)</span>.
+<p><span class="math inline">\(f\)</span> est une fonction polynôme donc dérivable sur son ensembnle de définition <span class="math inline">\(\R\)</span>.</p>
+<p>Pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math display">\[f'(x)=2 \times 3x -5 = 6x-5\]</span></p>
+<p>Or <span class="math display">\[M(x \, ;\,y) \in T_2 \Longleftrightarrow T_2 \,: \, y= f'(2)(x-2) + f(2) \Longleftrightarrow T_2 \,: \, y= 7(x-2) + 5  \Longleftrightarrow T_2 \,: \, y=7x-9\]</span></p>
+<p>Ainsi</p>
+<p><span class="math display">\[T_2 \,:\, y=7x-9
+    \]</span></p>
 </details>
 <ol start="2" type="1">
-<li>Déterminer l’équation réduite de la <span class="math inline">\(T_a\)</span>, tangente à <span class="math inline">\(\mathscr{C}_f\)</span> au point d’abscisse <span class="math inline">\(a\)</span> :</li>
+<li>Déterminer la position relative de la représentation graphique de <span class="math inline">\(f\)</span> par rapport à sa tangente.</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<p><span class="math inline">\(M(x\,;\,y) \in T_a \Longleftrightarrow y=f'(a)(x-a)+f(a)\)</span><br>
-<span class="math inline">\(\Longleftrightarrow y=-\frac{1}{a^2} x + \frac{1}{a} + \frac{1}{a}\)</span></p>
-Donc<br>
-<span class="math display">\[T_a: y=- \frac{1}{a^2}x + \frac{2}{a}\]</span>
+<p>Pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[f(x)-(7x-9) -5x+3 = 3x^2-5x+3 - 7x + 9 = 3x^2 -12x +12 =3 (x^2-4x+4)= 3(x-2)^2\]</span></p>
+<p>On déduit donc que pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[f(x) \geqslant 7x-9\]</span></p>
+<p>Donc que la représentation graphique de <span class="math inline">\(f\)</span> est située au-dessus de <span class="math inline">\(T_2\)</span></p>
 </details>
-<ol start="3" type="1">
-<li>Déterminer les coordonnées des points <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, points d’intersection de la tangente avec les axes du repère.</li>
+</div>
+<div class="bloc exo">
+<p><span class="bloc-titre">Exemple :</span><br>
+On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R_+\)</span> par <span class="math inline">\(f(x) = \sqrt{x}\)</span>.</p>
+<ol type="1">
+<li>Déterminer l’approximation affine de <span class="math inline">\(f(1+x)\)</span> pour <span class="math inline">\(x\)</span> proche de <span class="math inline">\(0\)</span>.</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<ul>
-<li><p><span class="math inline">\(A(x_A\, ; \, y_A)\)</span> le point d’intersection de <span class="math inline">\(T_a\)</span> avec l’axe des abscisses : <span class="math inline">\(y_A=0\)</span>.<br>
-Donc<br>
-<span class="math display">\[0=-\frac{1}{a^2}x_A+ \frac{2}{a} \quad \Rightarrow \quad x_A=2a\]</span></p></li>
-<li><p><span class="math inline">\(B(x_B \, ; \, y_B)\)</span> le point d’intersection de <span class="math inline">\(T_a\)</span> avec l’axe des ordonnées : <span class="math inline">\(x_B=0\)</span>.<br>
-Donc<br>
-<span class="math display">\[y_B=-\frac{1}{a^2} \times 0 + \frac{2}{a}=\frac{2}{a}\]</span></p></li>
-</ul>
-Ainsi <span class="math inline">\(A\left(2a \, ; \, 0\right)\)</span> et <span class="math inline">\(B \left(0 \, ;\, \frac{2}{a} \right)\)</span>.
+<p>On sait que <span class="math inline">\(f\)</span> est dérivable en <span class="math inline">\(1\)</span> et que <span class="math inline">\(f'(1) = \dfrac{1}{2\sqrt{1}} = \dfrac{1}{2}\)</span>.</p>
+<p>De plus <span class="math inline">\(f(1) = \sqrt{1} = 1\)</span>. Ainsi, D’après la formule de l’approximation affine, $ f(1+x) f(1) + x f’(1) <span class="math display">\[
+  On obtient l'approximation classique suivante, valable pour $x$ proche de $0$ :
+\]</span> + x $$</p>
 </details>
-<ol start="4" type="1">
-<li>Montrer que le milieu de <span class="math inline">\([AB]\)</span> est le point de tangence :</li>
+<ol start="2" type="1">
+<li>Calculer une valeur approchée de <span class="math inline">\(\sqrt{1,08}\)</span> et comparer avec la calculatrice.</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
-<p>Soit <span class="math inline">\(M\)</span> le milieu de <span class="math inline">\([AB]\)</span>, alors<br>
-<span class="math display">\[M\left(\frac{2a+0}{2} \, ; \dfrac{0+\frac{2}{a}}{2} \right) = \left(a \, ; \, \frac{1}{a} \right)\]</span></p>
-Or <span class="math inline">\(M \in \mathscr{C}_f\)</span> (car <span class="math inline">\(f(a)=1/a\)</span>), et <span class="math inline">\(M \in (AB)\)</span>, donc <span class="math inline">\(M\)</span> est bien le point de tangence.<br>
-
+Par l’approximation affine (<span class="math inline">\(x=0,08\)</span>) : <span class="math display">\[ \sqrt{1+0,08} \approx 1 + \dfrac{0,08}{2} \approx 1,04 \]</span>
 </details>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span><br> A l’aide de la calculatrice on trouve, <span class="math display">\[ \sqrt{1,08} \approx 1,03923... \]</span> L’erreur commise est inférieure à <span class="math inline">\(0,001\)</span>.</p>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="tangente.html">⬅️</a></p>
@@ -944,14 +1012,13 @@ Or <span class="math inline">\(M \in \mathscr{C}_f\)</span> (car <span class="ma
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

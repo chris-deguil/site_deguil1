@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -67,19 +67,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -148,14 +147,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -163,6 +164,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -196,7 +198,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -395,7 +397,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -403,7 +405,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -434,6 +436,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -550,6 +553,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -594,47 +603,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Probabilité conditionnelles</span></a>
+ <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
@@ -669,6 +643,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
@@ -676,6 +691,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -698,6 +719,41 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
   </div>
 </li>
       </ul>
@@ -809,7 +865,7 @@ window.Quarto = {
 <p><span class="exo-num"><strong>Exercice 1 : </strong></span></p>
 <ol type="1">
 <li>Soit <span class="math inline">\((u_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n \in \N\)</span>, par <span class="math inline">\(u_n=n^2-3\)</span>. Calculer <span class="math inline">\(u_{11}\)</span>.</li>
-<li>Soit <span class="math inline">\((v_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n \in \N\)</span>, par <span class="math inline">\(v_n=\frac{n^2-3n}{n-5}\)</span>. Calculer le premier terme de la suite.</li>
+<li>Soit <span class="math inline">\((v_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n \in \N\)</span>, par <span class="math inline">\(v_n=\dfrac{n^2-3n}{n-5}\)</span>. Calculer le premier terme de la suite.</li>
 <li>Soit <span class="math inline">\((w_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n \in \N\)</span>, par <span class="math display">\[w_n=\sum_{k=0}^n 2^k=1+2+2^2+\dots +2^n\]</span> Calculer <span class="math inline">\(u_4\)</span>.</li>
 </ol>
 </div>
@@ -819,7 +875,7 @@ window.Quarto = {
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 2 : </strong></span></p>
 <p>On considère le programme python suivant :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span><span class="op">-</span><span class="dv">3</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> terme_suite(k): </span>
@@ -827,7 +883,7 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(k):</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        u<span class="op">=</span>f(i)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        L.append(u)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> u</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> u</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
 <li>Que renvoie l’appel <code>terme_suite(10)</code> ? À quelle suite de l’exercice cela correspond ?</li>
 <li>Modifier le script précédent afin de calculer les 10 premiers termes de la suite <span class="math inline">\((v_n)\)</span> précédente.</li>
@@ -893,7 +949,7 @@ window.Quarto = {
 <li><ol type="a">
 <li>Soit <span class="math inline">\((u_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n \in \N\)</span>, par <span class="math inline">\(u_0= 3\)</span> et <span class="math inline">\(u_{n+1}=u_n^2-3\)</span>. Calculer les trois premiers termes.<br>
 </li>
-<li>Soit <span class="math inline">\((v_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n \in \N\)</span>, par <span class="math inline">\(v_0=3\)</span> et <span class="math inline">\(v_{n+1}=\frac{v_n}{2n+1}\)</span>. Calculer les trois premiers termes.</li>
+<li>Soit <span class="math inline">\((v_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n \in \N\)</span>, par <span class="math inline">\(v_0=3\)</span> et <span class="math inline">\(v_{n+1}=\dfrac{v_n}{2n+1}\)</span>. Calculer les trois premiers termes.</li>
 </ol></li>
 <li>Modifier le script de l’exercice précédent afin que le programme renvoie la liste des <span class="math inline">\(n\)</span> premiers termes de la suite <span class="math inline">\((u_n)\)</span>.</li>
 </ol>
@@ -930,15 +986,15 @@ Exprimer <span class="math inline">\(u_{n+1}\)</span> en fonction de <span class
 <h2 class="anchored" data-anchor-id="exercice-8">Exercice 9</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 9 : </strong></span></p>
-<p>Soit <span class="math inline">\((u_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n\)</span> par <span class="math inline">\(u_n=1+(-1)^n \frac{5}{2^{n-1}}\)</span>.<br>
-Montrer que la suite <span class="math inline">\(v_n = \frac{u_{n+1}-1}{u_{n}-1}\)</span> est constante.</p>
+<p>Soit <span class="math inline">\((u_n)\)</span> une suite définie pour tout entier <span class="math inline">\(n\)</span> par <span class="math inline">\(u_n=1+(-1)^n \dfrac{5}{2^{n-1}}\)</span>.<br>
+Montrer que la suite <span class="math inline">\(v_n = \dfrac{u_{n+1}-1}{u_{n}-1}\)</span> est constante.</p>
 </div>
 </section>
 <section id="exercice-9" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-9">Exercice 10</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 10 : </strong></span></p>
-<p>Soit la suite <span class="math inline">\((un_)\)</span> définie sur <span class="math inline">\(\N\)</span> par <span class="math inline">\(u_0=1\)</span> et <span class="math inline">\(u_{n+1} = \frac{u_n}{1+u_n(1+2n)}\)</span></p>
+<p>Soit la suite <span class="math inline">\((un_)\)</span> définie sur <span class="math inline">\(\N\)</span> par <span class="math inline">\(u_0=1\)</span> et <span class="math inline">\(u_{n+1} = \dfrac{u_n}{1+u_n(1+2n)}\)</span></p>
 <ol type="1">
 <li></li>
 </ol>
@@ -957,7 +1013,7 @@ Montrer que la suite <span class="math inline">\(v_n = \frac{u_{n+1}-1}{u_{n}-1}
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 11 : </strong></span></p>
 <ol type="1">
-<li>On considère la suite définie par <span class="math inline">\(u_n=\frac{2n-5}{n^2-4}\)</span>
+<li>On considère la suite définie par <span class="math inline">\(u_n=\dfrac{2n-5}{n^2-4}\)</span>
 <ol type="a">
 <li>À partir de quel rang la suite est-elle parfaitement définie ? Justifier brièvement.<br>
 </li>
@@ -967,11 +1023,11 @@ Montrer que la suite <span class="math inline">\(v_n = \frac{u_{n+1}-1}{u_{n}-1}
 </ol></li>
 <li>On considère la suite définie par la fonction python ci-dessous :</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> suite(n):</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> suite(n):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> i <span class="op">/</span> (<span class="dv">2</span><span class="op">*</span>u <span class="op">+</span> <span class="dv">1</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> u</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> u</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
 <li><ol type="a">
 <li>Donner le terme initial de la suite ainsi que la relation de récurrence.</li>
@@ -996,7 +1052,7 @@ Montrer que la suite <span class="math inline">\(v_n = \frac{u_{n+1}-1}{u_{n}-1}
 <li>Établir une relation de récurrence entre <span class="math inline">\(u_{n+1}\)</span> et <span class="math inline">\(u_n\)</span>.</li>
 </ol>
 <ol start="2" type="1">
-<li><p>On considère la suite <span class="math inline">\((v_n)\)</span> définie pour tout <span class="math inline">\(n \leqslant 1\)</span> par <span class="math display">\[v_n=\frac{n(n+1)(2n+1)}{6}\]</span></p>
+<li><p>On considère la suite <span class="math inline">\((v_n)\)</span> définie pour tout <span class="math inline">\(n \leqslant 1\)</span> par <span class="math display">\[v_n=\dfrac{n(n+1)(2n+1)}{6}\]</span></p>
 <ol type="a">
 <li>Montrer que <span class="math inline">\(u_1=v_1\)</span>.<br>
 </li>
@@ -1013,9 +1069,9 @@ Montrer que la suite <span class="math inline">\(v_n = \frac{u_{n+1}-1}{u_{n}-1}
 <p><span class="exo-num"><strong>Exercice 13 : </strong></span></p>
 <p>Écrire un script python qui permet de retourner la liste des <span class="math inline">\(k\)</span> premiers de la suite <span class="math inline">\((u_n)\)</span>.</p>
 <ol type="1">
-<li><span class="math inline">\(u_n=\frac{2n}{n^2+1}\)</span><br>
+<li><span class="math inline">\(u_n=\dfrac{2n}{n^2+1}\)</span><br>
 </li>
-<li><span class="math inline">\(u_0=3\)</span> et <span class="math inline">\(u_{n+1}=\frac{u_n-1}{u_n+1}\)</span><br>
+<li><span class="math inline">\(u_0=3\)</span> et <span class="math inline">\(u_{n+1}=\dfrac{u_n-1}{u_n+1}\)</span><br>
 </li>
 <li><span class="math display">\[
 \left\{
@@ -1067,7 +1123,7 @@ Proposer un algorithme utilisant la formule de récurrence de la suite <span cla
 <h2 class="anchored" data-anchor-id="exercice-14">Exercice 15</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 15 : </strong></span></p>
-<p>Soit <span class="math inline">\((u_n)_{n \geq 0}\)</span> définie par <span class="math inline">\(u_n= \frac{2n - 1}{n + 1}\)</span></p>
+<p>Soit <span class="math inline">\((u_n)_{n \geq 0}\)</span> définie par <span class="math inline">\(u_n= \dfrac{2n - 1}{n + 1}\)</span></p>
 <ol type="1">
 <li>Calculer les 3 premiers termes de la suite.</li>
 <li>Étudier les variations de la suite.</li>
@@ -1098,10 +1154,10 @@ Proposer un algorithme utilisant la formule de récurrence de la suite <span cla
 <h2 class="anchored" data-anchor-id="exercice-17">Exercice 18</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 18 : </strong></span><span class="exo-extra"> Étude par le quotient </span></p>
-<p>En étudiant le signe de <span class="math inline">\(u_n\)</span> et le quotient <span class="math inline">\(\frac{u_{n+1}}{u_n}\)</span> (on admettra que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(u_n\neq 0\)</span>)</p>
+<p>En étudiant le signe de <span class="math inline">\(u_n\)</span> et le quotient <span class="math inline">\(\dfrac{u_{n+1}}{u_n}\)</span> (on admettra que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(u_n\neq 0\)</span>)</p>
 <ul>
-<li><span class="math inline">\(u_n = \frac{10}{7^n}\)</span></li>
-<li><span class="math inline">\(v_n = \frac{2^{n+1}}{3^{1-n}}\)</span></li>
+<li><span class="math inline">\(u_n = \dfrac{10}{7^n}\)</span></li>
+<li><span class="math inline">\(v_n = \dfrac{2^{n+1}}{3^{1-n}}\)</span></li>
 <li><span class="math inline">\(w_n = n \times 3^{-n}\)</span></li>
 <li><span class="math inline">\(\left\{\begin{array}{l}t_0 = -1\\ t_{n+1} = t_n^3 +2t_n \end{array} \right.\)</span></li>
 </ul>
@@ -1117,7 +1173,7 @@ Proposer un algorithme utilisant la formule de récurrence de la suite <span cla
 <li><span class="math inline">\(u_n = -n^3 + 3n\)</span></li>
 <li><span class="math inline">\(w_n = n^2 -2n +1\)</span></li>
 <li><span class="math inline">\(s_n=\sqrt{2n-4}\)</span></li>
-<li><span class="math inline">\(t_n=\frac{4-n}{n+1}\)</span></li>
+<li><span class="math inline">\(t_n=\dfrac{4-n}{n+1}\)</span></li>
 </ul></li>
 <li><p>Peut-on appliquer cette méthode à la suite <span class="math inline">\((r_n)\)</span> définie par <span class="math inline">\(r_0=4\)</span> et pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[r_{n+1}=r_n^2-2n+3\]</span></p></li>
 </ol>
@@ -1146,9 +1202,9 @@ Proposer un algorithme utilisant la formule de récurrence de la suite <span cla
 <p><span class="exo-num"><strong>Exercice 21 : </strong></span><span class="exo-extra">Méthode au choix </span></p>
 <p>Étudier les variations des suites suivantes en utilisant la méthode de votre choix.</p>
 <ul>
-<li><span class="math inline">\(u_n = n + \frac{1}{n+1}\)</span></li>
-<li><span class="math inline">\(v_n = \frac{n+1}{2^n}\)</span></li>
-<li><span class="math inline">\(\left\{\begin{array}{l}w_0=1\\ w_n = w_{n+1} + \frac{1}{n} \end{array} \right.\)</span></li>
+<li><span class="math inline">\(u_n = n + \dfrac{1}{n+1}\)</span></li>
+<li><span class="math inline">\(v_n = \dfrac{n+1}{2^n}\)</span></li>
+<li><span class="math inline">\(\left\{\begin{array}{l}w_0=1\\ w_n = w_{n+1} + \dfrac{1}{n} \end{array} \right.\)</span></li>
 </ul>
 </div>
 </section>
@@ -1172,7 +1228,7 @@ où <span class="math inline">\(g:x \longmapsto x-4\)</span>. La suite <span cla
 <p><span class="exo-num"><strong>Exercice 23 : </strong></span></p>
 <p>Soit <span class="math inline">\((u_n)\)</span> une suite à termes strictement positifs.</p>
 <ol type="1">
-<li>Démontrer que si <span class="math inline">\((u_n)\)</span> est strictement croissante alors <span class="math inline">\(\left(\frac{1}{u_n} \right)\)</span> est strictement décroissante.</li>
+<li>Démontrer que si <span class="math inline">\((u_n)\)</span> est strictement croissante alors <span class="math inline">\(\left(\dfrac{1}{u_n} \right)\)</span> est strictement décroissante.</li>
 <li>Que peut-on dire de la réciproque ?</li>
 </ol>
 </div>
@@ -1183,13 +1239,13 @@ où <span class="math inline">\(g:x \longmapsto x-4\)</span>. La suite <span cla
 <p><span class="exo-num"><strong>Exercice 24 : </strong></span><span class="exo-extra">(Extrait devoir) </span></p>
 <ol type="1">
 <li><p>On considère les suites <span class="math inline">\((u_n)\)</span>, <span class="math inline">\((v_n)\)</span> définies pour tout <span class="math inline">\(n \in \N\)</span> par<br>
-<span class="math display">\[u_n = 2n^2+4n-2 \quad ; \quad v_n = -\frac{3^n}{2} \quad ; \quad w_n= n- \frac{1}n\]</span></p>
+<span class="math display">\[u_n = 2n^2+4n-2 \quad ; \quad v_n = -\dfrac{3^n}{2} \quad ; \quad w_n= n- \dfrac{1}n\]</span></p>
 <ul>
 <li>Calculer le 3 terme de la suite <span class="math inline">\((u_n)\)</span>.</li>
 <li>Étudier les variations des suites <span class="math inline">\((u_n)\)</span>, <span class="math inline">\((v_n)\)</span> et <span class="math inline">\((w_n)\)</span> par étude de la différence.</li>
 </ul></li>
 <li><p>On considère la suite <span class="math inline">\((t_n)\)</span> définie par<br>
-<span class="math display">\[t_n=\frac{-2^n}{n-4}\]</span></p>
+<span class="math display">\[t_n=\dfrac{-2^n}{n-4}\]</span></p>
 <ul>
 <li>À partir de quel rang la suite est-elle définie ?</li>
 <li>En utilisant la méthode du quotient, déterminer les variations de la suite <span class="math inline">\((t_n)\)</span>.</li>
@@ -1202,7 +1258,7 @@ où <span class="math inline">\(g:x \longmapsto x-4\)</span>. La suite <span cla
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 25 : </strong></span></p>
 <p>On considère la suite <span class="math inline">\((u_n)\)</span> définie pour tout <span class="math inline">\(n \geqslant 1\)</span> par<br>
-<span class="math display">\[u_n=\sum_{k=1}^n \frac{(-1)^k}{k}\]</span><br>
+<span class="math display">\[u_n=\sum_{k=1}^n \dfrac{(-1)^k}{k}\]</span><br>
 Étudier les variations de la suite <span class="math inline">\((v_n)\)</span> où pour tout <span class="math inline">\(n \in \N^*\)</span>, <span class="math inline">\(v_n=u_{2n}\)</span></p>
 </div>
 </section>
@@ -1232,11 +1288,11 @@ où <span class="math inline">\(g:x \longmapsto x-4\)</span>. La suite <span cla
 <h2 class="anchored" data-anchor-id="exercice-26">Exercice 27</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 27 : </strong></span></p>
-<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie sur <span class="math inline">\(\N\)</span> par <span class="math display">\[u_n=\frac{-3^n}{(n^2+2)2^n}\]</span></p>
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie sur <span class="math inline">\(\N\)</span> par <span class="math display">\[u_n=\dfrac{-3^n}{(n^2+2)2^n}\]</span></p>
 <ol type="1">
 <li>Justifier que pour tout <span class="math inline">\(n &gt;0\)</span>, <span class="math inline">\(u_n &lt;0\)</span><br>
 </li>
-<li>Montrer que pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[\frac{u_{n+1}}{u_n}&gt;1 \Longleftrightarrow n(n-4) &gt;0\]</span><br>
+<li>Montrer que pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[\dfrac{u_{n+1}}{u_n}&gt;1 \Longleftrightarrow n(n-4) &gt;0\]</span><br>
 </li>
 <li>Résoudre <span class="math inline">\(n(n-4) &gt;0\)</span><br>
 </li>
@@ -1249,7 +1305,7 @@ où <span class="math inline">\(g:x \longmapsto x-4\)</span>. La suite <span cla
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 28 : </strong></span></p>
 <p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0=2\)</span> et pour tout <span class="math inline">\(n \in \N\)</span>,<br>
-<span class="math display">\[u_{n+1}=1- \frac{1}{u_n}\]</span><br>
+<span class="math display">\[u_{n+1}=1- \dfrac{1}{u_n}\]</span><br>
 Montrer que la suite <span class="math inline">\((u_{3n})\)</span> est constante.</p>
 </div>
 </section>
@@ -1301,8 +1357,8 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <h2 class="anchored" data-anchor-id="exercice-30">Exercice 31</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 31 : </strong></span></p>
-<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0= \frac12\)</span> et pour tout <span class="math inline">\(n \in \N\)</span>,<br>
-<span class="math display">\[u_{n+1} = \frac{3u_n}{1+2u_n}\]</span></p>
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0= \dfrac12\)</span> et pour tout <span class="math inline">\(n \in \N\)</span>,<br>
+<span class="math display">\[u_{n+1} = \dfrac{3u_n}{1+2u_n}\]</span></p>
 <ol type="1">
 <li>Déterminer les trois premiers termes de la suite<br>
 </li>
@@ -1317,7 +1373,7 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 </ol>
 <ol start="3" type="1">
 <li>On considère la suite <span class="math inline">\((v_n)\)</span> définie sur <span class="math inline">\(\N\)</span> par<br>
-<span class="math display">\[v_{n+1} = \frac{u_n}{1-u_n}\]</span>
+<span class="math display">\[v_{n+1} = \dfrac{u_n}{1-u_n}\]</span>
 <ol type="a">
 <li>Calculer <span class="math inline">\(v_0\)</span> et <span class="math inline">\(v_1\)</span><br>
 </li>
@@ -1339,7 +1395,7 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <h2 class="anchored" data-anchor-id="exercice-31">Exercice 32</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 32 : </strong></span></p>
-<p>On considère la suite définie sur <span class="math inline">\(\N^*\)</span> par <span class="math inline">\(u_n=2-\frac{1}{n^2}\)</span></p>
+<p>On considère la suite définie sur <span class="math inline">\(\N^*\)</span> par <span class="math inline">\(u_n=2-\dfrac{1}{n^2}\)</span></p>
 <ol type="1">
 <li>Montrer que la suite <span class="math inline">\((u_n)\)</span> est croissante.</li>
 <li>Démontrer que pour tout <span class="math inline">\(n \geqslant 1\)</span>, <span class="math inline">\(u_n &lt;2\)</span></li>
@@ -1354,10 +1410,10 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <p><span class="exo-num"><strong>Exercice 33 : </strong></span></p>
 <p>À l’aide de la calculatrice, déterminer la limite des suites suivantes :</p>
 <ul>
-<li><span class="math inline">\(u_n=\frac{5 \times (-1)^n}{n+1}\)</span></li>
-<li><span class="math inline">\(v_n=\frac{1}{4} n^2-2n-1\)</span></li>
+<li><span class="math inline">\(u_n=\dfrac{5 \times (-1)^n}{n+1}\)</span></li>
+<li><span class="math inline">\(v_n=\dfrac{1}{4} n^2-2n-1\)</span></li>
 <li><span class="math inline">\(\left\{\begin{array}{l}w_0=5\\ w_{n+1}=0,8 \times 0,8 w_n\end{array} \right.\)</span></li>
-<li><span class="math inline">\(\left\{\begin{array}{l}t_0=1\\ t_{n+1}=-\frac{2}{3} t_n +4\end{array} \right.\)</span></li>
+<li><span class="math inline">\(\left\{\begin{array}{l}t_0=1\\ t_{n+1}=-\dfrac{2}{3} t_n +4\end{array} \right.\)</span></li>
 </ul>
 </div>
 </section>
@@ -1369,7 +1425,7 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <ul>
 <li><span class="math inline">\(u_n=-5n+2\)</span></li>
 <li><span class="math inline">\(v_n=4n^2+n+7\)</span></li>
-<li><span class="math inline">\(w_n=\frac{2n+3}{n}\)</span></li>
+<li><span class="math inline">\(w_n=\dfrac{2n+3}{n}\)</span></li>
 <li><span class="math inline">\(wx_n=(-1)^n\)</span></li>
 </ul>
 </div>
@@ -1378,7 +1434,7 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <h2 class="anchored" data-anchor-id="exercice-34">Exercice 35</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 35 : </strong></span></p>
-<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0=3\)</span> et pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_{n+1} = \frac{1}{2} u_n +1\)</span>.</p>
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0=3\)</span> et pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_{n+1} = \dfrac{1}{2} u_n +1\)</span>.</p>
 <ol type="1">
 <li>On admet que pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_n \leqslant 2\)</span>
 <ol type="a">
@@ -1386,19 +1442,19 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <li>Compléter le programme Python suivant :</li>
 </ol></li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seuil_suite():</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seuil_suite():</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> ................. :</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> n <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> ...................</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <iframe src="https://console.basthon.fr/" width="100%" height="520" style="border:1px solid #ddd;border-radius:8px" loading="lazy">
 </iframe>
 <ol start="2" type="1">
 <li>Étude algébrique :
 <ol type="a">
-<li>Montrer que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(u_n= \left(\frac{1}{2}\right)^n + 2\)</span></li>
+<li>Montrer que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(u_n= \left(\dfrac{1}{2}\right)^n + 2\)</span></li>
 <li>Démontrer que la suite <span class="math inline">\((u_n)\)</span> est croissante et déterminer sa limite.</li>
 <li>Déterminer, à l’aide des variations de la suite, le plus petit entier <span class="math inline">\(n\)</span> tel que <span class="math inline">\(2 \leqslant u_n &lt; 2,00001\)</span></li>
 </ol></li>
@@ -1421,11 +1477,11 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <h2 class="anchored" data-anchor-id="exercice-36">Exercice 37</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 37 : </strong></span></p>
-<p>On considère la suite <span class="math inline">\((v_n)\)</span> définie sur <span class="math inline">\(\N\)</span> par <span class="math inline">\(v_n=\frac{10n+1}{5n+6}\)</span>.</p>
+<p>On considère la suite <span class="math inline">\((v_n)\)</span> définie sur <span class="math inline">\(\N\)</span> par <span class="math inline">\(v_n=\dfrac{10n+1}{5n+6}\)</span>.</p>
 <ol type="1">
 <li>Conjecturer le comportement de la suite au voisinage de <span class="math inline">\(+\infty\)</span>.</li>
 <li><ol type="a">
-<li>Démontrer que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(v_n-2= \frac{-11}{5n+6}\)</span><br>
+<li>Démontrer que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(v_n-2= \dfrac{-11}{5n+6}\)</span><br>
 </li>
 <li>Valider par un argument votre conjecture.</li>
 </ol></li>
@@ -1441,13 +1497,13 @@ En utilisant la question 1., démontrer que la suite <span class="math inline">\
 <h2 class="anchored" data-anchor-id="exercice-37">Exercice 38</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 38 : </strong></span></p>
-<p>On pose pour tout entier <span class="math inline">\(n \neq 0\)</span>, <span class="math display">\[S_n= \sum_{k=0}^n \frac{1}{k(k+1)}\]</span></p>
+<p>On pose pour tout entier <span class="math inline">\(n \neq 0\)</span>, <span class="math display">\[S_n= \sum_{k=0}^n \dfrac{1}{k(k+1)}\]</span></p>
 <ol type="1">
 <li>Démontrer que la suite <span class="math inline">\((S_n)\)</span> est croissante.<br>
 </li>
 <li>Démontrer que pour tout entier <span class="math inline">\(k \neq 0\)</span>,<br>
 <span class="math display">\[
-\frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}
+\dfrac{1}{k(k+1)} = \dfrac{1}{k} - \dfrac{1}{k+1}
 \]</span></li>
 <li>En déduire une expression simple de la <span class="math inline">\(S_n\)</span>.<br>
 </li>
@@ -1504,11 +1560,11 @@ En déduire une conjecture géométrique sur l’aire du polygone inscrit.</li>
 <ol type="a">
 <li>Développer <span class="math inline">\((\sqrt{x} - \sqrt{y})^2\)</span>.<br>
 </li>
-<li>En déduire que <span class="math inline">\(\sqrt{xy} \leq \frac{x + y}{2}\)</span>.</li>
+<li>En déduire que <span class="math inline">\(\sqrt{xy} \leq \dfrac{x + y}{2}\)</span>.</li>
 </ol></li>
 <li>On considère les deux suites <span class="math inline">\((u_n)\)</span> et <span class="math inline">\((v_n)\)</span> définies par <span class="math inline">\(u_0 = 1\)</span>, <span class="math inline">\(v_0 = 4\)</span> et, pour tout entier naturel <span class="math inline">\(n\)</span>,<br>
 <span class="math display">\[
-u_{n+1} = \frac{u_n + v_n}{2} \quad \text{et} \quad v_{n+1} = \sqrt{u_n v_n}
+u_{n+1} = \dfrac{u_n + v_n}{2} \quad \text{et} \quad v_{n+1} = \sqrt{u_n v_n}
 \]</span>
 <ol type="a">
 <li>Calculer les valeurs exactes de <span class="math inline">\(u_1\)</span>, <span class="math inline">\(u_2\)</span>, <span class="math inline">\(v_1\)</span> et <span class="math inline">\(v_2\)</span>.<br>
@@ -1535,12 +1591,12 @@ u_n= \sqrt{n+1} -\sqrt{n}
 <ol type="a">
 <li>Démontrer que pour tout <span class="math inline">\(n \in \N^*\)</span>,<br>
 <span class="math display">\[
-\frac{1}{2\sqrt{n+1}} \leqslant u_n \leqslant \frac{1}{2\sqrt{n}}
+\dfrac{1}{2\sqrt{n+1}} \leqslant u_n \leqslant \dfrac{1}{2\sqrt{n}}
 \]</span></li>
 <li>En déduire (ou conjecturer) la limite de la suite <span class="math inline">\((u_n)\)</span>.</li>
 </ol></li>
 <li>On définit la suite <span class="math inline">\((v_n)\)</span> par <span class="math display">\[
-v_n =\frac{u_1+u_2+ \dots + u_3}{\sqrt{n}}
+v_n =\dfrac{u_1+u_2+ \dots + u_3}{\sqrt{n}}
 \]</span><br>
 Quelle est la limite de la suite <span class="math inline">\((v_n)\)</span> ?</li>
 </ol>
@@ -1560,7 +1616,7 @@ Quelle est la limite de la suite <span class="math inline">\((v_n)\)</span> ?</l
 <li>Exprimer <span class="math inline">\(u_{n+1}-u_n\)</span> en fonction et <span class="math inline">\(n\)</span> et en déduire les variations de la suite <span class="math inline">\((u_n)\)</span>.</li>
 <li>L’algorithme ci-dessous contient une fonction <code>suite</code> qui doit permettre de déterminer un rang <span class="math inline">\(n\)</span> à partir duquel tous les termes de la suite sont supérieurs à un nombre réel <span class="math inline">\(A\)</span>.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> u(n):</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> u(n):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n<span class="op">**</span><span class="dv">3</span><span class="op">-</span>n<span class="op">+</span><span class="dv">4</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seuil(A):</span>
@@ -1568,7 +1624,7 @@ Quelle est la limite de la suite <span class="math inline">\((v_n)\)</span> ?</l
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> u <span class="op">&lt;=</span> A:</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> u <span class="op">+</span> <span class="dv">4</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> n <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n, u</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n, u</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="5" type="1">
 <li><ol type="a">
 <li>Que est le rôle de la fonction ?</li>
@@ -1604,8 +1660,8 @@ u_{n+1} = 2u_n - 5 + n
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 44 : </strong></span></p>
 <p>On considère la suite <span class="math inline">\((u_n)\)</span> définie, pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, par : <span class="math display">\[
-u_0 = 1 \\
-u_{n+1} = \frac{u_n}{1+u_n}
+u_0 = 1 \et
+u_{n+1} = \dfrac{u_n}{1+u_n}
 \]</span></p>
 <ol type="1">
 <li>On considère la fonction <span class="math inline">\(g\)</span> définie sur <span class="math inline">\([0\,;\,+ \infty[\)</span> telle que <span class="math inline">\(u_{n+1}= g(u_n)\)</span>.
@@ -1618,12 +1674,10 @@ u_{n+1} = \frac{u_n}{1+u_n}
 </ol></li>
 </ol>
 <div style="text-align: center;">
-<p><img src="../../image/maths/Suite_numerique_f18_construction3.png" class="img-fluid" style="width:55.0%"></p>
+<p><img src="../../image/maths/Suite_numerique_f18_construction3.png" class="img-fluid" style="width:75.0%"></p>
 </div>
-<ol type="1">
-<li></li>
-</ol>
-<ol type="a">
+<ol start="2" type="1">
+<li><ol type="a">
 <li>Calculer les cinq premiers termes de la suite.<br>
 </li>
 <li>Conjecturer la forme générale de <span class="math inline">\(u_n\)</span>.<br>
@@ -1631,8 +1685,7 @@ u_{n+1} = \frac{u_n}{1+u_n}
 <li>Comment peut-on vérifier la cohérence la cohérence de la conjecture à l’aide de la calculatrice ?<br>
 </li>
 <li>Vérifier la conjecture algébriquement.</li>
-</ol>
-<ol start="3" type="1">
+</ol></li>
 <li>Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\([0\,;\,+ \infty[\)</span> telle que pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_{n}=f(n)\)</span>
 <ol type="a">
 <li>Donner l’expression de la fonction <span class="math inline">\(f\)</span>.<br>
@@ -1713,14 +1766,13 @@ u_{n+1} = \frac{u_n}{1+u_n}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,19 +33,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,14 +113,16 @@ window.MathJax = {
       gras: ["\\mathbf{#1}", 1],
       LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
       et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
       llr: "\\Longleftrightarrow",
       base: ["#1_{\\mathrm{#2}}", 2],
       abs: ["\\left\\lvert #1 \\right\\rvert", 1],
-            norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
       ve: ["\\overrightarrow{#1}", 1],
       vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -129,6 +130,7 @@ window.MathJax = {
       Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -162,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -361,7 +363,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -369,7 +371,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -388,7 +390,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/Operation_Derivee/operations.html">Opérations sur les dérivées - Applications</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/Operation_Derivee/extrema.html">Extrema</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/Operation_Derivee/lemmes.html">Opérations sur les dérivées - Applications</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/Operation_Derivee/extrema.html">Extrema</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -400,6 +402,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -516,6 +519,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
   </div>
@@ -560,47 +569,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Probabilité conditionnelles</span></a>
+ <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
@@ -635,6 +609,47 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
@@ -642,6 +657,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
@@ -668,6 +689,41 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -686,7 +742,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/Operation_Derivee/operations.html">Opérations sur les dérivées - Applications</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/Operation_Derivee/extrema.html">Extrema</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/Operation_Derivee/lemmes.html">Opérations sur les dérivées - Applications</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/Operation_Derivee/extrema.html">Extrema</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Extrema</h1>
 </div>
@@ -713,11 +769,27 @@ window.Quarto = {
 <section id="extrema-locaux" class="level3">
 <h3 class="anchored" data-anchor-id="extrema-locaux">Extrema locaux</h3>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> - On dit que <span class="math inline">\(f\)</span> admet <span class="math inline">\(M\)</span> comme maximum sur <span class="math inline">\(I\)</span> s’il existe un réel <span class="math inline">\(a \in I\)</span> tel que <span class="math inline">\(f(a)=M\)</span> et, pour tout <span class="math inline">\(x \in I\)</span>, <span class="math inline">\(f(x) \leqslant M\)</span>.<br> - On dit que <span class="math inline">\(f\)</span> admet <span class="math inline">\(m\)</span> comme minimum sur <span class="math inline">\(I\)</span> s’il existe un réel <span class="math inline">\(a \in I\)</span> tel que <span class="math inline">\(f(a)=m\)</span> et, pour tout <span class="math inline">\(x \in I\)</span>, <span class="math inline">\(f(x) \geqslant m\)</span>.<br> - On dit que <span class="math inline">\(f\)</span> admet un extremum si <span class="math inline">\(f\)</span> admet un maximum ou un minimum.<br> - Si <span class="math inline">\(f\)</span> admet un minimum et un maximum, alors <span class="math inline">\(f\)</span> est dite bornée.</p>
+<p><span class="bloc-titre">Définition : </span><br></p>
+<ul>
+<li>On dit que <span class="math inline">\(f\)</span> admet <span class="math inline">\(M\)</span> comme maximum sur <span class="math inline">\(I\)</span> s’il existe un réel <span class="math inline">\(a \in I\)</span> tel que <span class="math inline">\(f(a)=M\)</span> et, pour tout <span class="math inline">\(x \in I\)</span>, <span class="math inline">\(f(x) \leqslant M\)</span>.<br></li>
+<li>On dit que <span class="math inline">\(f\)</span> admet <span class="math inline">\(m\)</span> comme minimum sur <span class="math inline">\(I\)</span> s’il existe un réel <span class="math inline">\(a \in I\)</span> tel que <span class="math inline">\(f(a)=m\)</span> et, pour tout <span class="math inline">\(x \in I\)</span>, <span class="math inline">\(f(x) \geqslant m\)</span>.<br></li>
+<li>On dit que <span class="math inline">\(f\)</span> admet un extremum si <span class="math inline">\(f\)</span> admet un maximum ou un minimum.<br></li>
+<li>Si <span class="math inline">\(f\)</span> admet un minimum et un maximum, alors <span class="math inline">\(f\)</span> est dite bornée.</li>
+</ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x) = \dfrac{x}{1+x^2}\)</span>.<br> Pour tout réel <span class="math inline">\(x\)</span> :<br>
-- <span class="math inline">\(\displaystyle \frac{1}{2} -f(x) =  \frac{1}{2} - \frac{x}{1+x^2}  = \frac{1+x^2-2x}{2(1+x^2)} = \frac{(x-1)^2}{2(1+x^2)} \geqslant 0\)</span> ;<br> - <span class="math inline">\(\displaystyle f(x)+\frac{1}{2} =  \frac{x}{1+x^2} + \frac{1}{2} =  \frac{x^2+1+2x}{2(1+x^2)} = \frac{(x+1)^2}{2(1+x^2)} \geqslant 0\)</span>.<br> On en déduit que, pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f(x) \in \left[-\frac{1}{2} \, ; \, \frac{1}{2}\right]\)</span>, donc <span class="math inline">\(f\)</span> est bornée.</p>
+<p><span class="bloc-titre">Exemple : </span><br> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x) = \dfrac{x}{1+x^2}\)</span>. Montrer que <span class="math inline">\(f\)</span> est borné</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>A l’aide de la calculatrice on conjecture que <span class="math inline">\(f(x)\)</span> est bornée par <span class="math inline">\(\dfrac12\)</span> et <span class="math inline">\(-\dfrac12\)</span>.</p>
+<p>Pour tout réel <span class="math inline">\(x\)</span> :</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \dfrac{1}{2} -f(x) =  \dfrac{1}{2} - \dfrac{x}{1+x^2}  = \dfrac{1+x^2-2x}{2(1+x^2)} = \dfrac{(x-1)^2}{2(1+x^2)} \geqslant 0\)</span> ;<br></li>
+<li><span class="math inline">\(\displaystyle f(x)+\dfrac{1}{2} =  \dfrac{x}{1+x^2} + \dfrac{1}{2} =  \dfrac{x^2+1+2x}{2(1+x^2)} = \dfrac{(x+1)^2}{2(1+x^2)} \geqslant 0\)</span>.<br> On en déduit que, pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f(x) \in \left[-\dfrac{1}{2} \, ; \, \dfrac{1}{2}\right]\)</span>, donc <span class="math inline">\(f\)</span> est bornée.</li>
+</ul>
+</details>
 </div>
 <div class="bloc ex">
 <span class="bloc-titre">Exemple : </span><br> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(]-\infty \, ; \, 10]\)</span> dont le tableau des variations est :<br>
@@ -750,84 +822,103 @@ La fonction <span class="math inline">\(f\)</span> :</p>
 <summary>
 Démonstration :
 </summary>
-Soit <span class="math inline">\(f\)</span> une fonction dérivable sur un intervalle ouvert <span class="math inline">\(I\)</span>.<br>
-1) On suppose que <span class="math inline">\(f'\)</span> s’annule en <span class="math inline">\(x_0\)</span> en changeant de signe et traitons le cas de l’existence d’un maximum : pour tout <span class="math inline">\(x \in ]a~;~x_0]\)</span>, <span class="math inline">\(f'(x) &gt; 0\)</span> et pour tout <span class="math inline">\(x \in [x_0~;~b[\)</span>, <span class="math inline">\(f'(x) &lt; 0\)</span>.<br> Donc <span class="math inline">\(f\)</span> est croissante sur <span class="math inline">\(]a~;~x_0]\)</span> et décroissante sur <span class="math inline">\([x_0~;~b[\)</span>. Elle admet donc un maximum local en <span class="math inline">\(x_0\)</span>.<br> 2) On suppose que <span class="math inline">\(f\)</span> admet un maximum en <span class="math inline">\(x_0\)</span> sur un intervalle <span class="math inline">\(]a~;~b[\)</span>. Ainsi, pour <span class="math inline">\(h &gt;0\)</span> : <span class="math display">\[\frac{f(x_0 +h) - f(x_0)}{h} \leq 0\]</span> et pour <span class="math inline">\(h&lt;0\)</span> : <span class="math display">\[\frac{f(x_0 +h) - f(x_0)}{h} \geq 0.\]</span><br> Donc en faisant tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span>, on a : <span class="math display">\[f'(x_0) \leq 0 \quad \text{et} \quad f'(x_0) \geq 0.\]</span> Donc <span class="math inline">\(f'(x_0) = 0\)</span>.
+<p>Soit <span class="math inline">\(f\)</span> une fonction dérivable sur un intervalle ouvert <span class="math inline">\(I\)</span>.</p>
+<ul>
+<li><p>On suppose que <span class="math inline">\(f'\)</span> s’annule en <span class="math inline">\(x_0\)</span> en changeant de signe et traitons le cas de l’existence d’un maximum :<br>
+pour tout <span class="math inline">\(x \in ]a~;~x_0]\)</span>, <span class="math inline">\(f'(x) &gt; 0\)</span> et pour tout <span class="math inline">\(x \in [x_0~;~b[\)</span>, <span class="math inline">\(f'(x) &lt; 0\)</span>.<br>
+Donc <span class="math inline">\(f\)</span> est croissante sur <span class="math inline">\(]a~;~x_0]\)</span> et décroissante sur <span class="math inline">\([x_0~;~b[\)</span>.<br>
+Elle admet donc un maximum local en <span class="math inline">\(x_0\)</span>.</p></li>
+<li><p>On suppose que <span class="math inline">\(f\)</span> admet un maximum en <span class="math inline">\(x_0\)</span> sur un intervalle <span class="math inline">\(]a~;~b[\)</span>.<br>
+Ainsi, pour <span class="math inline">\(h &gt; 0\)</span> : <span class="math display">\[\dfrac{f(x_0 + h) - f(x_0)}{h} \leq 0\]</span> et pour <span class="math inline">\(h &lt; 0\)</span> : <span class="math display">\[\dfrac{f(x_0 + h) - f(x_0)}{h} \geq 0\]</span> Donc en faisant tendre <span class="math inline">\(h\)</span> vers <span class="math inline">\(0\)</span>, on a : <span class="math display">\[f'(x_0) \leq 0 \quad \text{et} \quad f'(x_0) \geq 0\]</span> Donc <span class="math inline">\(f'(x_0) = 0\)</span>.</p></li>
+</ul>
 </details>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span><br> La condition « en changeant de signe » pour montrer l’existence d’un extremum est très importante.<br> En effet, considérons la fonction <span class="math inline">\(f\)</span> définie et dérivable sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x) = x^3\)</span>. On a pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math inline">\(f'(x) = 3x^2\)</span> et <span class="math inline">\(f'(0) =0\)</span>. Cela ne suffit pas pour conclure à l’existence d’un extremum.<br> <span class="math inline">\(f'\)</span> est une fonction carrée, donc <span class="math inline">\(f'(x)\)</span> est toujours positif. La dérivée ne changeant pas de signe, la fonction <span class="math inline">\(f\)</span> n’admet pas d’extremum local en <span class="math inline">\(0\)</span>.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> En reprenant l’exemple de la fonction <span class="math inline">\(g\)</span> précédente, on a</p>
-<p><span class="math display">\[g'(x) = 0 \Longleftrightarrow \left\{\begin{array}{l}
+<div class="bloc-titre">
+Exemple
+</div>
+<p>En reprenant l’exemple de la fonction <span class="math inline">\(g\)</span> précédente, on a <span class="math display">\[
+g'(x) = 0 \Longleftrightarrow \left\{\begin{array}{l}
 x=x_1\\
 \text{ou}\\
 x=x_2
 \end{array} \right.
-\]</span></p>
-<p>De plus, les dérivées en <span class="math inline">\(x_1\)</span> et en <span class="math inline">\(x_2\)</span> s’annulent en changeant de signe, on déduit que la fonction <span class="math inline">\(g\)</span> admet des extrema en ces abscisses.<br> Le tableau des variations permet de conclure que <span class="math inline">\(g\)</span> admet un minimum local en <span class="math inline">\(x_1\)</span> et un maximum local en <span class="math inline">\(x_2\)</span>.</p>
+\]</span> De plus, les dérivées en <span class="math inline">\(x_1\)</span> et en <span class="math inline">\(x_2\)</span> s’annulent en changeant de signe, on déduit que la fonction <span class="math inline">\(g\)</span> admet des extrema en ces abscisses.<br>
+Le tableau des variations permet de conclure que <span class="math inline">\(g\)</span> admet un minimum local en <span class="math inline">\(x_1\)</span> et un maximum local en <span class="math inline">\(x_2\)</span>.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br></p>
+<div class="bloc-titre">
+Exemple
+</div>
 <ol type="1">
-<li>On considère la fonction définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x)=x^3-x^2-x-1\)</span>. Déterminer la dérivée de <span class="math inline">\(f\)</span>.<br>
+<li>On considère la fonction définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math inline">\(f(x)=x^3-x^2-x-1\)</span>. Déterminer la dérivée de <span class="math inline">\(f\)</span>.</li>
+</ol>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<span class="math inline">\(f\)</span> est une fonction polynôme donc dérivable sur <span class="math inline">\(\R\)</span>. Pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math inline">\(f'(x)=3x^2-2x-1\)</span>.
-</details></li>
-<li>Montrer que, pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[f'(x)= 3 \left(x + \frac{1}{3} \right)(x-1).\]</span><br>
+<span class="math inline">\(f\)</span> est une fonction polynôme donc dérivable sur <span class="math inline">\(\mathbb{R}\)</span>. Pour tout <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(f'(x)=3x^2-2x-1\)</span>.
+</details>
+<ol start="2" type="1">
+<li>Montrer que, pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[f'(x)= 3 \left(x + \dfrac{1}{3} \right)(x-1).\]</span></li>
+</ol>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<span class="math inline">\(f'(x)\)</span> est une fonction polynôme de degré <span class="math inline">\(2\)</span> et <span class="math inline">\(1\)</span> est une racine évidente de ce trinôme, donc il admet une seconde racine <span class="math inline">\(x_2\)</span> vérifiant <span class="math inline">\(1\times x_2 = -\frac{1}{3}\)</span>, soit <span class="math inline">\(x_2=-\frac{1}{3}\)</span>.<br> On déduit du théorème de factorisation que, pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[f'(x)=3 \left(x + \frac{1}{3} \right)(x-1).\]</span>
-</details></li>
+<p><span class="math inline">\(f'(x)\)</span> est une fonction polynôme de degré <span class="math inline">\(2\)</span> et <span class="math inline">\(1\)</span> est une racine évidente de ce trinôme (<span class="math inline">\(3(1)^2 - 2(1) - 1 = 0\)</span>), donc il admet une seconde racine <span class="math inline">\(x_2\)</span> vérifiant <span class="math inline">\(1 \times x_2 = \frac{c}{a} = -\dfrac{1}{3}\)</span>, soit <span class="math inline">\(x_2=-\dfrac{1}{3}\)</span>.</p>
+On déduit du théorème de factorisation que, pour tout réel <span class="math inline">\(x\)</span> : <span class="math display">\[f'(x)=3 \left(x + \dfrac{1}{3} \right)(x-1)\]</span>
+</details>
+<ol start="3" type="1">
 <li><ol type="a">
-<li>La représentation graphique de <span class="math inline">\(f\)</span> admet-elle des extrema locaux ?<br></li>
+<li>La représentation graphique de <span class="math inline">\(f\)</span> admet-elle des extrema locaux ?</li>
 </ol></li>
 </ol>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<p><span class="math inline">\(f'(x)\)</span> est un polynôme du second degré ayant deux racines réelles distinctes. Il est donc du signe de son coefficient dominant <span class="math inline">\(3\)</span> à l’extérieur des racines et du signe contraire à l’intérieur.</p>
+<p><span class="math inline">\(f'(x)\)</span> est un polynôme du second degré ayant deux racines réelles distinctes. Il est donc du signe de son coefficient dominant (<span class="math inline">\(a=3 &gt; 0\)</span>) à l’extérieur des racines et du signe contraire à l’intérieur.</p>
 <div style="text-align:center;">
-<p><img src="../../image/maths/FonctionDerivees_signe_derivee4.png" alt="" width="60%"></p>
+<p><img src="../../image/maths/FonctionDerivees_signe_derivee4.png" alt="Tableau de signes" width="60%"></p>
 </div>
 <p>La dérivée s’annule et change de signe en <span class="math inline">\(-1/3\)</span> et en <span class="math inline">\(1\)</span>, donc <span class="math inline">\(f\)</span> admet deux extrema locaux :</p>
 <ul>
-<li>en <span class="math inline">\(-1/3\)</span>, un minimum local ;</li>
-<li>en <span class="math inline">\(1\)</span>, un maximum local.</li>
+<li>En <span class="math inline">\(-1/3\)</span>, la dérivée passe du positif au négatif : <span class="math inline">\(f\)</span> admet un <strong>maximum local</strong>.</li>
+<li>En <span class="math inline">\(1\)</span>, la dérivée passe du négatif au positif : <span class="math inline">\(f\)</span> admet un <strong>minimum local</strong>.</li>
 </ul>
 </details>
 <ol start="2" type="a">
-<li>Ces extrema sont-ils globaux ?
+<li>Ces extrema sont-ils globaux ?</li>
+</ol>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-On a <span class="math inline">\(f(2 ) =1 &gt; f\left(-\frac{1}{3} \right)\)</span> et <span class="math inline">\(f(-2)=-11&lt; f(1)\)</span>. Donc les extrema ne sont pas globaux.<br> On peut démontrer que la fonction n’admet aucun extremum global.
-</details></li>
-</ol>
+<p>On a <span class="math inline">\(f(2) = 1\)</span> et <span class="math inline">\(f(1) = -2\)</span>. Comme <span class="math inline">\(f(2) &gt; f(1)\)</span>, le maximum local n’est pas global.</p>
+<p>De même, <span class="math inline">\(f(-2) = -11\)</span> et <span class="math inline">\(f(-1/3) \approx -0,81\)</span>.</p>
+<p>Comme <span class="math inline">\(f(-2) &lt; f(-1/3)\)</span>, le minimum local n’est pas global.</p>
+</details>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br> On souhaite fabriquer des boîtes de rangement sans couvercle. Les boîtes auront la forme d’un parallélépipède rectangle de hauteur 16 cm et de base un rectangle ayant pour dimensions <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> exprimées en cm. Chaque boîte a un volume de 10 000 cm.</p>
 <ol type="1">
-<li>Montrer que <span class="math inline">\(y=\frac{625}{x}\)</span>.<br>
+<li>Montrer que <span class="math inline">\(y=\dfrac{625}{x}\)</span>.<br>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
 D’après l’énoncé, <span class="math inline">\(16xy=10000\)</span>, donc <span class="math inline">\(y=\dfrac{10000}{16x} = \dfrac{625}{x}\)</span>.
 </details></li>
-<li>Pour toute valeur de <span class="math inline">\(x\)</span>, on note <span class="math inline">\(f(x)\)</span> l’aire de la boîte (du parallélépipède rectangle) sans le couvercle. Démontrer que pour tout <span class="math inline">\(x &gt;0\)</span>, <span class="math display">\[f(x)= \frac{20\, 000}{x} +32x + 625.\]</span>
+<li>Pour toute valeur de <span class="math inline">\(x\)</span>, on note <span class="math inline">\(f(x)\)</span> l’aire de la boîte (du parallélépipède rectangle) sans le couvercle. Démontrer que pour tout <span class="math inline">\(x &gt;0\)</span>, <span class="math display">\[f(x)= \dfrac{20\, 000}{x} +32x + 625.\]</span>
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
 L’aire de la boîte est donnée par la somme des aires des deux parties latérales de côtés <span class="math inline">\(16 \times x\)</span>, des deux parties latérales de côtés <span class="math inline">\(16 \times y\)</span> et du fond de la boîte de côté <span class="math inline">\(x \times y\)</span>.<br> Ainsi, pour tout <span class="math inline">\(x \in \,]0 \, ; \,+ \infty[\)</span>, <span class="math display">\[f(x) = 2 \times 16x + 2 \times 16y + xy =
-32x + 32 \times \frac{625}{x} + x\frac{625}{x} = \frac{20\, 000}{x} +32x + 625.\]</span>
+32x + 32 \times \dfrac{625}{x} + x\dfrac{625}{x} = \dfrac{20\, 000}{x} +32x + 625.\]</span>
 </details></li>
 <li>Quelles dimensions doit-on donner à ces boîtes pour que leur surface ait une aire minimale ?<br>
 <details class="bloc cor">
@@ -835,10 +926,10 @@ L’aire de la boîte est donnée par la somme des aires des deux parties latér
 Afficher la correction
 </summary>
 <span class="math inline">\(f\)</span> est une fonction rationnelle donc dérivable sur son ensemble de définition. Pour tout réel <span class="math inline">\(x &gt;0\)</span>, <span class="math display">\[
-f'(x)= -\frac{20\,000}{x^2} + 32
-= \frac{32x^2-20\,000}{x^2}
-= 32 \times \frac{x^2-625}{x^2}
-= 32\times \frac{(x-25)(x+25)} {x^2}.
+f'(x)= -\dfrac{20\,000}{x^2} + 32
+= \dfrac{32x^2-20\,000}{x^2}
+= 32 \times \dfrac{x^2-625}{x^2}
+= 32\times \dfrac{(x-25)(x+25)} {x^2}.
 \]</span> Pour tout <span class="math inline">\(x &gt;0\)</span>, <span class="math inline">\(\dfrac{32(x+25)}{x^2}&gt;0\)</span>, donc <span class="math inline">\(f'(x)\)</span> est du signe de <span class="math inline">\((x-25)\)</span>.<br>
 <div style="text-align:center;">
 <p><img src="../../image/maths/FonctionDerivees_signe_derivee5.png" alt="" width="60%"></p>
@@ -919,14 +1010,13 @@ On déduit que les dimensions de la boîte pour que l’aire soit minimale sont 
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

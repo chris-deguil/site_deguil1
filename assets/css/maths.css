@@ -96,6 +96,22 @@ body.maths-theme .content {
 
 
 
+
+.exemp-extra {
+  display: inline;
+  font-weight: normal !important;
+  color: #4b5563;                 
+  font-size: 0.9em;              
+  margin-left: 0.5rem;           
+}
+
+
+.bloc.ex .exemp-extra {
+  font-style: normal;
+}
+
+
+
 details.bloc.demo {
   --tone: #cc0000;
   border: 2px solid var(--tone);
