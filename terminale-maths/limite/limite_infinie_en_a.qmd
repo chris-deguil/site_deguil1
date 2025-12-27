@@ -7,40 +7,39 @@ format:
 description: " "
 order: 8
 ---
-
+sd 
 
 ## Définition
 ::: {.bloc .def}
-<span class="bloc-titre">Definition : </span>
+<span class="bloc-titre">Définition : </span>
+
 On dit que $f$ tend vers $+\infty$ quand $x$ tend vers $x_0$ et on note $$\lim_{x \to x_0} f(x) = +\infty$$ lorsque 
-
-$$\forall A >0, \, \exists \delta  >0 , \, \forall x \in \R, \, (\abs{x-x_0} < \delta  \Rightarrow f(x) \geqslant A)$$
-
-
+$$\forall A >0, \, \exists \delta >0 , \, \forall x \in \mathbb{R}, \, (|x-x_0| < \delta \Rightarrow f(x) \geqslant A)$$
 :::
 
 
+
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemples : </span>
-On considère la fonction $f$ définie sur $\R$ par $$f(x) = \frac{1}{x^2}$$.$
+<div class="bloc-titre">Exemple :<span class="exemp-extra">    </span></div>
 
-la fonction carré étant croissante et la fonction inverse décroissante, on a par composition  
+On considère la fonction $f$ définie sur $\mathbb{R}^*$ par $f(x) = \dfrac{1}{x^2}$. 
 
-$$\abs{x-0} \leqslant \frac{1}{\sqrt{A}} \Rightarrow f(x) \geqslant A$$
-Ce qui prouve, par définition en utilisant $\delta=\frac{1}{\sqrt{A}}$, que 
+Etudier la limite en $0$
 
-$$\lim_{x \to 0}\frac{1}{x^2} = +\infty$$
-
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+La fonction carré étant décroissante sur $\mathbb{R}^-_*$ et croissante sur $\mathbb{R}^*_+$, et la fonction inverse étant décroissante sur $\mathbb{R}^*_+$, on a par composition :
+$$|x-0| \leqslant \dfrac{1}{\sqrt{A}} \Rightarrow f(x) \geqslant A$$
+Ce qui prouve, par définition en utilisant $\delta = \dfrac{1}{\sqrt{A}}$, que $$\lim_{x \to 0}\dfrac{1}{x^2} = +\infty$$
+</details>
 :::
 
 
 ## Interprétation graphique
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : </span>
-Soit $f$ une fonction définie sur $I-\{a\}$ vérifiant 
-$$\lim_{x\to a^+}f(x)=+\infty \quad \text{ou} \quad \lim_{x\to a^-}f(x)=+\infty  \quad \text{ou} \quad  \lim_{x\to a^+}f(x)=-\infty \quad \text{ou} \quad \lim_{x\to a^-}f(x)=-\infty$$
 
-On dit alors que la droite d'équation $x=a$ est une asymptote verticale à la courbe représentative de la fonction $f$. 
+Soit $f$ une fonction définie sur $I-\{a\}$ vérifiant $$ \lim_{x\to a^+}f(x)=+\infty \quad \text{ou} \quad \lim_{x\to a^-}f(x)=+\infty  \quad \text{ou} \quad  \lim_{x\to a^+}f(x)=-\infty \quad \text{ou} \quad \lim_{x\to a^-}f(x)=-\infty$$
+On dit alors que la droite d'équation $x=a$ est **une asymptote verticale** à la courbe représentative de la fonction $f$. 
 
 :::
 

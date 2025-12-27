@@ -90,11 +90,14 @@ La fonction $f$ ci-dessus est de la famille des gaussiennes reconnaissables par 
    </details>
 
 2. Soit la fonction $g$ définie sur $\mathbb{R}$ par : $g(x)=4e^{-3x+2}$. Montrer que la fonction $g$ vérifie la relation pour tout $x\in\mathbb{R}$ : $g'(x)+3g(x)=0$.
-<details class="bloc cor"><summary>Afficher la correction :</summary>
-$g'(x)=4(-3)e^{-3x+2}=-12e^{-3x+2}$.  
 
-$g'(x)+3g(x)=-12e^{-3x+2}+3\cdot 4e^{-3x+2}=-12e^{-3x+2}+12e^{-3x+2}=0$.  
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  Pour tout réel $x$, $$g'(x)=4(-3)e^{-3x+2}=-12e^{-3x+2}$$  
 
-La relation est donc vérifiée pour tout $x\in\mathbb{R}$.
-</details>
+  Ainsi 
+
+  $$g'(x)+3g(x)=-12e^{-3x+2}+3\cdot 4e^{-3x+2}=-12e^{-3x+2}+12e^{-3x+2}=0$$ 
+
+  La relation est donc vérifiée pour tout $x\in\mathbb{R}$.
+  </details>
 :::

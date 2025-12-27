@@ -5,7 +5,7 @@ format:
     toc: true
     number-sections: false
 description: "Etude des suites et inégalité de Bernoulli"
-order: 3
+order: 4
 ---
 
 
@@ -19,118 +19,97 @@ order: 3
 ## Application à l'étude des suites
 
 ::: {.bloc .def}
-<span class="bloc-titre">Définition : </span>  
-Soit une suite $(u_n)$ définie à partir d'un certain rang $p \in \N$. On dit que $(u_n)$ est :
+<span class="bloc-titre">Définition : </span><br>
 
-- **majorée** à partir du rang $k \geqslant p$, lorsqu'il existe un réel $M$ tel que pour tout entier naturel $n \geqslant k$, $u_n \leqslant M$.  
-- **minorée** à partir du rang $k \geqslant p$, lorsqu'il existe un réel $m$ tel que pour tout entier naturel $n \geqslant k$, $u_n \geqslant m$.  
-- **bornée** à partir du rang $k \geqslant p$, lorsqu'elle est majorée et minorée à partir du rang $k$.
+Soit une suite $(u_n)$ définie à partir d'un certain rang $p \in \N$. On dit que $(u_n)$ est :
+* **majorée** à partir du rang $k \geqslant p$, lorsqu'il existe un réel $M$ tel que pour tout entier naturel $n \geqslant k$, $u_n \leqslant M$.
+* **minorée** à partir du rang $k \geqslant p$, lorsqu'il existe un réel $m$ tel que pour tout entier naturel $n \geqslant k$, $u_n \geqslant m$.
+* **bornée** à partir du rang $k \geqslant p$, lorsqu'elle est majorée et minorée à partir du rang $k$.
 :::
 
 ::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span>  
+<span class="bloc-titre">Remarque : </span><br>
+
 Majorant et minorant ne sont pas uniques : si une suite $(u_n)$ est majorée par $3$, alors elle est majorée par $4$.
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span>  
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
 On considère la suite $(v_n)$ définie pour tout $n \in \N^*$ par $v_n = 3 - \frac{1}{n}$.  
+Montrons que la suite est bornée.
 
-Montrons que la suite est bornée.  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 
-<details class="bloc cor"><summary>Afficher la correction</summary>
-
-Pour tout $n \geqslant 1$, la fonction inverse étant décroissante, on a  
-
-$$
-0 < \frac{1}{n} \leqslant 1.
-$$
-
-Or,  
-
-$$
-0 < \frac{1}{n} \leqslant 1 \Longrightarrow -1 \leqslant -\frac{1}{n} < 0 \Longrightarrow 2 \leqslant v_n < 3.
-$$
-
-On déduit alors que, pour tout $n \in \N^*$, $v_n \in [2, 3[$.  
+Pour tout $n \geqslant 1$, la fonction inverse étant décroissante, on a $0 < \frac{1}{n} \leqslant 1$.  
+Or,
+$$0 < \frac{1}{n} \leqslant 1 \Longrightarrow -1 \leqslant -\frac{1}{n} < 0 \Longrightarrow 2 \leqslant v_n < 3.$$
+On déduit alors que, pour tout $n \in \N^*$, $v_n \in [2, 3[$.
 Ainsi, la suite est bornée : minorée par $2$ et majorée par $3$.
 
 </details>
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span>  
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
 On considère la suite $(u_n)$ définie par récurrence sur $\N$ par $u_0 = -2$ et $u_{n+1} = 2 \sqrt{u_n + 3}$.
 
-1. Construire les premiers termes de la suite.  
-<details class="bloc cor"><summary>Afficher la correction</summary>
+
+1. Construire graphiquement des premiers termes :
+   <details class="bloc cor"><summary>Afficher la correction</summary>
 
    <div style="text-align:center;">
   <img src="../../image/maths_term/Chap1_Recurrence_construction_terme1.png" alt="" width=40%/>
-</div> 
-</details>
-2. Étude de la fonction associée.  
+  </div> 
+  </details>
 
-<details class="bloc cor"><summary>Afficher la correction</summary>
+2. Étudier de la fonction associée.  
 
-Soit la fonction $f$, définie par $f(x) = 2 \sqrt{x+3}$ sur $[-3, +\infty[$.  
-Pour tout réel $x, y \in [-3, +\infty[$,  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$$
-x < y \Longrightarrow x+3 < y+3 \underset{\sqrt \nearrow}{\Longrightarrow} \sqrt{x+3} < \sqrt{y+3} \Longrightarrow f(x) < f(y).
-$$
+Soit la fonction $f$, définie par $f(x) = 2 \sqrt{x+3}$ sur $[-3, +\infty[$.
+
+Pour tout réel $x, y \in [-3, +\infty[$,
+$$x < y \Longrightarrow x+3 < y+3 \Longrightarrow \sqrt{x+3} < \sqrt{y+3} \Longrightarrow f(x) < f(y).$$
 
 Donc, par définition, la fonction $f$ est croissante sur son ensemble de définition.  
 
 De plus, $f(-2) = 2$ et $f(6) = 6$.  
-On en déduit que $f([-2, 6]) = [f(-2), f(6)] = [2, 6] \subset [-2, 6]$.  
 
-**On dit alors que l'intervalle est stable par la fonction $f$.**  
+On en déduit que $f([-2, 6]) = [f(-2), f(6)] = [2, 6] \subset [-2, 6]$.
+
+**On dit alors que l'intervalle est stable par la fonction $f$.** 
+
 C'est-à-dire que pour tout réel $x \in [-2, 6]$, on a $f(x) \in [-2, 6]$.
 
 </details>
+3. Démontrer que la suite est bornée.   
+   *On pourra utiliser la calculatrice ou le tableau des variations de la fonction pour conjecturer les bornes*
+   
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 
-3. Démontrons que la suite est bornée.  
+  Pour tout entier naturel $n$, on pose $Q_n : u_n \in [-2, 6]$.
 
-<details class="bloc cor"><summary>Afficher la correction</summary>
+  * **Initialisation :**  
+    Pour $n=0$, on a $u_0 = -2$, donc $u_0 \in [-2, 6]$. Ainsi $Q_0$ est vraie.  
+  * **Hérédité :**   
+    On suppose que pour un entier $n$ arbitrairement fixé, la propriété $Q_n$ est vraie, c'est-à-dire que $u_n \in [-2, 6]$.   
+    Démontrons que $(Q_n \Longrightarrow Q_{n+1})$ est vraie.  
+    D'après l'hypothèse de récurrence, $u_n \in [-2, 6]$.  
+    Donc, d'après la propriété précédente (stabilité), $u_{n+1} = f(u_n) \in [2, 6] \subset [-2, 6]$.  
+    On déduit alors que $Q_{n+1}$ est vraie.
+  * **Conclusion :** La propriété est initialisée et héréditaire. Par récurrence, pour tout $n \in \N, u_n \in [-2, 6]$.
 
-Pour tout entier naturel $n$, on pose $Q_n : u_n \in [-2, 6]$.
-
-- *Initialisation :*  
-Pour $n=0$, on a $u_0 = -2$, donc $u_0 \in [-2, 6]$.  
-Ainsi $Q_0$ est vraie.
-
-- *Hérédité :*  
-On suppose que pour un entier $n$ arbitrairement fixé, la propriété $Q_n$ est vraie, c'est-à-dire que $u_n \in [-2, 6]$.  
-Démontrons que $(Q_n \Longrightarrow Q_{n+1})$ est vraie.  <br>
-D'après l'hypothèse de récurrence, $u_n \in [-2, 6]$.  
-Donc, d'après la propriété précédente, $u_{n+1} = f(u_n) \in [2, 6] \subset [-2, 6]$.  
-On déduit alors que $(Q_n \Rightarrow Q_{n+1})$ est vraie.  
-Ainsi, $Q_n$ est vraie et la propriété est héréditaire, donc $Q_{n+1}$ est vraie.
-
-- *Conclusion :*  
-On a $Q_0$ vraie et la propriété est héréditaire.  
-On déduit que $\forall \, n \in \N, \, Q_n$ est vraie, donc pour tout $n \in \N$, $u_n \in [-2, 6]$.
-
-</details>
+  </details>
 :::
 
 ::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span>  
+<span class="bloc-titre">Remarque : </span><br>
 
-- Soit $I$ un intervalle, $f(I)$ est appelé intervalle image de $f$ et c'est un intervalle.  
-En notant $M$ le maximum de $f$ sur $I$ et $m$ le minimum de $f$ sur $I$, on a  
-
-$$
-f(I) = [m, M].
-$$
-
-- Dans l'exemple précédent, la fonction étant croissante sur $[-2, 6]$, le maximum de $f$ est $f(6)$ et son minimum $f(-2)$, ainsi  
-
-$$
-f([-2, 6]) = [2, 6].
-$$
-
+* Soit $I$ un intervalle, $f(I)$ est appelé intervalle image de $f$ et c'est un intervalle.  
+  En notant $M$ le maximum de $f$ sur $I$ et $m$ le minimum de $f$ sur $I$, on a $f(I) = [m, M]$.
+* Dans l'exemple précédent, la fonction étant croissante sur $[-2, 6]$, le maximum de $f$ est $f(6)$ et son minimum $f(-2)$, ainsi $f([-2, 6]) = [2, 6]$.
 :::
 
 ## Inégalité de Bernoulli

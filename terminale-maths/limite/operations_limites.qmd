@@ -12,18 +12,12 @@ order: 9
 ### Somme de limites
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Propriété : Somme de limites</span><br>
-$$
-\begin{array}{|m{4cm}|*{6}{c|}}
-\hline
-\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= & \ell & \ell & \ell & +\infty & -\infty & +\infty \\
-\hline
-\text{et } \displaystyle \lim_{x\to \alpha}v(x)= & \ell ' & +\infty & -\infty & +\infty & -\infty & -\infty \\
-\hline
-\text{alors par somme } \displaystyle \lim_{x\to \alpha}(u+v)(x)= & \ell + \ell ' & +\infty & -\infty & +\infty & -\infty & \textcolor{red}{\text{F.I}} \\
-\hline
-\end{array}
-$$
+<span class="bloc-titre">Propriété (admis) : </span>
+
+| Si $\lim_{x\to \alpha}u(x)=$ | $\ell$ | $\ell$ | $\ell$ | $+\infty$ | $-\infty$ | $+\infty$ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **et** $\lim_{x\to \alpha}v(x)=$ | $\ell '$ | $+\infty$ | $-\infty$ | $+\infty$ | $-\infty$ | $-\infty$ |
+| **alors par somme** $\lim_{x\to \alpha}(u+v)(x)=$ | $\ell + \ell '$ | $+\infty$ | $-\infty$ | $+\infty$ | $-\infty$ | **<span style="color:red">F.I.</span>** |
 
 :::
 
@@ -37,22 +31,19 @@ Dans ces conditions, il faut lever l'indétermination grâce au calcul pour un a
 
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemples : </span>
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Somme de limites </span></div>
+
 Soit $f$ la fonction définie sur $]0 ; +\infty[$ par $f(x)=x^2-1+\dfrac{1}{x}$.
 
-1. Montrer que la fonction admet l'axe des ordonnées comme asymptote
-   <details class="bloc cor"><summary>Afficher la correction :</summary>
-$$\displaystyle \lim_{\underset{x>0}{x\to 0}} \, x^2-1=-1 \et \displaystyle \lim_{\underset{x>0}{x\to 0}} \, \dfrac{1}{x}=+\infty$$ donc, par somme, $$\displaystyle \lim_{\underset{x>0}{x\to 0}}f(x)=+\infty$$ 
+* $\lim_{\underset{x>0}{x\to 0}}x^2-1=-1$ et $\lim_{\underset{x>0}{x\to 0}}\dfrac{1}{x}=+\infty$ donc, par somme, $\lim_{\underset{x>0}{x\to 0}}f(x)=+\infty$.  
+La courbe représentative de la fonction $f$ admet pour asymptote l'axe des ordonnées.
 
-	La courbe représentative de la fonction $f$ admet pour asymptote l'axe des ordonnées.
-</details>
-   
-2. Déterminer la limite en $+\infty$
+
+
+* $\lim_{x\to +\infty}x^2-1=+\infty$ et $\lim_{x\to +\infty}\dfrac{1}{x}=0$ donc, par somme, $\lim_{x\to +\infty}f(x)=+\infty$.
+
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-    $$\displaystyle \lim_{x\to +\infty}x^2-1=+\infty \et \displaystyle \lim_{x\to +\infty}\dfrac{1}{x}=0$$
-
-    donc, par somme, $$\displaystyle \lim_{x\to +\infty}f(x)=+\infty$$
 </details>
 
 :::
@@ -61,48 +52,39 @@ $$\displaystyle \lim_{\underset{x>0}{x\to 0}} \, x^2-1=-1 \et \displaystyle \lim
 
 ### Produit de limites
 ::: {.bloc .thm}
-<span class="bloc-titre">Propriété (admise) : Produit de limites</span>
+<span class="bloc-titre">Propriété (admis) : </span>
 
-$$
-\begin{array}{|m{4cm}|c|c|c|c|}
-\hline
-\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= & \ell & \ell \ne 0 & +\infty \text{ ou } -\infty & 0 \\
-\hline
-\text{et } \displaystyle \lim_{x\to \alpha}v(x)= & \ell ' & +\infty \text{ ou } -\infty & +\infty \text{ ou } -\infty & +\infty \text{ ou } -\infty \\
-\hline
-\text{alors par produit } \displaystyle \lim_{x\to \alpha}(u \times v)(x)= & \ell \times \ell ' & \pm\infty & \pm\infty & \textcolor{red}{\text{F.I.}} \\
-\hline
-\end{array}$$
+| Si $\lim_{x\to \alpha}u(x)=$ | $\ell$ | $\ell \ne 0$ | $+\infty$ ou $-\infty$ | $0$ |
+| :--- | :---: | :---: | :---: | :---: |
+| **et** $\lim_{x\to \alpha}v(x)=$ | $\ell '$ | $+\infty$ ou $-\infty$ | $+\infty$ ou $-\infty$ | $+\infty$ ou $-\infty$ |
+| **alors par produit** $\lim_{x\to \alpha}(u \times v)(x)=$ | $\ell \times \ell '$ | $\pm\infty$ | $\pm\infty$ | **<span style="color:red">F.I.</span>** |
 
 :::
 
-
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemples : </span>
-Soit $f$ la fonction définie sur $]0 ; +\infty[$ par $f(x)=x^2\times \left(\dfrac{1}{x}-1\right)$.
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
 
-Déterminer les limites aux bornes de l'ensemble de définition
+Soit $f$ la fonction définie sur $]0 ; +\infty[$ par $f(x)=x^2\times \left(\dfrac{1}{x}-1\right)$.  
+Déterminer les limites en $+ \infty$ et en $0$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-- $\lim_{\underset{x>0}{x\to 0}} \, x^2=0 \et  \lim_{\underset{x>0}{x\to 0}} \, \left(\dfrac{1}{x}-1\right)=+\infty$. 
-  
-  (Nous sommes en présence de la forme indéterminée  \og $0\times \infty$ \fg.)
+* $\lim_{\underset{x>0}{x\to 0}}x^2=0$ et $\lim_{\underset{x>0}{x\to 0}}\left(\dfrac{1}{x}-1\right)=+\infty$. (Nous sommes en présence de la forme indéterminée « $0\times \infty$ ».)  
+Pour tout réel $x$ non nul, $x^2\times \left(\dfrac{1}{x}-1\right)=x- x^2$.  
+De plus $\lim_{\underset{x>0}{x\to 0}}x- x^2=0$. 
 
+On en déduit que $\lim_{\underset{x>0}{x\to 0}}f(x)=0$.
 
-	Pour tout réel $x$ non nul, $$x^2\times \left(\dfrac{1}{x}-1\right)=x- x^2$$
-
-	De plus $$\displaystyle \lim_{\underset{x>0}{x\to 0}} \,  x- x^2=0$$
-
-      On en déduit que $$\displaystyle \lim_{\underset{x>0}{x\to 0}}f(x)=0$$
-- $\displaystyle \lim_{x\to +\infty} x^2 = +\infty \et \displaystyle \lim_{x\to +\infty}\left(\dfrac{1}{x}-1\right)=-1$ 
-
-donc, par produit,  $$\displaystyle \lim_{x\to +\infty} \, f(x)=-\infty$$
+* $\lim_{x\to +\infty}x^2=+\infty$   
+  De plus $\lim_{x t\o + \infty} \dfrac{1}{x}= 0$, donc  $\lim_{x\to +\infty}\left(\dfrac{1}{x}-1\right)=-1$   
+  Par produit, $\lim_{x\to +\infty}f(x)=-\infty$.
 
 </details>
 
-
 :::
+
+
+
 
 
 
@@ -112,20 +94,12 @@ donc, par produit,  $$\displaystyle \lim_{x\to +\infty} \, f(x)=-\infty$$
 
 ### Quotient de limites
 ::: {.bloc .thm}
-<span class="bloc-titre">Propriété (admise) : Quotient de limites </span><br>
+<span class="bloc-titre">Propriété (admis) : </span>
 
-$$
-\renewcommand{\arraystretch}{1.8}
-\begin{array}{|m{3cm}|c|c|c|c|c|c|}
-\hline
-\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= & \ell & \ell \ne 0 & \ell & +\infty \text{ ou } -\infty & 0 & +\infty \text{ ou } -\infty \\ 
-\hline
-\text{et } \displaystyle \lim_{x\to \alpha}v(x)= & \ell ' \ne 0 & 0 & +\infty \text{ ou } -\infty & \ell ' & 0 & +\infty \text{ ou } -\infty \\ 
-\hline
-\text{alors par quotient } \displaystyle \lim_{x\to \alpha}\left(\dfrac{u}{v} \right)(x)= & \dfrac{\ell}{ \ell '} & \pm\infty & 0 & \pm\infty & \textcolor{red}{\text{F.I.}} & \textcolor{red}{\text{F.I.}} \\ 
-\hline
-\end{array}
-$$
+| Si $\lim_{x\to \alpha}u(x)=$ | $\ell$ | $\ell \ne 0$ | $\ell$ | $+\infty$ ou $-\infty$ | $0$ | $+\infty$ ou $-\infty$ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **et** $\lim_{x\to \alpha}v(x)=$ | $\ell ' \ne 0$ | $0$ | $+\infty$ ou $-\infty$ | $\ell '$ | $0$ | $+\infty$ ou $-\infty$ |
+| **alors par quotient** $\lim_{x\to \alpha}\left(\dfrac{u}{v} \right)(x)=$ | $\dfrac{\ell}{ \ell '}$ | $\pm\infty$ | $0$ | $\pm\infty$ | **<span style="color:red">F.I.</span>** | **<span style="color:red">F.I.</span>** |
 
 :::
 
@@ -169,6 +143,25 @@ il s'ensuit que 	$$\displaystyle \lim_{x\to +\infty}\, f(x)=+\infty$$
 </details>
 :::
 
+::: {.bloc .ex}
+<span class="bloc-titre">Exemples : </span>
+Soit $g$ la fonction définie sur $\mathbb{R} \setminus \{2\}$ par $g(x) = \dfrac{x+1}{x-2}$.  
+Étudier la limite de $g$ en $2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* D'une part $$\lim_{x \to 2} (x+1) = 3$$
+* D'autre part , $\lim_{x \to 2} (x-2) = 0$. Il faut donc étudier le signe de $x-2$ au voisinage de $2$ :
+  
+    * Si $x > 2$, $x-2 > 0$, donc $\lim_{x \to 2^+} (x-2) = 0^+$.
+    * Si $x < 2$, $x-2 < 0$, donc $\lim_{x \to 2^-} (x-2) = 0^-$.
+
+Par quotient, on conclut :
+$$\lim_{x \to 2^+} g(x) = +\infty \quad \text{ et } \quad \lim_{x \to 2^-} g(x) = -\infty$$
+
+</details>
+
+:::
 
 
 
@@ -199,24 +192,77 @@ $$\forall \epsilon >0, \; \exists \delta, \; \forall x \in I, \; (\abs{x-a} \leq
 </details>
 
 
+
+
+
+
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemples : </span>
-Soit $f:x \longmapsto \exp\left(\sqrt{1+\frac{1}{x^2}}\right)$ définie sur $\R^*$. 
-
-Déterminons la limite en $0^+$.
+On considère la fonction $f$ définie sur $\R$ par $$f(x) = \sqrt{1+x^2}$$
+Déterminer sa limite en $+ \infty$
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
+
 $$
-\left. \begin{array}{lll}
 \left . \begin{array}{l}
-\lim_{x \to 0^+} 1+\frac{1}{x^2} = + \infty\\
-\lim_{y \to +\infty} \sqrt{y} = +\infty
-\end{array} \right\} \text{ Par composition } &\lim_{x \to 0^+} \sqrt{1+\frac{1}{x^2}} = + \infty&    \\
-  &\lim_{y \to +\infty} \e^{y} = +\infty &  \end{array} \right\} \text{ Par composition } \lim_{x \to 0^+} f(x) = + \infty$$
+\lim_{x \to +\infty} 1+x^2 = + \infty\\
+\lim_{x \to +\infty} \sqrt{x} = +\infty
+\end{array} \right\} \text{ Par composition }
+\lim_{x \to + \infty} \sqrt{1+x^2} = + \infty
+$$
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soit $g$ une fonction dérivable sur $\mathbb{R}$ ayant pour tableau de variations :
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap4_Limite_limite_compo.png" style="width: 60%;">
+</div>
+
+1. Déterminer la limite de $\dfrac{1}{g(x)}$ lorsque $x$ tend vers $-\infty$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après le tableau de variations, on a $$\lim_{x \to -\infty} g(x) = -\infty$$  
+Par passage à l'inverse, on déduit que : 
+$$\lim_{x \to -\infty} \dfrac{1}{g(x)} = 0$$
+
+</details>
+
+2. Déterminer la limite de $g \left(\dfrac{1}{x} \right)$ lorsque $x$ tend vers $+\infty$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $$\lim_{x \to +\infty} \dfrac{1}{x} = 0^+$$  
+Or, d'après le tableau, $$\lim_{X \to 0^+} g(X) = -3$$ 
+Par composition, on déduit que : 
+$$\lim_{x \to +\infty} g \left( \dfrac{1}{x} \right) = -3$$
+
+</details>
+
+3. Déterminer la limite de $\dfrac{1}{g(x)-2}$ lorsque $x$ tend vers $-1$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après le tableau des variations, on a $$\lim_{x \to -1} g(x) = 2^-$$  
+Ainsi : 
+$$\lim_{x \to -1} g(x)-2 = 0^-$$
+Or $$\lim_{x \to 0^-} \dfrac{1}{x} = - \infty$$
+
+Donc par composition
+$$\lim_{x \to -1} \dfrac{1}{g(x)-2} = -\infty$$
 
 </details>
 
 :::
+
+
+
+
 
 
 

@@ -171,13 +171,15 @@ website:
           contents:
             - terminale-maths/suite1/index.qmd
             - terminale-maths/suite1/historique.qmd   
-            - terminale-maths/suite1/principe.qmd   
+            - terminale-maths/suite1/principe.qmd              
+            - terminale-maths/suite1/complement.qmd   
             - terminale-maths/suite1/application.qmd   
             - terminale-maths/suite1/convergence_def.qmd   
             - terminale-maths/suite1/convergence_prop.qmd   
             - terminale-maths/suite1/divergence_def.qmd   
             - terminale-maths/suite1/operation_limite.qmd  
-            - terminale-maths/suite1/suite_geometrique.qmd   
+            - terminale-maths/suite1/suite_geometrique.qmd
+            - terminale-maths/suite1/suite_recurrente.qmd    
 
         - section: "Généralité sur les fonctions"
           contents:

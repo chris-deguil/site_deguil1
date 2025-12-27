@@ -10,75 +10,94 @@ order: 4
 
 
 ### Raisonnement par déduction
-
 ::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span><br>
-Le raisonnement par déduction est le raisonnement le plus courant. Partant d'hypothèses, on construit un raisonnement logique (à l'aide d'implications successives) qui aboutit à la conclusion.
+<span class="bloc-titre">Raisonnement par déduction : </span><br>
+
+Le raisonnement par déduction est le raisonnement le plus courant. Partant d'hypothèses, on construit un raisonnement logique, à l'aide d'implications successives, qui aboutit à la conclusion.
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple — Somme des termes consécutifs de la suite $(q^n)_{n\in\N}$ : </span><br>
-Soit $q\in\R\setminus\{0;1\}$. Démontrer que
-$$\sum_{k=0}^n q^k = \frac{1-q^{\,n+1}}{1-q}.$$
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Somme des termes d'une suite géométrique </span></div>
 
-<details class="bloc cor"><summary>Afficher la correction</summary>
-Soit
-$$S=\sum_{k=0}^n q^k = q^0+q^1+\dots +q^{n}.$$
-Alors
-$$qS= \sum_{k=0}^n q^{k+1} = q^1+q^2+\dots +q^{n+1}.$$
-Ainsi,
-$$
-S(1-q)= S-qS = \sum_{k=0}^n q^k - \sum_{k=0}^n q^{k+1}
-=  q^0+q^1+\dots +q^{n} - ( q^1+q^2+\dots +q^{n+1}) = 1-q^{n+1},
-$$
-d'où
-$$S = \frac{1-q^{\,n+1}}{1-q}.$$
-</details>
+Soit $q \in \mathbb{R} \setminus \{0;1\}$. Démontrons que :
+$$\sum_{k=0}^n q^k = \frac{1-q^{n+1}}{1-q}$$
+
+Soit $S = \sum_{k=0}^n q^k = q^0 + q^1 + \dots + q^{n}$.  
+Alors $qS = \sum_{k=0}^n q^{k+1} = q^1 + q^2 + \dots + q^{n+1}$.
+
+Ainsi :
+$$S(1-q) = S - qS = \sum_{k=0}^n q^k - \sum_{k=0}^n q^{k+1}$$
+$$S(1-q) = q^0 + q^1 + \dots + q^{n} - (q^1 + q^2 + \dots + q^{n+1}) = 1 - q^{n+1}$$
+D'où :
+$$S = \frac{1-q^{n+1}}{1-q}$$
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span><br>
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Orthogonalité de deux droites </span></div>
+
 Démontrons que si on considère $d$ et $d'$ deux droites d'équations réduites respectives $y=mx+p$ et $y=m'x+p'$, alors $d$ et $d'$ sont orthogonales si et seulement si $mm'=-1$.
 
-- Soit $d\,:\, y=mx+p$, elle admet comme équation cartésienne $mx-y+p=0$.  
-  Ainsi $\vec{v}\,(1\,;\,m)$ est un vecteur directeur de $d$.
+* Soit $d : y=mx+p$, elle admet comme équation cartésienne $mx-y+p=0$. Ainsi $\vec{v}(1 ; m)$ est un vecteur directeur de $d$.
+* Soit $d' : y=m'x+p'$, elle admet comme équation cartésienne $m'x-y+p'=0$. Ainsi $\vec{v'}(1 ; m')$ est un vecteur directeur de $d'$.
 
-- Soit $d'\,:\, y=m'x+p'$, elle admet comme équation cartésienne $m'x-y+p'=0$.  
-  Ainsi $\vec{v'}\,(1\,;\,m')$ est un vecteur directeur de $d'$.
+Or $d$ et $d'$ sont orthogonales si et seulement si les vecteurs directeurs le sont, si et seulement si $\vec{v} \cdot \vec{v'} = 0$, si et seulement si $1 \times 1 + m \times m' = 0$, si et seulement si $mm'=-1$.
+:::
 
-Or $d$ et $d'$ sont orthogonales si et seulement si les vecteurs directeurs le sont, si et seulement si $\vec{v}\!.\,\vec{v'}=0$, si et seulement si $1 \times 1 + m \times m' = 0$, si et seulement si $mm'=-1$.
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Somme de deux rationnels </span></div>
+
+Démontrons que la somme de deux nombres rationnels est un rationnel.  
+Soient $a = \frac{p}{q}$ avec $p \in \mathbb{Z}$ et $q \in \mathbb{N}^*$, et $b = \frac{r}{s}$ avec $r \in \mathbb{Z}$ et $s \in \mathbb{N}^*$.
+
+Alors :
+$$a+b = \frac{p}{q} + \frac{r}{s} = \frac{ps+qr}{qs}$$
+
+Or :
+$$(q,s \in \mathbb{N}^* \Longrightarrow qs \in \mathbb{N}^*) \quad \text{et} \quad (p,r \in \mathbb{Z}, q,s \in \mathbb{N}^* \Longrightarrow ps+qr \in \mathbb{Z})$$
+
+On en déduit alors que $a+b$ s'écrit comme le quotient d'un élément de $\mathbb{Z}$ par un élément de $\mathbb{N}^*$, donc c'est un rationnel.
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span><br>
-Démontrer que la somme de deux nombres rationnels est un rationnel.  
-<details class="bloc cor"><summary>Afficher la correction</summary>
-Soient $a=\dfrac{p}{q}$ avec $p \in \Z$ et $q \in \N^*$, et $b=\dfrac{r}{s}$ avec $r \in \Z$ et $s \in \N^*$.  
-Alors
-$$a+b=\frac{p}{q}+\frac{r}{s}=\frac{ps+qr}{qs}.$$
-Or
-$$(q,s\in \N^* \Longrightarrow qs\in \N^*) \quad \text{et} \quad (p,r\in \Z,\ q,s\in \N^* \Longrightarrow ps+qr\in \Z).$$
-On en déduit alors que $a+b$ s'écrit comme le quotient d'un élément de $\Z$ par un élément de $\N^*$, donc c'est un rationnel.
-</details>
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Somme de deux rationnels </span></div>
+
+Démontrons que la somme de deux nombres rationnels est un rationnel.
+
+Soient $a=\dfrac{p}{q}$ avec $p \in \mathbb{Z}$ et $q \in \mathbb{N}^*$, et $b=\dfrac{r}{s}$ avec $r \in \mathbb{Z}$ et $s \in \mathbb{N}^*$.
+
+Alors :
+$$a+b=\frac{p}{q}+\frac{r}{s}=\frac{ps+qr}{qs}$$
+
+Or :
+$$(q,s\in \mathbb{N}^* \Longrightarrow qs\in \mathbb{N}^*) \quad \text{et} \quad (p,r\in \mathbb{Z},\ q,s\in \mathbb{N}^* \Longrightarrow ps+qr\in \mathbb{Z})$$
+
+On en déduit alors que $a+b$ s'écrit comme le quotient d'un élément de $\mathbb{Z}$ par un élément de $\mathbb{N}^*$, donc c'est un rationnel.
+:::
 :::
 
 
-### Utilisation d'un contre-exemple
+_________________________________
 
-::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span><br>
+### Utilisation d'un contre-exemple
+::: {.bloc .thm}
+<span class="bloc-titre">Utilisation d'un contre-exemple : </span><br>
+
 On utilise un contre-exemple pour nier une affirmation. Il suffit souvent de trouver un cas particulier qui vient contredire l'affirmation.
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span><br>
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
 La somme de deux irrationnels est irrationnelle.  
 Cette affirmation est fausse. En effet, $\sqrt{2}+(-\sqrt{2})=0$.  
 Or $0 \notin \R\backslash \Q$.
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span><br>
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
 Toute fonction définie sur $\R$ est dérivable sur $\R$.  
 Faux, la fonction $f:x \longmapsto \abs{x}$ n'est pas dérivable en $0$.  
 En effet,
@@ -89,11 +108,12 @@ Les dérivées à droite et à gauche en $0$ ne sont pas égales, la fonction n'
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span><br>
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
 Le polynôme $P(n)=n^2+n+41$ donne tous les nombres premiers à partir de $41$.  
 Faux, $P(40)=1681$, or $1681=41^2$.  
-<em>Ce polynôme est dû à Euler. Le plus simple est d'utiliser la calculatrice pour trouver une valeur de $n$ qui ne fournit pas un nombre premier ainsi qu'un algorithme de test de primalité. On peut aussi retenir qu'en 1752, Goldbach prouve qu'un polynôme à coefficients entiers ne peut pas donner que des premiers pour toutes les valeurs entières.</em>
-:::
+
+*Ce polynôme est dû à Euler. Le plus simple est d'utiliser la calculatrice pour trouver une valeur de $n$ qui ne fournit pas un nombre premier ainsi qu'un algorithme de test de primalité. On peut aussi retenir qu'en 1752, Goldbach prouve qu'un polynôme à coefficients entiers ne peut pas donner que des premiers pour toutes les valeurs entières.*
 
 
 ```python

@@ -33,26 +33,39 @@ Soient $P$ et $Q$ deux propositions.
 
 **Table de vérité et implication**
 
+:::: {.columns}
+
+::: {.column width="45%"}
 | $P$ | $Q$ | $P \Longrightarrow Q$ |
 |:---:|:---:|:---------------------:|
 | F   | F   | V |
 | F   | V   | V |
 | V   | F   | F |
 | V   | V   | V |
+:::
 
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
 | $P$ | $Q$ | non $P$ ou $Q$ |
 |:---:|:---:|:--------------:|
 | F   | F   | V |
 | F   | V   | V |
 | V   | F   | F |
 | V   | V   | V |
+:::
+
+
 
 ::: {.bloc .rem}
 
 <span class="bloc-titre">Remarque : </span><br>
 
 - Les deux tables précédentes coïncident en tous points, les deux fonctions sont alors égales ; ainsi, considérer $P \Longrightarrow Q$ et « non $P$ ou $Q$ » est équivalent. Cela est indispensable à comprendre afin de mieux assimiler le raisonnement par l'absurde et la récurrence.  
-- La table de vérité de l'implication justifie la terminologie **Si** $P$ **alors** $Q$. En effet : supposer $P$, c'est dire que $P$ est vraie ; ainsi l'assertion ne peut être vraie que si $Q$ est vraie.
+- La table de vérité de l'implication justifie la terminologie **Si** $P$ **alors** $Q$. 
+  
+  En effet : supposer $P$, c'est dire que $P$ est vraie ; ainsi l'assertion ne peut être vraie que si $Q$ est vraie.
 :::
 
 ::: {.bloc .ex}
@@ -73,10 +86,10 @@ Soient $P$ et $Q$ deux propositions.
 Pour démontrer $(P \Longrightarrow Q)$, il existe plusieurs méthodes. Ce sont les différents modes de raisonnement en mathématiques.
 :::
 
+________________________________
 
 ### Les quantificateurs
 
-#### Notations
 ::: {.bloc .rem}
 
 <span class="bloc-titre">Remarque : </span><br>
@@ -107,12 +120,19 @@ On considère une proposition mathématique dépendant d'un objet mathématique 
    - $\forall A,B\in\mathscr{P}$, $A\neq B$, $\exists M\in\mathscr{P}$, $AM=BM$.
 :::
 
+__________
 #### Négation
+::: {.bloc .rem}
 On considère la proposition suivante :  
-« *En vacances, il a fait beau tous les jours* ».  
+« En vacances, il a fait beau tous les jours ». 
+
 Cette phrase possède un quantificateur universel : « tous les ».  
+
 La négation est :  
-« *En vacances, il y a au moins un jour où il n'a pas fait beau.* »
+
+« En vacances, il y a au moins un jour où il n'a pas fait beau. »
+
+:::
 
 ::: {.bloc .thm}
 
@@ -129,33 +149,45 @@ Soit $P(x)$ une proposition dépendant de $x$, alors :
 On considère la phrase suivante :  
 $$\forall x\in I,\, \exists k\in\R,\, f(x)=k$$
 
-1. **Traduction.** Cette phrase signifie que pour tout réel $x$ de $I$, l'image de $x$ par $f$ existe : $f$ est définie sur $I$.  
-2. **Négation.** $\exists x\in I,\, \forall k\in\R,\, f(x)\neq k$. Autrement dit, $f$ n'est pas définie en au moins un point de $I$ (donc pas sur tout $I$).
+1. Traduire en français cette prhase
+   
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Cette phrase signifie que pour tout réel $x$ de $I$, l'image de $x$ par $f$ existe : $f$ est définie sur $I$.
+</details>
+      
+2. Donner la négation.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+ $\exists x\in I,\, \forall k\in\R,\, f(x)\neq k$. Autrement dit, $f$ n'est pas définie en au moins un point de $I$ (donc pas sur tout $I$).
+ </details>
 :::
 
 #### Place des quantificateurs
-::: {.bloc .ex}
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
 
-<span class="bloc-titre">Exemple : </span><br>
+L'exemple précédent fait apparaître plusieurs quantificateurs ; il est alors légitime de se poser la question de l'importance de la place de ces quantificateurs.
 
-- Proposition :  
-  $$\forall x\in\R,\, \forall y\in\R,\ (x+y)^2=x^2+y^2+2xy.$$  
-  Ici l'ordre des quantificateurs peut être inversé sans changer le sens.
+* **Quantificateurs de même nature** :
+  
+    * Proposition : $$\forall x\in\mathbb{R},\, \forall y\in\mathbb{R},\ (x+y)^2=x^2+y^2+2xy$$
+        Ici l'ordre des quantificateurs peut être inversé sans changer le sens.
+    * Proposition : $$\exists x\in\mathbb{R},\, \exists y\in\mathbb{R}^+,\ x^2=y$$
+        De même, l'ordre des quantificateurs de même nature ($\exists$ et $\exists$) n'influe pas sur le sens logique de la phrase.
 
-- Proposition :  
-  $$\exists x\in\R,\, \exists y\in\R^+,\ x^2=y.$$  
-  Ici, $y$ dépend du choix de $x$ : prendre comme valeur de $y$ le carré de $x$.  
-  Si on inverse :  
-  $$\exists y\in\R^+,\, \exists x\in\R,\ x^2=y,$$  
-  c'est $x$ qui dépend de $y$ : tout nombre positif admet au moins un antécédent par la fonction carré.
+* **Quantificateurs de natures différentes (Alternance)** :
+  
+    On considère :
 
-- On considère :  
-  $$ \forall x\in\R,\, \exists y\in\R,\, f(x)=y \quad \text{et} \quad
-  \exists y\in\R,\, \forall x\in\R,\, f(x)=y.$$  
-  Ces deux phrases n'ont pas le même sens.
+    $$ \forall x\in\mathbb{R},\, \exists y\in\mathbb{R},\ f(x)=y \quad \text{et} \quad \exists y\in\mathbb{R},\, \forall x\in\mathbb{R},\ f(x)=y$$
+    Ces deux phrases n'ont pas le même sens :
 
-  - La première signifie que $f$ est définie sur $\R$ (le choix de $y$ dépend de $x$).  
-  - La seconde signifie que $f$ est constante sur $\R$ (le choix de $y$ est indépendant de $x$).
+    * La première signifie que $f$ est définie sur $\mathbb{R}$ (le choix de $y$ peut dépendre de $x$).
+    * La seconde signifie que $f$ est constante sur $\mathbb{R}$ (le choix de $y$ est le même pour tous les $x$).
+
+De façon générale, on a toujours l'implication suivante :
+$$(\exists y,\, \forall x,\, P(x,y)) \Longrightarrow (\forall x,\, \exists y,\, P(x,y))$$
+
 :::
 
 ::: {.bloc .rem}
@@ -166,6 +198,7 @@ $$(\exists y\in\R,\, \forall x\in\R,\, f(x)=y)\ \Longrightarrow\
 (\forall x\in\R,\, \exists y\in\R,\, f(x)=y).$$  
 De façon générale, on a toujours :  
 $$(\exists y,\, \forall x,\, P(x;y)) \Longrightarrow (\forall x,\, \exists y,\, P(x;y)).$$
+
 :::
 
 

@@ -11,18 +11,16 @@ order: 4
 
 ## Notion d'asymptote en l'infini
 ::: {.bloc .def}
-<span class="bloc-titre">Définition : </span><br>
-Soient $f$ une fonction et $l \in \R$ tel que $\lim_{x \to +\infty} f(x) = l$ (resp. $\lim_[x \to - \infty} f(x)= l$)
+<span class="bloc-titre">Définition : </span>
 
-La droite d'équation $y=l$ est une asymptote horizontale à la courbe représentative de la fonction $f$ au voisinage de $+\infty$ (resp. au voisinage de $-\infty$)
+Soient $f$ une fonction et $l \in \mathbb{R}$ tel que $\lim_{x \to +\infty} f(x) = l$.  
+La droite d'équation $y=l$ est une **asymptote horizontale** à la courbe représentative de la fonction $f$ au voisinage de $+\infty$.
 :::
 
 
 
-
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : Asymptote horizontale</span>
-
+<div class="bloc-titre">Exemple :<span class="exemp-extra">Asymptote horizontale   </span></div>
 - Soit la fonction $f$ définie par $$f(x)=(2x+3)\e^{-0,63x}-2$$ dont on donne ci-dessous la représentation graphique.
 <div style="text-align: center;">
   <img src="../../image/maths_term/Chap4_Limite_figure5.png" style="width: 49%;">
@@ -41,26 +39,26 @@ Donc que la droite d'équation $y=2$ est une asymptote horizontale à $\mathscr{
 
 
 ::: {.bloc .def}
-<span class="bloc-titre">Définition : </span><br>
-Soient $f$ et $g$ deux fonctions définies sur $[a\,;\,+\infty[$. On dit que la représentation graphique de $g$ est asymptotique à la représentation graphique de $f$ (et réciproquement) au voisinage de $+\infty$ lorsque $$\lim_{x \to + \infty} \bigl(f(x)-g(x)\bigr)=0$$
+<span class="bloc-titre">Définition : </span>
+
+Soient $f$ et $g$ deux fonctions définies sur $[a\,;\,+\infty[$. On dit que **la représentation graphique de $g$ est asymptotique à la représentation graphique de $f$** (et réciproquement) au voisinage de $+\infty$ lorsque $$\lim_{x \to + \infty} \bigl(f(x)-g(x)\bigr)=0$$
 :::
 
 
-
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : Asymptote horizontale</span>
-On considère la fonction $f$ définie sur $\R^*$ par $f(x)= 2x+1- \dfrac{1}{x}$.
+<div class="bloc-titre">Exemple :<span class="exemp-extra">Asymptote Oblique   </span></div>
+On considère la fonction $f$ définie sur $\mathbb{R}^*$ par $f(x)= 2x+1- \dfrac{1}{x}$.
 
-Pour tout réel $x$ non nul, $f(x)-(2x+1)= -\dfrac{1}{x}$.
-
-Ainsi 
-$$\lim_{x \to \pm \infty} \bigl(f(x)-(2x+1)\bigr) = \lim_{x \to \pm \infty} \left(-\dfrac{1}{x}\right) = 0$$
+Pour tout réel $x$ non nul, $f(x)-(2x+1)= -\dfrac{1}{x}$.  
+Ainsi $\lim_{x \to \pm \infty} \bigl(f(x)-(2x+1)\bigr) = \lim_{x \to \pm \infty} \left(-\dfrac{1}{x}\right) = 0$.  
 
 On conclut que la droite d'équation $y=2x+1$ est une asymptote oblique à la représentation graphique de $f$ au voisinage de $+\infty$ et de $-\infty$.
+
 
 <div style="text-align: center;">
   <img src="../../image/maths_term/Chap4_Limite_figure7.png" style="width: 35%;">
 </div>
+
 :::
 
 

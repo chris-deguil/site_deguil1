@@ -5,7 +5,7 @@ format:
     toc: true
     number-sections: false
 description: "Définition d'une suite divergente en ∞ , limite par comparaison"
-order: 6
+order: 7
 ---
 
 
@@ -14,20 +14,16 @@ order: 6
 
 ## Définition
 ::: {.bloc .def}
-<span class="bloc-titre">Définition : </span>  
+<span class="bloc-titre">Définition : </span><br>
 
-Soit $(u_n)$ une suite réelle. On dit que $(u_n)$ tend vers $+\infty$ (respectivement $-\infty$) si  
+Soit $(u_n)$ une suite réelle. On dit que $(u_n)$ tend vers $+\infty$ (respectivement $-\infty$) si :
+$$\forall A \in \R, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n \geqslant n_0 \Rightarrow u_n \geqslant A).$$
 
-$$
-\forall A \in \R, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n \geqslant n_0 \Rightarrow u_n \geqslant A).
-$$
-
-On note alors  
-
-$$
-\lim_{n \to +\infty} u_n = +\infty \quad  (\text{respectivement } \lim_{n \to +\infty} u_n = -\infty).
-$$
+On note alors :
+$$\lim_{n \to +\infty} u_n = +\infty \quad \text{(respectivement } \lim_{n \to +\infty} u_n = -\infty).$$
 :::
+
+::: {.bloc .rem}
 
 **Illustration graphique :**  
 On a représenté ci-dessous une suite $\left(u_n\right)$ ayant une limite égale à $+\infty$.
@@ -36,42 +32,46 @@ On a représenté ci-dessous une suite $\left(u_n\right)$ ayant une limite égal
   <img src="../../image/maths_term/divergence.png" alt="" width=60%/>
 </div> 
 
+:::
+
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span>  
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> </span></div>
 
 Soit $(u_n)$ définie par $u_n = n^2 + 1$. Déterminons la limite de la suite $(u_n)$.
 
-Soit $A > 1$, alors  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$$
-n^2 + 1 > A \Longleftrightarrow n > \sqrt{A - 1}.
-$$
+Soit $A > 1$, alors :
+$$n^2 + 1 > A \Longleftrightarrow n^2 > A - 1 \Longleftrightarrow n > \sqrt{A - 1}.$$
+On peut toujours trouver un entier $n_0$ tel que, pour tout $n \geqslant n_0$, $u_n > A$. 
+*(Par exemple, en prenant $n_0 = \text{Ent}\left(\sqrt{A - 1}\right) + 1$)*.
 
-On peut toujours trouver un entier $n_0$ tel que, pour tout $n \geqslant n_0$, $u_n > A$.  
+D'après la définition, la suite $(u_n)$ diverge et :
+$$\lim_{n \to +\infty} u_n = +\infty.$$
 
-D'après la définition, la suite $(u_n)$ diverge et  
+</details>
 
-$$
-\lim_{n \to +\infty} u_n = +\infty.
-$$
 :::
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Propriété :</span>  
+<span class="bloc-titre">Théorème : </span><br>
 
-1. Toute suite croissante non majorée diverge vers $+\infty$.  
+1. Toute suite croissante non majorée diverge vers $+\infty$.
 2. Toute suite décroissante non minorée diverge vers $-\infty$.
 :::
 
-<details class="bloc demo"><summary>Démonstration : </summary>
 
-Soit une suite $(u_n)$ non majorée et croissante, et $A$ un réel arbitraire.  
 
-Comme la suite est non majorée, il existe au moins un terme $u_p$ de la suite tel que $u_p > A$.  
+<details class="bloc demo"><summary>Démonstration :</summary>
 
-Or, la suite étant croissante, $\forall n \geqslant p \Rightarrow u_n \geqslant u_p > A$.  
+Soit une suite $(u_n)$ non majorée et croissante, et $A$ un réel arbitraire.
+
+Comme la suite est non majorée, il existe au moins un terme $u_p$ de la suite tel que $u_p > A$.
+
+Or, la suite étant croissante, pour tout $n \geqslant p$, on a $u_n \geqslant u_p > A$.
 
 Donc, on a prouvé qu'à partir du rang $p$, tous les termes de la suite sont supérieurs à $A$. Ce qui donne le résultat.
+
 </details>
 
 ::: {.bloc .thm}
@@ -88,37 +88,44 @@ $$
 ### Limites par comparaison
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Propriété :</span>  
+<span class="bloc-titre">Théorème : </span><br>
 
 Soit $(u_n)$ et $(v_n)$ deux suites. Supposons qu'il existe $n_0 \in \N$ tel que pour tout $n \geqslant n_0$, $u_n \leqslant v_n$.
 
-- Si $\lim_{n \to +\infty} u_n = +\infty$, alors $\lim_{n \to +\infty} v_n = +\infty$.  
-- Si $\lim_{n \to +\infty} v_n = -\infty$, alors $\lim_{n \to +\infty} u_n = -\infty$.
+* Si $\lim_{n \to +\infty} u_n = +\infty$, alors $\lim_{n \to +\infty} v_n = +\infty$.
+* Si $\lim_{n \to +\infty} v_n = -\infty$, alors $\lim_{n \to +\infty} u_n = -\infty$.
 :::
 
-<details class="bloc demo"><summary>Démonstration : </summary>
 
-Soit $I$ un intervalle de la forme $]A, +\infty[$ avec $A$ un réel. On a $\lim_{n \to +\infty} u_n = +\infty$, alors par définition, $I$ contient tous les termes $u_n$ à partir d'un certain rang. On note ce rang $n_1$.  
 
-De plus, à partir d'un certain rang, $u_n \leqslant v_n$. Notons ce rang $n_2$.  
+<details class="bloc demo"><summary>Démonstration :</summary>
 
-On pose $n_0 = \max(n_1, n_2)$, ainsi pour tout entier $n \geqslant n_0$, on a $u_n \in I$, c'est-à-dire que $A < u_n$ et $u_n \leqslant v_n$. Donc $A < v_n$.  
+Soit $I$ un intervalle de la forme $]A, +\infty[$ avec $A$ un réel. Puisque $\lim_{n \to +\infty} u_n = +\infty$, alors par définition, $I$ contient tous les termes $u_n$ à partir d'un certain rang. On note ce rang $n_1$.
 
-On en déduit que $I$ contient tous les termes $v_n$ à partir du rang $n_0$. Donc $\lim_{n \to +\infty} v_n = +\infty$.
+De plus, à partir d'un certain rang, $u_n \leqslant v_n$. Notons ce rang $n_2$.
+
+On pose $N = \max(n_1\,;\,n_2)$, ainsi pour tout entier $n \geqslant N$, on a $u_n \in I$, c'est-à-dire que $A < u_n$ et $u_n \leqslant v_n$. Donc $A < v_n$.
+
+On en déduit que $I$ contient tous les termes $v_n$ à partir du rang $N$. Donc $\lim_{n \to +\infty} v_n = +\infty$.
+
 </details>
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple :</span>  
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> </span></div>
 
-Soit $(u_n)$ une suite définie par $u_n = -2n^4 + \sin(n)$. Déterminons sa limite.  
+Soit $(u_n)$ une suite définie par $u_n = -2n^4 + \sin(n)$. Déterminons sa limite.
 
-<details class="bloc cor"><summary>Afficher la correction</summary>
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 
 Pour tout $n \in \N$, $\sin(n) \leqslant 1$, donc $-2n^4 + \sin(n) \leqslant -2n^4 + 1$.  
 Or, $\lim_{n \to +\infty} n^4 = +\infty$, donc $\lim_{n \to +\infty} (-2n^4 + 1) = -\infty$.  
-Par comparaison, on déduit que $\lim_{n \to +\infty} u_n = -\infty$.
+Par comparaison, on en déduit que :
+$$\lim_{n \to +\infty} u_n = -\infty.$$
+
 </details>
+
 :::
+
 
 
 

@@ -8,7 +8,7 @@ description: "déterminer la limite à gauche et à droite, existence de la limi
 order: 7
 ---
 
-::: {.bloc}
+::: {.rem}
 Certaines fonctions n'ont pas le même comportement suivant que $x$ tend vers $a$ par valeurs supérieures ou par valeurs inférieures à $a$. On introduit alors la notion, plus subtile, de limite à gauche et limite à droite.
 
 :::
@@ -21,53 +21,55 @@ On note alors $$\lim_{x \to a^+} f(x)= l \quad  \left( \text{resp. } \lim_{x \to
 :::
 
 ::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span><br>
-On peut évidemment donner une définition quantifiée pour la limite par valeurs supérieures :
+<span class="bloc-titre">Remarque : </span>
 
-$$\forall \epsilon >0, \, \exists \delta  >0,\, \forall x \in I,  (0 \leqslant x - a \leqslant \delta  \Rightarrow \abs{f(x)-l} \leqslant \epsilon)$$
+On peut évidemment donner une définition quantifiée pour la limite par valeurs supérieures :
+$$\forall \epsilon >0, \, \exists \delta >0,\, \forall x \in I, (0 \leqslant x - a \leqslant \delta \Rightarrow |f(x)-l| \leqslant \epsilon)$$
 :::
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span>
-Soit $f$ définie sur $\R$ par 
+<div class="bloc-titre">Exemple :<span class="exemp-extra">    </span></div>
 
-$$f(x)=\left\{\begin{array}{l}
+Soit $f$ définie sur $\mathbb{R}$ par 
+$$f(x)=\begin{cases}
 x-1 \, ,\text{ si } x \geqslant 0\\
 x+1 \, ,\text{ sinon} 
-\end{array} \right.$$
-
-Alors 
-
-$$\lim_{x \to 1^+} f(x) = 0 \et  \lim_{x \to 1^-} f(x)=2.$$
-
-On observe que la limite à droite et la limite à gauche ne sont pas les mêmes.
-:::
-
-::: {.bloc .thm}
-<span class="bloc-titre">Propriété (admises) : </span><br>
-Soit $I$ un intervalle et $a \in I$. Soit $f$ une fonction.
-
-- Si $f$ est définie sur $I$ sauf en $a$, alors $f$ possède une limite en $a$ si et seulement si $f$ possède une limite à droite et une limite à gauche, et si elles sont égales.
-- Si $f$ est définie sur $I$, alors $f$ possède une limite en $a$ si et seulement si $f$ possède une limite à droite et une limite à gauche, et si elles sont égales à $f(a)$.
-
-
-:::
-
-
-::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span>
-Soit $f$ définie sur $\R$ par 
-$$f(x)=\left\{
-\begin{array}{l}
-x^2-2x\, , \text{ si } x < 0\\
-x+1\, , \text{ si } x > 0\\
-1\, , \text{ si } x=0\\
-\end{array} \right.$$
+\end{cases}$$
+Déterminer la limite à droite et la limite à gauche.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
-On a $\lim_{x \to 0^-} f(x)=0$, $\lim_{x \to 0^+} f(x) = 1$ et $f(0)=1$.
+Alors $$\lim_{x \to 0^+} f(x) = -1 \quad \text{ et } \quad \lim_{x \to 0^-} f(x) = 1$$
+On observe que la limite à droite et la limite à gauche ne sont pas les mêmes.
+</details>
+:::
 
-D'après la propriété $f$ n'admet donc pas de limite en $0$.
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admis) : </span>
+
+Soit $I$ un intervalle et $a \in I$. Soit $f$ une fonction.
+
+* Si $f$ est définie sur $I$ sauf en $a$, alors $f$ possède une limite en $a$ si et seulement si $f$ possède une limite à droite et une limite à gauche, et si elles sont égales.
+* Si $f$ est définie sur $I$, alors $f$ possède une limite en $a$ si et seulement si $f$ possède une limite à droite et une limite à gauche, et si elles sont égales à $f(a)$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">    </span></div>
+
+Soit $f$ définie sur $\mathbb{R}$ par 
+$$f(x)=\begin{cases}
+x^2-2x\, , \text{ si } x < 0\\
+x+1\, , \text{ si } x > 0\\
+1\, , \text{ si } x=0
+\end{cases}$$
+La fonction admet-elle une limite en $1$ ?
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $\lim_{x \to 0^-} f(x)=0$, $\lim_{x \to 0^+} f(x) = 1$ et $f(0)=1$.  
+D'après la propriété, $f$ n'admet donc pas de limite en $0$.
 </details>
 
 :::

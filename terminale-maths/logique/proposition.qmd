@@ -67,8 +67,8 @@ Table de vérité :
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
 
-- La proposition « *$3$ est impair et $7$ est premier* » est vraie.  
-- La proposition « *le carré d'un nombre est positif et tout nombre est positif* » est fausse.
+- La proposition « $3$ est impair et $7$ est premier » est vraie.  
+- La proposition « le carré d'un nombre est positif et tout nombre est positif » est fausse.
 :::
 
 #### Le OU
@@ -90,8 +90,8 @@ Table de vérité :
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
 
-- La proposition « *$3$ est impair OU $7$ est premier* » est vraie.  
-- La proposition « *$2\pi$ est irrationnel OU tout nombre est positif* » est vraie.
+- La proposition « $3$ est impair OU $7$ est premier » est vraie.  
+- La proposition « $2\pi$ est irrationnel OU tout nombre est positif » est vraie.
 :::
 
 ::: {.bloc .rem}
@@ -112,7 +112,7 @@ Toute proposition est soit vraie, soit fausse.
 La négation d'une proposition $P$ est une proposition notée non $P$ (ou $\neg P$ ou $\bar{P}$) qui est vraie si $P$ est fausse et fausse si $P$ est vraie.
 :::
 
-La table de vérité associée est :
+Table de vérité  :
 
 | $P$ | non $P$ |
 |:---:|:-------:|
@@ -121,8 +121,9 @@ La table de vérité associée est :
 
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
-1. La négation de $x>3$ est $x \leqslant 3$.  
-2. La négation de : « *Il a fait beau tous les jours* » est « *Il y a au moins un jour où il n'a pas fait beau* ».
+
+- La négation de $x>3$ est $x \leqslant 3$.  
+- La négation de : « Il a fait beau tous les jours » est « Il y a au moins un jour où il n'a pas fait beau ».
 :::
 
 La proposition suivante permet de déterminer la négation de phrases mathématiques comportant des connecteurs logiques.
@@ -130,8 +131,9 @@ La proposition suivante permet de déterminer la négation de phrases mathémati
 ::: {.bloc .thm}
 <span class="bloc-titre">Théorème : Lois de Morgan</span><br>
 Soient $P$ et $Q$ deux propositions, alors :
-- non($P$ ou $Q$) $=$ non $P$ et non $Q$ ;  
-- non($P$ et $Q$) $=$ non $P$ ou non $Q$.
+
+- non($P$ ou $Q$) $\Longleftrightarrow$ non $P$ et non $Q$.
+- non($P$ et $Q$) $\Longleftrightarrow$ non $P$ ou non $Q$.
 :::
 
 <details class="bloc demo"><summary>Démonstration :</summary>
@@ -141,9 +143,10 @@ Il suffit de faire la démonstration de la première propriété (avec les table
 ::: {.bloc .ex}
 <span class="bloc-titre">Exemple : </span><br>
 
-- La négation de $x=3$ ou $x<3$ est $x\neq 3$ et $x \geqslant 3$.  
+- La négation de $x=3$ ou $x<3$ est $x\neq 3$ et $x \geqslant 3$. 
+  
   C'est-à-dire que la négation de $x \leqslant 3$ est $x>3$.  
-- La négation de « *le triangle est rectangle et isocèle* » est « *le triangle n'est pas rectangle ou n'est pas isocèle* ».
+- La négation de « le triangle est rectangle et isocèle » est « le triangle n'est pas rectangle ou n'est pas isocèle ».
 :::
 
 

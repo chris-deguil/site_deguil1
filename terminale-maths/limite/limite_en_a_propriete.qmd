@@ -8,41 +8,6 @@ description: "Limite en un point"
 order: 6
 ---
 
-::: {.bloc .def}
-<span class="bloc-titre">Définition : </span><br>
-Soit $f$ une fonction définie sur un intervalle $I$ et $x_0 \in I$.
-
-On dit que $f$ admet $l$ pour limite au voisinage de $x_0$ (ou en $x_0$) et on note $$\lim_{x \to x_0} f(x) = l$$
-lorsque 
-$$\forall \epsilon >0, \, \exists  \delta  >0, \, \forall x \in \R, \, (\abs{x - x_0} \leqslant \delta  \Rightarrow \abs{f(x)-l} \leqslant \epsilon)$$
-:::
-
-
-::: {.bloc}
-<div style="text-align: center;">
-  <img src="../../image/maths_term/Chap4_Limite_figure9.png" style="width: 35%;">
-</div>
-
-
-:::
-
-
-::: {.bloc .rem}
-<span class="bloc-titre"> Remarque :  Comprendre la définition</span><br>
-
-- l'inégalité $\abs{x-x_0} < \delta$ signifie que $x \in ]x_0-\delta \, ; \, x_0+\delta[$.
-- l'inégalité $\abs{f(x)-l} < \epsilon$ signifie que $f(x) \in ]l-\epsilon \, ; \, l+\epsilon[$.
-- L'ordre des quantificateurs est important. Le $\delta$ dépend du $\epsilon$.
-
-
-Il s'agit de dire que si pour tout intervalle ouvert $J$ contenant $l$, il existe un intervalle ouvert $I$ contenant $x_0$, tel que $J$ contient tous les réels $f(x)$ pour $x \in I$.
-:::
-
-::: {.bloc .rem}
-
-Donc si pour tout $x$ suffisamment proche de $x_0$, $f(x)$ est proche de $f(x_0)$, alors la limite de $f$ en $x_0$ est $f(x_0)$.
-:::
-
 
 ## Propriétés
 
@@ -53,7 +18,21 @@ Soit $f$ une fonction définie sur un intervalle $I$ et $x_0 \in I$. Si $f$ adme
 :::
 
 <details class="bloc demo"><summary>Démonstration : </summary>
-Il s'agit de la même démonstration que précédemment en adaptant à la définition d'une limite finie.
+
+On suppose qu'il existe deux limites distinctes $l$ et $l'$ en $x_0$.  
+Par définition, pour tout $\epsilon > 0$ :
+
+* Il existe $\delta_1 > 0$ tel que $|x - x_0| \leqslant \delta_1 \Rightarrow |f(x) - l| \leqslant \epsilon$
+* Il existe $\delta_2 > 0$ tel que $|x - x_0| \leqslant \delta_2 \Rightarrow |f(x) - l'| \leqslant \epsilon$
+
+Soit $\epsilon = \dfrac{|l - l'|}{3}$ et $\delta = \min(\delta_1, \delta_2)$.  
+Alors pour $|x - x_0| \leqslant \delta$, on a par l'inégalité triangulaire :
+$$|l - l'| = |l - f(x) + f(x) - l'| \leqslant |f(x) - l| + |f(x) - l'|$$
+En utilisant les définitions ci-dessus :
+$$|l - l'| \leqslant \epsilon + \epsilon = 2\epsilon$$
+En remplaçant $\epsilon$ par sa valeur :
+$$|l - l'| \leqslant \dfrac{2|l - l'|}{3}$$
+Ce qui est impossible car $|l - l'| > 0$. D'où l'unicité de la limite.
 
 </details>
 
@@ -79,67 +58,69 @@ Ainsi la fonction $f$ semble posséder une limite en $0$ alors qu'elle n'y est p
 
 
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemples : </span>
-Montrons, en utilisant la définition, que $$\lim_{x \to 1} \frac{2x+3}{x+4} = 1$$
+<div class="bloc-titre">Exemple :<span class="exemp-extra">    </span></div>
 
+Montrons, en utilisant la définition, que $\lim_{x \to 1} \dfrac{2x+3}{x+4} = 1$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-Pour $x >-4$, on a $$\abs{f(x)- 1} = \abs{\frac{2x+3}{x+4} - 1} = \abs{ \frac{x-1}{x+4}} = \frac{\abs{x-1}}{\abs{x+4}}.$$
-Soit $x \in [0\, ;\, 2]$ (intervalle centré en $1$), alors $$\abs{x+4} \geqslant 2$$ 
-donc $$\abs{f(x)-1} \leqslant \frac{1}{2} \abs{x-1}.$$
-On considère alors $\delta =\min\{1 \, ; \, 2\epsilon\}$, alors 
-$\delta  >0$ et $\abs{x-1} \leqslant \delta$.
+Pour $x > -4$, on a $$|f(x)- 1| = \left| \dfrac{2x+3}{x+4} - 1 \right| = \left| \dfrac{x-1}{x+4} \right| = \dfrac{|x-1|}{|x+4|}$$
+Soit $x \in [0\, ;\, 2]$ (intervalle centré en $1$), alors $|x+4| \geqslant 4$ (donc $|x+4| \geqslant 2$ est vrai).  
+On a alors $|f(x)-1| \leqslant \dfrac{1}{4} |x-1| \leqslant \dfrac{1}{2} |x-1|$.  
+On considère alors $\delta = \min\{1 \, ; \, 2\epsilon\}$, alors $\delta > 0$ et $|x-1| \leqslant \delta$.  
+En particulier, $$|x-1| \leqslant 2 \epsilon \Rightarrow |f(x)-1| \leqslant \epsilon$$
+On en déduit que $$\lim_{x \to 1} \dfrac{2x+3}{x+4} = 1$$
 
-En particulier, $$\abs{x-1} \leqslant 2 \epsilon \Rightarrow \abs{f(x)-1} \leqslant \epsilon.$$
-On en déduit que $$\lim_{x \to 1} \frac{2x+3}{x+4} = 1.$$
 </details>
 
-Cet exercice est théorique, et l'utilisation de la définition n'est clairement pas pratique.
+Cet exercice est théorique, et l'utilisation de la définition n'est clairement pas pratique.  
+On a alors le théorème suivant qui permet de simplifier les choses quand tout se passe bien, c'est-à-dire :
 
-On a alors le théorème suivant qui permet de simplifier les choses quand tout se passe bien.
 :::
 
+
 ::: {.bloc .thm}
-<span class="bloc-titre">Propriété : </span><br>
-Soit $f$ définie sur $D_f$ et $a \in D_f$ et admettant une limite finie en $a$.
+<span class="bloc-titre">Propriété : </span>
 
+Soit $f$ définie sur $D_f$ et $a \in D_f$ et admettant une limite finie en $a$.  
 Alors $$\lim_{x \to a} f(x)= f(a)$$
-
 :::
 
 <details class="bloc demo"><summary>Démonstration : </summary>
-Soit $$\lim_{x \to a} f(x) =l \et f(a) \neq l$$
 
-Soit $\epsilon >0$, alors il existe un $\delta  >0$ tel que si $x \in I = ]a-\delta \, ; \,a+ \delta[$ alors $f(x) \in J = ]l - \epsilon  \, ; \ l +\epsilon[$ (en particulier $f(a) \in J$)
+Soit $\lim_{x \to a} f(x) = l$ et supposons $f(a) \neq l$.  
+Soit $\epsilon > 0$, alors il existe un $\delta > 0$ tel que si $x \in I = ]a-\delta \, ; \, a+\delta[$ alors $f(x) \in J = ]l-\epsilon \, ; \, l+\epsilon[$ (en particulier $f(a) \in J$).  
+On considère $\epsilon = \dfrac{|l-f(a)|}{2}$.  
+Ainsi  $J= \left]\frac{f(a)+l}{2}\, ; \, \frac{3l - f(a)}{2} \right[$. 
 
-On considère $\epsilon =\frac{l-f(a)}{2}$, ainsi 
-$J= \left]\frac{f(a)+l}{2}\, ; \, \frac{3l - f(a)}{2} \right[$. 
+1. Si $f(a) < l$, alors $\epsilon = \dfrac{l-f(a)}{2}$, ainsi $J = \left] \dfrac{f(a)+l}{2} \, ; \, \dfrac{3l-f(a)}{2} \right[$.  
+On a $f(a) < \dfrac{f(a)+l}{2}$, donc $f(a) \notin J$.  
+2. Si $f(a) > l$, alors $\epsilon = \dfrac{f(a)-l}{2}$, ainsi $J = \left] \dfrac{3l-f(a)}{2} \, ; \, \dfrac{f(a)+l}{2} \right[$.  
+On a $f(a) > \dfrac{f(a)+l}{2}$, donc $f(a) \notin J$.  
 
-1.  Si $f(a) < l$ alors $f(a) < \frac{2f(a)}{2} < \frac{f(a)+l}{2}$, donc $f(a)  \notin J$.
-2. Si $f(a) > l$ alors $f(a) > \frac{3f(a)-f(a)}{2} > \frac{3l-f(a)}{2}$, donc $f(a)  \notin J$.
-
-
-Or $f$ étant définie en $a$, alors par définition $f(a)$ appartient à tout intervalle ouvert centré en $l$, donc $f(a)=l$.
+Or $f$ étant définie en $a$, alors par définition $f(a)$ appartient à tout intervalle ouvert centré en $l$ (car $a \in I$), donc $f(a)=l$.
 
 </details>
 
-
 ::: {.bloc .ex}
-<span class="bloc-titre">Exemple : </span>
-Soit $f$ définie sur $]3\, ; \, +\infty[$ par $f(x)= \frac{2x-3}{x-3}$.
+<div class="bloc-titre">Exemple :<span class="exemp-extra">    </span></div>
 
-- D'après la propriété on a  $$\lim_{x \to 5} f(x) = f(5) = \frac{2 \times 5 -3}{5-3} = \frac{7}{3}.$$
--  $3 \notin ]3\,;\,+\infty[$, on ne peut pas calculer directement $\lim_{x \to 3} f(x)$.<br>
-  Il faut utiliser la définition ou des propriétés (voir ci-après).
+Soit $f$ définie sur $]3\, ; \, +\infty[$ par $f(x)= \dfrac{2x-3}{x-3}$.  
+
+* D'après la propriété on a : $$\lim_{x \to 5} f(x) = f(5) = \dfrac{2 \times 5 -3}{5-3} = \dfrac{7}{2}$$  
+* $3 \notin ]3\,;\,+\infty[$, on ne peut pas calculer directement $\lim_{x \to 3} f(x)$.  
+Il faut utiliser la définition ou des propriétés (voir ci-après).
+
 
 :::
+
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Interprétation graphique : </span><br>
-Ainsi, plus on se rapproche de $a$, plus $f(x)$ se rapproche de $f(a)$. Il n'y a donc pas de trou !
+plus on se rapproche de $a$, plus $f(x)$ se rapproche de $f(a)$. Il n'y a donc pas de trou !
 
 :::
+
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span><br>
