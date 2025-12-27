@@ -303,7 +303,9 @@ On choisit un dossier au hasard et on note:
 - $E$ l'événement contraire de $F$.
 
 1. En utilisant les données de l'énoncé, déterminer les probabilités suivantes:  
-   **a)** $P\left(F\right)$  **b)** $P_F\left(S\right)$  **c)** $P_E\left(S\right)$.  
+      a. $P\left(F\right)$  
+      b. $P_F\left(S\right)$$
+      c. $P_E\left(S\right)$.  
 2. Dessiner un arbre pondéré modélisant cette situation.  
 3. Calculer $P\left( F \cap S\right)$, $P\left( E \cap S\right)$.  
 4. Calculer $P\left( F \cap \overline{S}\right)$, $P\left( E \cap \overline{S}\right)$.  
@@ -425,7 +427,9 @@ Dans chacun des cas suivants compléter l'arbre de probabilité en faisant appar
 ::: {.bloc .exo}
 <span class="exo-num"></span>
 
-On considère les événements $A$ et $B$ de probabilités respectives $\frac{7}{8}$ et $\frac{2}{7}$ et tels que $P(A\cap B)=\frac{1}{4}$. $A$ et $B$ sont-ils indépendants ?
+On considère les événements $A$ et $B$ de probabilités respectives $\frac{7}{8}$ et $\frac{2}{7}$ et tels que $P(A\cap B)=\frac{1}{4}$. 
+
+$A$ et $B$ sont-ils indépendants ?
 :::
 
 ## Exercice
@@ -433,8 +437,9 @@ On considère les événements $A$ et $B$ de probabilités respectives $\frac{7}
 <span class="exo-num"></span>
 
 On lance un dé équilibré à six faces et on considère les événements suivants.
-1.•$A$ : \og le résultat est un nombre supérieur ou égale à $4$ \fg{} 
-2.•$B$ : \og le résultat est un nombre pair \fg{} 
+
+* $A$ : \og le résultat est un nombre supérieur ou égale à $4$ \fg{} 
+* $B$ : \og le résultat est un nombre pair \fg{} 
 
 1. Représenter la situation par un arbre de probabilité.
 2. Comment remarque-t-on sur l'arbre que $A$ et $B$ ne sont pas indépendants ?
@@ -445,6 +450,7 @@ On lance un dé équilibré à six faces et on considère les événements suiva
 <span class="exo-num"></span>
 
 $A$ et $B$ sont deux événements indépendants tels que $P(A)=\dfrac{1}{3}$ et $P(B)=\dfrac{2}{5}$.  
+
 Calculer $P(A\cap B)$ puis $P(\overline{A}\cap B)$.
 :::
 
@@ -453,6 +459,7 @@ Calculer $P(A\cap B)$ puis $P(\overline{A}\cap B)$.
 <span class="exo-num"></span>
 
 $A$ et $B$ deux événements tels que $P(A)=\dfrac{1}{4}$, $P(B)=\dfrac{1}{5}$ et $P(A\cap B)=\dfrac{1}{10}$.  
+
 $A$ et $B$ sont-ils indépendants ?
 :::
 
@@ -461,6 +468,7 @@ $A$ et $B$ sont-ils indépendants ?
 <span class="exo-num"></span>
 
 $A$ et $B$ sont deux événements indépendants de même probabilité et $P(A\cap B)=\dfrac{1}{36}$.  
+
 Calculer $P(A)$.
 :::
 
@@ -469,7 +477,7 @@ Calculer $P(A)$.
 <span class="exo-num"></span>
 
 Chaque matin, Antoine peut être « victime » de deux événements indépendants : R « il n'entend pas son réveil » et V « son pneu de vélo est victime d'une crevaison ». Il a observé que chaque jour de la semaine :
-$$ P(R) = 0.1 \quad \text{et} \quad P(V) = 0.05 $$
+$$P(R) = 0.1 \quad \text{et} \quad P(V) = 0.05 $$
 
 Lorsqu'au moins un des deux événements se produit, Antoine est en retard au lycée ; sinon il est à l'heure.
 
@@ -491,7 +499,7 @@ On considère deux événements $A$ et $B$ tels que $P(A)=p$, $P(B)=P(\overline{
 <span class="exo-num"></span>
 
 On considère deux événements $A$ et $B$ tels que $P(A \cap B)=0,8$ et $P(A \cup B)=0,9$.
-1. Montrer que, pour tout $p \in \R$, $$x^2-1,7x+0,8=(x-0,85)^2+0,0775$$
+1. Montrer que, pour tout $x \in \R$, $$x^2-1,7x+0,8=(x-0,85)^2+0,0775$$
 2. Montre que $A$ et $B$ ne peuvent pas être indépendants.
 :::
 
@@ -554,16 +562,13 @@ Une épreuve d'examen comporte un QCM composé de trois questions. Chaque questi
 2. Construire un arbre pondéré décrivant toutes les réponses possibles au QCM.  
 3. Calculer la probabilité d'obtenir les trois réponses exactes. Justifier.  
 4. Calculer la probabilité d'obtenir trois réponses inexactes.  
-5.  
-   a. Combien y a-t-il de chemins complets dans l'arbre qui correspondent à une réponse exacte et deux réponses inexactes ?  
+5. a. Combien y a-t-il de chemins complets dans l'arbre qui correspondent à une réponse exacte et deux réponses inexactes ?  
    b. Calculer la probabilité d'obtenir une seule réponse exacte sur les trois questions.
 :::
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
-
-**Le Problème des Deux Enfants**  
+ <span class="exo-num"></span><span class="exo-extra"> **Le Problème des** </span>  
 On suppose que la probabilité de donner naissance à une fille est la même que celle de donner naissance à un garçon : $P(F)=P(G)=\dfrac{1}{2}$. On admet de plus que le sexe d'un enfant à la naissance est indépendant de ceux nés avant. Vous allez chez une personne dont vous savez qu'elle a deux enfants mais dont vous ignorez le sexe. C'est une fille qui vous ouvre la porte ; on ne sait pas si c'est l'aînée ou pas des deux enfants.  
 Quelle est la probabilité l'autre enfant soit un garçon : $\dfrac{1}{2}$ ou $\dfrac{2}{3}$ ? Justifier.
 :::
@@ -632,9 +637,8 @@ Pour savoir si un mail est indésirable ou pas, celui-ci est testé par un algor
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span>
-
-\textbf{[La méthode de Monte Carlo]}  
+<span class="exo-num"></span><span class="exo-extra"> La méthode de Monte Carlo </span>
+ 
 La méthode de Monte Carlo est une technique permettant de calculer des approximations d'aires difficiles à obtenir à l'aide d'outils géométriques ou analytiques de façon simple grâce aux probabilités.  
 
 On considère $f$ la fonction carrée et on souhaiterai connaître l'aire sous sa courbe sur l'intervalle $[0\,;\,1]$ représentée en gris ci-contre. On notera cette aire $\mathcal{A}_g$.
@@ -695,16 +699,17 @@ sans mélanger les sucres des deux exploitations.
    a. Quelle est la probabilité que le paquet prélevé porte le label \og extra fin \fg{} ?  
    b. Sachant qu'un paquet porte le label \og extra fin \fg, quelle est la probabilité que le sucre
 qu'il contient provienne de l'exploitation U ?  
-1. L'entreprise souhaite modifier son approvisionnement auprès des deux exploitations afin
+2. L'entreprise souhaite modifier son approvisionnement auprès des deux exploitations afin
 que parmi les paquets portant le label « extra fin », 30\,\% d'entre eux contiennent du sucre
 provenant de l'exploitation U.  
    Comment doit-elle s'approvisionner auprès des exploitations U et V ?  
-   \emph{Toute trace de recherche sera valorisée dans cette question}.
+
+   *Toute trace de recherche sera valorisée dans cette question$.
 :::
 
 ## Exercice
 ::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-num"></span><span class="exo-extra"> Extrait bac, Antilles Guyanne 2015
+<span class="exo-num"></span><span class="exo-extra"> Extrait bac, Antilles Guyanne 2015
  </span>
 Un circuit électronique est composé de deux composants identiques numérotés 1 et 2.
 On note $D_1$ l'évènement « le composant 1 est défaillant avant un an » et on note $D_2$ l'évènement « le composant 2 est défaillant avant un an ».
@@ -724,10 +729,8 @@ Déterminer dans chacun des cas la probabilités que le courant ne passe pas.
 
 ## Exercice
 ::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Étude d’une population  </span>
 
-
-
-\bilan Étude d’une population  
 Une agence de voyages propose trois circuits possibles au Canada l’été prochain : $C_1$, $C_2$, $C_3$.  
 Les clients ont la possibilité de choisir un hébergement en chambre de catégorie standard ou en chambre de catégorie supérieure. Une fois avant le départ, tous les circuits sont regroupés.  
 

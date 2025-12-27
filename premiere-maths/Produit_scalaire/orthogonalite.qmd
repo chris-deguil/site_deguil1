@@ -57,7 +57,20 @@ AB \times AH~~~~\text{si}~~~\ve{AB} \text{ et } \ve{AH}~~\text{sont de même sen
 \end{array} \right.$$
 :::
 
+
+
+::: {.bloc .rem}
 On note $\ve{w}$ la projection orthogonale de $\ve{v}$ sur la droite $(AB)$, de sorte que $\ve{w}=\ve{AH}$.
+
+
+<div style="text-align: center;">
+  <img src="../../image/maths/ProduitScalaire_projection1.png" style="width: 30%;">
+  <img src="../../image/maths/ProduitScalaire_projection 2.png" style="width: 30%;">
+</div>
+
+:::
+
+
 
 
 

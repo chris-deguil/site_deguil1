@@ -19,6 +19,9 @@ Soient $\ve{u}$ et $\ve{v}$ deux vecteurs du plan. On appelle produit scalaire d
 * $0$ si l'un des vecteurs $\ve{u}$ ou $\ve{v}$ est nul.
 * $\|\ve{u} \| \|\ve{v} \| \times \cos( \theta)$ où $\theta$ est l'angle formé par les droites support des vecteurs $\ve{u}$ et $\ve{v}$
 
+<div style="text-align: center;">
+  <img src="../../image/maths/ProduitScalaire_definition1.png" style="width: 15%;">
+</div>
 
 :::
 
@@ -32,6 +35,10 @@ En physique :
 
 Un ouvrier tire une caisse de masse $m = 50$ kg sur un sol horizontal. Il exerce une force constante $\vec{F}$ de norme $100$ N, inclinée d'un angle de $\theta = 60^\circ$ par rapport à l'horizontale.
 On suppose que le déplacement est de $d = 10$ m et qu'il est réalisé en $\Delta t = 20$ s.
+
+<div style="text-align: center;">
+  <img src="../../image/maths/ProduitScalaire_physique.png" style="width: 49%;">
+</div>
 
 
 
@@ -86,13 +93,13 @@ Soient $\ve{u}$ et $\ve{v}$ deux vecteurs non nuls, alors
 
 :::
 
-::: {.bloc .demo}
+
 <details class="bloc demo"><summary>Démonstration : </summary>
 
 1. $\ve{u}$ et $\ve{v}$ sont de même sens $\Longleftrightarrow \ve{u}.\ve{v} = \norm{\ve{u}} \times \norm{\ve{v}} \times \cos 0 \Longleftrightarrow \ve{u}.\ve{v} = \norm{\ve{u}} \times \norm{\ve{v}}$.
 2. $\ve{u}$ et $\ve{v}$ sont de sens contraire $\Longleftrightarrow \ve{u}.\ve{v} = \norm{\ve{u}} \times \norm{\ve{v}} \times \cos \pi \Longleftrightarrow \ve{u}.\ve{v} = -\norm{\ve{u}} \times \norm{\ve{v}}$.
  </details>
-:::
+
 
 
 <div class="nav-pages">

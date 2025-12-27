@@ -32,6 +32,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
+      llbracket: ["{\\left[\\!\\left[}"],
+      rrbracket: ["{\\right]\\!\\right]}"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -43,11 +45,6 @@ window.MathJax = {
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
-      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
-      // Usage : \llbracket x \rrbracket
-      llbracket: ["{\\left[\\!\\left[}", 0],
-      rrbracket: ["{\\right]\\!\\right]}", 0],
-
       // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
       lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
 

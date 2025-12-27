@@ -12,6 +12,9 @@ listing:
       - probaCond/index.qmd
       - trigonometrie/index.qmd
       - Operation_Derivee/index.qmd
+      - Produit_scalaire/index.qmd
+      - sa_sg/index.qmd
+      - Expo/index.qmd
 ---
 
 

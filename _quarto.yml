@@ -124,12 +124,30 @@ website:
         - section: "Produit scalaire"
           contents:
             - premiere-maths/Produit_scalaire/definition.qmd
-            - premiere-maths/Produit_scalaire/orthogonalité.qmd
+            - premiere-maths/Produit_scalaire/orthogonalite.qmd
             - premiere-maths/Produit_scalaire/Proprietes.qmd
-            - premiere-maths/Produit_scalaire/Transformation.qmd
+            - premiere-maths/Produit_scalaire/Transformations.qmd
             - premiere-maths/Produit_scalaire/Bilans.qmd
         
+        - section: "Suite arithmétiques et géométriques"
+          contents:
+            - premiere-maths/sa_sg/sa_definition.qmd
+            - premiere-maths/sa_sg/sa_variation_somme.qmd
+            - premiere-maths/sa_sg/sa_bilan.qmd
+            - premiere-maths/sa_sg/sg_definition.qmd
+            - premiere-maths/sa_sg/sg_variation_somme.qmd
+            - premiere-maths/sa_sg/sg_bilan.qmd
 
+        - section: "Fonction Exponentielle"
+          contents:
+            - premiere-maths/Expo/index.qmd
+            - premiere-maths/Expo/intro.qmd
+            - premiere-maths/Expo/fct_exp.qmd
+            - premiere-maths/Expo/nombre_e.qmd
+            - premiere-maths/Expo/prop_exp.qmd
+            - premiere-maths/Expo/exp_u.qmd
+            - premiere-maths/Expo/comp.qmd
+          
 
     - title: "Terminale Spécialité Maths"
       logo: image/logo/logo_maths2.png   
