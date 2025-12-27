@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -67,19 +67,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -158,6 +157,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
+      llbracket: ["{\\left[\\!\\left[}"],
+      rrbracket: ["{\\right]\\!\\right]}"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -169,11 +170,6 @@ window.MathJax = {
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
-      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
-      // Usage : \llbracket x \rrbracket
-      llbracket: ["{\\left[\\!\\left[}", 0],
-      rrbracket: ["{\\right]\\!\\right]}", 0],
-
       // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
       lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
 
@@ -199,7 +195,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -398,7 +394,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -406,7 +402,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -437,6 +433,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -739,8 +736,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/orthogonalite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Produit scalaire et orthogonalite</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
@@ -748,12 +748,115 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Transformations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transformations</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices Bilans</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Suite arithmétiques et géométriques</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sa_definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite arithmétiques : Définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sa_variation_somme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites arithmétiques : Variations et Sommes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sa_bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercice bilan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sg_definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite géométriques : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sg_variation_somme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite géométriques : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sg_bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices bilan</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fonction Exponentielle</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 9 : Fonction exponetielle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/fct_exp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonction exponentielle : définition et propriétés algébriques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/nombre_e.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombre d’Euler</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/prop_exp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proprioété de la fonction exponentielle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/exp_u.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exponentielle de ax+b</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/comp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exponentielle de u</span></a>
   </div>
 </li>
       </ul>
@@ -1400,9 +1503,13 @@ Calculer la probabilité que la somme des deux résultats soit impaire sachant q
 <p>Parmi les dossiers de l’agence on constate que: - <span class="math inline">\(60\%\)</span> des séjours ont lieu en France; - <span class="math inline">\(45\%\)</span> des séjours en France durent une semaine; - <span class="math inline">\(75\%\)</span> des séjours à l’étranger durent une semaine.</p>
 <p>On choisit un dossier au hasard et on note: - <span class="math inline">\(F\)</span> l’événement: « Le séjour a lieu en France »; - <span class="math inline">\(S\)</span> l’événement: « Le séjour dure une semaine »; - <span class="math inline">\(E\)</span> l’événement contraire de <span class="math inline">\(F\)</span>.</p>
 <ol type="1">
-<li>En utilisant les données de l’énoncé, déterminer les probabilités suivantes:<br>
-<strong>a)</strong> <span class="math inline">\(P\left(F\right)\)</span>  <strong>b)</strong> <span class="math inline">\(P_F\left(S\right)\)</span>  <strong>c)</strong> <span class="math inline">\(P_E\left(S\right)\)</span>.<br>
+<li>En utilisant les données de l’énoncé, déterminer les probabilités suivantes:
+<ol type="a">
+<li><span class="math inline">\(P\left(F\right)\)</span> </li>
+<li><span class="math inline">\(P_F\left(S\right)\)</span>$</li>
+<li><span class="math inline">\(P_E\left(S\right)\)</span>.<br>
 </li>
+</ol></li>
 <li>Dessiner un arbre pondéré modélisant cette situation.<br>
 </li>
 <li>Calculer <span class="math inline">\(P\left( F \cap S\right)\)</span>, <span class="math inline">\(P\left( E \cap S\right)\)</span>.<br>
@@ -1532,14 +1639,19 @@ Dans chacun des cas suivants compléter l’arbre de probabilité en faisant app
 <h2 class="anchored" data-anchor-id="exercice-26">Exercice 27</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 27 : </strong></span></p>
-<p>On considère les événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> de probabilités respectives <span class="math inline">\(\frac{7}{8}\)</span> et <span class="math inline">\(\frac{2}{7}\)</span> et tels que <span class="math inline">\(P(A\cap B)=\frac{1}{4}\)</span>. <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont-ils indépendants ?</p>
+<p>On considère les événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> de probabilités respectives <span class="math inline">\(\frac{7}{8}\)</span> et <span class="math inline">\(\frac{2}{7}\)</span> et tels que <span class="math inline">\(P(A\cap B)=\frac{1}{4}\)</span>.</p>
+<p><span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont-ils indépendants ?</p>
 </div>
 </section>
 <section id="exercice-27" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-27">Exercice 28</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 28 : </strong></span></p>
-<p>On lance un dé équilibré à six faces et on considère les événements suivants. 1.•<span class="math inline">\(A\)</span> : le résultat est un nombre supérieur ou égale à <span class="math inline">\(4\)</span> 2.•<span class="math inline">\(B\)</span> : le résultat est un nombre pair </p>
+<p>On lance un dé équilibré à six faces et on considère les événements suivants.</p>
+<ul>
+<li><span class="math inline">\(A\)</span> : le résultat est un nombre supérieur ou égale à <span class="math inline">\(4\)</span> </li>
+<li><span class="math inline">\(B\)</span> : le résultat est un nombre pair </li>
+</ul>
 <ol type="1">
 <li>Représenter la situation par un arbre de probabilité.</li>
 <li>Comment remarque-t-on sur l’arbre que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> ne sont pas indépendants ?</li>
@@ -1550,31 +1662,31 @@ Dans chacun des cas suivants compléter l’arbre de probabilité en faisant app
 <h2 class="anchored" data-anchor-id="exercice-28">Exercice 29</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 29 : </strong></span></p>
-<p><span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont deux événements indépendants tels que <span class="math inline">\(P(A)=\dfrac{1}{3}\)</span> et <span class="math inline">\(P(B)=\dfrac{2}{5}\)</span>.<br>
-Calculer <span class="math inline">\(P(A\cap B)\)</span> puis <span class="math inline">\(P(\overline{A}\cap B)\)</span>.</p>
+<p><span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont deux événements indépendants tels que <span class="math inline">\(P(A)=\dfrac{1}{3}\)</span> et <span class="math inline">\(P(B)=\dfrac{2}{5}\)</span>.</p>
+<p>Calculer <span class="math inline">\(P(A\cap B)\)</span> puis <span class="math inline">\(P(\overline{A}\cap B)\)</span>.</p>
 </div>
 </section>
 <section id="exercice-29" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-29">Exercice 30</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 30 : </strong></span></p>
-<p><span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements tels que <span class="math inline">\(P(A)=\dfrac{1}{4}\)</span>, <span class="math inline">\(P(B)=\dfrac{1}{5}\)</span> et <span class="math inline">\(P(A\cap B)=\dfrac{1}{10}\)</span>.<br>
-<span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont-ils indépendants ?</p>
+<p><span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements tels que <span class="math inline">\(P(A)=\dfrac{1}{4}\)</span>, <span class="math inline">\(P(B)=\dfrac{1}{5}\)</span> et <span class="math inline">\(P(A\cap B)=\dfrac{1}{10}\)</span>.</p>
+<p><span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont-ils indépendants ?</p>
 </div>
 </section>
 <section id="exercice-30" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-30">Exercice 31</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 31 : </strong></span></p>
-<p><span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont deux événements indépendants de même probabilité et <span class="math inline">\(P(A\cap B)=\dfrac{1}{36}\)</span>.<br>
-Calculer <span class="math inline">\(P(A)\)</span>.</p>
+<p><span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont deux événements indépendants de même probabilité et <span class="math inline">\(P(A\cap B)=\dfrac{1}{36}\)</span>.</p>
+<p>Calculer <span class="math inline">\(P(A)\)</span>.</p>
 </div>
 </section>
 <section id="exercice-31" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-31">Exercice 32</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 32 : </strong></span></p>
-<p>Chaque matin, Antoine peut être « victime » de deux événements indépendants : R « il n’entend pas son réveil » et V « son pneu de vélo est victime d’une crevaison ». Il a observé que chaque jour de la semaine : <span class="math display">\[ P(R) = 0.1 \quad \text{et} \quad P(V) = 0.05 \]</span></p>
+<p>Chaque matin, Antoine peut être « victime » de deux événements indépendants : R « il n’entend pas son réveil » et V « son pneu de vélo est victime d’une crevaison ». Il a observé que chaque jour de la semaine : <span class="math display">\[P(R) = 0.1 \quad \text{et} \quad P(V) = 0.05 \]</span></p>
 <p>Lorsqu’au moins un des deux événements se produit, Antoine est en retard au lycée ; sinon il est à l’heure.</p>
 <ol type="1">
 <li>Donner les probabilités ( P() ) et ( P_{}(V) ).</li>
@@ -1593,7 +1705,7 @@ Calculer <span class="math inline">\(P(A)\)</span>.</p>
 <h2 class="anchored" data-anchor-id="exercice-33">Exercice 34</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 34 : </strong></span></p>
-<p>On considère deux événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> tels que <span class="math inline">\(P(A \cap B)=0,8\)</span> et <span class="math inline">\(P(A \cup B)=0,9\)</span>. 1. Montrer que, pour tout <span class="math inline">\(p \in \R\)</span>, <span class="math display">\[x^2-1,7x+0,8=(x-0,85)^2+0,0775\]</span> 2. Montre que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> ne peuvent pas être indépendants.</p>
+<p>On considère deux événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> tels que <span class="math inline">\(P(A \cap B)=0,8\)</span> et <span class="math inline">\(P(A \cup B)=0,9\)</span>. 1. Montrer que, pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math display">\[x^2-1,7x+0,8=(x-0,85)^2+0,0775\]</span> 2. Montre que <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> ne peuvent pas être indépendants.</p>
 </div>
 </section>
 <section id="exercice-34" class="level2">
@@ -1687,20 +1799,18 @@ Calculer <span class="math inline">\(P(A)\)</span>.</p>
 </li>
 <li>Calculer la probabilité d’obtenir trois réponses inexactes.<br>
 </li>
-<li></li>
-</ol>
-<ol type="a">
+<li><ol type="a">
 <li>Combien y a-t-il de chemins complets dans l’arbre qui correspondent à une réponse exacte et deux réponses inexactes ?<br>
 </li>
 <li>Calculer la probabilité d’obtenir une seule réponse exacte sur les trois questions.</li>
+</ol></li>
 </ol>
 </div>
 </section>
 <section id="exercice-39" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-39">Exercice 40</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 40 : </strong></span></p>
-<p><strong>Le Problème des Deux Enfants</strong><br>
+<p><span class="exo-num"><strong>Exercice 40 : </strong></span><span class="exo-extra"> <strong>Le Problème des</strong> </span><br>
 On suppose que la probabilité de donner naissance à une fille est la même que celle de donner naissance à un garçon : <span class="math inline">\(P(F)=P(G)=\dfrac{1}{2}\)</span>. On admet de plus que le sexe d’un enfant à la naissance est indépendant de ceux nés avant. Vous allez chez une personne dont vous savez qu’elle a deux enfants mais dont vous ignorez le sexe. C’est une fille qui vous ouvre la porte ; on ne sait pas si c’est l’aînée ou pas des deux enfants.<br>
 Quelle est la probabilité l’autre enfant soit un garçon : <span class="math inline">\(\dfrac{1}{2}\)</span> ou <span class="math inline">\(\dfrac{2}{3}\)</span> ? Justifier.</p>
 </div>
@@ -1727,7 +1837,7 @@ Quelle est la probabilité l’autre enfant soit un garçon : <span class="math 
 </ol></li>
 <li>On souhaite automatiser le comportement de la puce à l’aide d’un algorithme et déterminer combien de fois elle passe par 0. On donne ci-dessous l’algorithme rédigé en langage Python :</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> <span class="op">*</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>):</span>
@@ -1738,7 +1848,7 @@ Quelle est la probabilité l’autre enfant soit un garçon : <span class="math 
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> p <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        k <span class="op">=</span> k <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> k</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> k</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="a">
 <li>Expliquer les rôles des variables <code>p</code> et <code>k</code>.<br>
 </li>
@@ -1807,9 +1917,8 @@ Quelle est la probabilité l’autre enfant soit un garçon : <span class="math 
 <section id="exercice-42" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-42">Exercice 43</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 43 : </strong></span></p>
-<p><br>
-La méthode de Monte Carlo est une technique permettant de calculer des approximations d’aires difficiles à obtenir à l’aide d’outils géométriques ou analytiques de façon simple grâce aux probabilités.</p>
+<p><span class="exo-num"><strong>Exercice 43 : </strong></span><span class="exo-extra"> La méthode de Monte Carlo </span></p>
+<p>La méthode de Monte Carlo est une technique permettant de calculer des approximations d’aires difficiles à obtenir à l’aide d’outils géométriques ou analytiques de façon simple grâce aux probabilités.</p>
 <p>On considère <span class="math inline">\(f\)</span> la fonction carrée et on souhaiterai connaître l’aire sous sa courbe sur l’intervalle <span class="math inline">\([0\,;\,1]\)</span> représentée en gris ci-contre. On notera cette aire <span class="math inline">\(\mathcal{A}_g\)</span>.</p>
 <p><img src="../../image/maths/Exercice_Probabilite_f29_monte_carlo.png" class="img-fluid" style="display:block;margin:0 auto;width:30%;"></p>
 <ol type="1">
@@ -1821,7 +1930,7 @@ La méthode de Monte Carlo est une technique permettant de calculer des approxim
 </li>
 <li>Pour estimer l’aire <span class="math inline">\(\mathcal{A}_g\)</span>, on va prendre 1000 points au hasard dans le le carré <span class="math inline">\(OABC\)</span> et déterminer la proportion appartenant à <span class="math inline">\(\mathcal{A}_g\)</span>. C’est le but de l’algorithme ci-dessous. Compléter le programme suivant afin d’approcher l’aire cherchée</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> <span class="op">*</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> approche_aire(k):</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    c<span class="op">=</span><span class="dv">0</span></span>
@@ -1830,7 +1939,7 @@ La méthode de Monte Carlo est une technique permettant de calculer des approxim
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> ...........</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ................ :</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            c<span class="op">=</span>c<span class="op">+</span><span class="dv">1</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ...............</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ...............</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <iframe src="https://console.basthon.fr/" width="100%" height="520" style="border:1px solid #ddd;border-radius:8px" loading="lazy">
 </iframe>
 <ol start="5" type="1">
@@ -1852,23 +1961,23 @@ La méthode de Monte Carlo est une technique permettant de calculer des approxim
 <li><span class="math inline">\(E\)</span> : Le paquet porte le label “extra fin” .</li>
 </ul>
 <ol type="1">
-<li>Dans cette question, on admet que l’entreprise fabrique 30,% de ses paquets avec du sucre provenant de l’exploitation U et les autres avec du sucre provenant de l’exploitation V, sans mélanger les sucres des deux exploitations.
+<li><p>Dans cette question, on admet que l’entreprise fabrique 30,% de ses paquets avec du sucre provenant de l’exploitation U et les autres avec du sucre provenant de l’exploitation V, sans mélanger les sucres des deux exploitations.</p>
 <ol type="a">
 <li>Quelle est la probabilité que le paquet prélevé porte le label extra fin ?<br>
 </li>
 <li>Sachant qu’un paquet porte le label extra fin , quelle est la probabilité que le sucre qu’il contient provienne de l’exploitation U ?<br>
 </li>
 </ol></li>
-<li>L’entreprise souhaite modifier son approvisionnement auprès des deux exploitations afin que parmi les paquets portant le label « extra fin », 30,% d’entre eux contiennent du sucre provenant de l’exploitation U.<br>
-Comment doit-elle s’approvisionner auprès des exploitations U et V ?<br>
-.</li>
+<li><p>L’entreprise souhaite modifier son approvisionnement auprès des deux exploitations afin que parmi les paquets portant le label « extra fin », 30,% d’entre eux contiennent du sucre provenant de l’exploitation U.<br>
+Comment doit-elle s’approvisionner auprès des exploitations U et V ?</p>
+<p>*Toute trace de recherche sera valorisée dans cette question$.</p></li>
 </ol>
 </div>
 </section>
 <section id="exercice-44" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-44">Exercice 45</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 45 : </strong></span><span class="exo-num"><strong>Exercice 45 : </strong></span><span class="exo-extra"> Extrait bac, Antilles Guyanne 2015 </span> Un circuit électronique est composé de deux composants identiques numérotés 1 et 2. On note <span class="math inline">\(D_1\)</span> l’évènement « le composant 1 est défaillant avant un an » et on note <span class="math inline">\(D_2\)</span> l’évènement « le composant 2 est défaillant avant un an ».</p>
+<p><span class="exo-num"><strong>Exercice 45 : </strong></span><span class="exo-extra"> Extrait bac, Antilles Guyanne 2015 </span> Un circuit électronique est composé de deux composants identiques numérotés 1 et 2. On note <span class="math inline">\(D_1\)</span> l’évènement « le composant 1 est défaillant avant un an » et on note <span class="math inline">\(D_2\)</span> l’évènement « le composant 2 est défaillant avant un an ».</p>
 <p>On suppose que les deux évènements <span class="math inline">\(D_1\)</span> et <span class="math inline">\(D_2\)</span> sont indépendants et que <span class="math display">\[
 P(D_1) = P(D_2) = 0,39.
 \]</span></p>
@@ -1880,8 +1989,8 @@ P(D_1) = P(D_2) = 0,39.
 <section id="exercice-45" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-45">Exercice 46</h2>
 <div class="bloc exo">
-<p>Étude d’une population<br>
-Une agence de voyages propose trois circuits possibles au Canada l’été prochain : <span class="math inline">\(C_1\)</span>, <span class="math inline">\(C_2\)</span>, <span class="math inline">\(C_3\)</span>.<br>
+<p><span class="exo-num"><strong>Exercice 46 : </strong></span><span class="exo-extra"> Étude d’une population </span></p>
+<p>Une agence de voyages propose trois circuits possibles au Canada l’été prochain : <span class="math inline">\(C_1\)</span>, <span class="math inline">\(C_2\)</span>, <span class="math inline">\(C_3\)</span>.<br>
 Les clients ont la possibilité de choisir un hébergement en chambre de catégorie standard ou en chambre de catégorie supérieure. Une fois avant le départ, tous les circuits sont regroupés.</p>
 <p>Le tableau ci-dessous donne la répartition des 2 500 réservations effectuées pour tout l’été :</p>
 <table class="caption-top table">
@@ -2002,14 +2111,13 @@ On note respectivement <span class="math inline">\(c_1\)</span>, <span class="ma
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

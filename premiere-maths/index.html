@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,19 +34,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -154,6 +153,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
+      llbracket: ["{\\left[\\!\\left[}"],
+      rrbracket: ["{\\right]\\!\\right]}"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -165,11 +166,6 @@ window.MathJax = {
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
-      // Utilise les délimiteurs classiques imbriqués avec un petit espace négatif.
-      // Usage : \llbracket x \rrbracket
-      llbracket: ["{\\left[\\!\\left[}", 0],
-      rrbracket: ["{\\right]\\!\\right]}", 0],
-
       // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
       lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
 
@@ -195,7 +191,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -394,7 +390,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -402,7 +398,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -433,6 +429,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
+      <img src="../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -735,8 +732,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">premiere-maths/Produit_scalaire/orthogonalité.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Produit_scalaire/orthogonalite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Produit scalaire et orthogonalite</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
@@ -744,12 +744,115 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">premiere-maths/Produit_scalaire/Transformation.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Produit_scalaire/Transformations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transformations</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices Bilans</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Suite arithmétiques et géométriques</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/sa_sg/sa_definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite arithmétiques : Définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/sa_sg/sa_variation_somme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites arithmétiques : Variations et Sommes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/sa_sg/sa_bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercice bilan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/sa_sg/sg_definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite géométriques : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/sa_sg/sg_variation_somme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite géométriques : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/sa_sg/sg_bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices bilan</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fonction Exponentielle</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Expo/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 9 : Fonction exponetielle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Expo/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Expo/fct_exp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonction exponentielle : définition et propriétés algébriques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Expo/nombre_e.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombre d’Euler</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Expo/prop_exp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proprioété de la fonction exponentielle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Expo/exp_u.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exponentielle de ax+b</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../premiere-maths/Expo/comp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exponentielle de u</span></a>
   </div>
 </li>
       </ul>
@@ -791,7 +894,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-Chapitre">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1766757204536" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1766824239882" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
 <a href="../premiere-maths/fonction2nD/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -804,7 +907,7 @@ Chapitre 1 : Le second degré
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1766757204537" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1766824239884" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
 <a href="../premiere-maths/suite1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -817,7 +920,7 @@ Chapitre 2 : Suites numériques : Généralités
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1766757204535" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1766824239881" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
 <a href="../premiere-maths/NomDerive/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -830,7 +933,7 @@ Chapitre 3 : Le nombre dérivé
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1766757204536" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1766824239883" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
 <a href="../premiere-maths/probaCond/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -843,7 +946,7 @@ Chapitre 4 : Probabilité conditionnelle
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1766757204537" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1766824239884" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <a href="../premiere-maths/trigonometrie/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -856,7 +959,7 @@ Chapitre 5 : Trigonométrie - Fonctions trigonométriques
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1766757204535" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1766824239881" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
 <a href="../premiere-maths/Operation_Derivee/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -865,6 +968,45 @@ Chapitre 6 : Opérations sur les dérivées - Application
 </h5>
 <div class="card-text listing-description delink">
 <p>Dérivées somme, produit, quotient, composition - Signe de la dérivée et variation de la fonction</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1766824239882" data-listing-reading-time-sort="1" data-listing-word-count-sort="128">
+<a href="../premiere-maths/Produit_scalaire/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Chapitre 7 : Produit Scalaire dans le plan
+</h5>
+<div class="card-text listing-description delink">
+<p>Définition - orthogonalité - caractérisation géométriqueS</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1766824239883" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
+<a href="../premiere-maths/sa_sg/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Chapitre 8 : Suites arithmétiques et suite géométriques
+</h5>
+<div class="card-text listing-description delink">
+<p>Définition - orthogonalité - caractérisation géométriqueS</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1766824239881" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
+<a href="../premiere-maths/Expo/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Chapitre 9 : Fonction exponetielle
+</h5>
+<div class="card-text listing-description delink">
+<p>Fonction expônentielle, étude de la fonction</p>
 </div>
 </div>
 </div></a>
@@ -936,14 +1078,13 @@ Chapitre 6 : Opérations sur les dérivées - Application
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -31,6 +31,17 @@
     ]
   },
   {
+    "listing": "/premiere-maths/sa_sg/index.html",
+    "items": [
+      "/premiere-maths/sa_sg/sa_definition.html",
+      "/premiere-maths/sa_sg/sa_variation_somme.html",
+      "/premiere-maths/sa_sg/sa_bilan.html",
+      "/premiere-maths/sa_sg/sg_definition.html",
+      "/premiere-maths/sa_sg/sg_variation_somme.html",
+      "/premiere-maths/sa_sg/sg_bilan.html"
+    ]
+  },
+  {
     "listing": "/premiere-maths/suite1/index.html",
     "items": [
       "/premiere-maths/suite1/definition.html",
@@ -198,7 +209,21 @@
       "/premiere-maths/NomDerive/index.html",
       "/premiere-maths/probaCond/index.html",
       "/premiere-maths/trigonometrie/index.html",
-      "/premiere-maths/Operation_Derivee/index.html"
+      "/premiere-maths/Operation_Derivee/index.html",
+      "/premiere-maths/Produit_scalaire/index.html",
+      "/premiere-maths/sa_sg/index.html",
+      "/premiere-maths/Expo/index.html"
+    ]
+  },
+  {
+    "listing": "/premiere-maths/Expo/index.html",
+    "items": [
+      "/premiere-maths/Expo/intro.html",
+      "/premiere-maths/Expo/fct_exp.html",
+      "/premiere-maths/Expo/nombre_e.html",
+      "/premiere-maths/Expo/prop_exp.html",
+      "/premiere-maths/Expo/exp_u.html",
+      "/premiere-maths/Expo/comp.html"
     ]
   },
   {
