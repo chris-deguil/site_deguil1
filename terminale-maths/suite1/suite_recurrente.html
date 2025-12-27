@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Forme canonique, racines, signe, parabole.">
+<meta name="description" content="Limites des suites géométriques">
 
-<title>Chapitre 1 : Le second degré – Site pédagogique</title>
+<title>Suites Récurrentes – Site pédagogique</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -75,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -400,11 +369,11 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../terminale-maths/index.html"> 
+    <a class="nav-link active" href="../../terminale-maths/index.html" aria-current="page"> 
 <span class="menu-text">Spé maths terminale</span></a>
   </li>  
 </ul>
@@ -419,7 +388,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/index.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/index.html">Chapitre 1 : Le second degré</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Récurrence - Application à l’étude des suites</a></li><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/suite_recurrente.html">Suites Récurrentes</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -437,124 +406,142 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours de Première Spécialité maths</span></a>
+  <a href="../../terminale-maths/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours de Terminale Spécialité maths</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Fonctions du second degré</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Logique et différents types de raisonnements</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  <a href="../../terminale-maths/logique/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 0 : Logique et raisonnements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction polynôme du second degré</span></a>
+  <a href="../../terminale-maths/logique/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histoire de la logique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/racine.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Le second degré : racines d’une équation</span></a>
+  <a href="../../terminale-maths/logique/proposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proposition mathématique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
+  <a href="../../terminale-maths/logique/quantificateurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les quantificateurs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/coefficient.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lien coefficients - racines</span></a>
+  <a href="../../terminale-maths/logique/deduction_contreExemple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les différents types de raisonnement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/parabole.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Parabole</span></a>
+  <a href="../../terminale-maths/logique/disjonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contraposée et Disjonction des cas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
+  <a href="../../terminale-maths/logique/absurde.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par l’absurde</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/fonction2nD/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Second degré</span></a>
+  <a href="../../terminale-maths/logique/AnalyseSynthese.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par analyse - synthèse</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Suites numériques : Généralités</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Récurrence - Application à l’étude des suites</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Définitions</span></a>
+  <a href="../../terminale-maths/suite1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : La récurrence, application à l’étude de suites, limite d’une suite.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Différents modes de génération</span></a>
+  <a href="../../terminale-maths/suite1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique récurrence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Liste des termes d’une suite numérique</span></a>
+  <a href="../../terminale-maths/suite1/principe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/variations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Variations d’une suite</span></a>
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/limites.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Notion de limite</span></a>
+  <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  <a href="../../terminale-maths/suite1/convergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite convergente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  <a href="../../terminale-maths/suite1/convergence_prop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés de convergence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
+  <a href="../../terminale-maths/suite1/divergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Divergence et limite par comparaison</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/operation_limite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les limites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -562,7 +549,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Nombre dérivé</span></a>
+ <span class="menu-text">Généralité sur les fonctions</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -570,26 +557,44 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombre dérivé</span></a>
+  <a href="../../terminale-maths/fct1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 2 : Gnéralités sur les fonctions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/tangente.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tangente à une courbe</span></a>
+  <a href="../../terminale-maths/fct1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique sur les fonctions : parité , convexité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  <a href="../../terminale-maths/fct1/parite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions paires et impaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
+  <a href="../../terminale-maths/fct1/composee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composée de deux fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/comp_derivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complément de dérivation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/convexite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de convexité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/convexite_derivee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexité et dérivée, point d’inflexion</span></a>
   </div>
 </li>
       </ul>
@@ -597,7 +602,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
+ <span class="menu-text">Espace : Plan, droites (Section - Intersection), Equation paramétriques</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -605,32 +610,50 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cercle trigonométrique</span></a>
+  <a href="../../terminale-maths/espace1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 3 : Espace 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/trigonometrie/cosinus_sinus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cosinus et Sinus</span></a>
+  <a href="../../terminale-maths/espace1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/trigonometrie/lignes_trigo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lignes trigonométriques</span></a>
+  <a href="../../terminale-maths/espace1/vecteur_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteurs de l’espace</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/trigonometrie/fct_trigo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonctions trigonométriques</span></a>
+  <a href="../../terminale-maths/espace1/repere_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repère de l’espace</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/trigonometrie/equation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Equations trigonométriques</span></a>
+  <a href="../../terminale-maths/espace1/droite_plan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Droites et plan de l’espace : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/position.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Position relative</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/parallele.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Etude des plans parallèles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Représentations paramétriques</span></a>
   </div>
 </li>
       </ul>
@@ -638,7 +661,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Probabilité conditionnelles</span></a>
+ <span class="menu-text">Fonction : Limites</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -646,32 +669,74 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rappels</span></a>
+  <a href="../../terminale-maths/limite/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 4 : Limites d’une fonction.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  <a href="../../terminale-maths/limite/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique de la notion de limite</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Formules des probabilités totales</span></a>
+  <a href="../../terminale-maths/limite/limite_infini_infinie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limite infinie en l’infinie</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Indépendances</span></a>
+  <a href="../../terminale-maths/limite/limite_finie_infinie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limite finie en l’infinie</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  <a href="../../terminale-maths/limite/limite_asymptote.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Asymptote à la courbe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_en_a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limite en <span class="math inline">\(x_0\)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_en_a_propriete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">limite finie limite en <span class="math inline">\(x_0\)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_gauche_droite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">limite à gauche, limite à droite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_infinie_en_a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">limite infinie en <span class="math inline">\(x_0\)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/operations_limites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les limites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/theoreme_comparaison.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Théorèmes d’encadrtement et de comparaison</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_exponentielle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonction exponentielle</span></a>
   </div>
 </li>
       </ul>
@@ -679,7 +744,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+ <span class="menu-text">Probabilité : Loi binomiale</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -687,32 +752,50 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Des lemmes</span></a>
+  <a href="../../terminale-maths/binomiale/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 5 : Loi binomiale</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Opérations sur les dérivées</span></a>
+  <a href="../../terminale-maths/binomiale/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique sur la loi binomiale</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Composition : g(ax+b)</span></a>
+  <a href="../../terminale-maths/binomiale/epreuve_independante.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion d’épreuves indépendantes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Applications</span></a>
+  <a href="../../terminale-maths/binomiale/bernoulli1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Epreuve de Bernoulli</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extrema</span></a>
+  <a href="../../terminale-maths/binomiale/bernoulli2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schéma de Bernoulli</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/binomiale1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loi binomiale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/binomiale2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cas particuliers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/binomiale3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expresion de la loi binomiale</span></a>
   </div>
 </li>
       </ul>
@@ -720,7 +803,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Produit scalaire</span></a>
+ <span class="menu-text">Fonction : Continuités</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -728,132 +811,44 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Définition du produit sclaire</span></a>
+  <a href="../../terminale-maths/continuite/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 6 : Continuité d’une fonction.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Produit_scalaire/orthogonalite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Produit scalaire et orthogonalite</span></a>
+  <a href="../../terminale-maths/continuite/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique de la notion de continuité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Propriétés du produit scalaire</span></a>
+  <a href="../../terminale-maths/continuite/continuite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de continuité</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Produit_scalaire/Transformations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Transformations</span></a>
+  <a href="../../terminale-maths/continuite/operation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opération sur les fonctions continues</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices Bilans</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">Suite arithmétiques et géométriques</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/sa_sg/sa_definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Suite arithmétiques : Définition</span></a>
+  <a href="../../terminale-maths/continuite/tvi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Théorème des valeurs intermédiaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/sa_sg/sa_variation_somme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Suites arithmétiques : Variations et Sommes</span></a>
+  <a href="../../terminale-maths/continuite/tvi_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme de dichotomie et python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/sa_sg/sa_bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercice bilan</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/sa_sg/sg_definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Suite géométriques : définition</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/sa_sg/sg_variation_somme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Suite géométriques : définition</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/sa_sg/sg_bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices bilan</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
- <span class="menu-text">Fonction Exponentielle</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Expo/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 9 : Fonction exponetielle</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Expo/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Expo/fct_exp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction exponentielle : définition et propriétés algébriques</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Expo/nombre_e.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombre d’Euler</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Expo/prop_exp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Proprioété de la fonction exponentielle</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Expo/exp_u.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exponentielle de ax+b</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../premiere-maths/Expo/comp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exponentielle de u</span></a>
+  <a href="../../terminale-maths/continuite/caracterisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Caractérisation séquentielle de la continuité</span></a>
   </div>
 </li>
       </ul>
@@ -863,21 +858,27 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cas-des-suites-récurrentes" id="toc-cas-des-suites-récurrentes" class="nav-link active" data-scroll-target="#cas-des-suites-récurrentes">Cas des suites récurrentes</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/index.html">Fonctions du second degré</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/fonction2nD/index.html">Chapitre 1 : Le second degré</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/index.html">Récurrence - Application à l’étude des suites</a></li><li class="breadcrumb-item"><a href="../../terminale-maths/suite1/suite_recurrente.html">Suites Récurrentes</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Chapitre 1 : Le second degré</h1>
+<h1 class="title">Suites Récurrentes</h1>
 </div>
 
 <div>
   <div class="description">
-    Forme canonique, racines, signe, parabole.
+    Limites des suites géométriques
   </div>
 </div>
 
@@ -894,123 +895,214 @@ window.Quarto = {
 </header>
 
 
-<div class="bloc rem">
-<p><span class="bloc-titre">Attendus et Savoir-faire :</span></p>
+<hr>
+<section id="cas-des-suites-récurrentes" class="level1">
+<h1>Cas des suites récurrentes</h1>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Cas 1 </span>
+</div>
+<p>La suite <span class="math inline">\((u_n)\)</span> est définie par <span class="math inline">\(u_0=2\)</span> et pour tout <span class="math inline">\(n \in \mathbb{N}\)</span> par <span class="math display">\[u_{n+1} = \frac{1+3u_n}{3+u_n}\]</span> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\([0\,;\,+ \infty[\)</span> par <span class="math display">\[f(x)=\frac{1+3x}{3+x}\]</span> On admet que cette fonction est croissante sur <span class="math inline">\([0\,;\,+\infty[\)</span>.</p>
+<ol type="1">
+<li>Montrer par récurrence que pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(1 \leqslant u_n\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, soit <span class="math inline">\(P_n : u_n \geqslant 1\)</span>.</p>
 <ul>
-<li>Étudier le signe d’une fonction polynôme du second degré donnée sous forme factorisée.</li>
-<li>Déterminer les fonctions polynômes du second degré s’annulant en deux nombres réels distincts.</li>
-<li>Factoriser une fonction polynôme du second degré, en diversifiant les stratégies : racine évidente, détection des racines par leur somme et leur produit, identité remarquable, application des formules générales.</li>
-<li>Choisir une forme adaptée (développée réduite, canonique, factorisée) d’une fonction polynôme du second degré dans le cadre de la résolution d’un problème (équation, inéquation, optimisation, variations).</li>
-<li>Déterminer l’axe de symétrie et le sommet d’une parabole d’équation <span class="math inline">\(y=ax^2+bx+c\)</span></li>
+<li><p><strong>Initialisation :</strong><br>
+On a <span class="math inline">\(u_0=2\)</span> donc <span class="math inline">\(u_0 \geqslant 1\)</span>.<br>
+Ainsi <span class="math inline">\(P_0\)</span> est vraie.</p></li>
+<li><p><strong>Hérédité :</strong><br>
+On suppose que pour un certain rang <span class="math inline">\(n\)</span> arbitrairement fixé, <span class="math inline">\(P_n\)</span> est vraie.</p>
+<p>C’est-à-dire que <span class="math inline">\(1 \leqslant u_n\)</span>.<br>
+<span class="math display">\[1 \leqslant u_n \underset{f \nearrow}{\Longrightarrow} f(1) \leqslant f(u_n) \Longrightarrow 1 \leqslant u_{n+1}\]</span></p>
+<p>Ainsi <span class="math inline">\((P_n \Longrightarrow P_{n+1})\)</span> est vraie. Or <span class="math inline">\(P_n\)</span> est vraie, on en déduit que <span class="math inline">\(P_{n+1}\)</span> est vraie.</p></li>
+<li><p><strong>Conclusion :</strong><br>
+On a <span class="math inline">\(P_0\)</span> vraie et <span class="math inline">\(P_n\)</span> est héréditaire pour tout <span class="math inline">\(n\)</span>.</p>
+<p>On en déduit que <span class="math inline">\(P_n\)</span> est vraie pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>.</p></li>
 </ul>
+</details>
+<ol start="2" type="1">
+<li><ol type="a">
+<li>Montrer que, pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(u_{n+1}-u_n = \frac{(1-u_n)(1+u_n)}{3+u_n}\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction :</p>
+</summary>
+<p>Pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math display">\[u_{n+1} - u_n = \frac{1+3u_n}{3+u_n} - u_n = \frac{1+3u_n -3u_n -u_n^2}{3+u_n} = \frac{1-u_n^2}{3+u_n} = \frac{(1-u_n)(1+u_n)}{3+u_n}\]</span></p>
+</details>
+<ol start="2" type="a">
+<li>En déduire le sens de variation de la suite <span class="math inline">\((u_n)\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction :</p>
+</summary>
+<p>Pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, on a <span class="math inline">\(u_n \geqslant 1\)</span>. On en déduit que <span class="math display">\[1-u_n \leqslant 0 \quad \text{ et } \quad 1+u_n &gt; 0\quad \text{ et }\quad 3+u_n &gt;0\]</span> On en déduit, d’après la règle des signes, que <span class="math display">\[\frac{(1-u_n)(1+u_n)}{3+u_n} \leqslant 0\]</span> Donc que <span class="math display">\[u_{n+1} \leqslant u_n\]</span> Ainsi la suite <span class="math inline">\((u_n)\)</span> est décroissante.</p>
+</details></li>
+<li><ol type="a">
+<li>Montrer que la suite <span class="math inline">\((u_n)\)</span> converge vers un réel que l’on note <span class="math inline">\(l\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction :</p>
+</summary>
+<p>La suite <span class="math inline">\((u_n)\)</span> est décroissante et minorée ; donc, d’après le théorème de convergence monotone, elle converge vers un réel que l’on note <span class="math inline">\(l\)</span>.</p>
+</details>
+<ol start="2" type="a">
+<li>Déterminer la limite de la suite <span class="math inline">\((u_n)\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+<p>Afficher la correction :</p>
+</summary>
+<p>La suite <span class="math inline">\((u_n)\)</span> converge vers <span class="math inline">\(l\)</span> donc <span class="math display">\[\lim_{n \to + \infty} u_n = l \quad \text{ et } \quad \lim_{n \to + \infty} u_{n+1} =l\]</span> De plus <span class="math display">\[\lim_{n \to + \infty} u_{n+1} = \lim_{n \to + \infty} \frac{1+3u_n}{3+u_n}=\frac{1+3l}{3+l}\]</span></p>
+<p>On en déduit, par unicité de la limite, que <span class="math display">\[l= \frac{1+3l}{3+l} \iff l(3+l) = 1+3l \iff l^2-1 =0\]</span></p>
+<p>On en déduit donc que <span class="math inline">\(l=1\)</span> ou <span class="math inline">\(l=-1\)</span>.</p>
+<p>Or la suite est minorée par <span class="math inline">\(1\)</span>, ainsi pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(u_n \geqslant 1\)</span>.</p>
+<p>D’où <span class="math display">\[\lim_{n \to + \infty} u_n \geqslant 1\]</span></p>
+<p>Ainsi <span class="math inline">\(l=1\)</span>.</p>
+</details></li>
+</ol>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Étude d’une fonction auxiliaire </span>
+</div>
+<p><strong>Partie A</strong></p>
+<p>On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math inline">\(f(x) = \frac{3}{4} x^2 - 2x + 3\)</span>.</p>
+<ol type="1">
+<li>Dresser le tableau de variations de <span class="math inline">\(f\)</span> sur <span class="math inline">\(\mathbb{R}\)</span>, en justifiant.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(f\)</span> est une fonction polynôme du second degré dont le coefficient dominant <span class="math inline">\(\frac{3}{4}\)</span> est positif.<br>
+Sa représentation graphique est une parabole orientée vers le haut, dont l’axe de symétrie a pour équation <span class="math inline">\(x= \frac{-(-2)}{2 \times 3/4} = \frac{4}{3}\)</span>.</p>
+<p>Tableau de variations : <span class="math inline">\(x\)</span> | <span class="math inline">\(-\infty\)</span> | <span class="math inline">\(4/3\)</span> | <span class="math inline">\(+\infty\)</span> —|—|—|— <span class="math inline">\(f(x)\)</span> | <span class="math inline">\(+\infty\)</span> | <span class="math inline">\(\searrow 5/3 \nearrow\)</span> | <span class="math inline">\(+\infty\)</span></p>
+</details>
+<ol start="2" type="1">
+<li>Démontrer que pour tout <span class="math inline">\(x\)</span> réel, <span class="math inline">\(x \leqslant f(x)\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[x \leqslant f(x) \iff \frac{3}{4} x^2 -2x+3-x \geqslant 0 \iff \frac{3}{4}x^2 -3x+3 \geqslant 0\]</span> Soit le polynôme <span class="math inline">\(\frac{3}{4}x^2-3x+3\)</span>. <span class="math inline">\(\Delta= (-3)^2 - 4 \times \frac{3}{4} \times 3 = 0\)</span>. Ainsi, le polynôme n’admet qu’une seule racine réelle double <span class="math inline">\(x_0 = \frac{-(-3)}{2 \times 3/4} = 2\)</span>. De plus, il est du signe de son coefficient dominant <span class="math inline">\(\frac{3}{4} &gt; 0\)</span>. Ainsi pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f(x) - x \geqslant 0\)</span>.</p>
+</details>
+<p><strong>Partie B</strong></p>
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> de terme initial <span class="math inline">\(u_0\)</span> telle que <span class="math inline">\(u_{n+1} = f(u_n)\)</span>.</p>
+<ol type="1">
+<li>Justifier que la suite <span class="math inline">\((u_n)\)</span> est croissante, quelle que soit la valeur de <span class="math inline">\(u_0\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>D’après la partie précédente, on a pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f(x) \geqslant x\)</span>. On en déduit alors que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(f(u_n) \geqslant u_n\)</span>, donc <span class="math inline">\(u_{n+1} \geqslant u_n\)</span>. D’où la suite <span class="math inline">\((u_n)\)</span> est croissante.</p>
+</details>
+<ol start="2" type="1">
+<li>Étude du cas : <span class="math inline">\(4/3 \leqslant u_0 \leqslant 2\)</span>.</li>
+</ol>
+<ol type="a">
+<li>Démontrer par récurrence que, pour tout entier naturel <span class="math inline">\(n\)</span>, <span class="math display">\[\dfrac43 \leqslant u_{n} \leqslant 2\]</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>La fonction <span class="math inline">\(f\)</span> est croissante sur <span class="math inline">\([4/3 ; +\infty[\)</span>, donc sur <span class="math inline">\([4/3 ; 2]\)</span>.</p>
+<p>Soit <span class="math inline">\(P_n : 4/3 \leqslant u_n \leqslant 2\)</span>. - <strong>Initialisation :</strong><br>
+On a <span class="math display">\[ \frac43 \leqslant u_0 \leqslant 2\]</span> Donc <span class="math inline">\(P_0\)</span> est vraie.</p>
+<ul>
+<li><p><strong>Hérédité :</strong><br>
+On suppose que pour un entier <span class="math inline">\(n\)</span> arbitrairement fixé, <span class="math inline">\(P_n\)</span> est vraie.</p>
+<p>C’est-à-dire que <span class="math inline">\(\frac43 \leqslant u_n \leqslant 2\)</span>.</p>
+<p>Montrons alors que <span class="math inline">\(P_{n+1}\)</span> est vraie.</p>
+<p><span class="math display">\[\frac43 \leqslant u_n \leqslant 2 \underset{f \nearrow \text{ pour } x \geqslant \frac43}{\Longrightarrow} f\left(\frac43\right) \leqslant f(u_n) \leqslant f(2) \Longrightarrow \frac43 \leqslant u_{n+1} \leqslant 2\]</span></p>
+<p>Ainsi <span class="math inline">\((P_n \Longrightarrow P_{n+1} )\)</span> est vraie.</p>
+<p>Or <span class="math inline">\(P_n\)</span> est vraie, on en déduit que <span class="math inline">\(P_{n+1}\)</span> est vraie.</p></li>
+<li><p><strong>Conclusion :</strong><br>
+On a <span class="math inline">\(P_0\)</span> vraie et pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(P_n\)</span> est héréditaire.</p>
+<p>On déduit du raisonnement par récurrence que <span class="math inline">\(P_n\)</span> est vraie pour tout entier <span class="math inline">\(n\)</span>.</p>
+</li></ul></details>
+
+<ol start="2" type="a">
+<li>émontrer que la suite <span class="math inline">\(\left(u_n\right)\)</span> est convergente.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+La suite est croissante et majorée par 2, donc d’après le théorème de convergence monotone, elle est convergente.
+</details>
+<ol start="3" type="a">
+<li>Déterminer la limite de la suite <span class="math inline">\(\left(u_n\right)\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>D’après la question précédente, la suite <span class="math inline">\((u_n)\)</span> converge. Soit <span class="math inline">\(l\)</span> la limite de cette suite.</p>
+<p>Alors <span class="math display">\[\lim_{n \to + \infty} u_n = l \quad \text{ et } \quad \lim_{n \to + \infty} u_{n+1} = l\]</span></p>
+<p>On a alors par opération,</p>
+<p><span class="math display">\[\lim_{n \to + \infty} u_{n+1} = \lim_{n \to + \infty}  \frac34 u_n^2-2u_n +3 = \frac34l^2-2l+3\]</span></p>
+<p>On déduit de l’unicité de la limite que <span class="math display">\[l=\frac34 l^2-2l+3\]</span></p>
+<p>C’est-à-dire que <span class="math display">\[\frac34l^2-3l+3 = 0\]</span></p>
+<p>Cette équation admet, d’après la question <span class="math inline">\(A.2\)</span> une unique solution <span class="math inline">\(l=2\)</span>.</p>
+On déduit donc que la suite <span class="math inline">\((u_n)\)</span> converge vers <span class="math inline">\(2\)</span>.}
+</details>
+<ol start="3" type="1">
+<li>Etude du cas particulier : <span class="math inline">\(u_0 = 3\)</span>.</li>
+</ol>
+<p>On admet que dans ce cas la suite <span class="math inline">\(\left(u_n\right)\)</span> tend vers <span class="math inline">\(+\infty\)</span>.</p>
+Recopier et compléter la fonction suivante écrite en Python, afin qu’elle renvoie la plus petite valeur de <span class="math inline">\(n\)</span> telle que <span class="math inline">\(u_n\)</span> soit supérieur ou égal à 100.
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<pre><code>```python
+def seuil():
+    u = 3
+    n = 0
+    while u &lt;= 100:
+        u = 3/4*u**2 - 2*u + 3
+        n = n + 1
+    return n
+```</code></pre>
+</details>
+<ol start="4" type="1">
+<li>Etude du cas : <span class="math inline">\(u_0 &gt; 2\)</span>.</li>
+</ol>
+<p>A l’aide d’un raisonnement par l’absurde, montrer que <span class="math inline">\(\left(u_n\right)\)</span> n’est pas convergente.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Soit <span class="math inline">\(u_0 &gt;2\)</span>.</p>
+<p>On suppose que la suite <span class="math inline">\((u_n)\)</span> converge.</p>
+<p>Donc, il existe un réel <span class="math inline">\(l\)</span> tel que <span class="math display">\[\lim_{n \to + \infty} u_n =l\]</span></p>
+<p>De la stricte croissante de la suite</p>
+<p><span class="math inline">\((u_n)\)</span> on déduit que pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[2 &lt; u_n &lt; l\]</span></p>
+<p>De même que dans la question <span class="math inline">\(2.c\)</span>, on a (unicité de la limite) <span class="math display">\[f(l)= l\]</span></p>
+<p>Cette équation qui admet comme unique solution <span class="math inline">\(l=2\)</span>.</p>
+<p>Ainsi <span class="math display">\[2 &lt; 2\]</span></p>
+Ce qui est impossible, donc pour <span class="math inline">\(u_0 &gt;2\)</span>, la suite <span class="math inline">\((u_n)\)</span> ne peut pas converger. Donc elle diverge.
+</details>
+<div class="nav-pages">
+<p><a class="prev" href="suite_geometrique.html">⬅️</a></p>
 </div>
 
 
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
 </div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
+</section>
 
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-<th>
-Description
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-file-modified-sort="1766860516273" data-listing-reading-time-sort="5" data-listing-word-count-sort="893" data-listing-title-sort="Fonction polynôme du second degré" data-listing-filename-sort="definition.qmd">
-<td>
-<a href="../../premiere-maths/fonction2nD/definition.html" class="title listing-title">Fonction polynôme du second degré</a>
-</td>
-<td>
-<span class="listing-description">Définir une fonction du second degré - Égalité de deux polynômes - Forme canonique</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-file-modified-sort="1766860516273" data-listing-reading-time-sort="7" data-listing-word-count-sort="1359" data-listing-title-sort="Le second degré : racines d'une équation" data-listing-filename-sort="racine.qmd">
-<td>
-<a href="../../premiere-maths/fonction2nD/racine.html" class="title listing-title">Le second degré : racines d’une équation</a>
-</td>
-<td>
-<span class="listing-description">Racines d’un polynôme - Équation du second degré - Théorème de factorisation</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-file-modified-sort="1766860516273" data-listing-reading-time-sort="2" data-listing-word-count-sort="347" data-listing-title-sort="Lien coefficients - racines" data-listing-filename-sort="coefficient.qmd">
-<td>
-<a href="../../premiere-maths/fonction2nD/coefficient.html" class="title listing-title">Lien coefficients - racines</a>
-</td>
-<td>
-<span class="listing-description">Faire le lien entre les coefficients et les solutions d’une équation - Système d’équation à 2 inconnues</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-file-modified-sort="1766860516273" data-listing-reading-time-sort="8" data-listing-word-count-sort="1571" data-listing-title-sort="Factorisation et signe d'une fonction du second degré" data-listing-filename-sort="signe.qmd">
-<td>
-<a href="../../premiere-maths/fonction2nD/signe.html" class="title listing-title">Factorisation et signe d’une fonction du second degré</a>
-</td>
-<td>
-<span class="listing-description">Factoriser et Signe d’une expression du second degré - Inéquations</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-file-modified-sort="1766860516273" data-listing-reading-time-sort="6" data-listing-word-count-sort="1009" data-listing-title-sort="Parabole" data-listing-filename-sort="parabole.qmd">
-<td>
-<a href="../../premiere-maths/fonction2nD/parabole.html" class="title listing-title">Parabole</a>
-</td>
-<td>
-<span class="listing-description">Représentation graphique fonction du second degré - Axe de symétrie - Variations</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-file-modified-sort="1766860516273" data-listing-reading-time-sort="5" data-listing-word-count-sort="980" data-listing-title-sort="Bilan : Équation et représentation graphique" data-listing-filename-sort="bilan.qmd">
-<td>
-<a href="../../premiere-maths/fonction2nD/bilan.html" class="title listing-title">Bilan : Équation et représentation graphique</a>
-</td>
-<td>
-<span class="listing-description">Lien entre les différentes parties du cours : Courbes - Discriminant - Signe</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-file-modified-sort="1766860516273" data-listing-reading-time-sort="25" data-listing-word-count-sort="4831" data-listing-title-sort="Feuilles d'exercices — Second degré" data-listing-filename-sort="exercices.qmd">
-<td>
-<a href="../../premiere-maths/fonction2nD/exercices.html" class="title listing-title">Feuilles d’exercices — Second degré</a>
-</td>
-<td>
-<span class="listing-description"> </span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

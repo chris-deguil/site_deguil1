@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -887,75 +899,75 @@ window.Quarto = {
 <section id="théorème-dencadrement" class="level3">
 <h3 class="anchored" data-anchor-id="théorème-dencadrement">Théorème d’encadrement</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : Théorème d’encadrement</span><br> On considère <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> et <span class="math inline">\(h\)</span> trois fonctions définies sur <span class="math inline">\(D = [a \, ; \, +\infty[\)</span> et telles que <span class="math inline">\(\lim_{x \to +\infty} f(x)= \lim_{x \to +\infty} g(x)=l\)</span>.</p>
-<p>Si dans un voisinage de <span class="math inline">\(+\infty\)</span> on a <span class="math inline">\(f \leqslant h \leqslant g\)</span> alors <span class="math display">\[\lim_{x \to +\infty} h(x) = l\]</span></p>
+<p><span class="bloc-titre">Propriété : </span></p>
+<p>On considère <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> et <span class="math inline">\(h\)</span> trois fonctions définies sur <span class="math inline">\(D = [a \, ; \, +\infty[\)</span> et telles que <span class="math inline">\(\lim_{x \to +\infty} f(x)= \lim_{x \to +\infty} g(x)=l\)</span>.<br>
+Si dans un voisinage de <span class="math inline">\(+\infty\)</span> on a <span class="math inline">\(f \leqslant h \leqslant g\)</span> alors <span class="math display">\[\lim_{x \to +\infty} h(x) = l\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>Soit <span class="math inline">\(\epsilon &gt;0\)</span> fixé, alors il existe <span class="math inline">\(x_1, x_2 \in D\)</span> tels que</p>
-<p><span class="math display">\[\forall x \in D, \, ( x \geqslant x_1 \Rightarrow \abs{f(x)-l} \leqslant \epsilon ) \qquad \et  \qquad \forall x \in D, \, ( x \geqslant x_2 \Rightarrow \abs{g(x)-l} \leqslant \epsilon)\]</span></p>
-<p>Ainsi pour <span class="math inline">\(x \geqslant x_1\)</span> et <span class="math inline">\(x \geqslant x_2\)</span> on a <span class="math display">\[l-\epsilon \leqslant f(x) \qquad \text{ et } \qquad g(x) \leqslant l + \epsilon\]</span></p>
-<p>De plus, <span class="math display">\[\exists x_3\in D, \,( x \geqslant x_3 \Rightarrow f(x) \leqslant h(x) \leqslant g(x))\]</span></p>
-<p>Soit <span class="math inline">\(x_{max} = \max\{x_1, x_2, x_3\}\)</span>, alors <span class="math display">\[\forall x \geqslant x_{max}, \quad l- \epsilon \leqslant f(x) \leqslant h(x) \leqslant g(x) \leqslant l + \epsilon\]</span></p>
-<p>Ce qui est la définition de <span class="math display">\[\lim_{x \to +\infty} h(x) = l\]</span></p>
+<p>Soit <span class="math inline">\(\epsilon &gt;0\)</span> fixé, alors il existe <span class="math inline">\(x_1, x_2 \in D\)</span> tels que : <span class="math display">\[\forall x \in D, \, ( x \geqslant x_1 \Rightarrow |f(x)-l| \leqslant \epsilon ) \qquad \text{ et } \qquad \forall x \in D, \, ( x \geqslant x_2 \Rightarrow |g(x)-l| \leqslant \epsilon)\]</span> Ainsi pour <span class="math inline">\(x \geqslant x_1\)</span> et <span class="math inline">\(x \geqslant x_2\)</span> on a : <span class="math display">\[l-\epsilon \leqslant f(x) \qquad \text{ et } \qquad g(x) \leqslant l + \epsilon\]</span> De plus, <span class="math display">\[\exists x_3\in D, \,( x \geqslant x_3 \Rightarrow f(x) \leqslant h(x) \leqslant g(x))\]</span> Soit <span class="math inline">\(x_{max} = \max\{x_1, x_2, x_3\}\)</span>, alors : <span class="math display">\[\forall x \geqslant x_{max}, \quad l- \epsilon \leqslant f(x) \leqslant h(x) \leqslant g(x) \leqslant l + \epsilon\]</span> Ce qui est la définition de <span class="math display">\[\lim_{x \to +\infty} h(x) = l\]</span></p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R^*_+\)</span> par <span class="math inline">\(f(x)= \frac{5\cos(x)}{x}\)</span>.</p>
-<p>Déterminons la limite en <span class="math inline">\(+\infty\)</span>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}^*_+\)</span> par <span class="math inline">\(f(x)= \dfrac{5\cos(x)}{x}\)</span>. Déterminons la limite en <span class="math inline">\(+\infty\)</span>.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p>Pour tout réel <span class="math inline">\(x&gt;0\)</span>, <span class="math display">\[ -1 \leqslant \cos(x) \leqslant 1 \Longrightarrow -5 \leqslant 5 \cos(x) \leqslant 5 \Longrightarrow\frac{-5}{x} \leqslant f(x) \leqslant \frac{5}{x}\]</span></p>
-<p>Or <span class="math display">\[\lim_{x \to +\infty} \frac{5}{x} = \lim_{x \to +\infty} \frac{-5}{x} = 0\]</span> On déduit du théorème d’encadrement que <span class="math display">\[\lim_{x \to +\infty} f(x) = 0\]</span></p>
+<p>Pour tout réel <span class="math inline">\(x&gt;0\)</span> : <span class="math display">\[-1 \leqslant \cos(x) \leqslant 1 \Longrightarrow -5 \leqslant 5 \cos(x) \leqslant 5 \Longrightarrow \dfrac{-5}{x} \leqslant f(x) \leqslant \dfrac{5}{x}\]</span> Or <span class="math display">\[\lim_{x \to +\infty} \dfrac{5}{x} = \lim_{x \to +\infty} \dfrac{-5}{x} = 0\]</span> On déduit du théorème d’encadrement que <span class="math display">\[\lim_{x \to +\infty} f(x) = 0\]</span></p>
+</details>
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap4_Limite_figure16.png" style="width: 40%;"></p>
 </div>
-</details>
+
 </div>
-<div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span></p>
+<div class="bloc thm">
+<p><span class="bloc-titre">Propriété : Prolongement des inégalités</span></p>
+<p>Soient <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> deux fonctions définies au voisinage de <span class="math inline">\(\pm\infty\)</span> et ayant pour limites respectives <span class="math inline">\(l\)</span> et <span class="math inline">\(l'\)</span>.<br>
+S’il existe <span class="math inline">\(x_0\)</span>, tel que <span class="math inline">\(\forall x \geqslant x_0, \, f(x) &lt; g(x)\)</span> alors <span class="math display">\[l \leqslant l'\]</span></p>
 </div>
-<details class="bloc cor">
-<summary>
-Afficher la correction :
-</summary>
-</details>
 </section>
 <section id="théorème-de-comparaison" class="level3">
 <h3 class="anchored" data-anchor-id="théorème-de-comparaison">Théorème de comparaison</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> Soient <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> deux fonctions définies au voisinage de <span class="math inline">\(+\infty\)</span> telles que <span class="math inline">\(\lim_{x \to + \infty}f(x) = +\infty\)</span>.</p>
-<p>S’il existe un réel <span class="math inline">\(a\)</span> tel que pour tout <span class="math inline">\(x \in ]a\, ; \, +\infty[, \, f(x) \leqslant g(x)\)</span> alors <span class="math display">\[\lim_{x \to +\infty} g(x) = +\infty\]</span></p>
+<p><span class="bloc-titre">Propriété (admis) : </span></p>
+<p>Soient <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> deux fonctions définies au voisinage de <span class="math inline">\(+\infty\)</span> telles que <span class="math inline">\(\lim_{x \to + \infty}f(x) = +\infty\)</span>.<br>
+S’il existe un réel <span class="math inline">\(a\)</span> tel que pour tout <span class="math inline">\(x \in ]a\, ; \, +\infty[, \, f(x) \leqslant g(x)\)</span> alors <span class="math display">\[\lim_{x \to +\infty} g(x) = +\infty\]</span></p>
 </div>
-<details class="bloc demo">
-<summary>
-Démonstration :
-</summary>
-<p>Soit <span class="math inline">\(A\)</span> un réel quelconque. Nous cherchons à trouver un réel <span class="math inline">\(B'\)</span> tel que si <span class="math inline">\(x &gt; B'\)</span>, alors <span class="math inline">\(g(x) &gt; A\)</span>.</p>
-<p>On a <span class="math display">\[\displaystyle \lim_{x\to +\infty} f(x) = +\infty\]</span> Par définition, pour le <span class="math inline">\(A\)</span> fixé, il existe un réel <span class="math inline">\(B\)</span> tel que :</p>
-<p><span class="math display">\[x &gt; B \implies f(x) &gt; A \]</span></p>
-<p>Or pour tout <span class="math inline">\(x &gt;a\)</span>, <span class="math inline">\(f(x) \le g(x)\)</span>.</p>
-<p>Soit alors <span class="math inline">\(B' = \max(a, B)\)</span> :</p>
-<p>Soit <span class="math inline">\(x &gt; B'\)</span>, alors <span class="math inline">\(x &gt; B\)</span>, et on a alors <span class="math display">\[$g(x) \ge f(x) \et  f(x) &gt; A\]</span> Par transitivité de l’inégalité, nous obtenons : <span class="math display">\[
-    x &gt; B' \implies g(x) &gt; A
-    \]</span></p>
-<p>Conclusion :</p>
-Nous avons montré que pour tout réel <span class="math inline">\(A\)</span>, il existe un réel <span class="math inline">\(B'\)</span> tel que si <span class="math inline">\(x &gt; B'\)</span>, alors <span class="math inline">\(g(x) &gt; A\)</span>. Par conséquent, par définition : <span class="math display">\[
-    \lim_{x\to +\infty} g(x) = +\infty
-    \]</span>
-</details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span> Soient <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> les fonctions définies respectivement par <span class="math inline">\(f(x)=x+1\)</span> et <span class="math inline">\(g(x)=\e^x\)</span> sur <span class="math inline">\(\R\)</span>.</p>
-<p>Déterminer <span class="math inline">\(\lim_{x \to +\infty} \e^x\)</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<ol type="1">
+<li>Soient <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> les fonctions définies respectivement par <span class="math inline">\(f(x)=x+1\)</span> et <span class="math inline">\(g(x)=\e^x\)</span> sur <span class="math inline">\(\R\)</span>.<br>
+Déterminer <span class="math display">\[\lim_{x \to + \infty} \e^x\]</span></li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p>La droite d’équation <span class="math inline">\(y=x+1\)</span> est la tangente au point d’abscisse <span class="math inline">\(0\)</span> à la représentation graphique de la fonction exponentielle.</p>
-La fonction exponentielle étant convexe sur <span class="math inline">\(\R\)</span>, on déduit que pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[x+1 \leqslant \e^x.\]</span> Or <span class="math inline">\(\lim_{x \to +\infty} (x+1) = +\infty\)</span>.\ Par comparaison, on déduit que <span class="math display">\[\lim_{x \to +\infty} \e^x = +\infty.\]</span>
+La droite d’équation <span class="math inline">\(y=x+1\)</span> est la tangente au point d’abscisse <span class="math inline">\(0\)</span> à la représentation graphique de la fonction exponentielle.<br>
+La fonction exponentielle étant convexe sur <span class="math inline">\(\mathbb{R}\)</span>, on déduit que pour tout réel <span class="math inline">\(x\)</span> : <span class="math display">\[x+1 \leqslant \e^x\]</span> Or <span class="math inline">\(\lim_{x \to +\infty} (x+1) = +\infty\)</span>.<br>
+Par comparaison, on déduit que : <span class="math display">\[\lim_{x \to +\infty} \e^x = +\infty\]</span>
+</details>
+<ol start="2" type="1">
+<li>En déduire <span class="math inline">\(\lim_{x \to 0^+} \exp\left(\sqrt{1+\dfrac{1}{x^2}}\right)\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math display">\[
+\left. \begin{array}{lll}
+\left . \begin{array}{l}
+\lim_{x \to 0^+} 1+\dfrac{1}{x^2} = + \infty\\
+\lim_{y \to +\infty} \sqrt{y} = +\infty
+\end{array} \right\} \text{ Par composition } &amp;\lim_{x \to 0^+} \sqrt{1+\dfrac{1}{x^2}} = + \infty&amp;    \\
+&amp;\lim_{y \to +\infty} \e^{y} = +\infty &amp;  \end{array} \right\} \text{ Par composition } \lim_{x \to 0^+} f(x) = + \infty\]</span></p>
 </details>
 </div>
 <div class="bloc thm">

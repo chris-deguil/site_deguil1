@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -852,7 +864,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#implication-réciproque-équivalence" id="toc-implication-réciproque-équivalence" class="nav-link active" data-scroll-target="#implication-réciproque-équivalence">Implication, réciproque, équivalence</a></li>
-  <li><a href="#les-quantificateurs" id="toc-les-quantificateurs" class="nav-link" data-scroll-target="#les-quantificateurs">Les quantificateurs</a></li>
   </ul>
 </nav>
     </div>
@@ -908,6 +919,8 @@ L’idée sous-jacente est de dire que l’on peut toujours dire ce que l’on v
 </ul>
 </div>
 <p><strong>Table de vérité et implication</strong></p>
+<div class="columns">
+<div class="column" style="width:45%;">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -939,6 +952,9 @@ L’idée sous-jacente est de dire que l’on peut toujours dire ce que l’on v
 </tr>
 </tbody>
 </table>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -970,15 +986,15 @@ L’idée sous-jacente est de dire que l’on peut toujours dire ce que l’on v
 </tr>
 </tbody>
 </table>
-<div class="bloc rem">
+</div><div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span><br></p>
 <ul>
-<li>Les deux tables précédentes coïncident en tous points, les deux fonctions sont alors égales ; ainsi, considérer <span class="math inline">\(P \Longrightarrow Q\)</span> et « non <span class="math inline">\(P\)</span> ou <span class="math inline">\(Q\)</span> » est équivalent. Cela est indispensable à comprendre afin de mieux assimiler le raisonnement par l’absurde et la récurrence.<br>
-</li>
-<li>La table de vérité de l’implication justifie la terminologie <strong>Si</strong> <span class="math inline">\(P\)</span> <strong>alors</strong> <span class="math inline">\(Q\)</span>. En effet : supposer <span class="math inline">\(P\)</span>, c’est dire que <span class="math inline">\(P\)</span> est vraie ; ainsi l’assertion ne peut être vraie que si <span class="math inline">\(Q\)</span> est vraie.</li>
+<li><p>Les deux tables précédentes coïncident en tous points, les deux fonctions sont alors égales ; ainsi, considérer <span class="math inline">\(P \Longrightarrow Q\)</span> et « non <span class="math inline">\(P\)</span> ou <span class="math inline">\(Q\)</span> » est équivalent. Cela est indispensable à comprendre afin de mieux assimiler le raisonnement par l’absurde et la récurrence.<br>
+</p></li>
+<li><p>La table de vérité de l’implication justifie la terminologie <strong>Si</strong> <span class="math inline">\(P\)</span> <strong>alors</strong> <span class="math inline">\(Q\)</span>.</p>
+<p>En effet : supposer <span class="math inline">\(P\)</span>, c’est dire que <span class="math inline">\(P\)</span> est vraie ; ainsi l’assertion ne peut être vraie que si <span class="math inline">\(Q\)</span> est vraie.</p></li>
 </ul>
-</div>
-<div class="bloc ex">
+</div><div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br></p>
 <ul>
 <li><p>On considère <span class="math inline">\(P\)</span> la proposition « <span class="math inline">\(x&gt;5\)</span> » et <span class="math inline">\(Q\)</span> la proposition « <span class="math inline">\(x\geqslant -2\)</span> ».</p>
@@ -989,15 +1005,10 @@ L’idée sous-jacente est de dire que l’on peut toujours dire ce que l’on v
 </ol></li>
 <li><p>Si <span class="math inline">\(x=3\)</span> alors <span class="math inline">\(x\leqslant 3\)</span>. Cette proposition est vraie.</p></li>
 </ul>
-</div>
-<div class="bloc rem">
+</div><div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span><br> Pour démontrer <span class="math inline">\((P \Longrightarrow Q)\)</span>, il existe plusieurs méthodes. Ce sont les différents modes de raisonnement en mathématiques.</p>
-</div>
-</section>
-<section id="les-quantificateurs" class="level3">
+</div><hr><section id="les-quantificateurs" class="level3">
 <h3 class="anchored" data-anchor-id="les-quantificateurs">Les quantificateurs</h3>
-<section id="notations" class="level4">
-<h4 class="anchored" data-anchor-id="notations">Notations</h4>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span><br> Lorsqu’une proposition dépend d’un paramètre, on peut utiliser deux types de quantificateurs :</p>
 <ul>
@@ -1029,14 +1040,16 @@ Signifie que pour tout objet <span class="math inline">\(x\)</span>, la proposit
 </ul></li>
 </ol>
 </div>
-</section>
+<hr>
 <section id="négation" class="level4">
 <h4 class="anchored" data-anchor-id="négation">Négation</h4>
+<div class="bloc rem">
 <p>On considère la proposition suivante :<br>
-« <em>En vacances, il a fait beau tous les jours</em> ».<br>
-Cette phrase possède un quantificateur universel : « tous les ».<br>
-La négation est :<br>
-« <em>En vacances, il y a au moins un jour où il n’a pas fait beau.</em> »</p>
+« En vacances, il a fait beau tous les jours ».</p>
+<p>Cette phrase possède un quantificateur universel : « tous les ».</p>
+<p>La négation est :</p>
+<p>« En vacances, il y a au moins un jour où il n’a pas fait beau. »</p>
+</div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Théorème (admis) : </span><br> Soit <span class="math inline">\(P(x)\)</span> une proposition dépendant de <span class="math inline">\(x\)</span>, alors :</p>
 <ul>
@@ -1049,36 +1062,45 @@ La négation est :<br>
 <p><span class="bloc-titre">Exemple : </span><br> On considère la phrase suivante :<br>
 <span class="math display">\[\forall x\in I,\, \exists k\in\R,\, f(x)=k\]</span></p>
 <ol type="1">
-<li><strong>Traduction.</strong> Cette phrase signifie que pour tout réel <span class="math inline">\(x\)</span> de <span class="math inline">\(I\)</span>, l’image de <span class="math inline">\(x\)</span> par <span class="math inline">\(f\)</span> existe : <span class="math inline">\(f\)</span> est définie sur <span class="math inline">\(I\)</span>.<br>
-</li>
-<li><strong>Négation.</strong> <span class="math inline">\(\exists x\in I,\, \forall k\in\R,\, f(x)\neq k\)</span>. Autrement dit, <span class="math inline">\(f\)</span> n’est pas définie en au moins un point de <span class="math inline">\(I\)</span> (donc pas sur tout <span class="math inline">\(I\)</span>).</li>
+<li>Traduire en français cette prhase</li>
 </ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+Cette phrase signifie que pour tout réel <span class="math inline">\(x\)</span> de <span class="math inline">\(I\)</span>, l’image de <span class="math inline">\(x\)</span> par <span class="math inline">\(f\)</span> existe : <span class="math inline">\(f\)</span> est définie sur <span class="math inline">\(I\)</span>.
+</details>
+<ol start="2" type="1">
+<li>Donner la négation.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<span class="math inline">\(\exists x\in I,\, \forall k\in\R,\, f(x)\neq k\)</span>. Autrement dit, <span class="math inline">\(f\)</span> n’est pas définie en au moins un point de <span class="math inline">\(I\)</span> (donc pas sur tout <span class="math inline">\(I\)</span>).
+</details>
 </div>
 </section>
 <section id="place-des-quantificateurs" class="level4">
 <h4 class="anchored" data-anchor-id="place-des-quantificateurs">Place des quantificateurs</h4>
-<div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br></p>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span><br></p>
+<p>L’exemple précédent fait apparaître plusieurs quantificateurs ; il est alors légitime de se poser la question de l’importance de la place de ces quantificateurs.</p>
 <ul>
-<li><p>Proposition :<br>
-<span class="math display">\[\forall x\in\R,\, \forall y\in\R,\ (x+y)^2=x^2+y^2+2xy.\]</span><br>
-Ici l’ordre des quantificateurs peut être inversé sans changer le sens.</p></li>
-<li><p>Proposition :<br>
-<span class="math display">\[\exists x\in\R,\, \exists y\in\R^+,\ x^2=y.\]</span><br>
-Ici, <span class="math inline">\(y\)</span> dépend du choix de <span class="math inline">\(x\)</span> : prendre comme valeur de <span class="math inline">\(y\)</span> le carré de <span class="math inline">\(x\)</span>.<br>
-Si on inverse :<br>
-<span class="math display">\[\exists y\in\R^+,\, \exists x\in\R,\ x^2=y,\]</span><br>
-c’est <span class="math inline">\(x\)</span> qui dépend de <span class="math inline">\(y\)</span> : tout nombre positif admet au moins un antécédent par la fonction carré.</p></li>
-<li><p>On considère :<br>
-<span class="math display">\[ \forall x\in\R,\, \exists y\in\R,\, f(x)=y \quad \text{et} \quad
-\exists y\in\R,\, \forall x\in\R,\, f(x)=y.\]</span><br>
-Ces deux phrases n’ont pas le même sens.</p>
+<li><p><strong>Quantificateurs de même nature</strong> :</p>
 <ul>
-<li>La première signifie que <span class="math inline">\(f\)</span> est définie sur <span class="math inline">\(\R\)</span> (le choix de <span class="math inline">\(y\)</span> dépend de <span class="math inline">\(x\)</span>).<br>
-</li>
-<li>La seconde signifie que <span class="math inline">\(f\)</span> est constante sur <span class="math inline">\(\R\)</span> (le choix de <span class="math inline">\(y\)</span> est indépendant de <span class="math inline">\(x\)</span>).</li>
+<li>Proposition : <span class="math display">\[\forall x\in\mathbb{R},\, \forall y\in\mathbb{R},\ (x+y)^2=x^2+y^2+2xy\]</span> Ici l’ordre des quantificateurs peut être inversé sans changer le sens.</li>
+<li>Proposition : <span class="math display">\[\exists x\in\mathbb{R},\, \exists y\in\mathbb{R}^+,\ x^2=y\]</span> De même, l’ordre des quantificateurs de même nature (<span class="math inline">\(\exists\)</span> et <span class="math inline">\(\exists\)</span>) n’influe pas sur le sens logique de la phrase.</li>
+</ul></li>
+<li><p><strong>Quantificateurs de natures différentes (Alternance)</strong> :</p>
+<p>On considère :</p>
+<p><span class="math display">\[ \forall x\in\mathbb{R},\, \exists y\in\mathbb{R},\ f(x)=y \quad \text{et} \quad \exists y\in\mathbb{R},\, \forall x\in\mathbb{R},\ f(x)=y\]</span> Ces deux phrases n’ont pas le même sens :</p>
+<ul>
+<li>La première signifie que <span class="math inline">\(f\)</span> est définie sur <span class="math inline">\(\mathbb{R}\)</span> (le choix de <span class="math inline">\(y\)</span> peut dépendre de <span class="math inline">\(x\)</span>).</li>
+<li>La seconde signifie que <span class="math inline">\(f\)</span> est constante sur <span class="math inline">\(\mathbb{R}\)</span> (le choix de <span class="math inline">\(y\)</span> est le même pour tous les <span class="math inline">\(x\)</span>).</li>
 </ul></li>
 </ul>
+<p>De façon générale, on a toujours l’implication suivante : <span class="math display">\[(\exists y,\, \forall x,\, P(x,y)) \Longrightarrow (\forall x,\, \exists y,\, P(x,y))\]</span></p>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span><br> Dans ce dernier exemple, on peut remarquer que<br>
@@ -1093,6 +1115,8 @@ De façon générale, on a toujours :<br>
 
 
 </section>
+</section>
+</div>
 </section>
 
 </main> <!-- /main -->

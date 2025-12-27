@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -887,63 +899,70 @@ window.Quarto = {
 <section id="définition" class="level2">
 <h2 class="anchored" data-anchor-id="définition">Définition</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(f\)</span> une fonction définie sur un intervalle <span class="math inline">\(I\)</span> de <span class="math inline">\(\mathbb{R}\)</span>.\ On dit que <span class="math inline">\(f\)</span> est convexe sur <span class="math inline">\(I\)</span> lorsque : <span class="math display">\[\forall x_1, x_2 \in I, \, \forall \lambda \in [0 \, ; \, 1], \, f(\lambda x_1 + (1-\lambda) x_2) \leqslant \lambda f(x_1) + (1- \lambda) f(x_2)\]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction définie sur un intervalle <span class="math inline">\(I\)</span> de <span class="math inline">\(\mathbb{R}\)</span>.<br>
+On dit que <span class="math inline">\(f\)</span> est <strong>convexe</strong> sur <span class="math inline">\(I\)</span> lorsque : <span class="math display">\[\forall x_1, x_2 \in I, \, \forall \lambda \in [0 \, ; \, 1], \, f(\lambda x_1 + (1-\lambda) x_2) \leqslant \lambda f(x_1) + (1- \lambda) f(x_2)\]</span></p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> Puisque <span class="math inline">\(\lambda \in [0\, ; \, 1]\)</span>, alors pour tout <span class="math inline">\(x_1,x_2 \in I\)</span>, <span class="math inline">\(x=\lambda x_1 + (1-\lambda)x_2 \in I\)</span>.\ Cela correspond à choisir un point <span class="math inline">\(M(x)\)</span> sur un segment <span class="math inline">\([M_1M_2]\)</span> où <span class="math inline">\(M_1(x_1)\)</span> et <span class="math inline">\(M_2(x_2)\)</span>.</p>
-<p>Cette définition est un peu abstraite, on peut lui donner un sens graphique simple. Commençons par donner un sens à <span class="math display">\[\forall x_1, x_2 \in I, \, \forall \lambda \in [0 \, ; \, 1]\]</span></p>
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>Puisque <span class="math inline">\(\lambda \in [0\, ; \, 1]\)</span>, alors pour tout <span class="math inline">\(x_1,x_2 \in I\)</span>, <span class="math inline">\(x=\lambda x_1 + (1-\lambda)x_2 \in I\)</span>.<br>
+Cela correspond à choisir un point <span class="math inline">\(M(x)\)</span> sur un segment <span class="math inline">\([M_1M_2]\)</span> où <span class="math inline">\(M_1(x_1)\)</span> et <span class="math inline">\(M_2(x_2)\)</span>.</p>
+</div>
+<p>Cette définition est un peu abstraite, on peut lui donner un sens graphique simple. Commençons par donner un sens à <span class="math inline">\(\forall x_1, x_2 \in I, \, \forall \lambda \in [0 \, ; \, 1]\)</span> :</p>
 <ul>
 <li><span class="math inline">\(\lambda x_1 + (1-\lambda)x_2\)</span> signifie prendre un point de l’intervalle <span class="math inline">\(I\)</span>.</li>
-<li><span class="math inline">\(\lambda f(x_1) + (1- \lambda) f(x_2)\)</span> signifie prendre un point de l’intervalle <span class="math inline">\([f(x_1) \, ;\, f(x_2)]\)</span>.\ Il s’agit du point de la droite <span class="math inline">\((M_1M_2)\)</span> dont l’abscisse est <span class="math inline">\(x=\lambda x_1 + (1-\lambda)x_2\)</span>.</li>
+<li><span class="math inline">\(\lambda f(x_1) + (1- \lambda) f(x_2)\)</span> signifie prendre un point de l’intervalle <span class="math inline">\([f(x_1) \, ;\, f(x_2)]\)</span>.<br>
+Il s’agit du point de la droite <span class="math inline">\((M_1M_2)\)</span> dont l’abscisse est <span class="math inline">\(x=\lambda x_1 + (1-\lambda)x_2\)</span>.</li>
 </ul>
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap2_GeneralitesFonctions_convexite_carre.png" style="width: 49%;" margin-right="5%"></p>
 </div>
-<p>Ainsi, la fonction <span class="math inline">\(f\)</span> est convexe si et seulement si, pour tout couple <span class="math inline">\((M_1 \, ; \, M_2)\)</span> de points de la représentation graphique de <span class="math inline">\(f\)</span>, tout point <span class="math inline">\(M\)</span> de <span class="math inline">\(\mathscr{C}_f\)</span> d’abscisse comprise entre ceux de <span class="math inline">\(M_1\)</span> et <span class="math inline">\(M_2\)</span>, est en dessous du segment <span class="math inline">\([M_1M_2]\)</span>.</p>
-</div>
+<p>Ainsi, la fonction <span class="math inline">\(f\)</span> est convexe si et seulement si, pour tout couple <span class="math inline">\((M_1 \, ; \, M_2)\)</span> de points de la représentation graphique de <span class="math inline">\(f\)</span>, tout point <span class="math inline">\(M\)</span> de <span class="math inline">\(\mathscr{C}_f\)</span> d’abscisse comprise entre ceux de <span class="math inline">\(M_1\)</span> et <span class="math inline">\(M_2\)</span>, est en dessous du segment <span class="math inline">\([M_1M_2]\)</span>. :::</p>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Montrons que la fonction carré est convexe sur $ $.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Montrons que la fonction carré est convexe sur <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-Pour tout <span class="math inline">\(x,y\in\mathbb{R}\)</span> et <span class="math inline">\(t\in[0,1]\)</span> : <span class="math display">\[\begin{align*}
+Pour tout <span class="math inline">\(x,y\in\mathbb{R}\)</span> et <span class="math inline">\(t\in[0,1]\)</span> : <span class="math display">\[
+\begin{aligned}
 t\,x^2+(1-t)\,y^2 - \left(tx+(1-t)y\right)^2
 &amp;= t\,x^2+(1-t)\,y^2 - \big(t^2 x^2 + 2t(1-t)xy + (1-t)^2 y^2\big)\\
 &amp;= \big(t-t^2\big)x^2 + \big((1-t)-(1-t)^2\big)y^2 - 2t(1-t)xy\\
 &amp;= t(1-t)\,x^2 + t(1-t)\,y^2 - 2t(1-t)xy\\
 &amp;= t(1-t)\,\left(x^2 - 2xy + y^2\right)\\
 &amp;= t(1-t)\,\left(x-y\right)^2 \;\ge\; 0.
-\end{align*}\]</span> Ainsi, <span class="math display">\[
-\left(tx+(1-t)y\right)^2 \le t\,x^2+(1-t)\,y^2,
-\]</span> c’est-à-dire <span class="math display">\[
-f\!\left(tx+(1-t)y\right) \le t\,f(x) + (1-t)\,f(y) .
-\]</span>
+\end{aligned}
+\]</span> Ainsi, <span class="math display">\[\left(tx+(1-t)y\right)^2 \le t\,x^2+(1-t)\,y^2,\]</span> c’est-à-dire <span class="math display">\[f\left(tx+(1-t)y\right) \le t\,f(x) + (1-t)\,f(y).\]</span>
 </details>
 </div>
 <p>On peut retenir, comme définition, que :</p>
-<div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Une fonction <span class="math inline">\(f\)</span> est convexe si et seulement si la représentation de la fonction <span class="math inline">\(f\)</span> est en dessous de chacune de ses cordes.</p>
+<div class="rem">
+<p>Une fonction <span class="math inline">\(f\)</span> est convexe si et seulement si la représentation de la fonction <span class="math inline">\(f\)</span> est en dessous de chacune de ses cordes.</p>
 </div>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> On dit qu’une fonction <span class="math inline">\(f\)</span> est concave sur un intervalle <span class="math inline">\(I\)</span> de <span class="math inline">\(\mathbb{R}\)</span> lorsque <span class="math inline">\(-f\)</span> est convexe sur cet intervalle <span class="math inline">\(I\)</span>.</p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>On dit qu’une fonction <span class="math inline">\(f\)</span> est <strong>concave</strong> sur un intervalle <span class="math inline">\(I\)</span> de <span class="math inline">\(\mathbb{R}\)</span> lorsque <span class="math inline">\(-f\)</span> est convexe sur cet intervalle <span class="math inline">\(I\)</span>.</p>
 </div>
+<div class="rem">
 <p>Ainsi :</p>
-<div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Une fonction <span class="math inline">\(f\)</span> est concave si et seulement si la courbe est au-dessus de chacune de ses cordes.</p>
+<p>Une fonction <span class="math inline">\(f\)</span> est concave si et seulement si la courbe est au-dessus de chacune de ses cordes.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère la fonction <span class="math inline">\(f\)</span> dont on donne la représentation graphique ci-dessous sur <span class="math inline">\([-2 \, ; \, 3,5]\)</span>.<br> Le point d’abscisse <span class="math inline">\(1\)</span> joue un rôle particulier : il y a un changement de convexité (tout comme un extremum local où l’on observe un changement de variation de la fonction.)</p>
+<p><span class="bloc-titre">Exemple : </span> On considère la fonction <span class="math inline">\(f\)</span> dont on donne la représentation graphique ci-dessous sur <span class="math inline">\([-2 \, ; \, 3,5]\)</span>.<br> Le point d’abscisse <span class="math inline">\(1\)</span> joue un rôle particulier : il y a un changement de convexité (tout comme un extremum local où l’on observe un changement de variation de la fonction.)</p>
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap2_GeneralitesFonctions_convexite_fig_exemple.png" style="width: 25%;" margin-right="5%"></p>
 </div>
 <p>On peut déterminer graphiquement que la fonction <span class="math inline">\(f\)</span> est concave sur <span class="math inline">\([-2 \, ; 1]\)</span> et convexe sur <span class="math inline">\([1 \, ; \, 3,5]\)</span>.</p>
 </div>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soient <span class="math inline">\(f\)</span> une fonction définie sur un intervalle <span class="math inline">\(I\)</span> et <span class="math inline">\(\mathscr{C}_f\)</span> sa représentation graphique. On appelle point d’inflexion de <span class="math inline">\(\mathscr{C}_f\)</span> tout point de <span class="math inline">\(\mathscr{C}_f\)</span> où <span class="math inline">\(f\)</span> change de convexité.</p>
+<p><span class="bloc-titre">Définition : </span> Soient <span class="math inline">\(f\)</span> une fonction définie sur un intervalle <span class="math inline">\(I\)</span> et <span class="math inline">\(\mathscr{C}_f\)</span> sa représentation graphique. On appelle <strong>point d’inflexion</strong> de <span class="math inline">\(\mathscr{C}_f\)</span> tout point de <span class="math inline">\(\mathscr{C}_f\)</span> où <span class="math inline">\(f\)</span> change de convexité.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Dans l’exemple précédent, le point d’abscisse <span class="math inline">\(1\)</span> est un point d’inflexion de la représentation graphique de la fonction.</p>
+<p><span class="bloc-titre">Exemple : </span> Dans l’exemple précédent, le point d’abscisse <span class="math inline">\(1\)</span> est un point d’inflexion de la représentation graphique de la fonction.</p>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="comp_derivation.html">⬅️</a> <a class="next" href="convexite_derivee.html">➡️</a></p>

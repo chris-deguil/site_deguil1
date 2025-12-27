@@ -99,19 +99,6 @@
     ]
   },
   {
-    "listing": "/terminale-maths/suite1/index.html",
-    "items": [
-      "/terminale-maths/suite1/historique.html",
-      "/terminale-maths/suite1/principe.html",
-      "/terminale-maths/suite1/application.html",
-      "/terminale-maths/suite1/convergence_def.html",
-      "/terminale-maths/suite1/convergence_prop.html",
-      "/terminale-maths/suite1/divergence_def.html",
-      "/terminale-maths/suite1/operation_limite.html",
-      "/terminale-maths/suite1/suite_geometrique.html"
-    ]
-  },
-  {
     "listing": "/snt/theme2/index.html",
     "items": [
       "/snt/theme2/Seance_11.html",
@@ -163,6 +150,21 @@
       "/terminale-maths/limite/operations_limites.html",
       "/terminale-maths/limite/theoreme_comparaison.html",
       "/terminale-maths/limite/limite_exponentielle.html"
+    ]
+  },
+  {
+    "listing": "/terminale-maths/suite1/index.html",
+    "items": [
+      "/terminale-maths/suite1/historique.html",
+      "/terminale-maths/suite1/principe.html",
+      "/terminale-maths/suite1/complement.html",
+      "/terminale-maths/suite1/application.html",
+      "/terminale-maths/suite1/convergence_def.html",
+      "/terminale-maths/suite1/convergence_prop.html",
+      "/terminale-maths/suite1/divergence_def.html",
+      "/terminale-maths/suite1/operation_limite.html",
+      "/terminale-maths/suite1/suite_geometrique.html",
+      "/terminale-maths/suite1/suite_recurrente.html"
     ]
   },
   {

@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -887,8 +899,13 @@ window.Quarto = {
 <hr>
 <section id="notion-de-limite-en-linfinie" class="level2">
 <h2 class="anchored" data-anchor-id="notion-de-limite-en-linfinie">Notion de limite en l’infinie</h2>
+<div class="bloc rem">
+<p>On considère une fonction <span class="math inline">\(f\)</span> définie sur un ensemble <span class="math inline">\(D_f\)</span>, contenant l’intervalle <span class="math inline">\([a \, ; +\infty[\)</span> (ou <span class="math inline">\(]-\infty \, ; \, a]\)</span>.)</p>
+</div>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> La limite d’une fonction <span class="math inline">\(f\)</span> en <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span>) est la valeur vers laquelle se rapproche <span class="math inline">\(f(x)\)</span> quand <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span> ).<br> On la note <span class="math display">\[\lim_{x \to +\infty} f(x) \,\,\, \text{(resp. }\lim_{x \to -\infty} f(x) \,\, \text{ )}\]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p><strong>La limite</strong> d’une fonction <span class="math inline">\(f\)</span> en <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span>) est la valeur vers laquelle se rapproche <span class="math inline">\(f(x)\)</span> quand <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span> ).</p>
+<p>On la note <span class="math display">\[\lim_{x \to +\infty} f(x) \quad \text{ (resp. }\lim_{x \to -\infty} f(x) \text{ )}\]</span></p>
 </div>
 <div class="bloc ex">
 <span class="bloc-titre">Exemple : </span>
@@ -897,7 +914,7 @@ window.Quarto = {
 </div>
 <p>Intuitivement : <span class="math display">\[\lim_{x \to +\infty} \frac{1}{x} = 0 \,\,\, \text{ et } \,\,\, \lim_{x \to +\infty} x^2 = + \infty\]</span></p>
 <ul>
-<li>En effet, plus <span class="math inline">\(x &gt; 0\)</span> devient grand, plus le rapport <span class="math inline">\(\frac{1}{x}\)</span> devient infiniment petit positif.</li>
+<li>En effet, plus <span class="math inline">\(x &gt; 0\)</span> devient grand, plus le rapport <span class="math inline">\(\dfrac{1}{x}\)</span> devient infiniment petit positif.</li>
 <li>Plus <span class="math inline">\(x\)</span> devient grand, plus <span class="math inline">\(x^2\)</span> devient grand !</li>
 </ul>
 </div>
@@ -906,39 +923,68 @@ window.Quarto = {
 <section id="limite-infinie" class="level2">
 <h2 class="anchored" data-anchor-id="limite-infinie">Limite infinie</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(D_f\)</span>.<br> On dit que <span class="math inline">\(f\)</span> tend vers <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span>) lorsque <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(+\infty\)</span> et on note <span class="math display">\[\lim_{x \to +\infty} f(x)= + \infty \quad \left( \text{resp. } \lim_{x \to +\infty} f(x)= -\infty \right)\]</span> lorsque</p>
-<p><span class="math display">\[\forall A \in \R, \, \exists x_0 \in D_f, \, \forall x \in \R, \, (x \geqslant x_0 \Rightarrow f(x) \geqslant A) \quad \left( \text{resp. } f(x) \leqslant A \right)\]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(D_f\)</span>.<br>
+On dit que <span class="math inline">\(f\)</span> tend vers <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span>) lorsque <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(+\infty\)</span> et on note <span class="math display">\[\lim_{x \to +\infty} f(x)= + \infty \quad \left( \text{resp. } \lim_{x \to +\infty} f(x)= -\infty \right)\]</span> lorsque <span class="math display">\[\forall A \in \mathbb{R}, \, \exists x_0 \in D_f, \, \forall x \in \mathbb{R}, \, (x \geqslant x_0 \Rightarrow f(x) \geqslant A) \quad \left( \text{resp. } f(x) \leqslant A \right) \]</span></p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : La racine carrée</span> On considère <span class="math inline">\(A\)</span> un réel positif, ainsi <span class="math inline">\(x \geqslant A^2 \Rightarrow \sqrt{x} \geqslant A\)</span>.</p>
-<p>En prenant <span class="math inline">\(x_0= A^2\)</span>, on a déterminé un réel <span class="math inline">\(x_0\)</span> tel que : <span class="math display">\[\forall x \in \R, \, (x \geqslant x_0 \Rightarrow f(x) \geqslant A)\]</span> Donc par définition <span class="math display">\[\lim_{x \to +\infty} \sqrt{x} = +\infty\]</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> La racine carrée </span>
+</div>
+<p>Montrer que <span class="math display">\[\lim_{x \to + \infty} \sqrt{x} = + \infty\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+On considère <span class="math inline">\(A\)</span> un réel positif, ainsi <span class="math inline">\(x \geqslant A^2 \Rightarrow \sqrt{x} \geqslant A\)</span>.<br>
+En prenant <span class="math inline">\(x_0= A^2\)</span>, on a déterminé un réel <span class="math inline">\(x_0\)</span> tel que : <span class="math display">\[\forall x \in \mathbb{R}, \, (x \geqslant x_0 \Rightarrow f(x) \geqslant A)\]</span> Donc par définition <span class="math display">\[\lim_{x \to +\infty} \sqrt{x} = +\infty\]</span>
+</details>
 </div>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(D_f\)</span>.</p>
-<p>On dit que <span class="math inline">\(f\)</span> tend vers <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span>) lorsque <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(-\infty\)</span> et on note <span class="math display">\[\lim_{x \to -\infty} f(x)= + \infty \quad \left( \text{resp. } \lim_{x \to -\infty} f(x)= -\infty \right)\]</span> lorsque</p>
-<p><span class="math display">\[\forall A \in \R, \, \exists x_0 \in D_f, \, \forall x \in \R, \, (x \leqslant x_0 \Rightarrow f(x) \geqslant A) \quad \left( \text{resp. } f(x) \leqslant A \right) \]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(D_f\)</span>.<br>
+On dit que <span class="math inline">\(f\)</span> tend vers <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span>) lorsque <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(-\infty\)</span> et on note <span class="math display">\[\lim_{x \to -\infty} f(x)= + \infty \quad \left( \text{resp. } \lim_{x \to -\infty} f(x)= -\infty \right)\]</span> lorsque <span class="math display">\[\forall A \in \mathbb{R}, \, \exists x_0 \in D_f, \, \forall x \in \mathbb{R}, \, (x \leqslant x_0 \Rightarrow f(x) \geqslant A) \quad \left( \text{resp. } f(x) \leqslant A \right) \]</span></p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : Fonction affine</span> Soit <span class="math inline">\(f :x \longmapsto ax+b\)</span>, où <span class="math inline">\(a &lt;0\)</span></p>
-<p>Soit alors <span class="math inline">\(x_0= \frac{A-b}{a}\)</span> (qui est un nombre négatif)</p>
-<p><span class="math display">\[\forall x \in \R, \, (x \leqslant x_0 \Rightarrow f(x) \geqslant A)\]</span></p>
-<p>Donc par définition <span class="math inline">\(\lim_{x \to -\infty}  f(x) = +\infty\)</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Une fonction affine </span>
+</div>
+<p>Soit <span class="math inline">\(f :x \longmapsto ax+b\)</span>, où <span class="math inline">\(a &lt; 0\)</span>.<br>
+Montrer que <span class="math display">\[\lim_{x \to -\infty} f(x) = + \infty\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+Soit alors <span class="math inline">\(x_0 = \dfrac{A-b}{a}\)</span> (qui est un nombre négatif car <span class="math inline">\(a &lt; 0\)</span> et on peut choisir <span class="math inline">\(A\)</span> tel que <span class="math inline">\(A-b &gt; 0\)</span>).<br>
+On a alors <span class="math display">\[\forall x \in \mathbb{R}, \, (x \leqslant x_0 \Rightarrow f(x) \geqslant A)\]</span> Donc par définition <span class="math inline">\(\lim_{x \to -\infty} f(x) = +\infty\)</span>.
+</details>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admise) : </span><br> On considère <span class="math inline">\(n \in \N^*\)</span></p>
-<p><span class="math display">\[\lim_{x \to + \infty} x^n= + \infty  \qquad \lim_{x \to + \infty} \sqrt{x}= + \infty    \qquad \qquad\lim_{x \to - \infty}{x^n} = \left\{\begin{array}{l}
+<p><span class="bloc-titre">Propriété (admis) : </span></p>
+<p>On considère <span class="math inline">\(n \in \mathbb{N}^*\)</span>. <span class="math display">\[\lim_{x \to + \infty} x^n= + \infty  \qquad \lim_{x \to + \infty} \sqrt{x}= + \infty    \qquad \qquad \lim_{x \to - \infty}{x^n} = \begin{cases}
 +\infty\, \text{ si } n \text{ pair}\\
--\infty\, \text{ si } n \text{ impair}\\
-\end{array} \right. \]</span></p>
+-\infty\, \text{ si } n \text{ impair}
+\end{cases} \]</span></p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span> On considère une fonction polynôme de degré <span class="math inline">\(2\)</span>, <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x)=ax^2+bx+c\)</span> où <span class="math inline">\(a &gt;0\)</span>.\ On considère <span class="math inline">\(A \in \R\)</span>, ainsi pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f(x)- A = ax^2+bx+(c-A)\)</span>.\Ce trinôme admet comme discriminant <span class="math inline">\(\Delta_A=b^2-4a(c-A)\)</span>.</p>
-<p>Pour <span class="math inline">\(A\)</span> suffisamment grand, <span class="math inline">\(c-A&lt;0\)</span> donc <span class="math inline">\(\Delta_A &gt;0\)</span>.</p>
-<p>En notant <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span> les deux racines où <span class="math inline">\(x_1 &lt; x_2\)</span>, on a pour tout <span class="math inline">\(x \in ]-\infty\,;\, x_1] \cup [x_2 \,;\, + \infty[\)</span>, <span class="math inline">\(f(x)-A &gt; 0\)</span>.</p>
-Ainsi <span class="math display">\[\lim_{x \to  \pm \infty} f(x)= +\infty\]</span> Le tableau des variations complet de <span class="math inline">\(f\)</span> est alors
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère une fonction polynôme de degré <span class="math inline">\(2\)</span>, <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math inline">\(f(x)=ax^2+bx+c\)</span> où <span class="math inline">\(a &gt; 0\)</span>.</p>
+<p>Montrer que <span class="math display">\[\lim_{x \to \pm \infty} f(x)= + \infty\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On considère <span class="math inline">\(A \in \mathbb{R}\)</span>, ainsi pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f(x)- A = ax^2+bx+(c-A)\)</span>.<br>
+Ce trinôme admet comme discriminant <span class="math inline">\(\Delta_A=b^2-4a(c-A)\)</span>.<br>
+Pour <span class="math inline">\(A\)</span> suffisamment grand, <span class="math inline">\(c-A &lt; 0\)</span> donc <span class="math inline">\(\Delta_A &gt; 0\)</span>.<br>
+En notant <span class="math inline">\(x_1\)</span> et <span class="math inline">\(x_2\)</span> les deux racines où <span class="math inline">\(x_1 &lt; x_2\)</span>, on a pour tout <span class="math inline">\(x \in ]-\infty\,;\, x_1] \cup [x_2 \,;\, + \infty[\)</span>, <span class="math inline">\(f(x)-A \geqslant 0\)</span>. Ainsi <span class="math display">\[\lim_{x \to \pm \infty} f(x)= +\infty\]</span> Le tableau des variations complet de <span class="math inline">\(f\)</span> est alors :</p>
 <div style="text-align:center;">
 <p><img src="../../image/maths_term/Chap4_Limite_figure20.png" alt="" width="70%/"></p>
 </div>
+</details>
+
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="historique.html">⬅️</a> <a class="next" href="limite_finie_infinie.html">➡️</a></p>

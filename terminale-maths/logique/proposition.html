@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -986,9 +998,9 @@ La proposition « <span class="math inline">\(P\)</span> ET <span class="math in
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br></p>
 <ul>
-<li>La proposition « <em><span class="math inline">\(3\)</span> est impair et <span class="math inline">\(7\)</span> est premier</em> » est vraie.<br>
+<li>La proposition « <span class="math inline">\(3\)</span> est impair et <span class="math inline">\(7\)</span> est premier » est vraie.<br>
 </li>
-<li>La proposition « <em>le carré d’un nombre est positif et tout nombre est positif</em> » est fausse.</li>
+<li>La proposition « le carré d’un nombre est positif et tout nombre est positif » est fausse.</li>
 </ul>
 </div>
 </section>
@@ -1033,9 +1045,9 @@ La proposition « <span class="math inline">\(P\)</span> OU <span class="math in
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br></p>
 <ul>
-<li>La proposition « <em><span class="math inline">\(3\)</span> est impair OU <span class="math inline">\(7\)</span> est premier</em> » est vraie.<br>
+<li>La proposition « <span class="math inline">\(3\)</span> est impair OU <span class="math inline">\(7\)</span> est premier » est vraie.<br>
 </li>
-<li>La proposition « <em><span class="math inline">\(2\pi\)</span> est irrationnel OU tout nombre est positif</em> » est vraie.</li>
+<li>La proposition « <span class="math inline">\(2\pi\)</span> est irrationnel OU tout nombre est positif » est vraie.</li>
 </ul>
 </div>
 <div class="bloc rem">
@@ -1053,7 +1065,7 @@ La proposition « <span class="math inline">\(P\)</span> OU <span class="math in
 <p><span class="bloc-titre">Théorème (admis) : Principe du tiers exclu</span><br> Toute proposition est soit vraie, soit fausse.<br>
 La négation d’une proposition <span class="math inline">\(P\)</span> est une proposition notée non <span class="math inline">\(P\)</span> (ou <span class="math inline">\(\neg P\)</span> ou <span class="math inline">\(\bar{P}\)</span>) qui est vraie si <span class="math inline">\(P\)</span> est fausse et fausse si <span class="math inline">\(P\)</span> est vraie.</p>
 </div>
-<p>La table de vérité associée est :</p>
+<p>Table de vérité :</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1073,13 +1085,20 @@ La négation d’une proposition <span class="math inline">\(P\)</span> est une 
 </tbody>
 </table>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> 1. La négation de <span class="math inline">\(x&gt;3\)</span> est <span class="math inline">\(x \leqslant 3\)</span>.<br>
-2. La négation de : « <em>Il a fait beau tous les jours</em> » est « <em>Il y a au moins un jour où il n’a pas fait beau</em> ».</p>
+<p><span class="bloc-titre">Exemple : </span><br></p>
+<ul>
+<li>La négation de <span class="math inline">\(x&gt;3\)</span> est <span class="math inline">\(x \leqslant 3\)</span>.<br>
+</li>
+<li>La négation de : « Il a fait beau tous les jours » est « Il y a au moins un jour où il n’a pas fait beau ».</li>
+</ul>
 </div>
 <p>La proposition suivante permet de déterminer la négation de phrases mathématiques comportant des connecteurs logiques.</p>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : Lois de Morgan</span><br> Soient <span class="math inline">\(P\)</span> et <span class="math inline">\(Q\)</span> deux propositions, alors : - non(<span class="math inline">\(P\)</span> ou <span class="math inline">\(Q\)</span>) <span class="math inline">\(=\)</span> non <span class="math inline">\(P\)</span> et non <span class="math inline">\(Q\)</span> ;<br>
-- non(<span class="math inline">\(P\)</span> et <span class="math inline">\(Q\)</span>) <span class="math inline">\(=\)</span> non <span class="math inline">\(P\)</span> ou non <span class="math inline">\(Q\)</span>.</p>
+<p><span class="bloc-titre">Théorème : Lois de Morgan</span><br> Soient <span class="math inline">\(P\)</span> et <span class="math inline">\(Q\)</span> deux propositions, alors :</p>
+<ul>
+<li>non(<span class="math inline">\(P\)</span> ou <span class="math inline">\(Q\)</span>) <span class="math inline">\(\Longleftrightarrow\)</span> non <span class="math inline">\(P\)</span> et non <span class="math inline">\(Q\)</span>.</li>
+<li>non(<span class="math inline">\(P\)</span> et <span class="math inline">\(Q\)</span>) <span class="math inline">\(\Longleftrightarrow\)</span> non <span class="math inline">\(P\)</span> ou non <span class="math inline">\(Q\)</span>.</li>
+</ul>
 </div>
 <details class="bloc demo">
 <summary>
@@ -1090,10 +1109,10 @@ Il suffit de faire la démonstration de la première propriété (avec les table
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br></p>
 <ul>
-<li>La négation de <span class="math inline">\(x=3\)</span> ou <span class="math inline">\(x&lt;3\)</span> est <span class="math inline">\(x\neq 3\)</span> et <span class="math inline">\(x \geqslant 3\)</span>.<br>
-C’est-à-dire que la négation de <span class="math inline">\(x \leqslant 3\)</span> est <span class="math inline">\(x&gt;3\)</span>.<br>
-</li>
-<li>La négation de « <em>le triangle est rectangle et isocèle</em> » est « <em>le triangle n’est pas rectangle ou n’est pas isocèle</em> ».</li>
+<li><p>La négation de <span class="math inline">\(x=3\)</span> ou <span class="math inline">\(x&lt;3\)</span> est <span class="math inline">\(x\neq 3\)</span> et <span class="math inline">\(x \geqslant 3\)</span>.</p>
+<p>C’est-à-dire que la négation de <span class="math inline">\(x \leqslant 3\)</span> est <span class="math inline">\(x&gt;3\)</span>.<br>
+</p></li>
+<li><p>La négation de « le triangle est rectangle et isocèle » est « le triangle n’est pas rectangle ou n’est pas isocèle ».</p></li>
 </ul>
 </div>
 <div class="nav-pages">

@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -858,6 +870,7 @@ window.Quarto = {
   <li><a href="#produit-dun-vecteur-par-un-réel" id="toc-produit-dun-vecteur-par-un-réel" class="nav-link" data-scroll-target="#produit-dun-vecteur-par-un-réel">Produit d’un vecteur par un réel</a></li>
   </ul></li>
   <li><a href="#vecteurs-coplanaires-points-coplanaires" id="toc-vecteurs-coplanaires-points-coplanaires" class="nav-link" data-scroll-target="#vecteurs-coplanaires-points-coplanaires">Vecteurs coplanaires, points coplanaires</a></li>
+  <li><a href="#vecteurs-coplanaires-points-coplanaires-1" id="toc-vecteurs-coplanaires-points-coplanaires-1" class="nav-link" data-scroll-target="#vecteurs-coplanaires-points-coplanaires-1">Vecteurs coplanaires, points coplanaires</a></li>
   </ul>
 </nav>
     </div>
@@ -892,38 +905,30 @@ window.Quarto = {
 <section id="définition" class="level2">
 <h2 class="anchored" data-anchor-id="définition">Définition</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br></p>
+<p><span class="bloc-titre">Définition : </span></p>
 <p>Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux points distincts de l’espace. La translation <span class="math inline">\(t_{\ve{AB}}\)</span> de vecteur <span class="math inline">\(\ve{AB}\)</span> est la transformation qui, à tout point <span class="math inline">\(C\)</span> de l’espace, associe l’unique point <span class="math inline">\(D\)</span> tel que <span class="math inline">\(\ve{AB}=\ve{CD}\)</span>.</p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br></p>
+<p><span class="bloc-titre">Remarque : </span></p>
 <ul>
-<li>Sous les conditions de la définition, <span class="math inline">\(ABCD\)</span> est un parallélogramme (éventuellement aplati).<br>
-</li>
-<li>Soient <span class="math inline">\(A,B,D\)</span> et <span class="math inline">\(E\)</span> quatre points de l’espace.<br>
-On note <span class="math inline">\(C=t_{\ve{AB}}(D)\)</span> et <span class="math inline">\(F=t_{\ve{CD}}(E)\)</span>, alors <span class="math inline">\(\ve{AB}=\ve{DC}=\ve{EF}\)</span>.<br>
-Ainsi, pour tout point <span class="math inline">\(M\)</span> de l’espace, en notant <span class="math inline">\(M'=t_{\ve{AB}}(M)\)</span>, on a :<br>
-<span class="math display">\[M'=t_{\ve{DC}}(M) \et M'=t_{\ve{EF}}(M)\]</span></li>
-</ul>
-<p>La notation <span class="math inline">\(\ve{AB}\)</span> désigne l’ensemble des couples de points de l’espace définissant la même translation. Ainsi, le vecteur <span class="math inline">\(\ve{AB}\)</span> est indépendant du choix des points <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>.<br>
-On dit que <span class="math inline">\(\ve{AB}\)</span>, <span class="math inline">\(\ve{CD}\)</span> et <span class="math inline">\(\ve{EF}\)</span> sont des représentants d’un même vecteur <span class="math inline">\(\ve{u}\)</span>.</p>
-<ul>
-<li>On définit <span class="math inline">\(\E\)</span> l’espace affine des « points » (où l’on peut parler d’alignement, de parallélisme) par<br>
-<span class="math display">\[\E=\left(A \,;\, \vE \right)\]</span><br>
-où <span class="math inline">\(\vE\)</span> est l’ensemble des vecteurs de l’espace.</li>
+<li>Sous les conditions de la définition, <span class="math inline">\(ABDC\)</span> est un parallélogramme (éventuellement aplati).</li>
+<li>Soient <span class="math inline">\(A,B,D\)</span> et <span class="math inline">\(E\)</span> quatre points de l’espace. On note <span class="math inline">\(C=t_{\ve{AB}}(D)\)</span> et <span class="math inline">\(F=t_{\ve{CD}}(E)\)</span>, alors <span class="math inline">\(\ve{AB}=\ve{DC}=\ve{EF}\)</span>.<br>
+Ainsi, pour tout point <span class="math inline">\(M\)</span> de l’espace, en notant <span class="math inline">\(M'=t_{\ve{AB}}(M)\)</span>, on a : <span class="math display">\[M'=t_{\ve{DC}}(M) \quad \text{et} \quad M'=t_{\ve{EF}}(M)\]</span> La notation <span class="math inline">\(\ve{AB}\)</span> désigne l’ensemble des couples de points de l’espace définissant la même translation. Ainsi, le vecteur <span class="math inline">\(\ve{AB}\)</span> est indépendant du choix des points <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>.<br>
+On dit que <span class="math inline">\(\ve{AB}\)</span>, <span class="math inline">\(\ve{CD}\)</span> et <span class="math inline">\(\ve{EF}\)</span> sont des représentants d’un même vecteur <span class="math inline">\(\ve{u}\)</span>.</li>
+<li>On définit <span class="math inline">\(\E\)</span> l’espace affine des « points » (où on peut parler d’alignement, de parallélisme) par <span class="math inline">\(\E=\left(A\, ; \, \vE \right)\)</span> où <span class="math inline">\(\vE\)</span> est l’ensemble des vecteurs de l’espace.</li>
 </ul>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br></p>
+<p><span class="bloc-titre">Propriété : </span></p>
 <p>Soient <span class="math inline">\(\ve{u}\)</span> un vecteur de <span class="math inline">\(\vE\)</span> et <span class="math inline">\(A \in \E\)</span>. Il existe un unique point <span class="math inline">\(M\)</span> de l’espace tel que <span class="math inline">\(\ve{AM}=\ve{u}\)</span>.</p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-On raisonne par l’absurde et on suppose qu’il en existe plusieurs.<br>
+<p>On raisonne par l’absurde et on suppose qu’il en existe plusieurs.<br>
 Soient <span class="math inline">\(M'\)</span> et <span class="math inline">\(M''\)</span> deux tels points, avec <span class="math inline">\(\ve{AM'}=\ve{u}\)</span> et <span class="math inline">\(\ve{AM''}=\ve{u}\)</span>.<br>
-Alors <span class="math inline">\(\ve{AM'}=\ve{AM''}\)</span>, donc <span class="math inline">\(\ve{M'M''}=\ve{0}\)</span>, ce qui implique <span class="math inline">\(M'=M''\)</span>.
+Alors <span class="math inline">\(\ve{AM'}=\ve{AM''}\)</span>, donc <span class="math inline">\(\ve{M'M''} = \ve{M'A} + \ve{AM''} = -\ve{u} + \ve{u} = \ve{0}\)</span>, ce qui implique <span class="math inline">\(M'=M''\)</span>.</p>
 </details>
 <hr>
 </section>
@@ -945,102 +950,95 @@ Soit <span class="math inline">\(\ve{w}\)</span> le vecteur tel que <span class=
 <p>Contrairement à la composée de fonctions, la composée de deux translations est commutative.</p>
 </div>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br></p>
-<p>Le vecteur <span class="math inline">\(\ve{w}\)</span> défini précédemment est appelé somme des vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span>. On note :<br>
-<span class="math display">\[\ve{w}=\ve{u}+\ve{v}.\]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Le vecteur <span class="math inline">\(\ve{w}\)</span> défini précédemment est appelé somme des vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span>. On note <span class="math inline">\(\ve{w}=\ve{u}+\ve{v}\)</span>.</p>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre"> Propriété (admis) : </span><br> Soient <span class="math inline">\(\ve{u}, \ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> trois vecteurs de <span class="math inline">\(\vE\)</span> et <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> trois points de <span class="math inline">\(\vE\)</span>, alors :</p>
+<p><span class="bloc-titre">Propriété (admise) : </span></p>
+<p>Soient <span class="math inline">\(\ve{u}, \ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> trois vecteurs de <span class="math inline">\(\vE\)</span> et <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> trois points de <span class="math inline">\(\E\)</span>, alors :</p>
 <ul>
-<li>L’addition des vecteurs est associative :<br>
-<span class="math display">\[(\ve{u}+\ve{v})+\ve{w}=\ve{u}+(\ve{v}+\ve{w})\]</span><br>
-</li>
-<li>L’addition de vecteurs est commutative :<br>
-<span class="math display">\[\ve{u}+\ve{v}=\ve{v}+\ve{u}\]</span><br>
-</li>
-<li>Relation de Chasles :<br>
-<span class="math display">\[\ve{AC}=\ve{AB}+\ve{BC}\]</span></li>
+<li>L’addition des vecteurs est associative : <span class="math inline">\((\ve{u}+\ve{v})+\ve{w}=\ve{u}+(\ve{v}+\ve{w})\)</span>.</li>
+<li>L’addition de vecteurs est commutative : <span class="math inline">\(\ve{u}+\ve{v}=\ve{v}+\ve{u}\)</span>.</li>
+<li><span class="math inline">\(\ve{AC}=\ve{AB}+\ve{BC}\)</span> (relation de Chasles).</li>
 </ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Soit <span class="math inline">\(ABCDEFGH\)</span> un cube.<br>
+<div class="bloc-titre">
+Exemple :
+</div>
+<p>Soit <span class="math inline">\(ABCDEFGH\)</span> un cube.<br>
 Que peut-on dire du point <span class="math inline">\(N\)</span> vérifiant <span class="math inline">\(\ve{AN}=\ve{AE}+\ve{AC}+\ve{HE}\)</span> ?</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-Les faces du cube sont des carrés, ainsi <span class="math inline">\(\ve{AC}=\ve{EG}\)</span> et <span class="math inline">\(\ve{HE}=\ve{GF}\)</span>.<br>
-On déduit alors que :<br>
-<span class="math display">\[\ve{AE}+\ve{AC}+\ve{HE}=\ve{AE}+\ve{EG}+\ve{GF}=\ve{AF}.\]</span><br>
-Par unicité de l’image de <span class="math inline">\(A\)</span> par la translation <span class="math inline">\(t_{\ve{AF}}\)</span>, on déduit que <span class="math inline">\(N=F\)</span>.
+<p>Les faces du cube sont des carrés, ainsi <span class="math inline">\(\ve{AC}=\ve{EG}\)</span> et <span class="math inline">\(\ve{HE}=\ve{GF}\)</span>.<br>
+On en déduit alors que : <span class="math display">\[\ve{AE}+\ve{AC}+\ve{HE}=\ve{AE}+\ve{EG}+\ve{GF}=\ve{AF}\]</span> Par unicité de l’image de <span class="math inline">\(A\)</span> par la translation <span class="math inline">\(t_{\ve{AF}}\)</span>, on déduit que <span class="math inline">\(N=F\)</span>.</p>
 </details>
 </div>
-<hr>
 </section>
 <section id="produit-dun-vecteur-par-un-réel" class="level3">
 <h3 class="anchored" data-anchor-id="produit-dun-vecteur-par-un-réel">Produit d’un vecteur par un réel</h3>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br></p>
-<p>Soient <span class="math inline">\(\lambda \in \R^*\)</span> et <span class="math inline">\(\ve{u} \in \vE\)</span>.<br>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soient <span class="math inline">\(\lambda \in \mathbb{R}^*\)</span> et <span class="math inline">\(\ve{u} \in \vE\)</span>.<br>
 On appelle produit de <span class="math inline">\(\ve{u}\)</span> par <span class="math inline">\(\lambda\)</span> le vecteur <span class="math inline">\(\lambda\ve{u}\)</span> qui a :</p>
 <ul>
-<li>pour direction : la direction de <span class="math inline">\(\ve{u}\)</span> ;<br>
-</li>
-<li>pour sens : celui de <span class="math inline">\(\ve{u}\)</span> si <span class="math inline">\(\lambda&gt;0\)</span>, le sens contraire sinon ;<br>
-</li>
-<li>pour norme : <span class="math inline">\(\abs{\lambda}\,\norm{\ve{u}}\)</span>.<br>
-</li>
+<li>pour direction : la direction de <span class="math inline">\(\ve{u}\)</span> ;</li>
+<li>pour sens : celui de <span class="math inline">\(\ve{u}\)</span> si <span class="math inline">\(\lambda&gt;0\)</span>, le sens contraire sinon ;</li>
+<li>pour norme : <span class="math inline">\(|\lambda|\, \|\ve{u}\|\)</span>.</li>
 </ul>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre"> Propriété (admis) : </span><br></p>
-<p>Soient <span class="math inline">\(\ve{u},\ve{v} \in \vE\)</span> et <span class="math inline">\(k,m \in \R\)</span>. Alors :</p>
+<p><span class="bloc-titre">Propriété (admise) : </span></p>
+<p>Soient <span class="math inline">\(\ve{u},\ve{v} \in \vE\)</span> et <span class="math inline">\(k,m \in \mathbb{R}\)</span>. Alors :</p>
 <ul>
-<li><span class="math inline">\(k\ve{u}=\ve{0} \Longleftrightarrow k=0 \text{ ou } \ve{u}=\ve{0}\)</span>.<br>
-</li>
-<li><span class="math inline">\(k(k'\ve{u})=(kk')\ve{u}\)</span>.<br>
-</li>
-<li><span class="math inline">\(k(\ve{u}+\ve{v})=k\ve{u}+k\ve{v}\)</span>.<br>
-</li>
-<li><span class="math inline">\((k+m)\ve{u}=k\ve{u}+m\ve{u}\)</span>.<br>
-</li>
+<li><span class="math inline">\(k\ve{u}=\ve{0} \Longleftrightarrow k=0 \text{ ou } \ve{u}=\ve{0}\)</span>.</li>
+<li><span class="math inline">\(k(k'\ve{u})=(kk')\ve{u}\)</span>.</li>
+<li><span class="math inline">\(k(\ve{u}+\ve{v})=k\ve{u}+k\ve{v}\)</span>.</li>
+<li><span class="math inline">\((k+m)\ve{u}=k\ve{u}+m\ve{u}\)</span>.</li>
 </ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span></p>
-<ol type="1">
-<li>On donne <span class="math inline">\(2\ve{u}+3\ve{v}-5\ve{u}=\ve{0}\)</span>. Montrons que <span class="math inline">\(\ve{u}=\ve{v}\)</span>.</li>
-</ol>
-<p><span class="math display">\[2\ve{u}+3\ve{v}-5\ve{u}=\ve{0} \Longleftrightarrow (2-5)\ve{u}+3\ve{v}=\ve{0} \Longleftrightarrow -3\ve{u}+3\ve{v}=\ve{0} \Longleftrightarrow \ve{u}=\ve{v}.\]</span></p>
-<p>Ainsi, les vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont égaux.</p>
-<ol start="2" type="1">
-<li>On donne <span class="math inline">\(-3(\ve{u}+2\ve{v})=2\ve{u}-\ve{v}\)</span>. Que peut-on dire de <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> ?</li>
-</ol>
-<p><span class="math display">\[-3(\ve{u}+2\ve{v})=2\ve{u}-\ve{v} \Longleftrightarrow -3\ve{u}-6\ve{v}=2\ve{u}-\ve{v} \Longleftrightarrow -5\ve{u}=5\ve{v} \Longleftrightarrow -\ve{u}=\ve{v}.\]</span></p>
-<p>Donc <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont des vecteurs opposés.</p>
+<div class="bloc-titre">
+Exemples :
 </div>
-<hr>
+<ol type="1">
+<li>On donne <span class="math inline">\(2\ve{u}+3\ve{v}-5\ve{u}=\ve{0}\)</span>. Montrons alors que <span class="math inline">\(\ve{u}=\ve{v}\)</span>.</li>
+<li>On donne <span class="math inline">\(-3(\ve{u}+2\ve{v})=2\ve{u}-\ve{v}\)</span>. Que peut-on dire des vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<ol type="1">
+<li><p><span class="math inline">\(2\ve{u}+3\ve{v}-5\ve{u}=\ve{0} \Longleftrightarrow (2-5)\ve{u}+3\ve{v}=\ve{0} \Longleftrightarrow -3\ve{u}+3\ve{v}=\ve{0} \Longleftrightarrow \ve{u}=\ve{v}\)</span>.<br>
+Ainsi les vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont égaux.</p></li>
+<li><p><span class="math inline">\(-3(\ve{u}+2\ve{v})=2\ve{u}-\ve{v} \Longleftrightarrow -3\ve{u}-6\ve{v}=2\ve{u}-\ve{v} \Longleftrightarrow -5\ve{u}=5\ve{v} \Longleftrightarrow -\ve{u}=\ve{v}\)</span>.<br>
+Donc <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont des vecteurs opposés.</p></li>
+</ol>
+</details>
+</div>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br></p>
+<p><span class="bloc-titre">Définition : </span></p>
 <p>Soient <span class="math inline">\(\ve{u},\ve{v} \in \vE\)</span>.<br>
-On dit que <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont colinéaires s’il existe un réel <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{u}=k\ve{v}\)</span> ou <span class="math inline">\(\ve{v}=k\ve{u}\)</span>.</p>
+On dit que <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont <strong>colinéaires</strong> s’il existe un réel <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{u}=k\ve{v}\)</span> ou <span class="math inline">\(\ve{v}=k\ve{u}\)</span>.</p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br></p>
+<p><span class="bloc-titre">Remarque : </span></p>
 <ol type="1">
-<li>Le vecteur nul <span class="math inline">\(\ve{0}\)</span> est colinéaire (par définition) à tous les vecteurs.<br>
-</li>
-<li>Des vecteurs non nuls sont colinéaires s’ils ont même direction.<br>
-</li>
+<li>Le vecteur nul <span class="math inline">\(\ve{0}\)</span> est colinéaire (par définition) à tous les vecteurs.</li>
+<li>Des vecteurs non nuls sont colinéaires si et seulement s’ils ont même direction.</li>
 </ol>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> sont trois points de <span class="math inline">\(\vE\)</span>. <span class="math inline">\(I\)</span> et <span class="math inline">\(J\)</span> sont tels que <span class="math inline">\(\ve{AI}=\tfrac{1}{3}\ve{AB}\)</span> et <span class="math inline">\(\ve{AJ}=-3\ve{AC}\)</span>.</p>
+<div class="bloc-titre">
+Exemple :
+</div>
+<p><span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> sont trois points de <span class="math inline">\(\E\)</span>. <span class="math inline">\(I\)</span> et <span class="math inline">\(J\)</span> sont tels que <span class="math inline">\(\ve{AI}=\dfrac{1}{3}\ve{AB}\)</span> et <span class="math inline">\(\ve{AJ}=-3\ve{AC}\)</span>.</p>
 <ul>
-<li>Les vecteurs <span class="math inline">\(\ve{AI}\)</span> et <span class="math inline">\(\ve{AB}\)</span> d’une part, et <span class="math inline">\(\ve{AJ}\)</span> et <span class="math inline">\(\ve{AC}\)</span> d’autre part ont même direction.<br>
-</li>
-<li>Les vecteurs <span class="math inline">\(\ve{AI}\)</span> et <span class="math inline">\(\ve{AB}\)</span> sont colinéaires de même sens, alors que <span class="math inline">\(\ve{AJ}\)</span> et <span class="math inline">\(\ve{AC}\)</span> sont colinéaires de sens contraire.<br>
-</li>
+<li>Les vecteurs <span class="math inline">\(\ve{AI}\)</span> et <span class="math inline">\(\ve{AB}\)</span> d’une part, et <span class="math inline">\(\ve{AJ}\)</span> et <span class="math inline">\(\ve{AC}\)</span> d’autre part ont même direction.</li>
+<li>Les vecteurs <span class="math inline">\(\ve{AI}\)</span> et <span class="math inline">\(\ve{AB}\)</span> sont colinéaires de même sens, alors que <span class="math inline">\(\ve{AJ}\)</span> et <span class="math inline">\(\ve{AC}\)</span> sont colinéaires de sens contraire.</li>
 </ul>
 </div>
 </section>
@@ -1054,8 +1052,24 @@ On dit que les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class
 <div class="bloc rem">
 <p>Démontrer que trois vecteurs de l’espace sont coplanaires revient à démontrer que quatre points sont coplanaires.</p>
 </div>
+<p>C’est entendu, je conserve scrupuleusement vos macros et ainsi que . Voici la transcription Quarto pour cette nouvelle section sur les vecteurs coplanaires. Markdown</p>
+</section>
+<section id="vecteurs-coplanaires-points-coplanaires-1" class="level2">
+<h2 class="anchored" data-anchor-id="vecteurs-coplanaires-points-coplanaires-1">Vecteurs coplanaires, points coplanaires</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soient <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}, \ve{w} \in \vE\)</span> tels que <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> ne soient pas colinéaires.<br>
+On dit que les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont <strong>coplanaires</strong> lorsque pour un point <span class="math inline">\(O\)</span> quelconque de <span class="math inline">\(\E\)</span>, les points <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> définis par <span class="math inline">\(\ve{OA}=\ve{u}\)</span>, <span class="math inline">\(\ve{OB}=\ve{v}\)</span> et <span class="math inline">\(\ve{OC}=\ve{w}\)</span> sont dans un même plan.</p>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>Démontrer que trois vecteurs de l’espace sont coplanaires revient à démontrer que quatre points sont coplanaires.</p>
+</div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Soit <span class="math inline">\(\ve{u}=\ve{AH}\)</span>, <span class="math inline">\(\ve{v}=\ve{AG}\)</span>, <span class="math inline">\(\ve{w}=\ve{AB}\)</span>.<br>
+<div class="bloc-titre">
+Exemple :
+</div>
+<p>Soit <span class="math inline">\(\ve{u}=\ve{AH}\)</span>, <span class="math inline">\(\ve{v}=\ve{AG}\)</span>, <span class="math inline">\(\ve{w}=\ve{AB}\)</span>.<br>
 <span class="math inline">\(ABCDEFGH\)</span> est un cube, donc <span class="math inline">\(AB=GH\)</span> et <span class="math inline">\((AB)//(HG)\)</span> ainsi <span class="math inline">\(ABGH\)</span> est un parallélogramme, donc <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(G\)</span> et <span class="math inline">\(H\)</span> sont dans le même plan, donc coplanaires.<br>
 Ainsi <span class="math inline">\(\ve{AB}\)</span>, <span class="math inline">\(\ve{AG}\)</span> et <span class="math inline">\(\ve{AH}\)</span> sont coplanaires.</p>
 <div style="text-align: center;">
@@ -1063,64 +1077,58 @@ Ainsi <span class="math inline">\(\ve{AB}\)</span>, <span class="math inline">\(
 </div>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br></p>
+<p><span class="bloc-titre">Théorème : </span></p>
 <p><span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont des vecteurs de l’espace tels que <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> ne sont pas colinéaires.<br>
-Les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont coplanaires si, et seulement si, il existe des nombres réels <span class="math inline">\(\lambda\)</span> et <span class="math inline">\(\mu\)</span> tels que :<br>
-<span class="math display">\[\ve{w}=\lambda\ve{u}+\mu\ve{v}\]</span></p>
+Les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont coplanaires si, et seulement si, il existe des nombres réels <span class="math inline">\(\lambda\)</span> et <span class="math inline">\(\mu\)</span> tels que : <span class="math display">\[\ve{w}=\lambda\ve{u}+\mu\ve{v}\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p><span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont des vecteurs de l’espace tels que <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> ne sont pas colinéaires.</p>
-<p>On considère les points <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> définis par <span class="math inline">\(\ve{OA} = \ve{u}\)</span>, <span class="math inline">\(\ve{OB} = \ve{v}\)</span> et <span class="math inline">\(\ve{OC} = \ve{w}\)</span>.</p>
+<p><span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont des vecteurs de l’espace tels que <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> ne sont pas colinéaires.<br>
+On considère les points <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> définis par <span class="math inline">\(\ve{OA} = \ve{u}\)</span>, <span class="math inline">\(\ve{OB} = \ve{v}\)</span> et <span class="math inline">\(\ve{OC} = \ve{w}\)</span>.</p>
 <ul>
-<li>(<span class="math inline">\(\Rightarrow\)</span>)<br>
-<span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> ne sont pas colinéaires, donc les droites <span class="math inline">\((OA)\)</span> et <span class="math inline">\((OB)\)</span> ne sont pas parallèles. Elles sont donc sécantes en <span class="math inline">\(O\)</span> et les points <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> ne sont pas alignés.<br>
-On note <span class="math inline">\(R\)</span> le projeté de <span class="math inline">\(C\)</span> sur <span class="math inline">\((OA)\)</span> parallèlement à <span class="math inline">\((OB)\)</span>. <span class="math inline">\(R\in(OA)\)</span> donc les points <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span> et <span class="math inline">\(R\)</span> sont alignés et les vecteurs <span class="math inline">\(\ve{OA}\)</span> et <span class="math inline">\(\ve{OR}\)</span> sont colinéaires. Il existe donc un réel <span class="math inline">\(\lambda\)</span> tel que <span class="math inline">\(\ve{OR}=\lambda\ve{OA}\)</span>.</li>
+<li><p><strong>(<span class="math inline">\(\Rightarrow\)</span>)</strong> : <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> ne sont pas colinéaires, donc les droites <span class="math inline">\((OA)\)</span> et <span class="math inline">\((OB)\)</span> ne sont pas parallèles. Elles sont donc sécantes en <span class="math inline">\(O\)</span> et les points <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> ne sont pas alignés.</p>
+<p>On note <span class="math inline">\(R\)</span> le projeté de <span class="math inline">\(C\)</span> sur <span class="math inline">\((OA)\)</span> parallèlement à <span class="math inline">\((OB)\)</span>.<br>
+<span class="math inline">\(R \in (OA)\)</span> donc les points <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span> et <span class="math inline">\(R\)</span> sont alignés et les vecteurs <span class="math inline">\(\ve{OA}\)</span> et <span class="math inline">\(\ve{OR}\)</span> sont colinéaires.<br>
+Il existe donc un réel <span class="math inline">\(\lambda\)</span> tel que <span class="math inline">\(\ve{OR}=\lambda\ve{OA}\)</span></p></li>
 </ul>
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap3_Espace_1_figure3.png" style="width: 25%;"></p>
 </div>
 <p>Par construction, les droites <span class="math inline">\((RC)\)</span> et <span class="math inline">\((OB)\)</span> sont parallèles. Les vecteurs <span class="math inline">\(\ve{RC}\)</span> et <span class="math inline">\(\ve{OB}\)</span> sont donc colinéaires. Il existe alors un réel <span class="math inline">\(\mu\)</span> tel que <span class="math inline">\(\ve{RC}=\mu\ve{OB}\)</span>.<br>
-Ainsi, il existe deux réels <span class="math inline">\(\lambda\)</span> et <span class="math inline">\(\mu\)</span> tels que :<br>
-<span class="math display">\[\ve{w}=\ve{OC}=\ve{OR}+\ve{RC}=\lambda\ve{OA}+\mu\ve{OB}=\lambda\ve{u}+\mu\ve{v}\]</span></p>
+Ainsi, il existe deux réels <span class="math inline">\(\lambda\)</span> et <span class="math inline">\(\mu\)</span> tels que : <span class="math display">\[\ve{w}=\ve{OC}=\ve{OR}+\ve{RC}=\lambda\ve{OA}+\mu\ve{OB}=\lambda\ve{u}+\mu\ve{v}\]</span></p>
 <ul>
-<li>(<span class="math inline">\(\Leftarrow\)</span>)<br>
-<span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont non colinéaires, donc <span class="math inline">\(\left(O;\ve{OA},\ve{OB}\right)\)</span> est un repère du plan.</li>
+<li><p><strong>(<span class="math inline">\(\Leftarrow\)</span>)</strong> : <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont non colinéaires, donc <span class="math inline">\(\left(O ; \ve{OA}, \ve{OB}\right)\)</span> est un repère du plan <span class="math inline">\((OAB)\)</span>.</p>
+<p>Soit le point <span class="math inline">\(E\)</span> du plan <span class="math inline">\((OAB)\)</span> de coordonnées <span class="math inline">\((\lambda \, ; \, \mu)\)</span> dans ce repère. On a : <span class="math display">\[\ve{OE}=\lambda \ve{OA}+\mu \ve{OB}\]</span> Or, <span class="math inline">\(\ve{OE}=\ve{w}\)</span> et comme <span class="math inline">\(O, A, B\)</span> et <span class="math inline">\(E\)</span> sont coplanaires, alors les vecteurs <span class="math inline">\(\ve{u}, \ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> le sont également.</p></li>
 </ul>
-Soit le point <span class="math inline">\(E\)</span> du plan <span class="math inline">\((OAB)\)</span> de coordonnées <span class="math inline">\((\lambda ; \mu)\)</span> dans ce repère. On a :<br>
-<span class="math display">\[\ve{OE}=\lambda \ve{OA}+\mu \ve{OB}.\]</span><br>
-Or, <span class="math inline">\(\ve{OE}=\ve{w}\)</span> et comme <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(E\)</span> sont coplanaires alors les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> le sont également.
 </details>
 <div class="bloc rem">
-<p><span class="bloc-titre"> Remarque : </span><br></p>
+<p><span class="bloc-titre">Remarques : </span></p>
 <ol type="1">
 <li>Trois points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> sont toujours coplanaires :
 <ul>
-<li>S’ils sont alignés, alors ils appartiennent à la même droite, donc au(x) même plan(s).<br>
-</li>
-<li>S’ils ne sont pas alignés, alors les droites <span class="math inline">\((AB)\)</span> et <span class="math inline">\((AC)\)</span> sont sécantes, donc <span class="math inline">\((A;\ve{AB},\ve{AC})\)</span> est un repère du plan.<br>
-</li>
+<li>Si les points sont alignés, alors ils appartiennent à la même droite, donc au(x) même plan(s).</li>
+<li>S’ils ne sont pas alignés, alors les droites <span class="math inline">\((AB)\)</span> et <span class="math inline">\((AC)\)</span> sont sécantes, donc <span class="math inline">\((A ; \ve{AB}, \ve{AC})\)</span> est un repère du plan.</li>
 </ul></li>
-<li>Dire que des vecteurs sont coplanaires revient à dire que l’on peut exprimer un vecteur en fonction des deux autres.<br>
-</li>
-<li>Si on a <span class="math inline">\(\ve{w}=\lambda \ve{u}+\mu \ve{v}\)</span>, alors dans le repère vectoriel <span class="math inline">\(\left(\ve{u}\,;\,\ve{v}\right)\)</span>, on a <span class="math inline">\(\ve{w}\begin{pmatrix}\lambda\\\mu\end{pmatrix}\)</span> ou <span class="math inline">\(\ve{w}(\lambda\,;\,\mu)\)</span>.<br>
-</li>
+<li>Dire que des vecteurs sont coplanaires revient à dire que l’on peut exprimer un vecteur en fonction des deux autres.</li>
+<li>Si on a <span class="math inline">\(\ve{w}=\lambda \ve{u}+\mu \ve{v}\)</span>, alors dans le repère vectoriel <span class="math inline">\(\left(\ve{u}\, ; \,\ve{v}\right)\)</span>, on a <span class="math inline">\(\ve{w}\begin{pmatrix}\lambda\\\mu\end{pmatrix}\)</span> ou <span class="math inline">\(\ve{w}(\lambda \, ; \, \mu)\)</span>.</li>
 </ol>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Soit <span class="math inline">\(ABCDE\)</span> une pyramide de sommet <span class="math inline">\(E\)</span> à base parallélogramme.<br>
+<div class="bloc-titre">
+Exemple :
+</div>
+<p>Soit <span class="math inline">\(ABCDE\)</span> une pyramide de sommet <span class="math inline">\(E\)</span> à base parallélogramme.<br>
 On pose <span class="math inline">\(\ve{u}=\ve{AB}\)</span>, <span class="math inline">\(\ve{v}=2\ve{AD}+\ve{DE}\)</span> et <span class="math inline">\(\ve{w}=\ve{AC}+\ve{AE}\)</span>.<br>
 Montrer que <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont coplanaires.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<span class="math inline">\(ABCD\)</span> parallélogramme, donc <span class="math inline">\(\ve{BC}=\ve{AD}\)</span>.<br>
-Ainsi,<br>
-<span class="math display">\[\ve{w} = \ve{AC} + \ve{AE} = \ve{AB} + \ve{BC} + \ve{AE} = \ve{AB} + \ve{AD} + \ve{AD} + \ve{DE} = \ve{AB} + 2\ve{AD} + \ve{DE} = \ve{u} + \ve{v}\]</span><br>
-Les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont donc coplanaires.
+<p><span class="math inline">\(ABCD\)</span> est un parallélogramme, donc <span class="math inline">\(\ve{BC}=\ve{AD}\)</span>.<br>
+Par décomposition (relation de Chasles) : <span class="math display">\[\ve{w} = \ve{AC} + \ve{AE} = (\ve{AB} + \ve{BC}) + \ve{AE}\]</span> En remplaçant <span class="math inline">\(\ve{BC}\)</span> par <span class="math inline">\(\ve{AD}\)</span> : <span class="math display">\[\ve{w} = \ve{AB} + \ve{AD} + (\ve{AD} + \ve{DE}) = \ve{AB} + 2\ve{AD} + \ve{DE}\]</span> On reconnaît alors les vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> : <span class="math display">\[\ve{w} = \ve{u} + \ve{v}\]</span> Il existe donc un couple de réels <span class="math inline">\((\lambda \, ; \, \mu) = (1 \, ; \, 1)\)</span> tel que <span class="math inline">\(\ve{w} = \lambda\ve{u} + \mu\ve{v}\)</span>.<br>
+Les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont donc coplanaires.</p>
 </details>
 </div>
 <div class="nav-pages">

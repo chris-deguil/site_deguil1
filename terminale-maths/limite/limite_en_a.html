@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -853,6 +865,7 @@ window.Quarto = {
   <ul>
   <li><a href="#notion-de-limite-en-x_0" id="toc-notion-de-limite-en-x_0" class="nav-link active" data-scroll-target="#notion-de-limite-en-x_0">Notion de limite en <span class="math inline">\(x_0\)</span></a></li>
   <li><a href="#cas-particulier-le-nombre-dérivé" id="toc-cas-particulier-le-nombre-dérivé" class="nav-link" data-scroll-target="#cas-particulier-le-nombre-dérivé">Cas particulier : Le nombre dérivé</a></li>
+  <li><a href="#limite-finie-dune-fonction" id="toc-limite-finie-dune-fonction" class="nav-link" data-scroll-target="#limite-finie-dune-fonction">Limite finie d’une fonction</a></li>
   </ul>
 </nav>
     </div>
@@ -887,8 +900,8 @@ window.Quarto = {
 <section id="notion-de-limite-en-x_0" class="level2">
 <h2 class="anchored" data-anchor-id="notion-de-limite-en-x_0">Notion de limite en <span class="math inline">\(x_0\)</span></h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(x_0\)</span> un réel fini. La limite d’une fonction <span class="math inline">\(f\)</span> en <span class="math inline">\(x_0\)</span> est la valeur vers laquelle <span class="math inline">\(f(x)\)</span> se rapproche quand <span class="math inline">\(x\)</span> se rapproche de <span class="math inline">\(x_0\)</span>. On la note</p>
-<p><span class="math display">\[\lim_{x \to x_0} f(x)\]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soit <span class="math inline">\(x_0\)</span> un réel fini. La limite d’une fonction <span class="math inline">\(f\)</span> en <span class="math inline">\(x_0\)</span> est la valeur vers laquelle <span class="math inline">\(f(x)\)</span> se rapproche quand <span class="math inline">\(x\)</span> se rapproche de <span class="math inline">\(x_0\)</span>. On la note <span class="math display">\[\lim_{x \to x_0} f(x)\]</span></p>
 </div>
 <div class="bloc">
 <p>On a deux cas de figure qui peuvent se présenter :</p>
@@ -902,10 +915,38 @@ window.Quarto = {
 <section id="cas-particulier-le-nombre-dérivé" class="level2">
 <h2 class="anchored" data-anchor-id="cas-particulier-le-nombre-dérivé">Cas particulier : Le nombre dérivé</h2>
 <div class="bloc rem">
-<p>On pose, pour tout <span class="math inline">\(x \in D_f \backslash \{x_0\}\)</span>, <span class="math display">\[\tau_{x_0}(x)=\frac{f(x)-f(x_0)}{x-x_0}\]</span> Ainsi, pour <span class="math inline">\(f\)</span> dérivable en <span class="math inline">\(x_0\)</span>, on a <span class="math display">\[f'(x_0) = \lim_{x \to x_0} \tau_{x_0}(x)\]</span></p>
+<p>On pose, pour tout <span class="math inline">\(x \in D_f \setminus \{x_0\}\)</span>, <span class="math display">\[\tau_{x_0}(x)=\dfrac{f(x)-f(x_0)}{x-x_0}\]</span> Ainsi, pour <span class="math inline">\(f\)</span> dérivable en <span class="math inline">\(x_0\)</span>, on a <span class="math display">\[f'(x_0) = \lim_{x \to x_0} \tau_{x_0}(x)\]</span></p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span> <span class="math display">\[\lim_{x \to 0} \frac{\e^x-1}{x} = \exp'(0) = 1 \quad \text{ ; } \quad \lim_{x \to \frac{\pi}{2}} \frac{\cos(x)}{x-\frac{\pi}{2}} = \cos'\left(\frac{\pi}{2}\right) = \sin\left(\frac{\pi}{2}\right) = 1\]</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p><span class="math display">\[\lim_{x \to 0} \dfrac{\e^x-1}{x} = \exp'(0) = 1 \quad \text{ ; } \quad \lim_{x \to \dfrac{\pi}{2}} \dfrac{\cos(x)}{x-\dfrac{\pi}{2}} = \cos'\left(\dfrac{\pi}{2}\right) = -\sin\left(\dfrac{\pi}{2}\right) = -1\]</span></p>
+</div>
+</section>
+<section id="limite-finie-dune-fonction" class="level2">
+<h2 class="anchored" data-anchor-id="limite-finie-dune-fonction">Limite finie d’une fonction</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction définie sur un intervalle <span class="math inline">\(I\)</span> et <span class="math inline">\(x_0 \in I\)</span>.<br>
+On dit que <span class="math inline">\(f\)</span> admet <span class="math inline">\(l\)</span> pour limite au voisinage de <span class="math inline">\(x_0\)</span> (ou en <span class="math inline">\(x_0\)</span>) et on note <span class="math display">\[\lim_{x \to x_0} f(x) = l\]</span> lorsque <span class="math display">\[\forall \epsilon &gt;0, \, \exists \delta &gt;0, \, \forall x \in \mathbb{R}, \, (|x - x_0| \leqslant \delta \Rightarrow |f(x)-l| \leqslant \epsilon)\]</span></p>
+</div>
+<div class="bloc">
+<div style="text-align: center;">
+<p><img src="../../image/maths_term/Chap4_Limite_figure9.png" style="width: 35%;"></p>
+</div>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre"> Remarque : Comprendre la définition</span><br></p>
+<ul>
+<li>l’inégalité <span class="math inline">\(\abs{x-x_0} &lt; \delta\)</span> signifie que <span class="math inline">\(x \in ]x_0-\delta \, ; \, x_0+\delta[\)</span>.</li>
+<li>l’inégalité <span class="math inline">\(\abs{f(x)-l} &lt; \epsilon\)</span> signifie que <span class="math inline">\(f(x) \in ]l-\epsilon \, ; \, l+\epsilon[\)</span>.</li>
+<li>L’ordre des quantificateurs est important. Le <span class="math inline">\(\delta\)</span> dépend du <span class="math inline">\(\epsilon\)</span>.</li>
+</ul>
+<p>Il s’agit de dire que si pour tout intervalle ouvert <span class="math inline">\(J\)</span> contenant <span class="math inline">\(l\)</span>, il existe un intervalle ouvert <span class="math inline">\(I\)</span> contenant <span class="math inline">\(x_0\)</span>, tel que <span class="math inline">\(J\)</span> contient tous les réels <span class="math inline">\(f(x)\)</span> pour <span class="math inline">\(x \in I\)</span>.</p>
+</div>
+<div class="bloc rem">
+<p>Donc si pour tout <span class="math inline">\(x\)</span> suffisamment proche de <span class="math inline">\(x_0\)</span>, <span class="math inline">\(f(x)\)</span> est proche de <span class="math inline">\(f(x_0)\)</span>, alors la limite de <span class="math inline">\(f\)</span> en <span class="math inline">\(x_0\)</span> est <span class="math inline">\(f(x_0)\)</span>.</p>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="limite_asymptote.html">⬅️</a> <a class="next" href="limite_en_a_proprite.html">➡️</a></p>

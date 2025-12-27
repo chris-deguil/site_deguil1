@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -887,7 +899,7 @@ window.Quarto = {
 <hr>
 <section id="dérivée-de-la-composée" class="level2">
 <h2 class="anchored" data-anchor-id="dérivée-de-la-composée">Dérivée de la composée</h2>
-<div class="bloc def">
+<div class="bloc rem">
 <p><span class="bloc-titre">Développement limité à l’ordre 1 </span><br></p>
 <p>On considère <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(I\)</span> à valeurs dans <span class="math inline">\(\R\)</span>, <span class="math inline">\(a \in I\)</span> et <span class="math inline">\(f\)</span> dérivable en <span class="math inline">\(a\)</span>.<br>
 Soit la fonction définie par : <span class="math display">\[
@@ -904,110 +916,94 @@ f(x) = f(a) + (x-a)f'(a) + (x-a) \epsilon(x).
 <p>De plus, <span class="math display">\[\lim_{x \to a} \epsilon(x) = \lim_{x \to a} \left(\frac{f(x)-f(a)}{x-a} - f'(a)\right) = 0\]</span></p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br></p>
+<p><span class="bloc-titre">Remarque : </span></p>
 <ul>
-<li>La « première partie » du développement limité à l’ordre 1 correspond à l’expression de l’équation de la tangente au point d’abscisse <span class="math inline">\(a\)</span>.</li>
+<li>La “première partie” du développement limité à l’ordre 1 correspond à l’expression de l’équation de la tangente au point d’abscisse <span class="math inline">\(a\)</span>.</li>
 <li>On peut définir des développements limités à l’ordre <span class="math inline">\(n\)</span>. Il s’agit alors d’approximer localement une fonction par un polynôme de degré <span class="math inline">\(n\)</span>.</li>
 </ul>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br> Soit <span class="math inline">\(f\)</span> une fonction dérivable sur <span class="math inline">\(I\)</span> et <span class="math inline">\(g\)</span> une fonction dérivable sur <span class="math inline">\(J\)</span> telle que <span class="math inline">\(f(I) \subset J\)</span>.<br>
-Alors la fonction <span class="math inline">\(g \circ f\)</span> est dérivable sur <span class="math inline">\(I\)</span> et <span class="math display">\[
-\forall x \in I, \, (g \circ f)'(x) = f'(x) \times (g' \circ f)(x).
-\]</span></p>
+<p><span class="bloc-titre">Propriété : </span></p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction dérivable sur <span class="math inline">\(I\)</span> et <span class="math inline">\(g\)</span> une fonction dérivable sur <span class="math inline">\(J\)</span> telles que <span class="math inline">\(f(I) \subset J\)</span>.<br>
+Alors la fonction <span class="math inline">\(g \circ f\)</span> est dérivable sur <span class="math inline">\(I\)</span> et <span class="math display">\[\forall x \in I, \, (g \circ f)'(x) = f'(x) \times (g' \circ f)(x)\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-Puisque <span class="math inline">\(g\)</span> est dérivable en <span class="math inline">\(f(a)\)</span>, on peut écrire le développement limité de <span class="math inline">\(g\)</span> en <span class="math inline">\(f(a)\)</span> : <span class="math display">\[
-g(y) = g(f(a)) + (y - f(a))g'(f(a)) + (y - f(a))\epsilon(y),
-\]</span> où <span class="math inline">\(\lim_{y \to f(a)} \epsilon(y) = 0\)</span>.<br>
-En remplaçant <span class="math inline">\(y\)</span> par <span class="math inline">\(f(x)\)</span>, on obtient pour tout <span class="math inline">\(x \in I\)</span> : <span class="math display">\[
-g(f(x)) = g(f(a)) + (f(x) - f(a))g'(f(a)) + (f(x) - f(a))\epsilon(f(x)).
-\]</span> Pour tout <span class="math inline">\(x \in I \backslash \{a\}\)</span>, on a : <span class="math display">\[
-\frac{(g \circ f)(x) - (g \circ f)(a)}{x-a} = \underbrace{\frac{f(x) - f(a)}{x-a}}_{\rightarrow f'(a)} g'(f(a)) + \underbrace{\frac{f(x) - f(a)}{x-a}}_{\rightarrow f'(a)} \epsilon(f(x)).
-\]</span> En passant à la limite quand <span class="math inline">\(x \to a\)</span>, on obtient : <span class="math display">\[
-\lim_{x \to a} \frac{(g \circ f)(x) - (g \circ f)(a)}{x-a} = f'(a) \times g'(f(a)).
-\]</span>
+<p>Puisque <span class="math inline">\(g\)</span> est dérivable en <span class="math inline">\(f(a)\)</span>, on peut écrire le développement limité de <span class="math inline">\(g\)</span> en <span class="math inline">\(f(a)\)</span> : <span class="math display">\[g(y) = g(f(a)) + (y - f(a))g'(f(a)) + (y - f(a))\epsilon(y),\]</span> où <span class="math inline">\(\lim_{y \to f(a)} \epsilon(y) = 0\)</span>.<br>
+En remplaçant <span class="math inline">\(y\)</span> par <span class="math inline">\(f(x)\)</span>, on obtient pour tout <span class="math inline">\(x \in I\)</span> : <span class="math display">\[g(f(x)) = g(f(a)) + (f(x) - f(a))g'(f(a)) + (f(x) - f(a))\epsilon(f(x)).\]</span> Pour tout <span class="math inline">\(x \in I \backslash \{a\}\)</span>, on a : <span class="math display">\[\dfrac{(g \circ f)(x) - (g \circ f)(a)}{x-a} = \underbrace{\dfrac{f(x) - f(a)}{x-a}}_{\rightarrow f'(a)} g'(f(a)) + \underbrace{\dfrac{f(x) - f(a)}{x-a}}_{\rightarrow f'(a)} \epsilon(f(x)).\]</span> En passant à la limite quand <span class="math inline">\(x \to a\)</span>, on obtient : <span class="math display">\[\lim_{x \to a} \dfrac{(g \circ f)(x) - (g \circ f)(a)}{x-a} = f'(a) \times g'(f(a)).\]</span></p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère la fonction <span class="math inline">\(h\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(h(x) = \e^{3x^2-5x+1}\)</span>.<br>
-Déterminer la dérivée de <span class="math inline">\(h\)</span>.</p>
-<details class="bloc cor">
-<summary>
-Afficher la correction :
-</summary>
-<p>On a <span class="math inline">\(h = g \circ f\)</span> avec <span class="math inline">\(g : x \longmapsto \exp(x)\)</span> et <span class="math inline">\(f : x \longmapsto 3x^2 - 5x + 1\)</span>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la fonction <span class="math inline">\(h\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math inline">\(h(x)= e^{3x^2-5x+1}\)</span>.<br>
+On a <span class="math inline">\(h= g \circ f\)</span> avec <span class="math inline">\(g:x \longmapsto \exp(x)\)</span> et <span class="math inline">\(f:x \longmapsto 3x^2-5x+1\)</span>.</p>
 <ul>
-<li>La fonction <span class="math inline">\(\exp\)</span> est dérivable sur <span class="math inline">\(\R\)</span>. Pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(g'(x) = \e^x\)</span>.</li>
-<li><span class="math inline">\(f\)</span> étant une fonction polynôme, elle est dérivable sur <span class="math inline">\(\R\)</span>. Pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math inline">\(f'(x) = 6x - 5\)</span>.</li>
+<li>La fonction <span class="math inline">\(\exp\)</span> est dérivable sur <span class="math inline">\(\mathbb{R}\)</span>. Pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(g'(x)=e^x\)</span>.</li>
+<li><span class="math inline">\(f\)</span> étant une fonction polynôme, elle est dérivable sur <span class="math inline">\(\mathbb{R}\)</span>. Pour tout <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(f'(x)= 6x-5\)</span>.</li>
 </ul>
-On déduit que <span class="math inline">\(h = g \circ f\)</span> est dérivable sur <span class="math inline">\(\R\)</span>.<br>
-Pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math display">\[
-h'(x) = f'(x) \times (g' \circ f)(x) = (6x - 5) \e^{3x^2 - 5x + 1}.
-\]</span>
-</details>
+<p>On déduit que <span class="math inline">\(h = g \circ f\)</span> est dérivable sur <span class="math inline">\(\mathbb{R}\)</span>.<br>
+Pour tout <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math display">\[ h'(x) = f'(x) \times (g' \circ f)(x) = (6x-5) e^{3x^2-5x+1}\]</span></p>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br> Soit <span class="math inline">\(u\)</span> une fonction dérivable sur <span class="math inline">\(I\)</span>, alors</p>
+<p><span class="bloc-titre">Propriété : </span></p>
+<p>Soit <span class="math inline">\(u\)</span> une fonction dérivable sur <span class="math inline">\(I\)</span>, alors :</p>
 <ul>
-<li><span class="math inline">\((\e^{u})' = u' \e^u\)</span></li>
+<li><span class="math inline">\((e^{u})' = u' e^u\)</span></li>
 <li>Si <span class="math inline">\(u &gt; 0\)</span> sur <span class="math inline">\(I\)</span>, alors <span class="math inline">\((\sqrt{u})' = \dfrac{u'}{2 \sqrt{u}}\)</span></li>
-<li>Pour tout <span class="math inline">\(n \in \Z^*\)</span>, si <span class="math inline">\(u \neq 0\)</span> sur <span class="math inline">\(I\)</span>, alors <span class="math inline">\((u^n)' = n u' u^{n-1}\)</span></li>
+<li>Pour tout <span class="math inline">\(n \in \mathbb{Z}^*\)</span>, si <span class="math inline">\(u \neq 0\)</span> sur <span class="math inline">\(I\)</span>, alors <span class="math inline">\((u^n)' = n u' u^{n-1}\)</span></li>
 </ul>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-Pour démontrer ces résultats, on utilise la règle de dérivation des fonctions composées.
+<p>Pour démontrer ces résultats, on utilise la règle de dérivation des fonctions composées.</p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère la fonction <span class="math inline">\(h\)</span> définie par <span class="math inline">\(h(x) = \dfrac{2}{1+\e^{2x+1}}\)</span>.<br>
-On a <span class="math inline">\(h = g \circ f\)</span> avec <span class="math inline">\(g : x \longmapsto \dfrac{2}{x}\)</span> et <span class="math inline">\(f : x \longmapsto 1+\e^{2x+1}\)</span>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la fonction <span class="math inline">\(h\)</span> définie par <span class="math inline">\(h(x) = \dfrac{2}{1+e^{2x+1}}\)</span>.<br>
+On a <span class="math inline">\(h = g \circ f\)</span> avec <span class="math inline">\(g : x \longmapsto \dfrac{2}{x}\)</span> et <span class="math inline">\(f : x \longmapsto 1+e^{2x+1}\)</span>.</p>
 <ul>
-<li>La fonction <span class="math inline">\(f\)</span> est dérivable sur <span class="math inline">\(\R\)</span>, à valeur dans <span class="math inline">\(\R_+^*\)</span>. De plus, pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math inline">\(f'(x) = 2 \e^{2x+1}\)</span>.</li>
-<li>La fonction <span class="math inline">\(g\)</span> est dérivable sur <span class="math inline">\(\R_+^*\)</span> et pour tout <span class="math inline">\(x \in \R_+^*\)</span>, <span class="math inline">\(g'(x) = -\dfrac{2}{x^2}\)</span>.</li>
+<li>La fonction <span class="math inline">\(f\)</span> est dérivable sur <span class="math inline">\(\mathbb{R}\)</span>, à valeurs dans <span class="math inline">\(\mathbb{R}_+^*\)</span>. De plus, pour tout <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(f'(x) = 2 e^{2x+1}\)</span>.</li>
+<li>La fonction <span class="math inline">\(g\)</span> est dérivable sur <span class="math inline">\(\mathbb{R}_+^*\)</span> et pour tout <span class="math inline">\(x \in \mathbb{R}_+^*\)</span>, <span class="math inline">\(g'(x) = -\dfrac{2}{x^2}\)</span>.</li>
 </ul>
-<p>On en déduit que <span class="math inline">\(h = g \circ f\)</span> est dérivable sur <span class="math inline">\(\R\)</span> et pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[
-h'(x) = f'(x) (g' \circ f)(x) = -\frac{4 \e^{2x+1}}{(1+\e^{2x+1})^2}.
-\]</span></p>
+<p>On en déduit que <span class="math inline">\(h = g \circ f\)</span> est dérivable sur <span class="math inline">\(\mathbb{R}\)</span> et pour tout réel <span class="math inline">\(x\)</span>, <span class="math display">\[h'(x) = f'(x) (g' \circ f)(x) = -\dfrac{4 e^{2x+1}}{(1+e^{2x+1})^2}.\]</span></p>
 </div>
 </section>
 <section id="dérivées-sucecssives" class="level2">
 <h2 class="anchored" data-anchor-id="dérivées-sucecssives">Dérivées sucecssives</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soient <span class="math inline">\(n\)</span> un entier naturel non nul et <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(I\)</span>.<br>
-On définit les dérivées successives de la fonction <span class="math inline">\(f\)</span> par récurrence, en convenant de noter <span class="math display">\[
-f^{(0)} = f \quad \text{et} \quad f^{(n)} = \left( f^{(n-1)} \right)'.
-\]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soient <span class="math inline">\(n\)</span> un entier naturel non nul et <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(I\)</span>.<br>
+On définit les dérivées successives de la fonction <span class="math inline">\(f\)</span> par récurrence, en convenant de noter <span class="math display">\[f^{(0)} = f \quad \text{et} \quad f^{(n)} = \left( f^{(n-1)} \right)'.\]</span></p>
 <ul>
-<li>On appelle alors dérivée <span class="math inline">\(n\)</span> de <span class="math inline">\(f\)</span> en <span class="math inline">\(a\)</span> le nombre <span class="math inline">\(f^{(n)}(a)\)</span>.</li>
-<li>On appelle fonction dérivée <span class="math inline">\(n\)</span> de <span class="math inline">\(f\)</span> la fonction <span class="math inline">\(: x \longmapsto f^{(n)}(x)\)</span>.</li>
-<li>On dit que la fonction <span class="math inline">\(f\)</span> est <span class="math inline">\(n\)</span> fois dérivable sur <span class="math inline">\(I\)</span> lorsque pour tout <span class="math inline">\(k \in \llbracket 0 \, ; \, n \rrbracket\)</span>, la fonction <span class="math inline">\(f^{(k)}\)</span> est définie sur <span class="math inline">\(I\)</span>.</li>
+<li>On appelle alors dérivée <span class="math inline">\(n\)</span>-ième de <span class="math inline">\(f\)</span> en <span class="math inline">\(a\)</span> le nombre <span class="math inline">\(f^{(n)}(a)\)</span>.</li>
+<li>On appelle fonction dérivée <span class="math inline">\(n\)</span>-ième de <span class="math inline">\(f\)</span> la fonction <span class="math inline">\(: x \longmapsto f^{(n)}(x)\)</span>.</li>
+<li>On dit que la fonction <span class="math inline">\(f\)</span> est <span class="math inline">\(n\)</span> fois dérivable sur <span class="math inline">\(I\)</span> lorsque pour tout <span class="math inline">\(k \in \llbracket 0 \,;\, n \rrbracket\)</span>, la fonction <span class="math inline">\(f^{(k)}\)</span> est définie sur <span class="math inline">\(I\)</span>.</li>
 </ul>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br></p>
+<p><span class="bloc-titre">Remarque : </span></p>
 <ul>
 <li>En utilisant les notations de la définition, on a <span class="math inline">\(f' = f^{(1)}\)</span>.</li>
-<li>La dérivée 2 de <span class="math inline">\(f\)</span> est appelée dérivée seconde. On la note généralement <span class="math inline">\(f''\)</span>.</li>
-<li>La dérivée 3 de <span class="math inline">\(f\)</span> est généralement notée <span class="math inline">\(f'''\)</span>.</li>
+<li>La dérivée <span class="math inline">\(2\)</span>-ième de <span class="math inline">\(f\)</span> est appelée dérivée seconde. On la note généralement <span class="math inline">\(f''\)</span>.</li>
+<li>La dérivée <span class="math inline">\(3\)</span>-ième de <span class="math inline">\(f\)</span> est généralement notée <span class="math inline">\(f'''\)</span>.</li>
 </ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math inline">\(f(x)=\dfrac{1}{1+x^2}\)</span>.<br>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math inline">\(f(x)=\dfrac{1}{1+x^2}\)</span>.<br>
 <span class="math inline">\(f\)</span> est dérivable sur <span class="math inline">\(\mathbb{R}\)</span> comme fonction rationnelle définie sur <span class="math inline">\(\mathbb{R}\)</span>.<br>
 Pour tout <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(f'(x)= - \dfrac{2x}{(1+x^2)^2}\)</span>.<br>
 <span class="math inline">\(f'\)</span> est une fonction rationnelle, elle est donc dérivable sur <span class="math inline">\(\mathbb{R}\)</span>.<br>
-Pour tout <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math display">\[
-f''(x)=(f')'(x)=-\frac{2(1+x^2)^2 - 2x \times 2(1+x^2) \times 2x}{(1+x^2)^4}
-= -\frac{2(1+x^2) - 8x^2}{(1+x^2)^3}
-= \frac{6x^2-2}{(1+x^2)^3}
-\]</span> L’utilisation d’un logiciel de calcul formel peut nous donner directement la dérivée troisième <span class="math display">\[
-f^{(3)}(x) = \frac{24x(1-x^2)}{(1+x^2)^4}
-\]</span></p>
+Pour tout <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math display">\[f''(x)=(f')'(x)=-\dfrac{2(1+x^2)^2 - 2x \times 2(1+x^2) \times 2x}{(1+x^2)^4} = -\dfrac{2(1+x^2) - 8x^2}{(1+x^2)^3}= \dfrac{6x^2-2}{(1+x^2)^3}\]</span> L’utilisation d’un logiciel de calcul formel peut nous donner directement la dérivée troisième : <span class="math display">\[f^{(3)}(x) = \dfrac{24x(1-x^2)}{(1+x^2)^4}\]</span></p>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="composee.html">⬅️</a> <a class="next" href="convexite.html">➡️</a></p>

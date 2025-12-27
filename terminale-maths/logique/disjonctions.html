@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -887,60 +899,99 @@ window.Quarto = {
 <section id="raisonnement-par-contraposée" class="level3">
 <h3 class="anchored" data-anchor-id="raisonnement-par-contraposée">Raisonnement par contraposée</h3>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> On appelle contraposée de la proposition <span class="math display">\[A \Longrightarrow B\]</span> la proposition <span class="math display">\[\text{non}(B) \Longrightarrow \text{non}(A).\]</span></p>
+<p><span class="bloc-titre">Définition : </span><br></p>
+<p>On appelle contraposée de la proposition <span class="math display">\[P \Longrightarrow Q\]</span> La proposition <span class="math display">\[\text{non}(Q) \Longrightarrow \text{non}(P).\]</span></p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span><br></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
 <ol type="1">
-<li><p>La contraposée de :<br> « Si un triangle est rectangle alors la somme des carrés des longueurs des cathètes est égale au carré de la longueur de l’hypoténuse »<br> est :<br> « Si la somme des carrés des longueurs des deux plus petits côtés n’est pas égale au carré de la longueur du plus grand côté alors le triangle n’est pas rectangle. »</p></li>
-<li><p>La contraposée de <span class="math inline">\((n^2 \text{ pair } \Longrightarrow n \text{ pair })\)</span> est (puisque la négation de « être pair » est « être impair ») :<br> <span class="math display">\[(n \text{ impair } \Longrightarrow n^2 \text{ impair }).\]</span></p></li>
+<li>La contraposée de :</li>
+</ol>
+<p>« Si un triangle est rectangle alors la somme des carrés des longueurs des cathètes est égale au carré de la longueur de l’hypoténuse »</p>
+<p>est :</p>
+<p>« Si la somme des carrés des longueurs des deux plus petits côtés n’est pas égale au carré de la longueur du plus grand côté alors le triangle n’est pas rectangle. »</p>
+<ol start="2" type="1">
+<li>La contraposée de <span class="math inline">\((n^2 \text{ pair } \Longrightarrow n \text{ pair })\)</span> est (puisque la négation de « être pair » est « être impair ») : <span class="math display">\[(n \text{ impair } \Longrightarrow n^2 \text{ impair }).\]</span></li>
 </ol>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> Une proposition et sa contraposée ont la même valeur de vérité : elles sont équivalentes.</p>
+<p><span class="bloc-titre">Propriété : </span><br></p>
+<p>Une proposition et sa contraposée ont la même valeur de vérité : elles sont équivalentes.</p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-Il suffit de remarquer que <span class="math inline">\(\,\text{non}(Q) \Longrightarrow \text{non}(P)\)</span> équivaut à <span class="math inline">\(\text{non}(\text{non}(Q)) \,\text{ ou }\, \text{non}(P)\)</span>, c’est-à-dire <span class="math inline">\(\text{non}(P)\, \text{ ou }\, Q\)</span>.
+<p>Il suffit de remarquer que <span class="math inline">\(\text{non}(Q) \Longrightarrow \text{non}(P)\)</span> équivaut à <span class="math inline">\(\text{non}(\text{non}(Q)) \text{ ou } \text{non}(P)\)</span>, c’est-à-dire <span class="math inline">\(Q \text{ ou } \text{non}(P)\)</span> (ou encore <span class="math inline">\(\text{non}(P) \text{ ou } Q\)</span>).</p>
 </details>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> Pour démontrer une propriété, on peut démontrer sa contraposée.</p>
+<p><span class="bloc-titre">Méthode : </span><br></p>
+<p>Pour démontrer une propriété, on peut démontrer sa contraposée.</p>
 </div>
 <div class="bloc ex">
-<span class="bloc-titre">Exemple : </span><br> Démontrer que si <span class="math inline">\(n^2\)</span> est pair, alors <span class="math inline">\(n\)</span> est pair.<br> On peut alors démontrer que si <span class="math inline">\(n\)</span> est impair (puisqu’on suppose la négation de « pair ») alors <span class="math inline">\(n^2\)</span> est impair.<br>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Démontrons que si <span class="math inline">\(n^2\)</span> est pair, alors <span class="math inline">\(n\)</span> est pair.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-Soit <span class="math inline">\(n\)</span> un entier impair, alors il existe <span class="math inline">\(k \in \N\)</span> tel que <span class="math inline">\(n=2k+1\)</span>.<br> On a alors <span class="math inline">\(n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1=2k'+1\)</span> avec <span class="math inline">\(k'\in \N\)</span>.<br> Donc <span class="math inline">\(n^2\)</span> est impair et la contraposée est vraie, donc la propriété aussi.
+On peut alors démontrer que si <span class="math inline">\(n\)</span> est impair (puisqu’on suppose la négation de « pair ») alors <span class="math inline">\(n^2\)</span> est impair.<br>
+Soit <span class="math inline">\(n\)</span> un entier impair, alors il existe <span class="math inline">\(k \in \N\)</span> tel que <span class="math inline">\(n=2k+1\)</span>.<br>
+On a alors <span class="math inline">\(n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1=2k'+1\)</span> avec <span class="math inline">\(k'\in \N\)</span>.<br>
+Donc <span class="math inline">\(n^2\)</span> est impair et la contraposée est vraie, donc la propriété aussi.
 </details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span> <br> Démontrons que <span class="math inline">\(x^3=2 \Longrightarrow x&lt;2\)</span>.</p>
-<p>La contraposée est <span class="math inline">\(x \geqslant 2 \Longrightarrow x^3 \neq 2\)</span>.<br> Soit <span class="math inline">\(x \geqslant 2\)</span>, alors la fonction cube étant strictement croissante, on a <span class="math inline">\(x^3 \geqslant 2^3 = 8\)</span>.<br> Or <span class="math inline">\(8 &gt; 2\)</span>, donc <span class="math inline">\(x^3 \neq 2\)</span>. Ainsi la contraposée étant vraie, la propriété l’est aussi.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Démontrons que <span class="math inline">\(x^3=2 \Longrightarrow x&lt;2\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+La contraposée est <span class="math inline">\(x \geqslant 2 \Longrightarrow x^3 \neq 2\)</span>.<br>
+Soit <span class="math inline">\(x \geqslant 2\)</span>, alors la fonction cube étant strictement croissante, on a <span class="math inline">\(x^3 \geqslant 2^3 = 8\)</span>.<br>
+Or <span class="math inline">\(8 &gt; 2\)</span>, donc <span class="math inline">\(x^3 \neq 2\)</span>.<br>
+Ainsi la contraposée étant vraie, la propriété l’est aussi.
+</details>
 </div>
 </section>
 <section id="raisonnement-par-disjonction-des-cas" class="level3">
 <h3 class="anchored" data-anchor-id="raisonnement-par-disjonction-des-cas">Raisonnement par disjonction des cas</h3>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br></p>
+<p><span class="bloc-titre">Raisonnement par disjonction des cas : </span><br></p>
 <ul>
-<li>Lorsqu’une propriété dépend de la valeur de <span class="math inline">\(x\)</span>, on peut être amené à étudier différents cas en séparant suivant les différentes valeurs de <span class="math inline">\(x\)</span>.<br> On appelle ce type de raisonnement un raisonnement par disjonction des cas.</li>
-<li>Dans un raisonnement par disjonction des cas, un cas ne peut pas se retrouver dans différentes études !</li>
+<li><p>Lorsqu’une propriété dépend de la valeur de <span class="math inline">\(x\)</span>, on peut être amené à étudier différents cas en séparant suivant les différentes valeurs de <span class="math inline">\(x\)</span>. On appelle ce type de raisonnement un raisonnement par disjonction des cas.</p></li>
+<li><p>Dans un raisonnement par disjonction des cas, un cas ne peut pas se retrouver dans différentes études !</p></li>
 </ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Montrer que <span class="math inline">\(N=n(n+1)(n+2)\)</span> est un multiple de <span class="math inline">\(3\)</span> pour toute valeur de <span class="math inline">\(n \in \N\)</span>.<br> Tout nombre entier <span class="math inline">\(n\)</span> s’écrit sous l’une des formes suivantes <span class="math inline">\(n=3k\)</span>, ou <span class="math inline">\(n=3k+1\)</span> ou <span class="math inline">\(n=3k+2\)</span>, où <span class="math inline">\(k \in \N\)</span>.<br> (Il suffit de regarder les restes possibles dans la division euclidienne par <span class="math inline">\(3\)</span>.)</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Divisibilité par 3 </span>
+</div>
+<p>Montrer que <span class="math inline">\(N=n(n+1)(n+2)\)</span> est un multiple de <span class="math inline">\(3\)</span> pour toute valeur de <span class="math inline">\(n \in \N\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Tout nombre entier <span class="math inline">\(n\)</span> s’écrit sous l’une des formes suivantes <span class="math inline">\(n=3k\)</span>, ou <span class="math inline">\(n=3k+1\)</span> ou <span class="math inline">\(n=3k+2\)</span>, où <span class="math inline">\(k \in \N\)</span>. (Il suffit de regarder les restes possibles dans la division euclidienne par <span class="math inline">\(3\)</span>.)</p>
 <ul>
-<li><p>Soit <span class="math inline">\(n=3k\)</span>, alors <span class="math inline">\(N=3k(3k+1)(3k+2)=3N'\)</span> où <span class="math inline">\(N'=k(3k+1)(3k+2)\)</span>.<br>
+<li><p>Soit <span class="math inline">\(n=3k\)</span>,<br>
+alors <span class="math inline">\(N=3k(3k+1)(3k+2)=3N'\)</span> où <span class="math inline">\(N'=k(3k+1)(3k+2)\)</span>.<br>
 Donc <span class="math inline">\(N\)</span> est un multiple de <span class="math inline">\(3\)</span>.</p></li>
-<li><p>Soit <span class="math inline">\(n=3k+1\)</span>, alors <span class="math inline">\(N=(3k+1)(3k+2)(3k+3)=3(3k+1)(3k+2)(k+1)=3N''\)</span> où <span class="math inline">\(N''=(3k+1)(3k+2)(k+1)\)</span>.<br>
-Donc <span class="math inline">\(N\)</span> est un multiple de <span class="math inline">\(3\)</span>.</p></li>
-<li><p>Soit <span class="math inline">\(n=3k+2\)</span>, alors <span class="math inline">\(N=(3k+2)(3k+3)(3k+4)=3(3k+2)(k+1)(3k+4)=3N'''\)</span> où <span class="math inline">\(N'''=(3k+2)(k+1)(3k+4)\)</span>.<br>
-Donc <span class="math inline">\(N\)</span> est un multiple de <span class="math inline">\(3\)</span>.</p></li>
+<li><p>Soit <span class="math inline">\(n=3k+1\)</span>,</p>
+<p>alors <span class="math inline">\(N=(3k+1)(3k+2)(3k+3)=3(3k+1)(3k+2)(k+1)=3N''\)</span> où <span class="math inline">\(N''=(3k+1)(3k+2)(k+1)\)</span>.</p>
+<p>Donc <span class="math inline">\(N\)</span> est un multiple de <span class="math inline">\(3\)</span>.</p></li>
+<li><p>Soit <span class="math inline">\(n=3k+2\)</span>,</p>
+<p>alors <span class="math inline">\(N=(3k+2)(3k+3)(3k+4)=3(3k+2)(k+1)(3k+4)=3N'''\)</span> où <span class="math inline">\(N'''=(3k+2)(k+1)(3k+4)\)</span>.</p>
+<p>Donc <span class="math inline">\(N\)</span> est un multiple de <span class="math inline">\(3\)</span>.</p></li>
 </ul>
+</details>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="deduction_contreExemple.html">⬅️</a> <a class="next" href="absurde.html">➡️</a></p>

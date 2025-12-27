@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -846,8 +858,14 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#parité-et-représentation-graphique" id="toc-parité-et-représentation-graphique" class="nav-link active" data-scroll-target="#parité-et-représentation-graphique">Parité et représentation graphique</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -880,22 +898,22 @@ window.Quarto = {
 <hr>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition : </span></p>
-<p>On dit qu’un ensemble <span class="math inline">\(E\)</span> de <span class="math inline">\(\R\)</span> est centré en <span class="math inline">\(a\)</span> ou est symétrique par rapport à <span class="math inline">\(a\)</span> lorsque <span class="math inline">\(a\)</span> est le centre de l’ensemble <span class="math inline">\(E\)</span>.</p>
+<p>On dit qu’un ensemble <span class="math inline">\(E\)</span> de <span class="math inline">\(\mathbb{R}\)</span> est centré en <span class="math inline">\(a\)</span> ou est symétrique par rapport à <span class="math inline">\(a\)</span> lorsque <span class="math inline">\(a\)</span> est le centre de l’ensemble <span class="math inline">\(E\)</span>.</p>
 </div>
-<p><br></p>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
 <ul>
-<li><p>Les intervalles centrés en <span class="math inline">\(a\)</span> sont de la forme <span class="math inline">\([a-r \,;\, a+r]\)</span>.</p>
+<li>Les intervalles centrés en <span class="math inline">\(a\)</span> sont de la forme <span class="math inline">\([a-r \,;\, a+r]\)</span>.
 <ul>
-<li>C’est l’ensemble des réels solution de <span class="math inline">\(\abs{x-a} \leqslant r\)</span>.</li>
+<li>C’est l’ensemble des réels solutions de <span class="math inline">\(|x-a| \leqslant r\)</span>.</li>
 <li>Ainsi, les intervalles centrés de la forme <span class="math inline">\(]-r \,;\, r[\)</span> sont centrés en <span class="math inline">\(0\)</span>.</li>
 </ul></li>
-<li><p>Soit <span class="math inline">\(r&gt;0\)</span>, alors les ensembles de la forme <span class="math inline">\(]-\infty \,;\, -r[ \cup ]r \,;\, +\infty[\)</span> sont centrés en <span class="math inline">\(0\)</span>.</p></li>
-<li><p>L’intervalle <span class="math inline">\([8 \,;\, 12]\)</span> est centré en <span class="math inline">\(10\)</span>.</p></li>
+<li>Soit <span class="math inline">\(r&gt;0\)</span>, alors les ensembles de la forme <span class="math inline">\(]-\infty \,;\, -r[ \cup ]r \,;\, +\infty[\)</span> sont centrés en <span class="math inline">\(0\)</span>.</li>
+<li>L’intervalle <span class="math inline">\([8 \,;\, 12]\)</span> est centré en <span class="math inline">\(10\)</span>.</li>
 </ul>
 </div>
-<p><br></p>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition : </span></p>
 <p>Soit <span class="math inline">\(f\)</span> une fonction définie sur un ensemble <span class="math inline">\(I\)</span> centré en <span class="math inline">\(0\)</span>.</p>
@@ -904,46 +922,45 @@ window.Quarto = {
 <li>On dit qu’une fonction est impaire lorsque : <span class="math inline">\(\forall x \in I, \, f(-x) = -f(x)\)</span></li>
 </ol>
 </div>
-<p><br></p>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
 <ul>
-<li><p>La fonction <span class="math inline">\(f: x \longmapsto \frac{-2}{1+x^2}\)</span> est définie sur <span class="math inline">\(\R\)</span> qui est centré en <span class="math inline">\(0\)</span>.<br>
+<li>La fonction <span class="math inline">\(f: x \longmapsto \dfrac{-2}{1+x^2}\)</span> est définie sur <span class="math inline">\(\mathbb{R}\)</span> qui est centré en <span class="math inline">\(0\)</span>.<br>
 C’est une fonction paire, en effet,<br>
-<span class="math inline">\(\forall x \in \R\)</span>, <span class="math display">\[f(-x) = \frac{-2}{1+(-x)^2} = \frac{-2}{1+x^2} = f(x).\]</span></p></li>
-<li><p>La fonction <span class="math inline">\(f: x \longmapsto \frac{x^2+1}{x}\)</span> est définie sur <span class="math inline">\(\R^*\)</span>, qui est centré en <span class="math inline">\(0\)</span>.<br>
+<span class="math inline">\(\forall x \in \mathbb{R}\)</span>, <span class="math display">\[f(-x) = \dfrac{-2}{1+(-x)^2} = \dfrac{-2}{1+x^2} = f(x).\]</span></li>
+<li>La fonction <span class="math inline">\(f: x \longmapsto \dfrac{x^2+1}{x}\)</span> est définie sur <span class="math inline">\(\mathbb{R}^*\)</span>, qui est centré en <span class="math inline">\(0\)</span>.<br>
 Cette fonction est une fonction impaire, en effet,<br>
-<span class="math inline">\(\forall x \in \R^*\)</span>, <span class="math display">\[f(-x) = \frac{(-x)^2+1}{-x} = -\frac{x^2+1}{x} = -f(x).\]</span></p></li>
+<span class="math inline">\(\forall x \in \mathbb{R}^*\)</span>, <span class="math display">\[f(-x) = \dfrac{(-x)^2+1}{-x} = -\dfrac{x^2+1}{x} = -f(x)\]</span></li>
 </ul>
 </div>
-<p><br></p>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span></p>
 <ol type="1">
 <li><p>Si <span class="math inline">\(f\)</span> est impaire et que <span class="math inline">\(0 \in I\)</span>, alors <span class="math inline">\(f(0) = 0\)</span>.<br>
 Cependant, une fonction paire comme une fonction impaire peut ne pas être définie en <span class="math inline">\(0\)</span>.<br>
-En effet, les fonctions <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> définies sur <span class="math inline">\(]-\infty \,;\, -2[ \cup ]2 \,;\, +\infty[\)</span> par<br>
-<span class="math display">\[f(x) = \frac{1}{\sqrt{x^2-4}} \quad \text{et} \quad g(x) = \frac{x}{\sqrt{x^2-4}}\]</span> ne sont pas définies en <span class="math inline">\(0\)</span> et sont respectivement paire et impaire.</p></li>
+En effet, les fonctions <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> définies sur <span class="math inline">\(]-\infty \,;\, -2[ \cup ]2 \,;\, +\infty[\)</span> par <span class="math display">\[f(x) = \dfrac{1}{\sqrt{x^2-4}} \quad \text{et} \quad g(x) = \dfrac{x}{\sqrt{x^2-4}}\]</span> ne sont pas définies en <span class="math inline">\(0\)</span> et sont respectivement paire et impaire.</p></li>
 <li><p>Une fonction peut être ni paire ni impaire, par exemple la fonction <span class="math inline">\(f: x \longmapsto x+1\)</span> n’est ni l’une ni l’autre.</p></li>
 </ol>
 </div>
-<p><br></p>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span></p>
-<p>Toute fonction se décompose comme somme d’une fonction paire et d’une fonction impaire. <span class="math display">\[f = i + p \quad \text{où} \quad i(x) = \frac{f(x) - f(-x)}{2} \quad \text{et} \quad p(x) = \frac{f(x) + f(-x)}{2}.\]</span></p>
+<p><span class="bloc-titre">Propriété : </span></p>
+<p>Toute fonction se décompose comme somme d’une fonction paire et d’une fonction impaire. <span class="math display">\[f = i + p \quad \text{où} \quad i(x) = \dfrac{f(x) - f(-x)}{2} \quad \text{et} \quad p(x) = \dfrac{f(x) + f(-x)}{2}.\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-voir chapitre Les Raisonnements
+<p>voir chapitre Les Raisonnements</p>
 </details>
+<section id="parité-et-représentation-graphique" class="level3">
+<h3 class="anchored" data-anchor-id="parité-et-représentation-graphique">Parité et représentation graphique</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span></p>
+<p><span class="bloc-titre">Propriété : </span></p>
 <p>Soit <span class="math inline">\(f\)</span> une fonction définie sur un ensemble <span class="math inline">\(E\)</span> centré en <span class="math inline">\(0\)</span>.</p>
 <ol type="1">
-<li><span class="math inline">\(f\)</span> est paire si et seulement si <span class="math inline">\(\mathscr{C}_f\)</span> admet l’axe des ordonnées comme axe de symétrie.<br>
-</li>
+<li><span class="math inline">\(f\)</span> est paire si et seulement si <span class="math inline">\(\mathscr{C}_f\)</span> admet l’axe des ordonnées comme axe de symétrie.</li>
 <li><span class="math inline">\(f\)</span> est impaire si et seulement si <span class="math inline">\(\mathscr{C}_f\)</span> admet l’origine comme centre de symétrie.</li>
 </ol>
 </div>
@@ -958,23 +975,29 @@ Démonstration :
 </ol>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span></p>
-<ul>
-<li><p>La fonction <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = \tfrac{1}{5}x^4 - 2x^2 + 1\)</span> a sa représentation graphique symétrique par rapport à l’axe des ordonnées.<br>
-Elle est donc paire.</p></li>
-<li><p>La fonction <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = \tfrac{1}{2}x^3 - 2x\)</span> a sa représentation graphique symétrique par rapport à l’origine.<br>
-Elle est donc impaire.</p></li>
-</ul>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<div data-layout-nw="[[1,1]]">
+<div id="first-column">
+<p>La fonction <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = \dfrac{1}{5}x^4 - 2x^2 + 1\)</span> a sa représentation graphique symétrique par rapport à l’axe des ordonnées.<br>
+Elle est donc paire.</p>
+</div>
+<div id="second-column">
+<p>La fonction <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = \dfrac{1}{2}x^3 - 2x\)</span> a sa représentation graphique symétrique par rapport à l’origine.<br>
+Elle est donc impaire.</p>
+</div>
+</div>
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap2_GeneralitesFonctions_courbe_paire.png" style="width: 35%; margin-right:10%"> <img src="../../image/maths_term/Chap2_GeneralitesFonctions_courbe_impaire.png" style="width: 35%;"></p>
 </div>
 </div>
-<p><br></p>
 <div class="nav-pages">
 <p><a class="prev" href="historique.html">⬅️</a> <a class="next" href="composee.html">➡️</a></p>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

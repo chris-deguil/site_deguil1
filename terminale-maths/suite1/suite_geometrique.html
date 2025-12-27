@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -879,13 +891,15 @@ window.Quarto = {
 
 <hr>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> Soit <span class="math inline">\(q \in \R\)</span>. La suite <span class="math inline">\((q^n)\)</span> converge si et seulement si <span class="math inline">\(\abs{q} &lt; 1\)</span> ou <span class="math inline">\(q = 1\)</span>.</p>
+<p><span class="bloc-titre">Théorème : </span><br></p>
+<p>Soit <span class="math inline">\(q \in \R\)</span>. La suite <span class="math inline">\((q^n)\)</span> converge si et seulement si <span class="math inline">\(|q| &lt; 1\)</span> ou <span class="math inline">\(q = 1\)</span>.</p>
 <p>De plus :</p>
 <ul>
-<li>Si <span class="math inline">\(\abs{q} &lt; 1\)</span>, alors la suite <span class="math inline">\((q^n)\)</span> converge vers <span class="math inline">\(0\)</span>.</li>
+<li>Si <span class="math inline">\(|q| &lt; 1\)</span>, alors la suite <span class="math inline">\((q^n)\)</span> converge vers <span class="math inline">\(0\)</span>.</li>
 <li>Si <span class="math inline">\(q &gt; 1\)</span>, la suite <span class="math inline">\((q^n)\)</span> diverge vers <span class="math inline">\(+\infty\)</span>.</li>
-<li>Si <span class="math inline">\(q = -1\)</span>, la suite <span class="math inline">\((q^n)\)</span> diverge.</li>
-<li>Si <span class="math inline">\(q = 0\)</span>, la suite <span class="math inline">\((q^n)\)</span> converge vers <span class="math inline">\(0\)</span>.</li>
+<li>Si <span class="math inline">\(q = -1\)</span>, la suite <span class="math inline">\((q^n)\)</span> diverge (elle est alternée).</li>
+<li>Si <span class="math inline">\(q = 1\)</span>, la suite <span class="math inline">\((q^n)\)</span> est constante et converge vers <span class="math inline">\(1\)</span>.</li>
+<li>Si <span class="math inline">\(q = 0\)</span>, la suite <span class="math inline">\((q^n)\)</span> est constante à partir de <span class="math inline">\(n=1\)</span> et converge vers <span class="math inline">\(0\)</span>.</li>
 </ul>
 </div>
 <details class="bloc demo">
@@ -893,79 +907,84 @@ window.Quarto = {
 Démonstration :
 </summary>
 <ul>
-<li><p>Si <span class="math inline">\(q &gt; 1\)</span>, il existe <span class="math inline">\(a \in \R^+\)</span> tel que <span class="math inline">\(q = 1 + a\)</span>.<br>
-D’après l’inégalité de Bernoulli, on a <span class="math inline">\(q^n = (1 + a)^n \geqslant 1 + n a\)</span>.<br>
-Or, <span class="math inline">\(\lim_{n \to +\infty} n = +\infty\)</span>, donc <span class="math inline">\(\lim_{n \to +\infty} (n a + 1) = +\infty\)</span>.<br>
-Par comparaison, on déduit que <span class="math inline">\(\lim_{n \to +\infty} q^n = +\infty\)</span>.</p></li>
-<li><p>Si <span class="math inline">\(\abs{q} &lt; 1\)</span>, alors <span class="math inline">\(\frac{1}{\abs{q}} &gt; 1\)</span>, donc <span class="math inline">\(\lim_{n \to +\infty} \left(\frac{1}{\abs{q}}\right)^n = +\infty\)</span>.<br>
-Ainsi, par passage à l’inverse, <span class="math inline">\(\lim_{n \to +\infty} \abs{q}^n = 0\)</span>.<br>
-Donc, <span class="math inline">\(\lim_{n \to +\infty} q^n = 0\)</span>.</p></li>
-<li><p>Les cas <span class="math inline">\(q = 1\)</span> et <span class="math inline">\(q = 0\)</span> sont immédiats puisque les suites sont constantes, égales à <span class="math inline">\(1\)</span> et <span class="math inline">\(0\)</span>.</p></li>
-<li><p>Réciproquement, on suppose que la suite <span class="math inline">\(u_n = q^n\)</span> converge vers <span class="math inline">\(l\)</span>.<br>
-Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_{n+1} = q^{n+1} = q q^n = q u_n\)</span>.<br>
+<li><p><strong>Cas <span class="math inline">\(q &gt; 1\)</span> :</strong> Il existe <span class="math inline">\(a \in \R^+\)</span> tel que <span class="math inline">\(q = 1 + a\)</span>.<br>
+D’après l’inégalité de Bernoulli, on a <span class="math inline">\(q^n = (1 + a)^n \geqslant 1 + na\)</span>.<br>
+Or, <span class="math inline">\(\lim_{n \to +\infty} n = +\infty\)</span>, donc <span class="math inline">\(\lim_{n \to +\infty} (na + 1) = +\infty\)</span>.<br>
+Par comparaison, on en déduit que <span class="math inline">\(\lim_{n \to +\infty} q^n = +\infty\)</span>.</p></li>
+<li><p><strong>Cas <span class="math inline">\(|q| &lt; 1\)</span> :</strong> Si <span class="math inline">\(q \neq 0\)</span>, alors <span class="math inline">\(\dfrac{1}{|q|} &gt; 1\)</span>. D’après le cas précédent, <span class="math inline">\(\lim_{n \to +\infty} \left(\dfrac{1}{|q|}\right)^n = +\infty\)</span>.<br>
+Ainsi, par passage à l’inverse, <span class="math inline">\(\lim_{n \to +\infty} |q|^n = 0\)</span>. On en déduit que <span class="math inline">\(\lim_{n \to +\infty} q^n = 0\)</span>.</p></li>
+<li><p><strong>Cas <span class="math inline">\(q = 1\)</span> et <span class="math inline">\(q = 0\)</span> :</strong> Ces cas sont immédiats puisque les suites sont constantes (égales à <span class="math inline">\(1\)</span> et <span class="math inline">\(0\)</span> pour <span class="math inline">\(n \geqslant 1\)</span>).</p></li>
+<li><p><strong>Réciproquement :</strong> Supposons que la suite <span class="math inline">\(u_n = q^n\)</span> converge vers <span class="math inline">\(l\)</span>.<br>
+Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_{n+1} = q^{n+1} = q \times q^n = q u_n\)</span>.<br>
 Or, par unicité de la limite, <span class="math inline">\(\lim_{n \to +\infty} u_{n+1} = l\)</span> et <span class="math inline">\(\lim_{n \to +\infty} u_n = l\)</span>.<br>
-Ainsi, on déduit que <span class="math inline">\(l = q l\)</span>.<br>
-On conclut que <span class="math inline">\(q = 1\)</span> ou <span class="math inline">\(l = 0\)</span>.</p></li>
+On en déduit que <span class="math inline">\(l = ql\)</span>, soit <span class="math inline">\(l(1 - q) = 0\)</span>.<br>
+On conclut que <span class="math inline">\(q = 1\)</span> ou <span class="math inline">\(l = 0\)</span> (ce qui correspond au cas <span class="math inline">\(|q| &lt; 1\)</span>).<br>
+</p></li>
 </ul>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = \frac{2^n + 5^n}{3^n + 4^n}\)</span>.<br>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Comparaison de puissances </span>
+</div>
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = \dfrac{2^n + 5^n}{3^n + 4^n}\)</span>.<br>
 Déterminons <span class="math inline">\(\lim_{n \to +\infty} u_n\)</span>.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<p>Pour tout <span class="math inline">\(n \in \N\)</span>, on a <span class="math display">\[
-u_n = \dfrac{5^n \left(\left(\dfrac{2}{5}\right)^n + 1\right)}{4^n \left(\left(\dfrac{3}{4}\right)^n + 1\right)} = \left(\dfrac{5}{4}\right)^n \dfrac{\left(\dfrac{2}{5}\right)^n + 1}{\left(\dfrac{3}{4}\right)^n + 1}.
-\]</span> <span class="math inline">\(\frac{2}{5}, \frac{3}{4} \in ]-1, 1[\)</span>, donc <span class="math inline">\(\lim_{n \to +\infty} \left(\frac{3}{4}\right)^n = 0\)</span> et <span class="math inline">\(\lim_{n \to +\infty} \left(\frac{2}{5}\right)^n = 0\)</span>.<br>
-On déduit, par quotient, que <span class="math display">\[
-\lim_{n \to +\infty} \dfrac{\left(\dfrac{2}{5}\right)^n + 1}{\left(\dfrac{3}{4}\right)^n + 1} = 1.
-\]</span> Or, <span class="math inline">\(\frac{5}{4} &gt; 1\)</span>, donc <span class="math inline">\(\lim_{n \to +\infty} \left(\frac{5}{4}\right)^n = +\infty\)</span>.<br>
-Ainsi, par produit, <span class="math display">\[
-\lim_{n \to +\infty} u_n = +\infty.
-\]</span></p>
+<p>Pour tout <span class="math inline">\(n \in \N\)</span>, on a : <span class="math display">\[u_n = \dfrac{5^n \left(\left(\dfrac{2}{5}\right)^n + 1\right)}{4^n \left(\left(\dfrac{3}{4}\right)^n + 1\right)} = \left(\dfrac{5}{4}\right)^n \dfrac{\left(\dfrac{2}{5}\right)^n + 1}{\left(\dfrac{3}{4}\right)^n + 1}\]</span></p>
+<p>Comme <span class="math inline">\(\dfrac{2}{5}, \dfrac{3}{4} \in ]-1, 1[\)</span>, alors <span class="math inline">\(\lim_{n \to +\infty} \left(\dfrac{3}{4}\right)^n = 0\)</span> et <span class="math inline">\(\lim_{n \to +\infty} \left(\dfrac{2}{5}\right)^n = 0\)</span>.<br>
+On en déduit, par quotient, que : <span class="math display">\[\lim_{n \to +\infty} \dfrac{\left(\dfrac{2}{5}\right)^n + 1}{\left(\dfrac{3}{4}\right)^n + 1} = 1\]</span></p>
+<p>Or, <span class="math inline">\(\dfrac{5}{4} &gt; 1\)</span>, donc <span class="math inline">\(\lim_{n \to +\infty} \left(\dfrac{5}{4}\right)^n = +\infty\)</span>.<br>
+Ainsi, par produit : <span class="math display">\[\lim_{n \to +\infty} u_n = +\infty\]</span></p>
 </details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère les suites <span class="math inline">\((v_n)\)</span> et <span class="math inline">\((u_n)\)</span> définies par <span class="math inline">\(u_n = 2n^2 - 3\)</span> et <span class="math inline">\(v_n = \frac{1}{n^2}\)</span>.<br>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Produit de suites </span>
+</div>
+<p>On considère les suites <span class="math inline">\((v_n)\)</span> et <span class="math inline">\((u_n)\)</span> définies par <span class="math inline">\(u_n = 2n^2 - 3\)</span> et <span class="math inline">\(v_n = \dfrac{1}{n^2}\)</span>.<br>
 Déterminons <span class="math inline">\(\lim_{n \to +\infty} u_n v_n\)</span>.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<p>Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[
-u_n v_n = (2n^2 - 3) \times \frac{1}{n^2} = \frac{n^2 \left(2 - \frac{3}{n^2}\right)}{n^2} = 2 - \frac{3}{n^2}.
-\]</span> Or, <span class="math inline">\(\lim_{n \to +\infty} \frac{3}{n^2} = 0\)</span>.<br>
-Donc, <span class="math inline">\(\lim_{n \to +\infty} u_n v_n = 2\)</span>.</p>
+<p>Pour tout <span class="math inline">\(n \in \N^*\)</span>, on a : <span class="math display">\[u_n v_n = (2n^2 - 3) \times \dfrac{1}{n^2} = \dfrac{n^2 \left(2 - \dfrac{3}{n^2}\right)}{n^2} = 2 - \dfrac{3}{n^2}\]</span></p>
+<p>Or, <span class="math inline">\(\lim_{n \to +\infty} \dfrac{3}{n^2} = 0\)</span>.<br>
+Donc : <span class="math display">\[\lim_{n \to +\infty} u_n v_n = 2\]</span></p>
 </details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Montrons que la suite <span class="math inline">\(u_n = \sum_{k=0}^n \frac{1}{k!}\)</span> converge.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Convergence de la suite exponentielle </span>
+</div>
+Montrons que la suite <span class="math inline">\(u_n = \sum_{k=0}^n \dfrac{1}{k!}\)</span> converge.<br>
+*On pourra montrer successivement, que la suite est croissante, puis bornée**
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
 <ul>
-<li><p>Montrons que la suite est croissante : <span class="math display">\[
-u_{n+1} - u_n = \sum_{k=0}^{n+1} \frac{1}{k!} - \sum_{k=0}^n \frac{1}{k!} = \frac{1}{(n+1)!} &gt; 0.
-\]</span> Donc, la suite <span class="math inline">\((u_n)\)</span> est croissante.</p></li>
-<li><p>Montrons que la suite est bornée.<br>
-Pour tout <span class="math inline">\(k \geqslant 1\)</span>, <span class="math display">\[
-k! = 1 \times 2 \times 3 \times \dots \times k \geqslant 1 \times 2 \times 2 \times \dots \times 2 = 2^{k-1}.
-\]</span> Donc, <span class="math display">\[
-\frac{1}{k!} \leqslant \frac{1}{2^{k-1}}.
-\]</span> Donc, <span class="math display">\[
-u_n \leqslant 1 + \sum_{k=1}^n \frac{1}{2^{k-1}} = 1 + \frac{1 - \frac{1}{2^n}}{1 - \frac{1}{2}} = 1 + 2 \left(1 - \frac{1}{2^n}\right) = 3 - \frac{1}{2^{n-1}}.
-\]</span> Or, <span class="math inline">\(\frac{1}{2} \in [0, 1[\)</span>, donc <span class="math display">\[
-\lim_{n \to +\infty} \frac{1 - \frac{1}{2^n}}{1 - \frac{1}{2}} = 2.
-\]</span> D’où la suite <span class="math inline">\((u_n)\)</span> est majorée.</p></li>
+<li><strong>Montrons que la suite est croissante :</strong><br>
+<span class="math display">\[u_{n+1} - u_n = \sum_{k=0}^{n+1} \dfrac{1}{k!} - \sum_{k=0}^n \dfrac{1}{k!} = \dfrac{1}{(n+1)!} &gt; 0\]</span> Donc, la suite <span class="math inline">\((u_n)\)</span> est croissante.</li>
 </ul>
-<p>La suite <span class="math inline">\((u_n)\)</span> est croissante et majorée, donc elle converge.<br>
-On peut démontrer que <span class="math inline">\(\lim_{n \to +\infty} u_n = e\)</span>.</p>
+</details>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<ul>
+<li><p><strong>Montrons que la suite est bornée :</strong><br>
+Pour tout <span class="math inline">\(k \geqslant 1\)</span> : <span class="math display">\[k! = 1 \times 2 \times 3 \times \dots \times k \geqslant 1 \times 2 \times 2 \times \dots \times 2 = 2^{k-1}\]</span> Donc : <span class="math display">\[\dfrac{1}{k!} \leqslant \dfrac{1}{2^{k-1}}\]</span> Par conséquent : <span class="math display">\[u_n = 1 + \sum_{k=1}^n \dfrac{1}{k!} \leqslant 1 + \sum_{k=1}^n \dfrac{1}{2^{k-1}} = 1 + \dfrac{1 - \left(\dfrac{1}{2}\right)^n}{1 - \dfrac{1}{2}} = 1 + 2 \left(1 - \dfrac{1}{2^n}\right) = 3 - \dfrac{1}{2^{n-1}}\]</span></p>
+<p>Or, <span class="math inline">\(\dfrac{1}{2} \in [0, 1[\)</span>, donc <span class="math inline">\(\lim_{n \to +\infty} \dfrac{1 - \left(\dfrac{1}{2}\right)^n}{1 - \dfrac{1}{2}} = 2\)</span>.<br>
+D’où la suite <span class="math inline">\((u_n)\)</span> est majorée par <span class="math inline">\(3\)</span>.</p></li>
+</ul>
+La suite <span class="math inline">\((u_n)\)</span> est croissante et majorée, donc elle converge.<br>
+<em>(On peut démontrer que <span class="math inline">\(\lim_{n \to +\infty} u_n = e\)</span>)</em>.
 </details>
 </div>
 <div class="nav-pages">
-<p><a class="prev" href="operation_limite.html">⬅️</a></p>
+<p><a class="prev" href="operation_limite.html">⬅️</a> <a class="next" href="suite_recurrente.html">➡️</a></p>
 </div>
 
 

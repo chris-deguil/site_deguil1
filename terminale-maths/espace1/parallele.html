@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -896,15 +908,19 @@ window.Quarto = {
 <summary>
 Démonstration :
 </summary>
-Soient <span class="math inline">\(\mathscr{P}_1\)</span>, <span class="math inline">\(\mathscr{P}_2\)</span> parallèles et <span class="math inline">\(\mathscr{P}\)</span> un troisième non parallèle à <span class="math inline">\(\mathscr{P}_1\)</span>.<br>
-Soit <span class="math inline">\(\mathscr{P}\)</span> sécant à <span class="math inline">\(\mathscr{P}_1\)</span>, alors <span class="math inline">\(\mathscr{P}\)</span> est sécant à <span class="math inline">\(\mathscr{P}_2\)</span> sinon on aurait <span class="math inline">\(\mathscr{P}_2 // \mathscr{P}\)</span> et <span class="math inline">\(\mathscr{P}_1 // \mathscr{P}_2\)</span> donc <span class="math inline">\(\mathscr{P}_1 // \mathscr{P}\)</span> ce qui est absurde.<br>
-Soit alors <span class="math inline">\(d_1 =  \mathscr{P} \cap \mathscr{P}_1\)</span> et <span class="math inline">\(d_2=\mathscr{P} \cap \mathscr{P}_2\)</span> les droites d’intersections.<br>
-Ces droites sont inclues dans <span class="math inline">\(\mathscr{P}\)</span> donc elles sont parallèles ou sécantes.<br>
-Si elles étaient sécantes, alors il y aurait un point d’intersection entre <span class="math inline">\(\mathscr{P}_1\)</span> et <span class="math inline">\(\mathscr{P}_2\)</span> ce qui est absurde. Donc les droites sont parallèles.
+<p>Soient <span class="math inline">\(\mathscr{P}_1\)</span> et <span class="math inline">\(\mathscr{P}_2\)</span> deux plans parallèles et <span class="math inline">\(\mathscr{P}\)</span> un troisième plan non parallèle à <span class="math inline">\(\mathscr{P}_1\)</span>.<br>
+Soit <span class="math inline">\(\mathscr{P}\)</span> sécant à <span class="math inline">\(\mathscr{P}_1\)</span>, alors <span class="math inline">\(\mathscr{P}\)</span> est sécant à <span class="math inline">\(\mathscr{P}_2\)</span> sinon on aurait <span class="math inline">\(\mathscr{P}_2 // \mathscr{P}\)</span> et <span class="math inline">\(\mathscr{P}_1 // \mathscr{P}_2\)</span> donc <span class="math inline">\(\mathscr{P}_1 // \mathscr{P}\)</span>, ce qui est absurde.</p>
+<p>Soient alors <span class="math inline">\(d_1 = \mathscr{P} \cap \mathscr{P}_1\)</span> et <span class="math inline">\(d_2 = \mathscr{P} \cap \mathscr{P}_2\)</span> les droites d’intersection.<br>
+Ces droites sont incluses dans <span class="math inline">\(\mathscr{P}\)</span>, donc elles sont parallèles ou sécantes.</p>
+<p>[Image de deux plans parallèles coupés par un troisième plan, montrant deux droites d’intersection parallèles]</p>
+<p>Si elles étaient sécantes, alors il y aurait un point d’intersection entre <span class="math inline">\(\mathscr{P}_1\)</span> et <span class="math inline">\(\mathscr{P}_2\)</span>, ce qui est absurde. Donc les droites sont parallèles.</p>
 </details>
 <div class="bloc ex">
-<span class="bloc-titre">Exemple : </span><br> Soit <span class="math inline">\(ABCDEFGH\)</span> un cube et les points <span class="math inline">\(I \in [EF]\)</span> , <span class="math inline">\(J \in [BF]\)</span> et <span class="math inline">\(K \in [HG]\)</span>.<br>
-Déterminons l’intersection du plan <span class="math inline">\((IJK)\)</span> avec le cube.
+<div class="bloc-titre">
+Exemple : Section d’un cube
+</div>
+<p>Soit <span class="math inline">\(ABCDEFGH\)</span> un cube et les points <span class="math inline">\(I \in [EF]\)</span>, <span class="math inline">\(J \in [BF]\)</span> et <span class="math inline">\(K \in [HG]\)</span>.<br>
+Déterminons l’intersection du plan <span class="math inline">\((IJK)\)</span> avec le cube.</p>
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap3_Espace_1_figure16.png" style="width: 25%;"></p>
 </div>
@@ -914,26 +930,40 @@ Afficher la correction :
 </summary>
 <ul>
 <li><p>Les points <span class="math inline">\(I\)</span> et <span class="math inline">\(J\)</span> étant deux points des plans <span class="math inline">\((EFA)\)</span> et <span class="math inline">\((IJK)\)</span>, alors l’intersection de <span class="math inline">\((IJK)\)</span> avec <span class="math inline">\((EFA)\)</span> est la droite <span class="math inline">\((IJ)\)</span>.</p></li>
-<li><p>Les faces plan <span class="math inline">\((EFA)\)</span> et <span class="math inline">\((HGC)\)</span> étant parallèles, alors la section de <span class="math inline">\((IJK)\)</span> avec <span class="math inline">\((HGC)\)</span> est une droite parallèle à <span class="math inline">\((IJ)\)</span>. De plus <span class="math inline">\(K \in (IJK) \cap (HGC)\)</span> la droite d’intersection cherchée est la droite parallèle à <span class="math inline">\((IJ)\)</span> passant par <span class="math inline">\(K\)</span>.<br>
-On note <span class="math inline">\(L\)</span> le point d’intersection de cette droite avec la droite <span class="math inline">\((GC)\)</span>.</p></li>
-<li><p>Les points <span class="math inline">\(L\)</span> et <span class="math inline">\(J\)</span> appartenant aux plans <span class="math inline">\((BCF)\)</span> et <span class="math inline">\((IJK)\)</span> alors l’intersection de ces deux plans est la droite <span class="math inline">\((LJ)\)</span>.<br>
-La section du cube par le plan <span class="math inline">\((IJK)\)</span> est donc le trapèze <span class="math inline">\(IJKL\)</span>.</p></li>
+<li><p>Les faces <span class="math inline">\((EFA)\)</span> et <span class="math inline">\((HGC)\)</span> étant parallèles, alors la section de <span class="math inline">\((IJK)\)</span> avec <span class="math inline">\((HGC)\)</span> est une droite parallèle à <span class="math inline">\((IJ)\)</span>. De plus, comme <span class="math inline">\(K \in (IJK) \cap (HGC)\)</span>, la droite d’intersection cherchée est la droite parallèle à <span class="math inline">\((IJ)\)</span> passant par <span class="math inline">\(K\)</span>.</p>
+<p>On note <span class="math inline">\(L\)</span> le point d’intersection de cette droite avec la droite <span class="math inline">\((GC)\)</span>.</p></li>
+<li><p>Les points <span class="math inline">\(L\)</span> et <span class="math inline">\(J\)</span> appartenant aux plans <span class="math inline">\((BCF)\)</span> et <span class="math inline">\((IJK)\)</span>, alors l’intersection de ces deux plans est la droite <span class="math inline">\((LJ)\)</span>.</p></li>
+</ul>
+<p>La section du cube par le plan <span class="math inline">\((IJK)\)</span> est donc le trapèze <span class="math inline">\(IJKL\)</span>.</p>
+<p>:::</p>
+<ul>
+<li>Les points <span class="math inline">\(L\)</span> et <span class="math inline">\(J\)</span> appartenant aux plans <span class="math inline">\((BCF)\)</span> et <span class="math inline">\((IJK)\)</span> alors l’intersection de ces deux plans est la droite <span class="math inline">\((LJ)\)</span>.<br>
+</li>
+<li>La section du cube par le plan <span class="math inline">\((IJK)\)</span> est donc le trapèze <span class="math inline">\(IJKL\)</span>.</li>
 </ul>
 </details>
 </div>
 <hr>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admis) : </span><br> Deux plans sont parallèles si et seulement si deux droites sécantes de l’un sont parallèles à deux droites sécantes de l’autre.</p>
-<p>C’est-à-dire que deux plans sont parallèles si et seulement si toute base de l’un est une base de l’autre.</p>
+<p><span class="bloc-titre">Théorème (admis) : </span></p>
+<p>Deux plans sont parallèles si et seulement si deux droites sécantes de l’un sont parallèles à deux droites sécantes de l’autre.<br>
+On peut aussi dire que deux plans sont parallèles si toute base de l’un est une base de l’autre.</p>
 </div>
 <div class="bloc ex">
-<span class="bloc-titre">Exemple : </span><br>
+<p><span class="bloc-titre">Exemple : </span><br> Démontrer que les plans <span class="math inline">\((EFG)\)</span> et <span class="math inline">\((ABC)\)</span> sont parallèles.</p>
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap3_Espace_1_figure17.png" style="width: 25%;"></p>
 </div>
-<p><span class="math inline">\(E\)</span> , <span class="math inline">\(F\)</span> et <span class="math inline">\(G\)</span> sont respectivement les milieux de <span class="math inline">\([AS]\)</span> , <span class="math inline">\([BS]\)</span> et <span class="math inline">\([CS]\)</span>.<br>
-Ainsi en appliquant le théorème de la droite des milieux dans les triangles <span class="math inline">\(SAB\)</span> et <span class="math inline">\(SBC\)</span>, on en déduit que : [ (EF) // (AB)(FG) // (BC) ] Ainsi deux droites sécantes de <span class="math inline">\((EFG)\)</span> sont parallèles à deux droites sécantes de <span class="math inline">\((ABC)\)</span> (qui est le plan de la base).<br>
-D’après la propriété ci-dessus, on déduit que les deux plans sont parallèles.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>En appliquant le théorème de la droite des milieux dans les triangles <span class="math inline">\(SAB\)</span> et <span class="math inline">\(SBC\)</span>, on en déduit que : <span class="math display">\[(EF) // (AB) \quad \text{et} \quad (FG) // (BC)\]</span></p>
+<p>Les droites <span class="math inline">\((EF)\)</span> et <span class="math inline">\((FG)\)</span> sont deux droites sécantes du plan <span class="math inline">\((EFG)\)</span>.<br>
+Les droites <span class="math inline">\((AB)\)</span> et <span class="math inline">\((BC)\)</span> sont deux droites sécantes du plan <span class="math inline">\((ABC)\)</span> (qui est le plan de la base).</p>
+<p>Ainsi, deux droites sécantes de <span class="math inline">\((EFG)\)</span> sont parallèles à deux droites sécantes de <span class="math inline">\((ABC)\)</span>.<br>
+D’après la propriété ci-dessus, on en déduit que les deux plans sont parallèles : <span class="math inline">\((EFG) // (ABC)\)</span>.</p>
+</details>
 </div>
 <hr>
 <div class="bloc thm">
@@ -953,16 +983,31 @@ Ces deux plans sont donc parallèles, ce qui est absurde.<br>
 Donc <span class="math inline">\(d//d''\)</span>.
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> <span class="math inline">\(SABCD\)</span> est une pyramide de sommet <span class="math inline">\(S\)</span> et de base <span class="math inline">\(ABCD\)</span>. Soit <span class="math inline">\(M\)</span> un point de <span class="math inline">\([SB]\)</span> et <span class="math inline">\(N\)</span> le point d’intersection de la parallèle à <span class="math inline">\((BC)\)</span> passant par <span class="math inline">\(M\)</span> et <span class="math inline">\((SC)\)</span>. Enfin <span class="math inline">\(P\)</span> est un point de l’arête <span class="math inline">\([AB]\)</span> et le plan <span class="math inline">\((MNP)\)</span> coupe la droite <span class="math inline">\((CD)\)</span> en <span class="math inline">\(R\)</span>. Montrons que <span class="math inline">\((PR)\)</span> est parallèle aux droites <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span>.</p>
+<div class="bloc-titre">
+Exercice :
+</div>
+<span class="math inline">\(SABCD\)</span> est une pyramide de sommet <span class="math inline">\(S\)</span> et de base <span class="math inline">\(ABCD\)</span>.<br>
+Soit <span class="math inline">\(M\)</span> un point de <span class="math inline">\([SB]\)</span> et <span class="math inline">\(N\)</span> le point d’intersection de la parallèle à <span class="math inline">\((BC)\)</span> passant par <span class="math inline">\(M\)</span> et <span class="math inline">\((SC)\)</span>.<br>
+Enfin, <span class="math inline">\(P\)</span> est un point de l’arête <span class="math inline">\([AB]\)</span> et le plan <span class="math inline">\((MNP)\)</span> coupe la droite <span class="math inline">\((CD)\)</span> en <span class="math inline">\(R\)</span>.<br>
+Montrons que <span class="math inline">\((PR)\)</span> est parallèle aux droites <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span>.
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap3_Espace_1_figure19.png" style="width: 25%;"></p>
 </div>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
 <ul>
-<li>Les droites <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span> sont parallèles, et appartiennent respectivement aux plans sécants <span class="math inline">\((MNP)\)</span> et <span class="math inline">\((ABC)\)</span> ainsi d’après le théorème du toit, ces deux plans ont une droite d’intersection parallèle aux droites <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span>.</li>
-<li><span class="math inline">\(P\)</span> et <span class="math inline">\(R\)</span> sont deux points de <span class="math inline">\((MNP)\)</span> et <span class="math inline">\((ABC)\)</span>. L’intersection de deux plans étant une droite, on déduit alors que <span class="math inline">\((PR)\)</span> est la droite d’intersection des plans <span class="math inline">\((MNP)\)</span> et <span class="math inline">\((ABC)\)</span>.</li>
+<li>Les droites <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span> sont parallèles par construction. Elles appartiennent respectivement aux plans sécants <span class="math inline">\((MNP)\)</span> et <span class="math inline">\((ABC)\)</span>. Ainsi, d’après le <strong>théorème du toit</strong>, ces deux plans ont une droite d’intersection parallèle aux droites <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span>.</li>
+<li><span class="math inline">\(P\)</span> appartient à l’arête <span class="math inline">\([AB]\)</span>, donc <span class="math inline">\(P\)</span> est un point du plan de la base <span class="math inline">\((ABC)\)</span>. Par définition, <span class="math inline">\(P\)</span> appartient aussi au plan <span class="math inline">\((MNP)\)</span>.</li>
+<li><span class="math inline">\(R\)</span> appartient à la droite <span class="math inline">\((CD)\)</span>, donc <span class="math inline">\(R\)</span> est un point du plan de la base <span class="math inline">\((ABC)\)</span>. Par définition, <span class="math inline">\(R\)</span> appartient aussi au plan <span class="math inline">\((MNP)\)</span>.</li>
+<li>L’intersection de deux plans étant une droite, on en déduit que <span class="math inline">\((PR)\)</span> est la droite d’intersection des plans <span class="math inline">\((MNP)\)</span> et <span class="math inline">\((ABC)\)</span>.</li>
 </ul>
-<p>On déduit alors que <span class="math inline">\((PR)//(BC)//(MN)\)</span>.</p>
+<p>D’après le premier point, cette droite d’intersection est parallèle à <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span>.<br>
+On a donc bien : <span class="math display">\[(PR) // (MN) // (BC)\]</span></p>
+</details>
 </div>
+:::
 <div class="nav-pages">
 <p><a class="prev" href="position.html">⬅️</a> <a class="next" href="representation.html">➡️</a></p>
 </div>

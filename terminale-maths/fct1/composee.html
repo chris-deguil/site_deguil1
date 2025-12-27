@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -888,23 +900,21 @@ window.Quarto = {
 <section id="définition" class="level2">
 <h2 class="anchored" data-anchor-id="définition">Définition</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soient <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(I\)</span> et <span class="math inline">\(g\)</span> une fonction définie sur <span class="math inline">\(J\)</span>. On suppose que <span class="math inline">\(f(I) \subset J\)</span>.<br>
-On appelle composée de <span class="math inline">\(f\)</span> par <span class="math inline">\(g\)</span>, et on note <span class="math inline">\(g \circ f\)</span> (lire <span class="math inline">\(g\)</span> rond <span class="math inline">\(f\)</span>), la fonction définie par :</p>
-<p><span class="math display">\[(g \circ f)(x)=g(f(x))\]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soient <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(I\)</span> et <span class="math inline">\(g\)</span> une fonction définie sur <span class="math inline">\(J\)</span>. On suppose que <span class="math inline">\(f(I) \subset J\)</span>.<br>
+On appelle composée de <span class="math inline">\(f\)</span> par <span class="math inline">\(g\)</span>, et on note <span class="math inline">\(g \circ f\)</span> (lire <span class="math inline">\(g\)</span> rond <span class="math inline">\(f\)</span>), la fonction définie par : <span class="math display">\[(g \circ f)(x)=g(f(x))\]</span></p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> Pour pouvoir définir $gf $ il faut et il suffit que <span class="math inline">\(f(x) \in J\)</span>. C’est-à-dire que les images par <span class="math inline">\(f\)</span> soient dans l’ensemble de définition de <span class="math inline">\(g\)</span>.</p>
-<p><span class="math display">\[
-\begin{array}{llllll}
-f: &amp;I&amp; \longrightarrow    &amp;f(I) &amp;                       &amp;             \\
-   &amp;x&amp; \longmapsto   &amp;f(x)  &amp;                      &amp;                           \\
-   &amp; &amp;                   g :&amp; J &amp; \longrightarrow&amp; g(J)      \\                  
-   &amp; &amp;                      &amp;  f(x) &amp; \longmapsto       &amp; g(f(x))   \end{array}
-\]</span></p>
-<p>Ainsi, en notant <span class="math inline">\(\mathscr{D}_f\)</span> et <span class="math inline">\(\mathscr{D}_g\)</span> les ensembles de définition respectifs de <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> on a</p>
-<p><span class="math display">\[
-\mathscr{D}_{g \circ f} =\{x \in \mathscr{D}_f, f(x)  \in \mathscr{D}_g \}
-\]</span></p>
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>Pour pouvoir définir <span class="math inline">\(g\circ f\)</span>, il faut et il suffit que <span class="math inline">\(f(x) \in J\)</span>. C’est-à-dire que les images par <span class="math inline">\(f\)</span> soient dans l’ensemble de définition de <span class="math inline">\(g\)</span>.</p>
+<p><span class="math display">\[\begin{matrix}
+f: &amp; I &amp; \longrightarrow &amp; f(I) &amp; &amp; \\
+   &amp; x &amp; \longmapsto &amp; f(x) &amp; &amp; \\
+   &amp; &amp; g : &amp; J &amp; \longrightarrow &amp; g(J) \\
+   &amp; &amp; &amp; f(x) &amp; \longmapsto &amp; g(f(x))
+\end{matrix}\]</span></p>
+<p>Ainsi, en notant <span class="math inline">\(\mathscr{D}_f\)</span> et <span class="math inline">\(\mathscr{D}_g\)</span> les ensembles de définition respectifs de <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span>, on a<br>
+<span class="math display">\[\mathscr{D}_{g \circ f} =\{x \in \mathscr{D}_f, f(x) \in \mathscr{D}_g \}\]</span></p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span><br></p>
@@ -926,69 +936,63 @@ f: &amp;I&amp; \longrightarrow    &amp;f(I) &amp;                       &amp;   
 </ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br></p>
-<p>On considère la fonction <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x)= x^2-9\)</span> sur <strong><span class="math inline">\([2 \,;\,+\infty[\)</span></strong> et la fonction <span class="math inline">\(g\)</span> définie par <span class="math inline">\(g(x) = \tfrac{1}{x}\)</span> sur <strong><span class="math inline">\(\R^*\)</span></strong>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la fonction <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x)= x^2-9\)</span> sur <span class="math inline">\(\color{red}{[2 \,;\,+\infty[}\)</span> et la fonction <span class="math inline">\(g\)</span> définie par <span class="math inline">\(g(x) = \dfrac{1}{x}\)</span> sur <span class="math inline">\(\color{blue}{\mathbb{R}^*}\)</span>.</p>
 <ol type="1">
 <li>Soit <span class="math inline">\(h=g \circ f\)</span>.
 <ul>
-<li><span class="math inline">\(D_h = \{x \in [2 \,;\,+\infty[, \, f(x) \in \R^* \} = \{x \in [2 \,;\,+\infty[, \, x^2-9 \neq 0\}  = \{x \in [2 \,;\,+\infty[, \, x \neq 3 \text{ et } x \neq -3\}\)</span>.<br>
-Donc <span class="math inline">\(D_h = [2\, ; \, 3[ \cup ]3\, ; \, + \infty[\)</span>.<br>
-</li>
-<li>La fonction <span class="math inline">\(h\)</span> est définie sur <span class="math inline">\([2\, ; \, 3[ \cup ]3\, ; \, + \infty[\)</span> par <span class="math inline">\(h(x) = \tfrac{1}{x^2 - 9}\)</span>.</li>
+<li><span class="math inline">\(D_h = \{x \in {\color{red}{[2 \,;\,+\infty[}}, \, f(x) \in {\color{blue}{\mathbb{R}^*}} \} = \{x \in {\color{red}{[2 \,;\,+\infty[}}, \, x^2-9 \neq 0\} = \{x \in \color{red}{[2 \,;\,+\infty[}, \, \color{green}{x \neq 3 \text{ et } x \neq -3}\}\)</span>.</li>
+<li>Donc <span class="math inline">\(D_h = \color{red}{[2 \,;\,+\infty[} - \color{green}{\{-3\, ;\, 3\}} = [2\, ; \, 3[ \cup ]3\, ; \, + \infty[\)</span>.</li>
+<li>La fonction <span class="math inline">\(h\)</span> est définie sur <span class="math inline">\([2\, ; \, 3[ \cup ]3\, ; \, + \infty[\)</span> par <span class="math inline">\(h(x) = \dfrac{1}{x^2 - 9}\)</span>.</li>
 </ul></li>
 <li>Soit <span class="math inline">\(k=f \circ g\)</span>.
 <ul>
-<li><span class="math inline">\(D_k = \{x \in \R^*, \, g(x) \in [2 \,;\,+\infty[ \} = \left\{x \in \R^*, \, \tfrac{1}{x} \geqslant  2 \right \} =   \left\{x \in \R^*, \, 0 &lt; x \leqslant \tfrac{1}{2} \right\}\)</span>.<br>
-Donc <span class="math inline">\(D_k = \,]0 \, ; \, \tfrac{1}{2}]\)</span>.<br>
-</li>
-<li>La fonction <span class="math inline">\(k\)</span> est définie sur $]0 , ; , ] $ par <span class="math inline">\(k(x) = \left(\tfrac{1}{x} \right)^2-9\)</span>.<br>
-</li>
+<li><span class="math inline">\(D_k = \{x \in {\color{red}{\mathbb{R}^*}} \, g(x) \in {\color{blue}{[2 \,;\,+\infty[}} \} = \left\{x \in {\color{red}{\mathbb{R}^*}}, \, {\color{blue}{\dfrac{1}{x} \geqslant 2}} \right \} = \left\{x \in \color{red}{\mathbb{R}^*}, \, \color{green}{0 &lt; x \leqslant \dfrac{1}{2}} \right\}\)</span>.</li>
+<li>Donc <span class="math inline">\(D_k = \left]0 \, ; \, \dfrac{1}{2}\right]\)</span>.</li>
+<li>La fonction <span class="math inline">\(k\)</span> est définie sur <span class="math inline">\(\left]0 \, ; \, \dfrac{1}{2}\right]\)</span> par <span class="math inline">\(k(x) = \left(\dfrac{1}{x} \right)^2-9\)</span>.</li>
 </ul></li>
 </ol>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> D’une façon générale, <span class="math inline">\(f \circ g \neq g \circ f\)</span>.</p>
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>D’une façon générale, <span class="math inline">\(f \circ g \neq g \circ f\)</span>.</p>
 </div>
 </section>
 <section id="composée-et-variations" class="level2">
 <h2 class="anchored" data-anchor-id="composée-et-variations">Composée et variations</h2>
 <div class="bloc thm">
-<p><span class="bloc-titre">Théorème : </span><br> Soient <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> deux fonctions monotones telles que la fonction composée <span class="math inline">\(h = g \circ f\)</span> existe.</p>
+<p><span class="bloc-titre">Propriété : </span></p>
+<p>Soient <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> deux fonctions monotones telles que la fonction composée <span class="math inline">\(h= g \circ f\)</span> existe.</p>
 <ul>
-<li>Si <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> ont la même monotonie, alors <span class="math inline">\(h\)</span> est croissante.<br>
-</li>
-<li>Si <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> sont de monotonies contraires (l’une croissante et l’autre décroissante), alors <span class="math inline">\(h\)</span> est décroissante.<br>
-</li>
+<li>Si <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> ont même monotonie alors <span class="math inline">\(h\)</span> est croissante.</li>
+<li>Si <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> sont de monotonies contraires alors <span class="math inline">\(h\)</span> est décroissante.</li>
 </ul>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>On démontre dans le cas de monotonies contraires.</p>
-<p>On suppose <span class="math inline">\(f\)</span> croissante sur <span class="math inline">\(I\)</span> et <span class="math inline">\(g\)</span> décroissante sur <span class="math inline">\(J\)</span> et <span class="math inline">\(f(I) \subset J\)</span>.<br>
-<span class="math inline">\(\forall x, y \in I\)</span>,</p>
-<p><span class="math display">\[\begin{align*}
+<p><em>On démontre dans le cas de monotonies contraires.</em> On suppose <span class="math inline">\(f\)</span> croissante sur <span class="math inline">\(I\)</span> et <span class="math inline">\(g\)</span> décroissante sur <span class="math inline">\(J\)</span> et <span class="math inline">\(f(I) \subset J\)</span>.<br>
+<span class="math inline">\(\forall x, y \in I\)</span>, <span class="math display">\[
+\begin{aligned}
 x &lt; y &amp; \underset{f \, \nearrow \, \text{sur} \, I}{\Longrightarrow} f(x) &lt; f(y)\\
 &amp; \underset{g \searrow \, \text{sur} \, f(I)}{\Longrightarrow} g \circ f(x) &gt; g \circ f(y) \\
 &amp; \Longrightarrow h(x) &gt; h(y).
-\end{align*}\]</span></p>
-Ainsi, par définition <span class="math inline">\(h\)</span> est décroissante sur <span class="math inline">\(I\)</span>.
+\end{aligned}
+\]</span> Ainsi, par définition <span class="math inline">\(h\)</span> est décroissante sur <span class="math inline">\(I\)</span>.</p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Étudier les variations de la fonction <span class="math inline">\(h : x \longmapsto -\tfrac{1}{1-x}\)</span> définie sur <span class="math inline">\(]1\,;\,+\infty[\)</span>.</p>
-<details class="bloc cor">
-<summary>
-Afficher la correction :
-</summary>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Étudions les variations de la fonction <span class="math inline">\(h:x \longmapsto - \dfrac{1}{1-x}\)</span> définie sur <span class="math inline">\(]1\, ; \, + \infty[\)</span>.</p>
 <ul>
-<li>La fonction <span class="math inline">\(f : x \longmapsto 1-x\)</span> est décroissante sur <span class="math inline">\(]1\,;\,+\infty[\)</span> et à valeurs dans <span class="math inline">\(]-\infty\,;\,0[\)</span>.<br>
-</li>
-<li>La fonction <span class="math inline">\(g : x \longmapsto -\tfrac{1}{x}\)</span> est croissante sur <span class="math inline">\(]-\infty\,;\,0[\)</span>.</li>
+<li>La fonction <span class="math inline">\(f : x \longmapsto 1-x\)</span> est décroissante sur <span class="math inline">\(]1\, ; \, + \infty[\)</span> et à valeurs dans <span class="math inline">\(]-\infty \,; \, 0[\)</span>.</li>
+<li>La fonction <span class="math inline">\(g : x \longmapsto - \dfrac{1}{x}\)</span> est croissante sur <span class="math inline">\(]-\infty \, ; \, 0[\)</span>.</li>
 </ul>
-La fonction <span class="math inline">\(h = g \circ f\)</span> est donc la composée de deux fonctions de monotonies contraires.<br>
-D’après le théorème précédent, on en déduit que la fonction <span class="math inline">\(h\)</span> est décroissante sur <span class="math inline">\(]1\,;\,+\infty[\)</span>.
-</details>
+<p>On en déduit que la fonction <span class="math inline">\(h\)</span> est décroissante sur <span class="math inline">\(]1\, ; \, + \infty[\)</span>.</p>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="parite.html">⬅️</a> <a class="next" href="comp_derivation.html">➡️</a></p>

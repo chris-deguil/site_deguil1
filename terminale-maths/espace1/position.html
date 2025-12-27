@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -888,16 +900,20 @@ window.Quarto = {
 <section id="positions-relatives-de-deux-droites" class="level3">
 <h3 class="anchored" data-anchor-id="positions-relatives-de-deux-droites">Positions relatives de deux droites</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admis) : </span><br> Soit <span class="math inline">\(d_1\)</span> et <span class="math inline">\(d_2\)</span> deux droites de l’espace, alors les droites sont :</p>
+<p><span class="bloc-titre">Théorème (admis) : </span></p>
+<p>Soient <span class="math inline">\(d_1\)</span> et <span class="math inline">\(d_2\)</span> deux droites de l’espace, alors les droites sont :</p>
 <ul>
-<li>coplanaires (elles appartiennent à un même plan) si et seulement si :
+<li><strong>coplanaires</strong> (elles appartiennent à un même plan) si et seulement si :
 <ul>
-<li>elles sont sécantes : elles admettent un point d’intersection<br>
-</li>
-<li>elles sont parallèles.</li>
+<li>elles sont <strong>sécantes</strong> : elles admettent un point d’intersection ;</li>
+<li>elles sont <strong>parallèles</strong>.</li>
 </ul></li>
-<li>non coplanaires</li>
+<li><strong>non coplanaires</strong></li>
 </ul>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>Deux droites non coplanaires ne sont ni parallèles, ni sécantes. On dit parfois qu’elles sont « gauches ».</p>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre"><strong>Illustration graphique :</strong> </span><br></p>
@@ -921,12 +937,17 @@ window.Quarto = {
 <section id="positions-relatives-dune-droite-et-dun-plan" class="level3">
 <h3 class="anchored" data-anchor-id="positions-relatives-dune-droite-et-dun-plan">Positions relatives d’une droite et d’un plan</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admis) : </span><br> Soit <span class="math inline">\(d\)</span> une droite de l’espace et <span class="math inline">\(\mathscr{P}\)</span> un plan de l’espace alors <span class="math inline">\(d\)</span> et <span class="math inline">\(\mathscr{P}\)</span> sont :</p>
+<p><span class="bloc-titre">Théorème (admis) : </span></p>
+<p>Soit <span class="math inline">\(d\)</span> une droite de l’espace et <span class="math inline">\(\mathscr{P}\)</span> un plan de l’espace, alors <span class="math inline">\(d\)</span> et <span class="math inline">\(\mathscr{P}\)</span> sont :</p>
 <ul>
-<li>sécants si et seulement si ils ont un unique point d’intersection. On note alors <span class="math inline">\(M=d \cap \mathscr{P}\)</span>.</li>
-<li>inclus l’un dans l’autre (infinités de points communs) : <span class="math inline">\(d \subset \mathscr{P}\)</span> donc <span class="math inline">\(d \cap \mathscr{P} = d\)</span></li>
-<li>strictement parallèles : <span class="math inline">\(d \cap \mathscr{P} = \emptyset\)</span></li>
+<li><strong>sécants</strong> si et seulement s’ils ont un unique point d’intersection. On note alors <span class="math inline">\(M=d \cap \mathscr{P}\)</span>.</li>
+<li><strong>inclus</strong> l’un dans l’autre (une infinité de points communs) : <span class="math inline">\(d \subset \mathscr{P}\)</span> donc <span class="math inline">\(d \cap \mathscr{P} = d\)</span>.</li>
+<li><strong>strictement parallèles</strong> : <span class="math inline">\(d \cap \mathscr{P} = \emptyset\)</span>.</li>
 </ul>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>Dans les deux derniers cas, on dit que la droite <span class="math inline">\(d\)</span> est <strong>parallèle</strong> au plan <span class="math inline">\(\mathscr{P}\)</span>.</p>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre"><strong>Illustration graphique :</strong> </span><br></p>
@@ -961,11 +982,12 @@ Donc <span class="math inline">\(K= (IJ) \cap (BCD)\)</span>, et il est le point
 <section id="positions-relatives-de-deux-plans" class="level3">
 <h3 class="anchored" data-anchor-id="positions-relatives-de-deux-plans">Positions relatives de deux plans</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admis) : </span><br> Soient <span class="math inline">\(\mathscr{P}_1\)</span> et <span class="math inline">\(\mathscr{P}_2\)</span> deux plans de l’espace, alors ils sont :</p>
+<p><span class="bloc-titre">Théorème (admis) : </span></p>
+<p>Soient <span class="math inline">\(\mathscr{P}_1\)</span> et <span class="math inline">\(\mathscr{P}_2\)</span> deux plans de l’espace, alors ils sont :</p>
 <ul>
-<li>Strictement parallèles si et seulement si ils n’ont aucun point en commun : <span class="math inline">\(\mathscr{P}_1 \cap  \mathscr{P}_2  = \emptyset\)</span>.</li>
-<li>Confondus : <span class="math inline">\(\mathscr{P}_2 \subset \mathscr{P}_1\)</span> et <span class="math inline">\(\mathscr{P}_1 \subset \mathscr{P}_2\)</span> c’est-à-dire <span class="math inline">\(\mathscr{P}_1 =  \mathscr{P}_2\)</span>.</li>
-<li>Sécant : l’intersection est une droite <span class="math inline">\(d\)</span>. On note alors <span class="math inline">\(\mathscr{P}_1 \cap\mathscr{P}_2 = d\)</span></li>
+<li><strong>Strictement parallèles</strong> si et seulement s’ils n’ont aucun point en commun : <span class="math inline">\(\mathscr{P}_1 \cap \mathscr{P}_2 = \emptyset\)</span>.</li>
+<li><strong>Confondus</strong> : <span class="math inline">\(\mathscr{P}_2 \subset \mathscr{P}_1\)</span> et <span class="math inline">\(\mathscr{P}_1 \subset \mathscr{P}_2\)</span>, c’est-à-dire <span class="math inline">\(\mathscr{P}_1 = \mathscr{P}_2\)</span>.</li>
+<li><strong>Sécants</strong> : l’intersection est une droite <span class="math inline">\(d\)</span>. On note alors <span class="math inline">\(\mathscr{P}_1 \cap \mathscr{P}_2 = d\)</span>.</li>
 </ul>
 </div>
 <div class="bloc rem">
@@ -986,24 +1008,28 @@ Donc <span class="math inline">\(K= (IJ) \cap (BCD)\)</span>, et il est le point
 </ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Soit <span class="math inline">\(ABCDEFGH\)</span> un cube. Soit <span class="math inline">\(Q\)</span> le milieu de <span class="math inline">\([BC]\)</span>. Déterminons l’intersection de <span class="math inline">\((DCG)\)</span> et <span class="math inline">\((AQF)\)</span>.</p>
-<ul>
-<li>Les droites <span class="math inline">\((AQ)\)</span> et <span class="math inline">\((DC)\)</span> étant coplanaires non parallèles, elles sont sécantes. Soit <span class="math inline">\(I\)</span> le point d’intersection.</li>
-<li>Les droites <span class="math inline">\((FQ)\)</span> et <span class="math inline">\((CG)\)</span> sont coplanaires non parallèles, donc elles sont sécantes. Soit <span class="math inline">\(J\)</span> ce point d’intersection.</li>
-</ul>
-<p>Ainsi <span class="math display">\[
-\left \{ \begin{array}{l}
+<div class="bloc-titre">
+Exemple :
+</div>
+<p>Soit <span class="math inline">\(ABCDEFGH\)</span> un cube. Soit <span class="math inline">\(Q\)</span> le milieu de <span class="math inline">\([BC]\)</span>. Déterminons l’intersection de <span class="math inline">\((DCG)\)</span> et <span class="math inline">\((AQF)\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Les droites <span class="math inline">\((AQ)\)</span> et <span class="math inline">\((DC)\)</span> étant coplanaires et non parallèles, elles sont sécantes. Soit <span class="math inline">\(I\)</span> leur point d’intersection.<br>
+Les droites <span class="math inline">\((FQ)\)</span> et <span class="math inline">\((CG)\)</span> sont coplanaires et non parallèles, donc elles sont sécantes. Soit <span class="math inline">\(J\)</span> ce point d’intersection.</p>
+<p>Ainsi : <span class="math display">\[\left. \begin{array}{l}
 I = (AQ) \cap (DC)\\
-J =(FQ) \cap (GC)
-\end{array} \right.  \quad \text{ Donc } \quad \left \{ \begin{array}{l}
+J = (FQ) \cap (GC)
+\end{array} \right\} \text{ Donc } \left. \begin{array}{l}
 I \in (AQF) \cap (DCG)\\
-J \in (FQA) \cap (GCG)
-\end{array} \right .
-\]</span></p>
+J \in (FQA) \cap (DCG)
+\end{array} \right\}\]</span></p>
 <div style="text-align: center;">
 <p><img src="../../image/maths_term/Chap3_Espace_1_figure14.png" style="width: 25%;"></p>
 </div>
-<p>Les plans <span class="math inline">\((AQF)\)</span> et <span class="math inline">\((DCG)\)</span> n’étant pas confondus et ayant des points d’intersections sont sécants suivant une droite, donc l’intersection de ces deux plans est la droite <span class="math inline">\((IJ)\)</span>.</p>
+Les plans <span class="math inline">\((AQF)\)</span> et <span class="math inline">\((DCG)\)</span> n’étant pas confondus et ayant des points d’intersections sont sécants suivant une droite, donc l’intersection de ces deux plans est la droite <span class="math inline">\((IJ)\)</span>.
+</details>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="droite_plan.html">⬅️</a> <a class="next" href="parallele.html">➡️</a></p>

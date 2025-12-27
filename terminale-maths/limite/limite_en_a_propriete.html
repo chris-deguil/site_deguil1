@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -883,27 +895,6 @@ window.Quarto = {
 </header>
 
 
-<div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(f\)</span> une fonction définie sur un intervalle <span class="math inline">\(I\)</span> et <span class="math inline">\(x_0 \in I\)</span>.</p>
-<p>On dit que <span class="math inline">\(f\)</span> admet <span class="math inline">\(l\)</span> pour limite au voisinage de <span class="math inline">\(x_0\)</span> (ou en <span class="math inline">\(x_0\)</span>) et on note <span class="math display">\[\lim_{x \to x_0} f(x) = l\]</span> lorsque <span class="math display">\[\forall \epsilon &gt;0, \, \exists  \delta  &gt;0, \, \forall x \in \R, \, (\abs{x - x_0} \leqslant \delta  \Rightarrow \abs{f(x)-l} \leqslant \epsilon)\]</span></p>
-</div>
-<div class="bloc">
-<div style="text-align: center;">
-<p><img src="../../image/maths_term/Chap4_Limite_figure9.png" style="width: 35%;"></p>
-</div>
-</div>
-<div class="bloc rem">
-<p><span class="bloc-titre"> Remarque : Comprendre la définition</span><br></p>
-<ul>
-<li>l’inégalité <span class="math inline">\(\abs{x-x_0} &lt; \delta\)</span> signifie que <span class="math inline">\(x \in ]x_0-\delta \, ; \, x_0+\delta[\)</span>.</li>
-<li>l’inégalité <span class="math inline">\(\abs{f(x)-l} &lt; \epsilon\)</span> signifie que <span class="math inline">\(f(x) \in ]l-\epsilon \, ; \, l+\epsilon[\)</span>.</li>
-<li>L’ordre des quantificateurs est important. Le <span class="math inline">\(\delta\)</span> dépend du <span class="math inline">\(\epsilon\)</span>.</li>
-</ul>
-<p>Il s’agit de dire que si pour tout intervalle ouvert <span class="math inline">\(J\)</span> contenant <span class="math inline">\(l\)</span>, il existe un intervalle ouvert <span class="math inline">\(I\)</span> contenant <span class="math inline">\(x_0\)</span>, tel que <span class="math inline">\(J\)</span> contient tous les réels <span class="math inline">\(f(x)\)</span> pour <span class="math inline">\(x \in I\)</span>.</p>
-</div>
-<div class="bloc rem">
-<p>Donc si pour tout <span class="math inline">\(x\)</span> suffisamment proche de <span class="math inline">\(x_0\)</span>, <span class="math inline">\(f(x)\)</span> est proche de <span class="math inline">\(f(x_0)\)</span>, alors la limite de <span class="math inline">\(f\)</span> en <span class="math inline">\(x_0\)</span> est <span class="math inline">\(f(x_0)\)</span>.</p>
-</div>
 <section id="propriétés" class="level2">
 <h2 class="anchored" data-anchor-id="propriétés">Propriétés</h2>
 <div class="bloc thm">
@@ -913,7 +904,14 @@ window.Quarto = {
 <summary>
 Démonstration :
 </summary>
-<p>Il s’agit de la même démonstration que précédemment en adaptant à la définition d’une limite finie.</p>
+<p>On suppose qu’il existe deux limites distinctes <span class="math inline">\(l\)</span> et <span class="math inline">\(l'\)</span> en <span class="math inline">\(x_0\)</span>.<br>
+Par définition, pour tout <span class="math inline">\(\epsilon &gt; 0\)</span> :</p>
+<ul>
+<li>Il existe <span class="math inline">\(\delta_1 &gt; 0\)</span> tel que <span class="math inline">\(|x - x_0| \leqslant \delta_1 \Rightarrow |f(x) - l| \leqslant \epsilon\)</span></li>
+<li>Il existe <span class="math inline">\(\delta_2 &gt; 0\)</span> tel que <span class="math inline">\(|x - x_0| \leqslant \delta_2 \Rightarrow |f(x) - l'| \leqslant \epsilon\)</span></li>
+</ul>
+<p>Soit <span class="math inline">\(\epsilon = \dfrac{|l - l'|}{3}\)</span> et <span class="math inline">\(\delta = \min(\delta_1, \delta_2)\)</span>.<br>
+Alors pour <span class="math inline">\(|x - x_0| \leqslant \delta\)</span>, on a par l’inégalité triangulaire : <span class="math display">\[|l - l'| = |l - f(x) + f(x) - l'| \leqslant |f(x) - l| + |f(x) - l'|\]</span> En utilisant les définitions ci-dessus : <span class="math display">\[|l - l'| \leqslant \epsilon + \epsilon = 2\epsilon\]</span> En remplaçant <span class="math inline">\(\epsilon\)</span> par sa valeur : <span class="math display">\[|l - l'| \leqslant \dfrac{2|l - l'|}{3}\]</span> Ce qui est impossible car <span class="math inline">\(|l - l'| &gt; 0\)</span>. D’où l’unicité de la limite.</p>
 </details>
 <div class="bloc ex">
 <span class="bloc-titre">Exemple : </span> On considère la fonction <span class="math inline">\(f\)</span>, définie sur <span class="math inline">\(\R^*\)</span> par <span class="math inline">\(f(x)=\frac{\sin(x)}{x}\)</span> dont on donne la représentation graphique
@@ -927,43 +925,58 @@ Démonstration :
 <p>Ainsi la fonction <span class="math inline">\(f\)</span> semble posséder une limite en <span class="math inline">\(0\)</span> alors qu’elle n’y est pas définie.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span> Montrons, en utilisant la définition, que <span class="math display">\[\lim_{x \to 1} \frac{2x+3}{x+4} = 1\]</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Montrons, en utilisant la définition, que <span class="math inline">\(\lim_{x \to 1} \dfrac{2x+3}{x+4} = 1\)</span>.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p>Pour <span class="math inline">\(x &gt;-4\)</span>, on a <span class="math display">\[\abs{f(x)- 1} = \abs{\frac{2x+3}{x+4} - 1} = \abs{ \frac{x-1}{x+4}} = \frac{\abs{x-1}}{\abs{x+4}}.\]</span> Soit <span class="math inline">\(x \in [0\, ;\, 2]\)</span> (intervalle centré en <span class="math inline">\(1\)</span>), alors <span class="math display">\[\abs{x+4} \geqslant 2\]</span> donc <span class="math display">\[\abs{f(x)-1} \leqslant \frac{1}{2} \abs{x-1}.\]</span> On considère alors <span class="math inline">\(\delta =\min\{1 \, ; \, 2\epsilon\}\)</span>, alors <span class="math inline">\(\delta  &gt;0\)</span> et <span class="math inline">\(\abs{x-1} \leqslant \delta\)</span>.</p>
-En particulier, <span class="math display">\[\abs{x-1} \leqslant 2 \epsilon \Rightarrow \abs{f(x)-1} \leqslant \epsilon.\]</span> On en déduit que <span class="math display">\[\lim_{x \to 1} \frac{2x+3}{x+4} = 1.\]</span>
+<p>Pour <span class="math inline">\(x &gt; -4\)</span>, on a <span class="math display">\[|f(x)- 1| = \left| \dfrac{2x+3}{x+4} - 1 \right| = \left| \dfrac{x-1}{x+4} \right| = \dfrac{|x-1|}{|x+4|}\]</span> Soit <span class="math inline">\(x \in [0\, ;\, 2]\)</span> (intervalle centré en <span class="math inline">\(1\)</span>), alors <span class="math inline">\(|x+4| \geqslant 4\)</span> (donc <span class="math inline">\(|x+4| \geqslant 2\)</span> est vrai).<br>
+On a alors <span class="math inline">\(|f(x)-1| \leqslant \dfrac{1}{4} |x-1| \leqslant \dfrac{1}{2} |x-1|\)</span>.<br>
+On considère alors <span class="math inline">\(\delta = \min\{1 \, ; \, 2\epsilon\}\)</span>, alors <span class="math inline">\(\delta &gt; 0\)</span> et <span class="math inline">\(|x-1| \leqslant \delta\)</span>.<br>
+En particulier, <span class="math display">\[|x-1| \leqslant 2 \epsilon \Rightarrow |f(x)-1| \leqslant \epsilon\]</span> On en déduit que <span class="math display">\[\lim_{x \to 1} \dfrac{2x+3}{x+4} = 1\]</span></p>
 </details>
-<p>Cet exercice est théorique, et l’utilisation de la définition n’est clairement pas pratique.</p>
-<p>On a alors le théorème suivant qui permet de simplifier les choses quand tout se passe bien.</p>
+<p>Cet exercice est théorique, et l’utilisation de la définition n’est clairement pas pratique.<br>
+On a alors le théorème suivant qui permet de simplifier les choses quand tout se passe bien, c’est-à-dire :</p>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(D_f\)</span> et <span class="math inline">\(a \in D_f\)</span> et admettant une limite finie en <span class="math inline">\(a\)</span>.</p>
-<p>Alors <span class="math display">\[\lim_{x \to a} f(x)= f(a)\]</span></p>
+<p><span class="bloc-titre">Propriété : </span></p>
+<p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(D_f\)</span> et <span class="math inline">\(a \in D_f\)</span> et admettant une limite finie en <span class="math inline">\(a\)</span>.<br>
+Alors <span class="math display">\[\lim_{x \to a} f(x)= f(a)\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>Soit <span class="math display">\[\lim_{x \to a} f(x) =l \et f(a) \neq l\]</span></p>
-<p>Soit <span class="math inline">\(\epsilon &gt;0\)</span>, alors il existe un <span class="math inline">\(\delta  &gt;0\)</span> tel que si <span class="math inline">\(x \in I = ]a-\delta \, ; \,a+ \delta[\)</span> alors <span class="math inline">\(f(x) \in J = ]l - \epsilon  \, ; \ l +\epsilon[\)</span> (en particulier <span class="math inline">\(f(a) \in J\)</span>)</p>
-<p>On considère <span class="math inline">\(\epsilon =\frac{l-f(a)}{2}\)</span>, ainsi <span class="math inline">\(J= \left]\frac{f(a)+l}{2}\, ; \, \frac{3l - f(a)}{2} \right[\)</span>.</p>
+<p>Soit <span class="math inline">\(\lim_{x \to a} f(x) = l\)</span> et supposons <span class="math inline">\(f(a) \neq l\)</span>.<br>
+Soit <span class="math inline">\(\epsilon &gt; 0\)</span>, alors il existe un <span class="math inline">\(\delta &gt; 0\)</span> tel que si <span class="math inline">\(x \in I = ]a-\delta \, ; \, a+\delta[\)</span> alors <span class="math inline">\(f(x) \in J = ]l-\epsilon \, ; \, l+\epsilon[\)</span> (en particulier <span class="math inline">\(f(a) \in J\)</span>).<br>
+On considère <span class="math inline">\(\epsilon = \dfrac{|l-f(a)|}{2}\)</span>.<br>
+Ainsi <span class="math inline">\(J= \left]\frac{f(a)+l}{2}\, ; \, \frac{3l - f(a)}{2} \right[\)</span>.</p>
 <ol type="1">
-<li>Si <span class="math inline">\(f(a) &lt; l\)</span> alors <span class="math inline">\(f(a) &lt; \frac{2f(a)}{2} &lt; \frac{f(a)+l}{2}\)</span>, donc <span class="math inline">\(f(a)  \notin J\)</span>.</li>
-<li>Si <span class="math inline">\(f(a) &gt; l\)</span> alors <span class="math inline">\(f(a) &gt; \frac{3f(a)-f(a)}{2} &gt; \frac{3l-f(a)}{2}\)</span>, donc <span class="math inline">\(f(a)  \notin J\)</span>.</li>
+<li>Si <span class="math inline">\(f(a) &lt; l\)</span>, alors <span class="math inline">\(\epsilon = \dfrac{l-f(a)}{2}\)</span>, ainsi <span class="math inline">\(J = \left] \dfrac{f(a)+l}{2} \, ; \, \dfrac{3l-f(a)}{2} \right[\)</span>.<br>
+On a <span class="math inline">\(f(a) &lt; \dfrac{f(a)+l}{2}\)</span>, donc <span class="math inline">\(f(a) \notin J\)</span>.<br>
+</li>
+<li>Si <span class="math inline">\(f(a) &gt; l\)</span>, alors <span class="math inline">\(\epsilon = \dfrac{f(a)-l}{2}\)</span>, ainsi <span class="math inline">\(J = \left] \dfrac{3l-f(a)}{2} \, ; \, \dfrac{f(a)+l}{2} \right[\)</span>.<br>
+On a <span class="math inline">\(f(a) &gt; \dfrac{f(a)+l}{2}\)</span>, donc <span class="math inline">\(f(a) \notin J\)</span>.</li>
 </ol>
-<p>Or <span class="math inline">\(f\)</span> étant définie en <span class="math inline">\(a\)</span>, alors par définition <span class="math inline">\(f(a)\)</span> appartient à tout intervalle ouvert centré en <span class="math inline">\(l\)</span>, donc <span class="math inline">\(f(a)=l\)</span>.</p>
+<p>Or <span class="math inline">\(f\)</span> étant définie en <span class="math inline">\(a\)</span>, alors par définition <span class="math inline">\(f(a)\)</span> appartient à tout intervalle ouvert centré en <span class="math inline">\(l\)</span> (car <span class="math inline">\(a \in I\)</span>), donc <span class="math inline">\(f(a)=l\)</span>.</p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span> Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(]3\, ; \, +\infty[\)</span> par <span class="math inline">\(f(x)= \frac{2x-3}{x-3}\)</span>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(]3\, ; \, +\infty[\)</span> par <span class="math inline">\(f(x)= \dfrac{2x-3}{x-3}\)</span>.</p>
 <ul>
-<li>D’après la propriété on a <span class="math display">\[\lim_{x \to 5} f(x) = f(5) = \frac{2 \times 5 -3}{5-3} = \frac{7}{3}.\]</span></li>
-<li><span class="math inline">\(3 \notin ]3\,;\,+\infty[\)</span>, on ne peut pas calculer directement <span class="math inline">\(\lim_{x \to 3} f(x)\)</span>.<br> Il faut utiliser la définition ou des propriétés (voir ci-après).</li>
+<li>D’après la propriété on a : <span class="math display">\[\lim_{x \to 5} f(x) = f(5) = \dfrac{2 \times 5 -3}{5-3} = \dfrac{7}{2}\]</span><br>
+</li>
+<li><span class="math inline">\(3 \notin ]3\,;\,+\infty[\)</span>, on ne peut pas calculer directement <span class="math inline">\(\lim_{x \to 3} f(x)\)</span>.<br>
+Il faut utiliser la définition ou des propriétés (voir ci-après).</li>
 </ul>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Interprétation graphique : </span><br> Ainsi, plus on se rapproche de <span class="math inline">\(a\)</span>, plus <span class="math inline">\(f(x)\)</span> se rapproche de <span class="math inline">\(f(a)\)</span>. Il n’y a donc pas de trou !</p>
+<p><span class="bloc-titre">Interprétation graphique : </span><br> plus on se rapproche de <span class="math inline">\(a\)</span>, plus <span class="math inline">\(f(x)\)</span> se rapproche de <span class="math inline">\(f(a)\)</span>. Il n’y a donc pas de trou !</p>
 </div>
 <div class="bloc rem">
 <span class="bloc-titre">Remarque : </span><br> Soit <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(I\)</span> et <span class="math inline">\(a \in I\)</span> tels que <span class="math inline">\(\lim_{x \to a} f(x) \neq f(a)\)</span>.

@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -877,7 +889,7 @@ window.Quarto = {
 </header>
 
 
-<div class="bloc">
+<div class="rem">
 <p>Certaines fonctions n’ont pas le même comportement suivant que <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(a\)</span> par valeurs supérieures ou par valeurs inférieures à <span class="math inline">\(a\)</span>. On introduit alors la notion, plus subtile, de limite à gauche et limite à droite.</p>
 </div>
 <div class="bloc def">
@@ -885,39 +897,47 @@ window.Quarto = {
 <p>On note alors <span class="math display">\[\lim_{x \to a^+} f(x)= l \quad  \left( \text{resp. } \lim_{x \to a^-} f(x) \right)\]</span></p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> On peut évidemment donner une définition quantifiée pour la limite par valeurs supérieures :</p>
-<p><span class="math display">\[\forall \epsilon &gt;0, \, \exists \delta  &gt;0,\, \forall x \in I,  (0 \leqslant x - a \leqslant \delta  \Rightarrow \abs{f(x)-l} \leqslant \epsilon)\]</span></p>
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>On peut évidemment donner une définition quantifiée pour la limite par valeurs supérieures : <span class="math display">\[\forall \epsilon &gt;0, \, \exists \delta &gt;0,\, \forall x \in I, (0 \leqslant x - a \leqslant \delta \Rightarrow |f(x)-l| \leqslant \epsilon)\]</span></p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span> Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par</p>
-<p><span class="math display">\[f(x)=\left\{\begin{array}{l}
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math display">\[f(x)=\begin{cases}
 x-1 \, ,\text{ si } x \geqslant 0\\
 x+1 \, ,\text{ sinon}
-\end{array} \right.\]</span></p>
-<p>Alors</p>
-<p><span class="math display">\[\lim_{x \to 1^+} f(x) = 0 \et  \lim_{x \to 1^-} f(x)=2.\]</span></p>
-<p>On observe que la limite à droite et la limite à gauche ne sont pas les mêmes.</p>
+\end{cases}\]</span> Déterminer la limite à droite et la limite à gauche.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+Alors <span class="math display">\[\lim_{x \to 0^+} f(x) = -1 \quad \text{ et } \quad \lim_{x \to 0^-} f(x) = 1\]</span> On observe que la limite à droite et la limite à gauche ne sont pas les mêmes.
+</details>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admises) : </span><br> Soit <span class="math inline">\(I\)</span> un intervalle et <span class="math inline">\(a \in I\)</span>. Soit <span class="math inline">\(f\)</span> une fonction.</p>
+<p><span class="bloc-titre">Propriété (admis) : </span></p>
+<p>Soit <span class="math inline">\(I\)</span> un intervalle et <span class="math inline">\(a \in I\)</span>. Soit <span class="math inline">\(f\)</span> une fonction.</p>
 <ul>
 <li>Si <span class="math inline">\(f\)</span> est définie sur <span class="math inline">\(I\)</span> sauf en <span class="math inline">\(a\)</span>, alors <span class="math inline">\(f\)</span> possède une limite en <span class="math inline">\(a\)</span> si et seulement si <span class="math inline">\(f\)</span> possède une limite à droite et une limite à gauche, et si elles sont égales.</li>
 <li>Si <span class="math inline">\(f\)</span> est définie sur <span class="math inline">\(I\)</span>, alors <span class="math inline">\(f\)</span> possède une limite en <span class="math inline">\(a\)</span> si et seulement si <span class="math inline">\(f\)</span> possède une limite à droite et une limite à gauche, et si elles sont égales à <span class="math inline">\(f(a)\)</span>.</li>
 </ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span> Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math display">\[f(x)=\left\{
-\begin{array}{l}
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Soit <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math display">\[f(x)=\begin{cases}
 x^2-2x\, , \text{ si } x &lt; 0\\
 x+1\, , \text{ si } x &gt; 0\\
-1\, , \text{ si } x=0\\
-\end{array} \right.\]</span></p>
+1\, , \text{ si } x=0
+\end{cases}\]</span> La fonction admet-elle une limite en <span class="math inline">\(1\)</span> ?</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p>On a <span class="math inline">\(\lim_{x \to 0^-} f(x)=0\)</span>, <span class="math inline">\(\lim_{x \to 0^+} f(x) = 1\)</span> et <span class="math inline">\(f(0)=1\)</span>.</p>
-D’après la propriété <span class="math inline">\(f\)</span> n’admet donc pas de limite en <span class="math inline">\(0\)</span>.
+On a <span class="math inline">\(\lim_{x \to 0^-} f(x)=0\)</span>, <span class="math inline">\(\lim_{x \to 0^+} f(x) = 1\)</span> et <span class="math inline">\(f(0)=1\)</span>.<br>
+D’après la propriété, <span class="math inline">\(f\)</span> n’admet donc pas de limite en <span class="math inline">\(0\)</span>.
 </details>
 </div>
 <div class="bloc ex">

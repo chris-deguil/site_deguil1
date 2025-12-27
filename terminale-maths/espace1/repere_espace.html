@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -887,80 +899,88 @@ window.Quarto = {
 <section id="notion-de-repère-et-coordonnées" class="level3">
 <h3 class="anchored" data-anchor-id="notion-de-repère-et-coordonnées">Notion de repère et coordonnées</h3>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> On appelle base de l’espace tout triplet $(O,;, , ,, , ,, ) de vecteurs non coplanaires de <span class="math inline">\(\vE\)</span>.<br>
-On appelle repère de l’espace, la donnée d’un quadruplet $(O,;, , ,, , ,, ) où <span class="math inline">\(O\)</span> est un point de <span class="math inline">\(\E\)</span> appelé origine du repère et $(O,;, , ,, , ,, ) une base de l’espace.</p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>On appelle <strong>base de l’espace</strong> tout triplet <span class="math inline">\(\left(\ve{i},\ve{j},\ve{k}\right)\)</span> de vecteurs non coplanaires de <span class="math inline">\(\vE\)</span>.<br>
+On appelle <strong>repère de l’espace</strong>, la donnée d’un quadruplet <span class="math inline">\(\left(O \, ; \, \ve{i},\ve{j},\ve{k}\right)\)</span> où <span class="math inline">\(O\)</span> est un point de <span class="math inline">\(\E\)</span> appelé origine du repère et <span class="math inline">\(\left(\ve{i},\ve{j},\ve{k}\right)\)</span> une base de l’espace.</p>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> On considère <span class="math inline">\(\left(O\,;\,\ve{i} \, ,\, \ve{j} \, ,\,  \ve{k}\right)\)</span> un repère de l’espace.<br>
-Pour tout point <span class="math inline">\(M\)</span> de l’espace il existe un unique triplet <span class="math inline">\((x\,;\,y\,;\,z)\)</span> de réels tels que<br>
-<span class="math display">\[\ve{OM}=x\ve{i}+y\ve{j}+z\ve{k}.\]</span></p>
+<p><span class="bloc-titre">Théorème : </span></p>
+<p>On considère <span class="math inline">\(\left(O \, ; \, \ve{i},\ve{j},\ve{k}\right)\)</span> un repère de l’espace.<br>
+Pour tout point <span class="math inline">\(M\)</span> de l’espace, il existe un unique triplet <span class="math inline">\((x \, ; \, y \, ; \, z)\)</span> de réels tel que : <span class="math display">\[\ve{OM}=x\ve{i}+y\ve{j}+z\ve{k}\]</span></p>
 <ol type="1">
-<li>On dit alors que <span class="math inline">\(M\)</span> a pour coordonnées <span class="math inline">\((x,y,z)\)</span> où <span class="math inline">\(x\)</span> est l’abscisse de <span class="math inline">\(M\)</span>, <span class="math inline">\(y\)</span> son ordonnée et <span class="math inline">\(z\)</span> sa cote.<br>
-</li>
-<li>Pour tout <span class="math inline">\(\ve{u} \in \vE\)</span> tel que <span class="math inline">\(\ve{u}=\ve{OM}\)</span>,<br>
-<span class="math display">\[\ve{u}=x\ve{i}+y\ve{j}+z\ve{k}.\]</span><br>
-On note alors <span class="math inline">\(\ve{u}\begin{pmatrix}x\\y\\z\end{pmatrix}\)</span> ou <span class="math inline">\(\ve{u}(x\,;\,y\,;\,z)\)</span>.</li>
+<li>On dit alors que <span class="math inline">\(M\)</span> a pour coordonnées <span class="math inline">\((x,y,z)\)</span> où <span class="math inline">\(x\)</span> est l’<strong>abscisse</strong> de <span class="math inline">\(M\)</span>, <span class="math inline">\(y\)</span> son <strong>ordonnée</strong> et <span class="math inline">\(z\)</span> sa <strong>cote</strong>.</li>
+<li>Pour tout <span class="math inline">\(\ve{u} \in \vE\)</span> tel que <span class="math inline">\(\ve{u}=\ve{OM}\)</span>, on a <span class="math inline">\(\ve{u}=x\ve{i}+y\ve{j}+z\ve{k}\)</span>. On note alors <span class="math inline">\(\ve{u}\begin{pmatrix}x\\y\\z\end{pmatrix}\)</span> ou <span class="math inline">\(\ve{u}(x \, ; \, y \, ; \, z)\)</span>.</li>
 </ol>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-Soit <span class="math inline">\(\ve{w}\)</span> un vecteur de l’espace, <span class="math inline">\(O\)</span> un point de l’espace et <span class="math inline">\(M\)</span> le point de l’espace tel que <span class="math inline">\(\ve{w}=\ve{OM}\)</span>. On note <span class="math inline">\(M'\)</span> le projeté de <span class="math inline">\(M\)</span> sur <span class="math inline">\(\left(O\,; \, \ve{i}\, , \,\ve{j}\right)\)</span> parallèlement à <span class="math inline">\(\left(O\,;\,\ve{k}\right)\)</span>.<br>
-On a alors <span class="math inline">\(\ve{OM}=\ve{OM'}+\ve{M'M}\)</span>.<br>
-Or <span class="math inline">\(\ve{M'M}\)</span> est colinéaire à <span class="math inline">\(\ve{k}\)</span>, donc il existe un réel <span class="math inline">\(z\)</span> tel que <span class="math inline">\(\ve{M'M}=z\ve{k}\)</span>.<br>
-Comme <span class="math inline">\(M' \in \left(O\,;\, \, \ve{i}\,,\,\ve{j}\right)\)</span>, alors il existe <span class="math inline">\(x,y \in \R\)</span> tels que <span class="math inline">\(\ve{OM'}=x\ve{i}+y\ve{j}\)</span>.<br>
-D’où le résultat. L’unicité du triplet est une conséquence de l’unicité du point <span class="math inline">\(M\)</span>.
+<p>Soit <span class="math inline">\(\ve{w}\)</span> un vecteur de l’espace, <span class="math inline">\(O\)</span> un point de l’espace et <span class="math inline">\(M\)</span> le point de l’espace tel que <span class="math inline">\(\ve{w}=\ve{OM}\)</span>. On note <span class="math inline">\(M'\)</span> le projeté de <span class="math inline">\(M\)</span> sur le plan <span class="math inline">\(\left(O \, ; \, \ve{i},\ve{j}\right)\)</span> parallèlement à la droite <span class="math inline">\(\left(O \, ; \, \ve{k}\right)\)</span>.<br>
+On a alors, par la relation de Chasles : <span class="math display">\[\ve{OM}=\ve{OM'}+\ve{M'M}\]</span></p>
+<ul>
+<li><span class="math inline">\(\ve{M'M}\)</span> est colinéaire à <span class="math inline">\(\ve{k}\)</span>, donc il existe un réel <span class="math inline">\(z\)</span> tel que <span class="math inline">\(\ve{M'M}=z\ve{k}\)</span>.</li>
+<li>Comme <span class="math inline">\(M' \in \left(O \, ; \, \ve{i},\ve{j}\right)\)</span>, il existe deux réels <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> tels que <span class="math inline">\(\ve{OM'}=x\ve{i}+y\ve{j}\)</span>.</li>
+</ul>
+<p>D’où le résultat : <span class="math inline">\(\ve{OM}=x\ve{i}+y\ve{j}+z\ve{k}\)</span>. L’unicité du triplet est une conséquence de l’unicité du point <span class="math inline">\(M\)</span> et de la non-coplanarité des vecteurs de base.</p>
 </details>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> Il existe d’autres types de coordonnées, comme par exemple les coordonnées sphériques (celles utilisées pour repérer un point sur terre).</p>
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>Il existe d’autres types de coordonnées, comme par exemple les coordonnées sphériques (celles utilisées pour repérer un point sur Terre).</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère un cube <span class="math inline">\(ABCDEFGH\)</span>.</p>
+<div class="bloc-titre">
+Exemple :
+</div>
+<p>On considère un cube <span class="math inline">\(ABCDEFGH\)</span>.</p>
 <ol type="1">
-<li>Justifier que <span class="math inline">\(\left(\ve{AB},\ve{AE},\ve{AD}\right)\)</span> est une base de l’espace.<br>
-
-<details class="bloc cor">
-<summary>
-Afficher la correction :
-</summary>
-Les trois vecteurs <span class="math inline">\(\ve{AB}\)</span>, <span class="math inline">\(\ve{AE}\)</span> et <span class="math inline">\(\ve{AD}\)</span> ne sont pas coplanaires, donc ils forment une base de l’espace.
-</details></li>
-<li>Déterminer les coordonnées des vecteurs <span class="math inline">\(\ve{AH}\)</span> et <span class="math inline">\(\ve{AG}\)</span>.<br>
-
-<details class="bloc cor">
-<summary>
-Afficher la correction :
-</summary>
-Dans le repère <span class="math inline">\(\left(A\,;\,\ve{AB},\ve{AE},\ve{AD}\right)\)</span> :<br>
-<span class="math inline">\(H\)</span> a pour coordonnées <span class="math inline">\((0,1,1)\)</span>, donc <span class="math inline">\(\ve{AH}(0,1,1)\)</span>.<br>
-De plus, <span class="math inline">\(G\)</span> a pour coordonnées <span class="math inline">\((1,1,1)\)</span>, donc <span class="math inline">\(\ve{AG}(1,1,1)\)</span>.
-</details></li>
+<li>Justifier que <span class="math inline">\(\left(\ve{AB},\ve{AE},\ve{AD}\right)\)</span> est une base de l’espace.</li>
 </ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+Les trois vecteurs <span class="math inline">\(\ve{AB}\)</span>, <span class="math inline">\(\ve{AE}\)</span> et <span class="math inline">\(\ve{AD}\)</span> ne sont pas coplanaires (ils suivent les trois dimensions du cube), ils forment donc une base de l’espace.
+</details>
+<ol start="2" type="1">
+<li>Déterminer les coordonnées des vecteurs <span class="math inline">\(\ve{AH}\)</span> et <span class="math inline">\(\ve{AG}\)</span> dans le repère <span class="math inline">\((A \, ; \, \ve{AB}, \ve{AE}, \ve{AD})\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Dans le repère <span class="math inline">\(\left(A \, ; \, \ve{AB},\ve{AE},\ve{AD}\right)\)</span> :</p>
+<ul>
+<li>Par décomposition : <span class="math inline">\(\ve{AH} = \ve{AD} + \ve{DH}\)</span>. Comme <span class="math inline">\(ABCDEFGH\)</span> est un cube, <span class="math inline">\(\ve{DH} = \ve{AE}\)</span>.</li>
+<li>Donc <span class="math inline">\(\ve{AH} = 0\ve{AB} + 1\ve{AE} + 1\ve{AD}\)</span>. Le vecteur <span class="math inline">\(\ve{AH}\)</span> a pour coordonnées <span class="math inline">\((0,1,1)\)</span>.</li>
+<li>De même, <span class="math inline">\(\ve{AG} = \ve{AB} + \ve{BC} + \ve{CG} = \ve{AB} + \ve{AD} + \ve{AE}\)</span>. Le vecteur <span class="math inline">\(\ve{AG}\)</span> a pour coordonnées <span class="math inline">\((1,1,1)\)</span>.</li>
+</ul>
+</details>
 </div>
 <hr>
 </section>
 <section id="calculs-et-coordonnées" class="level3">
 <h3 class="anchored" data-anchor-id="calculs-et-coordonnées">Calculs et coordonnées</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> Soit <span class="math inline">\(\left(O\,;\,\ve{i} \, ,\, \ve{j} \, ,\,  \ve{k}\right)\)</span> un repère de l’espace.<br>
-On considère <span class="math inline">\(A(x_A,y_A,z_A)\)</span> et <span class="math inline">\(B(x_B,y_B,z_B)\)</span> deux points de <span class="math inline">\(\E\)</span>, <span class="math inline">\(\ve{u}\begin{pmatrix}x\\y\\z\end{pmatrix}\)</span> et <span class="math inline">\(\ve{v}\begin{pmatrix}x'\\y'\\z'\end{pmatrix}\)</span> deux vecteurs de <span class="math inline">\(\vE\)</span> et <span class="math inline">\(k \in \R\)</span>.</p>
-<p>Alors</p>
-<p><span class="math display">\[\ve{AB}\begin{pmatrix}x_B-x_A\\y_B-y_A\\z_B-z_A\end{pmatrix} \qquad
-\ve{u}+\ve{v}\begin{pmatrix}x+x'\\y+y'\\z+z'\end{pmatrix} \qquad
-k\ve{u}\begin{pmatrix}kx\\ky\\kz\end{pmatrix}\]</span></p>
+<p><span class="bloc-titre">Théorème : </span></p>
+<p>Soit <span class="math inline">\(\left(O \, ; \, \ve{i},\ve{j},\ve{k}\right)\)</span> un repère de l’espace.<br>
+On considère <span class="math inline">\(A(x_A,y_A,z_A)\)</span> et <span class="math inline">\(B(x_B,y_B,z_B)\)</span> deux points de <span class="math inline">\(\E\)</span>, <span class="math inline">\(\ve{u}\begin{pmatrix}x\\y\\z\end{pmatrix}\)</span> et <span class="math inline">\(\ve{v}\begin{pmatrix}x'\\y'\\z'\end{pmatrix}\)</span> deux vecteurs de <span class="math inline">\(\vE\)</span> et <span class="math inline">\(k \in \mathbb{R}\)</span>.<br>
+Alors :</p>
+<p><span class="math display">\[\ve{AB}\begin{pmatrix}x_B-x_A\\y_B-y_A\\z_B-z_A\end{pmatrix} \qquad \ve{u}+\ve{v}\begin{pmatrix}x+x'\\y+y'\\z+z'\end{pmatrix} \qquad k\ve{u}\begin{pmatrix}kx\\ky\\kz\end{pmatrix}\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-Les démonstrations sont faciles et sont uniquement basées sur la définition des coordonnées d’un point et d’un vecteur dans un repère.
+<p>Les démonstrations sont immédiates et reposent uniquement sur la définition des coordonnées d’un point et d’un vecteur dans un repère ainsi que sur la relation de Chasles pour le vecteur <span class="math inline">\(\ve{AB}\)</span>.</p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Soit <span class="math inline">\(\left(O\,;\,\ve{i} \, ,\, \ve{j} \, ,\,  \ve{k}\right)\)</span> un repère de l’espace et <span class="math inline">\(A(2,-5,3)\)</span>, <span class="math inline">\(B(-1,3,1)\)</span> deux points de l’espace.</p>
+<div class="bloc-titre">
+Exemple 1 :
+</div>
+<p>Soit <span class="math inline">\(\left(O \, ; \, \ve{i},\ve{j},\ve{k}\right)\)</span> un repère de l’espace et <span class="math inline">\(A(2,-5,3)\)</span>, <span class="math inline">\(B(-1,3,1)\)</span> deux points de l’espace.</p>
 <ol type="1">
-<li>Déterminer les coordonnées de <span class="math inline">\(\ve{AB}\)</span><br>
-
+<li>Déterminer les coordonnées de <span class="math inline">\(\ve{AB}\)</span>.
 <details class="bloc cor">
 <summary>
 Afficher la correction :
@@ -974,13 +994,13 @@ Afficher la correction :
 -3\\8\\-2
 \end{pmatrix}\)</span>
 </details></li>
-<li>Déterminer les coordonnées de <span class="math inline">\(C\)</span> vérifiant <span class="math inline">\(\ve{AC}=2\ve{CB}\)</span><br>
-
+<li>Déterminer les coordonnées de <span class="math inline">\(C\)</span> vérifiant <span class="math inline">\(\ve{AC}=2\ve{CB}\)</span>.</li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<span class="math display">\[\left\{\begin{array}{l}
+<p>On a <span class="math display">\[\left\{\begin{array}{l}
 x_C-2=2(-1-x_C)\\
 y_C-(-5)=2(3-y_C)\\
 z_C-3=2(1-z_C)
@@ -990,48 +1010,20 @@ z_C-3=2(1-z_C)
 x_C=0\\
 y_C=\frac{1}{3}\\
 z_C=\frac{5}{3}
-\end{array}\right.\]</span></details></li>
-</ol>
-Donc <span class="math inline">\(C\left(0\,;\,\frac{1}{3}\,;\,\frac{5}{3}\right)\)</span>
-
+\end{array}\right.\]</span></p>
+<p>Donc <span class="math inline">\(C\left(0\,;\,\frac{1}{3}\,;\,\frac{5}{3}\right)\)</span></p>
+</details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Dans un repère de l’espace, on considère les points <span class="math inline">\(A(1;2;7)\)</span>, <span class="math inline">\(B(−3;−2;3)\)</span>, <span class="math inline">\(C(0;5;22)\)</span>, <span class="math inline">\(D(4;0;−10)\)</span>. Ces quatre points sont-ils coplanaires ? Justifier.</p>
+<div class="bloc-titre">
+Exemple :
+</div>
+<p>On considère <span class="math inline">\(\ve{u}\begin{pmatrix}1\\1\\1\end{pmatrix}\)</span>, <span class="math inline">\(\ve{v}\begin{pmatrix}-1\\1\\0\end{pmatrix}\)</span> et <span class="math inline">\(\ve{w}\begin{pmatrix}1\\0\\1\end{pmatrix}\)</span>.<br>
+Montrer que ces vecteurs ne sont pas coplanaires.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p>Soit <span class="math inline">\(\ve{AB} \begin{pmatrix}-4 \\ -4 \\-4 \end{pmatrix}\)</span>, <span class="math inline">\(\ve{AC} \begin{pmatrix}-1 \\ 3 \\15 \end{pmatrix}\)</span> et <span class="math inline">\(\ve{AB} \begin{pmatrix}3 \\ -2 \\-17 \end{pmatrix}\)</span></p>
-On suppose qu’il existe deux réels <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span> tels que <span class="math display">\[\ve{AD}=a \ve{AB}+ b \ve{AC}\]</span> Or <span class="math display">\[\left\{\begin{array}{l}
-3 = -4a - b\\
--2 = -4 a +3 b\\
--17 =-4a +15 b
-\end{array}
-\right. \Longleftrightarrow
-\left\{\begin{array}{l}
-3 = -4a -b\\
-5 = -4b\\
-20 = - 16b
-\end{array}
-\right.
-\Longleftrightarrow
-\left\{\begin{array}{l}
-b= -\frac{5}{4}\\
-b= - \frac{5}{4} \\
-3 = -4a + \frac{5}{4}
-\end{array}
-\right.
-\Longleftrightarrow
-\left\{\begin{array}{l}
-b= -\frac{5}{4}\\
-a= -\frac{7}{16}
-\end{array}
-\right. \]</span> Or <span class="math inline">\(-\frac{7}{16} \neq \frac12\)</span>, donc on déduit que les vecteurs ne sont pas coplanaires, donc les points ne sont pas coplanaires.
-</details>
-</div>
-<div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère <span class="math inline">\(\ve{u}\begin{pmatrix}1\\1\\1\end{pmatrix}\)</span>, <span class="math inline">\(\ve{v}\begin{pmatrix}-1\\1\\0\end{pmatrix}\)</span> et <span class="math inline">\(\ve{w}\begin{pmatrix}1\\0\\1\end{pmatrix}\)</span>.<br>
-Montrer que ces vecteurs ne sont pas coplanaires.</p>
 <p>On considère <span class="math inline">\(a,b,c \in \R\)</span> tels que <span class="math inline">\(a\ve{u}+b\ve{v}+c\ve{w}=\ve{0}\)</span>.</p>
 <p><span class="math display">\[a\ve{u}+b\ve{v}+c\ve{w}=\ve{0}\Longleftrightarrow
 \left\{\begin{array}{l}
@@ -1046,6 +1038,7 @@ b=0\\
 c=0
 \end{array}\right.\]</span></p>
 <p>On déduit alors que les trois vecteurs sont linéairement indépendants. Ils forment donc une base de l’espace.</p>
+</details>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="vecteur_espace.html">⬅️</a> <a class="next" href="droite_plan.html">➡️</a></p>

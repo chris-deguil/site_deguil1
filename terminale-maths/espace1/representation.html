@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -888,89 +900,48 @@ window.Quarto = {
 <section id="représentation-paramétrique-dune-droite" class="level2">
 <h2 class="anchored" data-anchor-id="représentation-paramétrique-dune-droite">Représentation paramétrique d’une droite</h2>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> Soient <span class="math inline">\(A(x_A,y_A,z_A)\)</span> un point de l’espace et <span class="math inline">\(\ve{u} \begin{pmatrix}
-a \\
-b \\
-c
-\end{pmatrix}\)</span> un vecteur non nul de l’espace.</p>
-<p>Si l’on considère la droite <span class="math inline">\(\mathscr{D}\)</span> passant par <span class="math inline">\(A\)</span> et de vecteur directeur <span class="math inline">\(\ve{u}\)</span>, alors :</p>
-<p><span class="math display">\[M(x,y,z) \in \mathscr{D} \Longleftrightarrow \exists t \in \R, \ \ve{AM}=t \ve{u} \Longleftrightarrow \exists t \in \R, \begin{cases}
-x =x_A+at \\
-y =y_A+bt \\
-z = z_A+ct
-\end{cases}\]</span></p>
-<p>Ce système est appelé représentation paramétrique de la droite <span class="math inline">\(\mathscr{D}\)</span>.</p>
+<p><span class="bloc-titre">Théorème (admis) : </span></p>
+<p>Soient <span class="math inline">\(A(x_A,y_A,z_A)\)</span> un point de l’espace et <span class="math inline">\(\ve{u} \begin{pmatrix} a \\ b \\ c \end{pmatrix}\)</span> un vecteur non nul de l’espace.</p>
+<p>Si l’on considère la droite <span class="math inline">\(\mathscr{D}\)</span> passant par <span class="math inline">\(A\)</span> et de vecteur directeur <span class="math inline">\(\ve{u}\)</span>, alors : <span class="math display">\[M(x,y,z) \in \mathscr{D} \Leftrightarrow \exists t \in \mathbb{R}, \ \ve{AM}=t \ve{u} \Leftrightarrow \exists t \in \mathbb{R}, \begin{cases}
+x &amp;=x_A+at \\
+y &amp;=y_A+bt \\
+z &amp;= z_A+ct
+\end{cases}\]</span> Ce système est appelé <strong>représentation paramétrique</strong> de la droite <span class="math inline">\(\mathscr{D}\)</span>.</p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>Soit <span class="math inline">\(\ve{u} \begin{pmatrix}
-a\\b\\c
-\end{pmatrix}\)</span> un vecteur directeur de <span class="math inline">\(\mathscr{D}\)</span>, et <span class="math inline">\(A (x_A, y_A, z_A) \in \mathscr{D}\)</span>.<br>
-Pour tout <span class="math inline">\(M(x,y,z) \in \mathscr{D}, \, \exists t \in \R, \, \ve{AM} = t \ve{u}\)</span>.</p>
-<p>Ainsi :</p>
-<p><span class="math display">\[ \begin{pmatrix}
-x-x_A\\y-y_A\\z-z_A
-\end{pmatrix} = t \begin{pmatrix}
-a\\b\\c
-\end{pmatrix}\]</span></p>
-On déduit alors les relations données.
+<p>Soit <span class="math inline">\(\ve{u} \begin{pmatrix} a\\b\\c \end{pmatrix}\)</span> un vecteur directeur de <span class="math inline">\(\mathscr{D}\)</span>, et <span class="math inline">\(A (x_A, y_A, z_A) \in \mathscr{D}\)</span>.<br>
+Pour tout <span class="math inline">\(M(x,y,z) \in \mathscr{D}, \, \exists t \in \mathbb{R}, \, \ve{AM} = t \ve{u}\)</span>.<br>
+Ainsi : <span class="math display">\[ \begin{pmatrix} x-x_A\\y-y_A\\z-z_A \end{pmatrix} = t \begin{pmatrix} a\\b\\c \end{pmatrix}\]</span> On en déduit alors les relations données.</p>
 </details>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> - Une droite admet une infinité de représentations paramétriques (choix du point, du vecteur directeur …).<br>
-Par exemple :</p>
-<p><span class="math display">\[
-\begin{cases}
-x =3-2t \\
-y =-1+t \\
-z = t
-\end{cases}
-\quad,\quad
-\begin{cases}
-x =-5-2t \\
-y =3+t \\
-z =-4 + t
-\end{cases}
-\quad,\quad
-\begin{cases}
-x =3+4t \\
-y =-1-2t \\
-z = -2t
-\end{cases}
-\]</span></p>
-<p>sont des représentations paramétriques d’une même droite.</p>
+<p><span class="bloc-titre">Remarques : </span></p>
 <ul>
-<li>Pour une représentation paramétrique donnée, pour chaque valeur de <span class="math inline">\(t\)</span> on détermine un point de la droite et réciproquement.</li>
+<li>Une droite admet une infinité de représentations paramétriques (choix du point, du vecteur directeur…) : <span class="math inline">\(\begin{cases} x &amp;=3-2t \\ y &amp;=-1+t \\ z &amp;= t \end{cases}\)</span> , <span class="math inline">\(\begin{cases} x &amp;=-5-2t \\ y &amp;=3+t \\ z &amp;=-4 + t \end{cases}\)</span> et <span class="math inline">\(\begin{cases} x &amp;=3+4t \\ y &amp;=-1-2t \\ z &amp;= -2t \end{cases}\)</span><br>
+sont des représentations paramétriques d’une même droite.</li>
+<li>Pour une représentation paramétrique donnée, pour chaque valeur de <span class="math inline">\(t\)</span>, on détermine un point de la droite et réciproquement.</li>
 </ul>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère <span class="math inline">\(A(-1;-1;1)\)</span> un point de l’espace et <span class="math inline">\(\mathscr{D}\)</span> une droite dont une équation paramétrique est :</p>
-<p><span class="math display">\[ \left\{\begin{array}{lll}
-x=2t-1\\
-y=-3t+2 \quad t \in \R\\
-z=t
-\end{array}\right.\]</span></p>
-Le point <span class="math inline">\(A\)</span> appartient-il à <span class="math inline">\(\mathscr{D}\)</span> ?<br>
-
+<div class="bloc-titre">
+Exemple 1 : Appartenance d’un point
+</div>
+<p>On considère <span class="math inline">\(A(-1;-1;1)\)</span> un point de l’espace et <span class="math inline">\(\mathscr{D}\)</span> une droite dont une équation paramétrique est : <span class="math display">\[ \begin{cases} x&amp;=2t-1 \\ y&amp;=-3t+2 \\ z&amp;=t \end{cases} \quad (t \in \mathbb{R})\]</span> Le point <span class="math inline">\(A\)</span> appartient-il à <span class="math inline">\(\mathscr{D}\)</span> ?</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p><span class="math inline">\(M \in \mathscr{D}\)</span> si et seulement si :</p>
-<p><span class="math display">\[\left\{\begin{array}{l}
--1=2t-1\\
--1=-3t+2\\
-1=t
-\end{array}\right.\]</span></p>
-La dernière équation donne <span class="math inline">\(t=1\)</span> et la première <span class="math inline">\(t=0\)</span>, ce qui est impossible.<br>
-On déduit donc que <span class="math inline">\(A \notin \mathscr{D}\)</span>.
+<p><span class="math inline">\(M \in \mathscr{D}\)</span> si et seulement s’il existe <span class="math inline">\(t\)</span> tel que : <span class="math display">\[\begin{cases} -1=2t-1 \\ -1=-3t+2 \\ 1=t \end{cases}\]</span> La dernière équation donne <span class="math inline">\(t=1\)</span> et la première donne <span class="math inline">\(t=0\)</span>, ce qui est impossible. On en déduit donc que <span class="math inline">\(A \notin \mathscr{D}\)</span>.</p>
 </details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère un cube <span class="math inline">\(ABCDEFGH\)</span> d’arête de longueur 1.<br>
-On se place dans le repère orthonormal <span class="math inline">\(\left(A~;~\ve{AB}~;~\ve{AD}~;~\ve{AE}\right)\)</span>.<br>
-On considère les points <span class="math inline">\(I\left(1~;\frac{1}{3}~;~0\right)\)</span>, <span class="math inline">\(J\left(0~;\frac{2}{3}~;~1\right)\)</span>, <span class="math inline">\(K\left(\frac{3}{4}~;~0~;~1\right)\)</span> et <span class="math inline">\(L(a~;~1~;~0)\)</span> avec <span class="math inline">\(a \in [0~;~1]\)</span>.</p>
+<div class="bloc-titre">
+Exemple 2 : Intersection de droites dans un cube
+</div>
+<p>On considère un cube <span class="math inline">\(ABCDEFGH\)</span> d’arête de longueur 1. On se place dans le repère orthonormal <span class="math inline">\((A \, ; \, \ve{AB} \, ; \, \ve{AD} \, ; \, \ve{AE})\)</span>.<br>
+On considère les points <span class="math inline">\(I\left(1 \, ; \dfrac{1}{3} \, ; \, 0\right)\)</span>, <span class="math inline">\(J\left(0 \, ; \dfrac{2}{3} \, ; \, 1\right)\)</span>, <span class="math inline">\(K\left(\dfrac{3}{4} \, ; \, 0 \, ; \, 1\right)\)</span> et <span class="math inline">\(L(a \, ; \, 1 \, ; \, 0)\)</span> avec <span class="math inline">\(a \in [0 \, ; \, 1]\)</span>.</p>
 <ol type="1">
 <li>Déterminer une représentation paramétrique de la droite <span class="math inline">\((IJ)\)</span>.</li>
 </ol>
@@ -980,34 +951,26 @@ Afficher la correction :
 </summary>
 On a <span class="math inline">\(\ve{IJ} \begin{pmatrix}
 0-1\\\frac{2}{3} - \frac{1}{3}\\1-0
-\end{pmatrix}=\begin{pmatrix}-1\\\frac{1}{3}\\1\end{pmatrix}\)</span>.<br>
-Donc :<br>
-<span class="math display">\[(IJ) : \left\{\begin{array}{lll}
-x=1-t\\
-y=\frac{1}{3} + \frac{1}{3}t \quad t \in \R\\
-z=t
+\end{pmatrix}=\begin{pmatrix}-1\\\frac{1}{3}\\1\end{pmatrix}\)</span>.\ D’où on déduit que <span class="math display">\[(IJ) : \left\{\begin{array}{lll}
+x&amp;=1-t&amp;\\
+y&amp;=\frac{1}{3} + \frac{1}{3}t&amp; \quad t \in \R\\
+z&amp;=t&amp;
 \end{array} \right.\]</span>
 </details>
 <ol start="2" type="1">
-<li>Démontrer qu’une équation paramétrique de <span class="math inline">\((KL)\)</span> est :</li>
+<li>Démontrer qu’une équation paramétrique de <span class="math inline">\((KL)\)</span> est : <span class="math inline">\(\begin{cases} x&amp;=\dfrac{3}{4}+t'\left(a-\dfrac{3}{4}\right) \\ y&amp;=t' \\ z&amp;=1 - t' \end{cases}, \quad t' \in \mathbb{R}\)</span></li>
 </ol>
-<p><span class="math display">\[\left\{\begin{array}{l c l}
-x=\frac{3}{4}+t'\left(a-\frac{3}{4}\right)\\
-y=t'\\
-z=1 - t'
-\end{array}\right.,\quad t'\in\R\]</span></p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-Cette droite passe par le point <span class="math inline">\(\left(\frac{3}{4}~;~0~;~1\right)\)</span> donc <span class="math inline">\(K\)</span> est un point de la droite.<br>
-De plus elle admet <span class="math inline">\(\begin{pmatrix}
+<p>Cette droite passe par le point <span class="math inline">\(\left(\frac{3}{4}~;~0~;~1\right)\)</span> donc <span class="math inline">\(K\)</span> est un point de la droite.\ De plus elle admet <span class="math inline">\(\begin{pmatrix}
 a-\frac{3}{4}\\1\\-1
-\end{pmatrix}\)</span> comme vecteur directeur, qui est le vecteur <span class="math inline">\(\ve{KL}\)</span>.<br>
+\end{pmatrix}\)</span> comme vecteur directeur, qui est le vecteur <span class="math inline">\(\ve{KL}\)</span>.</p>
 Ainsi il s’agit bien d’une représentation paramétrique de la droite <span class="math inline">\((KL)\)</span>.
 </details>
 <ol start="3" type="1">
-<li>Démontrer que les droites <span class="math inline">\((IJ)\)</span> et <span class="math inline">\((KL)\)</span> sont sécantes si, et seulement si, <span class="math inline">\(a=\frac{1}{4}\)</span>.</li>
+<li>Démontrer que les droites <span class="math inline">\((IJ)\)</span> et <span class="math inline">\((KL)\)</span> sont sécantes si, et seulement si, <span class="math inline">\(a=\dfrac{1}{4}\)</span>.</li>
 </ol>
 <details class="bloc cor">
 <summary>
@@ -1015,29 +978,27 @@ Afficher la correction :
 </summary>
 <p>Les droites <span class="math inline">\((IJ)\)</span> et <span class="math inline">\((KL)\)</span> sont sécantes si et seulement si</p>
 <p><span class="math display">\[\exists t,t' \in \R, \,
-\left\{\begin{array}{lll}
-\frac{3}{4}+t'\left(a-\frac{3}{4}\right)=1-t\\
-t'=\frac{1}{3} + \frac{1}{3}t     \\
-- t'= t   
-\end{array}\right.\]</span></p>
-<p>On a :</p>
-<p><span class="math display">\[\left\{\begin{array}{l}
-t'=\frac{1}{3} + \frac{1}{3}t     \\
+\begin{cases}
+\dfrac{3}{4}+t'\left(a-\dfrac{3}{4}\right)&amp;=1-t\\
+t'&amp;= \dfrac{1}{3} + \dfrac{1}{3}t     \\
+1-t'&amp;= t   
+\end{cases}\]</span> On a <span class="math display">\[\begin{cases}
+t'=\dfrac{1}{3} + \dfrac{1}{3}t     \\
 t=1-t'  
-\end{array}\right.
+\end{cases}
 \Longleftrightarrow
-\left\{\begin{array}{l}
+\begin{cases}
 t=1-t'\\
 3t' = 1+(1-t')
-\end{array}\right.
+\end{cases}
 \Longleftrightarrow
-\left\{\begin{array}{l}
-t'=\frac{1}{2}\\
-t=\frac{1}{2}
-\end{array}\right.\]</span></p>
-<p>Ainsi pour que les droites soient sécantes il faut et il suffit que :</p>
-<p><span class="math display">\[\frac{3}{4}+\frac{1}{2} \left(a-\frac{3}{4}\right)=\frac{1}{2}\]</span></p>
-C’est-à-dire que <span class="math inline">\(a=\frac{1}{4}\)</span>.
+\begin{cases}
+t'=\dfrac{1}{2}\\
+t=\dfrac{1}{2}
+\end{cases}\]</span></p>
+<p>Ainsi pour que les droites soient sécantes il faut et il suffit que</p>
+<p><span class="math display">\[\dfrac{3}{4}+\dfrac{1}{2} \left(a-\dfrac{3}{4}\right)=\dfrac{1}{2}\]</span></p>
+<p>C’est-à-dire que <span class="math inline">\(a=\dfrac{1}{4}\)</span>.</p>
 </details>
 </div>
 <hr>
@@ -1045,68 +1006,73 @@ C’est-à-dire que <span class="math inline">\(a=\frac{1}{4}\)</span>.
 <section id="représentation-paramétrique-dun-plan" class="level2">
 <h2 class="anchored" data-anchor-id="représentation-paramétrique-dun-plan">Représentation paramétrique d’un plan</h2>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> Soit <span class="math inline">\(P\)</span> un plan de l’espace et <span class="math inline">\(A(x_A \, ; \, y_A \, ; \, z_A)\)</span> un point de l’espace, et <span class="math inline">\(\ve{u}(a\, ; \,b\, ; \,c)\)</span> et <span class="math inline">\(\ve{v}(a'\, ; \,b'\, ; \,c')\)</span> deux vecteurs de l’espace avec <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> non colinéaires.</p>
-<p>On considère <span class="math inline">\(\mathscr{P}\)</span> le plan passant par <span class="math inline">\(A\)</span> et dirigé par les vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span>, alors :</p>
-<p><span class="math display">\[M \in \mathscr{P} \Longleftrightarrow \left\{\begin{array}{l}
-x=x_A+at+a's\\
-y=y_A+bt+b's\\
+<p><span class="bloc-titre">Théorème (admis) : </span></p>
+<p>Soit <span class="math inline">\(A(x_A \, ; \, y_A \, ; \, z_A)\)</span> un point de l’espace, et <span class="math inline">\(\ve{u}(a\, ; \,b\, ; \,c)\)</span> et <span class="math inline">\(\ve{v}(a'\, ; \,b'\, ; \,c')\)</span> deux vecteurs de l’espace avec <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> non colinéaires.<br>
+On considère <span class="math inline">\(\mathscr{P}\)</span> le plan passant par <span class="math inline">\(A\)</span> et dirigé par les vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span>, alors : <span class="math display">\[M \in \mathscr{P} \Leftrightarrow \begin{cases}
+x=x_A+at+a's \\
+y=y_A+bt+b's \\
 z=z_A+ct+c's
-\end{array} \right. \quad t,s \in \R\]</span></p>
-<p>Ce système est appelé représentation paramétrique du plan.</p>
+\end{cases} \quad t,s \in \mathbb{R}\]</span> Ce système est appelé <strong>représentation paramétrique</strong> du plan.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> On considère le plan <span class="math inline">\((\mathscr{P})\)</span> dont une représentation paramétrique est :</p>
-<p><span class="math display">\[\mathscr{(P)} : \left\{\begin{array}{l}
-x=5-2t+3s\\
-y=-1-t\\
-z=2-t-s
-\end{array}\right. \quad t,s \in \R\]</span></p>
-<p>et la droite <span class="math inline">\(\mathscr{D}\)</span> dont une représentation paramétrique est :</p>
-<p><span class="math display">\[\mathscr{D} : \left\{\begin{array}{l}
-x=1+2k\\
-y=5-k\\
-z=k
-\end{array}\right. \quad k \in \R\]</span></p>
-Déterminons les coordonnées du point d’intersection du plan et de la droite, s’il existe.
+<div class="bloc-titre">
+Exemple : Intersection d’une droite et d’un plan
+</div>
+<p>On considère le plan <span class="math inline">\(\mathscr{P}\)</span> dont une représentation paramétrique est : <span class="math display">\[\mathscr{(P)} : \begin{cases} x=5-2t+3s \\ y=-1-t \\ z=2-t-s \end{cases} \quad t,s \in \mathbb{R}\]</span> et la droite <span class="math inline">\(\mathscr{D}\)</span> dont une représentation paramétrique est : <span class="math display">\[\mathscr{D} : \begin{cases} x=1+2k \\ y=5-k \\ z=k \end{cases} \quad k \in \mathbb{R}\]</span> Déterminons les coordonnées du point d’intersection du plan et de la droite, s’il existe.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p><span class="math display">\[\begin{align*}
-M \in \mathscr{D} \cap \mathscr{P}
-&amp;\Longleftrightarrow \exists k,s,t \in \R, \,
-\left\{\begin{array}{l}
-1+2k=5-2t+3s\\
-5-k=-1-t\\
-k=2-t-s
-\end{array} \right.\\
-&amp;\Longleftrightarrow
-\left\{\begin{array}{l}
-k=2-t-s\\
-1+2(2-t-s)=5-2t+3s\\
-5-(2-t-s)=-1-t
-\end{array} \right.\\
-&amp;\Longleftrightarrow
-\left\{\begin{array}{l}
-k=2-t-s\\
-5-2t-2s=5-2t+3s\\
-3+t+s=-1-t
-\end{array} \right.\\
-&amp;\Longleftrightarrow
-\left\{\begin{array}{l}
-k=2-t-s\\
-s=0\\
-4+2t+s=0
-\end{array} \right.\\
-&amp;\Longleftrightarrow
-\left\{\begin{array}{l}
-k=4\\
-s=0\\
-t=-2
-\end{array} \right.
-\end{align*}\]</span></p>
-Ainsi le point <span class="math inline">\(M(9\,;\,1\,;\,4)\)</span> est le point d’intersection de la droite et du plan.
+<p><span class="math inline">\(M \in \mathscr{D} \cap \mathscr{P} \Longleftrightarrow \exists k,s,t \in \mathbb{R}\)</span> tels que : <span class="math display">\[\begin{cases} 1+2k=5-2t+3s \\ 5-k=-1-t \\ k=2-t-s \end{cases}\]</span> <span class="math inline">\(\Longleftrightarrow \begin{cases} k=2-t-s \\ 1+2(2-t-s)=5-2t+3s \\ 5-(2-t-s)=-1-t \end{cases}\)</span> (Substitution de <span class="math inline">\(k\)</span> dans les deux premières lignes)<br>
+<span class="math inline">\(\Longleftrightarrow \begin{cases} k=2-t-s \\ 5-2t-2s=5-2t+3s \\ 3+t+s=-1-t \end{cases}\)</span><br>
+<span class="math inline">\(\Longleftrightarrow \begin{cases} k=2-t-s \\ s=0 \\ 4+2t+s=0 \end{cases}\)</span><br>
+<span class="math inline">\(\Longleftrightarrow \begin{cases} k=4 \\ s=0 \\ t=-2 \end{cases}\)</span></p>
+<p>En remplaçant <span class="math inline">\(k=4\)</span> dans le système de la droite <span class="math inline">\(\mathscr{D}\)</span> : <span class="math display">\[\begin{cases} x = 1 + 2(4) = 9 \\ y = 5 - 4 = 1 \\ z = 4 \end{cases}\]</span> Ainsi, le point <span class="math inline">\(M(9 \, ; \, 1 \, ; \, 4)\)</span> est le point d’intersection de la droite et du plan.</p>
 </details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice de synthèse : Positions relatives et paramètre
+</div>
+<p>Soit le plan <span class="math inline">\(\mathscr{P}\)</span> passant par <span class="math inline">\(A(1\,;\,2\,;\,1)\)</span> et de vecteurs directeurs <span class="math inline">\(\ve{u}\begin{pmatrix} 1\\1\\0 \end{pmatrix}\)</span> et <span class="math inline">\(\ve{v}\begin{pmatrix} 0\\1\\1 \end{pmatrix}\)</span>.<br>
+Soit la droite <span class="math inline">\(\mathscr{D}_m\)</span> (où <span class="math inline">\(m \in \mathbb{R}\)</span>) définie par : <span class="math display">\[\mathscr{D}_m : \begin{cases} x = 2 + mt \\ y = 1 - t \\ z = t \end{cases} \quad t \in \mathbb{R}\]</span></p>
+<ol type="1">
+<li>Déterminer une représentation paramétrique du plan <span class="math inline">\(\mathscr{P}\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+Le plan <span class="math inline">\(\mathscr{P}\)</span> passant par <span class="math inline">\(A(1\,;\,2\,;\,1)\)</span> et dirigé par <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> admet pour représentation paramétrique : <span class="math display">\[\mathscr{P} : \begin{cases} x = 1 + s \\ y = 2 + s + k \\ z = 1 + k \end{cases} \quad s, k \in \mathbb{R}\]</span>
+</details>
+<ol type="1">
+<li>Déterminer la valeur de <span class="math inline">\(m\)</span> telle que <span class="math inline">\(\mathscr{P} // \mathscr{D}_m\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+La droite <span class="math inline">\(\mathscr{D}_m\)</span> est de vecteur directeur <span class="math inline">\(\ve{w}\begin{pmatrix} m \\ -1 \\ 1 \end{pmatrix}\)</span>.<br>
+<span class="math inline">\(\mathscr{D}_m // \mathscr{P}\)</span> si et seulement si <span class="math inline">\(\ve{w}\)</span> est une combinaison linéaire de <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span>.<br>
+On cherche donc <span class="math inline">\(s, k \in \mathbb{R}\)</span> tels que <span class="math inline">\(\ve{w} = s\ve{u} + k\ve{v}\)</span> : <span class="math display">\[\begin{cases} m = s \\ -1 = s + k \\ 1 = k \end{cases} \iff \begin{cases} k = 1 \\ s = -2 \\ m = -2 \end{cases}\]</span> Ainsi, <span class="math inline">\(\mathscr{P} // \mathscr{D}_m\)</span> si et seulement si <span class="math inline">\(m = -2\)</span>.
+</details>
+<ol start="3" type="1">
+<li>Pour <span class="math inline">\(m \neq -2\)</span>, déterminer les coordonnées du point d’intersection de <span class="math inline">\(\mathscr{P}\)</span> et <span class="math inline">\(\mathscr{D}_m\)</span> en fonction de <span class="math inline">\(m\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Soit <span class="math inline">\(M(x\,;\, y\,;\, z)\)</span> le point d’intersection. Ses coordonnées vérifient le système : <span class="math display">\[\begin{cases} 2 + mt = 1 + s \\ 1 - t = 2 + s + k \\ t = 1 + k \end{cases} \iff \begin{cases} s = 1 + mt \\ k = t - 1 \\ 1 - t = 2 + (1 + mt) + (t - 1) \end{cases}\]</span> L’équation sur <span class="math inline">\(t\)</span> devient : <span class="math display">\[1 - t = 2 + mt + t \iff 1 - 2 = mt + 2t \iff -1 = t(m + 2)\]</span> Comme <span class="math inline">\(m \neq -2\)</span>, on a : <span class="math inline">\(t = \dfrac{-1}{m+2}\)</span>.<br>
+On calcule alors les coordonnées de <span class="math inline">\(M\)</span> en injectant <span class="math inline">\(t\)</span> dans la représentation de <span class="math inline">\(\mathscr{D}_m\)</span> :</p>
+<ul>
+<li><span class="math inline">\(x = 2 + m\left(\dfrac{-1}{m+2}\right) = \dfrac{2(m+2) - m}{m+2} = \dfrac{m+4}{m+2}\)</span></li>
+<li><span class="math inline">\(y = 1 - \left(\dfrac{-1}{m+2}\right) = \dfrac{m+2+1}{m+2} = \dfrac{m+3}{m+2}\)</span></li>
+<li><span class="math inline">\(z = \dfrac{-1}{m+2}\)</span></li>
+</ul>
+<p>Le point d’intersection est <span class="math inline">\(M\left( \dfrac{m+4}{m+2} \, ; \, \dfrac{m+3}{m+2} \, ; \, \dfrac{-1}{m+2} \right)\)</span>.</p>
+</details>
+
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="parallele.html">⬅️</a></p>

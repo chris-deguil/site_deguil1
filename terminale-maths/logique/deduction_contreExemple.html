@@ -159,8 +159,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -533,6 +533,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -565,6 +571,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -922,64 +934,83 @@ window.Quarto = {
 <section id="raisonnement-par-déduction" class="level3">
 <h3 class="anchored" data-anchor-id="raisonnement-par-déduction">Raisonnement par déduction</h3>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> Le raisonnement par déduction est le raisonnement le plus courant. Partant d’hypothèses, on construit un raisonnement logique (à l’aide d’implications successives) qui aboutit à la conclusion.</p>
+<p><span class="bloc-titre">Raisonnement par déduction : </span><br></p>
+<p>Le raisonnement par déduction est le raisonnement le plus courant. Partant d’hypothèses, on construit un raisonnement logique, à l’aide d’implications successives, qui aboutit à la conclusion.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple — Somme des termes consécutifs de la suite <span class="math inline">\((q^n)_{n\in\N}\)</span> : </span><br> Soit <span class="math inline">\(q\in\R\setminus\{0;1\}\)</span>. Démontrer que <span class="math display">\[\sum_{k=0}^n q^k = \frac{1-q^{\,n+1}}{1-q}.\]</span></p>
-<details class="bloc cor">
-<summary>
-Afficher la correction
-</summary>
-Soit <span class="math display">\[S=\sum_{k=0}^n q^k = q^0+q^1+\dots +q^{n}.\]</span> Alors <span class="math display">\[qS= \sum_{k=0}^n q^{k+1} = q^1+q^2+\dots +q^{n+1}.\]</span> Ainsi, <span class="math display">\[
-S(1-q)= S-qS = \sum_{k=0}^n q^k - \sum_{k=0}^n q^{k+1}
-=  q^0+q^1+\dots +q^{n} - ( q^1+q^2+\dots +q^{n+1}) = 1-q^{n+1},
-\]</span> d’où <span class="math display">\[S = \frac{1-q^{\,n+1}}{1-q}.\]</span>
-</details>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Somme des termes d’une suite géométrique </span>
+</div>
+<p>Soit <span class="math inline">\(q \in \mathbb{R} \setminus \{0;1\}\)</span>. Démontrons que : <span class="math display">\[\sum_{k=0}^n q^k = \frac{1-q^{n+1}}{1-q}\]</span></p>
+<p>Soit <span class="math inline">\(S = \sum_{k=0}^n q^k = q^0 + q^1 + \dots + q^{n}\)</span>.<br>
+Alors <span class="math inline">\(qS = \sum_{k=0}^n q^{k+1} = q^1 + q^2 + \dots + q^{n+1}\)</span>.</p>
+<p>Ainsi : <span class="math display">\[S(1-q) = S - qS = \sum_{k=0}^n q^k - \sum_{k=0}^n q^{k+1}\]</span> <span class="math display">\[S(1-q) = q^0 + q^1 + \dots + q^{n} - (q^1 + q^2 + \dots + q^{n+1}) = 1 - q^{n+1}\]</span> D’où : <span class="math display">\[S = \frac{1-q^{n+1}}{1-q}\]</span></p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Démontrons que si on considère <span class="math inline">\(d\)</span> et <span class="math inline">\(d'\)</span> deux droites d’équations réduites respectives <span class="math inline">\(y=mx+p\)</span> et <span class="math inline">\(y=m'x+p'\)</span>, alors <span class="math inline">\(d\)</span> et <span class="math inline">\(d'\)</span> sont orthogonales si et seulement si <span class="math inline">\(mm'=-1\)</span>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Orthogonalité de deux droites </span>
+</div>
+<p>Démontrons que si on considère <span class="math inline">\(d\)</span> et <span class="math inline">\(d'\)</span> deux droites d’équations réduites respectives <span class="math inline">\(y=mx+p\)</span> et <span class="math inline">\(y=m'x+p'\)</span>, alors <span class="math inline">\(d\)</span> et <span class="math inline">\(d'\)</span> sont orthogonales si et seulement si <span class="math inline">\(mm'=-1\)</span>.</p>
 <ul>
-<li><p>Soit <span class="math inline">\(d\,:\, y=mx+p\)</span>, elle admet comme équation cartésienne <span class="math inline">\(mx-y+p=0\)</span>.<br>
-Ainsi <span class="math inline">\(\vec{v}\,(1\,;\,m)\)</span> est un vecteur directeur de <span class="math inline">\(d\)</span>.</p></li>
-<li><p>Soit <span class="math inline">\(d'\,:\, y=m'x+p'\)</span>, elle admet comme équation cartésienne <span class="math inline">\(m'x-y+p'=0\)</span>.<br>
-Ainsi <span class="math inline">\(\vec{v'}\,(1\,;\,m')\)</span> est un vecteur directeur de <span class="math inline">\(d'\)</span>.</p></li>
+<li>Soit <span class="math inline">\(d : y=mx+p\)</span>, elle admet comme équation cartésienne <span class="math inline">\(mx-y+p=0\)</span>. Ainsi <span class="math inline">\(\vec{v}(1 ; m)\)</span> est un vecteur directeur de <span class="math inline">\(d\)</span>.</li>
+<li>Soit <span class="math inline">\(d' : y=m'x+p'\)</span>, elle admet comme équation cartésienne <span class="math inline">\(m'x-y+p'=0\)</span>. Ainsi <span class="math inline">\(\vec{v'}(1 ; m')\)</span> est un vecteur directeur de <span class="math inline">\(d'\)</span>.</li>
 </ul>
-<p>Or <span class="math inline">\(d\)</span> et <span class="math inline">\(d'\)</span> sont orthogonales si et seulement si les vecteurs directeurs le sont, si et seulement si <span class="math inline">\(\vec{v}\!.\,\vec{v'}=0\)</span>, si et seulement si <span class="math inline">\(1 \times 1 + m \times m' = 0\)</span>, si et seulement si <span class="math inline">\(mm'=-1\)</span>.</p>
+<p>Or <span class="math inline">\(d\)</span> et <span class="math inline">\(d'\)</span> sont orthogonales si et seulement si les vecteurs directeurs le sont, si et seulement si <span class="math inline">\(\vec{v} \cdot \vec{v'} = 0\)</span>, si et seulement si <span class="math inline">\(1 \times 1 + m \times m' = 0\)</span>, si et seulement si <span class="math inline">\(mm'=-1\)</span>.</p>
 </div>
 <div class="bloc ex">
-<span class="bloc-titre">Exemple : </span><br> Démontrer que la somme de deux nombres rationnels est un rationnel.<br>
-
-<details class="bloc cor">
-<summary>
-Afficher la correction
-</summary>
-Soient <span class="math inline">\(a=\dfrac{p}{q}\)</span> avec <span class="math inline">\(p \in \Z\)</span> et <span class="math inline">\(q \in \N^*\)</span>, et <span class="math inline">\(b=\dfrac{r}{s}\)</span> avec <span class="math inline">\(r \in \Z\)</span> et <span class="math inline">\(s \in \N^*\)</span>.<br>
-Alors <span class="math display">\[a+b=\frac{p}{q}+\frac{r}{s}=\frac{ps+qr}{qs}.\]</span> Or <span class="math display">\[(q,s\in \N^* \Longrightarrow qs\in \N^*) \quad \text{et} \quad (p,r\in \Z,\ q,s\in \N^* \Longrightarrow ps+qr\in \Z).\]</span> On en déduit alors que <span class="math inline">\(a+b\)</span> s’écrit comme le quotient d’un élément de <span class="math inline">\(\Z\)</span> par un élément de <span class="math inline">\(\N^*\)</span>, donc c’est un rationnel.
-</details>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Somme de deux rationnels </span>
 </div>
+<p>Démontrons que la somme de deux nombres rationnels est un rationnel.<br>
+Soient <span class="math inline">\(a = \frac{p}{q}\)</span> avec <span class="math inline">\(p \in \mathbb{Z}\)</span> et <span class="math inline">\(q \in \mathbb{N}^*\)</span>, et <span class="math inline">\(b = \frac{r}{s}\)</span> avec <span class="math inline">\(r \in \mathbb{Z}\)</span> et <span class="math inline">\(s \in \mathbb{N}^*\)</span>.</p>
+<p>Alors : <span class="math display">\[a+b = \frac{p}{q} + \frac{r}{s} = \frac{ps+qr}{qs}\]</span></p>
+<p>Or : <span class="math display">\[(q,s \in \mathbb{N}^* \Longrightarrow qs \in \mathbb{N}^*) \quad \text{et} \quad (p,r \in \mathbb{Z}, q,s \in \mathbb{N}^* \Longrightarrow ps+qr \in \mathbb{Z})\]</span></p>
+<p>On en déduit alors que <span class="math inline">\(a+b\)</span> s’écrit comme le quotient d’un élément de <span class="math inline">\(\mathbb{Z}\)</span> par un élément de <span class="math inline">\(\mathbb{N}^*\)</span>, donc c’est un rationnel.</p>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Somme de deux rationnels </span>
+</div>
+<p>Démontrons que la somme de deux nombres rationnels est un rationnel.</p>
+<p>Soient <span class="math inline">\(a=\dfrac{p}{q}\)</span> avec <span class="math inline">\(p \in \mathbb{Z}\)</span> et <span class="math inline">\(q \in \mathbb{N}^*\)</span>, et <span class="math inline">\(b=\dfrac{r}{s}\)</span> avec <span class="math inline">\(r \in \mathbb{Z}\)</span> et <span class="math inline">\(s \in \mathbb{N}^*\)</span>.</p>
+<p>Alors : <span class="math display">\[a+b=\frac{p}{q}+\frac{r}{s}=\frac{ps+qr}{qs}\]</span></p>
+<p>Or : <span class="math display">\[(q,s\in \mathbb{N}^* \Longrightarrow qs\in \mathbb{N}^*) \quad \text{et} \quad (p,r\in \mathbb{Z},\ q,s\in \mathbb{N}^* \Longrightarrow ps+qr\in \mathbb{Z})\]</span></p>
+<p>On en déduit alors que <span class="math inline">\(a+b\)</span> s’écrit comme le quotient d’un élément de <span class="math inline">\(\mathbb{Z}\)</span> par un élément de <span class="math inline">\(\mathbb{N}^*\)</span>, donc c’est un rationnel.</p>
+</div>
+<p>:::</p>
+<hr>
 </section>
 <section id="utilisation-dun-contre-exemple" class="level3">
 <h3 class="anchored" data-anchor-id="utilisation-dun-contre-exemple">Utilisation d’un contre-exemple</h3>
-<div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> On utilise un contre-exemple pour nier une affirmation. Il suffit souvent de trouver un cas particulier qui vient contredire l’affirmation.</p>
+<div class="bloc thm">
+<p><span class="bloc-titre">Utilisation d’un contre-exemple : </span><br></p>
+<p>On utilise un contre-exemple pour nier une affirmation. Il suffit souvent de trouver un cas particulier qui vient contredire l’affirmation.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> La somme de deux irrationnels est irrationnelle.<br>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>La somme de deux irrationnels est irrationnelle.<br>
 Cette affirmation est fausse. En effet, <span class="math inline">\(\sqrt{2}+(-\sqrt{2})=0\)</span>.<br>
 Or <span class="math inline">\(0 \notin \R\backslash \Q\)</span>.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Toute fonction définie sur <span class="math inline">\(\R\)</span> est dérivable sur <span class="math inline">\(\R\)</span>.<br>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Toute fonction définie sur <span class="math inline">\(\R\)</span> est dérivable sur <span class="math inline">\(\R\)</span>.<br>
 Faux, la fonction <span class="math inline">\(f:x \longmapsto \abs{x}\)</span> n’est pas dérivable en <span class="math inline">\(0\)</span>.<br>
 En effet, <span class="math display">\[f_d'(0)=\lim_{h \to 0^+} \frac{f(h)-f(0)}{h}=\lim_{h \to 0^+} \frac{h}{h}=1
 \quad \text{et} \quad
 f_g'(0)=\lim_{h \to 0^-} \frac{f(h)-f(0)}{h}=\lim_{h \to 0^-}\frac{-h}{h}=-1.\]</span> Les dérivées à droite et à gauche en <span class="math inline">\(0\)</span> ne sont pas égales, la fonction n’est donc pas dérivable en <span class="math inline">\(0\)</span>.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Le polynôme <span class="math inline">\(P(n)=n^2+n+41\)</span> donne tous les nombres premiers à partir de <span class="math inline">\(41\)</span>.<br>
-Faux, <span class="math inline">\(P(40)=1681\)</span>, or <span class="math inline">\(1681=41^2\)</span>.<br>
-<em>Ce polynôme est dû à Euler. Le plus simple est d’utiliser la calculatrice pour trouver une valeur de <span class="math inline">\(n\)</span> qui ne fournit pas un nombre premier ainsi qu’un algorithme de test de primalité. On peut aussi retenir qu’en 1752, Goldbach prouve qu’un polynôme à coefficients entiers ne peut pas donner que des premiers pour toutes les valeurs entières.</em></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
 </div>
+<p>Le polynôme <span class="math inline">\(P(n)=n^2+n+41\)</span> donne tous les nombres premiers à partir de <span class="math inline">\(41\)</span>.<br>
+Faux, <span class="math inline">\(P(40)=1681\)</span>, or <span class="math inline">\(1681=41^2\)</span>.</p>
+<p><em>Ce polynôme est dû à Euler. Le plus simple est d’utiliser la calculatrice pour trouver une valeur de <span class="math inline">\(n\)</span> qui ne fournit pas un nombre premier ainsi qu’un algorithme de test de primalité. On peut aussi retenir qu’en 1752, Goldbach prouve qu’un polynôme à coefficients entiers ne peut pas donner que des premiers pour toutes les valeurs entières.</em></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> estpremier(n):</span>
@@ -1008,6 +1039,7 @@ Faux, <span class="math inline">\(P(40)=1681\)</span>, or <span class="math inli
 </div>
 
 
+</div>
 </section>
 
 </main> <!-- /main -->

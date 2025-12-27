@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -888,110 +900,86 @@ window.Quarto = {
 <section id="application-à-létude-des-suites" class="level2">
 <h2 class="anchored" data-anchor-id="application-à-létude-des-suites">Application à l’étude des suites</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br>
-Soit une suite <span class="math inline">\((u_n)\)</span> définie à partir d’un certain rang <span class="math inline">\(p \in \N\)</span>. On dit que <span class="math inline">\((u_n)\)</span> est :</p>
-<ul>
-<li><strong>majorée</strong> à partir du rang <span class="math inline">\(k \geqslant p\)</span>, lorsqu’il existe un réel <span class="math inline">\(M\)</span> tel que pour tout entier naturel <span class="math inline">\(n \geqslant k\)</span>, <span class="math inline">\(u_n \leqslant M\)</span>.<br>
-</li>
-<li><strong>minorée</strong> à partir du rang <span class="math inline">\(k \geqslant p\)</span>, lorsqu’il existe un réel <span class="math inline">\(m\)</span> tel que pour tout entier naturel <span class="math inline">\(n \geqslant k\)</span>, <span class="math inline">\(u_n \geqslant m\)</span>.<br>
-</li>
-<li><strong>bornée</strong> à partir du rang <span class="math inline">\(k \geqslant p\)</span>, lorsqu’elle est majorée et minorée à partir du rang <span class="math inline">\(k\)</span>.</li>
-</ul>
+<p><span class="bloc-titre">Définition : </span><br></p>
+<p>Soit une suite <span class="math inline">\((u_n)\)</span> définie à partir d’un certain rang <span class="math inline">\(p \in \N\)</span>. On dit que <span class="math inline">\((u_n)\)</span> est : * <strong>majorée</strong> à partir du rang <span class="math inline">\(k \geqslant p\)</span>, lorsqu’il existe un réel <span class="math inline">\(M\)</span> tel que pour tout entier naturel <span class="math inline">\(n \geqslant k\)</span>, <span class="math inline">\(u_n \leqslant M\)</span>. * <strong>minorée</strong> à partir du rang <span class="math inline">\(k \geqslant p\)</span>, lorsqu’il existe un réel <span class="math inline">\(m\)</span> tel que pour tout entier naturel <span class="math inline">\(n \geqslant k\)</span>, <span class="math inline">\(u_n \geqslant m\)</span>. * <strong>bornée</strong> à partir du rang <span class="math inline">\(k \geqslant p\)</span>, lorsqu’elle est majorée et minorée à partir du rang <span class="math inline">\(k\)</span>.</p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br>
-Majorant et minorant ne sont pas uniques : si une suite <span class="math inline">\((u_n)\)</span> est majorée par <span class="math inline">\(3\)</span>, alors elle est majorée par <span class="math inline">\(4\)</span>.</p>
+<p><span class="bloc-titre">Remarque : </span><br></p>
+<p>Majorant et minorant ne sont pas uniques : si une suite <span class="math inline">\((u_n)\)</span> est majorée par <span class="math inline">\(3\)</span>, alors elle est majorée par <span class="math inline">\(4\)</span>.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br>
-On considère la suite <span class="math inline">\((v_n)\)</span> définie pour tout <span class="math inline">\(n \in \N^*\)</span> par <span class="math inline">\(v_n = 3 - \frac{1}{n}\)</span>.</p>
-<p>Montrons que la suite est bornée.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la suite <span class="math inline">\((v_n)\)</span> définie pour tout <span class="math inline">\(n \in \N^*\)</span> par <span class="math inline">\(v_n = 3 - \frac{1}{n}\)</span>.<br>
+Montrons que la suite est bornée.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<p>Pour tout <span class="math inline">\(n \geqslant 1\)</span>, la fonction inverse étant décroissante, on a</p>
-<p><span class="math display">\[
-0 &lt; \frac{1}{n} \leqslant 1.
-\]</span></p>
-<p>Or,</p>
-<p><span class="math display">\[
-0 &lt; \frac{1}{n} \leqslant 1 \Longrightarrow -1 \leqslant -\frac{1}{n} &lt; 0 \Longrightarrow 2 \leqslant v_n &lt; 3.
-\]</span></p>
-<p>On déduit alors que, pour tout <span class="math inline">\(n \in \N^*\)</span>, <span class="math inline">\(v_n \in [2, 3[\)</span>.<br>
-Ainsi, la suite est bornée : minorée par <span class="math inline">\(2\)</span> et majorée par <span class="math inline">\(3\)</span>.</p>
+<p>Pour tout <span class="math inline">\(n \geqslant 1\)</span>, la fonction inverse étant décroissante, on a <span class="math inline">\(0 &lt; \frac{1}{n} \leqslant 1\)</span>.<br>
+Or, <span class="math display">\[0 &lt; \frac{1}{n} \leqslant 1 \Longrightarrow -1 \leqslant -\frac{1}{n} &lt; 0 \Longrightarrow 2 \leqslant v_n &lt; 3.\]</span> On déduit alors que, pour tout <span class="math inline">\(n \in \N^*\)</span>, <span class="math inline">\(v_n \in [2, 3[\)</span>. Ainsi, la suite est bornée : minorée par <span class="math inline">\(2\)</span> et majorée par <span class="math inline">\(3\)</span>.</p>
 </details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br>
-On considère la suite <span class="math inline">\((u_n)\)</span> définie par récurrence sur <span class="math inline">\(\N\)</span> par <span class="math inline">\(u_0 = -2\)</span> et <span class="math inline">\(u_{n+1} = 2 \sqrt{u_n + 3}\)</span>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par récurrence sur <span class="math inline">\(\N\)</span> par <span class="math inline">\(u_0 = -2\)</span> et <span class="math inline">\(u_{n+1} = 2 \sqrt{u_n + 3}\)</span>.</p>
 <ol type="1">
-<li>Construire les premiers termes de la suite.<br>
-
+<li>Construire graphiquement des premiers termes :
 <details class="bloc cor">
 <summary>
 Afficher la correction
 </summary>
 <div style="text-align:center;">
-<p><img src="../../image/maths_term/Chap1_Recurrence_construction_terme1.png" alt="" width="40%/"></p>
+<img src="../../image/maths_term/Chap1_Recurrence_construction_terme1.png" alt="" width="40%/">
 </div>
 </details></li>
-<li>Étude de la fonction associée.</li>
+<li>Étudier de la fonction associée.</li>
 </ol>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<p>Soit la fonction <span class="math inline">\(f\)</span>, définie par <span class="math inline">\(f(x) = 2 \sqrt{x+3}\)</span> sur <span class="math inline">\([-3, +\infty[\)</span>.<br>
-Pour tout réel <span class="math inline">\(x, y \in [-3, +\infty[\)</span>,</p>
-<p><span class="math display">\[
-x &lt; y \Longrightarrow x+3 &lt; y+3 \underset{\sqrt \nearrow}{\Longrightarrow} \sqrt{x+3} &lt; \sqrt{y+3} \Longrightarrow f(x) &lt; f(y).
-\]</span></p>
+<p>Soit la fonction <span class="math inline">\(f\)</span>, définie par <span class="math inline">\(f(x) = 2 \sqrt{x+3}\)</span> sur <span class="math inline">\([-3, +\infty[\)</span>.</p>
+<p>Pour tout réel <span class="math inline">\(x, y \in [-3, +\infty[\)</span>, <span class="math display">\[x &lt; y \Longrightarrow x+3 &lt; y+3 \Longrightarrow \sqrt{x+3} &lt; \sqrt{y+3} \Longrightarrow f(x) &lt; f(y).\]</span></p>
 <p>Donc, par définition, la fonction <span class="math inline">\(f\)</span> est croissante sur son ensemble de définition.</p>
-<p>De plus, <span class="math inline">\(f(-2) = 2\)</span> et <span class="math inline">\(f(6) = 6\)</span>.<br>
-On en déduit que <span class="math inline">\(f([-2, 6]) = [f(-2), f(6)] = [2, 6] \subset [-2, 6]\)</span>.</p>
-<p><strong>On dit alors que l’intervalle est stable par la fonction <span class="math inline">\(f\)</span>.</strong><br>
-C’est-à-dire que pour tout réel <span class="math inline">\(x \in [-2, 6]\)</span>, on a <span class="math inline">\(f(x) \in [-2, 6]\)</span>.</p>
+<p>De plus, <span class="math inline">\(f(-2) = 2\)</span> et <span class="math inline">\(f(6) = 6\)</span>.</p>
+<p>On en déduit que <span class="math inline">\(f([-2, 6]) = [f(-2), f(6)] = [2, 6] \subset [-2, 6]\)</span>.</p>
+<p><strong>On dit alors que l’intervalle est stable par la fonction <span class="math inline">\(f\)</span>.</strong></p>
+<p>C’est-à-dire que pour tout réel <span class="math inline">\(x \in [-2, 6]\)</span>, on a <span class="math inline">\(f(x) \in [-2, 6]\)</span>.</p>
 </details>
 <ol start="3" type="1">
-<li>Démontrons que la suite est bornée.</li>
+<li>Démontrer que la suite est bornée.<br>
+<em>On pourra utiliser la calculatrice ou le tableau des variations de la fonction pour conjecturer les bornes</em></li>
 </ol>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
 <p>Pour tout entier naturel <span class="math inline">\(n\)</span>, on pose <span class="math inline">\(Q_n : u_n \in [-2, 6]\)</span>.</p>
 <ul>
-<li><p><em>Initialisation :</em><br>
-Pour <span class="math inline">\(n=0\)</span>, on a <span class="math inline">\(u_0 = -2\)</span>, donc <span class="math inline">\(u_0 \in [-2, 6]\)</span>.<br>
-Ainsi <span class="math inline">\(Q_0\)</span> est vraie.</p></li>
-<li><p><em>Hérédité :</em><br>
+<li><strong>Initialisation :</strong><br>
+Pour <span class="math inline">\(n=0\)</span>, on a <span class="math inline">\(u_0 = -2\)</span>, donc <span class="math inline">\(u_0 \in [-2, 6]\)</span>. Ainsi <span class="math inline">\(Q_0\)</span> est vraie.<br>
+</li>
+<li><strong>Hérédité :</strong><br>
 On suppose que pour un entier <span class="math inline">\(n\)</span> arbitrairement fixé, la propriété <span class="math inline">\(Q_n\)</span> est vraie, c’est-à-dire que <span class="math inline">\(u_n \in [-2, 6]\)</span>.<br>
-Démontrons que <span class="math inline">\((Q_n \Longrightarrow Q_{n+1})\)</span> est vraie. <br> D’après l’hypothèse de récurrence, <span class="math inline">\(u_n \in [-2, 6]\)</span>.<br>
-Donc, d’après la propriété précédente, <span class="math inline">\(u_{n+1} = f(u_n) \in [2, 6] \subset [-2, 6]\)</span>.<br>
-On déduit alors que <span class="math inline">\((Q_n \Rightarrow Q_{n+1})\)</span> est vraie.<br>
-Ainsi, <span class="math inline">\(Q_n\)</span> est vraie et la propriété est héréditaire, donc <span class="math inline">\(Q_{n+1}\)</span> est vraie.</p></li>
-<li><p><em>Conclusion :</em><br>
-On a <span class="math inline">\(Q_0\)</span> vraie et la propriété est héréditaire.<br>
-On déduit que <span class="math inline">\(\forall \, n \in \N, \, Q_n\)</span> est vraie, donc pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(u_n \in [-2, 6]\)</span>.</p></li>
+Démontrons que <span class="math inline">\((Q_n \Longrightarrow Q_{n+1})\)</span> est vraie.<br>
+D’après l’hypothèse de récurrence, <span class="math inline">\(u_n \in [-2, 6]\)</span>.<br>
+Donc, d’après la propriété précédente (stabilité), <span class="math inline">\(u_{n+1} = f(u_n) \in [2, 6] \subset [-2, 6]\)</span>.<br>
+On déduit alors que <span class="math inline">\(Q_{n+1}\)</span> est vraie.</li>
+<li><strong>Conclusion :</strong> La propriété est initialisée et héréditaire. Par récurrence, pour tout <span class="math inline">\(n \in \N, u_n \in [-2, 6]\)</span>.</li>
 </ul>
 </details>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span></p>
+<p><span class="bloc-titre">Remarque : </span><br></p>
 <ul>
 <li>Soit <span class="math inline">\(I\)</span> un intervalle, <span class="math inline">\(f(I)\)</span> est appelé intervalle image de <span class="math inline">\(f\)</span> et c’est un intervalle.<br>
-En notant <span class="math inline">\(M\)</span> le maximum de <span class="math inline">\(f\)</span> sur <span class="math inline">\(I\)</span> et <span class="math inline">\(m\)</span> le minimum de <span class="math inline">\(f\)</span> sur <span class="math inline">\(I\)</span>, on a</li>
+En notant <span class="math inline">\(M\)</span> le maximum de <span class="math inline">\(f\)</span> sur <span class="math inline">\(I\)</span> et <span class="math inline">\(m\)</span> le minimum de <span class="math inline">\(f\)</span> sur <span class="math inline">\(I\)</span>, on a <span class="math inline">\(f(I) = [m, M]\)</span>.</li>
+<li>Dans l’exemple précédent, la fonction étant croissante sur <span class="math inline">\([-2, 6]\)</span>, le maximum de <span class="math inline">\(f\)</span> est <span class="math inline">\(f(6)\)</span> et son minimum <span class="math inline">\(f(-2)\)</span>, ainsi <span class="math inline">\(f([-2, 6]) = [2, 6]\)</span>.</li>
 </ul>
-<p><span class="math display">\[
-f(I) = [m, M].
-\]</span></p>
-<ul>
-<li>Dans l’exemple précédent, la fonction étant croissante sur <span class="math inline">\([-2, 6]\)</span>, le maximum de <span class="math inline">\(f\)</span> est <span class="math inline">\(f(6)\)</span> et son minimum <span class="math inline">\(f(-2)\)</span>, ainsi</li>
-</ul>
-<p><span class="math display">\[
-f([-2, 6]) = [2, 6].
-\]</span></p>
 </div>
 </section>
 <section id="inégalité-de-bernoulli" class="level2">

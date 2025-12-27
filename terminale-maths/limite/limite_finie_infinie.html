@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -886,8 +898,9 @@ window.Quarto = {
 <section id="limite-finie" class="level2">
 <h2 class="anchored" data-anchor-id="limite-finie">Limite finie</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br> Soit <span class="math inline">\(l \in \R\)</span> et <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(D_f\)</span>.</p>
-<p>On dit que <span class="math inline">\(f\)</span> admet une limite finie <span class="math inline">\(l\)</span> en <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span>) et on note <span class="math display">\[\lim_{x \to +\infty} f(x)= l \quad \left( \text{resp. } \lim_{x \to -\infty} f(x)= l\right)\]</span> lorsque <span class="math display">\[\forall \epsilon &gt; 0, \, \exists x_0 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_0  \Rightarrow \abs{f(x)-l} \leqslant \epsilon) \quad \left(\text{resp. } (x \leqslant x_0  \Rightarrow \abs{f(x)-l} \leqslant \epsilon) \right) \]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soit <span class="math inline">\(l \in \mathbb{R}\)</span> et <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(D_f\)</span>.<br>
+On dit que <span class="math inline">\(f\)</span> admet une limite finie <span class="math inline">\(l\)</span> en <span class="math inline">\(+\infty\)</span> (resp. <span class="math inline">\(-\infty\)</span>) et on note <span class="math display">\[\lim_{x \to +\infty} f(x)= l \quad \left( \text{resp. } \lim_{x \to -\infty} f(x)= l\right)\]</span> lorsque : <span class="math display">\[\forall \epsilon &gt; 0, \, \exists x_0 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_0 \Rightarrow |f(x)-l| \leqslant \epsilon) \quad \left(\text{resp. } (x \leqslant x_0 \Rightarrow |f(x)-l| \leqslant \epsilon) \right) \]</span></p>
 </div>
 <div class="bloc ex">
 <p>Soit <span class="math inline">\(f:x \longmapsto (2x+3)\e^{-0,63x}-2\)</span></p>
@@ -897,39 +910,53 @@ window.Quarto = {
 </div>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : Unicité de la limite</span><br> Soit <span class="math inline">\(f\)</span> une fonction admettant une limite finie <span class="math inline">\(l\)</span> en <span class="math inline">\(\pm \infty\)</span>. C’est-à-dire <span class="math display">\[\lim_{x \to +\infty} f(x)= l\]</span> Alors le réel <span class="math inline">\(l\)</span> est unique et ce nombre est appelé la limite de <span class="math inline">\(f\)</span> au voisinage de <span class="math inline">\(\pm \infty\)</span>.</p>
+<p><span class="bloc-titre">Propriété : Unicité de la limite</span></p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction admettant une limite finie <span class="math inline">\(l\)</span> en <span class="math inline">\(\pm \infty\)</span>.<br>
+Alors le réel <span class="math inline">\(l\)</span> est unique et ce nombre est appelé la limite de <span class="math inline">\(f\)</span> au voisinage de <span class="math inline">\(\pm \infty\)</span>.</p>
 </div>
 <details class="bloc demo">
 <summary>
 Démonstration :
 </summary>
-<p>On suppose qu’il existe deux limites distinctes <span class="math inline">\(l\)</span> et <span class="math inline">\(l'\)</span>.</p>
-<p>Par définition on a <span class="math display">\[\forall \epsilon &gt; 0, \, \exists x_0 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_0 \Rightarrow \abs{f(x)-l} \leqslant \epsilon)\]</span> et <span class="math display">\[\forall \epsilon &gt; 0, \, \exists x_1 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_1 \Rightarrow \abs{f(x)-l'} \leqslant \epsilon)\]</span></p>
-<p>Soit alors <span class="math inline">\(\epsilon =\frac{\abs{l-l'}}{4}\)</span> et <span class="math inline">\(x_{max} = \max(x_0,x_1)\)</span>.</p>
-<p>Ainsi pour tout réel <span class="math inline">\(x \geqslant x_{max}\)</span>, <span class="math display">\[\abs{l-l'} =\abs{f(x)-l' - (f(x)-l)} \leqslant \abs{f(x)-l'} + \abs{f(x)-l} \leqslant \frac{\abs{l-l'}}{4} + \frac{\abs{l-l'}}{4} = \frac{\abs{l-l'}}{2}\]</span></p>
-<p>Ce qui est impossible, d’où l’unicité de la limite.</p>
+<p>On suppose qu’il existe deux limites distinctes <span class="math inline">\(l\)</span> et <span class="math inline">\(l'\)</span>.<br>
+Par définition on a : <span class="math display">\[\forall \epsilon &gt; 0, \, \exists x_0 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_0 \Rightarrow |f(x)-l| \leqslant \epsilon)\]</span> et <span class="math display">\[\forall \epsilon &gt; 0, \, \exists x_1 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_1 \Rightarrow |f(x)-l'| \leqslant \epsilon)\]</span> Soit alors <span class="math inline">\(\epsilon = \dfrac{|l-l'|}{4}\)</span> et <span class="math inline">\(x_{max} = \max(x_0,x_1)\)</span>.<br>
+Ainsi pour tout réel <span class="math inline">\(x \geqslant x_{max}\)</span> : <span class="math display">\[|l-l'| = |f(x)-l' - (f(x)-l)| \leqslant |f(x)-l'| + |f(x)-l| \leqslant \dfrac{|l-l'|}{4} + \dfrac{|l-l'|}{4} = \dfrac{|l-l'|}{2}\]</span> Ce qui est impossible, d’où l’unicité de la limite.</p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : Fonction inverse ou presque</span> Soit <span class="math inline">\(f:x \longmapsto 2+\frac{1}{x}\)</span> définie sur <span class="math inline">\(\R^*\)</span>.</p>
-<p>La fonction inverse étant décroissante sur <span class="math inline">\(\R^*_+\)</span>, on a <span class="math display">\[x \geqslant x_0 \Rightarrow \frac{1}{x} \leqslant \frac{1}{x_0}\]</span></p>
-<p>Soit <span class="math inline">\(x_0=\frac{1}{\epsilon}\)</span>, alors : <span class="math display">\[ \forall x \in \R, \, \left(x \geqslant x_0 \Rightarrow \abs{f(x) - 2} \leqslant \frac{1}{x_0}  = \epsilon\right)\]</span></p>
-<p>Ainsi, par définition, <span class="math inline">\(\lim_{x \to +\infty} f(x) = 2\)</span>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Soit <span class="math inline">\(f:x \longmapsto 2+\dfrac{1}{x}\)</span> définie sur <span class="math inline">\(\mathbb{R}^*\)</span>.<br>
+Démontrer que <span class="math display">\[\lim_{x \to + \infty} f(x) = 2\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>La fonction inverse étant décroissante sur <span class="math inline">\(\mathbb{R}^*_+\)</span>, on a <span class="math display">\[x \geqslant x_0 \Rightarrow \dfrac{1}{x} \leqslant \dfrac{1}{x_0}\]</span> Soit <span class="math inline">\(x_0 = \dfrac{1}{\epsilon}\)</span>, alors : <span class="math display">\[ \forall x \in \mathbb{R}, \, \left(x \geqslant x_0 \Rightarrow |f(x) - 2| \leqslant \dfrac{1}{x_0}\right) \iff |f(x) - 2| \leqslant \epsilon\]</span> Ainsi, par définition, <span class="math inline">\(\lim_{x \to +\infty} f(x) = 2\)</span>.</p>
+</details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : le cosinus </span> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math inline">\(f(x) = \cos(\pi x)\)</span>. Montrons qu’elle n’admet pas de limite en l’infini.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math inline">\(f(x) = \cos(\pi x)\)</span>. Montrons qu’elle n’admet pas de limite en l’infini.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
 <p>Si la fonction admet une limite alors elle est unique et <span class="math display">\[\lim_{x \to +\infty} \cos( \pi x) = l\]</span></p>
 <ul>
-<li>On considère les <span class="math inline">\(x_n=2n\)</span>, alors <span class="math inline">\(\cos(\pi x) = \cos(2 \pi n) = 1\)</span>, ainsi <span class="math display">\[\lim_{n \to +\infty} \cos(2 n \pi) = 1.\]</span></li>
-<li>On considère les <span class="math inline">\(y_n=2n+1\)</span>, alors <span class="math inline">\(\cos(\pi x) = \cos(2 \pi n +\pi) = \cos(\pi) = -1\)</span>, ainsi <span class="math display">\[\lim_{n \to +\infty} \cos(2 n \pi + \pi) = -1.\]</span></li>
+<li>On considère les <span class="math inline">\(x_n = 2n\)</span>, alors <span class="math inline">\(\cos(\pi x_n) = \cos(2 \pi n) = 1\)</span>, ainsi <span class="math display">\[\lim_{n \to +\infty} \cos(2 n \pi) = 1.\]</span></li>
+<li>On considère les <span class="math inline">\(y_n = 2n+1\)</span>, alors <span class="math inline">\(\cos(\pi y_n) = \cos(2 \pi n +\pi) = \cos(\pi) = -1\)</span>, ainsi <span class="math display">\[\lim_{n \to +\infty} \cos(2 n \pi + \pi) = -1.\]</span> La fonction admettant alors deux limites différentes selon les valeurs de <span class="math inline">\(x\)</span> en l’infini, elle ne peut en admettre aucune.</li>
 </ul>
-<p>La fonction admettant alors deux limites en l’infini, elle ne peut en admettre aucune.</p>
+</details>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br> On considère <span class="math inline">\(n \in \N^*\)</span></p>
-<p><span class="math display">\[\lim_{x \to +\infty} \frac{1}{x^n}= 0  \qquad \lim_{x \to + \infty} \frac{1}{\sqrt{x}}= 0    \qquad \qquad\lim_{x \to - \infty} \frac{1}{x^n} = \left\{\begin{array}{l}
+<p><span class="bloc-titre">Propriété : </span></p>
+<p>On considère <span class="math inline">\(n \in \mathbb{N}^*\)</span> <span class="math display">\[\lim_{x \to +\infty} \dfrac{1}{x^n}= 0  \qquad \lim_{x \to + \infty} \dfrac{1}{\sqrt{x}}= 0    \qquad \qquad \lim_{x \to - \infty} \dfrac{1}{x^n} = \begin{cases}
 0^+, \text{ si } n \text{ pair}\\
-0^-, \text{ si } n \text{ impair}\\
-\end{array} \right.\]</span></p>
+0^-, \text{ si } n \text{ impair}
+\end{cases} \]</span></p>
 </div>
 <div class="bloc rem">
 <span class="bloc-titre">Remarque : </span><br>

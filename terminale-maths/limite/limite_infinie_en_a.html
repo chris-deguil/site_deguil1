@@ -123,8 +123,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -497,6 +497,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -529,6 +535,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -879,24 +891,32 @@ window.Quarto = {
 </header>
 
 
+<p>sd</p>
 <section id="définition" class="level2">
 <h2 class="anchored" data-anchor-id="définition">Définition</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Definition : </span> On dit que <span class="math inline">\(f\)</span> tend vers <span class="math inline">\(+\infty\)</span> quand <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(x_0\)</span> et on note <span class="math display">\[\lim_{x \to x_0} f(x) = +\infty\]</span> lorsque</p>
-<p><span class="math display">\[\forall A &gt;0, \, \exists \delta  &gt;0 , \, \forall x \in \R, \, (\abs{x-x_0} &lt; \delta  \Rightarrow f(x) \geqslant A)\]</span></p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>On dit que <span class="math inline">\(f\)</span> tend vers <span class="math inline">\(+\infty\)</span> quand <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(x_0\)</span> et on note <span class="math display">\[\lim_{x \to x_0} f(x) = +\infty\]</span> lorsque <span class="math display">\[\forall A &gt;0, \, \exists \delta &gt;0 , \, \forall x \in \mathbb{R}, \, (|x-x_0| &lt; \delta \Rightarrow f(x) \geqslant A)\]</span></p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math display">\[f(x) = \frac{1}{x^2}\]</span>.$</p>
-<p>la fonction carré étant croissante et la fonction inverse décroissante, on a par composition</p>
-<p><span class="math display">\[\abs{x-0} \leqslant \frac{1}{\sqrt{A}} \Rightarrow f(x) \geqslant A\]</span> Ce qui prouve, par définition en utilisant <span class="math inline">\(\delta=\frac{1}{\sqrt{A}}\)</span>, que</p>
-<p><span class="math display">\[\lim_{x \to 0}\frac{1}{x^2} = +\infty\]</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}^*\)</span> par <span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span>.</p>
+<p>Etudier la limite en <span class="math inline">\(0\)</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+La fonction carré étant décroissante sur <span class="math inline">\(\mathbb{R}^-_*\)</span> et croissante sur <span class="math inline">\(\mathbb{R}^*_+\)</span>, et la fonction inverse étant décroissante sur <span class="math inline">\(\mathbb{R}^*_+\)</span>, on a par composition : <span class="math display">\[|x-0| \leqslant \dfrac{1}{\sqrt{A}} \Rightarrow f(x) \geqslant A\]</span> Ce qui prouve, par définition en utilisant <span class="math inline">\(\delta = \dfrac{1}{\sqrt{A}}\)</span>, que <span class="math display">\[\lim_{x \to 0}\dfrac{1}{x^2} = +\infty\]</span>
+</details>
 </div>
 </section>
 <section id="interprétation-graphique" class="level2">
 <h2 class="anchored" data-anchor-id="interprétation-graphique">Interprétation graphique</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span> Soit <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(I-\{a\}\)</span> vérifiant <span class="math display">\[\lim_{x\to a^+}f(x)=+\infty \quad \text{ou} \quad \lim_{x\to a^-}f(x)=+\infty  \quad \text{ou} \quad  \lim_{x\to a^+}f(x)=-\infty \quad \text{ou} \quad \lim_{x\to a^-}f(x)=-\infty\]</span></p>
-<p>On dit alors que la droite d’équation <span class="math inline">\(x=a\)</span> est une asymptote verticale à la courbe représentative de la fonction <span class="math inline">\(f\)</span>.</p>
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction définie sur <span class="math inline">\(I-\{a\}\)</span> vérifiant <span class="math display">\[ \lim_{x\to a^+}f(x)=+\infty \quad \text{ou} \quad \lim_{x\to a^-}f(x)=+\infty  \quad \text{ou} \quad  \lim_{x\to a^+}f(x)=-\infty \quad \text{ou} \quad \lim_{x\to a^-}f(x)=-\infty\]</span> On dit alors que la droite d’équation <span class="math inline">\(x=a\)</span> est <strong>une asymptote verticale</strong> à la courbe représentative de la fonction <span class="math inline">\(f\)</span>.</p>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemple : </span></p>

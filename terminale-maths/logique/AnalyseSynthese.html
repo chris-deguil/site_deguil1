@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -887,78 +899,61 @@ window.Quarto = {
 <section id="raisonnement-par-analyse-synthèse" class="level3">
 <h3 class="anchored" data-anchor-id="raisonnement-par-analyse-synthèse">Raisonnement par Analyse-Synthèse</h3>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br> Un raisonnement par analyse-synthèse se déroule en deux étapes :</p>
-<ul>
-<li><strong>Analyse</strong> : on raisonne sur une hypothétique solution au problème et on accumule des déductions de propriétés qu’elle doit vérifier, du seul fait qu’elle soit solution.</li>
-<li><strong>Synthèse</strong> : on examine tous les objets vérifiant les conditions nécessaires précédemment accumulées (ce sont les seuls candidats pouvant être des solutions) et on détermine, parmi eux, lesquels sont réellement des solutions.</li>
-</ul>
+<p><span class="bloc-titre">Méthode : </span><br></p>
+<p>Ce raisonnement est particulièrement utilisé pour démontrer l’existence et l’unicité d’un objet mathématique, ou pour résoudre des équations complexes. Il se déroule en deux étapes :</p>
+<ol type="1">
+<li><strong>L’Analyse :</strong> On suppose que l’objet recherché existe. On en déduit ses propriétés nécessaires pour réduire la liste des candidats (recherche de l’unicité).</li>
+<li><strong>La Synthèse :</strong> On vérifie parmi les candidats trouvés lesquels sont effectivement solutions du problème (preuve de l’existence).</li>
+</ol>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Démontrer que toute fonction est la somme d’une fonction paire et d’une fonction impaire.</p>
-<ul>
-<li><strong>Analyse</strong> : (on suppose l’existence de <span class="math inline">\(p\)</span> et <span class="math inline">\(i\)</span>)<br>
-On pose <span class="math inline">\(f=p+i\)</span> où <span class="math inline">\(p\)</span> est une fonction paire et <span class="math inline">\(i\)</span> une fonction impaire.<br>
-Ainsi, pour tout <span class="math inline">\(x \in I\)</span>,</li>
-</ul>
-<p><span class="math display">\[f(-x)=p(-x)+i(-x) = p(x)-i(x).\]</span></p>
-<div style="display: flex; justify-content: space-between;">
-<div style="width:45%; text-align:center;">
-<p>par sommation<br>
-<span class="math display">\[p(x) = \frac{f(x)+f(-x)}{2}\]</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Décomposition d’une fonction </span>
 </div>
-<div style="width:45%; text-align:center;">
-<p>par soustraction<br>
-<span class="math display">\[i(x) = \frac{f(x)-f(-x)}{2}\]</span></p>
-</div>
-</div>
-<p>Ainsi, sous condition d’existence de <span class="math inline">\(i\)</span> et <span class="math inline">\(p\)</span>, la décomposition est unique.</p>
-<ul>
-<li><p><strong>Synthèse</strong> :<br>
-Soit <span class="math inline">\(i(x)= \frac{f(x)-f(-x)}{2}\)</span> et <span class="math inline">\(p(x)= \frac{f(x)+f(-x)}{2}\)</span>, alors</p></li>
-<li><p><span class="math inline">\(f=p+i\)</span></p></li>
-<li><p><span class="math inline">\(p\)</span> est paire</p></li>
-<li><p><span class="math inline">\(i\)</span> est impaire</p></li>
-</ul>
-<p>L’existence de la décomposition est prouvée, donc le résultat est démontré.</p>
+<p>Démontrons que toute fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\mathbb{R}\)</span> se décompose de manière unique comme la somme d’une fonction paire <span class="math inline">\(g\)</span> et d’une fonction impaire <span class="math inline">\(h\)</span>.</p>
+<p><strong>Analyse :</strong> Supposons que <span class="math inline">\(f = g + h\)</span> avec <span class="math inline">\(g\)</span> paire et <span class="math inline">\(h\)</span> impaire. Pour tout <span class="math inline">\(x \in \mathbb{R}\)</span> : 1. <span class="math inline">\(f(x) = g(x) + h(x)\)</span> 2. <span class="math inline">\(f(-x) = g(-x) + h(-x) = g(x) - h(x)\)</span></p>
+<p>En additionnant et soustrayant ces deux égalités, on trouve nécessairement : <span class="math display">\[g(x) = \frac{f(x) + f(-x)}{2} \quad \text{et} \quad h(x) = \frac{f(x) - f(-x)}{2}\]</span> S’il existe une solution, elle est donc unique.</p>
+<p><strong>Synthèse :</strong> Définissons <span class="math inline">\(g\)</span> et <span class="math inline">\(h\)</span> par les formules trouvées. On vérifie aisément que : * <span class="math inline">\(g(x) + h(x) = f(x)\)</span> * <span class="math inline">\(g(-x) = g(x)\)</span> (g est paire) * <span class="math inline">\(h(-x) = -h(x)\)</span> (h est impaire)</p>
+<p>La décomposition existe donc et elle est bien unique.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\(\R \setminus \left\{\frac{1}{2} \right\}\)</span> par :<br>
-<span class="math display">\[f(x)= \frac{x+1}{2x-1}.\]</span><br>
-Montrer que pour tout <span class="math inline">\(y \neq \frac{1}{2}\)</span>, il existe <span class="math inline">\(x \neq \frac{1}{2}\)</span> tel que <span class="math inline">\(f(x)=y\)</span>.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Antécédents d’une fonction homographique </span>
+</div>
+<p>Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\(\R \setminus \left\{\frac{1}{2} \right\}\)</span> par : <span class="math display">\[f(x)= \frac{x+1}{2x-1}\]</span> Montrer que pour tout <span class="math inline">\(y \neq \frac{1}{2}\)</span>, il existe <span class="math inline">\(x \neq \frac{1}{2}\)</span> tel que <span class="math inline">\(f(x)=y\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
 <ul>
-<li><strong>Analyse</strong> :<br>
-On suppose avoir un tel <span class="math inline">\(x\)</span> tel que <span class="math inline">\(f(x)=y\)</span>. Alors</li>
-</ul>
-<p><span class="math display">\[\frac{x+1}{2x-1} = y  \Longrightarrow x+1 = y(2x-1) \Longrightarrow 1+y = x(2y-1) \Longrightarrow x = \frac{1+y}{2y-1}.\]</span></p>
-<ul>
-<li><strong>Synthèse</strong> :<br>
-Soit <span class="math inline">\(y \neq \frac{1}{2}\)</span>, alors <span class="math inline">\(2y-1 \neq 0\)</span>. On pose <span class="math inline">\(x = \frac{1+y}{2y-1}\)</span>. Alors</li>
-</ul>
-<p><span class="math display">\[
-x+1=\frac{1+y}{2y-1}+1=\frac{3y}{2y-1},\qquad
-2x-1=\frac{2(1+y)}{2y-1}-1=\frac{3}{2y-1},
-\]</span></p>
-<p>et donc</p>
-<p><span class="math display">\[
-f(x)=\frac{x+1}{2x-1}=\frac{\frac{3y}{2y-1}}{\frac{3}{2y-1}}=y.
-\]</span></p>
+<li><p><strong>Analyse :</strong> On suppose avoir un tel <span class="math inline">\(x\)</span> tel que <span class="math inline">\(f(x)=y\)</span>. Alors : <span class="math display">\[\frac{x+1}{2x-1} = y  \Longrightarrow x+1 = y(2x-1) \Longrightarrow 1+y = x(2y-1) \Longrightarrow x = \frac{1+y}{2y-1}\]</span></p></li>
+<li><p><strong>Synthèse :</strong> Soit <span class="math inline">\(y \neq \frac{1}{2}\)</span>, alors <span class="math inline">\(2y-1 \neq 0\)</span>. On pose <span class="math inline">\(x = \frac{1+y}{2y-1}\)</span>. Alors : <span class="math display">\[x+1 = \frac{1+y}{2y-1}+1 = \frac{3y}{2y-1} \quad \text{et} \quad 2x-1 = \frac{2(1+y)}{2y-1}-1 = \frac{3}{2y-1}\]</span> Et donc : <span class="math display">\[f(x) = \frac{x+1}{2x-1} = \frac{\frac{3y}{2y-1}}{\frac{3}{2y-1}} = y\]</span></p>
 <p>Il reste à montrer que <span class="math inline">\(x \neq \frac{1}{2}\)</span>.<br>
-Supposons par l’absurde <span class="math inline">\(x =\frac{1}{2}\)</span>, alors</p>
-<p><span class="math display">\[\frac{1}{2} = \frac{1+y}{2y-1} \Longrightarrow 2y-1 = 2+2y \Longrightarrow -1 =2,\]</span></p>
-<p>ce qui est absurde. Donc <span class="math inline">\(x \neq \frac{1}{2}\)</span>.</p>
+Supposons par l’absurde <span class="math inline">\(x = \frac{1}{2}\)</span>, alors : <span class="math display">\[\frac{1}{2} = \frac{1+y}{2y-1} \Longrightarrow 2y-1 = 2+2y \Longrightarrow -1 = 2\]</span> ce qui est absurde. Donc <span class="math inline">\(x \neq \frac{1}{2}\)</span>.</p></li>
+</ul>
 <p>Ainsi, <span class="math inline">\(\forall y \in \R \setminus \left\{\frac{1}{2} \right\}, \, \exists x \neq \frac{1}{2}\)</span> tel que <span class="math inline">\(f(x)=y\)</span>.</p>
+</details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br> Résoudre <span class="math inline">\(x=\sqrt{3x^2-3x+1}\)</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Résolution d’une équation irrationnelle </span>
+</div>
+<p>Résoudre <span class="math inline">\(x = \sqrt{3x^2-3x+1}\)</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
 <ul>
-<li><p><strong>Analyse</strong> :<br>
-<span class="math display">\[x=\sqrt{3x^2-3x+1} \Longrightarrow x^2=3x^2-3x+1 \Longrightarrow 2x^2-3x+1 = 0 \Longrightarrow x=1 \ \text{ ou }\ x= \tfrac{1}{2}\]</span><br>
-Ainsi s’il existe des solutions, elles appartiennent à <span class="math inline">\(S=\left\{1 ; \frac{1}{2} \right\}\)</span></p></li>
-<li><p><strong>Synthèse</strong> :<br>
-<span class="math display">\[\sqrt{3 \times 1^2-3 \times 1 + 1} = \sqrt{1} = 1\]</span><br>
-<span class="math display">\[\sqrt{3 \times \left(\frac{1}{2} \right)^2 - 3 \times \frac{1}{2} + 1} = \sqrt{\tfrac{1}{4}} = \tfrac{1}{2}\]</span></p></li>
+<li><p><strong>Analyse :</strong> Supposons que <span class="math inline">\(x\)</span> soit solution de l’équation. Alors : <span class="math display">\[x = \sqrt{3x^2-3x+1} \Longrightarrow x^2 = 3x^2-3x+1 \Longrightarrow 2x^2-3x+1 = 0\]</span> Le discriminant du trinôme est <span class="math inline">\(\Delta = (-3)^2 - 4 \times 2 \times 1 = 1\)</span>. Les racines sont <span class="math inline">\(x = \frac{3-1}{4} = \frac{1}{2}\)</span> ou <span class="math inline">\(x = \frac{3+1}{4} = 1\)</span>.</p>
+<p>Ainsi, si des solutions existent, elles appartiennent à l’ensemble <span class="math inline">\(\{1 ; \frac{1}{2}\}\)</span>.</p></li>
+<li><p><strong>Synthèse :</strong></p>
+<ul>
+<li>Pour <span class="math inline">\(x = 1\)</span> : <span class="math inline">\(\sqrt{3 \times 1^2 - 3 \times 1 + 1} = \sqrt{1} = 1\)</span>. La condition est vérifiée.</li>
+<li>Pour <span class="math inline">\(x = \frac{1}{2}\)</span> : <span class="math inline">\(\sqrt{3 \times (\frac{1}{2})^2 - 3 \times \frac{1}{2} + 1} = \sqrt{\frac{3}{4} - \frac{6}{4} + \frac{4}{4}} = \sqrt{\frac{1}{4}} = \frac{1}{2}\)</span>. La condition est vérifiée.</li>
+</ul></li>
 </ul>
-<p>Ainsi l’équation admet deux solutions : <span class="math inline">\(S=\{1 ; \tfrac{1}{2}\}\)</span>.</p>
+<p>Ainsi, l’ensemble des solutions est <span class="math inline">\(S = \left\{1 ; \frac{1}{2} \right\}\)</span>.</p>
+</details>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="absurde.html">⬅️</a></p>

@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -890,39 +902,34 @@ window.Quarto = {
 <section id="définition" class="level2">
 <h2 class="anchored" data-anchor-id="définition">Définition</h2>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span></p>
-<p>Soit <span class="math inline">\((u_n)\)</span> une suite réelle. On dit que <span class="math inline">\((u_n)\)</span> tend vers <span class="math inline">\(+\infty\)</span> (respectivement <span class="math inline">\(-\infty\)</span>) si</p>
-<p><span class="math display">\[
-\forall A \in \R, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n \geqslant n_0 \Rightarrow u_n \geqslant A).
-\]</span></p>
-<p>On note alors</p>
-<p><span class="math display">\[
-\lim_{n \to +\infty} u_n = +\infty \quad  (\text{respectivement } \lim_{n \to +\infty} u_n = -\infty).
-\]</span></p>
+<p><span class="bloc-titre">Définition : </span><br></p>
+<p>Soit <span class="math inline">\((u_n)\)</span> une suite réelle. On dit que <span class="math inline">\((u_n)\)</span> tend vers <span class="math inline">\(+\infty\)</span> (respectivement <span class="math inline">\(-\infty\)</span>) si : <span class="math display">\[\forall A \in \R, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n \geqslant n_0 \Rightarrow u_n \geqslant A).\]</span></p>
+<p>On note alors : <span class="math display">\[\lim_{n \to +\infty} u_n = +\infty \quad \text{(respectivement } \lim_{n \to +\infty} u_n = -\infty).\]</span></p>
 </div>
+<div class="bloc rem">
 <p><strong>Illustration graphique :</strong><br>
 On a représenté ci-dessous une suite <span class="math inline">\(\left(u_n\right)\)</span> ayant une limite égale à <span class="math inline">\(+\infty\)</span>.</p>
 <div style="text-align:center;">
 <p><img src="../../image/maths_term/divergence.png" alt="" width="60%/"></p>
 </div>
+</div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
 <p>Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = n^2 + 1\)</span>. Déterminons la limite de la suite <span class="math inline">\((u_n)\)</span>.</p>
-<p>Soit <span class="math inline">\(A &gt; 1\)</span>, alors</p>
-<p><span class="math display">\[
-n^2 + 1 &gt; A \Longleftrightarrow n &gt; \sqrt{A - 1}.
-\]</span></p>
-<p>On peut toujours trouver un entier <span class="math inline">\(n_0\)</span> tel que, pour tout <span class="math inline">\(n \geqslant n_0\)</span>, <span class="math inline">\(u_n &gt; A\)</span>.</p>
-<p>D’après la définition, la suite <span class="math inline">\((u_n)\)</span> diverge et</p>
-<p><span class="math display">\[
-\lim_{n \to +\infty} u_n = +\infty.
-\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Soit <span class="math inline">\(A &gt; 1\)</span>, alors : <span class="math display">\[n^2 + 1 &gt; A \Longleftrightarrow n^2 &gt; A - 1 \Longleftrightarrow n &gt; \sqrt{A - 1}.\]</span> On peut toujours trouver un entier <span class="math inline">\(n_0\)</span> tel que, pour tout <span class="math inline">\(n \geqslant n_0\)</span>, <span class="math inline">\(u_n &gt; A\)</span>. <em>(Par exemple, en prenant <span class="math inline">\(n_0 = \text{Ent}\left(\sqrt{A - 1}\right) + 1\)</span>)</em>.</p>
+<p>D’après la définition, la suite <span class="math inline">\((u_n)\)</span> diverge et : <span class="math display">\[\lim_{n \to +\infty} u_n = +\infty.\]</span></p>
+</details>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété :</span></p>
+<p><span class="bloc-titre">Théorème : </span><br></p>
 <ol type="1">
-<li>Toute suite croissante non majorée diverge vers <span class="math inline">\(+\infty\)</span>.<br>
-</li>
+<li>Toute suite croissante non majorée diverge vers <span class="math inline">\(+\infty\)</span>.</li>
 <li>Toute suite décroissante non minorée diverge vers <span class="math inline">\(-\infty\)</span>.</li>
 </ol>
 </div>
@@ -932,8 +939,8 @@ Démonstration :
 </summary>
 <p>Soit une suite <span class="math inline">\((u_n)\)</span> non majorée et croissante, et <span class="math inline">\(A\)</span> un réel arbitraire.</p>
 <p>Comme la suite est non majorée, il existe au moins un terme <span class="math inline">\(u_p\)</span> de la suite tel que <span class="math inline">\(u_p &gt; A\)</span>.</p>
-<p>Or, la suite étant croissante, <span class="math inline">\(\forall n \geqslant p \Rightarrow u_n \geqslant u_p &gt; A\)</span>.</p>
-Donc, on a prouvé qu’à partir du rang <span class="math inline">\(p\)</span>, tous les termes de la suite sont supérieurs à <span class="math inline">\(A\)</span>. Ce qui donne le résultat.
+<p>Or, la suite étant croissante, pour tout <span class="math inline">\(n \geqslant p\)</span>, on a <span class="math inline">\(u_n \geqslant u_p &gt; A\)</span>.</p>
+<p>Donc, on a prouvé qu’à partir du rang <span class="math inline">\(p\)</span>, tous les termes de la suite sont supérieurs à <span class="math inline">\(A\)</span>. Ce qui donne le résultat.</p>
 </details>
 <div class="bloc thm">
 <p><span class="bloc-titre">Propriété (admis) :</span></p>
@@ -945,11 +952,10 @@ Donc, on a prouvé qu’à partir du rang <span class="math inline">\(p\)</span>
 <section id="limites-par-comparaison" class="level3">
 <h3 class="anchored" data-anchor-id="limites-par-comparaison">Limites par comparaison</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété :</span></p>
+<p><span class="bloc-titre">Théorème : </span><br></p>
 <p>Soit <span class="math inline">\((u_n)\)</span> et <span class="math inline">\((v_n)\)</span> deux suites. Supposons qu’il existe <span class="math inline">\(n_0 \in \N\)</span> tel que pour tout <span class="math inline">\(n \geqslant n_0\)</span>, <span class="math inline">\(u_n \leqslant v_n\)</span>.</p>
 <ul>
-<li>Si <span class="math inline">\(\lim_{n \to +\infty} u_n = +\infty\)</span>, alors <span class="math inline">\(\lim_{n \to +\infty} v_n = +\infty\)</span>.<br>
-</li>
+<li>Si <span class="math inline">\(\lim_{n \to +\infty} u_n = +\infty\)</span>, alors <span class="math inline">\(\lim_{n \to +\infty} v_n = +\infty\)</span>.</li>
 <li>Si <span class="math inline">\(\lim_{n \to +\infty} v_n = -\infty\)</span>, alors <span class="math inline">\(\lim_{n \to +\infty} u_n = -\infty\)</span>.</li>
 </ul>
 </div>
@@ -957,21 +963,23 @@ Donc, on a prouvé qu’à partir du rang <span class="math inline">\(p\)</span>
 <summary>
 Démonstration :
 </summary>
-<p>Soit <span class="math inline">\(I\)</span> un intervalle de la forme <span class="math inline">\(]A, +\infty[\)</span> avec <span class="math inline">\(A\)</span> un réel. On a <span class="math inline">\(\lim_{n \to +\infty} u_n = +\infty\)</span>, alors par définition, <span class="math inline">\(I\)</span> contient tous les termes <span class="math inline">\(u_n\)</span> à partir d’un certain rang. On note ce rang <span class="math inline">\(n_1\)</span>.</p>
+<p>Soit <span class="math inline">\(I\)</span> un intervalle de la forme <span class="math inline">\(]A, +\infty[\)</span> avec <span class="math inline">\(A\)</span> un réel. Puisque <span class="math inline">\(\lim_{n \to +\infty} u_n = +\infty\)</span>, alors par définition, <span class="math inline">\(I\)</span> contient tous les termes <span class="math inline">\(u_n\)</span> à partir d’un certain rang. On note ce rang <span class="math inline">\(n_1\)</span>.</p>
 <p>De plus, à partir d’un certain rang, <span class="math inline">\(u_n \leqslant v_n\)</span>. Notons ce rang <span class="math inline">\(n_2\)</span>.</p>
-<p>On pose <span class="math inline">\(n_0 = \max(n_1, n_2)\)</span>, ainsi pour tout entier <span class="math inline">\(n \geqslant n_0\)</span>, on a <span class="math inline">\(u_n \in I\)</span>, c’est-à-dire que <span class="math inline">\(A &lt; u_n\)</span> et <span class="math inline">\(u_n \leqslant v_n\)</span>. Donc <span class="math inline">\(A &lt; v_n\)</span>.</p>
-On en déduit que <span class="math inline">\(I\)</span> contient tous les termes <span class="math inline">\(v_n\)</span> à partir du rang <span class="math inline">\(n_0\)</span>. Donc <span class="math inline">\(\lim_{n \to +\infty} v_n = +\infty\)</span>.
+<p>On pose <span class="math inline">\(N = \max(n_1\,;\,n_2)\)</span>, ainsi pour tout entier <span class="math inline">\(n \geqslant N\)</span>, on a <span class="math inline">\(u_n \in I\)</span>, c’est-à-dire que <span class="math inline">\(A &lt; u_n\)</span> et <span class="math inline">\(u_n \leqslant v_n\)</span>. Donc <span class="math inline">\(A &lt; v_n\)</span>.</p>
+<p>On en déduit que <span class="math inline">\(I\)</span> contient tous les termes <span class="math inline">\(v_n\)</span> à partir du rang <span class="math inline">\(N\)</span>. Donc <span class="math inline">\(\lim_{n \to +\infty} v_n = +\infty\)</span>.</p>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple :</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
 <p>Soit <span class="math inline">\((u_n)\)</span> une suite définie par <span class="math inline">\(u_n = -2n^4 + \sin(n)\)</span>. Déterminons sa limite.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(\sin(n) \leqslant 1\)</span>, donc <span class="math inline">\(-2n^4 + \sin(n) \leqslant -2n^4 + 1\)</span>.<br>
+<p>Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math inline">\(\sin(n) \leqslant 1\)</span>, donc <span class="math inline">\(-2n^4 + \sin(n) \leqslant -2n^4 + 1\)</span>.<br>
 Or, <span class="math inline">\(\lim_{n \to +\infty} n^4 = +\infty\)</span>, donc <span class="math inline">\(\lim_{n \to +\infty} (-2n^4 + 1) = -\infty\)</span>.<br>
-Par comparaison, on déduit que <span class="math inline">\(\lim_{n \to +\infty} u_n = -\infty\)</span>.
+Par comparaison, on en déduit que : <span class="math display">\[\lim_{n \to +\infty} u_n = -\infty.\]</span></p>
 </details>
 </div>
 <div class="nav-pages">

@@ -159,8 +159,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -533,6 +533,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -565,6 +571,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -886,8 +898,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#propriétés-de-convergences-monotone" id="toc-propriétés-de-convergences-monotone" class="nav-link active" data-scroll-target="#propriétés-de-convergences-monotone">Propriétés de convergences monotone</a></li>
-  <li><a href="#propriété-dencadrement" id="toc-propriété-dencadrement" class="nav-link" data-scroll-target="#propriété-dencadrement">Propriété d’encadrement</a></li>
+  <li><a href="#théorème-de-convergence-monotone" id="toc-théorème-de-convergence-monotone" class="nav-link active" data-scroll-target="#théorème-de-convergence-monotone">Théorème de convergence monotone</a></li>
+  <li><a href="#théorèmes-dencadrement" id="toc-théorèmes-dencadrement" class="nav-link" data-scroll-target="#théorèmes-dencadrement">Théorèmes d’encadrement</a></li>
   <li><a href="#recherche-de-seuil" id="toc-recherche-de-seuil" class="nav-link" data-scroll-target="#recherche-de-seuil">Recherche de seuil</a></li>
   </ul>
 </nav>
@@ -920,163 +932,159 @@ window.Quarto = {
 </header>
 
 
-<section id="propriétés-de-convergences-monotone" class="level3">
-<h3 class="anchored" data-anchor-id="propriétés-de-convergences-monotone">Propriétés de convergences monotone</h3>
+<section id="théorème-de-convergence-monotone" class="level3">
+<h3 class="anchored" data-anchor-id="théorème-de-convergence-monotone">Théorème de convergence monotone</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admis) : Théorème de convergence monotone</span></p>
+<p><span class="bloc-titre">Théorème (admis) : </span><br></p>
 <ol type="1">
-<li>Toute suite croissante et majorée converge.<br>
-</li>
+<li>Toute suite croissante et majorée converge.</li>
 <li>Toute suite décroissante et minorée converge.</li>
 </ol>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple</span><br>
-Soit la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_{n+1} = \dfrac{1}{2} u_n + 1\)</span> et <span class="math inline">\(u_0 = 4\)</span>. Montrons que cette suite converge.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Suite arithmético-géométrique </span>
+</div>
+<p>Soit la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_{n+1} = \dfrac{1}{2} u_n + 1\)</span> et <span class="math inline">\(u_0 = 4\)</span>. Montrons que cette suite converge.</p>
 <ol type="1">
-<li><strong>La suite est minorée par 2.</strong></li>
+<li>Montrons que la suite est minorée par <span class="math inline">\(2\)</span>.</li>
 </ol>
 <details class="bloc cor">
 <summary>
-Correction
+Afficher la correction :
 </summary>
-<p>Soit <span class="math inline">\(P_n : u_n \ge 2\)</span>.</p>
+<p>Soit <span class="math inline">\(P_n : u_n \geqslant 2\)</span>. * <strong>Initialisation :</strong> <span class="math inline">\(u_0 = 4 &gt; 2\)</span>, donc <span class="math inline">\(P_0\)</span> est vraie.</p>
 <ul>
-<li><p><em>Initialisation :</em> <span class="math inline">\(u_0 = 4 &gt; 2\)</span>, donc <span class="math inline">\(P_0\)</span> est vraie.</p></li>
-<li><p><em>Hérédité :</em> Supposons <span class="math inline">\(P_n\)</span> vraie (donc <span class="math inline">\(u_n \ge 2\)</span>). Alors <span class="math display">\[
-u_{n+1} = \tfrac{1}{2}u_n + 1 \;\ge\; \tfrac{1}{2}\cdot 2 + 1 \;=\; 2.
-\]</span> Ainsi <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie.</p></li>
-<li><p><em>Conclusion :</em> <span class="math inline">\(P_0\)</span> est vraie et <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> pour tout <span class="math inline">\(n\)</span>, donc <span class="math inline">\((u_n)\)</span> est minorée par <span class="math inline">\(2\)</span>.</p></li>
+<li><p><strong>Hérédité :</strong><br>
+On suppose qu’à un certain rang <span class="math inline">\(n\)</span> arbitrairement fixé, <span class="math inline">\(P_n\)</span> est vraie, donc <span class="math inline">\(u_n \geqslant 2\)</span>.<br>
+Montrons alors que <span class="math inline">\(P_{n+1}\)</span> est vraie.<br>
+<span class="math inline">\(u_{n+1} = \dfrac{1}{2} u_n + 1 \geqslant \dfrac{1}{2} \times 2 + 1 = 2\)</span>.<br>
+Ainsi, <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie et <span class="math inline">\(P_n\)</span> vraie, donc <span class="math inline">\(P_{n+1}\)</span> est vraie.On suppose que pour un entier <span class="math inline">\(n\)</span> fixé, <span class="math inline">\(u_n \geqslant 2\)</span>.<br>
+Alors <span class="math inline">\(u_{n+1} = \dfrac{1}{2} u_n + 1 \geqslant \dfrac{1}{2} \times 2 + 1 = 2\)</span>. <span class="math inline">\(P_{n+1}\)</span> est vraie.</p></li>
+<li><p><strong>Conclusion :</strong><br>
+<span class="math inline">\(P_0\)</span> est vraie et, pour tout entier <span class="math inline">\(n\)</span>, <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie.</p>
+<p>On déduit que la suite <span class="math inline">\((u_n)\)</span> est minorée par <span class="math inline">\(2\)</span>.</p></li>
 </ul>
 </details>
 <ol start="2" type="1">
-<li><strong>La suite est décroissante.</strong></li>
+<li>Montrons que la suite est décroissante.</li>
 </ol>
 <details class="bloc cor">
 <summary>
-Correction
+Afficher la correction :
 </summary>
-Pour <span class="math inline">\(n\ge 0\)</span>, on a <span class="math inline">\(u_n \ge 2\)</span> (point 1). Alors <span class="math display">\[
-u_{n+1}-u_n
-= \Big(\tfrac{1}{2}u_n+1\Big) - u_n
-= -\tfrac{1}{2}u_n +1
-\;\le\; -\tfrac{1}{2}\cdot 2 +1
-= 0.
-\]</span> Donc <span class="math inline">\(u_{n+1} \le u_n\)</span> : la suite est décroissante.
+<p>Pour <span class="math inline">\(n \geq 0\)</span>, comme <span class="math inline">\(u_n \geq 2\)</span>, on a <span class="math inline">\(-\dfrac{1}{2} u_n + 1 \leq -\dfrac{1}{2} \times 2 + 1 = 0\)</span>.</p>
+<p>Ainsi, puisque <span class="math inline">\(u_n \geqslant 2\)</span>,<br>
+<span class="math display">\[u_{n+1} - u_n = \dfrac{1}{2} u_n + 1 - u_n = -\dfrac{1}{2} u_n + 1 \leqslant -\dfrac{1}{2} \times 4 + 1 = -1 &lt; 0.
+\]</span> Donc <span class="math inline">\(u_{n+1} \leqslant u_n\)</span>, donc la suite est décroissante.</p>
 </details>
 <ol start="3" type="1">
-<li><strong>Conclusion :</strong><br>
-
+<li>Conclure</li>
+</ol>
 <details class="bloc cor">
 <summary>
-Correction
+Afficher la correction :
 </summary>
-La suite <span class="math inline">\((u_n)\)</span> est décroissante et minorée, donc elle converge (Propriété de convergence monotone).
-</details></li>
-</ol>
+<p>La suite <span class="math inline">\((u_n)\)</span> est décroissante et minorée par <span class="math inline">\(2\)</span>, donc d’après le théorème de convergence monotone, elle converge vers une limite <span class="math inline">\(l \geqslant 2\)</span>.</p>
+</details>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque</span><br>
-Le Propriété assure l’existence de la limite mais ne donne pas sa valeur.</p>
+<p><span class="bloc-titre">Remarque : </span><br></p>
+<p>Le théorème assure l’existence de la limite mais ne donne aucune information sur sa valeur exacte.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple</span><br>
-Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_0=-1\)</span> et <span class="math inline">\(u_{n+1}=f(u_n)\)</span> où <span class="math inline">\(f(x)=2\sqrt{x+3}\)</span>, définie sur <span class="math inline">\([-2,+\infty[\)</span>.</p>
-<p>Montrons que <span class="math inline">\((u_n)\)</span> converge.</p>
-<ol type="1">
-<li><strong>Variation de <span class="math inline">\(f\)</span></strong></li>
-</ol>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Suite récurrente et fonction croissante </span>
+</div>
+<p>Soit <span class="math inline">\((u_n)\)</span> la suite définie par <span class="math inline">\(u_0 = -1\)</span> et, pour tout entier naturel <span class="math inline">\(n\)</span>, <span class="math inline">\(u_{n+1} = f(u_n)\)</span> où <span class="math inline">\(f\)</span> est la fonction définie sur <span class="math inline">\([-2, +\infty[\)</span> par <span class="math inline">\(f(x) = 2\sqrt{x+3}\)</span>.</p>
+<p>Montrons que la suite <span class="math inline">\((u_n)\)</span> converge. 1. Étudier des variations de <span class="math inline">\(f\)</span> :</p>
 <details class="bloc cor">
 <summary>
-Correction
+Afficher la correction :
 </summary>
-<span class="math inline">\(x\mapsto x+3\)</span> et <span class="math inline">\(x\mapsto 2\sqrt{x}\)</span> sont strictement croissantes sur leurs domaines ; leur composition <span class="math inline">\(f\)</span> est donc strictement croissante sur <span class="math inline">\([-2,+\infty[\)</span>.
+<p>Les fonctions <span class="math inline">\(x \mapsto x+3\)</span> et <span class="math inline">\(x \mapsto 2\sqrt{x}\)</span> étant strictement croissantes, on déduit par composition que la fonction <span class="math inline">\(f\)</span> est strictement croissante.</p>
 </details>
 <ol start="2" type="1">
-<li><strong>Bornes et croissance de <span class="math inline">\((u_n)\)</span></strong></li>
+<li>Montrons par récurrence que la suite est bornée.</li>
 </ol>
 <details class="bloc cor">
 <summary>
-Correction
+Afficher la correction :
 </summary>
-<p>Pour tout <span class="math inline">\(n\ge 0\)</span>, posons <span class="math inline">\(P_n :\; -1 \le u_n \le u_{n+1} \le 6\)</span>.</p>
+<p>Pour tout <span class="math inline">\(n \geqslant 0\)</span>, on note <span class="math inline">\(P_n : -1 \leqslant u_n \leqslant u_{n+1} \leqslant 6\)</span>.</p>
+<p>Démontrons que <span class="math inline">\(P_n\)</span> est vraie pour tout <span class="math inline">\(n\)</span> par récurrence.<br>
+* <strong>Initialisation :</strong><br>
+$<span class="math inline">\(u_0 = -1\)</span> et <span class="math inline">\(u_1 = f(u_0) = 2\sqrt{-1 + 3} = 2\sqrt{2} \approx 2.828\)</span>, donc <span class="math inline">\(-1 \leqslant u_0 \leqslant u_1 \leqslant 6\)</span>.\ Ainsi, <span class="math inline">\(P_0\)</span> est vraie et la récurrence est initialisée.</p>
 <ul>
-<li><p><em>Initialisation :</em> <span class="math inline">\(u_0=-1\)</span> et <span class="math inline">\(u_1=f(u_0)=2\sqrt{2}\approx 2{,}828\)</span>, donc <span class="math inline">\(-1 \le u_0 \le u_1 \le 6\)</span>. <span class="math inline">\(P_0\)</span> est vraie.</p></li>
-<li><p><em>Hérédité :</em> Supposons <span class="math inline">\(P_n\)</span> vraie. Avec <span class="math inline">\(f\)</span> croissante, <span class="math display">\[
-f(-1) \le f(u_n) \le f(u_{n+1}) \le f(6)
-\;\;\Longrightarrow\;\;
-2\sqrt{2} \le u_{n+1} \le u_{n+2} \le 6.
-\]</span> Donc <span class="math inline">\(P_{n+1}\)</span> est vraie.</p></li>
-<li><p><em>Conclusion :</em> Par récurrence, <span class="math inline">\(P_n\)</span> est vraie pour tout <span class="math inline">\(n\)</span>, donc <span class="math inline">\((u_n)\)</span> est croissante et majorée par <span class="math inline">\(6\)</span>.</p></li>
+<li><strong>Hérédité :</strong><br>
+On suppose que pour un entier <span class="math inline">\(n\)</span> arbitrairement fixé, <span class="math inline">\(P_n\)</span> est vraie.\ Montrons que <span class="math inline">\(P_{n+1}\)</span> est vraie.\ On sait que <span class="math inline">\(-1 \leqslant u_n \leqslant u_{n+1} \leqslant 6\)</span>.\ Or, la fonction <span class="math inline">\(f\)</span> étant croissante, on en déduit que <span class="math display">\[
+f(-1) \leqslant f(u_n) \leqslant f(u_{n+1}) \leqslant f(6).
+\]</span> Donc <span class="math display">\[
+2\sqrt{2} \leqslant u_{n+1} \leqslant u_{n+2} \leqslant 6.
+\]</span> Ainsi, <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie, d’où on déduit que <span class="math inline">\(P_{n+1}\)</span> est vraie.</li>
+<li><strong>Conclusion :</strong><br>
+On a <span class="math inline">\(P_0\)</span> vraie et, pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(P_n\)</span> vraie <span class="math inline">\(\Rightarrow P_{n+1}\)</span> vraie.\ On déduit que <span class="math inline">\(P_n\)</span> est vraie pour tout <span class="math inline">\(n \in \N\)</span>.</li>
 </ul>
 </details>
 <ol start="3" type="1">
-<li><strong>Conclusion :</strong></li>
+<li>Conclure</li>
 </ol>
 <details class="bloc cor">
 <summary>
-Correction
+Afficher la correction :
 </summary>
-<span class="math inline">\((u_n)\)</span> est croissante et majorée, donc elle converge (Propriété de convergence monotone).
+La suite <span class="math inline">\((u_n)\)</span> est croissante et majorée, donc elle converge.
 </details>
 </div>
 </section>
-<section id="propriété-dencadrement" class="level3">
-<h3 class="anchored" data-anchor-id="propriété-dencadrement">Propriété d’encadrement</h3>
+<section id="théorèmes-dencadrement" class="level3">
+<h3 class="anchored" data-anchor-id="théorèmes-dencadrement">Théorèmes d’encadrement</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : Théorème d’encadrement</span><br>
-Soit <span class="math inline">\((u_n)\)</span>, <span class="math inline">\((v_n)\)</span>, <span class="math inline">\((w_n)\)</span> et <span class="math inline">\(n_0\in\N\)</span> tels que <span class="math display">\[
-\forall n \ge n_0,\quad u_n \le v_n \le w_n.
-\]</span> Si <span class="math inline">\((u_n)\)</span> et <span class="math inline">\((w_n)\)</span> convergent vers <span class="math inline">\(l\)</span>, alors <span class="math inline">\((v_n)\)</span> converge vers <span class="math inline">\(l\)</span>.</p>
+<p><span class="bloc-titre">Théorème : Théorème d’encadrement</span><br></p>
+<p>Soit <span class="math inline">\((u_n)\)</span>, <span class="math inline">\((v_n)\)</span> et <span class="math inline">\((w_n)\)</span> trois suites réelles telles que : <span class="math display">\[\forall n \geqslant n_0, \, u_n \leqslant v_n \leqslant w_n\]</span> Si <span class="math inline">\(\lim_{n \to +\infty} u_n = \lim_{n \to +\infty} w_n = l\)</span>, alors <span class="math inline">\((v_n)\)</span> converge et <span class="math inline">\(\lim_{n \to +\infty} v_n = l\)</span>.</p>
 </div>
 <details class="bloc demo">
 <summary>
-Démonstration
+Démonstration :
 </summary>
-<p>Soit <span class="math inline">\(\epsilon&gt;0\)</span>. Il existe <span class="math inline">\(n_1,n_2\)</span> tels que :</p>
+<p>Soit <span class="math inline">\(\epsilon &gt; 0\)</span> quelconque, alors par définition, il existe <span class="math inline">\(n_1, n_2 \in \N\)</span> tels que :</p>
 <ul>
-<li>pour <span class="math inline">\(n\ge n_1\)</span>, <span class="math inline">\(|u_n-l|&lt;\epsilon\)</span> (donc <span class="math inline">\(u_n&gt;l-\epsilon\)</span>),</li>
-<li>pour <span class="math inline">\(n\ge n_2\)</span>, <span class="math inline">\(|w_n-l|&lt;\epsilon\)</span> (donc <span class="math inline">\(w_n&lt;l+\epsilon\)</span>).<br>
-Avec <span class="math inline">\(N=\max(n_0,n_1,n_2)\)</span>, pour <span class="math inline">\(n\ge N\)</span>, <span class="math display">\[
-l-\epsilon &lt; u_n \le v_n \le w_n &lt; l+\epsilon
-\;\;\Longrightarrow\;\;
-|v_n-l|&lt;\epsilon.
-\]</span></li>
+<li><span class="math inline">\(\forall n \in \N, \, (n \geqslant n_1 \Rightarrow \abs{u_n - l} &lt; \epsilon)\)</span>.<br>
+En particulier, <span class="math inline">\(u_n &gt; l - \epsilon\)</span>.</li>
+<li><span class="math inline">\(\forall n \in \N, \, (n \geqslant n_2 \Rightarrow \abs{w_n - l} &lt; \epsilon)\)</span>.<br>
+En particulier, <span class="math inline">\(w_n &lt; l + \epsilon\)</span>. Soit <span class="math inline">\(N \geqslant \max(n_0, n_1, n_2)\)</span>, alors pour tout <span class="math inline">\(n \geqslant N\)</span>, on a <span class="math display">\[
+l - \epsilon &lt; u_n \leqslant v_n \leqslant w_n &lt; l + \epsilon,
+\]</span> c’est-à-dire <span class="math display">\[
+\abs{v_n - l} &lt; \epsilon.
+\]</span> D’où le résultat.</li>
 </ul>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple</span><br>
-Soit <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = \frac{\cos(n)}{n}\)</span>. Déterminons la limite de la suite.</p>
-<details class="bloc cor">
-<summary>
-Correction
-</summary>
-<p>On a, pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[
--\frac{1}{n} \leq u_n \leq \frac{1}{n}.
-\]</span> Or, <span class="math inline">\(\lim_{n \to +\infty} \pm \frac{1}{n} = 0\)</span>.</p>
-<p>Ainsi, par le Propriété d’encadrement, on déduit que <span class="math display">\[
-\lim_{n \to +\infty} u_n = 0.
-\]</span></p>
-</details>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Somme de termes </span>
 </div>
-<div class="bloc ex">
-<p><span class="bloc-titre">Exemple</span><br>
-On considère la suite <span class="math inline">\((u_n)\)</span> définie, pour <span class="math inline">\(n \geqslant 1\)</span>, par <span class="math display">\[
-u_n = \sum_{k=1}^n \frac{1}{n + \sqrt{k}}.
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie, pour <span class="math inline">\(n \geqslant 1\)</span>, par <span class="math display">\[
+u_n = \sum_{k=1}^n \dfrac{1}{n + \sqrt{k}}.
 \]</span> Montrons que la suite converge et déterminons sa limite.</p>
 <details class="bloc cor">
 <summary>
-Correction
+Afficher la correction :
 </summary>
-<p>Pour <span class="math inline">\(k\in \llbracket 1,n\rrbracket\)</span>, <span class="math display">\[
-\frac{1}{n+\sqrt{n}} \;\le\; \frac{1}{n+\sqrt{k}} \;\le\; \frac{1}{n}.
-\]</span> En sommant <span class="math inline">\(n\)</span> termes, <span class="math display">\[
-\frac{n}{n+\sqrt{n}} \;\le\; u_n \;\le\; \frac{n}{n}.
-\]</span> Donc <span class="math display">\[
-\frac{1}{1+\frac{1}{\sqrt{n}}} \;\le\; u_n \;\le\; 1.
-\]</span> Comme <span class="math inline">\(\dfrac{1}{\sqrt{n}}\to 0\)</span>, on a <span class="math inline">\(\dfrac{1}{1+\frac{1}{\sqrt{n}}}\to 1\)</span>.</p>
-Par encadrement, <span class="math display">\[
-\lim_{n\to\infty} u_n = 1.
+<p>À <span class="math inline">\(n\)</span> fixé, pour tout <span class="math inline">\(k \in \llbracket 1, n \rrbracket\)</span>, <span class="math display">\[
+\dfrac{1}{n + \sqrt{n}} \leq \dfrac{1}{n + \sqrt{k}} \leq \dfrac{1}{n}.
+\]</span> D’où, en sommant sur <span class="math inline">\(k\)</span> (on somme <span class="math inline">\(n\)</span> termes), on a <span class="math display">\[
+\dfrac{n}{n + \sqrt{n}} \leq u_n \leq \dfrac{n}{n}.
+\]</span> Ainsi, en factorisant par <span class="math inline">\(n\)</span> dans le membre de gauche, on obtient <span class="math display">\[
+\dfrac{1}{1 + \dfrac{1}{\sqrt{n}}} \leq u_n \leq 1.
+\]</span> On sait que <span class="math inline">\(\lim_{n \to +\infty} \dfrac{1}{\sqrt{n}} = 0\)</span>, d’où on déduit que <span class="math display">\[
+\lim_{n \to +\infty} \dfrac{1}{1 + \dfrac{1}{\sqrt{n}}} = 1.
+\]</span> Ainsi, d’après le théorème d’encadrement, <span class="math display">\[
+\lim_{n \to +\infty} u_n = 1.
+\]</span></p>
+On a, pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[
+-\dfrac{1}{n} \leq u_n \leq \dfrac{1}{n}.
+\]</span> Or, <span class="math inline">\(\lim_{n \to +\infty} \pm \dfrac{1}{n} = 0\)</span>. Ainsi, par le théorème d’encadrement, on déduit que <span class="math display">\[
+\lim_{n \to +\infty} u_n = 0.
 \]</span>
 </details>
 </div>
@@ -1100,6 +1108,7 @@ Par encadrement, <span class="math display">\[
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> seuil(<span class="dv">30000</span>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dv">13</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Donc, pour tout entier <span class="math inline">\(n \geqslant 13\)</span>, <span class="math inline">\(50000 \times 0.96^n \leq 30000\)</span>.</p>
+<p>Je fait des faute grave en francais.</p>
 <div class="nav-pages">
 <p><a class="prev" href="convergence_def.html">⬅️</a> <a class="next" href="divergence_def.html">➡️</a></p>
 </div>

@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -889,94 +901,180 @@ window.Quarto = {
 <section id="somme-de-limites" class="level3">
 <h3 class="anchored" data-anchor-id="somme-de-limites">Somme de limites</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : Somme de limites</span><br> <span class="math display">\[
-\begin{array}{|m{4cm}|*{6}{c|}}
-\hline
-\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= &amp; \ell &amp; \ell &amp; \ell &amp; +\infty &amp; -\infty &amp; +\infty \\
-\hline
-\text{et } \displaystyle \lim_{x\to \alpha}v(x)= &amp; \ell ' &amp; +\infty &amp; -\infty &amp; +\infty &amp; -\infty &amp; -\infty \\
-\hline
-\text{alors par somme } \displaystyle \lim_{x\to \alpha}(u+v)(x)= &amp; \ell + \ell ' &amp; +\infty &amp; -\infty &amp; +\infty &amp; -\infty &amp; \textcolor{red}{\text{F.I}} \\
-\hline
-\end{array}
-\]</span></p>
+<p><span class="bloc-titre">Propriété (admis) : </span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Si <span class="math inline">\(\lim_{x\to \alpha}u(x)=\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\ell\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\ell\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\ell\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(+\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(-\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(+\infty\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>et</strong> <span class="math inline">\(\lim_{x\to \alpha}v(x)=\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\ell '\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>alors par somme</strong> <span class="math inline">\(\lim_{x\to \alpha}(u+v)(x)=\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\ell + \ell '\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\infty\)</span></td>
+<td style="text-align: center;"><strong><span style="color:red">F.I.</span></strong></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span> signifiant forme indéterminée. Ce qui signifie que sans traitement on ne peut pas donner la limite de la fonction au point considéré.</p>
 <p>Dans ces conditions, il faut lever l’indétermination grâce au calcul pour un autre théorème.</p>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span> Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\(]0 ; +\infty[\)</span> par <span class="math inline">\(f(x)=x^2-1+\dfrac{1}{x}\)</span>.</p>
-<ol type="1">
-<li><p>Montrer que la fonction admet l’axe des ordonnées comme asymptote</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Somme de limites </span>
+</div>
+<p>Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\(]0 ; +\infty[\)</span> par <span class="math inline">\(f(x)=x^2-1+\dfrac{1}{x}\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(\lim_{\underset{x&gt;0}{x\to 0}}x^2-1=-1\)</span> et <span class="math inline">\(\lim_{\underset{x&gt;0}{x\to 0}}\dfrac{1}{x}=+\infty\)</span> donc, par somme, <span class="math inline">\(\lim_{\underset{x&gt;0}{x\to 0}}f(x)=+\infty\)</span>.<br>
+La courbe représentative de la fonction <span class="math inline">\(f\)</span> admet pour asymptote l’axe des ordonnées.</p></li>
+<li><p><span class="math inline">\(\lim_{x\to +\infty}x^2-1=+\infty\)</span> et <span class="math inline">\(\lim_{x\to +\infty}\dfrac{1}{x}=0\)</span> donc, par somme, <span class="math inline">\(\lim_{x\to +\infty}f(x)=+\infty\)</span>.</p></li>
+</ul>
 <details class="bloc cor">
 <summary>
-<p>Afficher la correction :</p>
+Afficher la correction :
 </summary>
-<p><span class="math display">\[\displaystyle \lim_{\underset{x&gt;0}{x\to 0}} \, x^2-1=-1 \et \displaystyle \lim_{\underset{x&gt;0}{x\to 0}} \, \dfrac{1}{x}=+\infty\]</span> donc, par somme, <span class="math display">\[\displaystyle \lim_{\underset{x&gt;0}{x\to 0}}f(x)=+\infty\]</span></p>
-<p>La courbe représentative de la fonction <span class="math inline">\(f\)</span> admet pour asymptote l’axe des ordonnées.</p>
-</details></li>
-<li><p>Déterminer la limite en <span class="math inline">\(+\infty\)</span></p>
-<details class="bloc cor">
-<summary>
-<p>Afficher la correction :</p>
-</summary>
-<p><span class="math display">\[\displaystyle \lim_{x\to +\infty}x^2-1=+\infty \et \displaystyle \lim_{x\to +\infty}\dfrac{1}{x}=0\]</span></p>
-<p>donc, par somme, <span class="math display">\[\displaystyle \lim_{x\to +\infty}f(x)=+\infty\]</span></p>
-</details></li>
-</ol>
+</details>
 </div>
 </section>
 <section id="produit-de-limites" class="level3">
 <h3 class="anchored" data-anchor-id="produit-de-limites">Produit de limites</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admise) : Produit de limites</span></p>
-<p><span class="math display">\[
-\begin{array}{|m{4cm}|c|c|c|c|}
-\hline
-\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= &amp; \ell &amp; \ell \ne 0 &amp; +\infty \text{ ou } -\infty &amp; 0 \\
-\hline
-\text{et } \displaystyle \lim_{x\to \alpha}v(x)= &amp; \ell ' &amp; +\infty \text{ ou } -\infty &amp; +\infty \text{ ou } -\infty &amp; +\infty \text{ ou } -\infty \\
-\hline
-\text{alors par produit } \displaystyle \lim_{x\to \alpha}(u \times v)(x)= &amp; \ell \times \ell ' &amp; \pm\infty &amp; \pm\infty &amp; \textcolor{red}{\text{F.I.}} \\
-\hline
-\end{array}\]</span></p>
+<p><span class="bloc-titre">Propriété (admis) : </span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Si <span class="math inline">\(\lim_{x\to \alpha}u(x)=\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\ell\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\ell \ne 0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>et</strong> <span class="math inline">\(\lim_{x\to \alpha}v(x)=\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\ell '\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>alors par produit</strong> <span class="math inline">\(\lim_{x\to \alpha}(u \times v)(x)=\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\ell \times \ell '\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\pm\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\pm\infty\)</span></td>
+<td style="text-align: center;"><strong><span style="color:red">F.I.</span></strong></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span> Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\(]0 ; +\infty[\)</span> par <span class="math inline">\(f(x)=x^2\times \left(\dfrac{1}{x}-1\right)\)</span>.</p>
-<p>Déterminer les limites aux bornes de l’ensemble de définition</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\(]0 ; +\infty[\)</span> par <span class="math inline">\(f(x)=x^2\times \left(\dfrac{1}{x}-1\right)\)</span>.<br>
+Déterminer les limites en <span class="math inline">\(+ \infty\)</span> et en <span class="math inline">\(0\)</span>.</p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
 <ul>
-<li><p><span class="math inline">\(\lim_{\underset{x&gt;0}{x\to 0}} \, x^2=0 \et  \lim_{\underset{x&gt;0}{x\to 0}} \, \left(\dfrac{1}{x}-1\right)=+\infty\)</span>.</p>
-<p>(Nous sommes en présence de la forme indéterminée <span class="math inline">\(0\times \infty\)</span> .)</p>
-<p>Pour tout réel <span class="math inline">\(x\)</span> non nul, <span class="math display">\[x^2\times \left(\dfrac{1}{x}-1\right)=x- x^2\]</span></p>
-<p>De plus <span class="math display">\[\displaystyle \lim_{\underset{x&gt;0}{x\to 0}} \,  x- x^2=0\]</span></p>
-<pre><code>On en déduit que $$\displaystyle \lim_{\underset{x&gt;0}{x\to 0}}f(x)=0$$</code></pre></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to +\infty} x^2 = +\infty \et \displaystyle \lim_{x\to +\infty}\left(\dfrac{1}{x}-1\right)=-1\)</span></p></li>
+<li><span class="math inline">\(\lim_{\underset{x&gt;0}{x\to 0}}x^2=0\)</span> et <span class="math inline">\(\lim_{\underset{x&gt;0}{x\to 0}}\left(\dfrac{1}{x}-1\right)=+\infty\)</span>. (Nous sommes en présence de la forme indéterminée « <span class="math inline">\(0\times \infty\)</span> ».)<br>
+Pour tout réel <span class="math inline">\(x\)</span> non nul, <span class="math inline">\(x^2\times \left(\dfrac{1}{x}-1\right)=x- x^2\)</span>.<br>
+De plus <span class="math inline">\(\lim_{\underset{x&gt;0}{x\to 0}}x- x^2=0\)</span>.</li>
 </ul>
-<p>donc, par produit, <span class="math display">\[\displaystyle \lim_{x\to +\infty} \, f(x)=-\infty\]</span></p>
+<p>On en déduit que <span class="math inline">\(\lim_{\underset{x&gt;0}{x\to 0}}f(x)=0\)</span>.</p>
+<ul>
+<li><span class="math inline">\(\lim_{x\to +\infty}x^2=+\infty\)</span><br>
+De plus <span class="math inline">\(\lim_{x t\o + \infty} \dfrac{1}{x}= 0\)</span>, donc <span class="math inline">\(\lim_{x\to +\infty}\left(\dfrac{1}{x}-1\right)=-1\)</span><br>
+Par produit, <span class="math inline">\(\lim_{x\to +\infty}f(x)=-\infty\)</span>.</li>
+</ul>
 </details>
 </div>
 </section>
 <section id="quotient-de-limites" class="level3">
 <h3 class="anchored" data-anchor-id="quotient-de-limites">Quotient de limites</h3>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admise) : Quotient de limites </span><br></p>
-<p><span class="math display">\[
-\renewcommand{\arraystretch}{1.8}
-\begin{array}{|m{3cm}|c|c|c|c|c|c|}
-\hline
-\text{Si } \displaystyle \lim_{x\to \alpha}u(x)= &amp; \ell &amp; \ell \ne 0 &amp; \ell &amp; +\infty \text{ ou } -\infty &amp; 0 &amp; +\infty \text{ ou } -\infty \\
-\hline
-\text{et } \displaystyle \lim_{x\to \alpha}v(x)= &amp; \ell ' \ne 0 &amp; 0 &amp; +\infty \text{ ou } -\infty &amp; \ell ' &amp; 0 &amp; +\infty \text{ ou } -\infty \\
-\hline
-\text{alors par quotient } \displaystyle \lim_{x\to \alpha}\left(\dfrac{u}{v} \right)(x)= &amp; \dfrac{\ell}{ \ell '} &amp; \pm\infty &amp; 0 &amp; \pm\infty &amp; \textcolor{red}{\text{F.I.}} &amp; \textcolor{red}{\text{F.I.}} \\
-\hline
-\end{array}
-\]</span></p>
+<p><span class="bloc-titre">Propriété (admis) : </span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Si <span class="math inline">\(\lim_{x\to \alpha}u(x)=\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\ell\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\ell \ne 0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\ell\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>et</strong> <span class="math inline">\(\lim_{x\to \alpha}v(x)=\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\ell ' \ne 0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\ell '\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>alors par quotient</strong> <span class="math inline">\(\lim_{x\to \alpha}\left(\dfrac{u}{v} \right)(x)=\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac{\ell}{ \ell '}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\pm\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\pm\infty\)</span></td>
+<td style="text-align: center;"><strong><span style="color:red">F.I.</span></strong></td>
+<td style="text-align: center;"><strong><span style="color:red">F.I.</span></strong></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="bloc ex">
 <p><span class="bloc-titre">Exemples : </span> Soit <span class="math inline">\(f\)</span> la fonction définie sur <span class="math inline">\(]1 ; +\infty[\)</span> par <span class="math inline">\(f(x)=\dfrac{x^3-1}{x^2-1}\)</span>.</p>
@@ -1003,6 +1101,24 @@ Afficher la correction :
 <p>il s’ensuit que <span class="math display">\[\displaystyle \lim_{x\to +\infty}\, f(x)=+\infty\]</span></p>
 </details>
 </div>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemples : </span> Soit <span class="math inline">\(g\)</span> la fonction définie sur <span class="math inline">\(\mathbb{R} \setminus \{2\}\)</span> par <span class="math inline">\(g(x) = \dfrac{x+1}{x-2}\)</span>.<br>
+Étudier la limite de <span class="math inline">\(g\)</span> en <span class="math inline">\(2\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<ul>
+<li><p>D’une part <span class="math display">\[\lim_{x \to 2} (x+1) = 3\]</span></p></li>
+<li><p>D’autre part , <span class="math inline">\(\lim_{x \to 2} (x-2) = 0\)</span>. Il faut donc étudier le signe de <span class="math inline">\(x-2\)</span> au voisinage de <span class="math inline">\(2\)</span> :</p>
+<ul>
+<li>Si <span class="math inline">\(x &gt; 2\)</span>, <span class="math inline">\(x-2 &gt; 0\)</span>, donc <span class="math inline">\(\lim_{x \to 2^+} (x-2) = 0^+\)</span>.</li>
+<li>Si <span class="math inline">\(x &lt; 2\)</span>, <span class="math inline">\(x-2 &lt; 0\)</span>, donc <span class="math inline">\(\lim_{x \to 2^-} (x-2) = 0^-\)</span>.</li>
+</ul></li>
+</ul>
+<p>Par quotient, on conclut : <span class="math display">\[\lim_{x \to 2^+} g(x) = +\infty \quad \text{ et } \quad \lim_{x \to 2^-} g(x) = -\infty\]</span></p>
+</details>
+</div>
 </section>
 <section id="composée-de-limites" class="level3">
 <h3 class="anchored" data-anchor-id="composée-de-limites">Composée de limites</h3>
@@ -1022,19 +1138,58 @@ Démonstration :
 <span class="math display">\[\forall \epsilon &gt;0, \; \exists \delta, \; \forall x \in I, \; (\abs{x-a} \leqslant \delta  \Rightarrow \abs{g(f(x))-c} \leqslant\epsilon)\]</span>
 </details>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span> Soit <span class="math inline">\(f:x \longmapsto \exp\left(\sqrt{1+\frac{1}{x^2}}\right)\)</span> définie sur <span class="math inline">\(\R^*\)</span>.</p>
-<p>Déterminons la limite en <span class="math inline">\(0^+\)</span>.</p>
+<p><span class="bloc-titre">Exemples : </span> On considère la fonction <span class="math inline">\(f\)</span> définie sur <span class="math inline">\(\R\)</span> par <span class="math display">\[f(x) = \sqrt{1+x^2}\]</span> Déterminer sa limite en <span class="math inline">\(+ \infty\)</span></p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p><span class="math display">\[
-\left. \begin{array}{lll}
+<span class="math display">\[
 \left . \begin{array}{l}
-\lim_{x \to 0^+} 1+\frac{1}{x^2} = + \infty\\
-\lim_{y \to +\infty} \sqrt{y} = +\infty
-\end{array} \right\} \text{ Par composition } &amp;\lim_{x \to 0^+} \sqrt{1+\frac{1}{x^2}} = + \infty&amp;    \\
-  &amp;\lim_{y \to +\infty} \e^{y} = +\infty &amp;  \end{array} \right\} \text{ Par composition } \lim_{x \to 0^+} f(x) = + \infty\]</span></p>
+\lim_{x \to +\infty} 1+x^2 = + \infty\\
+\lim_{x \to +\infty} \sqrt{x} = +\infty
+\end{array} \right\} \text{ Par composition }
+\lim_{x \to + \infty} \sqrt{1+x^2} = + \infty
+\]</span>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> </span>
+</div>
+<p>Soit <span class="math inline">\(g\)</span> une fonction dérivable sur <span class="math inline">\(\mathbb{R}\)</span> ayant pour tableau de variations :</p>
+<div style="text-align: center;">
+<p><img src="../../image/maths_term/Chap4_Limite_limite_compo.png" style="width: 60%;"></p>
+</div>
+<ol type="1">
+<li>Déterminer la limite de <span class="math inline">\(\dfrac{1}{g(x)}\)</span> lorsque <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(-\infty\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>D’après le tableau de variations, on a <span class="math display">\[\lim_{x \to -\infty} g(x) = -\infty\]</span><br>
+Par passage à l’inverse, on déduit que : <span class="math display">\[\lim_{x \to -\infty} \dfrac{1}{g(x)} = 0\]</span></p>
+</details>
+<ol start="2" type="1">
+<li>Déterminer la limite de <span class="math inline">\(g \left(\dfrac{1}{x} \right)\)</span> lorsque <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(+\infty\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On a <span class="math display">\[\lim_{x \to +\infty} \dfrac{1}{x} = 0^+\]</span><br>
+Or, d’après le tableau, <span class="math display">\[\lim_{X \to 0^+} g(X) = -3\]</span> Par composition, on déduit que : <span class="math display">\[\lim_{x \to +\infty} g \left( \dfrac{1}{x} \right) = -3\]</span></p>
+</details>
+<ol start="3" type="1">
+<li>Déterminer la limite de <span class="math inline">\(\dfrac{1}{g(x)-2}\)</span> lorsque <span class="math inline">\(x\)</span> tend vers <span class="math inline">\(-1\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>D’après le tableau des variations, on a <span class="math display">\[\lim_{x \to -1} g(x) = 2^-\]</span><br>
+Ainsi : <span class="math display">\[\lim_{x \to -1} g(x)-2 = 0^-\]</span> Or <span class="math display">\[\lim_{x \to 0^-} \dfrac{1}{x} = - \infty\]</span></p>
+<p>Donc par composition <span class="math display">\[\lim_{x \to -1} \dfrac{1}{g(x)-2} = -\infty\]</span></p>
 </details>
 </div>
 <div class="nav-pages">

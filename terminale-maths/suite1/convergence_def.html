@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -852,7 +864,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#définition" id="toc-définition" class="nav-link active" data-scroll-target="#définition">Définition</a></li>
-  <li><a href="#propriétés" id="toc-propriétés" class="nav-link" data-scroll-target="#propriétés">Propriétés</a></li>
   </ul>
 </nav>
     </div>
@@ -888,135 +899,112 @@ window.Quarto = {
 <section id="définition" class="level3">
 <h3 class="anchored" data-anchor-id="définition">Définition</h3>
 <div class="bloc def">
-<p><span class="bloc-titre">Définition : </span><br>
-Soit <span class="math inline">\((u_n)\)</span> une suite réelle. On dit que la suite <span class="math inline">\((u_n)\)</span> converge vers un réel <span class="math inline">\(l\)</span> ou admet <span class="math inline">\(l\)</span> pour limite lorsque</p>
-<p><span class="math display">\[
-\forall \epsilon &gt; 0, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n \geqslant n_0 \Rightarrow \lvert u_n - l\rvert &lt; \epsilon).
-\]</span></p>
-<p>On note alors</p>
-<p><span class="math display">\[
-\lim_{n \to +\infty} u_n = l.
-\]</span></p>
-<p>Une suite qui ne converge pas est dite <strong>divergente</strong>.</p>
+<p><span class="bloc-titre">Définition : </span><br></p>
+<p>Soit <span class="math inline">\((u_n)\)</span> une suite réelle. On dit que la suite <span class="math inline">\((u_n)\)</span> <strong>converge vers un réel <span class="math inline">\(l\)</span></strong> ou admet <span class="math inline">\(l\)</span> pour limite lorsque : <span class="math display">\[\forall \epsilon &gt; 0, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n \geqslant n_0 \Rightarrow |u_n - l| &lt; \epsilon)\]</span></p>
+<p>On note alors : <span class="math display">\[\lim_{n \to +\infty} u_n = l\]</span> Une suite qui ne converge pas est dite <strong>divergente</strong>.</p>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br>
-C’est-à-dire que tout intervalle ouvert contenant <span class="math inline">\(l\)</span> contient tous les termes de la suite <span class="math inline">\((u_n)\)</span> à partir d’un certain rang (sauf un nombre fini).</p>
-</div>
+<p><span class="bloc-titre">Remarque : </span><br></p>
+<p>Cela signifie que tout intervalle ouvert contenant <span class="math inline">\(l\)</span> contient tous les termes de la suite <span class="math inline">\((u_n)\)</span> à partir d’un certain rang (autrement dit, il n’y a qu’un nombre fini de termes à l’extérieur de cet intervalle).</p>
 <p><strong>Interprétation graphique</strong><br>
 Si on représente une suite convergente vers <span class="math inline">\(l\)</span> par un nuage de points dans un repère, à partir d’un certain rang <span class="math inline">\(n_0\)</span>, tous les points sont dans la bande délimitée par les droites d’équation <span class="math inline">\(y= l -\epsilon\)</span> et <span class="math inline">\(y=l + \epsilon\)</span>.</p>
 <div style="text-align:center;">
-<p><img src="../../image/maths_term/Chap1_Recurrence_suite_convergente.png" alt="" width="60%/"></p>
+<p><img src="../../image/maths_term/Chap1_Recurrence_suite_convergente.png" alt="" width="70%/"></p>
+</div>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Utilisation de la définition <span class="math inline">\(\epsilon\)</span> </span>
+</div>
 <ol type="1">
 <li>Montrons que la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = \dfrac{1}{\sqrt{n+1}}\)</span> converge vers <span class="math inline">\(0\)</span>.</li>
 </ol>
-<p>Pour <span class="math inline">\(\epsilon&gt;0\)</span>, <span class="math display">\[
-\abs{\frac{1}{\sqrt{n+1}} - 0 } &lt; \epsilon
-\Longleftrightarrow
-\frac{1}{\sqrt{n+1}} &lt; \epsilon
-\Longleftrightarrow
-\frac{1}{\epsilon^2} &lt; n+1
-\Longleftrightarrow
-n &gt; \frac{1}{\epsilon^2} - 1.
-\]</span></p>
-<p>Soit <span class="math inline">\(n_0 = \mathrm{Ent}\!\left(\dfrac{1}{\epsilon^2}\right) + 1\)</span>. Alors, pour tout <span class="math inline">\(n \ge n_0\)</span>, <span class="math inline">\(\dfrac{1}{\sqrt{n+1}} &lt; \epsilon\)</span>, donc <span class="math display">\[
-\lim_{n \to +\infty} \frac{1}{\sqrt{n+1}} = 0.
-\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On a : <span class="math display">\[\abs{\dfrac{1}{\sqrt{n+1}} - 0} &lt; \epsilon \Longleftrightarrow \dfrac{1}{\sqrt{n+1}} &lt; \epsilon \Longleftrightarrow \dfrac{1}{\epsilon^2} &lt; n+1 \Longleftrightarrow n &gt; \dfrac{1}{\epsilon^2} - 1\]</span> Soit <span class="math inline">\(n_0 = \lfloor \dfrac{1}{\epsilon^2} \rfloor + 1\)</span>. On a ainsi : <span class="math display">\[\forall n \in \N, \, n \geqslant n_0 \Longrightarrow \dfrac{1}{\sqrt{n+1}} &lt; \epsilon\]</span> On vient de démontrer que la suite <span class="math inline">\((u_n)\)</span> est convergente, et on note : <span class="math inline">\(\lim_{n \to +\infty} \dfrac{1}{\sqrt{n+1}} = 0\)</span>.</p>
+</details>
 <ol start="2" type="1">
 <li>Prouvons la convergence de <span class="math inline">\(v_n = \dfrac{2\sqrt{n+1}+1}{\sqrt{n+1}}\)</span>.</li>
 </ol>
-<p>Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[
-\frac{2\sqrt{n+1}+1}{\sqrt{n+1}}
-= \frac{2\sqrt{n+1}}{\sqrt{n+1}} + \frac{1}{\sqrt{n+1}}
-= 2 + u_n.
-\]</span></p>
-<p>Or <span class="math inline">\((u_n) \to 0\)</span>, donc pour tout <span class="math inline">\(\epsilon&gt;0\)</span>, il existe <span class="math inline">\(n_0\)</span> tel que <span class="math inline">\(n&gt;n_0 \Rightarrow |u_n|&lt;\epsilon\)</span>. Ainsi <span class="math display">\[
-|v_n - 2| = |u_n| &lt; \epsilon,
-\]</span> donc <span class="math inline">\(\lim\limits_{n\to+\infty} v_n = 2\)</span>.</p>
-</div>
-<div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br>
-On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = (-1)^n\)</span>. Montrons que cette suite diverge.</p>
-<p>Supposons qu’elle converge vers <span class="math inline">\(l \in \R\)</span>. Prenons <span class="math inline">\(\epsilon=1\)</span>. Il existe <span class="math inline">\(n_0\)</span> tel que, pour <span class="math inline">\(n\ge n_0\)</span>, <span class="math display">\[
-|(-1)^n - l| &lt; 1.
-\]</span></p>
-<ul>
-<li><p>Si <span class="math inline">\(n=2k\)</span>, alors <span class="math inline">\(|1-l|&lt;1 \iff 0&lt;l&lt;2\)</span>.</p></li>
-<li><p>Si <span class="math inline">\(n=2k+1\)</span>, alors <span class="math inline">\(|-1-l|&lt;1 \iff -2&lt;l&lt;0\)</span>.</p></li>
-</ul>
-<p>On obtient donc <span class="math inline">\(l \in\, ]-2,0[ \cap ]0,2[\, = \emptyset\)</span>, contradiction. Ainsi, <span class="math inline">\(((-1)^n)\)</span> ne converge pas.</p>
-</div>
-</section>
-<section id="propriétés" class="level3">
-<h3 class="anchored" data-anchor-id="propriétés">Propriétés</h3>
-<div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br>
-Toute suite convergente est bornée.</p>
-</div>
-<details class="bloc demo">
-<summary>
-Démonstration
-</summary>
-<p>Soit <span class="math inline">\((u_n)\)</span> une suite convergente vers <span class="math inline">\(l\)</span>. En prenant <span class="math inline">\(\epsilon=1\)</span>, il existe <span class="math inline">\(n_0\in\N\)</span> tel que, pour <span class="math inline">\(n\ge n_0\)</span>, <span class="math inline">\(|u_n-l|&lt;1\)</span>. Alors <span class="math display">\[
-|u_n| = |u_n-l+l| \le |u_n-l| + |l| &lt; 1+|l|.
-\]</span></p>
-En posant <span class="math inline">\(M = \max\!\big(\,|u_0|,\dots,|u_{n_0}|,\,1+|l|\,\big)\)</span>, on a <span class="math inline">\(\forall n\in\N,\ |u_n|\le M\)</span>.
-</details>
-<div class="bloc rem">
-<p><span class="bloc-titre">Remarque : </span><br>
-Pour montrer qu’une suite ne converge pas, on peut montrer qu’elle n’est pas bornée.</p>
-</div>
-<div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br>
-Soit la suite croissante <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = 3n^2 + 1\)</span>. Montrons qu’elle ne converge pas.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<p>On raisonne par l’absurde et on suppose que la suite est majorée, donc il existe <span class="math inline">\(L\)</span> tel que pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(u_n \leqslant L\)</span>.</p>
-<p>Or <span class="math display">\[u_n &gt; L \Longleftrightarrow 3n^2+1 &gt; L \Longleftrightarrow n &gt; \sqrt{\frac{L-1}{3}}\]</span></p>
-<p>On pose alors <span class="math inline">\(n_0 = \text{Ent}\left(\sqrt{\frac{L-1}{3}}\right)+1\)</span></p>
-<p>La fonction associée à <span class="math inline">\((u_n)\)</span> étant strictement croissante, on a<br>
-<span class="math display">\[\forall  n \geqslant n_0, \,   u_n \geqslant u_{n_0}\]</span></p>
-<p>Donc la suite <span class="math inline">\(u_n &gt; L\)</span></p>
-<p>La suite n’est donc pas majorée, donc elle ne converge pas.</p>
+<p>Pour tout <span class="math inline">\(n \in \N\)</span>, <span class="math display">\[v_n = \dfrac{2\sqrt{n+1}}{\sqrt{n+1}} + \dfrac{1}{\sqrt{n+1}} = 2 + u_n\]</span> Or, <span class="math inline">\((u_n)\)</span> converge vers <span class="math inline">\(0\)</span>, donc : <span class="math display">\[\forall \epsilon &gt; 0, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n &gt; n_0 \Rightarrow \abs{u_n} &lt; \epsilon)\]</span> D’où <span class="math inline">\(-\epsilon &lt; u_n &lt; \epsilon\)</span>. On en déduit : <span class="math inline">\(2 - \epsilon &lt; v_n &lt; 2 + \epsilon\)</span>.</p>
+<p>Ainsi, <span class="math inline">\(\forall \epsilon &gt; 0, \, \exists n_0 \in \N, \, \forall n \in \N, \, (n &gt; n_0 \Rightarrow \abs{v_n - 2} &lt; \epsilon)\)</span>.</p>
+<p>La suite <span class="math inline">\((v_n)\)</span> converge vers <span class="math inline">\(2\)</span>.</p>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Divergence de <span class="math inline">\((-1)^n\)</span> </span>
+</div>
+<p>On considère la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = (-1)^n\)</span>. Montrons que cette suite diverge.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Supposons par l’absurde que la suite converge vers un réel <span class="math inline">\(l\)</span>. Soit <span class="math inline">\(\epsilon = 1\)</span>, il existe <span class="math inline">\(n_0 \in \N\)</span> tel que : <span class="math display">\[n \geqslant n_0 \Rightarrow \abs{(-1)^n - l} &lt; 1\]</span> * Si <span class="math inline">\(n = 2k\)</span> : <span class="math inline">\(\abs{1 - l} &lt; 1 \Longleftrightarrow 0 &lt; l &lt; 2\)</span>. * Si <span class="math inline">\(n = 2k+1\)</span> : <span class="math inline">\(\abs{-1 - l} &lt; 1 \Longleftrightarrow -2 &lt; l &lt; 0\)</span>.</p>
+<p>L’ensemble des limites possibles est <span class="math inline">\(]0, 2[ \cap ]-2, 0[ = \emptyset\)</span>. Contradiction. La suite diverge.</p>
 </details>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété : </span><br>
-Si une suite <span class="math inline">\((u_n)\)</span> converge vers un réel <span class="math inline">\(l\)</span>, alors ce réel <span class="math inline">\(l\)</span> est unique.</p>
+<p><span class="bloc-titre">Théorème : </span><br></p>
+<p>Toute suite convergente est bornée.</p>
 </div>
 <details class="bloc demo">
 <summary>
-Démonstration
+Démonstration :
 </summary>
-Supposons <span class="math inline">\((u_n)\to l\)</span> et <span class="math inline">\((u_n)\to l'\)</span> avec <span class="math inline">\(l\ne l'\)</span>. Posez <span class="math inline">\(\epsilon=\dfrac{|l-l'|}{3}\)</span>.<br>
-Il existe <span class="math inline">\(n_0,n_0'\)</span> tels que, pour <span class="math inline">\(n\ge n_0\)</span>, <span class="math inline">\(|u_n-l|\le \epsilon\)</span> et pour <span class="math inline">\(n\ge n_0'\)</span>, <span class="math inline">\(|u_n-l'|\le \epsilon\)</span>.<br>
-Pour <span class="math inline">\(n\ge N=\max(n_0,n_0')\)</span>, <span class="math display">\[
-|l-l'| = |(l-u_n)+(u_n-l')|
-\le |u_n-l| + |u_n-l'|
-\le \frac{2|l-l'|}{3},
-\]</span> d’où <span class="math inline">\(|l-l'|\le 0\)</span> donc <span class="math inline">\(l=l'\)</span>, contradiction. L’unicité est prouvée.
+<p>Soit <span class="math inline">\((u_n)\)</span> une suite convergente vers <span class="math inline">\(l\)</span>.</p>
+<p>Pour <span class="math inline">\(\epsilon = 1\)</span>, il existe <span class="math inline">\(n_0 \in \N\)</span> tel que pour <span class="math inline">\(n &gt; n_0\)</span>, <span class="math inline">\(\abs{u_n - l} &lt; 1\)</span>.</p>
+<p>D’après l’inégalité triangulaire : $ <span class="math inline">\(\abs{u_n} = \abs{u_n - l + l} \leqslant \abs{u_n - l} + \abs{l} &lt; 1 + \abs{l}\)</span>$</p>
+<p>En posant <span class="math display">\[M = \max(\abs{u_0}, \dots, \abs{u_{n_0}}, 1 + \abs{l})\]</span></p>
+<p>on a <span class="math inline">\(\forall n \in \N, \abs{u_n} \leqslant M\)</span>.</p>
 </details>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span><br></p>
+<p>Pour montrer qu’une suite ne converge pas, on peut montrer qu’elle n’est pas bornée.</p>
+</div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemple : </span><br>
-Que peut-on dire de la suite <span class="math inline">\(u_n=\cos(\pi n)\)</span> ?</p>
-<ul>
-<li><p><span class="math inline">\(u_{2n} = \cos(2n\pi)=1\)</span> donc <span class="math inline">\((u_{2n}) \to 1\)</span>.</p></li>
-<li><p><span class="math inline">\(u_{2n+1} = \cos((2n+1)\pi)=-1\)</span> donc <span class="math inline">\((u_{2n+1}) \to -1\)</span>.</p></li>
-</ul>
-<p>La suite alterne entre <span class="math inline">\(1\)</span> et <span class="math inline">\(-1\)</span> et ne peut donc pas converger vers une unique limite. Elle ne converge pas.</p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Suite non majorée </span>
+</div>
+<p>Soit la suite <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_n = 3n^2 + 1\)</span>. Montrons qu’elle diverge.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Supposons par l’absurde que <span class="math inline">\((u_n)\)</span> est majorée par <span class="math inline">\(L\)</span>.<br>
+Alors pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(3n^2+1 \leqslant L\)</span>, soit <span class="math inline">\(n \leqslant \sqrt{\dfrac{L-1}{3}}\)</span>.<br>
+C’est impossible car <span class="math inline">\(\N\)</span> n’est pas majoré. La suite n’étant pas bornée, elle ne peut pas converger.</p>
+</details>
 </div>
 <div class="bloc thm">
-<p><span class="bloc-titre">Propriété (admis) : </span><br>
-Soit <span class="math inline">\(k \in \N^*\)</span>, alors <span class="math display">\[
-\lim_{n \to +\infty} \frac{1}{n^k} = 0
-\quad \text{et} \quad
-\lim_{n \to +\infty} \frac{1}{\sqrt{n}} = 0.
-\]</span></p>
+<p><span class="bloc-titre">Théorème : </span><br></p>
+<p>Si une suite <span class="math inline">\((u_n)\)</span> converge vers un réel <span class="math inline">\(l\)</span>, alors ce réel <span class="math inline">\(l\)</span> est unique.</p>
+</div>
+<details class="bloc demo">
+<summary>
+Démonstration :
+</summary>
+<p>Supposons que <span class="math inline">\((u_n)\)</span> converge vers <span class="math inline">\(l\)</span> et <span class="math inline">\(l'\)</span>. Soit <span class="math inline">\(\epsilon = \dfrac{\abs{l-l'}}{3}\)</span>.</p>
+<p>Il existe un rang <span class="math inline">\(N\)</span> à partir duquel <span class="math display">\[\abs{u_n - l} \leqslant \epsilon$ et $\abs{u_n - l'} \leqslant \epsilon\]</span> Par inégalité triangulaire : <span class="math display">\[\abs{l - l'} = \abs{l - u_n + u_n - l'} \leqslant \abs{u_n - l} + \abs{u_n - l'} \leqslant \dfrac{2\abs{l-l'}}{3}\]</span></p>
+<p>Ceci implique <span class="math inline">\(\abs{l-l'} = 0\)</span>, donc <span class="math inline">\(l=l'\)</span>.</p>
+</details>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Étude de <span class="math inline">\(\cos(n\pi)\)</span> </span>
+</div>
+<p>La suite <span class="math inline">\(u_n = \cos(n\pi)\)</span> prend alternativement les valeurs <span class="math inline">\(1\)</span> (pour <span class="math inline">\(n\)</span> pair) et <span class="math inline">\(-1\)</span> (pour <span class="math inline">\(n\)</span> impair).</p>
+<p>Si elle convergeait vers <span class="math inline">\(l\)</span>, on aurait simultanément <span class="math inline">\(l=1\)</span> et <span class="math inline">\(l=-1\)</span> par unicité de la limite, ce qui est impossible.</p>
+<p>La suite diverge.</p>
+</div>
+<div class="bloc thm">
+<p><span class="bloc-titre">Théorème (admis) : </span><br></p>
+<p>Soit <span class="math inline">\(k \in \N^*\)</span>, alors : <span class="math display">\[\lim_{n \to +\infty} \dfrac{1}{n^k} = 0 \quad \text{et} \quad \lim_{n \to +\infty} \dfrac{1}{\sqrt{n}} = 0\]</span></p>
 </div>
 <div class="nav-pages">
 <p><a class="prev" href="application.html">⬅️</a> <a class="next" href="convergence_prop.html">➡️</a></p>

@@ -124,8 +124,8 @@ window.MathJax = {
       wideparen: ["\\overset{\\frown}{#1}", 1],
       np: ["\\text{#1}", 1],
       card: ["\\operatorname{card}(#1)", 1],
-      llbracket: ["{\\left[\\!\\left[}"],
-      rrbracket: ["{\\right]\\!\\right]}"],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
 
       OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
       Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
@@ -498,6 +498,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La recurrence double, forte et descente de de Cauhcy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application à l’étude des suites</span></a>
   </div>
@@ -530,6 +536,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limites des suites géomériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites Récurrentes</span></a>
   </div>
 </li>
       </ul>
@@ -887,133 +899,98 @@ window.Quarto = {
 <hr>
 <section id="axiomatisation-des-entiers-naturels" class="level2">
 <h2 class="anchored" data-anchor-id="axiomatisation-des-entiers-naturels">Axiomatisation des entiers naturels</h2>
-<div class="bloc thm">
-<p><span class="bloc-titre">Axiomes de Peano :</span><br>
-La définition axiomatique des entiers naturels de Peano peut être décrite par les cinq axiomes :</p>
+<div class="bloc axi">
+<p><span class="bloc-titre">Axiomes de Peano : </span><br> La définition axiomatique des entiers naturels de Peano peut être décrite par les cinq axiomes :</p>
 <ol type="1">
-<li>L’élément appelé zéro et noté <span class="math inline">\(0\)</span> est un entier naturel.<br>
-</li>
-<li>Tout entier naturel <span class="math inline">\(n\)</span> a un unique successeur, noté <span class="math inline">\(s(n)\)</span> ou <span class="math inline">\(S(n)\)</span> qui est un entier naturel.<br>
-</li>
-<li>Aucun entier naturel n’a <span class="math inline">\(0\)</span> pour successeur.<br>
-</li>
-<li>Deux entiers naturels ayant le même successeur sont égaux.<br>
-</li>
-<li>(Axiome de récurrence) Si un ensemble d’entiers naturels contient <span class="math inline">\(0\)</span> et contient le successeur de chacun de ses éléments, alors cet ensemble contient <span class="math inline">\(\N\)</span>.<br>
-</li>
+<li>L’élément appelé zéro et noté <span class="math inline">\(0\)</span> est un entier naturel.</li>
+<li>Tout entier naturel <span class="math inline">\(n\)</span> a un unique successeur, noté <span class="math inline">\(s(n)\)</span> ou <span class="math inline">\(S(n)\)</span> qui est un entier naturel.</li>
+<li>Aucun entier naturel n’a <span class="math inline">\(0\)</span> pour successeur.</li>
+<li>Deux entiers naturels ayant le même successeur sont égaux.</li>
+<li><strong>(Axiome de récurrence)</strong> Si un ensemble d’entiers naturels contient <span class="math inline">\(0\)</span> et contient le successeur de chacun de ses éléments, alors cet ensemble contient <span class="math inline">\(\N\)</span>.</li>
 </ol>
 </div>
-<hr>
 </section>
 <section id="principe-du-raisonnement" class="level2">
 <h2 class="anchored" data-anchor-id="principe-du-raisonnement">Principe du raisonnement</h2>
+<div class="bloc thm">
+<p><span class="bloc-titre">Méthode : </span><br> On souhaite démontrer une propriété qui dépend de <span class="math inline">\(n\)</span>, où <span class="math inline">\(n \in \N\)</span>.<br>
+Pour cela, on peut utiliser le raisonnement par récurrence (ou par induction). Il se décompose en trois étapes :</p>
+<p><strong>Initialisation — Hérédité — Conclusion</strong></p>
+</div>
 <div class="bloc rem">
-<p>On souhaite démontrer une propriété qui dépend de <span class="math inline">\(n\)</span>, où <span class="math inline">\(n \in \N\)</span>.<br>
-Pour cela, on peut utiliser le raisonnement par récurrence (ou par induction).<br>
-Il se décompose en trois étapes :</p>
-<p><strong>Initialisation – Hérédité – Conclusion</strong></p>
 <ol type="1">
-<li><p><strong>Initialisation :</strong><br>
-C’est l’étape où l’on prouve que la proposition est vraie au départ (au rang <span class="math inline">\(n_0\)</span>).</p>
-<p>Il faut donc démontrer : <span class="math inline">\(P_{n_0}\)</span> vraie.</p></li>
-<li><p><strong>Hérédité :</strong><br>
-On suppose que pour un entier <span class="math inline">\(n\)</span>, <span class="math inline">\(P_n\)</span> est vrai, et on montre que <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie.</p>
-<p>On déduit alors, de la table de vérité de l’implication, que <span class="math inline">\(P_{n+1}\)</span> est aussi vraie.</p>
-<p>On dit alors que la propriété est <strong>héréditaire</strong>.</p></li>
-<li><p><strong>Conclusion :</strong><br>
-On a <span class="math inline">\(P_{n_0}\)</span> et <span class="math inline">\(\forall \, k \in \N, \, (P_k \Longrightarrow P_{k+1})\)</span> vraie (il s’agit de l’hérédité).<br>
-On déduit que <span class="math inline">\(\forall \, n \in \N, \, P_n\)</span> est vraie.</p></li>
+<li><p><strong>Initialisation :</strong> C’est l’étape où l’on prouve que la proposition est vraie au départ (au rang <span class="math inline">\(n_0\)</span>). Il faut donc démontrer : <span class="math inline">\(P_{n_0}\)</span> vraie.</p></li>
+<li><p><strong>Hérédité :</strong> On suppose que pour un entier <span class="math inline">\(n\)</span>, <span class="math inline">\(P_n\)</span> est vrai, et on montre que <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie.<br>
+On déduit alors que <span class="math inline">\(P_{n+1}\)</span> est aussi vraie. On dit alors que la propriété est <strong>héréditaire</strong>.</p></li>
+<li><p><strong>Conclusion :</strong> On a <span class="math inline">\(P_{n_0}\)</span> et <span class="math inline">\(\forall k \in \N, (P_k \Longrightarrow P_{k+1})\)</span> vraie. On déduit que <span class="math inline">\(\forall n \in \N, P_n\)</span> est vraie.</p></li>
 </ol>
 </div>
-<div class="bloc rem">
+<hr>
 <p><strong>Comprendre le raisonnement :</strong></p>
-<p>Ainsi, on a :</p>
+<div class="bloc rem">
 <ul>
-<li><span class="math inline">\((P_0 \Longrightarrow P_1)\)</span> et <span class="math inline">\(P_0\)</span> vraie, donc <span class="math inline">\(P_1\)</span> est vraie ;<br>
-</li>
-<li><span class="math inline">\((P_1 \Longrightarrow P_2)\)</span> et <span class="math inline">\(P_1\)</span> vraie, donc <span class="math inline">\(P_2\)</span> est vraie ;<br>
-</li>
-<li><span class="math inline">\(\cdots\)</span> ;<br>
-</li>
-<li><span class="math inline">\((P_n \Longrightarrow P_{n+1})\)</span> et <span class="math inline">\(P_n\)</span> vraie, donc <span class="math inline">\(P_{n+1}\)</span> est vraie ;<br>
-</li>
-<li><span class="math inline">\(\cdots\)</span> ;</li>
+<li><span class="math inline">\((P_0 \Longrightarrow P_1)\)</span> et <span class="math inline">\(P_0\)</span> vraie, donc <span class="math inline">\(P_1\)</span> est vraie ;</li>
+<li><span class="math inline">\((P_1 \Longrightarrow P_2)\)</span> et <span class="math inline">\(P_1\)</span> vraie, donc <span class="math inline">\(P_2\)</span> est vraie ;</li>
+<li>…</li>
+<li><span class="math inline">\((P_n \Longrightarrow P_{n+1})\)</span> et <span class="math inline">\(P_n\)</span> vraie, donc <span class="math inline">\(P_{n+1}\)</span> est vraie.</li>
 </ul>
-<p>On a donc, pour tout entier naturel <span class="math inline">\(n\)</span>, <span class="math inline">\(P_n\)</span> vraie.</p>
-<p>Une manière facile de visualiser un raisonnement par récurrence consiste à faire l’analogie avec le jeu de la chute en cascade des dominos (une infinité !) :</p>
+<p>Une manière facile de visualiser un raisonnement par récurrence consiste à faire l’analogie avec le jeu de la chute en cascade des dominos :</p>
 <ul>
-<li>La chute du premier domino constitue l’initialisation ;<br>
-</li>
-<li>« Si un domino tombe, alors le suivant tombe » constitue l’hérédité ;<br>
-</li>
-<li>La chute en cascade de l’ensemble de la structure est la conclusion.<br>
-</li>
+<li>La chute du premier domino constitue <strong>l’initialisation</strong> ;</li>
+<li>« Si un domino tombe, alors le suivant tombe » constitue <strong>l’hérédité</strong> ;</li>
+<li>La chute en cascade de l’ensemble de la structure est la <strong>conclusion</strong>.</li>
 </ul>
 </div>
-<hr>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span><br></p>
-<p>Démontrons que, pour tout entier naturel <span class="math inline">\(n\)</span> non nul, la somme des <span class="math inline">\(n\)</span> premiers entiers impairs est <span class="math inline">\(n^2\)</span>.<br>
-C’est-à-dire que pour tout <span class="math inline">\(n \in \N^*\)</span>,</p>
-<p><span class="math display">\[
-S_n = \sum_{k=0}^{n-1} (2k+1) = (2 \times 0 + 1) + (2 \times 1 + 1) + (2 \times 2 + 1) + \dots + (2(n-1) + 1) = n^2.
-\]</span></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Somme des entiers impairs </span>
+</div>
+<p>Démontrons que, pour tout entier naturel <span class="math inline">\(n\)</span> non nul, la somme des <span class="math inline">\(n\)</span> premiers entiers impairs est <span class="math inline">\(n^2\)</span>. C’est-à-dire que pour tout <span class="math inline">\(n \in \N^*\)</span>, <span class="math display">\[S_n = \sum_{k=0}^{n-1} (2k+1) = (2 \times 0 + 1) + (2 \times 1 + 1) + \dots + (2(n-1) + 1) = n^2.\]</span></p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
 <p>Soit, pour tout entier <span class="math inline">\(n\)</span> non nul, <span class="math inline">\(P_n : S_n = n^2\)</span>.</p>
 <ul>
-<li><p><em>Initialisation :</em><br>
+<li><p><strong>Initialisation :</strong><br>
 Pour <span class="math inline">\(n=1\)</span>, <span class="math inline">\(1^2 = 1\)</span>, et <span class="math inline">\(S_1 = 2 \times 0 + 1 = 1\)</span>.<br>
 Ainsi, <span class="math inline">\(P_1\)</span> est vraie, et la récurrence est initialisée.</p></li>
-<li><p><em>Hérédité :</em><br>
+<li><p><strong>Hérédité :</strong><br>
 On suppose que pour un entier <span class="math inline">\(n \geqslant 1\)</span> arbitrairement fixé, la propriété <span class="math inline">\(P_n\)</span> est vraie.<br>
-Démontrons que <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie.</p>
-<p><span class="math display">\[
-\sum_{k=0}^{n} (2k+1) = \underbrace{(2 \times 0 + 1) + (2 \times 1 + 1) + (2 \times 2 + 1) + \dots + (2(n-1) + 1)}_{S_n = n^2} + (2n + 1)
-\]</span></p>
-<p><span class="math display">\[
-= n^2 + 2n + 1 = (n+1)^2.
-\]</span></p>
-<p>On a <span class="math inline">\(P_n\)</span> vraie et la propriété est héréditaire, donc <span class="math inline">\(P_{n+1}\)</span> est vraie.</p></li>
-<li><p><em>Conclusion :</em><br>
-On a <span class="math inline">\(P_1\)</span> et <span class="math inline">\(\forall \, n \in \N^*, \, (P_n \Rightarrow P_{n+1})\)</span> vraie.<br>
-On déduit que <span class="math inline">\(\forall \, n \in \N^*, \, P_n\)</span> est vraie.</p></li>
+Démontrons que <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie.<br>
+<span class="math display">\[\sum_{k=0}^{n} (2k+1) = \underbrace{\sum_{k=0}^{n-1} (2k+1)}_{S_n = n^2} + (2n + 1) = n^2 + 2n + 1 = (n+1)^2\]</span> On a <span class="math inline">\(P_n\)</span> vraie et la propriété est héréditaire, donc <span class="math inline">\(P_{n+1}\)</span> est vraie.</p></li>
+<li><p><strong>Conclusion :</strong><br>
+On a <span class="math inline">\(P_1\)</span> et <span class="math inline">\(\forall n \in \N^*, (P_n \Rightarrow P_{n+1})\)</span> vraie.<br>
+On déduit que <span class="math inline">\(\forall n \in \N^*, P_n\)</span> est vraie.</p></li>
 </ul>
 </details>
 </div>
 <div class="bloc ex">
-<p><span class="bloc-titre">Exemples : </span><br></p>
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Dérivée de <span class="math inline">\(u^n\)</span> </span>
+</div>
 <p>Soit <span class="math inline">\(u\)</span> une fonction définie et dérivable sur <span class="math inline">\(I\)</span>.<br>
 Démontrons que pour tout entier naturel <span class="math inline">\(n\)</span> non nul, <span class="math inline">\(u^n\)</span> est dérivable et <span class="math inline">\((u^n)' = n u' u^{n-1}\)</span>.</p>
 <details class="bloc cor">
 <summary>
-Afficher la correction
+Afficher la correction :
 </summary>
-<p>On note, pour tout entier naturel <span class="math inline">\(n\)</span> non nul, <span class="math inline">\(P_n\)</span> : « <span class="math inline">\(u^n\)</span> est dérivable et <span class="math inline">\((u^n)' = n u' u^{n-1}\)</span> ».</p>
+<p>On note, pour tout entier naturel <span class="math inline">\(n\)</span> non nul, <span class="math inline">\(P_n\)</span> : “<span class="math inline">\(u^n\)</span> est dérivable et <span class="math inline">\((u^n)' = n u' u^{n-1}\)</span>”.</p>
 <ul>
-<li><p><em>Initialisation :</em><br>
-Pour <span class="math inline">\(n=1\)</span>, <span class="math inline">\((u^1)' = u'\)</span> et <span class="math inline">\(n u' u^{n-1} = 1 \times u' \times u^0 = u'\)</span>.<br>
-Ainsi, <span class="math inline">\(P_1\)</span> est vraie.</p></li>
-<li><p><em>Hérédité :</em><br>
-On suppose que pour un entier <span class="math inline">\(n \geqslant 1\)</span> arbitrairement fixé, la propriété <span class="math inline">\(P_n\)</span> est vraie, c’est-à-dire que <span class="math inline">\(u^n\)</span> est dérivable et <span class="math inline">\((u^n)' = n u' u^{n-1}\)</span>.<br>
-Démontrons que <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie.</p>
-<p><span class="math inline">\(u^{n+1} = u \times u^n\)</span>, ainsi <span class="math inline">\(u^{n+1}\)</span> est dérivable comme produit de fonctions dérivables.</p>
-<p>Or,</p>
-<p><span class="math display">\[
-(u^{n+1})' = (u \times u^n)' = u' u^n + u \times n u' u^{n-1} = u' u^n + n u' u^n = (n+1) u' u^n.
-\]</span></p>
-<p>On déduit alors que <span class="math inline">\((P_n \Rightarrow P_{n+1})\)</span> est vraie.<br>
-Ainsi, <span class="math inline">\(P_n\)</span> est vraie et la propriété est héréditaire, donc <span class="math inline">\(P_{n+1}\)</span> est vraie.</p></li>
-<li><p><em>Conclusion :</em><br>
-On a <span class="math inline">\(P_1\)</span> et <span class="math inline">\(\forall \, n \in \N^*, \, (P_n \Rightarrow P_{n+1})\)</span> vraie.<br>
-On déduit que <span class="math inline">\(\forall \, n \in \N^*, \, P_n\)</span> est vraie, donc <span class="math inline">\(u^n\)</span> est dérivable et <span class="math inline">\((u^n)' = n u' u^{n-1}\)</span>.</p></li>
+<li><p><strong>Initialisation :</strong><br>
+Pour <span class="math inline">\(n=1\)</span>, <span class="math inline">\((u^1)' = u'\)</span> et <span class="math inline">\(1 \times u' \times u^0 = u'\)</span>. Ainsi, <span class="math inline">\(P_1\)</span> est vraie.</p></li>
+<li><p><strong>Hérédité :</strong><br>
+On suppose que pour un entier <span class="math inline">\(n \geqslant 1\)</span> arbitrairement fixé, la propriété <span class="math inline">\(P_n\)</span> est vraie.<br>
+Démontrons que <span class="math inline">\(P_{n+1}\)</span> est vraie.<br>
+<span class="math inline">\(u^{n+1} = u \times u^n\)</span>, ainsi <span class="math inline">\(u^{n+1}\)</span> est dérivable comme produit de fonctions dérivables.<br>
+<span class="math display">\[(u^{n+1})' = (u \times u^n)' = u' u^n + u \times (n u' u^{n-1}) = u' u^n + n u' u^n = (n+1) u' u^n\]</span> Ainsi, <span class="math inline">\(P_{n+1}\)</span> est vraie.</p></li>
+<li><p><strong>Conclusion :</strong><br>
+La propriété est initialisée et héréditaire, elle est donc vraie pour tout <span class="math inline">\(n \in \N^*\)</span>.</p></li>
 </ul>
 </details>
 </div>
 <div class="nav-pages">
-<p><a class="prev" href="historique.html">⬅️</a> <a class="next" href="application.html">➡️</a></p>
+<p><a class="prev" href="historique.html">⬅️</a> <a class="next" href="complement.html">➡️</a></p>
 </div>
 
 
