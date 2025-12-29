@@ -128,3 +128,11 @@ y_k = y_0\,(1+h)^k = (1+h)^k.
 $$
 
 :::
+
+
+
+
+
+<div class="nav-pages">
+  <a class="next" href="fct_exp.html">➡️</a>
+</div>

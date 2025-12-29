@@ -5,7 +5,7 @@ format:
     toc: true
     number-sections: false
 description: "fonction exponentielle u et dérivée"
-order: 4
+order: 5
 ---
 
 ___
@@ -212,3 +212,12 @@ On déduit alors que $e^{-k x} \geqslant e^{-k' x}$ pour $x \in [0\, ;\,+ \infty
 :::
 :::
 
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="prop_exp.html">⬅️</a>
+  <a class="next" href="comp.html">➡️</a>
+</div>

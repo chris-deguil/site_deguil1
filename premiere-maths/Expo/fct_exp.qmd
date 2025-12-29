@@ -4,7 +4,7 @@ format:
   html:
     toc: true
     number-sections: false
-description: "Définiton de l'exponentielle, proprioétés algébriques de la fonction"
+description: "Définiton de l'exponentielle, propriétés algébriques de la fonction"
 order: 2
 ---
 
@@ -121,3 +121,11 @@ $$
 
 </details>
 :::
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="intro.html">⬅️</a>
+  <a class="next" href="nombre_e.html">➡️</a>
+</div>

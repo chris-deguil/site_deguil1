@@ -239,8 +239,37 @@ website:
             - terminale-maths/continuite/tvi_python.qmd
             - terminale-maths/continuite/caracterisation.qmd
 
+        - section: "Logarithme néprien"
+          contents:
+            - terminale-maths/Ln/index.qmd
+            - terminale-maths/Ln/historique.qmd
+            - terminale-maths/Ln/definition.qmd
+            - terminale-maths/Ln/variation_limite.qmd
+            - terminale-maths/Ln/propriete.qmd
+            - terminale-maths/Ln/derivation.qmd
+            - terminale-maths/Ln/composition.qmd
 
+        - section: "Espace : Orthogonalité et Equation cartésienne"
+          contents:
+            - terminale-maths/Espace2/index.qmd
+            - terminale-maths/Espace2/ps_espace.qmd
+            - terminale-maths/Espace2/orthogonalte.qmd
+            - terminale-maths/Espace2/ef_norme_propriete.qmd
+            - terminale-maths/Espace2/equat_cart.qmd
+            - terminale-maths/Espace2/distance.qmd
 
+        - section: "Primitive et Equations différentielles"
+          contents:
+            - terminale-maths/PrimED/index.html
+            - terminale-maths/PrimED/Notion.qmd
+            - terminale-maths/PrimED/Usuelles.qmd
+            - terminale-maths/PrimED/Operations.qmd
+            - terminale-maths/PrimED/Intro_ED.qmd
+            - terminale-maths/PrimED/Generalite.qmd
+            - terminale-maths/PrimED/EquaDiff.qmd
+            - terminale-maths/PrimED/EquaDiff_2.qmd
+            - terminale-maths/PrimED/cauchy.qmd
+   
             
 format:
   html:

@@ -5,7 +5,7 @@ format:
     toc: true
     number-sections: false
 description: "Nombre d'Euler, écriture de la fonction exponentielle"
-order: 2
+order: 3
 ---
 
 ___
@@ -116,3 +116,11 @@ C'est-à-dire une évolution annuelle de $0,74\%$.
 
 </details>
 :::
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="fct_exp.html">⬅️</a>
+  <a class="next" href="prop_exp.html">➡️</a>
+</div>

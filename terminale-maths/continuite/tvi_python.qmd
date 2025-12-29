@@ -24,28 +24,30 @@ _____
 
 
 ::: {.bloc}
-Une des démonstrations du théorème des valeurs intermédiaires repose sur la construction de suites adjacentes et sur le principe de dichotomie. L'idée est de {partager} l'intervalle d'étude en deux et de regarder sur quel intervalle se trouve la solution.
+Une des démonstrations du théorème des valeurs intermédiaires repose sur la construction de suites adjacentes et sur le principe de dichotomie. L'idée est de **partager** l'intervalle d'étude en deux et de regarder sur quel intervalle se trouve la solution.
 
 Dans ce qui suit, on va supposer une fonction $f$ continue et strictement monotone sur un intervalle $[a \, ; \, b]$. On sait de plus qu'elle a une unique racine sur cet intervalle.
+La stricte monotonie et l'existence d'une racine **imposent** la condition de départ : $f(a)f(b) < 0$.
 
-La stricte monotonie et l'existence d'une racine {imposent} la condition de départ : $f(a)f(b) < 0$.
 
-1. On pose $c = \frac{a+b}{2}$
-    - Si $f(c)=0$ alors c'est terminé
-    - Sinon, si $f(a) f(c) < 0$ alors $f(a)$ et $f(c)$ sont de signes contraires et donc $f$ s'annule entre $a$
-    - Sinon $f(a) \times f(c) > 0$ alors $f(a)$ et $f(c)$ sont de même signe et donc $f$ ne s'annule pas (à priori) entre $a$ et $c$, ce qui signifie que $f$ s'annule entre $c$ et $b$.
- 
-2. 
-   - Si $f$ s'annule entre $a$ et $c$, on pose $$a:= a \qquad \text{ et } \qquad b:=c$$
-   - Si $f$ s'annule entre $c$ et $b$, on pose $$a:=c \qquad \text{ et } \qquad b:=b$$
+
+1. On pose $c = \dfrac{a+b}{2}$
+    * Si $f(c)=0$, alors c'est terminé.
+    * Sinon, si $f(a) f(c) < 0$, alors $f(a)$ et $f(c)$ sont de signes contraires et donc $f$ s'annule entre $a$ et $c$.
+    * Sinon $f(a) \times f(c) > 0$, alors $f(a)$ et $f(c)$ sont de même signe et donc $f$ ne s'annule pas (a priori) entre $a$ et $c$, ce qui signifie que $f$ s'annule entre $c$ et $b$.
+
+2. **Mise à jour des bornes :**
+    * Si $f$ s'annule entre $a$ et $c$, on pose : $a := a$ et $b := c$.
+    * Si $f$ s'annule entre $c$ et $b$, on pose : $a := c$ et $b := b$.
 
 3. On recommence avec les nouvelles valeurs de $a$ et $b$.
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On souhaite approcher la solution le plus près possible. Il est donc nécessaire de disposer d'une boucle afin de réaliser plusieurs fois le même procédé et d'**imposer** une condition de sortie lorsque l'on estime que l'intervalle $[a \, ; \, b]$ obtenu est d'amplitude suffisamment faible pour que l'on estime avoir une bonne valeur approchée de la solution.
 :::
 
-
-::: {.bloc}
-On souhaite approcher la solution le plus près possible. Il est donc nécessaire de disposer d'une boucle afin de réaliser plusieurs fois le même procédé et d'\textcolor{red}{imposer} une condition de sortie lorsque l'on estime que l'intervalle $[a \, ; \, b]$ obtenu est d'amplitude suffisamment faible pour que l'on estime avoir une bonne valeur approchée de la solution.
-:::
 
 
 ~~~python

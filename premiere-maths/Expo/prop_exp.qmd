@@ -5,7 +5,7 @@ format:
     toc: true
     number-sections: false
 description: "Positivité, variations"
-order: 3
+order: 4
 ---
 
 ___
@@ -196,3 +196,11 @@ $$\e^a-\e^b = 0 \Longleftrightarrow a - b = 0 $$
 est faux au sens où il manque toutes les étapes intermédiaires.
 
 :::
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="nombre_e.html">⬅️</a>
+  <a class="next" href="exp_u.html">➡️</a>
+</div>

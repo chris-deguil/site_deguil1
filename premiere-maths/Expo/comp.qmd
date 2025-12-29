@@ -5,7 +5,7 @@ format:
     toc: true
     number-sections: false
 description: "Complément, étude de problèmes"
-order: 5
+order: 6
 ---
 
 
@@ -101,3 +101,10 @@ La fonction $f$ ci-dessus est de la famille des gaussiennes reconnaissables par 
   La relation est donc vérifiée pour tout $x\in\mathbb{R}$.
   </details>
 :::
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="exp_ue.html">⬅️</a>
+</div>
