@@ -110,7 +110,7 @@ On suppose que dans ce réseau, un utilisateur peut partager une photo avec cert
 On représente les relations d'amitiés d'un réseau en Python à l'aide d'un dictionnaire.
 
 ```python
-graphe_relations = {
+reseau = {
 "Abdel": ["Elia", "Sacha"], "Béa": ["Elia", "Coline", "Noé"],  ...}
 ```
 
@@ -125,9 +125,17 @@ graphe_relations = {
 </iframe>
 
 
- `recommandation(graphe_relations_reseau1)` <br>
-Quel est l'objectif principal de cet algorithme de recommandation pour la plateforme et quel est son mode de fonctionnement ?
-1. Dans le fichier Python fourni, exécuter la fonction `recommandation(graphe_relations)` <br> Vérifier alors le tableau des distances.
+💻 **Manipulation :** Exécutez l'instruction `recommandation(reseau, "Côme")`.
+    - Quelles personnes le programme propose-t-il à Côme ?
+    - En regardant le graphe `graphe(reseau)` , quel est le point commun entre ces personnes et Côme ? (Indice : regardez qui est l'ami "intermédiaire").
+
+11. **Le principe :** Pour recommander un nouvel ami, l'algorithme cherche des personnes situées à une **distance de 2** (les "amis d'amis"). 
+    - Pourquoi ne recommande-t-il pas les personnes à une distance de 1 ?
+    - Pourquoi est-il plus difficile de recommander quelqu'un à une distance de 5 ou 6 ?
+  - 
+12. 💻 **Manipulation :** Exécutez l'instruction `print(centre(reseau))`.
+    - Quels sont les sommets qui s'affichent ? 
+    - Cela correspond-il à votre analyse du graphe papier ?
 
 ## \logoAutonomie Lien avec Instagram et les réseaux sociaux réels
 

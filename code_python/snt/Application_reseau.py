@@ -3,12 +3,13 @@
 
 import urllib.request, os
 
-url = "https://raw.githubusercontent.com/chris-deguil/site_deguil1/main/code_python/snt/recommendation.py"
-if not os.path.exists("recommendation.py"):
-    urllib.request.urlretrieve(url, "recommendation.py")
-
+url = "https://raw.githubusercontent.com/chris-deguil/site_deguil1/main/code_python/snt/recommandation.py"
+if not os.path.exists("recommandation.py"):
+    urllib.request.urlretrieve(url, "recommandation.py")
 
 from recommandation import *
+
+
 """
 On dipose de trois fonctions :
     bfs(Graphe,Sommet) : permet de déterminer les chemins relaint deux personnes.
@@ -19,7 +20,7 @@ On dipose de trois fonctions :
 
           
                 
-graphe_relations_reseau1 = {
+reseau= {
 "Abdel" : ["Elia", "Sacha"],
 "Béa": ["Elia", "Coline", "Noé"],
 "Coline" : ["Béa", "Noé", "Dylan"],
