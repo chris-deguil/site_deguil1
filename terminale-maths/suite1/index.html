@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,19 +35,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -193,7 +192,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -392,7 +391,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -404,7 +403,7 @@ window.Quarto = {
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../terminale-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../terminale-maths/index.html"> 
 <span class="menu-text">Spé maths terminale</span></a>
   </li>  
 </ul>
@@ -431,6 +430,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -1120,7 +1120,7 @@ Description
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="2" data-listing-word-count-sort="355" data-listing-title-sort="Historique récurrence" data-listing-filename-sort="historique.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="2" data-listing-word-count-sort="355" data-listing-title-sort="Historique récurrence" data-listing-filename-sort="historique.qmd">
 <td>
 <a href="../../terminale-maths/suite1/historique.html" class="title listing-title">Historique récurrence</a>
 </td>
@@ -1130,7 +1130,7 @@ Description
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="4" data-listing-word-count-sort="719" data-listing-title-sort="La recurrence" data-listing-filename-sort="principe.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="4" data-listing-word-count-sort="719" data-listing-title-sort="La recurrence" data-listing-filename-sort="principe.qmd">
 <td>
 <a href="../../terminale-maths/suite1/principe.html" class="title listing-title">La recurrence</a>
 </td>
@@ -1140,7 +1140,7 @@ Description
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="5" data-listing-word-count-sort="956" data-listing-title-sort="La recurrence double, forte et descente de de Cauhcy" data-listing-filename-sort="complement.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="5" data-listing-word-count-sort="956" data-listing-title-sort="La recurrence double, forte et descente de de Cauhcy" data-listing-filename-sort="complement.qmd">
 <td>
 <a href="../../terminale-maths/suite1/complement.html" class="title listing-title">La recurrence double, forte et descente de de Cauhcy</a>
 </td>
@@ -1150,7 +1150,7 @@ Description
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="5" data-listing-word-count-sort="871" data-listing-title-sort="Application à l'étude des suites" data-listing-filename-sort="application.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="5" data-listing-word-count-sort="871" data-listing-title-sort="Application à l'étude des suites" data-listing-filename-sort="application.qmd">
 <td>
 <a href="../../terminale-maths/suite1/application.html" class="title listing-title">Application à l’étude des suites</a>
 </td>
@@ -1160,7 +1160,7 @@ Description
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="4" data-listing-word-count-sort="782" data-listing-title-sort="Suite convergente" data-listing-filename-sort="convergence_def.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="4" data-listing-word-count-sort="782" data-listing-title-sort="Suite convergente" data-listing-filename-sort="convergence_def.qmd">
 <td>
 <a href="../../terminale-maths/suite1/convergence_def.html" class="title listing-title">Suite convergente</a>
 </td>
@@ -1170,7 +1170,7 @@ Description
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="6" data-listing-word-count-sort="1036" data-listing-title-sort="Propriétés de convergence" data-listing-filename-sort="convergence_prop.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="6" data-listing-word-count-sort="1036" data-listing-title-sort="Propriétés de convergence" data-listing-filename-sort="convergence_prop.qmd">
 <td>
 <a href="../../terminale-maths/suite1/convergence_prop.html" class="title listing-title">Propriétés de convergence</a>
 </td>
@@ -1180,7 +1180,7 @@ Description
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="3" data-listing-word-count-sort="535" data-listing-title-sort="Divergence et limite par comparaison" data-listing-filename-sort="divergence_def.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="3" data-listing-word-count-sort="535" data-listing-title-sort="Divergence et limite par comparaison" data-listing-filename-sort="divergence_def.qmd">
 <td>
 <a href="../../terminale-maths/suite1/divergence_def.html" class="title listing-title">Divergence et limite par comparaison</a>
 </td>
@@ -1190,7 +1190,7 @@ Description
 
 </tr>
 
-<tr data-index="7" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="4" data-listing-word-count-sort="752" data-listing-title-sort="Opérations sur les limites" data-listing-filename-sort="operation_limite.qmd">
+<tr data-index="7" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="4" data-listing-word-count-sort="752" data-listing-title-sort="Opérations sur les limites" data-listing-filename-sort="operation_limite.qmd">
 <td>
 <a href="../../terminale-maths/suite1/operation_limite.html" class="title listing-title">Opérations sur les limites</a>
 </td>
@@ -1200,7 +1200,7 @@ Description
 
 </tr>
 
-<tr data-index="8" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="4" data-listing-word-count-sort="728" data-listing-title-sort="Limites des suites géomériques" data-listing-filename-sort="suite_geometrique.qmd">
+<tr data-index="8" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="4" data-listing-word-count-sort="728" data-listing-title-sort="Limites des suites géomériques" data-listing-filename-sort="suite_geometrique.qmd">
 <td>
 <a href="../../terminale-maths/suite1/suite_geometrique.html" class="title listing-title">Limites des suites géomériques</a>
 </td>
@@ -1210,7 +1210,7 @@ Description
 
 </tr>
 
-<tr data-index="9" data-listing-file-modified-sort="1767372903132" data-listing-reading-time-sort="8" data-listing-word-count-sort="1410" data-listing-title-sort="Etude complète de suites récuirrentes" data-listing-filename-sort="suite_recurrente.qmd">
+<tr data-index="9" data-listing-file-modified-sort="1767373637270" data-listing-reading-time-sort="8" data-listing-word-count-sort="1410" data-listing-title-sort="Etude complète de suites récuirrentes" data-listing-filename-sort="suite_recurrente.qmd">
 <td>
 <a href="../../terminale-maths/suite1/suite_recurrente.html" class="title listing-title">Etude complète de suites récuirrentes</a>
 </td>
@@ -1288,14 +1288,13 @@ Description
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
