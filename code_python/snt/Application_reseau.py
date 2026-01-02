@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Jul 26 11:58:11 2025
 
-@author: christophe
-"""
+import urllib.request, os
+
+url = "https://raw.githubusercontent.com/chris-deguil/site_deguil1/main/code_python/snt/recommendation.py"
+if not os.path.exists("recommendation.py"):
+    urllib.request.urlretrieve(url, "recommendation.py")
+
+
 from recommandation import *
 """
 On dipose de trois fonctions :
