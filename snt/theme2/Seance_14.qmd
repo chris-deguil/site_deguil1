@@ -29,7 +29,7 @@ order: 14
 ## Notion de Graphe
 
 ::: {.boitedoc}
-<div class="titre">📘 Document  : 📘 J. A. Barnes, Class and committes in a Norvwegian Island , Parish 1953</div>
+<div class="titre">📘 Document  :  J. A. Barnes, Class and committes in a Norvwegian Island , Parish 1953</div>
 <div class="contenu">
 \og each person has a number of friends, and these friends have their own friends; some of any one person's friends know
 each other, others do not. I find it convenient to talk of a social field of this kind as a network. The image I have is of a set of
@@ -90,7 +90,7 @@ En mathématiques, et plus précisément en théorie des graphes, un graphe est 
 On donne (pour gagner du temps) le tableau des distances :
 En vous répartissant les lignes, compléter le tableau donnant la distance entre deux sommets.
 
-![](../../image/snt/tabl_distance.png){style="display:block;margin:0 auto;width:75%;"}
+![](../../image/snt/tableau_distance.png){style="display:block;margin:0 auto;width:75%;"}
 
 
 4. Justifier la ligne de Jason
@@ -118,11 +118,10 @@ graphe_relations = {
 10. Dans le fichier, à ouvrir avec un éditeur python exécuter l'instruction
 
 <iframe
-  src="https://notebook.basthon.fr/"
+  src="https://notebook.basthon.fr/?from=https://chris.deguil.github.io/site_deguil1/code_python/snt/Application_reseau.py"
   title="Basthon Notebook"
   style="width:100%;height:640px;border:1px solid #ddd;border-radius:12px;">
 </iframe>
-
 
 
 

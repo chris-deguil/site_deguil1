@@ -1,59 +1,55 @@
 ---
-title: "Comment ils nous retiennent ? Suis-je addict ?"
-description: "Captation de l'attention"
+title: "Suis-je addict ?"
+description: "Mécanismes de captation de l'attention et enjeux de santé"
 order: 13
 ---
 
----
+# 🔑 Objectifs et compétences :
 
-# 🔑  Objectifs  et compétences :
-**Objectifs de séance**
+**Objectifs de séance : **
 
 ::: {.competence}
 
-1. Comprendre les mécanismes des réseaux sociaux pour retenir l’attention des utilisateurs.
-2. Découvrir le concept d’« économie de l’attention » et ses enjeux.
-3. Identifier les données collectées par les plateformes et l'objectif.
-4. Analyser les liens entre dopamine, addiction et utilisation des réseaux sociaux.
-5. Réfléchir aux impacts personnels et sociétaux de la surexposition aux réseaux sociaux.
-6. Argumenter sur la nécessité ou non d’une régulation des réseaux sociaux.
+1. Comprendre le concept d'« économie de l'attention ».
+2. Identifier les mécanismes de design (scroll, likes) et le rôle de la dopamine.
+3. Réfléchir aux enjeux de santé et à la régulation.
 :::
 
-**Compétences développées:**
+**Compétences développées :**
 
 ::: {.competence}
-1. Analyser des vidéos et supports multimédias pour en extraire des informations clés.
-2. Développer l’esprit critique sur les impacts des réseaux sociaux.
-3. Rédiger un texte argumenté sur une question citoyenne.
+
+1. Analyser des vidéos pour extraire des informations clés.
+2. Développer l'esprit critique sur l'usage des écrans.
+3. Argumenter sur une question citoyenne.
 :::
 
 # 👥 📊 Captation de l'attention
 
- 📘 **Document :** 
+📘 **Documents :** 
 
-Vidéo : <https://www.yout-ube.com/watch?v=yWONYnuPfKY>
+* Vidéo 1 : [L'économie de l'attention](https://www.youtube.com/watch?v=yWONYnuPfKY)
+* Vidéo 2 : <https://www.lumni.fr/video/reseaux-sociaux-tous-accros-1>
 
-📘  📘 **Document :** 
-
-
-Vidéo : <https://www.yout-ube.com/watch?v=4cOKvph38_0>
-
-1. Comment les réseaux sociaux retiennent-ils l'attention des utilisateurs (ex. likes, scroll infini, algorithme, ...) ?
-1. Que signifie l'expression \og économie de l'attention \fg{} ?
-1. Quels types de données sont collectées par les réseaux sociaux ?
-1. Quel rôle joue la dopamine dans l'utilisation des réseaux sociaux ?
-1. En quoi les réseaux sociaux peuvent-ils créer une forme de dépendance comparable à d'autres addictions ?
-1. Comment les plateformes monétisent-elles l'attention des utilisateurs ?
-1. Quels sont les risques d'une surexposition aux réseaux sociaux sur le plan personnel et sociétal ?
-
----
+1. Que signifie l'expression « économie de l'attention » ?
 
 
-# \logoAutonomie 🤔 Réflexion citoyenne
+2. Citez trois mécanismes techniques utilisés pour nous retenir sur une application.
 
-8. Les réseaux sociaux peuvent-ils avoir des aspects positifs malgré leurs dérives ? Donne des exemples
-1. 🤔 Rédige un texte d'une dizaine de lignes répondant à la question suivante :
-      *« Les réseaux sociaux doivent-ils être davantage régulés ? Pourquoi ? »*
 
-      On attend la présence des mots suivants :
-*données personnelles, addiction, publicité, liberté d’expression…*
+3. Quel rôle joue la dopamine dans l'utilisation des réseaux sociaux ?
+
+
+4. En quoi cela peut-il créer une forme de dépendance ?
+
+
+5. Quels sont les risques d'une surexposition sur le plan personnel (sommeil, concentration) ?
+
+
+# 🤔 Réflexion citoyenne
+
+6. Les réseaux sociaux peuvent-ils avoir des aspects positifs malgré ces dérives ?
+
+7. ✍️ **Paragraphe argumenté :** Ecrire un  Les réseaux sociaux doivent-ils être davantage régulés ? Pourquoi ?
+   
+*(Utilisez les mots : données personnelles, addiction, publicité, liberté d’expression)*
