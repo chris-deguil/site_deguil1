@@ -42,6 +42,9 @@ La stricte monotonie et l'existence d'une racine **imposent** la condition de d√
 
 3. On recommence avec les nouvelles valeurs de $a$ et $b$.
 
+:::
+
+
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span>
 

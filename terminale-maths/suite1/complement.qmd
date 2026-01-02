@@ -139,7 +139,7 @@ Soit $P_k$ la propriété : « Dans toute famille de $k$ réels non tous nuls do
 ::: {.bloc .rem} 
 <span class="bloc-titre">Remarque : </span><br>
 Ce type de raisonnement est souvent couplé à une récurrence classique pour montrer que si c'est vrai pour une puissance de 2, c'est vrai pour tous les entiers inférieurs).*
-</detaisls>
+</details>
 
 
 <div class="nav-pages">

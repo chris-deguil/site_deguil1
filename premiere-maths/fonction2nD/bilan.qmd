@@ -151,7 +151,7 @@ Soit $f$ la fonction définie sur $\mathbb{R}$ par : $$f(x)=3x^{2}+12x+4$$
 
       </details>
    
-
+:::
 
 
 

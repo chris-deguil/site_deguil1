@@ -110,7 +110,6 @@ $$
 :::
 
 ::: {.bloc .ex}
-::: {.bloc .ex}
 <div class="bloc-titre">Exemple <span class="exemp-extra">Dérivée d'une fonction composée</span></div>
 
 Déterminer la fonction dérivée de la fonction $f$ définie sur $I = \left] -2,5 \,;\, +\infty \right[$ par :

@@ -55,7 +55,7 @@ Soient $P$ et $Q$ deux propositions.
 | V   | F   | F |
 | V   | V   | V |
 :::
-
+:::
 
 
 ::: {.bloc .rem}

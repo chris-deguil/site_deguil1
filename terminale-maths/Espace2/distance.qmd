@@ -130,6 +130,10 @@ On en déduit $t = \dfrac{a^2+1}{5}$.
 D'après la question précédente, $AH = \dfrac{a^2+1}{5}\sqrt{5} = \dfrac{a^2+1}{\sqrt{5}}$.
 Cette distance est minimale lorsque $a^2$ est minimal, c'est-à-dire pour $a=0$.
 La distance minimale est alors $AH = \dfrac{1}{\sqrt{5}} = \dfrac{\sqrt{5}}{5}$.
+</details>
+
+:::
+
 
 ::: {.bloc .ex}
 <div class="bloc-titre">Exemple :<span class="exemp-extra"> (Extrait Bac Métropole 2017) </span></div>

@@ -13,12 +13,8 @@ order: 10
 _______________
 
 
----
-title: "Suites Récurrentes"
-format: html
----
 
-# Cas des suites récurrentes
+
 
 ::: {.bloc .ex}
 <div class="bloc-titre">Exemple :<span class="exemp-extra"> Cas 1 </span></div>
@@ -203,7 +199,7 @@ D'où la suite $(u_n)$ est croissante.
 
   Cette équation admet, d'après la question $A.2$ une unique solution $l=2$.
 
-  On déduit donc que la suite $(u_n)$ converge vers $2$.}
+  On déduit donc que la suite $(u_n)$ converge vers $2$.
   </details>
 
 3. Etude du cas particulier : $u_0 = 3$.
