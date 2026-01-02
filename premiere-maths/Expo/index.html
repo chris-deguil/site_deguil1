@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,19 +35,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -193,7 +192,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -392,7 +391,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -400,7 +399,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -431,6 +430,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -940,7 +940,7 @@ Description
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1767372321631" data-listing-reading-time-sort="4" data-listing-word-count-sort="626" data-listing-title-sort="Introduction" data-listing-filename-sort="intro.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1767372879524" data-listing-reading-time-sort="4" data-listing-word-count-sort="626" data-listing-title-sort="Introduction" data-listing-filename-sort="intro.qmd">
 <td>
 <a href="../../premiere-maths/Expo/intro.html" class="title listing-title">Introduction</a>
 </td>
@@ -950,7 +950,7 @@ Description
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1767372321631" data-listing-reading-time-sort="3" data-listing-word-count-sort="576" data-listing-title-sort="Fonction exponentielle : définition et propriétés algébriques" data-listing-filename-sort="fct_exp.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1767372879524" data-listing-reading-time-sort="3" data-listing-word-count-sort="576" data-listing-title-sort="Fonction exponentielle : définition et propriétés algébriques" data-listing-filename-sort="fct_exp.qmd">
 <td>
 <a href="../../premiere-maths/Expo/fct_exp.html" class="title listing-title">Fonction exponentielle : définition et propriétés algébriques</a>
 </td>
@@ -960,7 +960,7 @@ Description
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1767372321631" data-listing-reading-time-sort="5" data-listing-word-count-sort="846" data-listing-title-sort="Nombre d'Euler" data-listing-filename-sort="nombre_e.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1767372879524" data-listing-reading-time-sort="5" data-listing-word-count-sort="846" data-listing-title-sort="Nombre d'Euler" data-listing-filename-sort="nombre_e.qmd">
 <td>
 <a href="../../premiere-maths/Expo/nombre_e.html" class="title listing-title">Nombre d’Euler</a>
 </td>
@@ -970,7 +970,7 @@ Description
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1767372321631" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="Proprioété de la fonction exponentielle" data-listing-filename-sort="prop_exp.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1767372879524" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="Proprioété de la fonction exponentielle" data-listing-filename-sort="prop_exp.qmd">
 <td>
 <a href="../../premiere-maths/Expo/prop_exp.html" class="title listing-title">Proprioété de la fonction exponentielle</a>
 </td>
@@ -980,7 +980,7 @@ Description
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1767372321631" data-listing-reading-time-sort="6" data-listing-word-count-sort="1137" data-listing-title-sort="Exponentielle de ax+b" data-listing-filename-sort="exp_u.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1767372879524" data-listing-reading-time-sort="6" data-listing-word-count-sort="1137" data-listing-title-sort="Exponentielle de ax+b" data-listing-filename-sort="exp_u.qmd">
 <td>
 <a href="../../premiere-maths/Expo/exp_u.html" class="title listing-title">Exponentielle de ax+b</a>
 </td>
@@ -990,7 +990,7 @@ Description
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1767372321631" data-listing-reading-time-sort="3" data-listing-word-count-sort="513" data-listing-title-sort="Exponentielle de u" data-listing-filename-sort="comp.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1767372879524" data-listing-reading-time-sort="3" data-listing-word-count-sort="513" data-listing-title-sort="Exponentielle de u" data-listing-filename-sort="comp.qmd">
 <td>
 <a href="../../premiere-maths/Expo/comp.html" class="title listing-title">Exponentielle de u</a>
 </td>
@@ -1068,14 +1068,13 @@ Description
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
