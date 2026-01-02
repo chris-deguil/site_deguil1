@@ -118,11 +118,10 @@ graphe_relations = {
 10. Dans le fichier, à ouvrir avec un éditeur python exécuter l'instruction
 
 <iframe
-  src="https://notebook.basthon.fr/?from=https://chris.deguil.github.io/site_deguil1/code_python/snt/Application_reseau.py"
+  src="https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/chris-deguil/site_deguil1/refs/heads/main/code_python/snt/Application_reseau.py"
   title="Basthon Notebook"
   style="width:100%;height:640px;border:1px solid #ddd;border-radius:12px;">
 </iframe>
-
 
 
 
