@@ -119,11 +119,10 @@ graphe_relations = {
 
 
 <iframe
-  src="https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/chris-deguil/site_deguil1/main/code_python/snt/Application_reseau.py"
-  title="Basthon Notebook"
+  src="https://console.basthon.fr/?from=https://raw.githubusercontent.com/chris-deguil/site_deguil1/main/code_python/snt/Application_reseau.py"
+  title="Basthon Console"
   style="width:100%;height:640px;border:1px solid #ddd;border-radius:12px;">
 </iframe>
-
 
 
  `recommandation(graphe_relations_reseau1)` <br>
