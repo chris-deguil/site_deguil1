@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,18 +34,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -191,7 +192,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -390,7 +391,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -398,7 +399,7 @@ window.Quarto = {
 <span class="menu-text">SNT</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../premiere-maths/index.html"> 
+    <a class="nav-link active" href="../premiere-maths/index.html" aria-current="page"> 
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
@@ -429,7 +430,6 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -894,7 +894,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-Chapitre">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1767370056544" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1767370058060" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
 <a href="../premiere-maths/fonction2nD/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -907,7 +907,7 @@ Chapitre 1 : Le second degré
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1767370056545" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1767370058062" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
 <a href="../premiere-maths/suite1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -920,7 +920,7 @@ Chapitre 2 : Suites numériques : Généralités
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1767370056542" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1767370058059" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
 <a href="../premiere-maths/NomDerive/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -933,7 +933,7 @@ Chapitre 3 : Le nombre dérivé
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1767370056544" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1767370058061" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
 <a href="../premiere-maths/probaCond/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -946,7 +946,7 @@ Chapitre 4 : Probabilité conditionnelle
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1767370056545" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1767370058062" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <a href="../premiere-maths/trigonometrie/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -959,7 +959,7 @@ Chapitre 5 : Trigonométrie - Fonctions trigonométriques
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1767370056543" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1767370058059" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
 <a href="../premiere-maths/Operation_Derivee/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -972,7 +972,7 @@ Chapitre 6 : Opérations sur les dérivées - Application
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1767370056543" data-listing-reading-time-sort="1" data-listing-word-count-sort="128">
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1767370058060" data-listing-reading-time-sort="1" data-listing-word-count-sort="128">
 <a href="../premiere-maths/Produit_scalaire/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -985,7 +985,7 @@ Chapitre 7 : Produit Scalaire dans le plan
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1767370056544" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1767370058061" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
 <a href="../premiere-maths/sa_sg/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -998,7 +998,7 @@ Chapitre 8 : Suites arithmétiques et suite géométriques
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1767370056542" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1767370058059" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
 <a href="../premiere-maths/Expo/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1078,13 +1078,14 @@ Chapitre 9 : Fonction exponetielle
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
