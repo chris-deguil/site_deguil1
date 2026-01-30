@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,18 +35,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-caf701bc75c8c9ced65da20a3202c48a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-efee043f757ead3af2c602dd9b20f28d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -192,7 +193,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -495,7 +496,7 @@ Description
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1769758455342" data-listing-reading-time-sort="3" data-listing-word-count-sort="466" data-listing-title-sort="Définition du produit sclaire" data-listing-filename-sort="definition.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1769758453743" data-listing-reading-time-sort="3" data-listing-word-count-sort="466" data-listing-title-sort="Définition du produit sclaire" data-listing-filename-sort="definition.qmd">
 <td>
 <a href="../../premiere-maths/Produit_scalaire/definition.html" class="title listing-title">Définition du produit sclaire</a>
 </td>
@@ -505,7 +506,7 @@ Description
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1769758455342" data-listing-reading-time-sort="3" data-listing-word-count-sort="593" data-listing-title-sort="Produit scalaire et orthogonalite" data-listing-filename-sort="orthogonalite.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1769758453743" data-listing-reading-time-sort="3" data-listing-word-count-sort="593" data-listing-title-sort="Produit scalaire et orthogonalite" data-listing-filename-sort="orthogonalite.qmd">
 <td>
 <a href="../../premiere-maths/Produit_scalaire/orthogonalite.html" class="title listing-title">Produit scalaire et orthogonalite</a>
 </td>
@@ -515,7 +516,7 @@ Description
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1769758455342" data-listing-reading-time-sort="6" data-listing-word-count-sort="1100" data-listing-title-sort="Propriétés du produit scalaire" data-listing-filename-sort="Proprietes.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1769758453743" data-listing-reading-time-sort="6" data-listing-word-count-sort="1100" data-listing-title-sort="Propriétés du produit scalaire" data-listing-filename-sort="Proprietes.qmd">
 <td>
 <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="title listing-title">Propriétés du produit scalaire</a>
 </td>
@@ -525,7 +526,7 @@ Description
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1769758455342" data-listing-reading-time-sort="4" data-listing-word-count-sort="772" data-listing-title-sort="Transformations" data-listing-filename-sort="Transformations.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1769758453743" data-listing-reading-time-sort="4" data-listing-word-count-sort="772" data-listing-title-sort="Transformations" data-listing-filename-sort="Transformations.qmd">
 <td>
 <a href="../../premiere-maths/Produit_scalaire/Transformations.html" class="title listing-title">Transformations</a>
 </td>
@@ -535,7 +536,7 @@ Description
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1769758455342" data-listing-reading-time-sort="4" data-listing-word-count-sort="773" data-listing-title-sort="Exercices Bilans" data-listing-filename-sort="Bilans.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1769758453742" data-listing-reading-time-sort="4" data-listing-word-count-sort="773" data-listing-title-sort="Exercices Bilans" data-listing-filename-sort="Bilans.qmd">
 <td>
 <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="title listing-title">Exercices Bilans</a>
 </td>
@@ -613,13 +614,14 @@ Description
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
