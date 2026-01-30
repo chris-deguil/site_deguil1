@@ -78,12 +78,12 @@ Soient deux réels $$a=\frac{1}{2}\sqrt{2+\sqrt{2}} \quad et \quad b=\frac{1}{2}
    et $$S_{]-\pi \, ; \, \pi]} =\left\{-\frac{7\pi}{8} \, ;\,-\frac{5\pi}{8} \, ;\, -\frac{3\pi}{8} \, ;\, -\frac{\pi}{8} \, ;\, \frac{\pi}{8} \, ;\, \frac{3\pi}{8} \, ;\, \frac{5\pi}{8} \, ;\, \frac{7\pi}{8} \right\}$$
    </details>
 
-   b) Représenter les solutions sur le cercle trigonométrique.
+   b. Représenter les solutions sur le cercle trigonométrique.
 
 On admet que pour tout réel , $$\cos 4x = 8\cos^4x -8 \cos^2x +1$$
 
 
-2. a) On effectue le changement de variable $X=\cos^2 x$.<br>
+2. a. On effectue le changement de variable $X=\cos^2 x$.<br>
    $$
    8X^2-8X +1=0
    $$ 
@@ -94,7 +94,7 @@ On admet que pour tout réel , $$\cos 4x = 8\cos^4x -8 \cos^2x +1$$
    $$X_1 = \frac{2+\sqrt{2}}2 \quad \text{ et } \quad X_2 = \frac{2-\sqrt{2}}2$$
    </details>
 
-   b) Déterminer les valeurs de $\cos x $, où $x$ est solution de l'équation $(E)$.<br>
+   b. Déterminer les valeurs de $\cos x$, où $x$ est solution de l'équation $(E)$.<br>
    <details class="bloc cor"><summary>Afficher la correction</summary>
    Pour tout réel $x$, 
    $$\cos 4x = 0 \Longleftrightarrow 8\cos^4x -8 \cos^2x +1  = 0 \Longleftrightarrow 

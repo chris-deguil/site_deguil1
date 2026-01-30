@@ -103,6 +103,7 @@ website:
             - premiere-maths/trigonometrie/lignes_trigo.qmd
             - premiere-maths/trigonometrie/fct_trigo.qmd
             - premiere-maths/trigonometrie/equation.qmd 
+            - premiere-maths/trigonometrie/exercices.qmd 
 
         - section: "Probabilité conditionnelles"
           contents:

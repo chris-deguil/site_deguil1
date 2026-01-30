@@ -85,7 +85,7 @@ En mathématiques, et plus précisément en théorie des graphes, un graphe est 
 ## Analyse des distances
 
 ::: {.boitedoc}
-<div class="titre">📘 Document  : 🧠 📘 Quelques définitions ...</div>
+<div class="titre">🧠 📘 Document  :  Quelques définitions ...</div>
 <div class="contenu">
 
 1. La distance entre deux sommets est le nombre minimum arêtes qu'il faut parcourir pour aller d'un sommet à un autre.
@@ -127,25 +127,20 @@ reseau = {
 ```
 
 10. Dans le dictionnaire Python, que signifie l’entrée `"Abdel": ["Elia", "Sacha"]`
-11. Dans le fichier, à ouvrir avec un éditeur python exécuter l'instruction
-
-
-<iframe
-  src="https://console.basthon.fr/?from=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-deguil%2Fsite_deguil1%2Fmain%2Fcode_python%2Fsnt%2FApplication_reseau.py"
-  title="Basthon Console"
-  style="width:100%;height:640px;border:1px solid #ddd;border-radius:12px;">
-</iframe>
+11. Dans un editeur python ouvrir le fichier `Application_reseau.py`
 
 
 💻 **Manipulation :** Exécutez l'instruction `recommandation(reseau, "Côme")`.
-    - Quelles personnes le programme propose-t-il à Côme ?
-    - En regardant le graphe `graphe(reseau)` , quel est le point commun entre ces personnes et Côme ? (Indice : regardez qui est l'ami "intermédiaire").
 
-12. **Le principe :** Pour recommander un nouvel ami, l'algorithme cherche des personnes situées à une **distance de 2** (les "amis d'amis"). 
-    - Pourquoi ne recommande-t-il pas les personnes à une distance de 1 ?
-    - Pourquoi est-il plus difficile de recommander quelqu'un à une distance de 5 ou 6 ?
-  - 
-13. 💻 **Manipulation :** Exécutez l'instruction `print(centre(reseau))`.
+  - Quelles personnes le programme propose-t-il à Côme ?
+  - En regardant le graphe `graphe(reseau)` , quel est le point commun entre ces personnes et Côme ? (Indice : regardez qui est l'ami "intermédiaire").
+
+1.   **Le principe :** Pour recommander un nouvel ami, l'algorithme cherche des personnes situées à une **distance de 2** (les "amis d'amis"). 
+ 
+  - Pourquoi ne recommande-t-il pas les personnes à une distance de 1 ?
+  - Pourquoi est-il plus difficile de recommander quelqu'un à une distance de 5 ou 6 ?
+  
+13.  💻 **Manipulation :** Exécutez l'instruction `print(centre(reseau))`.
     - Quels sont les sommets qui s'affichent ? 
     - Cela correspond-il à votre analyse du graphe papier ?
 

@@ -57,3 +57,24 @@
 
 ::: {.bloc .exo}
 <span class="exo-num"></span><span class="exo-extra"> Étude par le quotient </span>
+
+
+
+~~~{=html}
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo1">
+    <div class="bar-top"><span class="cell-num">NOM DU SCRIPT </span></div>
+    <textarea id="code">
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled></button>
+      <button class="btn" id="check" disabled></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+~~~
