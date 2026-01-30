@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Feuilles d’exercices — Trigonométrie et équations trigonométriques. – Site pédagogique</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-7de8438c176a3bf4e88f55cc994835f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c63919e2c56223da6c093f420804004c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const path = window.location.pathname;
+
+    if (path.includes("/snt/")) {
+      document.documentElement.classList.add("snt-theme");
+    }
+
+    if (path.includes("/premiere-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+        if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+  });
+</script>
+<script>
+window.MathJax = {
+  tex: {
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
+    macros: {
+      // --- Constantes / ensembles ---
+      dd: "\\mathrm{d}",
+      e: "\\mathrm{e}",
+      R: "\\mathbb{R}",
+      Z: "\\mathbb{Z}",
+      N: "\\mathbb{N}",
+      Q: "\\mathbb{Q}",
+      C: "\\mathbb{C}",
+      F: "\\mathbb{F}",
+      epsilon: "\\varepsilon",
+
+      // --- Mises en forme / utilitaires ---
+      rem: "\\mathbf{Remarque\\ :\\ }",
+      gras: ["\\mathbf{#1}", 1],
+      LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
+      et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
+      llr: "\\Longleftrightarrow",
+      base: ["#1_{\\mathrm{#2}}", 2],
+      abs: ["\\left\\lvert #1 \\right\\rvert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      ve: ["\\overrightarrow{#1}", 1],
+      vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
+
+      OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
+      Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
+      Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
+
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
+    }
+  }
+};
+</script>
+<link rel="stylesheet" href="../../assets/css/pyodide-mkdocs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css">
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<script src="../../assets/js/pyodide-mkdocs.js" defer=""></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/css/maths.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed maths-theme quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Site pédagogique</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../snt/index.html"> 
+<span class="menu-text">SNT</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../premiere-maths/index.html" aria-current="page"> 
+<span class="menu-text">Spé maths première</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../terminale-maths/index.html"> 
+<span class="menu-text">Spé maths terminale</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/trigonometrie/enroulement.html">Trigonométrie et Fonctions trigonométriques</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/trigonometrie/exercices.html">Feuilles d’exercices — Trigonométrie et équations trigonométriques.</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours de Première Spécialité maths</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fonctions du second degré</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Le second degré</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonction polynôme du second degré</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/racine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Le second degré : racines d’une équation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/signe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Factorisation et signe d’une fonction du second degré</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/coefficient.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lien coefficients - racines</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/parabole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Parabole</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bilan : Équation et représentation graphique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/fonction2nD/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Second degré</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Suites numériques : Généralités</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/generation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Différents modes de génération</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/liste_terme_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liste des termes d’une suite numérique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/variations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variations d’une suite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/limites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de limite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/algorithme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme : Somme et Seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suite1/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Suites Numériques</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Nombre dérivé</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombre dérivé</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/tangente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tangente à une courbe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/DerivUsuelles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonction dérivée - Dérivées usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/NomDerive/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Nombre dérivé, Dérivées des fonctions usuelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Trigonométrie et Fonctions trigonométriques</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/trigonometrie/enroulement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cercle trigonométrique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/trigonometrie/cosinus_sinus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cosinus et Sinus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/trigonometrie/lignes_trigo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lignes trigonométriques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/trigonometrie/fct_trigo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions trigonométriques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/trigonometrie/equation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equations trigonométriques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/trigonometrie/exercices.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Feuilles d’exercices — Trigonométrie et équations trigonométriques.</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilité conditionnelles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/rappels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rappels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probabilité conditionnelles : Définition et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/fpt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formules des probabilités totales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/independance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indépendances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/probaCond/exercices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feuilles d’exercices — Probabilités condtionnelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Opérations sur les dérivées - Applications</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/lemmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Des lemmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composition : g(ax+b)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Operation_Derivee/extrema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extrema</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Produit scalaire</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit sclaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/orthogonalite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Produit scalaire et orthogonalite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Proprietes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés du produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Transformations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Produit_scalaire/Bilans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices Bilans</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Suite arithmétiques et géométriques</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sa_definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite arithmétiques : Définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sa_variation_somme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites arithmétiques : Variations et Sommes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sa_bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercice bilan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sg_definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite géométriques : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sg_variation_somme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite géométriques : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/sa_sg/sg_bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices bilan</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fonction Exponentielle</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 9 : Fonction exponetielle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/fct_exp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonction exponentielle : définition et propriétés algébriques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/nombre_e.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombre d’Euler</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/prop_exp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proprioété de la fonction exponentielle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/exp_u.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exponentielle de ax+b</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/Expo/comp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exponentielle de u</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#enroulement-de-la-droite-graduée-mesure-en-radianil-f" id="toc-enroulement-de-la-droite-graduée-mesure-en-radianil-f" class="nav-link active" data-scroll-target="#enroulement-de-la-droite-graduée-mesure-en-radianil-f">Enroulement de la droite graduée, mesure en radianIL f</a>
+  <ul class="collapse">
+  <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link" data-scroll-target="#exercice-1">Exercice 2</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2">Exercice 3</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3">Exercice 4</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4">Exercice 5</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5">Exercice 6</a></li>
+  </ul></li>
+  <li><a href="#cosinus-et-sinus-dun-réel" id="toc-cosinus-et-sinus-dun-réel" class="nav-link" data-scroll-target="#cosinus-et-sinus-dun-réel">Cosinus et sinus d’un réel</a>
+  <ul class="collapse">
+  <li><a href="#exercice-6" id="toc-exercice-6" class="nav-link" data-scroll-target="#exercice-6">Exercice 7</a></li>
+  <li><a href="#exercice-7" id="toc-exercice-7" class="nav-link" data-scroll-target="#exercice-7">Exercice 8</a></li>
+  <li><a href="#exercice-8" id="toc-exercice-8" class="nav-link" data-scroll-target="#exercice-8">Exercice 9</a></li>
+  <li><a href="#exercice-9" id="toc-exercice-9" class="nav-link" data-scroll-target="#exercice-9">Exercice 10</a></li>
+  <li><a href="#exercice-10" id="toc-exercice-10" class="nav-link" data-scroll-target="#exercice-10">Exercice 11</a></li>
+  <li><a href="#exercice-11" id="toc-exercice-11" class="nav-link" data-scroll-target="#exercice-11">Exercice 12</a></li>
+  <li><a href="#exercice-12" id="toc-exercice-12" class="nav-link" data-scroll-target="#exercice-12">Exercice 13</a></li>
+  <li><a href="#exercice-13" id="toc-exercice-13" class="nav-link" data-scroll-target="#exercice-13">Exercice 14</a></li>
+  <li><a href="#exercice-14" id="toc-exercice-14" class="nav-link" data-scroll-target="#exercice-14">Exercice 15</a></li>
+  <li><a href="#exercice-15" id="toc-exercice-15" class="nav-link" data-scroll-target="#exercice-15">Exercice 16</a></li>
+  <li><a href="#exercice-16" id="toc-exercice-16" class="nav-link" data-scroll-target="#exercice-16">Exercice 17</a></li>
+  <li><a href="#exercice-17" id="toc-exercice-17" class="nav-link" data-scroll-target="#exercice-17">Exercice 18</a></li>
+  <li><a href="#exercice-18" id="toc-exercice-18" class="nav-link" data-scroll-target="#exercice-18">Exercice 19</a></li>
+  <li><a href="#exercice-19" id="toc-exercice-19" class="nav-link" data-scroll-target="#exercice-19">Exercice 20</a></li>
+  <li><a href="#exercice-20" id="toc-exercice-20" class="nav-link" data-scroll-target="#exercice-20">Exercice 21</a></li>
+  <li><a href="#exercice-21" id="toc-exercice-21" class="nav-link" data-scroll-target="#exercice-21">Exercice 22</a></li>
+  </ul></li>
+  <li><a href="#fonctions-trigonométriques" id="toc-fonctions-trigonométriques" class="nav-link" data-scroll-target="#fonctions-trigonométriques">Fonctions trigonométriques</a>
+  <ul class="collapse">
+  <li><a href="#exercice-22" id="toc-exercice-22" class="nav-link" data-scroll-target="#exercice-22">Exercice 23</a></li>
+  <li><a href="#exercice-23" id="toc-exercice-23" class="nav-link" data-scroll-target="#exercice-23">Exercice 24</a></li>
+  <li><a href="#exercice-24" id="toc-exercice-24" class="nav-link" data-scroll-target="#exercice-24">Exercice 25</a></li>
+  <li><a href="#exercice-25" id="toc-exercice-25" class="nav-link" data-scroll-target="#exercice-25">Exercice 26</a></li>
+  <li><a href="#exercice-26" id="toc-exercice-26" class="nav-link" data-scroll-target="#exercice-26">Exercice 27</a></li>
+  <li><a href="#exercice-27" id="toc-exercice-27" class="nav-link" data-scroll-target="#exercice-27">Exercice 28</a></li>
+  <li><a href="#exercice-28" id="toc-exercice-28" class="nav-link" data-scroll-target="#exercice-28">Exercice 29</a></li>
+  <li><a href="#exercice-29" id="toc-exercice-29" class="nav-link" data-scroll-target="#exercice-29">Exercice 30</a></li>
+  </ul></li>
+  <li><a href="#equations-et-inéquations-trigonométriques" id="toc-equations-et-inéquations-trigonométriques" class="nav-link" data-scroll-target="#equations-et-inéquations-trigonométriques">Equations et inéquations trigonométriques</a>
+  <ul class="collapse">
+  <li><a href="#exercice-30" id="toc-exercice-30" class="nav-link" data-scroll-target="#exercice-30">Exercice 31</a></li>
+  <li><a href="#exercice-31" id="toc-exercice-31" class="nav-link" data-scroll-target="#exercice-31">Exercice 32</a></li>
+  <li><a href="#exercice-32" id="toc-exercice-32" class="nav-link" data-scroll-target="#exercice-32">Exercice 33</a></li>
+  <li><a href="#exercice-33" id="toc-exercice-33" class="nav-link" data-scroll-target="#exercice-33">Exercice 34</a></li>
+  <li><a href="#exercice-34" id="toc-exercice-34" class="nav-link" data-scroll-target="#exercice-34">Exercice 35</a></li>
+  <li><a href="#exercice-35" id="toc-exercice-35" class="nav-link" data-scroll-target="#exercice-35">Exercice 36</a></li>
+  <li><a href="#exercice-36" id="toc-exercice-36" class="nav-link" data-scroll-target="#exercice-36">Exercice 37</a></li>
+  <li><a href="#exercice-37" id="toc-exercice-37" class="nav-link" data-scroll-target="#exercice-37">Exercice 38</a></li>
+  <li><a href="#exercice-38" id="toc-exercice-38" class="nav-link" data-scroll-target="#exercice-38">Exercice 39</a></li>
+  <li><a href="#exercice-39" id="toc-exercice-39" class="nav-link" data-scroll-target="#exercice-39">Exercice 40</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/trigonometrie/enroulement.html">Trigonométrie et Fonctions trigonométriques</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/trigonometrie/exercices.html">Feuilles d’exercices — Trigonométrie et équations trigonométriques.</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Feuilles d’exercices — Trigonométrie et équations trigonométriques.</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="enroulement-de-la-droite-graduée-mesure-en-radianil-f" class="level1">
+<h1>Enroulement de la droite graduée, mesure en radianIL f</h1>
+<section id="exercice" class="level2">
+<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> <!-- titre exercice eventuel--> </span></p>
+<p>Parmi les nombres suivants, indiquer ceux qui ont la même image sur le cercle trigonométrique que <span class="math inline">\(-\dfrac{\pi}{12}\)</span> :</p>
+<p><span class="math display">\[
+\dfrac{47\pi}{12}\quad ; \quad-\dfrac{49\pi}{12}\quad ; \quad\dfrac{11\pi}{12}\quad ; \quad-\dfrac{241\pi}{12} \quad ; \quad -\dfrac{37\pi}{12}
+\]</span></p>
+</div>
+</section>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1">Exercice 2</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 2 : </strong></span><span class="exo-extra"></span></p>
+<p>Donner la mesure principale de :</p>
+<p><span class="math display">\[\dfrac{11\pi}{4}
+\,;\, -\dfrac{11\pi}{4}
+\,;\,-\dfrac{13\pi}{4}
+\,;\, \dfrac{27\pi}{4}
+\,;\, \dfrac{2005\pi}{4}
+\,;\, \dfrac{37\pi}{6}
+\,;\, \dfrac{178\pi}{8}\]</span></p>
+</div>
+</section>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2">Exercice 3</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 3 : </strong></span><span class="exo-extra"> <!-- titre exercice eventuel--> </span></p>
+<p>Reprendre l’exercice précédent, en donnant l’unique réel de l’intervalle <span class="math inline">\(\left[0\,;\, 2\pi\right[\)</span> ayant le même point-image par enroulement de la droite des réels sur le cercle trigonométrique.</p>
+</div>
+</section>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3">Exercice 4</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 4 : </strong></span><span class="exo-extra"> <!-- titre exercice eventuel--> </span></p>
+<p>Écrire un programme Python permettant de déterminer la mesure principale d’un angle en radian.</p>
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo1">
+    <div class="bar-top"><span class="cell-num">Valeur principal</span></div>
+    <textarea id="code"></textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled=""></button>
+      <button class="btn" id="check" disabled=""></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4">Exercice 5</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 5 : </strong></span><span class="exo-extra"> <!-- titre exercice eventuel--> </span></p>
+<p>Dans chaque cas, colorier sur le cercle trigonométrique l’ensemble des points <span class="math inline">\(M\)</span> repérés par des réels de :</p>
+<ol type="1">
+<li><span class="math inline">\(\left[-\dfrac{\pi}{3}~;~\dfrac{\pi}{4} \right]\)</span></li>
+<li><span class="math inline">\(\left]-\dfrac{\pi}{6}~;~\dfrac{5\pi}{4} \right]\)</span></li>
+<li><span class="math inline">\(\left[-\dfrac{3\pi}{2}~;~-\pi\right]\)</span></li>
+<li><span class="math inline">\(\left[-2\pi~;~-\dfrac{\pi}{2} \right[\)</span></li>
+</ol>
+</div>
+</section>
+<section id="exercice-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-5">Exercice 6</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 6 : </strong></span><span class="exo-extra"> <!-- titre exercice eventuel--> </span></p>
+<p>Dans chacun des cas suivants, <span class="math inline">\(M\)</span> et <span class="math inline">\(N\)</span> sont les points-images des réels indiqués par l’enroulement de la droite des réels sur le cercle trigonométrique.</p>
+<p>Dans chacun des cas, déterminer :</p>
+<ul>
+<li>la mesure de l’arc de cercle <span class="math inline">\(\wideparen{MN}\)</span> parcouru dans le sens trigonométrique ;</li>
+<li>la mesure en radians de l’angle <span class="math inline">\(\widehat{MON}\)</span> correspondant.</li>
+</ul>
+<ol type="1">
+<li><span class="math inline">\(M\)</span> image de <span class="math inline">\(\dfrac{\pi}{4}\)</span> et <span class="math inline">\(N\)</span> image de <span class="math inline">\(\dfrac{4\pi}{3}\)</span>.</li>
+<li><span class="math inline">\(M\)</span> image de <span class="math inline">\(-\dfrac{5\pi}{6}\)</span> et <span class="math inline">\(N\)</span> image de <span class="math inline">\(\dfrac{7\pi}{3}\)</span>.</li>
+<li><span class="math inline">\(M\)</span> image de <span class="math inline">\(-\dfrac{\pi}{3}\)</span> et <span class="math inline">\(N\)</span> image de <span class="math inline">\(\dfrac{17\pi}{6}\)</span>.</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="cosinus-et-sinus-dun-réel" class="level1">
+<h1>Cosinus et sinus d’un réel</h1>
+<section id="exercice-6" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-6">Exercice 7</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 7 : </strong></span><span class="exo-extra"></span></p>
+<p>Déterminer le signe des nombres suivants.</p>
+<p><span class="math display">\[\cos\left(\dfrac{\pi}{5}\right) \quad ; \quad
+\sin\left(\dfrac{5\pi}{8}\right)\quad ; \quad
+\cos\left(\dfrac{13\pi}{12}\right)\quad ; \quad
+\sin\left(-\dfrac{\pi}{7}\right)\quad ; \quad
+\cos\left(\dfrac{31\pi}{9}\right)\]</span></p>
+</div>
+</section>
+<section id="exercice-7" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-7">Exercice 8</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 8 : </strong></span><span class="exo-extra"></span></p>
+<p>Vrai ou faux ? Préciser si les égalités suivantes sont vraies ou fausses. Justifier.</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ol type="1">
+<li><span class="math inline">\(\sin\left(\dfrac{\pi}{3}\right)=\cos\left(-\dfrac{\pi}{6}\right)\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="2" type="1">
+<li><span class="math inline">\(\cos\left(-\dfrac{\pi}{3}\right)=-\cos\left(\dfrac{\pi}{3}\right)\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="3" type="1">
+<li><span class="math inline">\(\cos\left(\dfrac{3\pi}{4}\right)=\cos\left(-\dfrac{3\pi}{4}\right)\)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-8" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-8">Exercice 9</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 9 : </strong></span><span class="exo-extra"></span></p>
+<p>Donner la valeur exacte des nombres suivants en s’aidant du cercle trigonométrique.</p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<ol type="1">
+<li><span class="math inline">\(\sin\left(\dfrac{2\pi}{3}\right)\)</span></li>
+</ol>
+</div><div class="column" style="width:20%;">
+<ol start="2" type="1">
+<li><span class="math inline">\(\cos\left(-\dfrac{\pi}{4}\right)\)</span></li>
+</ol>
+</div><div class="column" style="width:20%;">
+<ol start="3" type="1">
+<li><span class="math inline">\(\sin\left(\dfrac{3\pi}{4}\right)\)</span></li>
+</ol>
+</div><div class="column" style="width:20%;">
+<ol start="4" type="1">
+<li><span class="math inline">\(\cos\left(\dfrac{17\pi}{6}\right)\)</span></li>
+</ol>
+</div><div class="column" style="width:20%;">
+<ol start="5" type="1">
+<li><span class="math inline">\(\sin\left(-\dfrac{14\pi}{3}\right)\)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-9" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-9">Exercice 10</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 10 : </strong></span><span class="exo-extra"></span></p>
+<p>Après avoir placé sur le cercle trigonométrique les différents angles, calculer les nombres suivants :</p>
+<p><span class="math display">\[
+A=3 \sin  \dfrac{7\pi}{6} \cos  \dfrac{\pi}{4} - 2 \sin  \dfrac{7\pi}{4} \cos  \dfrac{5\pi}{3} \et
+B= \dfrac{2 \sin^2 \dfrac{\pi}{6} - \cos^2 \dfrac{5 \pi}{6} + \cos^2 \dfrac{2\pi}{3}}{\sin^2\dfrac{7\pi}{3}- \cos^2 \dfrac{\pi}{4}}
+\]</span></p>
+</div>
+</section>
+<section id="exercice-10" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-10">Exercice 11</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 11 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li>Soit <span class="math inline">\(x \in \left[0;\dfrac{\pi}{2}\right]\)</span> tel que <span class="math inline">\(\cos x=\dfrac{\sqrt{7}}{4}\)</span>. Que vaut <span class="math inline">\(\sin x\)</span> ?</li>
+<li>Soit <span class="math inline">\(x \in \left[-\dfrac{\pi}{2};\dfrac{\pi}{2}\right]\)</span> tel que <span class="math inline">\(\sin x=-0.6\)</span>. Que vaut <span class="math inline">\(\cos x\)</span> ?</li>
+<li>Soit <span class="math inline">\(x \in \left[\dfrac{\pi}{2};\dfrac{3\pi}{2}\right]\)</span> tel que <span class="math inline">\(\sin x=\dfrac{4}{5}\)</span>. Que vaut <span class="math inline">\(\cos x\)</span> ?</li>
+</ol>
+</div>
+</section>
+<section id="exercice-11" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-11">Exercice 12</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 12 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li><ol type="a">
+<li><p>La calculatrice étant en mode radian, choisir plusieurs nombres réels <span class="math inline">\(x\)</span> et calculer l’expression <span class="math display">\[
+(\cos x+\sin x)^2+(\cos x-\sin x)^2.
+\]</span></p></li>
+<li><p>Quelle conjecture peut-on formuler ?</p></li>
+<li><p>Démontrer le résultat conjecturé.</p></li>
+</ol></li>
+<li>Démontrer que, pour tout réel <span class="math inline">\(x\)</span>, on a : <span class="math display">\[
+(\cos x)^4-(\sin x)^4=(\cos x)^2-(\sin x)^2.
+\]</span></li>
+</ol>
+</div>
+</section>
+<section id="exercice-12" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-12">Exercice 13</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 13 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li>Démontrer que <span class="math display">\[
+\cos \dfrac{\pi}{8} + \cos \dfrac{3\pi}{8} + \cos \dfrac{5\pi}{8} +\cos \dfrac{7\pi}{8} =0
+\]</span></li>
+<li>Déterminer la valeur de <span class="math display">\[
+B= \cos^2 \dfrac{\pi}{8} + \cos^2 \dfrac{3\pi}{8} + \cos^2 \dfrac{5\pi}{8} +\cos^2 \dfrac{7\pi}{8}
+\]</span></li>
+<li>Exprimer en fonction de <span class="math inline">\(\cos x\)</span> et/ou <span class="math inline">\(\sin x\)</span>, <span class="math display">\[
+C=\cos x  + \cos \left(x+\dfrac{\pi}{2} \right) + 2 \sin x  + \sin(x+\pi) - \cos(x+ 2 \pi) + \sin \left(\dfrac{3\pi}{2} -x \right)
+\]</span></li>
+</ol>
+</div>
+</section>
+<section id="exercice-13" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-13">Exercice 14</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 14 : </strong></span><span class="exo-extra"></span></p>
+<p>Calculer sans la calculatrice :</p>
+<ol type="1">
+<li><span class="math inline">\(A=\cos ~\dfrac{\pi}{10} +\cos ~\dfrac{2\pi}{5} +\cos ~\dfrac{3\pi}{5} +\cos ~\dfrac{9\pi}{10}\)</span></li>
+<li><span class="math inline">\(B=\cos ~\dfrac{\pi}{10} +\sin~\dfrac{2\pi}{5} +\cos ~\dfrac{3\pi}{5} +\sin~\dfrac{9\pi}{10} +\sin~\dfrac{7\pi}{5} +\cos ~\dfrac{8\pi}{5} +\sin~\dfrac{19\pi}{10}\)</span></li>
+<li><span class="math inline">\(C=\sin~\dfrac{\pi}{10} +\sin~\dfrac{2\pi}{5} +\sin~\dfrac{3\pi}{5} +\sin~\dfrac{9\pi}{10}\)</span></li>
+</ol>
+</div>
+</section>
+<section id="exercice-14" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-14">Exercice 15</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 15 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li><p>On considère les sommes suivantes <span class="math display">\[
+S=\cos \dfrac{2\pi}{7} +\cos \dfrac{4\pi}{7} +\cos \dfrac{6\pi}{7} \et
+S'=\cos \dfrac{8\pi}{7} +\cos \dfrac{10\pi}{7} +\cos \dfrac{12\pi}{7}
+\]</span> Comparer ces deux sommes.</p></li>
+<li><p>On considère les sommes suivantes <span class="math display">\[
+\Sigma=\sin \dfrac{2\pi}{7} +\sin \dfrac{4\pi}{7} +\sin \dfrac{6\pi}{7} \et  
+\Sigma'=\sin \dfrac{8\pi}{7} +\sin \dfrac{10\pi}{7} +\sin \dfrac{12\pi}{7}
+\]</span></p>
+<p>Calculer <span class="math inline">\(\Sigma + \Sigma'\)</span>.</p></li>
+</ol>
+</div>
+</section>
+<section id="exercice-15" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-15">Exercice 16</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 16 : </strong></span><span class="exo-extra"></span></p>
+<p>On se place dans un repère orthonormé <span class="math inline">\((O;I;J)\)</span> et on appelle <span class="math inline">\(\mathcal{C}\)</span> le cercle trigonométrique de centre <span class="math inline">\(O\)</span>.</p>
+<p>On considère les points <span class="math inline">\(A(-1;0)\)</span>, <span class="math inline">\(B\!\left(-\dfrac{1}{4};0\right)\)</span> et <span class="math inline">\(C\!\left(0;\dfrac{1}{2}\right)\)</span>.<br>
+Le cercle <span class="math inline">\(\mathcal{C}_1\)</span>, de centre <span class="math inline">\(B\)</span> et de rayon <span class="math inline">\(BC\)</span>, coupe l’axe <span class="math inline">\((OI)\)</span> en <span class="math inline">\(P\)</span> et <span class="math inline">\(Q\)</span>.</p>
+<p>La perpendiculaire à la droite <span class="math inline">\((OI)\)</span> en <span class="math inline">\(P\)</span> coupe le cercle <span class="math inline">\(\mathcal{C}\)</span> en <span class="math inline">\(M_1\)</span> et <span class="math inline">\(M_4\)</span>.<br>
+La perpendiculaire à la droite <span class="math inline">\((OI)\)</span> passant par <span class="math inline">\(Q\)</span> coupe le cercle <span class="math inline">\(\mathcal{C}\)</span> en <span class="math inline">\(M_2\)</span> et <span class="math inline">\(M_3\)</span>.</p>
+<p>On admet que le pentagone <span class="math inline">\(IM_1M_2M_3M_4\)</span> est régulier.</p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_trigonometrie_f31_fig1.png" style="width: 29%;"></p>
+</div>
+<ol type="1">
+<li>Déterminer les nombres réels associés aux points <span class="math inline">\(M_1\)</span> et <span class="math inline">\(M_2\)</span>.</li>
+<li>En utilisant la longueur <span class="math inline">\(BC\)</span>, déterminer les coordonnées exactes des points <span class="math inline">\(P\)</span> et <span class="math inline">\(Q\)</span>.</li>
+<li>Déterminer les coordonnées exactes des points <span class="math inline">\(M_1\)</span> et <span class="math inline">\(M_2\)</span>.</li>
+<li>En déduire les valeurs exactes des cosinus et sinus des réels <span class="math inline">\(\dfrac{\pi}{5}\)</span> et <span class="math inline">\(\dfrac{2\pi}{5}\)</span>.</li>
+<li>Vérifier les résultats précédents à l’aide de la calculatrice.</li>
+</ol>
+</div>
+</section>
+<section id="exercice-16" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-16">Exercice 17</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 17 : </strong></span><span class="exo-extra"></span></p>
+<p>Le plan étant muni d’un repère orthonormé <span class="math inline">\((O;I;J)\)</span>, on note <span class="math inline">\(\mathcal{C}\)</span> le cercle trigonométrique.</p>
+<p><strong>Partie A — Établissement de formules</strong></p>
+<p>Soit un réel <span class="math inline">\(x \in [0;\pi]\)</span>. On note <span class="math inline">\(M\)</span> le point du cercle <span class="math inline">\(\mathcal{C}\)</span> associé à <span class="math inline">\(x\)</span>, et <span class="math inline">\(H\)</span> le pied de la hauteur issue de <span class="math inline">\(O\)</span> dans le triangle <span class="math inline">\(OIM\)</span>.</p>
+<ol type="1">
+<li><ol type="a">
+<li>Rappeler les coordonnées des points <span class="math inline">\(I\)</span> et <span class="math inline">\(M\)</span>.</li>
+<li>En déduire la distance <span class="math inline">\(IM\)</span> en fonction de <span class="math inline">\(x\)</span>.</li>
+</ol></li>
+<li>Démontrer que <span class="math inline">\(MH=\sin \dfrac{x}{2}\)</span>.</li>
+<li>En déduire l’expression de <span class="math inline">\(\sin \dfrac{x}{2}\)</span> en fonction de <span class="math inline">\(\cos x\)</span>.</li>
+<li>Démontrer que <span class="math inline">\(\cos \dfrac{x}{2}=\sqrt{\dfrac{1+\cos x}{2}}\)</span>.</li>
+</ol>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_trigonometrie_f31_fig2.png" style="width: 29%;"></p>
+</div>
+<p><strong>Partie B — Cas général</strong> \ Expliquer comment on peut calculer <span class="math inline">\(\cos \dfrac{x}{2}\)</span> et <span class="math inline">\(\sin \dfrac{x}{2}\)</span> à partir des formules précédentes dans le cas où <span class="math inline">\(x\)</span> est un réel quelconque, pas forcément dans l’intervalle <span class="math inline">\([0;\pi]\)</span>.</p>
+<p><strong>Partie C — Applications numériques</strong></p>
+<ol type="1">
+<li>Justifier les résultats obtenus par le logiciel Xcas ci-contre.</li>
+<li>En déduire les valeurs exactes des cosinus et sinus de : <span class="math display">\[
+\dfrac{7\pi}{8}\,;\, \dfrac{9\pi}{8}\,;\, \dfrac{5\pi}{8}\,;\,\dfrac{3\pi}{8}.
+\]</span></li>
+</ol>
+</div>
+</section>
+<section id="exercice-17" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-17">Exercice 18</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 18 : </strong></span><span class="exo-extra"></span></p>
+<p>ABC est un triangle isocèle en <span class="math inline">\(A\)</span> dont les angles de la base valent le double de l’angle principal. On note <span class="math inline">\(\widehat{A}=\alpha\)</span>, et on considère <span class="math inline">\(D\)</span> le point de <span class="math inline">\([AC]\)</span> tel que <span class="math inline">\(BD=BC\)</span>. On pose alors <span class="math inline">\(BC=a\)</span> et <span class="math inline">\(BD=b\)</span>.</p>
+<ol type="1">
+<li>Démontrer que <span class="math inline">\(\alpha=\dfrac{\pi}{5}\)</span></li>
+<li>Démontrer que <span class="math inline">\(ADB\)</span> est isocèle et exprimer la mesure de chacun des côtés de tous les triangles en fonction de <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span>.</li>
+<li>En déduire que <span class="math inline">\(b=2a \cos 2\alpha\)</span> et <span class="math inline">\(a=(2b+a) \cos 2\alpha\)</span></li>
+<li>En déduire que <span class="math inline">\(\cos 2\alpha\)</span> est solution d’une équation du second degré.</li>
+<li>En déduire les valeurs de <span class="math inline">\(\cos \dfrac{2\pi}{5}\)</span> et de <span class="math inline">\(\cos \dfrac{\pi}{5}\)</span></li>
+</ol>
+</div>
+</section>
+<section id="exercice-18" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-18">Exercice 19</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 19 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li>On donne la valeur exacte : <span class="math display">\[
+\cos \dfrac{\pi}{8}=\dfrac{\sqrt{2+\sqrt{2}}}{2}.
+\]</span>
+<ol type="a">
+<li>En utilisant la formule <span class="math inline">\((\cos x)^2+(\sin x)^2=1\)</span>, déterminer la valeur exacte de <span class="math inline">\(\sin \dfrac{\pi}{8}\)</span>.</li>
+<li>En déduire la valeur exacte de <span class="math inline">\(\cos \dfrac{5\pi}{8}\)</span> en justifiant votre démarche.</li>
+<li>Établir l’égalité : <span class="math display">\[
+\tan \dfrac{\pi}{8}=\sqrt{3-2\sqrt{2}}.
+\]</span></li>
+</ol></li>
+<li>On considère l’expression suivante : <span class="math display">\[
+A=\cos \dfrac{9\pi}{8}-3\sin \dfrac{5\pi}{8}+2\cos \dfrac{7\pi}{8}.
+\]</span> Déterminer une écriture de l’expression <span class="math inline">\(A\)</span> en fonction des rapports trigonométriques de l’angle <span class="math inline">\(\dfrac{\pi}{8}\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="exercice-19" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-19">Exercice 20</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 20 : </strong></span><span class="exo-extra"></span></p>
+<p>On donne <span class="math inline">\(\cos~\dfrac{\pi}{12} = \dfrac{\sqrt{2} + \sqrt{6}}{4}\)</span>.</p>
+<ol type="1">
+<li>Déterminer <span class="math inline">\(\sin~\dfrac{\pi}{12}\)</span></li>
+<li>Placer sur le cercle trigonométrique les points images de <span class="math inline">\(-\dfrac{\pi}{12}\)</span>, de <span class="math inline">\(\dfrac{5\pi}{12}\)</span> et de <span class="math inline">\(\dfrac{11\pi}{12}\)</span>\ Déterminer alors les coordonnées de ces points.</li>
+<li>Résoudre dans <span class="math inline">\(\left]-\dfrac{9\pi}{2}~;~\pi \right]\)</span>, <span class="math inline">\(\sin~x =  - \dfrac{\sqrt{2} + \sqrt{6}}{4}\)</span></li>
+</ol>
+</div>
+</section>
+<section id="exercice-20" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-20">Exercice 21</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 21 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li>En justifiant les calculs, calculer <span class="math display">\[
+A=\cos \dfrac{\pi}{5} + \cos \dfrac{2\pi}{5} + \cos \dfrac{3\pi}{5} + \cos \dfrac{4\pi}{5}
+\]</span></li>
+<li>On admet que <span class="math inline">\(\cos \dfrac{\pi}{8} = \dfrac{\sqrt{2+\sqrt{2}}}{2}\)</span>
+<ol type="a">
+<li>Démontrer que <span class="math inline">\(\sin \dfrac{\pi}{8}=\dfrac{\sqrt{2-\sqrt{2}}}{2}\)</span></li>
+<li>Utiliser ce qui précède pour calculer <span class="math display">\[
+B= \sin\left(\dfrac{\pi}{8} \right) \cos\left(\dfrac{5 \pi}{8}\right) \sin\left(\dfrac{3 \pi}{8} \right) \cos\left(\dfrac{7\pi}{8} \right)
+\]</span></li>
+</ol></li>
+</ol>
+</div>
+</section>
+<section id="exercice-21" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-21">Exercice 22</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 22 : </strong></span><span class="exo-extra"></span></p>
+<p><strong>Partie A :</strong></p>
+<ol type="1">
+<li>Déterminer l’extrémum de <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x) = -x^2+x+1\)</span> sur <span class="math inline">\([-1~;~1]\)</span>.</li>
+<li>Résoudre dans <span class="math inline">\(\R\)</span>, <span class="math inline">\(\cos\alpha = \frac{1}{2}\)</span></li>
+</ol>
+<p><strong>Partie B :</strong>\ Soit <span class="math inline">\(\mathscr{C}\)</span> le quart de cercle trigonométrique dans le repère .\ Soit <span class="math inline">\(A\)</span> le point de <span class="math inline">\(\mathscr{C}\)</span> associé au réel <span class="math inline">\(\alpha \in \left[0~;~\frac{\pi}{2} \right]\)</span>. On considère <span class="math inline">\(D\)</span> de coordonnées <span class="math inline">\((\sin \alpha~;~0)\)</span> et <span class="math inline">\(Y(0~;~1)\)</span>. L’objectif du problème est de déterminer <span class="math inline">\(\alpha\)</span> pour que l’aire de <span class="math inline">\(YODA\)</span> soit maximale.\ On donne en annexe deux configurations pour deux valeurs <span class="math inline">\(\alpha\)</span> différentes.</p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_trigonometrie_f31_fig3.png" style="width:29%; margin-right:5%"> <img src="../../image/maths/Exercice_trigonometrie_f31_fig4.png" style="width: 29%;"></p>
+</div>
+<ol type="1">
+<li>Donner les coordonnées de <span class="math inline">\(A\)</span></li>
+<li>Justifier que l’aire de <span class="math inline">\(ADO\)</span> est <span class="math inline">\(\frac{1}{2} \sin^2 \alpha\)</span> et que l’aire de <span class="math inline">\(OYA\)</span> est <span class="math inline">\(\frac{1}{2} \cos \alpha\)</span>.</li>
+<li>En déduire que l’aire du quadrilatère <span class="math inline">\(YODA\)</span> est donnée par <span class="math inline">\(\frac{1}{2} \left(-\cos^2 \alpha + \cos \alpha +1 \right)\)</span>.</li>
+<li>En déduire la valeur de <span class="math inline">\(\alpha\)</span> pour que l’aire du quadrilatère soit maximale.</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="fonctions-trigonométriques" class="level1">
+<h1>Fonctions trigonométriques</h1>
+<section id="exercice-22" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-22">Exercice 23</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 23 : </strong></span><span class="exo-extra"></span></p>
+<p>On considère les fonctions <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> et <span class="math inline">\(h\)</span> définies sur <span class="math inline">\(\mathbb{R}\)</span> par <span class="math display">\[
+f(x)=\cos x+1,\qquad g(x)=2\cos x,\qquad h(x)=-\cos x.
+\]</span> Associer chaque fonction à sa courbe représentative, en expliquant le choix fait.</p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_trigonometrie_f32_fig1.png" style="width: 49%;"></p>
+</div>
+</div>
+</section>
+<section id="exercice-23" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-23">Exercice 24</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 24 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li><p>Soient deux réels <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span>. Comparer dans chacun des cas suivants les nombres <span class="math inline">\(\cos a\)</span> et <span class="math inline">\(\cos b\)</span>.</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ol type="1">
+<li><span class="math inline">\(a=\dfrac{\pi}{7}\)</span> et <span class="math inline">\(b=\dfrac{\pi}{5}\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="2" type="1">
+<li><span class="math inline">\(a=\dfrac{\pi}{10}\)</span> et <span class="math inline">\(b=-\dfrac{\pi}{5}\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="3" type="1">
+<li><span class="math inline">\(a=\dfrac{4\pi}{9}\)</span> et <span class="math inline">\(b=-\dfrac{5\pi}{9}\)</span></li>
+</ol>
+</div>
+</div></li>
+<li><p>Soient deux réels <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span>. Comparer dans chacun des cas suivants les nombres <span class="math inline">\(\sin a\)</span> et <span class="math inline">\(\sin b\)</span>.</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ol type="1">
+<li><span class="math inline">\(a=\dfrac{\pi}{10}\)</span> et <span class="math inline">\(b=\dfrac{\pi}{7}\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="2" type="1">
+<li><span class="math inline">\(a=\dfrac{\pi}{5}\)</span> et <span class="math inline">\(b=-\dfrac{\pi}{5}\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="3" type="1">
+<li><span class="math inline">\(a=-\dfrac{4\pi}{7}\)</span> et <span class="math inline">\(b=-\dfrac{\pi}{7}\)</span></li>
+</ol>
+</div>
+</div></li>
+</ol>
+</div>
+</section>
+<section id="exercice-24" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-24">Exercice 25</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 25 : </strong></span><span class="exo-extra"></span></p>
+<p>Pour chacune des fonctions suivantes, donner des encadrements des fonctions suivantes : \ leurs minimum et maximum s’ils existent.</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ol type="1">
+<li><span class="math inline">\(f_1(x)=1-2\sin x\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="2" type="1">
+<li><span class="math inline">\(f_2(x)=4\cos^2 x-3\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="3" type="1">
+<li><span class="math inline">\(f_4(x)=\dfrac{-2}{1+\sin^2 x}\)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-25" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-25">Exercice 26</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 26 : </strong></span><span class="exo-extra"></span></p>
+<p>On considère la fonction <span class="math inline">\(f:x\mapsto \dfrac{1}{2+\cos x}\)</span>.</p>
+<ol type="1">
+<li>Déterminer le domaine de définition <span class="math inline">\(D\)</span> de <span class="math inline">\(f\)</span>.</li>
+<li>Étudier la périodicité et la parité de la fonction.</li>
+<li>Déterminer le minimum et le maximum de <span class="math inline">\(f\)</span> sur son domaine de définition. Pour chacun d’eux, donner une valeur où il est atteint.</li>
+</ol>
+</div>
+</section>
+<section id="exercice-26" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-26">Exercice 27</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 27 : </strong></span><span class="exo-extra"></span></p>
+<p>Pour chacune des fonctions suivantes, définies sur <span class="math inline">\(\mathbb{R}\)</span>, montrer qu’elles sont <span class="math inline">\(\pi\)</span>-périodiques : <span class="math display">\[
+f:x\mapsto \cos x\sin x\qquad g:x\mapsto \sin(2x) - \cos x \sin x
+\]</span></p>
+</div>
+</section>
+<section id="exercice-27" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-27">Exercice 28</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 28 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li>Soit <span class="math inline">\(k\in]0;+\infty[\)</span>. Montrer que la fonction <span class="math inline">\(f:x\mapsto \cos(kx)\)</span>, définie sur <span class="math inline">\(\mathbb{R}\)</span>, est <span class="math inline">\(\dfrac{2\pi}{k}\)</span>-périodique.</li>
+<li>Soit <span class="math inline">\(m\)</span> et <span class="math inline">\(n\)</span> deux entiers naturels non nuls. Montrer que la fonction <span class="math display">\[
+f:x\mapsto \cos\left(\dfrac{x}{m}\right)+\cos\left(\dfrac{x}{n}\right)
+\]</span> est périodique. Préciser une période de cette fonction.</li>
+</ol>
+</div>
+</section>
+<section id="exercice-28" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-28">Exercice 29</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 29 : </strong></span><span class="exo-extra"></span></p>
+<p>(Ressort sans amortisseur)\ On considère une masse <span class="math inline">\(m\)</span> suspendue à un ressort. On note <span class="math inline">\(y\)</span> la hauteur relative de la masse ; <span class="math inline">\(y=0\)</span> correspondant à l’équilibre lorsque la masse est immobile.\ On amène la masse à une hauteur de <span class="math inline">\(A\)</span> puis on la lâche. On suppose qu’il n’y a pas d’amortisseur des oscillations, ces dernières étant données par <span class="math display">\[
+y(t)=A\cos(\omega t + \phi)
+\]</span> On donne la représentation graphique associée à l’expérience.</p>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_trigonometrie_f32_fig2.png" style="width: 49%;"></p>
+</div>
+<ol type="1">
+<li>Pour quel temps <span class="math inline">\(t_1\)</span> la masse passe pour la première fois par sa position d’équilibre <span class="math inline">\(y=0\)</span> ?</li>
+<li>Pour quel temps <span class="math inline">\(t_2\)</span> la masse passe pour la deuxième fois par sa position d’équilibre ?</li>
+<li>Quelle est la période des oscillations de la masse ?</li>
+<li>Quelles seront les hauteurs maximale et minimale de la masse ?</li>
+<li>En déduire les valeurs des paramètres <span class="math inline">\(A\)</span> et <span class="math inline">\(\omega\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="exercice-29" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-29">Exercice 30</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 30 : </strong></span><span class="exo-extra"></span></p>
+<p>En électricité, en courant alternatif, l’intensité <span class="math inline">\(i\)</span> du courant électrique à un temps <span class="math inline">\(t\)</span>, exprimé en secondes, peut être décrite à l’aide de fonctions trigonométriques. <span class="math display">\[
+i(t)=i_0\sin(\omega t+\varphi)
+\]</span> où <span class="math inline">\(i_0\)</span> désigne l’amplitude du signal en ampères, <span class="math inline">\(\omega\)</span> est la pulsation du signal, en <span class="math inline">\(\mathrm{rad.s^{-1}}\)</span> et <span class="math inline">\(\varphi\)</span> est le déphasage, exprimé en radians.</p>
+<ol type="1">
+<li>Montrer que l’intensité <span class="math inline">\(i\)</span> est <span class="math inline">\(\dfrac{2\pi}{\omega}\)</span>-périodique.</li>
+<li>Déterminer, sur l’exemple suivant, les valeurs de <span class="math inline">\(i_0\)</span>, <span class="math inline">\(\varphi\)</span> et <span class="math inline">\(\omega\)</span>.</li>
+</ol>
+<div style="text-align: center;">
+<p><img src="../../image/maths/Exercice_trigonometrie_f32_fig3.png" style="width: 49%;"></p>
+</div>
+<ol start="3" type="1">
+<li>La valeur <span class="math inline">\(\cos(\varphi)\)</span> est appelée facteur de puissance. Quel est le facteur de puissance de ce signal ?</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="equations-et-inéquations-trigonométriques" class="level1">
+<h1>Equations et inéquations trigonométriques</h1>
+<section id="exercice-30" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-30">Exercice 31</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 31 : </strong></span><span class="exo-extra"></span></p>
+<p>Résoudre les équations suivantes, d’inconnue <span class="math inline">\(x\in]-\pi\,;\,\pi]\)</span>.</p>
+<div class="columns">
+<div class="column" style="width:25%;">
+<ol type="1">
+<li><span class="math inline">\(\cos x=\frac{1}{2}\)</span></li>
+</ol>
+</div><div class="column" style="width:25%;">
+<ol start="2" type="1">
+<li><span class="math inline">\(\cos x=-\frac{\sqrt{2}}{2}\)</span></li>
+</ol>
+</div><div class="column" style="width:25%;">
+<ol start="3" type="1">
+<li><span class="math inline">\(\sin x=-\frac{1}{2}\)</span></li>
+</ol>
+</div><div class="column" style="width:25%;">
+<ol start="4" type="1">
+<li><span class="math inline">\(\sin x=\frac{\sqrt{2}}{2}\)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-31" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-31">Exercice 32</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 32 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li><p>Résoudre sur <span class="math inline">\(]-\pi\,;\,\pi]\)</span>.</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ol type="1">
+<li><span class="math inline">\(\sin(2x)=1\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="2" type="1">
+<li><span class="math inline">\(\cos(3x)=-\frac{1}{2}\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="3" type="1">
+<li><span class="math inline">\(\cos(3x+1)=\frac{\sqrt{2}}{2}\)</span></li>
+</ol>
+</div>
+</div></li>
+<li><p>Résoudre dans <span class="math inline">\(\R\)</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ol type="1">
+<li><span class="math inline">\(\sin \left(3x + \frac{\pi}{2}\right) =\sin~x\)</span></li>
+</ol>
+</div><div class="column" style="width:50%;">
+<ol start="2" type="1">
+<li><span class="math inline">\(\sin~3x =\cos  \left(x - \frac{\pi}{6} \right)\)</span></li>
+</ol>
+</div>
+</div></li>
+<li><p>Résoudre sur <span class="math inline">\(]-3\pi\,;\,\pi]\)</span>. <span class="math display">\[
+\sin\left(2x- \frac{\pi}{5} \right)=-\frac{\sqrt{3}}{2}
+\]</span></p></li>
+</ol>
+</div>
+</section>
+<section id="exercice-32" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-32">Exercice 33</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 33 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li>Résoudre dans <span class="math inline">\(\R\)</span>, <span class="math display">\[
+(E_1)\, :\, \cos \left(x+ \frac{\pi}{3} \right) = \frac{1}{2} \et (E_2) \, :\, \sin (2x-3)=\sin \left(\frac{\pi}{6} -x \right)
+\]</span></li>
+<li>En déduire les solutions dans <span class="math inline">\(]-\pi \,;\, \pi]\)</span></li>
+</ol>
+</div>
+</section>
+<section id="exercice-33" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-33">Exercice 34</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 34 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li><p>Résoudre les équations suivantes <span class="math display">\[
+(E_1) \,:\,
+\frac{\sqrt{2}}{2}x^2-\sqrt{2}x-\frac{\sqrt{2}}{2}=0
+\et
+(E_2) \,:\,\frac{1}{2}x^2-\sqrt{3}x-\frac{1}{2}=0
+\]</span></p></li>
+<li><ol type="a">
+<li>Soit <span class="math inline">\(a\)</span> un réel. Résoudre l’équation : <span class="math display">\[
+\sin(a)x^2-2\cos(a)x-\sin(a)=0.
+\]</span></li>
+<li>En quoi cette dernière équation généralise les équations de la question 1 ?</li>
+</ol></li>
+</ol>
+</div>
+</section>
+<section id="exercice-34" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-34">Exercice 35</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 35 : </strong></span><span class="exo-extra"></span></p>
+<p>À l’aide d’un changement de variable bien choisi, résoudre les équations suivantes, d’inconnue <span class="math inline">\(x\in]-\pi\,;\,\pi]\)</span>. <span class="math display">\[
+(E_1) \,:\,\cos^2 x+\frac{\sqrt{3}}{2}\cos x-\frac{3}{2}=0 \et
+(E_2) \,:\, \sin^2 x+\frac{3\sqrt{2}}{2}\sin x+1=0
+\]</span></p>
+</div>
+</section>
+<section id="exercice-35" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-35">Exercice 36</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 36 : </strong></span><span class="exo-extra"></span></p>
+<p>On cherche à résoudre l’équation <span class="math display">\[
+(E) : \cos(2x)=(\sqrt{3}-2)\sin x - \sqrt{3}+1
+\]</span></p>
+<ol type="1">
+<li>On admet que <span class="math inline">\(\cos(2x) = 2\cos^2x - 1\)</span>. \ Montrer que <span class="math inline">\((E)\)</span> est équivalent à <span class="math display">\[
+-2\sin^2 x+(2-\sqrt{3}) \sin x + \sqrt{3} = 0
+\]</span></li>
+<li><ol type="a">
+<li>Déterminer <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span> tel que <span class="math inline">\(7+4\sqrt{3} =(a+b\sqrt{3})^2\)</span></li>
+<li>En déduire les racines de <span class="math display">\[
+-2x^2+(2-\sqrt{3})x+\sqrt{3}
+\]</span></li>
+<li>Résoudre <span class="math inline">\((E)\)</span></li>
+</ol></li>
+</ol>
+</div>
+</section>
+<section id="exercice-36" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-36">Exercice 37</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 37 : </strong></span><span class="exo-extra"></span></p>
+<p>On considère sur <span class="math inline">\(\R\)</span>, l’équation <span class="math display">\[
+E_1 : \, 4 \cos^2 x -2(1+\sqrt{3}) \cos x + \sqrt{3} = 0
+\]</span> On effectue le changement de variables <span class="math inline">\(X=\cos x\)</span></p>
+<ol type="1">
+<li>Quelle équation, <span class="math inline">\(E_1\)</span>, du second degré est équivalente à l’équation <span class="math inline">\(E_0\)</span> ?</li>
+<li>Montrer que son discriminant peut s’écrire <span class="math inline">\(4(\sqrt{3}-1)^2\)</span></li>
+<li>Déterminer les solutions <span class="math inline">\(E_2\)</span></li>
+<li>En déduire les solutions dans <span class="math inline">\(]-\pi \, ;\,  \pi]\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="exercice-37" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-37">Exercice 38</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 38 : </strong></span><span class="exo-extra"></span></p>
+<p>On admet que pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math display">\[\cos(2x)= \cos^2 x - \sin^2 x\]</span></p>
+<ol type="1">
+<li>Démontrer que pour tout réel <span class="math inline">\(t\)</span>, <span class="math inline">\(\cos 4t = 8\cos^4 t -8 \cos^2 +1\)</span></li>
+<li>On considère les fonctions <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> définies par <span class="math display">\[
+f(x)=\cos 4x - \cos x\quad et \quad g(x)=8x^4-8x^2-x+1
+\]</span>
+<ol type="a">
+<li>Établir une relation simple entre <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span></li>
+<li>Résoudre dans <span class="math inline">\(\R\)</span>, <span class="math inline">\(f(x)=0\)</span> et représenter les images sur le cercle trigonométrique.</li>
+<li>Sans calcul, déterminer les racines de <span class="math inline">\(g\)</span>.</li>
+</ol></li>
+<li><ol type="a">
+<li>Montrer que <span class="math inline">\(g\)</span> est factorisable par <span class="math inline">\(2x^2-x-1\)</span>, et en déduire la forme factorisée de <span class="math inline">\(g\)</span>.</li>
+<li>Déduire des questions précédentes, les valeurs exactes de <span class="math inline">\(\cos \frac{2\pi}{5}\)</span> et <span class="math inline">\(\cos \frac{4\pi}{5}\)</span></li>
+</ol></li>
+</ol>
+</div>
+</section>
+<section id="exercice-38" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-38">Exercice 39</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 39 : </strong></span><span class="exo-extra"></span></p>
+<p>Résoudre les inéquations suivantes dans <span class="math inline">\(]-\pi~,~\pi]\)</span>, en visualisant les solutions sur le cercle trigonométrique.</p>
+<p><span class="math display">\[(I_1) \,:\, \cos x \leq \frac{1}{2} \quad ; \quad
+(I_2) \,:\,\sin x \geq \frac{\sqrt{2}}{2} \quad ; \quad
+(I_3) \,:\,\frac{1}{2} \leq\sin x \leq \frac{ \sqrt{3}}{2} \quad ; \quad
+(I_4) \,:\,\sin^2 x \geq \frac{1}{2} \quad ; \quad
+(I_5) \,:\,\cos^2x &lt;\sin^2 x
+\]</span></p>
+</div>
+</section>
+<section id="exercice-39" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-39">Exercice 40</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 40 : </strong></span><span class="exo-extra"></span></p>
+<ol type="1">
+<li>Résoudre sur <span class="math inline">\(]-\pi \, ; \, \pi]\)</span> et à l’aide du cercle trigonométrique <span class="math display">\[
+(I_1)  \, :\,\cos x \geqslant \frac{\sqrt{3}}{2} \quad \text{ et } \quad
+(I_2) \, :\, 2 \sin x-1 \leqslant 0
+\]</span></li>
+<li>En déduire, sur <span class="math inline">\(]-\pi\, ;\, \pi]\)</span>, les solutions de <span class="math display">\[
+(I_3) \, : \, \frac{2 \sin x -1}{2 \cos x - \sqrt{3}} \leqslant 0
+\]</span></li>
+</ol>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chris-deguil\.github\.io\/site_deguil1\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 — Cours de Mathématiques, NSI et SNT</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><a href="../../">Accueil</a> · <a href="../../index.html">Plan du site</a> · <a href="mailto:christophe.Deguil@ac-versailles.fr">Contact</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
