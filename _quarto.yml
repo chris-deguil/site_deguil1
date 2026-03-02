@@ -261,7 +261,7 @@ website:
 
         - section: "Primitive et Equations différentielles"
           contents:
-            - terminale-maths/PrimED/index.html
+            - terminale-maths/PrimED/index.qmd
             - terminale-maths/PrimED/Notion.qmd
             - terminale-maths/PrimED/Usuelles.qmd
             - terminale-maths/PrimED/Operations.qmd
@@ -270,7 +270,18 @@ website:
             - terminale-maths/PrimED/EquaDiff.qmd
             - terminale-maths/PrimED/EquaDiff_2.qmd
             - terminale-maths/PrimED/cauchy.qmd
-   
+
+        - section: "Calcul Intégral"
+          contents:
+            - terminale-maths/integrale/index.qmd
+            - terminale-maths/integrale/hist.qmd
+            - terminale-maths/integrale/fct_positive.qmd
+            - terminale-maths/integrale/the_fonda.qmd
+            - terminale-maths/integrale/fct_continue_def.qmd
+            - terminale-maths/integrale/fct_continue_prop.qmd
+            - terminale-maths/integrale/IPP.qmd
+            - terminale-maths/integrale/aire.qmd
+            
             
 format:
   html:

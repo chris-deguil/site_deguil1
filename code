@@ -17,10 +17,7 @@
 :::
 
 
-::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span>
 
-:::
 
 
 
@@ -50,6 +47,11 @@
 </details>
 
 
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+
+:::
 
 
 

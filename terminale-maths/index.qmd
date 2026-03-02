@@ -13,9 +13,10 @@ listing:
       - limite/index.qmd
       - binomiale/index.qmd
       - continuite/index.qmd
-      - ln/index.qmd
+      - Ln/index.qmd
       - Espace2/index.qmd
       - PrimeED/index.qmd
+      - integrale/index.qmd
 ---
 
 
