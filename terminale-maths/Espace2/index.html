@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>Chapitre 8 : Vecteur normal, Orthogonalité dans l’espace, Equations cartésiennes de plans – Site pédagogique</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d78999f68e7858926a5f3d904cdac59c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-626d5f046848d52bb68e9c212384d4d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-d78999f68e7858926a5f3d904cdac59c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-7b871bf058f5f68add3209ee5432c279.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-f3fd31cc511b9bf46fb65e5e28ea02ab.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-7b871bf058f5f68add3209ee5432c279.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -179,7 +185,7 @@ window.MathJax = {
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -192,7 +198,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -391,7 +397,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -403,7 +409,7 @@ window.Quarto = {
 <span class="menu-text">Spé maths première</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../terminale-maths/index.html"> 
+    <a class="nav-link active" href="../../terminale-maths/index.html" aria-current="page"> 
 <span class="menu-text">Spé maths terminale</span></a>
   </li>  
 </ul>
@@ -430,7 +436,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -1189,7 +1196,7 @@ Description
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1786026114169" data-listing-reading-time-sort="5" data-listing-word-count-sort="939" data-listing-title-sort="Définitions du produit scalaire" data-listing-filename-sort="ps_espace.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1786026115938" data-listing-reading-time-sort="5" data-listing-word-count-sort="939" data-listing-title-sort="Définitions du produit scalaire" data-listing-filename-sort="ps_espace.qmd">
 <td>
 <a href="../../terminale-maths/Espace2/ps_espace.html" class="title listing-title">Définitions du produit scalaire</a>
 </td>
@@ -1199,7 +1206,7 @@ Description
 
 </tr>
 
-<tr data-index="1" data-listing-file-modified-sort="1786026114169" data-listing-reading-time-sort="6" data-listing-word-count-sort="1026" data-listing-title-sort="Dérivation et concavité" data-listing-filename-sort="autre_def.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1786026115937" data-listing-reading-time-sort="6" data-listing-word-count-sort="1026" data-listing-title-sort="Dérivation et concavité" data-listing-filename-sort="autre_def.qmd">
 <td>
 <a href="../../terminale-maths/Espace2/autre_def.html" class="title listing-title">Dérivation et concavité</a>
 </td>
@@ -1209,7 +1216,7 @@ Description
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1786026114169" data-listing-reading-time-sort="6" data-listing-word-count-sort="1093" data-listing-title-sort="Définition par les norme et propriétés" data-listing-filename-sort="def_norme_propriete.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1786026115938" data-listing-reading-time-sort="6" data-listing-word-count-sort="1093" data-listing-title-sort="Définition par les norme et propriétés" data-listing-filename-sort="def_norme_propriete.qmd">
 <td>
 <a href="../../terminale-maths/Espace2/def_norme_propriete.html" class="title listing-title">Définition par les norme et propriétés</a>
 </td>
@@ -1219,7 +1226,7 @@ Description
 
 </tr>
 
-<tr data-index="3" data-listing-file-modified-sort="1786026114169" data-listing-reading-time-sort="8" data-listing-word-count-sort="1415" data-listing-title-sort="Orthogonalité" data-listing-filename-sort="orthogonalite.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1786026115938" data-listing-reading-time-sort="8" data-listing-word-count-sort="1415" data-listing-title-sort="Orthogonalité" data-listing-filename-sort="orthogonalite.qmd">
 <td>
 <a href="../../terminale-maths/Espace2/orthogonalite.html" class="title listing-title">Orthogonalité</a>
 </td>
@@ -1229,7 +1236,7 @@ Description
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1786026114169" data-listing-reading-time-sort="3" data-listing-word-count-sort="512" data-listing-title-sort="Produit scalaire et repère orthonormé" data-listing-filename-sort="ps_repere.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1786026115938" data-listing-reading-time-sort="3" data-listing-word-count-sort="512" data-listing-title-sort="Produit scalaire et repère orthonormé" data-listing-filename-sort="ps_repere.qmd">
 <td>
 <a href="../../terminale-maths/Espace2/ps_repere.html" class="title listing-title">Produit scalaire et repère orthonormé</a>
 </td>
@@ -1239,7 +1246,7 @@ Description
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1786026114169" data-listing-reading-time-sort="7" data-listing-word-count-sort="1261" data-listing-title-sort="Vecteur normal, et Equation cartesienne de plan" data-listing-filename-sort="equat_cart.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1786026115938" data-listing-reading-time-sort="7" data-listing-word-count-sort="1261" data-listing-title-sort="Vecteur normal, et Equation cartesienne de plan" data-listing-filename-sort="equat_cart.qmd">
 <td>
 <a href="../../terminale-maths/Espace2/equat_cart.html" class="title listing-title">Vecteur normal, et Equation cartesienne de plan</a>
 </td>
@@ -1249,7 +1256,7 @@ Description
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1786026114169" data-listing-reading-time-sort="5" data-listing-word-count-sort="991" data-listing-title-sort="Dérivation et concavité" data-listing-filename-sort="distance.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1786026115938" data-listing-reading-time-sort="5" data-listing-word-count-sort="991" data-listing-title-sort="Dérivation et concavité" data-listing-filename-sort="distance.qmd">
 <td>
 <a href="../../terminale-maths/Espace2/distance.html" class="title listing-title">Dérivation et concavité</a>
 </td>
@@ -1327,13 +1334,14 @@ Description
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
